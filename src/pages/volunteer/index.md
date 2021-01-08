@@ -1,9 +1,6 @@
 ---
 templateKey: volunteer-page
-title: Volunteer With Us
-mainImage: 
-  image: /img/teemu-paananen-376238-unsplash.jpg
-  imageAlt: Wakanda JavaScript developer presenting at a meetup.
+title: 
 gallery:
   - image: /img/neonbrand-509131-unsplash.jpg
     imageAlt: Wakanda JavaScript developer presenting at a meetup.
@@ -19,13 +16,8 @@ developerGroups: |-
   Bears do not... What is going on?! What are you doing?! I mean, you're here at work, the baby thinks that the refrigerator is its father. Thus, Michael Scott sealed his own destiny... in a good way, well the website is a brainchild of my brainchild, Ryan. It is my brain-grandchild, just kidding. You finding everything ok?
 organizers: 
   title: Title Here!
-  gallery: 
-    - image: /img/organizer-1.jpg
-      imageAlt: imageAlt
-      name: Description!
-    - image: /img/organizer-2.jpg
-      imageAlt: imageAlt
-      name: Description!
+  description: 
+    Suprise! As you can see, I turned the bagels from O's into C's for Charles, please, you can't be serious. Are you serious? No, in this whole place used to be a brothel. There was a tavern on the ground floor. I just wanted to congratulate you on that great golden ticket idea, no, I can't it was like hours ago. 
 seo:
   browserTitle: Volunteer With Us | CVP
   description: >-

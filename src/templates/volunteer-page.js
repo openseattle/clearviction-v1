@@ -18,9 +18,6 @@ export const VolunteerPageTemplate = props => {
           <div className="volunteer-titleWrapper">
             <h1 className="volunteer-title">{page.frontmatter.title}</h1>
           </div>
-          <div className="volunteer-imageWrapper">
-            <img src={page.frontmatter.mainImage.image} alt={page.frontmatter.mainImage.imageAlt} />
-          </div>
         </section>
         <section className="section">
           {/* The page.html is actually markdown when viewing the page from the netlify CMS,
@@ -47,18 +44,9 @@ export const VolunteerPageTemplate = props => {
       <section className="section  organizers  volunteer-organizers">
         <div className="container  organizers-container">
           <h2 className="organizers-title">{page.frontmatter.organizers.title}</h2>
-          <ul className="organizers-list">
-            {page.frontmatter.organizers.gallery.map((galleryImage, index) => (
-              <li key={index} className="organizers-listItem">
-                <img
-                  className="organizers-listItemImage"
-                  src={galleryImage.image}
-                  alt={galleryImage.imageAlt}
-                />
-                <span className="organizers-listItemName">{galleryImage.name}</span>
-              </li>
-            ))}
-          </ul>
+          <div className="">
+            {page.frontmatter.organizers.description}
+          </div>
         </div>
       </section>
     </article>
@@ -80,7 +68,7 @@ const volunteerPage = ({ data }) => {
         <meta name="description" content={seoDescription} />
         <title>{browserTitle}</title>
       </Helmet>
-      <volunteerPageTemplate page={{ ...page, bodyIsMarkdown: false }} />
+      <VolunteerPageTemplate page={{ ...page, bodyIsMarkdown: false }} />
     </Layout>
   );
 };
@@ -97,10 +85,6 @@ export const volunteerPageQuery = graphql`
       html
       frontmatter {
         title
-        mainImage {
-          image
-          imageAlt
-        }
         gallery {
           image
           imageAlt
@@ -108,11 +92,7 @@ export const volunteerPageQuery = graphql`
         developerGroups
         organizers {
           title
-          gallery {
-            image
-            imageAlt
-            name
-          }
+          description
         }
         seo {
           browserTitle

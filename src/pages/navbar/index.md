@@ -1,7 +1,7 @@
 ---
 templateKey: navbar
 menuItems:
-  - label: home
+  - label: Home
     linkType: internal
     linkURL: /
   - label: Volunteer
