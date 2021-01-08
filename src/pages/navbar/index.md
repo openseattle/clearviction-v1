@@ -1,14 +1,14 @@
 ---
 templateKey: navbar
 menuItems:
-  - label: home
+  - label: Home
     linkType: internal
     linkURL: /
-  - label: about
+  - label: Volunteer
     linkType: internal
-    linkURL: /about
-  - label: past meetups
+    linkURL: /volunteer
+  - label: Clinic Manager
     linkType: internal
-    linkURL: /meetups
+    linkURL: /clinic
 ---
 
