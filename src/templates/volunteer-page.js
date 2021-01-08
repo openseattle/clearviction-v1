@@ -6,19 +6,19 @@ import Helmet from "react-helmet";
 
 import Layout from "../components/Layout";
 import HTMLContent from "../components/Content";
-import "../styles/about-page.scss";
+import "../styles/volunteer-page.scss";
 
-export const AboutPageTemplate = props => {
+export const VolunteerPageTemplate = props => {
   const { page } = props;
 
   return (
-    <article className="about">
-      <div className="about-container  container">
-        <section className="about-header">
-          <div className="about-titleWrapper">
-            <h1 className="about-title">{page.frontmatter.title}</h1>
+    <article className="volunteer">
+      <div className="volunteer-container  container">
+        <section className="volunteer-header">
+          <div className="volunteer-titleWrapper">
+            <h1 className="volunteer-title">{page.frontmatter.title}</h1>
           </div>
-          <div className="about-imageWrapper">
+          <div className="volunteer-imageWrapper">
             <img src={page.frontmatter.mainImage.image} alt={page.frontmatter.mainImage.imageAlt} />
           </div>
         </section>
@@ -26,11 +26,11 @@ export const AboutPageTemplate = props => {
           {/* The page.html is actually markdown when viewing the page from the netlify CMS,
               so we must use the ReactMarkdown component to parse the markdown in that case  */}
           {page.bodyIsMarkdown ? (
-            <ReactMarkdown className="about-description" source={page.html} />
+            <ReactMarkdown className="volunteer-description" source={page.html} />
           ) : (
-            <HTMLContent className="about-description" content={page.html} />
+            <HTMLContent className="volunteer-description" content={page.html} />
           )}
-          <ul className="about-gallery  galleryList">
+          <ul className="volunteer-gallery  galleryList">
             {page.frontmatter.gallery.map((galleryImage, index) => (
               <li key={index} className="galleryList-item">
                 <img src={galleryImage.image} alt={galleryImage.imageAlt} />
@@ -39,12 +39,12 @@ export const AboutPageTemplate = props => {
           </ul>
         </section>
       </div>
-      <section className="section  developerGroups  about-developerGroups">
+      <section className="section  developerGroups  volunteer-developerGroups">
         <div className="container">
           <ReactMarkdown source={page.frontmatter.developerGroups} />
         </div>
       </section>
-      <section className="section  organizers  about-organizers">
+      <section className="section  organizers  volunteer-organizers">
         <div className="container  organizers-container">
           <h2 className="organizers-title">{page.frontmatter.organizers.title}</h2>
           <ul className="organizers-list">
@@ -65,7 +65,7 @@ export const AboutPageTemplate = props => {
   );
 };
 
-const AboutPage = ({ data }) => {
+const volunteerPage = ({ data }) => {
   const { markdownRemark: page, footerData, navbarData } = data;
   const {
     frontmatter: {
@@ -80,19 +80,19 @@ const AboutPage = ({ data }) => {
         <meta name="description" content={seoDescription} />
         <title>{browserTitle}</title>
       </Helmet>
-      <AboutPageTemplate page={{ ...page, bodyIsMarkdown: false }} />
+      <volunteerPageTemplate page={{ ...page, bodyIsMarkdown: false }} />
     </Layout>
   );
 };
 
-AboutPage.propTypes = {
+volunteerPage.propTypes = {
   data: PropTypes.object.isRequired,
 };
 
-export default AboutPage;
+export default volunteerPage;
 
-export const aboutPageQuery = graphql`
-  query AboutPage($id: String!) {
+export const volunteerPageQuery = graphql`
+  query volunteerPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
