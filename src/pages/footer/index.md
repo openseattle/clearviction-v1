@@ -1,25 +1,13 @@
 ---
 templateKey: footer
 logoImage:
-  image: /img/js-wakanda.png
-  imageAlt: JavaScript Wakanda
-  tagline: Your friendly local Wakanda meetup
+  image: /img/cvplogo.jpeg
+  imageAlt: Conviction Vacation Project  
+  tagline: Conviction Vacation Project
 socialLinks:
-  - image: /img/meetup.svg
-    imageAlt: Join us on meetup.com
-    label: meetup.com
-    linkURL: 'https://www.meetup.com/'
-  - image: /img/twitter.svg
-    imageAlt: Follow us on Twitter
-    label: twitter.com
-    linkURL: 'https://twitter.com/'
-  - image: /img/facebook.svg
-    imageAlt: Join our Facebook group
-    label: facebook.com
-    linkURL: 'https://www.facebook.com/'
   - image: /img/email.svg
-    imageAlt: Contact us by email
-    label: email us
-    linkURL: 'mailto:contact@js-wakanda.org'
+    imageAlt: Contact us by email 
+    label: Email Seamus! 
+    linkURL: 'mailto:seamus@seamus.work'
 ---
 
