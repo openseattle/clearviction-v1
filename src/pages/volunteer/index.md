@@ -1,29 +1,17 @@
 ---
 templateKey: volunteer-page
-title: 
-gallery:
-  - image: /img/neonbrand-509131-unsplash.jpg
-    imageAlt: Wakanda JavaScript developer presenting at a meetup.
-  - image: /img/jakob-dalbjorn-730178-unsplash.jpg
-    imageAlt: Wakanda JavaScript developer presenting at a meetup.
-  - image: /img/annie-spratt-608001-unsplash.jpg
-    imageAlt: Wakanda developers working together at a table.
-developerGroups: |-
-  ## Volunteer Info
-  * BAM
-  A long story short, Jeff's dog ended up as ring bearer. And the irony is that, after the ceremony that dog peed on everything...and nobody said, "Boo". I just wanna lie on the beach and eat hotdogs. That's all I've ever wanted. Oh it was gruesome. They say she walks these hallways. If you ever feel a tapping on your shoulder, that could be Haddy, begging for her life. And it could mean, you're next.
-
-  Bears do not... What is going on?! What are you doing?! I mean, you're here at work, the baby thinks that the refrigerator is its father. Thus, Michael Scott sealed his own destiny... in a good way, well the website is a brainchild of my brainchild, Ryan. It is my brain-grandchild, just kidding. You finding everything ok?
-organizers: 
-  title: Title Here!
-  description: 
-    Suprise! As you can see, I turned the bagels from O's into C's for Charles, please, you can't be serious. Are you serious? No, in this whole place used to be a brothel. There was a tavern on the ground floor. I just wanted to congratulate you on that great golden ticket idea, no, I can't it was like hours ago. 
+title:
+whatWeDo:
+  title: What We Do
+  description: We are reducing barriers faced by formerly incarcerated individuals by streamlining process of vacating eligible convictions in Washington state. We analyzed the process of conviction vacation in Washington state, and have identified opportunities to use technology to streamline the process. Our efforts at the National Day of Civic Hacking on September 21st focused on automating eligibility calculation for conviction vacation. We see future opportunity to streamline the completion of the required forms. We are investigating the feasibility of a Turbo Tax style interface to simplify this process, and then e-filing the forms in counties where it is permitted.
+socialValues:
+  title: Social Values
+  description: While the need for social justice is not news to anyone, the many forms injustice and excessive punishment comes in can be surprising!  While there are already countless organizations chipping away at some aspects … we’ve found those previously convicted of crimes …. Unsympathetic community relegated to life-long millstone… over and above the punition meted out by the courts…
+expectations:
+  title: Expectations
+  description: The way we engage is more regular than one might swoop in, knock out some tickets, and swoop out. We engage regularly, not just through our respective skill-sets, but with the team and project as a whole! This commitment amounts to, on average, about three hours every week for at least six months.
 seo:
   browserTitle: Volunteer With Us | CVP
-  description: >-
-    Description!
+  description: Conviction vacation resources for poetential volunteers
   title: Volunteer With Us | CVP
 ---
-## Heading!
-
-Content!

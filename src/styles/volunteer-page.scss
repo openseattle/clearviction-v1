@@ -1,5 +1,5 @@
-@import "./variables.scss";
-@import "./mixins.scss";
+@import './variables.scss';
+@import './mixins.scss';
 
 .about {
   &-header {
@@ -8,7 +8,7 @@
     align-items: center;
     padding-top: 40px;
 
-    @include respond-to("medium") {
+    @include respond-to('medium') {
       padding-top: 60px;
       flex-direction: row;
       justify-content: space-around;
@@ -21,7 +21,7 @@
     text-align: center;
     flex-shrink: 0;
 
-    @include respond-to("medium") {
+    @include respond-to('medium') {
       flex-basis: 450px;
       text-align: left;
       margin-bottom: 0;
@@ -39,7 +39,7 @@
     width: 400px;
     max-width: 100%;
 
-    @include respond-to("medium") {
+    @include respond-to('medium') {
       width: 500px;
     }
   }
@@ -49,7 +49,7 @@
     text-align: justify;
     @include medium-font();
 
-    @include respond-to("small") {
+    @include respond-to('small') {
       text-align: left;
     }
 
@@ -61,47 +61,18 @@
   }
 }
 
-.developerGroups {
-  background-color: $background-medium;
-  color: $body-light;
-  @include medium-font();
-
-  h2 {
-    @include large-font();
-    margin-bottom: 40px;
-  }
-
-  ul li {
-    margin-bottom: 20px;
-  }
-
-  a {
-    @include link-border();
-  }
-}
-
-.galleryList {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-bottom: -20px;
-}
-
-.galleryList-item {
-  width: 350px;
-  margin-bottom: 20px;
-}
-
-.organizers {
+.whatWeDo,
+.socialValues,
+.expectations {
   @include medium-font();
 
   &-title {
-    text-align: center;
-    margin-bottom: 40px;
+    text-align: left;
+    margin-bottom: 0px;
     @include large-font();
 
-    @include respond-to("small") {
-      margin-bottom: 80px;
+    @include respond-to('small') {
+      margin-bottom: 20px;
     }
   }
 
@@ -123,7 +94,7 @@
     border-radius: 3px;
     height: 200px;
 
-    @include respond-to("small") {
+    @include respond-to('small') {
       height: 300px;
     }
   }
