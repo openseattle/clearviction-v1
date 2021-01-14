@@ -8,7 +8,7 @@ import ReactMarkdown from "react-markdown";
 import MeetupTemplate from "./meetup";
 import Layout from "../components/Layout";
 import HTMLContent from "../components/Content";
-import "../styles/past-meetups-page.scss";
+import "../styles/clinic-man-page.scss";
 
 export const PastMeetupsPageTemplate = ({
   title,
