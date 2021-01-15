@@ -2,6 +2,14 @@
 @import "./mixins.scss";
 
 .pastMeetups {
+  h2 {
+    @include large-font();
+  }
+
+  ul li {
+    margin-bottom: 20px;
+  }
+
   &-container {
     padding: $section-padding-mobile 20px;
     display: flex;
