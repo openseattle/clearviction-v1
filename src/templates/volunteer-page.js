@@ -77,7 +77,6 @@ export const volunteerPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        title
         whatWeDo {
           title
           description
