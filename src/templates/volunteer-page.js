@@ -20,26 +20,60 @@ export const VolunteerPageTemplate = (props) => {
           </div>
         </section>
       </div>
-      <section className='section  whatWeDo  volunteer-whatWeDo'>
-        <div className='container  whatWeDo-container'>
-          <h2 className='whatWeDo-title'>{page.frontmatter.whatWeDo.title}</h2>
-          <div className=''>{page.frontmatter.whatWeDo.description}</div>
+      <section className='section volunteerInfo'>
+        <div className='container'>
+          <h2 className='volunteerInfo-title'>
+            {page.frontmatter.whatWeDo.title}
+          </h2>
+          <div>{page.frontmatter.whatWeDo.description}</div>
         </div>
       </section>
-      <section className='section  socialValues  volunteer-socialValues'>
-        <div className='container  socialValues-container'>
-          <h2 className='socialValues-title'>
-            {page.frontmatter.socialValues.title}
+      <section className='section volunteerInfo'>
+        <div className='container'>
+          <h2 className='volunteerInfo-title'>
+            {page.frontmatter.impact.title}
           </h2>
-          <div className=''>{page.frontmatter.socialValues.description}</div>
+          <div>{page.frontmatter.impact.description}</div>
         </div>
       </section>
-      <section className='section  expectations  volunteer-expectations'>
-        <div className='container  expectations-container'>
-          <h2 className='expectations-title'>
-            {page.frontmatter.expectations.title}
+      <section className='section volunteerInfo'>
+        <div className='container'>
+          <h2 className='volunteerInfo-title'>
+            {page.frontmatter.groupDynamic.title}
           </h2>
-          <div className=''>{page.frontmatter.expectations.description}</div>
+          <div>{page.frontmatter.groupDynamic.description}</div>
+        </div>
+      </section>
+      <section className='section volunteerInfo'>
+        <div className='container'>
+          <h2 className='volunteerInfo-title'>
+            {page.frontmatter.qualifications.title}
+          </h2>
+          <div>{page.frontmatter.qualifications.description}</div>
+        </div>
+      </section>
+      <section className='section volunteerInfo'>
+        <div className='container'>
+          <h2 className='volunteerInfo-title'>
+            {page.frontmatter.timeExpectations.title}
+          </h2>
+          <div>{page.frontmatter.timeExpectations.description}</div>
+        </div>
+      </section>
+      <section className='section volunteerInfo'>
+        <div className='container'>
+          <h2 className='volunteerInfo-title'>
+            {page.frontmatter.status.title}
+          </h2>
+          <div>{page.frontmatter.status.description}</div>
+        </div>
+      </section>
+      <section className='section volunteerInfo'>
+        <div className='container'>
+          <h2 className='volunteerInfo-title'>
+            {page.frontmatter.contact.title}
+          </h2>
+          <div>{page.frontmatter.contact.description}</div>
         </div>
       </section>
     </article>
@@ -77,15 +111,32 @@ export const volunteerPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
+        title
         whatWeDo {
           title
           description
         }
-        socialValues {
+        impact {
           title
           description
         }
-        expectations {
+        groupDynamic {
+          title
+          description
+        }
+        qualifications {
+          title
+          description
+        }
+        timeExpectations {
+          title
+          description
+        }
+        status {
+          title
+          description
+        }
+        contact {
           title
           description
         }
