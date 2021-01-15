@@ -3,25 +3,22 @@ templateKey: home-page
 headerImage:
   image: /img/television.png
   imageAlt: image alt
-title: Home Page
-upcomingMeetupHeading: Home Page
-noUpcomingMeetupText: Details to be announced.
-mapsNote: Clicking the pin opens Google Maps in a new tab.
+title: Washington Conviction Vacation Project
+titleDescription: We’re developing a software that helps people remove criminal convictions from background checks, making it easier for people with prior convictions to get job and housing.
 callToActions:
   firstCTA:
-    heading: Past Meetups
+    heading: Volunteers
     linkType: internal
-    linkURL: /
-    subHeading: Look at what topics were presented at past meetups.
+    linkURL: /volunteer
+    subHeading: Join the team and help us build
   secondCTA:
-    heading: Volunteer to Present
-    linkType: external
-    linkURL: 'mailto:contact@js-wakanda.org'
-    subHeading: Want to present at an upcoming meetup? Contact us.
+    heading: Clinics
+    linkType: internal
+    linkURL: /clinic
+    subHeading: Partner with us
 seo:
   browserTitle: Conviction Vacation Project
   description: >-
-    Site description 
+    Site description
   title: Conviction Vacation Project
 ---
-
