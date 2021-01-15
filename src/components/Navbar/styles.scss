@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import '../../styles/variables.scss';
 
 .navbar {
   background-color: $background-dark;
@@ -7,6 +7,13 @@
   &-container {
     display: flex;
     height: 100%;
+  }
+
+  &-title {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
 
   &-menu {
