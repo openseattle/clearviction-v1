@@ -1,7 +1,7 @@
 ---
 templateKey: home-page
 headerImage:
-  image: /img/television.png
+  image: /img/ConvictionVacation.png
   imageAlt: image alt
 title: Washington Conviction Vacation Project
 titleDescription: We’re developing a software that helps people remove criminal convictions from background checks, making it easier for people with prior convictions to get job and housing.
