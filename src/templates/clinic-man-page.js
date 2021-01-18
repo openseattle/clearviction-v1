@@ -1,92 +1,97 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { graphql } from "gatsby";
-import Helmet from "react-helmet";
-import isBefore from "date-fns/is_before";
-import ReactMarkdown from "react-markdown";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { graphql } from 'gatsby'
+// import ReactMarkdown from 'react-markdown'
+import Helmet from 'react-helmet'
 
-import MeetupTemplate from "./meetup";
-import Layout from "../components/Layout";
-import HTMLContent from "../components/Content";
-import "../styles/clinic-man-page.scss";
+import Layout from '../components/Layout'
+// import HTMLContent from '../components/Content'
+import '../styles/volunteer-page.scss'
 
-export const PastMeetupsPageTemplate = ({
-  title,
-  content,
-  meetups = null,
-  bodyIsMarkdown = false,
-}) => {
+export const ClinicManPageTemplate = (props) => {
+  const { page } = props
+
   return (
-    <article className="pastMeetups">
-      <div className="container  pastMeetups-container">
-        <h1 className="pastMeetups-title">{title}</h1>
-        {bodyIsMarkdown ? (
-          <ReactMarkdown className="pastMeetups-description" source={content} />
-        ) : (
-          <HTMLContent className="pastMeetups-description" content={content} />
-        )}
-        {/* {meetups &&
-          meetups.map((meetup, index) => (
-            <MeetupTemplate
-              key={index}
-              className="pastMeetups-meetup"
-              meetup={meetup.node.frontmatter}
-            />
-          ))} */}
+    <article className='volunteer'>
+      <div className='volunteer-container  container'>
+        <section className='volunteer-header'>
+          <div className='volunteer-titleWrapper'>
+            <h1 className='volunteer-title'>{page.frontmatter.title}</h1>
+          </div>
+        </section>
       </div>
+      <section className='section volunteerInfo'>
+        <div className='container'>
+          <h2 className='volunteerInfo-title'>
+            {page.frontmatter.whatWeDo.title}
+          </h2>
+          <div>{page.frontmatter.whatWeDo.description}</div>
+        </div>
+      </section>
+      <section className='section volunteerInfo'>
+        <div className='container'>
+          <h2 className='volunteerInfo-title'>
+            {page.frontmatter.impact.title}
+          </h2>
+          <div>{page.frontmatter.impact.description}</div>
+        </div>
+      </section>
+      <section className='section volunteerInfo'>
+        <div className='container'>
+          <h2 className='volunteerInfo-title'>
+            {page.frontmatter.groupDynamic.title}
+          </h2>
+          <div>{page.frontmatter.groupDynamic.description}</div>
+        </div>
+      </section>
     </article>
-  );
-};
+  )
+}
 
-PastMeetupsPageTemplate.propTypes = {
-  title: PropTypes.string.isRequired,
-  content: PropTypes.string,
-  meetups: PropTypes.array,
-};
-
-// below content is probably not necessary
-const PastMeetupsPage = ({ data }) => {
-  const { markdownRemark: page } = data;
+const clinicManPage = ({ data }) => {
+  const { markdownRemark: page, footerData, navbarData } = data
   const {
     frontmatter: {
       seo: { title: seoTitle, description: seoDescription, browserTitle },
     },
-  } = page;
-  let meetups = data.allMarkdownRemark.edges;
-
-  // Find all the meetups that occured in the past
-  meetups = meetups.filter(meetup => {
-    return isBefore(meetup.node.frontmatter.rawDate, new Date()) && meetup;
-  });
+  } = page
 
   return (
-    <Layout footerData={data.footerData} navbarData={data.navbarData}>
+    <Layout footerData={footerData} navbarData={navbarData}>
       <Helmet>
-        <meta name="title" content={seoTitle} />
-        <meta name="description" content={seoDescription} />
+        <meta name='title' content={seoTitle} />
+        <meta name='description' content={seoDescription} />
         <title>{browserTitle}</title>
       </Helmet>
-      <PastMeetupsPageTemplate
-        title={page.frontmatter.title}
-        content={page.html}
-        meetups={meetups}
-      />
+      <ClinicManPageTemplate page={{ ...page, bodyIsMarkdown: false }} />
     </Layout>
-  );
-};
+  )
+}
 
-PastMeetupsPage.propTypes = {
+clinicManPage.propTypes = {
   data: PropTypes.object.isRequired,
-};
+}
 
-export default PastMeetupsPage;
+export default clinicManPage
 
-export const pastMeetupsPageQuery = graphql`
-  query PastMeetupsPage($id: String!) {
+export const clinicManPageQuery = graphql`
+  query clinicManPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
         title
+        whatWeDo {
+          title
+          description
+        }
+        impact {
+          title
+          description
+        }
+        groupDynamic {
+          title
+          description
+        }
         seo {
           browserTitle
           title
@@ -95,32 +100,5 @@ export const pastMeetupsPageQuery = graphql`
       }
     }
     ...LayoutFragment
-    allMarkdownRemark(
-      filter: { frontmatter: { presenters: { elemMatch: { text: { ne: null } } } } }
-      sort: { order: DESC, fields: frontmatter___date }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            formattedDate: date(formatString: "MMMM Do YYYY @ h:mm A")
-            rawDate: date
-            presenters {
-              name
-              image
-              text
-              presentationTitle
-              links {
-                linkText
-                linkURL
-              }
-            }
-            location {
-              name
-            }
-          }
-        }
-      }
-    }
   }
-`;
+`
