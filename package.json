@@ -38,12 +38,14 @@
     "start": "npm run develop",
     "clean": "rimraf .cache public",
     "build": "npm run clean && gatsby build",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public -b master",
     "develop": "npm run clean && gatsby develop",
     "serve": "gatsby serve",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
+    "gh-pages": "^3.1.0",
     "prettier": "^1.7.4",
     "rimraf": "^2.6.2"
   }
