@@ -18,7 +18,7 @@ export const FooterTemplate = ({ data }) => {
             </h4>
             <p className="footer-aboutDescription">{logoImage.tagline}</p>
           </div>
-          {socialLinks.length > 0 && (
+          {/* {socialLinks.length > 0 && (
             <ul className="footer-socialMenu">
               {socialLinks.map(socialLink => (
                 <li key={socialLink.linkURL} className="footer-socialMenuItem">
@@ -38,15 +38,9 @@ export const FooterTemplate = ({ data }) => {
                 </li>
               ))}
             </ul>
-          )}
+          )} */}
         </div>
-        <div className="footer-bottom">
-          <div className="footer-flag">
-            <span role="img" aria-label="Made in Canada">
-              🇨🇦
-            </span>
-          </div>
-        </div>
+        {/* <div className="footer-bottom"></div> */}
       </div>
     </nav>
   );
