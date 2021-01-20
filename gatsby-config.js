@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/cvp-bench",
   siteMetadata: {
     title: "Gatsby + Netlify CMS Starter",
   },

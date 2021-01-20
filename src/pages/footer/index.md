@@ -7,7 +7,7 @@ logoImage:
 socialLinks:
   - image: /img/email.svg
     imageAlt: Contact us by email 
-    label: Email Seamus! 
+    label: Email Us! 
     linkURL: 'mailto:seamus@seamus.work'
 ---
 
