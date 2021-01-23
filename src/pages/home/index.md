@@ -4,7 +4,7 @@ headerImage:
   image: ./img/CVLogo.png
   imageAlt: CVP Logo
 title: Washington Conviction Vacation Project
-titleDescription: We’re developing a software that helps people remove criminal convictions from background checks, making it easier for people with prior convictions to get job and housing.
+titleDescription: We’re developing a software that helps people remove criminal convictions from background checks, making it easier for people with prior convictions to get jobs and housing.
 callToActions:
   firstCTA:
     heading: Volunteers
