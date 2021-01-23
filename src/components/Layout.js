@@ -31,8 +31,6 @@ export const query = graphql`
               tagline
             }
             socialLinks {
-              image
-              imageAlt
               label
               linkURL
             }
