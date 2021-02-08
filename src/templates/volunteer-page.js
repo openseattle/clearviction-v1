@@ -9,6 +9,19 @@ import '../styles/volunteer-page.scss'
 export const VolunteerPageTemplate = (props) => {
   const { page } = props
 
+  const mapVolunteerInfo = (infoObject) => {
+    return Object.keys(infoObject).map((key) => {
+      return (
+        <section className='section volunteerInfo'>
+          <div className='container'>
+            <h2 className='volunteerInfo-title'>{infoObject[key].title}</h2>
+            <div>{infoObject[key].description}</div>
+          </div>
+        </section>
+      )
+    })
+  }
+
   return (
     <article className='volunteer'>
       <div className='volunteer-container  container'>
@@ -18,62 +31,7 @@ export const VolunteerPageTemplate = (props) => {
           </div>
         </section>
       </div>
-      <section className='section volunteerInfo'>
-        <div className='container'>
-          <h2 className='volunteerInfo-title'>
-            {page.frontmatter.whatWeDo.title}
-          </h2>
-          <div>{page.frontmatter.whatWeDo.description}</div>
-        </div>
-      </section>
-      <section className='section volunteerInfo'>
-        <div className='container'>
-          <h2 className='volunteerInfo-title'>
-            {page.frontmatter.impact.title}
-          </h2>
-          <div>{page.frontmatter.impact.description}</div>
-        </div>
-      </section>
-      <section className='section volunteerInfo'>
-        <div className='container'>
-          <h2 className='volunteerInfo-title'>
-            {page.frontmatter.groupDynamic.title}
-          </h2>
-          <div>{page.frontmatter.groupDynamic.description}</div>
-        </div>
-      </section>
-      <section className='section volunteerInfo'>
-        <div className='container'>
-          <h2 className='volunteerInfo-title'>
-            {page.frontmatter.qualifications.title}
-          </h2>
-          <div>{page.frontmatter.qualifications.description}</div>
-        </div>
-      </section>
-      <section className='section volunteerInfo'>
-        <div className='container'>
-          <h2 className='volunteerInfo-title'>
-            {page.frontmatter.timeExpectations.title}
-          </h2>
-          <div>{page.frontmatter.timeExpectations.description}</div>
-        </div>
-      </section>
-      <section className='section volunteerInfo'>
-        <div className='container'>
-          <h2 className='volunteerInfo-title'>
-            {page.frontmatter.status.title}
-          </h2>
-          <div>{page.frontmatter.status.description}</div>
-        </div>
-      </section>
-      <section className='section volunteerInfo'>
-        <div className='container'>
-          <h2 className='volunteerInfo-title'>
-            {page.frontmatter.contact.title}
-          </h2>
-          <div>{page.frontmatter.contact.description}</div>
-        </div>
-      </section>
+      {mapVolunteerInfo(page.frontmatter.content)}
     </article>
   )
 }
@@ -109,39 +67,41 @@ export const volunteerPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        title
-        whatWeDo {
-          title
-          description
-        }
-        impact {
-          title
-          description
-        }
-        groupDynamic {
-          title
-          description
-        }
-        qualifications {
-          title
-          description
-        }
-        timeExpectations {
-          title
-          description
-        }
-        status {
-          title
-          description
-        }
-        contact {
-          title
-          description
-        }
         seo {
           browserTitle
           title
           description
+        }
+        title
+        content {
+          whatWeDo {
+            title
+            description
+          }
+          impact {
+            title
+            description
+          }
+          groupDynamic {
+            title
+            description
+          }
+          qualifications {
+            title
+            description
+          }
+          timeExpectations {
+            title
+            description
+          }
+          status {
+            title
+            description
+          }
+          contact {
+            title
+            description
+          }
         }
       }
     }
