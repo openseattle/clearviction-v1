@@ -9,13 +9,20 @@ import '../styles/volunteer-page.scss'
 export const VolunteerPageTemplate = (props) => {
   const { page } = props
 
-  const mapVolunteerInfo = (infoObject) => {
-    return Object.keys(infoObject).map((key) => {
+  const mapInfo = (info) => {
+    return Object.keys(info).map((key) => {
       return (
         <section className='section volunteerInfo'>
           <div className='container'>
-            <h2 className='volunteerInfo-title'>{infoObject[key].title}</h2>
-            <div>{infoObject[key].description}</div>
+            <h2 className='volunteerInfo-title'>{info[key].title}</h2>
+            <div>{info[key].description}</div>
+            {!!info[key].link && (
+              <a href={info[key].link.url}>
+                <button className='volunteerInfo-link'>
+                  {info[key].link.title}
+                </button>
+              </a>
+            )}
           </div>
         </section>
       )
@@ -31,7 +38,7 @@ export const VolunteerPageTemplate = (props) => {
           </div>
         </section>
       </div>
-      {mapVolunteerInfo(page.frontmatter.content)}
+      {mapInfo(page.frontmatter.content)}
     </article>
   )
 }
@@ -101,6 +108,10 @@ export const volunteerPageQuery = graphql`
           contact {
             title
             description
+            link {
+              title
+              url
+            }
           }
         }
       }
