@@ -9,6 +9,19 @@ import '../styles/volunteer-page.scss'
 export const ClinicManPageTemplate = (props) => {
   const { page } = props
 
+  const mapVolunteerInfo = (infoObject) => {
+    return Object.keys(infoObject).map((key) => {
+      return (
+        <section className='section volunteerInfo'>
+          <div className='container'>
+            <h2 className='volunteerInfo-title'>{infoObject[key].title}</h2>
+            <div>{infoObject[key].description}</div>
+          </div>
+        </section>
+      )
+    })
+  }
+
   return (
     <article className='volunteer'>
       <div className='volunteer-container  container'>
@@ -18,30 +31,7 @@ export const ClinicManPageTemplate = (props) => {
           </div>
         </section>
       </div>
-      <section className='section volunteerInfo'>
-        <div className='container'>
-          <h2 className='volunteerInfo-title'>
-            {page.frontmatter.whatWeDo.title}
-          </h2>
-          <div>{page.frontmatter.whatWeDo.description}</div>
-        </div>
-      </section>
-      <section className='section volunteerInfo'>
-        <div className='container'>
-          <h2 className='volunteerInfo-title'>
-            {page.frontmatter.impact.title}
-          </h2>
-          <div>{page.frontmatter.impact.description}</div>
-        </div>
-      </section>
-      <section className='section volunteerInfo'>
-        <div className='container'>
-          <h2 className='volunteerInfo-title'>
-            {page.frontmatter.groupDynamic.title}
-          </h2>
-          <div>{page.frontmatter.groupDynamic.description}</div>
-        </div>
-      </section>
+      {mapVolunteerInfo(page.frontmatter.content)}
     </article>
   )
 }
@@ -77,23 +67,25 @@ export const clinicManPageQuery = graphql`
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
-        title
-        whatWeDo {
-          title
-          description
-        }
-        impact {
-          title
-          description
-        }
-        groupDynamic {
-          title
-          description
-        }
         seo {
           browserTitle
           title
           description
+        }
+        title
+        content {
+          whatWeDo {
+            title
+            description
+          }
+          impact {
+            title
+            description
+          }
+          groupDynamic {
+            title
+            description
+          }
         }
       }
     }
