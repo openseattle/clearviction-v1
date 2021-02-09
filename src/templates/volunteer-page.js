@@ -4,6 +4,7 @@ import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/Layout'
+import InfoSection from '../components/InfoSection'
 import '../styles/volunteer-page.scss'
 
 export const VolunteerPageTemplate = (props) => {
@@ -11,21 +12,7 @@ export const VolunteerPageTemplate = (props) => {
 
   const mapInfo = (info) => {
     return Object.keys(info).map((key) => {
-      return (
-        <section className='section volunteerInfo'>
-          <div className='container'>
-            <h2 className='volunteerInfo-title'>{info[key].title}</h2>
-            <div>{info[key].description}</div>
-            {!!info[key].link && (
-              <a href={info[key].link.url}>
-                <button className='volunteerInfo-link'>
-                  {info[key].link.title}
-                </button>
-              </a>
-            )}
-          </div>
-        </section>
-      )
+      return <InfoSection sectionInfo={info[key]} />
     })
   }
 
