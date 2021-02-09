@@ -100,4 +100,15 @@
   &-listItemName {
     font-weight: 400;
   }
+
+  &-link {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    @include medium-font();
+
+    @include respond-to('small') {
+      margin-bottom: 20px;
+    }
+  }
 }
