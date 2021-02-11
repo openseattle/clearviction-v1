@@ -1,18 +1,19 @@
 import React, { useState } from 'react'
 
 const InfoSection = ({ sectionInfo }) => {
-  const [showHide, setShowHide] = useState('none')
+  const [collapsed, setCollapsed] = useState(true)
 
   const handleClick = () => {
-    showHide === 'none' ? setShowHide('block') : setShowHide('none')
-    console.log(showHide)
+    collapsed === true ? setCollapsed(false) : setCollapsed(true)
   }
 
   return (
     <section onClick={() => handleClick()} className='section volunteerInfo'>
       <div className='container'>
-        <h2 className='volunteerInfo-title'>{sectionInfo.title}</h2>
-        <div style={{ display: showHide }}>
+        <h2 className={`volunteerInfo${collapsed ? '' : '-title'}`}>
+          {sectionInfo.title}
+        </h2>
+        <div className={`collapsible ${collapsed ? '' : 'expand'}`}>
           {sectionInfo.description}
           {!!sectionInfo.link && (
             <div>

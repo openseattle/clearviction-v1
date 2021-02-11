@@ -4,7 +4,7 @@ import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 
 import Layout from '../components/Layout'
-import InfoSection from '../components/InfoSection'
+import CollapsibleInfoSection from '../components/CollapsibleInfoSection'
 import '../styles/volunteer-page.scss'
 
 export const VolunteerPageTemplate = (props) => {
@@ -12,7 +12,7 @@ export const VolunteerPageTemplate = (props) => {
 
   const mapInfo = (info) => {
     return Object.keys(info).map((key) => {
-      return <InfoSection sectionInfo={info[key]} />
+      return <CollapsibleInfoSection sectionInfo={info[key]} />
     })
   }
 
