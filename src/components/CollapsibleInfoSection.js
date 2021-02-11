@@ -3,16 +3,14 @@ import React, { useState } from 'react'
 const InfoSection = ({ sectionInfo }) => {
   const [collapsed, setCollapsed] = useState(true)
 
-  const handleClick = () => {
-    collapsed === true ? setCollapsed(false) : setCollapsed(true)
-  }
-
   return (
-    <section onClick={() => handleClick()} className='section volunteerInfo'>
+    <section
+      onMouseEnter={() => setCollapsed(false)}
+      onMouseLeave={() => setCollapsed(true)}
+      className='section volunteerInfo'
+    >
       <div className='container'>
-        <h2 className={`volunteerInfo${collapsed ? '' : '-title'}`}>
-          {sectionInfo.title}
-        </h2>
+        <h2 className='volunteerInfo-title'>{sectionInfo.title}</h2>
         <div className={`collapsible ${collapsed ? '' : 'expand'}`}>
           {sectionInfo.description}
           {!!sectionInfo.link && (
