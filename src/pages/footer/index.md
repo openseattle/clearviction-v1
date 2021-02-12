@@ -1,7 +1,7 @@
 ---
 templateKey: footer
 logoImage:
-  image: /img/cvplogo.jpg
+  image: /img/CVLogo.png
   imageAlt: Conviction Vacation Project  
   tagline: Conviction Vacation Project
 socialLinks:
