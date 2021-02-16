@@ -28,6 +28,6 @@ content:
     title: How do I get started?
     description: After reaching out to us, you and Seamus will have a Zoom chat about yourself, the project, and how the two could fit together! There’s a relatively painless, self-guided onboarding process, and then we’ll loop you into our overarching project activities while you decide which of the smaller, more focused sub-groups to join.
     link:
-      title: Contact Us!
+      title: Contact Seamus! (seamus@seamus.work)
       url: 'mailto:seamus@seamus.work'
 ---

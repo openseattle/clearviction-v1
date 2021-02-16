@@ -6,8 +6,8 @@ logoImage:
   tagline: Conviction Vacation Project
 socialLinks:
   - image: /img/email.svg
-    imageAlt: Contact us by email 
-    label: Contact Us! 
+    imageAlt: Contact Seamus by email 
+    label: Contact Seamus! (seamus@seamus.work)
     linkURL: 'mailto:seamus@seamus.work'
 ---
 
