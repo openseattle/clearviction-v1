@@ -7,7 +7,9 @@ export const NavbarTemplate = ({ data }) => (
   <nav className='navbar'>
     <div className='container  navbar-container'>
       <span className='navbar-title'>
-        Washington Conviction Vacation Project
+        <a href="/">
+          Washington Conviction Vacation Project
+        </a>
       </span>
       {data.menuItems.length > 0 && (
         <ul className='navbar-menu'>
