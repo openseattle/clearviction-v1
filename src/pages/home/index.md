@@ -10,7 +10,7 @@ callToActions:
     heading: Volunteers
     linkType: internal
     linkURL: /volunteer
-    subHeading: Join the team and help us build
+    subHeading: Join the team
   secondCTA:
     heading: Clinics
     linkType: internal
