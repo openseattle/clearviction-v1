@@ -1,0 +1,34 @@
+section:nth-child(odd) {
+  background-color: gainsboro;
+}
+
+#jumbotron-text {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.btn {
+  background-color: #13229c;
+}
+
+.container-fluid-content {
+  padding: 3em;
+}
+
+.container-fluid-header {
+  /* padding: 1em; */
+}
+
+a {
+  color: #13229c;
+  text-decoration: none;
+}
+
+a:hover {
+  color: grey;
+}
+
+.white-link {
+  color: #fff;
+  text-decoration: none;
+}

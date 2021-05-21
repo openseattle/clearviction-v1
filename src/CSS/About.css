@@ -1,0 +1,29 @@
+section:nth-child(odd) {
+  background-color: whitesmoke;
+}
+
+.col {
+  padding: 3em;
+  max-width: 460px;
+}
+
+.container-fluid-content {
+  padding: 3em;
+}
+
+.row {
+  justify-content: center;
+}
+
+#logo {
+  width: 400px;
+}
+
+.bi {
+  margin: 1em;
+}
+
+#filler {
+  padding: 0;
+  margin: 0;
+}

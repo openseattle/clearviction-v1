@@ -1,0 +1,23 @@
+.footer-cont {
+  /* position: fixed; */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #13229c;
+  color: white;
+  text-align: center;
+}
+
+.info-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+
+.header-info-cont {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 60px;
+}
