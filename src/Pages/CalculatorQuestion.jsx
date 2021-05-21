@@ -3,7 +3,7 @@ import Button from "../Components/Button";
 import { useParams, useHistory } from "react-router-dom";
 
 // data import
-import Questions from "../data/calcuatorQuestions.json";
+import Questions from "../data/calculatorQuestions.json";
 
 //**! Thoughts on Data Structure: for the answers array --> we could also use tupules -->  "answers": [ ["yes", 0], ["no", 1],["text to display", 2]] --> or keep it as is --> reinforced data rules vs. nesting ??*/
 
