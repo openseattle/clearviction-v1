@@ -37,7 +37,7 @@ This repo is for our informational website, which will eventually be home to the
 To get our static website up and running on your machine, you can follow the commands below: 
 
 ```
-$ git clone https://github.com/stuttskl/cvp-website
+$ git clone https://github.com/openseattle/cvp
 ```
 
 ### Installation
@@ -80,7 +80,7 @@ Your app is ready to be deployed!
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
 ## Contributing
-1. [Fork](https://github.com/stuttskl/cvp-website/fork) the repo. 
+1. [Fork](https://github.com/openseattle/cvp/fork) the repo. 
 2. Create your feature branch ``` git checkout -b feature/your-feature-name ```
 3. Commit your changes ``` git commit -m "commit message describing your changes" ```
 4. Push your changes to your feature branch ``` git push origin feature/your-feature-name ```
