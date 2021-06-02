@@ -1,0 +1,62 @@
+.calc-grid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calc-col {
+  flex: 1;
+}
+
+.calc-button {
+  background-color: #4e6c99;
+  color: #fff;
+  border: 0;
+  box-shadow: none;
+  border-radius: 6px;
+  width: calc(100vw - 7em);
+  height: 3em;
+  max-width: 264px;
+  font-size: 1.13em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.calc-col.title {
+  font-size: 2.125em;
+  margin: 2em 1em;
+  font-style: normal;
+}
+
+.calc-col.body {
+  margin: 1em 1em 0;
+  text-align: left;
+}
+
+.calc-col.body p {
+  font-family: "Lora", serif;
+  margin-bottom: 0;
+}
+
+.calc-col.body span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ! This section is for mobile */
+@media only screen and (max-width: 600px) {
+  .calc-grid {
+    height: calc(100vh - 60px);
+  }
+
+  .calc-landing-text {
+    flex: 1 1 100%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;
+  }
+}
+
+/* ! This section is for desktop */
+@media only screen and (min-width: 601px) {
+}

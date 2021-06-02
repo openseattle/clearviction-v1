@@ -1,7 +1,7 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import Button from "../Components/Button";
-//! Import css
+import "../CSS/Calculator.css";
 
 /** The page that gets displayed when a user clicks the Calculator link in the Nav Bar
  * Will always show welcome message, description and a start button
@@ -25,15 +25,32 @@ const CalculatorLanding = () => {
   };
 
   return (
-    <div>
-      <h1>Welcome to Conviction Vacation Project!</h1>
-      {/* // TODO Import the figma text */}
-      <p>Welcome to the Conviction Vacation Project! You can use our eligibility calculator to know if you are eligible for conviction vacation, based on the information you provide. Currently, we only process convictions that are misdemeanors for possession of marijuana. Does that sound like your conviction?</p>
+    <div className="calc-grid">
+
+      <h1 className="calc-col title">
+        Welcome to the Conviction Vacation Project!
+      </h1>
+
+      <div className="calc-col body">
+        <p>
+          You can use our eligibility calculator to know if you are eligible to
+          vacate your marijuana conviction.
+        </p>
+        <small>
+          *This only works with marijuana misdemeanor convictions currently
+        </small>
+      </div>
 
       {/* When a user clicks this they will begin the questionaire */}
-      <Button text="That sounds like what I need" onClick={onStartClick} />
-       {/* When a user clicks this they will be sent to Ineligible*/}
-      <Button text="My conviction is NOT a marijuana misdemeanor" onClick={onIneligibleClick} />
+      <Button className="calc-button" text="Start" onClick={onStartClick} />
+
+      {/* When a user clicks this they will be sent to Ineligible*/}
+      <div className="calc-col body">
+        <span onClick={onIneligibleClick}>
+          My conviction is not a marijuana misdemeanor.
+        </span>
+      </div>
+
     </div>
   );
 };
