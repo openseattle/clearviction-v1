@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavBar component renders NavBar by default 1`] = `
+<div
+  aria-current="page"
+  className="navbar navbar-expand-lg navbar-light bg-light"
+  role="navigation"
+  style={
+    Object {
+      "backgroundColor": "#e3f2fd",
+    }
+  }
+>
+  <div
+    className="container-fluid"
+  >
+    <button
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+      class="navbar-toggler"
+      data-bs-target="#navbarNav"
+      data-bs-toggle="collapse"
+      type="button"
+    >
+      <span
+        class="navbar-toggler-icon"
+      />
+    </button>
+    <div
+      class="collapse navbar-collapse"
+      id="navbarNav"
+    >
+      <ul
+        class="navbar-nav"
+      >
+        <li
+          className="nav-item"
+        >
+          <NavLink
+            className="nav-link"
+            to="/"
+          >
+            Home
+          </NavLink>
+        </li>
+        <li
+          className="nav-item"
+        >
+          <NavLink
+            className="nav-link"
+            to="/about"
+          >
+            About
+          </NavLink>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
