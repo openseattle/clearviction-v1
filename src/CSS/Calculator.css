@@ -29,8 +29,9 @@
 }
 
 .calc-col.body {
-  margin: 1em 1em 0;
+  margin: 1em 1em;
   text-align: left;
+  font-size: 1.25em;
 }
 
 .calc-col.body p {
@@ -38,7 +39,11 @@
   margin-bottom: 0;
 }
 
-.calc-col.body span {
+.calc-col.body small {
+  font-weight: 700;
+}
+
+.calc-col.footer span {
   text-decoration: underline;
   cursor: pointer;
 }
@@ -51,12 +56,34 @@
 
   .calc-landing-text {
     flex: 1 1 100%;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: 100%;
+  }
+
+  .calc-col.footer {
+    width: calc(100vw - 7em);
+    max-width: 264px;
   }
 }
 
 /* ! This section is for desktop */
 @media only screen and (min-width: 601px) {
+  .calc-col.body {
+    max-width: 455px;
+  }
+
+  .calc-col.body p {
+    margin-bottom: 1em;
+  }
+
+  .calc-col.body {
+    margin-bottom: 3em;
+  }
+
+  .calc-col {
+    width: calc(100vw - 10em);
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
 }

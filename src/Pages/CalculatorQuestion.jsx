@@ -41,7 +41,7 @@ const CalculatorQuestion = () => {
 
   return (
     <div className="calc-grid">
-      <h1 className="calc-col body">{question}</h1>
+      <p className="calc-col body">{question}</p>
       {tooltip}
       <div className="calc-col">
         {answers.map((a, i) => (

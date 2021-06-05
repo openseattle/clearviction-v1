@@ -45,7 +45,7 @@ const CalculatorLanding = () => {
       <Button className="calc-button" text="Start" onClick={onStartClick} />
 
       {/* When a user clicks this they will be sent to Ineligible*/}
-      <div className="calc-col body">
+      <div className="calc-col footer">
         <span onClick={onIneligibleClick}>
           My conviction is not a marijuana misdemeanor.
         </span>
