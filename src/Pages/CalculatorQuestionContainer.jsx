@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import CalculatorQuestion from "./CalculatorQuestion";
-import CalculatorResults from "../Components/CalculatorResults";
 import { useRouteMatch, Switch, Route } from "react-router-dom";
+import CalculatorQuestion from "../Components/CalculatorQuestion";
+import CalculatorResults from "../Components/CalculatorResults";
+import "../CSS/Calculator.css";
 
-const CalculatorQuestionCont = (props) => {
+const CalculatorQuestionCont = () => {
   let { path } = useRouteMatch();
 
   const [userResponse, setUserResponse] = useState({
@@ -16,7 +17,7 @@ const CalculatorQuestionCont = (props) => {
   });
 
   return (
-    <div>
+    <>
       <Switch>
         <Route path={`${path}/results_no`}>
           <CalculatorResults
@@ -37,7 +38,7 @@ const CalculatorQuestionCont = (props) => {
           />
         </Route>
       </Switch>
-    </div>
+    </>
   );
 };
 

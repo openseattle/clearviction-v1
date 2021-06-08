@@ -1,7 +1,11 @@
 [
   {
+    "id": "1", 
+    "text": ""
+  },
+  {
     "id": "2",
-    "text": "Conviction was not a misdemeanor "
+    "text": "Conviction was not a misdemeanor"
   },
   {
     "id": "3",
@@ -13,7 +17,7 @@
   },
   {
     "id": "5",
-    "text": "You did not complete your terms "
+    "text": "You did not complete your terms"
   },
   {
     "id": "6",
