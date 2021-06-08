@@ -37,13 +37,13 @@ const NavBar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink 
+              <NavLink
                 className="nav-link"
-                to="/calculator" 
+                to="/calculator"
                 /** Open in new tab if the user isn't already on the calculator page */
                 target={isCalcOpen ? "" : "_blank"}
-                >
-                  Calculator
+              >
+                Calculator
               </NavLink>
             </li>
             {/* 

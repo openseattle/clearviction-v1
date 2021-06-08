@@ -24,7 +24,6 @@ const CalculatorLanding = () => {
 
   return (
     <div className="calc-grid">
-
       <h1 className="calc-col title">
         Welcome to the Conviction Vacation Project!
       </h1>
@@ -48,7 +47,6 @@ const CalculatorLanding = () => {
           My conviction is not a marijuana misdemeanor.
         </span>
       </div>
-
     </div>
   );
 };

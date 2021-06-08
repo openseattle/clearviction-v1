@@ -1,17 +1,8 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch,
-  useParams,
-} from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 //component imports
 import About from "./Pages/About";
-
 import Contact from "./Pages/Contact";
 import Home from "./Pages/Home";
 import Resources from "./Pages/Resources";
@@ -19,8 +10,7 @@ import Volunteer from "./Pages/Volunteer";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import CalculatorLanding from "./Pages/CalculatorLanding";
-import CalculatorQuestion from "./Pages/CalculatorQuestion";
-import CalculatorQuestionCont from "./Pages/CalculatorQuestionCont";
+import CalculatorQuestionContainer from "./Pages/CalculatorQuestionContainer";
 
 function App() {
   return (
@@ -43,11 +33,8 @@ function App() {
           <Volunteer />
         </Route>
         <Route path="/calculator">
-          <CalculatorQuestionCont />
+          <CalculatorQuestionContainer />
         </Route>
-        {/* <Route path="/calculator/:number">
-          <CalculatorQuestion />
-        </Route> */}
         <Route path="/">
           <Home />
         </Route>
