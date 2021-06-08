@@ -15,17 +15,19 @@
     "web-vitals": "^1.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy": "npm run build",
-    "test": "react-scripts test",
     "deploy": "gh-pages -d build",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "prettier -c .",
+    "predeploy": "npm run build",
+    "start": "react-scripts start",
+    "test": "react-scripts test"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "prettier"
     ]
   },
   "browserslist": {
@@ -39,5 +41,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^8.3.0",
+    "prettier": "^2.3.1"
   }
 }
