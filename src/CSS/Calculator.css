@@ -1,0 +1,20 @@
+#calc-landing-page-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+
+#calc-quest-cont {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+}
+
+#defaultNoLink {
+  cursor: pointer;
+}
+.sub-text {
+  font: 10px;
+}
