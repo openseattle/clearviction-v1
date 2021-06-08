@@ -1,32 +1,32 @@
 import React, { useEffect, useState } from "react";
-import NonElligible from "./NonElligible";
+import NonEligible from "./NonEligible";
 import ResultYes from "./ResultYes";
 
 // data import
-import calculatorNonElligible from "../data/calculatorNonElligible.json";
+import calculatorNonEligible from "../data/calculatorNonEligible.json";
 //*!this page will carry the logic for determinig which result page to render --> will conditionally render the correct page based off user input
 
 const CalculatorResults = ({ userResponse, setUserResponse }) => {
   const [result, setResult] = useState(null);
-  const [nonElligible, setNonElligible] = useState([]);
+  const [nonEligible, setNonEligible] = useState([]);
   useEffect(() => {
     userResponse && handleCalculation();
   }, []);
 
   const handleCalculation = () => {
-    let nonElligibleItems = [];
+    let nonEligibleItems = [];
     for (const id in userResponse) {
       let value = userResponse[id];
       if (value === false) {
-        const { text } = calculatorNonElligible.filter((q) => q.id == id)[0];
-        nonElligibleItems.push(text);
+        const { text } = calculatorNonEligible.filter((q) => q.id == id)[0];
+        nonEligibleItems.push(text);
       }
     }
 
-    console.log(nonElligibleItems);
-    if (nonElligibleItems.length > 0) {
-      setNonElligible(nonElligibleItems);
-      setResult("NonElligible");
+    console.log(nonEligibleItems);
+    if (nonEligibleItems.length > 0) {
+      setNonEligible(nonEligibleItems);
+      setResult("Noneligible");
     } else {
       setResult("ResultYes");
     }
@@ -36,8 +36,8 @@ const CalculatorResults = ({ userResponse, setUserResponse }) => {
     <div>
       <h2>Results</h2>
 
-      {result === "NonElligible" && (
-        <NonElligible nonElligible={nonElligible} />
+      {result === "Noneligible" && (
+        <Noneligible noneligible={nonEligible} />
       )}
       {result === "ResultYes" && <ResultYes />}
     </div>

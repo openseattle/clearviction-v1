@@ -1,9 +1,9 @@
 import React from "react";
 import Button from "./Button";
 
-const NonElligible = ({ nonElligible }) => {
+const Noneligible = ({ noneligible }) => {
   const renderItems = () => {
-    return nonElligible.map((item) => {
+    return noneligible.map((item) => {
       return <li>* {item}</li>;
     });
   };
@@ -18,7 +18,7 @@ const NonElligible = ({ nonElligible }) => {
       <h2>
         As of now, you may NOT be eligible for vacation for these reasons:{" "}
       </h2>
-      {nonElligible && renderItems()}
+      {noneligible && renderItems()}
       <h2>
         Help us improve our eligibility calculator by telling us your story:
       </h2>
@@ -28,4 +28,4 @@ const NonElligible = ({ nonElligible }) => {
   );
 };
 
-export default NonElligible;
+export default Noneligible;
