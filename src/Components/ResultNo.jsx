@@ -1,20 +1,35 @@
 import React from "react";
+import Button from "./Button";
 
-const ResultNo = () => {
+const ResultNo = ({ noneligible }) => {
+  // TODO: Get red 'x' SVG to match figma file
+  const renderItems = () => {
+    return noneligible.map((item) => {
+      /** Skip blank entry */
+      if (!item) return;
+      return <li>{item}</li>;
+    });
+  };
+
+  const handleClick = () => {
+    // redirect to contact page
+    console.log("i was clicked to redirect to contact page");
+  };
+
   return (
-    <div>
-      <h2>
-        As of now, we are only able to determine eligibility for marijuana
-        possession misdemeanor cases for people who were over 21 years at the
-        time of offense. In the future, we hope to help people with other types
-        of convictions identify whether they are eligible.
-      </h2>
-      <h2>
-        Help us improve our eligibility calculator by telling us your story:
-      </h2>
+    <>
+      <p className="calc-col title">
+        As of now, you may NOT be eligible for vacation for these reasons:{" "}
+      </p>
 
-      <Button text="Contact Us" onClick={handleClick} />
-    </div>
+      <ul>{noneligible && renderItems()}</ul>
+
+      <p className="calc-col results">
+        Help us improve our eligibility calculator by telling us your story:
+      </p>
+
+      <Button className="calc-button" text="Contact Us" onClick={handleClick} />
+    </>
   );
 };
 

@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
-import NonEligible from "./NonEligible";
+import ResultNo from "./ResultNo";
 import ResultYes from "./ResultYes";
 
 // data import
 import calculatorNonEligible from "../data/calculatorNonEligible.json";
-//*!this page will carry the logic for determinig which result page to render --> will conditionally render the correct page based off user input
 
-const CalculatorResults = ({ userResponse, setUserResponse }) => {
+/** This component determines which result to render based off user input */
+const CalculatorResults = ({ userResponse }) => {
   const [result, setResult] = useState(null);
   const [nonEligible, setNonEligible] = useState([]);
+
   useEffect(() => {
     userResponse && handleCalculation();
   }, []);
@@ -23,7 +24,6 @@ const CalculatorResults = ({ userResponse, setUserResponse }) => {
       }
     }
 
-    console.log(nonEligibleItems);
     if (nonEligibleItems.length > 0) {
       setNonEligible(nonEligibleItems);
       setResult("Noneligible");
@@ -33,12 +33,8 @@ const CalculatorResults = ({ userResponse, setUserResponse }) => {
   };
 
   return (
-    <div>
-      <h2>Results</h2>
-
-      {result === "Noneligible" && (
-        <NonEligible noneligible={nonEligible} />
-      )}
+    <div className="calc-grid">
+      {result === "Noneligible" && <ResultNo noneligible={nonEligible} />}
       {result === "ResultYes" && <ResultYes />}
     </div>
   );
