@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "./Button";
 
-const Noneligible = ({ noneligible }) => {
+const NonEligible = ({ noneligible }) => {
   const renderItems = () => {
     return noneligible.map((item) => {
       return <li>* {item}</li>;
@@ -28,4 +28,4 @@ const Noneligible = ({ noneligible }) => {
   );
 };
 
-export default Noneligible;
+export default NonEligible;
