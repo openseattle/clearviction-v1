@@ -14,14 +14,12 @@ const CalculatorLanding = () => {
   const onStartClick = () => {
     /** User clicks start */
     /** User is sent to first question */
-    history.push("/calculator/MMHP-2");
+    history.push("/calculator/1");
   };
 
   /** Callback for button if Ineligible */
   const onIneligibleClick = () => {
-    /** User clicks I'm Not Sure */
-    /** User is sent to unfortunately question */
-    history.push("/calculator/MMPS-0");
+    history.push("/calculator/results_no");
   };
 
   return (

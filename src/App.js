@@ -1,6 +1,5 @@
 import logo from "./logo.svg";
 import "./App.css";
-import "./CSS/layout.css";
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -21,6 +20,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import CalculatorLanding from "./Pages/CalculatorLanding";
 import CalculatorQuestion from "./Pages/CalculatorQuestion";
+import CalculatorQuestionCont from "./Pages/CalculatorQuestionCont";
 
 function App() {
   return (
@@ -42,9 +42,12 @@ function App() {
         <Route path="/volunteer">
           <Volunteer />
         </Route>
-        <Route path="/calculator/:number">
-          <CalculatorQuestion />
+        <Route path="/calculator">
+          <CalculatorQuestionCont />
         </Route>
+        {/* <Route path="/calculator/:number">
+          <CalculatorQuestion />
+        </Route> */}
         <Route path="/">
           <Home />
         </Route>
@@ -55,4 +58,3 @@ function App() {
 }
 
 export default App;
-
