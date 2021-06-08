@@ -13,7 +13,7 @@ const Home = () => {
             {/* <button type="button" class="btn btn-primary" onClick="#section-one">Learn More!</button> */}
           </div>
           <div class="col">
-            <img src={logo} id="logo"></img>
+            <img src={logo} id="logo" alt="cvp logo"></img>
           </div>
         </div>
       </section>
