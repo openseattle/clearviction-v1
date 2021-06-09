@@ -8,12 +8,14 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Checkout
+    - name: Checkout default action
       uses: actions/checkout@v2
       with:
         fetch-depth: 0
-        ref: ${{ github.event.pull_request_target.head.ref }}
-        run: git checkout -b ${{ github.head_ref }}
+        ref: ${{ github.head_ref }}
+
+    - name: Attach HEAD
+      run: git switch -c  ${{ github.event.pull_request_target.head.ref }}
 
     - name: Run prettier
       uses: creyD/prettier_action@v3.3
