@@ -17,6 +17,9 @@ jobs:
     - name: Attach HEAD
       run: git switch -c  ${{ github.head_ref }}
 
+    - name: Set upstream
+      run: git remote add upstream git@github.com:openseattle/cvp.git
+
     - name: Run prettier
       uses: creyD/prettier_action@v3.3
       with: 
