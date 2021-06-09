@@ -20,9 +20,12 @@ jobs:
     - name: Set upstream
       run: git remote add upstream git@github.com:openseattle/cvp.git
 
-    - name: Run prettier
-      uses: creyD/prettier_action@v3.3
-      with: 
-        prettier_options: --write **/*.{js,jsx,css}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Test remotes
+      run: git remote -v
+
+    # - name: Run prettier
+    #   uses: creyD/prettier_action@v3.3
+    #   with: 
+    #     prettier_options: --write **/*.{js,jsx,css}
+    #   env:
+    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
