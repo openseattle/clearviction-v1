@@ -13,6 +13,7 @@ jobs:
       with:
         fetch-depth: 0
         ref: ${{ github.event.pull_request_target.head.ref }}
+        run: git checkout -b ${{ github.head_ref }}
 
     - name: Run prettier
       uses: creyD/prettier_action@v3.3
