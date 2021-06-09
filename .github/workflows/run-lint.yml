@@ -15,7 +15,7 @@ jobs:
         ref: master
 
     - name: Attach HEAD
-      run: git switch -c  ${{ github.event.pull_request_target.head.ref }}
+      run: git switch -c  ${{ github.head_ref }}
 
     - name: Run prettier
       uses: creyD/prettier_action@v3.3
