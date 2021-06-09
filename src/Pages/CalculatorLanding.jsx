@@ -19,7 +19,7 @@ const CalculatorLanding = () => {
 
   /** Callback for button if Ineligible */
   const onIneligibleClick = () => {
-    history.push("/calculator/results_no");
+    history.push("/calculator/results");
   };
 
   return (
