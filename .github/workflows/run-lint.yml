@@ -11,8 +11,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
       with: 
-        ref: ${{ github.head_ref }}
-        run: echo ${{ github.head_ref }}
+        ref: ${{ github.ref }}
 
     - name: Run prettier
       uses: creyD/prettier_action@v3.3
