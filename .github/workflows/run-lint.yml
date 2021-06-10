@@ -16,11 +16,11 @@ jobs:
     - name: Checkout default action
       uses: actions/checkout@v2
       with:
-        ref: -b ${{ github.head_ref }}
+        ref: ${{ github.head_ref }}
 
 
-    # - name: Attach HEAD
-    #   run: git switch -c  ${{ github.head_ref }}
+    - name: Attach HEAD
+      run: git checkout -b  ${{ github.head_ref }}
 
     # - name: Test remotes
     #   run: git remote -v
