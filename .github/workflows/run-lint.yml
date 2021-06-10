@@ -16,17 +16,17 @@ jobs:
     - name: Checkout default action
       uses: actions/checkout@v2
       with:
-        fetch-depth: 0
-        ref: master
+        ref: -b ${{ github.head_ref }}
 
-    - name: Attach HEAD
-      run: git switch -c  ${{ github.head_ref }}
 
-    - name: Test remotes
-      run: git remote -v
+    # - name: Attach HEAD
+    #   run: git switch -c  ${{ github.head_ref }}
+
+    # - name: Test remotes
+    #   run: git remote -v
 
     - name: Run prettier
-      uses: javila35/cvp_prettier_action@master
+      uses: creyD/prettier_action@v3.3
     #   with: 
     #     prettier_options: --write **/*.{js,jsx,css}
     #   env:
