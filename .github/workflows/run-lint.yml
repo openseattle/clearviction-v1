@@ -1,3 +1,8 @@
+# The prettier actions comes with git push origin...
+# That should work, but for some reason it is asking to use the --set-upstream flag
+# Considering copying and editing the prettier action for myself
+# Might be easiest to create my own action from scratch / use the template
+
 on: 
   pull_request:
     branches:
@@ -17,14 +22,11 @@ jobs:
     - name: Attach HEAD
       run: git switch -c  ${{ github.head_ref }}
 
-    - name: Set upstream
-      run: git remote add upstream git@github.com:openseattle/cvp.git
-
     - name: Test remotes
       run: git remote -v
 
-    # - name: Run prettier
-    #   uses: creyD/prettier_action@v3.3
+    - name: Run prettier
+      uses: javila35/cvp_prettier_action/master
     #   with: 
     #     prettier_options: --write **/*.{js,jsx,css}
     #   env:
