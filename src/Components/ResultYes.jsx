@@ -18,13 +18,13 @@ const ResultYes = () => {
           Vacating Marijuana Conviction.
         </p>
 
-        <a href="https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38">
+        <a href="https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38" target="_blank" rel="noreferrer">
           Court Form No. CrRLJ 09.0800
         </a>
 
         <p>Steps to vacating a conviction in Washington state:</p>
 
-        <a href="https://www.expeal.com/steps/#washington">
+        <a href="https://www.expeal.com/steps/#washington" target="_blank" rel="noreferrer">
           https://www.expeal.com/steps/#washington
         </a>
       </div>
