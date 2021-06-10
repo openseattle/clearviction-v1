@@ -18,16 +18,12 @@ jobs:
       with:
         ref: ${{ github.ref }}
 
-
     - name: Attach HEAD
       run: git checkout -b  ${{ github.head_ref }}
 
-    # - name: Test remotes
-    #   run: git remote -v
-
     - name: Run prettier
       uses: creyD/prettier_action@v3.3
-    #   with: 
-    #     prettier_options: --write **/*.{js,jsx,css}
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with: 
+        prettier_options: --write **/*.{js,jsx,css}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
