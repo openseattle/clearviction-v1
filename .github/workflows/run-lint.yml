@@ -27,3 +27,6 @@ jobs:
         prettier_options: --write **/*.{js,jsx,css}
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Final push
+      run: git push -u ${{ github.head_ref }}:\${{ github.head_ref }}
