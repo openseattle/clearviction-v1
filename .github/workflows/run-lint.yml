@@ -26,7 +26,7 @@ jobs:
       run: git remote -v
 
     - name: Run prettier
-      uses: javila35/cvp_prettier_action/master
+      uses: javila35/cvp_prettier_action@master
     #   with: 
     #     prettier_options: --write **/*.{js,jsx,css}
     #   env:
