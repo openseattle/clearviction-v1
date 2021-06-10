@@ -16,7 +16,7 @@ jobs:
     - name: Checkout default action
       uses: actions/checkout@v2
       with:
-        ref: ${{ github.head_ref }}
+        ref: ${{ github.ref }}
 
 
     - name: Attach HEAD
