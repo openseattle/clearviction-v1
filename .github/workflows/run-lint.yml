@@ -1,0 +1,21 @@
+name: Run prettier
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Prettify code
+      uses: creyD/prettier_action@v3.3
+      with:
+        prettier_options: --write **/*.{js,jsx,css,ts,tsx}
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
