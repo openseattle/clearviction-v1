@@ -23,6 +23,16 @@ function App() {
         <Route path="/contact">
           <Contact />
         </Route>
+
+
+
+
+
+
+
+
+
+        
         <Route exact path="/calculator">
           <CalculatorLanding />
         </Route>
