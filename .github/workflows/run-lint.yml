@@ -22,8 +22,11 @@ jobs:
     - name: Attach HEAD
       run: git checkout -b  ${{ github.head_ref }}
 
+    - name: Initialize branch
+      run:  git commit --allow-empty -m "My empty commit with a message"
+
     - name: Set upstream
-      run: git branch --set-upstream-to=origin/${{ github.head_ref }} ${{ github.head_ref }}
+      run: git push -u ${{ github.head_ref }}
 
     - name: Run prettier
       uses: creyD/prettier_action@v3.3
