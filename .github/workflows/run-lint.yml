@@ -23,7 +23,7 @@ jobs:
       run: git checkout -b  ${{ github.head_ref }}
 
     - name: Set upstream
-      run: git branch --set-upstream-to=origin/<branch> feature/add-linter
+      run: git branch --set-upstream-to=origin/${{ github.head_ref }} ${{ github.head_ref }}
 
     - name: Run prettier
       uses: creyD/prettier_action@v3.3
