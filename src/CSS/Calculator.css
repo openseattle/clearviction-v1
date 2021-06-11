@@ -1,20 +1,118 @@
-#calc-landing-page-cont {
+.calc-grid {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  margin-top: 150px;
+  height: calc(100vh - 56px - 60px);
 }
 
-#calc-quest-cont {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 150px;
+.calc-col {
+  flex: 1;
 }
 
-#defaultNoLink {
+.calc-button {
+  background-color: #4e6c99;
+  color: #fff;
+  border: 0;
+  box-shadow: none;
+  border-radius: 6px;
+  width: calc(100vw - 7em);
+  height: 3em;
+  max-width: 264px;
+  font-size: 1.13em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+
+.calc-col.title {
+  font-size: 2.125em;
+  margin: 2em 1em;
+  font-weight: bold;
+  text-align: left;
+}
+
+.calc-col {
+  margin: 1em 1em;
+  font-size: 1.25em;
+}
+
+.calc-col.body p {
+  font-family: "Lora", serif;
+  text-align: left;
+  margin-bottom: 0;
+}
+
+.calc-col.body small {
+  text-align: left;
+  font-weight: 700;
+}
+
+.calc-col.answers {
+  flex-direction: row;
+}
+
+.calc-col.footer span {
+  text-decoration: underline;
   cursor: pointer;
 }
-.sub-text {
-  font: 10px;
+
+.calc-col.results p,
+.calc-col.results a {
+  text-align: left;
+  margin-bottom: 2em;
+}
+
+/* ! This section is for mobile */
+@media only screen and (max-width: 600px) {
+  .calc-landing-text {
+    flex: 1 1 100%;
+  }
+
+  .calc-grid,
+  .calc-col {
+    max-width: 328px;
+  }
+
+  .calc-col.results p {
+    font-size: 1em;
+  }
+
+  .calc-col.results a {
+    font-size: 0.75em;
+    text-align: left;
+  }
+
+  .calc-col.title,
+  .calc-col.results {
+    font-size: 1.25em;
+  }
+
+  .calc-grid {
+    height: calc(100vh - 60px);
+  }
+}
+
+/* ! This section is for desktop */
+@media only screen and (min-width: 601px) {
+  .calc-col.body p {
+    margin-bottom: 1em;
+  }
+
+  .calc-col.body {
+    margin-bottom: 3em;
+  }
+
+  .calc-col {
+    width: calc(100vw - 10em);
+    max-width: 552px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  .calc-col.results {
+    align-items: flex-start;
+    text-align: left;
+  }
 }

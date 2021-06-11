@@ -1,17 +1,18 @@
 import React, { useState } from "react";
-import Button from "../Components/Button";
+import Button from "./Button";
 import { useParams, useHistory } from "react-router-dom";
+import "../CSS/Calculator.css";
 
 // data import
-import Questions from "../data/calcuatorQuestions.json";
+import Questions from "../data/calculatorQuestions.json";
 
-/** A page to display an individual question from the question list */
+/** A component to display an individual question from the question list */
 const CalculatorQuestion = ({ setUserResponse, userResponse }) => {
   let { number } = useParams();
   const [showQuestions, setShowQuestions] = useState(true);
   const history = useHistory();
 
-  const handleClick = (a, i) => {
+  const handleClick = (a) => {
     // on last question (6) stop delivering question --> reset state --> conditionally push number/question ID or 'results' as slug
     if (number === "6") setShowQuestions(false);
     let newResponse = userResponse;
@@ -28,20 +29,25 @@ const CalculatorQuestion = ({ setUserResponse, userResponse }) => {
     const { text, tooltip, options } = Questions.filter(
       (q) => q.id == number
     )[0];
+
     return (
-      <div id="calc-quest">
-        <h1>{text}</h1>
+      <>
+        <p className="calc-col title">{text}</p>
         {tooltip}
-        <ul>
-          {options.map((a, i) => (
-            <Button text={a} onClick={() => handleClick(a, i)} />
+        <div className="calc-col answers">
+          {options.map((a) => (
+            <Button
+              text={a}
+              className="calc-button"
+              onClick={() => handleClick(a)}
+            />
           ))}
-        </ul>
-      </div>
+        </div>
+      </>
     );
   };
 
-  return <div id="calc-quest-cont">{showQuestions && deliverQuestion()}</div>;
+  return <div className="calc-grid">{showQuestions && deliverQuestion()}</div>;
 };
 
 export default CalculatorQuestion;
