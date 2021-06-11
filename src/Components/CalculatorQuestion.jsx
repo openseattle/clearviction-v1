@@ -26,10 +26,6 @@ const CalculatorQuestion = ({ setUserResponse, userResponse }) => {
   };
 
   const deliverQuestion = () => {
-    // const { text, tooltip, options } = Questions.filter(
-    //   (q) => q.id == number
-    // )[0];
-
     const foundQuestion = Questions.filter((q) => q.id == number)[0];
 
     if (foundQuestion) {
