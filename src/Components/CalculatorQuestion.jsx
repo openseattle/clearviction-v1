@@ -25,9 +25,7 @@ const CalculatorQuestion = ({ setUserResponse, userResponse }) => {
     }
   };
 
-  const foundQuestion = () => {
-    Questions.filter((q) => q.id == number)[0];
-  };
+  const foundQuestion = () => Questions.filter((q) => q.id == number)[0];
 
   const deliverQuestion = () => {
     if (foundQuestion()) {
