@@ -25,11 +25,13 @@ const CalculatorQuestion = ({ setUserResponse, userResponse }) => {
     }
   };
 
-  const deliverQuestion = () => {
-    const foundQuestion = Questions.filter((q) => q.id == number)[0];
+  const foundQuestion = () => {
+    Questions.filter((q) => q.id == number)[0];
+  };
 
-    if (foundQuestion) {
-      const { text, tooltip, options } = foundQuestion;
+  const deliverQuestion = () => {
+    if (foundQuestion()) {
+      const { text, tooltip, options } = foundQuestion();
       return (
         <>
           <p className="calc-col title">{text}</p>
