@@ -805,14 +805,7 @@
   dependencies:
     "@babel/helper-plugin-utils" "^7.10.4"
 
-"@babel/plugin-transform-react-jsx-development@^7.12.1":
-  "integrity" "sha512-BPjYV86SVuOaudFhsJR1zjgxxOhJDt6JHNoD48DxWEIxUCAMjV1ys6DYw4SDYZh0b1QsS2vfIA9t/ZsQGsDOUQ=="
-  "resolved" "https://registry.npmjs.org/@babel/plugin-transform-react-jsx-development/-/plugin-transform-react-jsx-development-7.12.17.tgz"
-  "version" "7.12.17"
-  dependencies:
-    "@babel/plugin-transform-react-jsx" "^7.12.17"
-
-"@babel/plugin-transform-react-jsx-development@^7.12.12":
+"@babel/plugin-transform-react-jsx-development@^7.12.1", "@babel/plugin-transform-react-jsx-development@^7.12.12":
   "integrity" "sha512-BPjYV86SVuOaudFhsJR1zjgxxOhJDt6JHNoD48DxWEIxUCAMjV1ys6DYw4SDYZh0b1QsS2vfIA9t/ZsQGsDOUQ=="
   "resolved" "https://registry.npmjs.org/@babel/plugin-transform-react-jsx-development/-/plugin-transform-react-jsx-development-7.12.17.tgz"
   "version" "7.12.17"
@@ -2586,21 +2579,7 @@
   dependencies:
     "babylon" "^6.18.0"
 
-"babel-jest@^26.6.0":
-  "integrity" "sha512-pl4Q+GAVOHwvjrck6jKjvmGhnO3jHX/xuB9d27f+EJZ/6k+6nMuPjorrYp7s++bKKdANwzElBWnLWaObvTnaZA=="
-  "resolved" "https://registry.npmjs.org/babel-jest/-/babel-jest-26.6.3.tgz"
-  "version" "26.6.3"
-  dependencies:
-    "@jest/transform" "^26.6.2"
-    "@jest/types" "^26.6.2"
-    "@types/babel__core" "^7.1.7"
-    "babel-plugin-istanbul" "^6.0.0"
-    "babel-preset-jest" "^26.6.2"
-    "chalk" "^4.0.0"
-    "graceful-fs" "^4.2.4"
-    "slash" "^3.0.0"
-
-"babel-jest@^26.6.3":
+"babel-jest@^26.6.0", "babel-jest@^26.6.3":
   "integrity" "sha512-pl4Q+GAVOHwvjrck6jKjvmGhnO3jHX/xuB9d27f+EJZ/6k+6nMuPjorrYp7s++bKKdANwzElBWnLWaObvTnaZA=="
   "resolved" "https://registry.npmjs.org/babel-jest/-/babel-jest-26.6.3.tgz"
   "version" "26.6.3"
@@ -9029,6 +9008,11 @@
   "integrity" "sha1-1PRWKwzjaW5BrFLQ4ALlemNdxtw="
   "resolved" "https://registry.npmjs.org/prepend-http/-/prepend-http-1.0.4.tgz"
   "version" "1.0.4"
+
+"prettier@^2.3.1":
+  "integrity" "sha512-p+vNbgpLjif/+D+DwAZAbndtRrR0md0MwfmOVN9N+2RgyACMT+7tfaRnT+WDPkqnuVwleyuBIG2XBxKDme3hPA=="
+  "resolved" "https://registry.npmjs.org/prettier/-/prettier-2.3.1.tgz"
+  "version" "2.3.1"
 
 "pretty-bytes@^5.3.0":
   "integrity" "sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg=="

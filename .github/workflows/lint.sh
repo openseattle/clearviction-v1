@@ -3,5 +3,4 @@
 # Fail immediately on error
 set -e
 
-echo "pwd output";
-pwd
+prettier --check .
