@@ -16,6 +16,7 @@
   },
   "scripts": {
     "build": "react-scripts build",
+    "clean": "prettier --write .",
     "deploy": "gh-pages -d build",
     "eject": "react-scripts eject",
     "lint": "prettier --check .",
