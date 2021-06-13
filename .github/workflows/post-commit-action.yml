@@ -11,8 +11,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
+    - name: Checkout repo
       uses: actions/checkout@v2
+
+    - name: Make sh executable
+      run: chmod +x ./.github/workflows/lint.sh
 
     - name: Run lint
       run: ./.github/workflows/lint.sh
