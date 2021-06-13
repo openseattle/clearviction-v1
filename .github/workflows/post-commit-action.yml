@@ -13,8 +13,8 @@ jobs:
     - name: Checkout repo
       uses: actions/checkout@v2
 
-    - name: Make sh executable
-      run: chmod +x ./.github/workflows/lint.sh
+    - name: Use Node.js
+      uses: actions/setup-node@v2
 
-    - name: Run lint
-      run: ./.github/workflows/lint.sh
+    - name: run prettier 
+      run: npx prettier --check .
