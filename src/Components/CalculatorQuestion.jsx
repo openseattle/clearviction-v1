@@ -25,26 +25,29 @@ const CalculatorQuestion = ({ setUserResponse, userResponse }) => {
     }
   };
 
-  const deliverQuestion = () => {
-    const { text, tooltip, options } = Questions.filter(
-      (q) => q.id == number
-    )[0];
+  const foundQuestion = () => Questions.filter((q) => q.id == number)[0];
 
-    return (
-      <>
-        <p className="calc-col title">{text}</p>
-        {tooltip}
-        <div className="calc-col answers">
-          {options.map((a) => (
-            <Button
-              text={a}
-              className="calc-button"
-              onClick={() => handleClick(a)}
-            />
-          ))}
-        </div>
-      </>
-    );
+  const deliverQuestion = () => {
+    if (foundQuestion()) {
+      const { text, tooltip, options } = foundQuestion();
+      return (
+        <>
+          <p className="calc-col title">{text}</p>
+          {tooltip}
+          <div className="calc-col answers">
+            {options.map((a) => (
+              <Button
+                text={a}
+                className="calc-button"
+                onClick={() => handleClick(a)}
+              />
+            ))}
+          </div>
+        </>
+      );
+    } else {
+      history.push("/404");
+    }
   };
 
   return <div className="calc-grid">{showQuestions && deliverQuestion()}</div>;
