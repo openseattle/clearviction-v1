@@ -26,7 +26,7 @@ const CalculatorQuestion = ({ setUserResponse, userResponse }) => {
 
   const deliverQuestion = () => {
     const { text, tooltip, options } = Questions.filter(
-      (q) => q.id === number
+      (q) => q.id == number
     )[0];
     return (
       <div id="calc-quest">
