@@ -2,6 +2,7 @@ import "./App.css";
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 //component imports
+import NotFoundPage from "./Components/NotFoundPage";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Home from "./Pages/Home";
@@ -17,6 +18,9 @@ function App() {
     <div className="App">
       <Header />
       <Switch>
+        <Route path="/404">
+          <NotFoundPage />
+        </Route>
         <Route path="/about">
           <About />
         </Route>

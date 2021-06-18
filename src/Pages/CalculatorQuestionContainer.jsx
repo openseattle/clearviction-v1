@@ -22,13 +22,11 @@ const CalculatorQuestionCont = () => {
     6: false,
   });
 
-  
-
   /** Return a switch that routes to result screen, or question to display */
   return (
     <>
       <Switch>
-        <Route path={`${path}/results`}>
+        <Route exact path={`${path}/results`}>
           <CalculatorResults userResponse={userResponse} />
         </Route>
         <Route exact path={`${path}/:number`}>
