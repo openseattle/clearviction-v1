@@ -5,7 +5,6 @@ import {
   Route
 } from "react-router-dom";
 
-import { Switch, Route } from "react-router-dom";
 //component imports
 import NotFoundPage from "./Components/NotFoundPage";
 import About from "./Pages/About";
