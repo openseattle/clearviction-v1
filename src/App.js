@@ -5,6 +5,9 @@ import {
   Route
 } from "react-router-dom";
 
+import { Switch, Route } from "react-router-dom";
+//component imports
+import NotFoundPage from "./Components/NotFoundPage";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Home from "./Pages/Home";
@@ -13,13 +16,16 @@ import Volunteer from "./Pages/Volunteer";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import CalculatorLanding from "./Pages/CalculatorLanding";
-import CalculatorQuestionCont from "./Pages/CalculatorQuestionCont";
+import CalculatorQuestionContainer from "./Pages/CalculatorQuestionContainer";
 
 function App() {
   return (
     <div className="App">
       <Header />
       <Switch>
+        <Route path="/404">
+          <NotFoundPage />
+        </Route>
         <Route path="/about">
           <About />
         </Route>
@@ -36,11 +42,8 @@ function App() {
           <Volunteer />
         </Route>
         <Route path="/calculator">
-          <CalculatorQuestionCont />
+          <CalculatorQuestionContainer />
         </Route>
-        {/* <Route path="/calculator/:number">
-          <CalculatorQuestion />
-        </Route> */}
         <Route path="/">
           <Home />
         </Route>

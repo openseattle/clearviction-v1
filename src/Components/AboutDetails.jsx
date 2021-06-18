@@ -1,5 +1,5 @@
 import React from "react";
-import '../CSS/AboutDetails.css'
+import "../CSS/AboutDetails.css";
 
 const AboutDetails = (props) => {
   return (
@@ -8,9 +8,7 @@ const AboutDetails = (props) => {
       <div class="container" id="about-info">
         <h5>{props.name}</h5>
         <h6 id="about-title">{props.title}</h6>
-        <p>
-          {props.description}
-        </p>
+        <p>{props.description}</p>
       </div>
     </div>
   );

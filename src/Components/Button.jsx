@@ -1,9 +1,9 @@
 import React from "react";
 
 /** Button used on the Calculator pages */
-const Button = ({ text, onClick, styles }) => {
+const Button = ({ text, onClick, className = "" }) => {
   return (
-    <button className={styles} onClick={onClick}>
+    <button onClick={onClick} className={className}>
       {text}
     </button>
   );
