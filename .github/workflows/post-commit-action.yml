@@ -1,0 +1,20 @@
+name: Run prettier
+
+on:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  prettier:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v2
+
+      - name: run prettier
+        run: npx prettier --check .
