@@ -17,7 +17,11 @@ const ResultYes = () => {
           Your next step is to fill out a Motion and Declaration for Order
           Vacating Marijuana Conviction.
         </p>
-        <a href="https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38" target="_blank" rel="noreferrer">
+        <a
+          href="https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38"
+          target="_blank"
+          rel="noreferrer"
+        >
           Court Form No. CrRLJ 09.0800
         </a>
 
