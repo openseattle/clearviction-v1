@@ -22,9 +22,11 @@ const CalculatorQuestion = ({ setUserResponse, userResponse }) => {
       history.push(`/calculator/results`);
     } else {
       // increases progress bar with each question number
-      const progressBar = document.getElementById('progressBar');
+      const progressBar = document.getElementById("progressBar");
       const MAX_QUESTIONS = 6;
-      progressBar.style.width = `${Math.floor((number / MAX_QUESTIONS) * 100)}%`;
+      progressBar.style.width = `${Math.floor(
+        (number / MAX_QUESTIONS) * 100
+      )}%`;
 
       history.push(`/calculator/${parseInt(number) + 1}`);
     }
@@ -38,7 +40,7 @@ const CalculatorQuestion = ({ setUserResponse, userResponse }) => {
       return (
         <>
           <div className="calc-col progress-bar">
-          <div className="calc-progress-bar" id="progressBar"/>
+            <div className="calc-progress-bar" id="progressBar" />
           </div>
           <p className="calc-col title">{text}</p>
           {tooltip}
