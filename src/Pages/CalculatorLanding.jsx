@@ -24,17 +24,44 @@ const CalculatorLanding = () => {
 
   return (
     <div className="calc-grid">
-      <h1 className="calc-col title">
-        Welcome to the Conviction Vacation Project!
-      </h1>
+      <h1 className="calc-col title">Marijuana Misdemeanor Calculator</h1>
 
       <div className="calc-col body">
         <p>
-          You can use our eligibility calculator to know if you are eligible to
-          vacate your marijuana conviction.
+          You can use our eligibility calculator to determine whether you are
+          eligible to vacate your marijuana conviction.
         </p>
         <small>
-          *This only works with marijuana misdemeanor convictions currently
+          * This only works for convictions that fall under:
+          <ul>
+            <li>
+              <a
+                href="https://app.leg.wa.gov/rcw/default.aspx?cite=69.50.4014"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                RCW 69.50.4014
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://leg.wa.gov/CodeReviser/documents/sessionlaw/1979c67.pdf?cite=1979%20c%2067%20%C2%A7%201"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                RCW 69.50.401(e)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://leg.wa.gov/CodeReviser/documents/sessionlaw/1971ex1c308.pdf?cite=1971%20ex.s.%20c%20308%20%C2%A7%2069.50.406"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                RCW 69.50.401(d)
+              </a>
+            </li>
+          </ul>
         </small>
       </div>
 
