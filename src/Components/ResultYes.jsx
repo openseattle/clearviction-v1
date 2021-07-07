@@ -1,6 +1,6 @@
 import React from "react";
-import Button from "./Button";
 import { useHistory } from "react-router-dom";
+import "../CSS/Calculator.css";
 
 const ResultYes = () => {
   const history = useHistory();
@@ -14,29 +14,67 @@ const ResultYes = () => {
       </p>
       <div className="calc-col results">
         <p>
-          Your next step is to fill out a Motion and Declaration for Order
-          Vacating Marijuana Conviction.
+          It looks like your conviction may be one of the following:
+          <ul>
+            <li>
+              <a
+                href="https://app.leg.wa.gov/rcw/default.aspx?cite=69.50.4014"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                RCW 69.50.4014
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://leg.wa.gov/CodeReviser/documents/sessionlaw/1979c67.pdf?cite=1979%20c%2067%20%C2%A7%201"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                RCW 69.50.401(e)
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://leg.wa.gov/CodeReviser/documents/sessionlaw/1971ex1c308.pdf?cite=1971%20ex.s.%20c%20308%20%C2%A7%2069.50.406"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                RCW 69.50.401(d)
+              </a>
+            </li>
+            <li>(Possession of forty grams or less of marijuana)</li>
+          </ul>
         </p>
-        <a
-          href="https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38"
-          target="_blank"
-          rel="noreferrer"
-        >
-          Court Form No. CrRLJ 09.0800
-        </a>
-
-        <p>Steps to vacating a conviction in Washington state:</p>
-
-        <a
-          href="https://www.expeal.com/steps/#washington"
-          target="_blank"
-          rel="noreferrer"
-        >
-          https://www.expeal.com/steps/#washington
-        </a>
+        <h3>Next steps</h3>
+        <ol>
+          <li>
+            Fill out a Motion and Declaration for Order Vacating Marijuana
+            Conviction (CrRLJ 09.0100).
+            <p>
+              <a
+                href="https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38"
+                target="_blank"
+                rel="noreferrer"
+              >
+                https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38
+              </a>
+            </p>
+          </li>
+          <li>
+            See instructions for vacating a conviction in form CrRLJ 09.0300
+            <p>
+              <a
+                href="https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38"
+                target="_blank"
+                rel="noreferrer"
+              >
+                https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38
+              </a>
+            </p>
+          </li>
+        </ol>
       </div>
-
-      <Button className="calc-button" onClick={onClick} text="Back to Site" />
     </>
   );
 };

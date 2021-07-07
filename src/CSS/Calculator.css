@@ -79,6 +79,15 @@
   overflow: hidden;
 }
 
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: underline;
+  color: #000;
+}
+
 /* ! This section is for mobile */
 @media only screen and (max-width: 600px) {
   .calc-landing-text {
@@ -133,9 +142,4 @@
     align-items: flex-start;
     text-align: left;
   }
-}
-
-a {
-  text-decoration: underline;
-  color: #000;
 }
