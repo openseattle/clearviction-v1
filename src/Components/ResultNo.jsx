@@ -19,7 +19,9 @@ const ResultNo = ({ noneligible }) => {
   return (
     <>
       <p className="calc-col title">
-        As of now, it seems that you may NOT be eligible to vacate your marijuana misdemeanor conviction because you have not completed the terms of your offense.
+        As of now, it seems that you may NOT be eligible to vacate your
+        marijuana misdemeanor conviction because you have not completed the
+        terms of your offense.
       </p>
 
       <ul>{noneligible && renderItems()}</ul>
