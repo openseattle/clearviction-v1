@@ -22,7 +22,7 @@
   },
   {
     "id": "4",
-    "text": "Were you 21 years or older of age at the time of offense?",
+    "text": "Were you 21 years or older npat the time of offense?",
     "tooltip": "",
     "options": ["Yes", "No"],
     "next_card": ["5"]
@@ -36,7 +36,7 @@
   },
   {
     "id": "6",
-    "text": "Was your conviction for less than 40 grams of marijuana?",
+    "text": "Was your conviction for possession of 40 grams or less of marijuana?",
     "tooltip": "",
     "options": ["Yes", "No"],
     "next_card": ["results"]
