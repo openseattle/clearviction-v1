@@ -13,7 +13,7 @@ const Home = () => {
             {/* <button type="button" className="btn btn-primary" onClick="#section-one">Learn More!</button> */}
           </div>
           <div className="col">
-            <img src={logo} id="logo"></img>
+            <img src={logo} id="logo" alt="logo"></img>
           </div>
         </div>
       </section>

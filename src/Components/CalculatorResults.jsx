@@ -7,7 +7,7 @@ import ResultUnsure from "./ResultUnsure";
 import calculatorNonEligible from "../data/calculatorNonEligible.json";
 
 /** This component determines which result to render based off user input */
-const CalculatorResults = ({ userResponse }) => {
+const CalculatorResults = ({ userResponse, isCompleted}) => {
   const [result, setResult] = useState(null);
   const [nonEligible, setNonEligible] = useState([]);
 
@@ -27,9 +27,9 @@ const CalculatorResults = ({ userResponse }) => {
     //change logic here
     if (nonEligibleItems.length === 0) {
       setResult("ResultYes");
-    }else if (userResponse[6] === false) {
+    }else if (isCompleted === true && userResponse[6] === false) {
       setResult("Noneligible");
-    } else {
+    }else {
       setNonEligible(nonEligibleItems);
       setResult("CantDetermine");
     }

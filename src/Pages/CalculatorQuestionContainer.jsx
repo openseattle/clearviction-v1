@@ -21,18 +21,30 @@ const CalculatorQuestionCont = () => {
     5: false,
     6: false,
   });
+  /**
+   * Default isCompleted is false to handle some edge cases
+   * 1. If the finish the calculator it will update to true
+   */
+  const [isCompleted, setIfCompleted] = useState({
+    completed: false
+  })
 
   /** Return a switch that routes to result screen, or question to display */
   return (
     <>
       <Switch>
         <Route exact path={`${path}/results`}>
-          <CalculatorResults userResponse={userResponse} />
+          <CalculatorResults 
+            userResponse={userResponse}
+            isCompleted={isCompleted}
+          />
         </Route>
         <Route exact path={`${path}/:number`}>
           <CalculatorQuestion
             userResponse={userResponse}
             setUserResponse={setUserResponse}
+            isCompleted={isCompleted}
+            setIfCompleted={setIfCompleted}
           />
         </Route>
       </Switch>
