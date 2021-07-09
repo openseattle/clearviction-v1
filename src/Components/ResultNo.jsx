@@ -30,7 +30,10 @@ const ResultNo = ({ noneligible }) => {
 
       <Button className="calc-button" text="Contact Us" onClick={handleClick} />
       <p className="disclaimer">
-        The information provided by the Conviction Vacation Project is not intended to replace legal advice and does not in any way constitute an attorney-client relationship. If you need legal advice or assistance, we strongly recommend that you reach out to a licensed professional.
+        The information provided by the Conviction Vacation Project is not
+        intended to replace legal advice and does not in any way constitute an
+        attorney-client relationship. If you need legal advice or assistance, we
+        strongly recommend that you reach out to a licensed professional.
       </p>
     </>
   );

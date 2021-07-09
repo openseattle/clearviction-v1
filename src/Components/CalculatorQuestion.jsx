@@ -7,7 +7,12 @@ import "../CSS/Calculator.css";
 import Questions from "../data/calculatorQuestions.json";
 
 /** A component to display an individual question from the question list */
-const CalculatorQuestion = ({ setUserResponse, userResponse, setIfCompleted, isCompleted }) => {
+const CalculatorQuestion = ({
+  setUserResponse,
+  userResponse,
+  setIfCompleted,
+  isCompleted,
+}) => {
   let { number } = useParams();
   const [showQuestions, setShowQuestions] = useState(true);
   const history = useHistory();
@@ -17,9 +22,9 @@ const CalculatorQuestion = ({ setUserResponse, userResponse, setIfCompleted, isC
     if (number === "6") {
       setShowQuestions(false);
       let completed = isCompleted.completed;
-      completed = true
+      completed = true;
       setIfCompleted(completed);
-    } 
+    }
     let newResponse = userResponse;
     newResponse[number] = a === "Yes" ? true : false;
     setUserResponse(newResponse);
