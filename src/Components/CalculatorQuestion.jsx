@@ -47,6 +47,7 @@ const CalculatorQuestion = ({ setUserResponse, userResponse }) => {
           <div className="calc-col answers">
             {options.map((a) => (
               <Button
+                key={a}
                 text={a}
                 className="calc-button"
                 onClick={() => handleClick(a)}

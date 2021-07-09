@@ -15,6 +15,7 @@ const ResultYes = () => {
       <div className="calc-col results">
         <p>
           It looks like your conviction may be one of the following:
+        </p>
           <ul>
             <li>
               <a
@@ -45,7 +46,6 @@ const ResultYes = () => {
             </li>
             <li>(Possession of forty grams or less of marijuana)</li>
           </ul>
-        </p>
         <h3>Next steps</h3>
         <ol>
           <li>
