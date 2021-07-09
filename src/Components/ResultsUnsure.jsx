@@ -2,19 +2,18 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import "../CSS/Calculator.css";
 
-const ResultYes = () => {
+const ResultUnsure = () => {
   const history = useHistory();
   const onClick = () => history.push("/");
 
   return (
     <>
       <p className="calc-col title">
-        From your answers, it seems that you may be eligible to vacate your
-        marijuana misdemeanor conviction!
+        Our calculator can’t determine your eligibility
       </p>
       <div className="calc-col results">
         <p>
-          It looks like your conviction may be one of the following:
+          It looks like your conviction may not be one of the following:
           <ul>
             <li>
               <a
@@ -43,40 +42,22 @@ const ResultYes = () => {
                 RCW 69.50.401(d)
               </a>
             </li>
-            <li>(Possession of forty grams or less of marijuana)</li>
+            <li>(*All of the above pertain to possession of forty grams or less of marijuana)</li>
           </ul>
         </p>
-        <h3>Next steps</h3>
-        <ol>
-          <li>
-            Fill out a Motion and Declaration for Order Vacating Marijuana
-            Conviction (CrRLJ 09.0100).
-            <p>
-              <a
-                href="https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38"
-                target="_blank"
-                rel="noreferrer"
-              >
-                https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38
-              </a>
-            </p>
-          </li>
-          <li>
-            See instructions for vacating a conviction in form CrRLJ 09.0300
-            <p>
-              <a
-                href="https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38"
-                target="_blank"
-                rel="noreferrer"
-              >
-                https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38
-              </a>
-            </p>
-          </li>
-        </ol>
+        <p>
+          Our calculator is unable to assist you with your conviction at this point. We would like to hear your input and learn about your experience as we continue building our calculator.
+        </p>
+        <a
+          href="link is comming"
+          target="_blank"
+          rel="noreferrer noopener"
+        >
+          Take Survey
+        </a>
       </div>
     </>
   );
 };
 
-export default ResultYes;
+export default ResultUnsure;
