@@ -9,7 +9,7 @@ const About = () => {
     <div>
       <section id="filler"></section>
       <section className="container-fluid">
-        <img src={logo} id="logo" />
+        <img src={logo} id="logo" alt="CVP logo" />
       </section>
       <section className="container-fluid-content">
         <h1 className="display-6">Our Team</h1>

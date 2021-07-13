@@ -42,17 +42,18 @@ const ResultUnsure = () => {
                 RCW 69.50.401(d)
               </a>
             </li>
-            <li>(*All of the above pertain to possession of forty grams or less of marijuana)</li>
+            <li>
+              (*All of the above pertain to possession of forty grams or less of
+              marijuana)
+            </li>
           </ul>
         </p>
         <p>
-          Our calculator is unable to assist you with your conviction at this point. We would like to hear your input and learn about your experience as we continue building our calculator.
+          Our calculator is unable to assist you with your conviction at this
+          point. We would like to hear your input and learn about your
+          experience as we continue building our calculator.
         </p>
-        <a
-          href="link is comming"
-          target="_blank"
-          rel="noreferrer noopener"
-        >
+        <a href="link is comming" target="_blank" rel="noreferrer noopener">
           Take Survey
         </a>
       </div>
