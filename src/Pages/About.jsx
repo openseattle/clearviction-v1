@@ -8,14 +8,14 @@ const About = () => {
   return (
     <div>
       <section id="filler"></section>
-      <section class="container-fluid">
-        <img src={logo} id="logo" />
+      <section className="container-fluid">
+        <img src={logo} id="logo" alt="CVP logo" />
       </section>
-      <section class="container-fluid-content">
-        <h1 class="display-6">Our Team</h1>
-        <div class="row row-cols-sm-2">
+      <section className="container-fluid-content">
+        <h1 className="display-6">Our Team</h1>
+        <div className="row row-cols-sm-2">
           {data.map((person, id) => (
-            <div class="col">
+            <div className="col">
               <AboutDetails
                 name={person.name}
                 title={person.title}
@@ -26,15 +26,15 @@ const About = () => {
           ))}
         </div>
       </section>
-      <section class="container-fluid-content">
-        <h1 class="display-6">Want To Be A Part of Our Team?</h1>
+      <section className="container-fluid-content">
+        <h1 className="display-6">Want To Be A Part of Our Team?</h1>
         <p>
           We are always looking for proactive and passionate volunteers with a
           diverse skillset to help us advance our goal.
         </p>
         <p>Reach out to learn more and opportunities to volunteer with us.</p>
-        <button type="button" class="btn btn-primary">
-          <a class="white-link" href="mailto:cvp@seamus.work">
+        <button type="button" className="btn btn-primary">
+          <a className="white-link" href="mailto:cvp@seamus.work">
             Contact Us!
           </a>
         </button>

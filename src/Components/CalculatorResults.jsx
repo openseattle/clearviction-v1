@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import ResultNo from "./ResultNo";
 import ResultYes from "./ResultYes";
+import ResultUnsure from "./ResultUnsure";
 
 // data import
 import calculatorNonEligible from "../data/calculatorNonEligible.json";
 
 /** This component determines which result to render based off user input */
-const CalculatorResults = ({ userResponse }) => {
+const CalculatorResults = ({ userResponse, isCompleted }) => {
   const [result, setResult] = useState(null);
   const [nonEligible, setNonEligible] = useState([]);
 
@@ -23,12 +24,14 @@ const CalculatorResults = ({ userResponse }) => {
         nonEligibleItems.push(text);
       }
     }
-
-    if (nonEligibleItems.length > 0) {
-      setNonEligible(nonEligibleItems);
+    //change logic here
+    if (nonEligibleItems.length === 0) {
+      setResult("ResultYes");
+    } else if (isCompleted === true && userResponse[6] === false) {
       setResult("Noneligible");
     } else {
-      setResult("ResultYes");
+      setNonEligible(nonEligibleItems);
+      setResult("CantDetermine");
     }
   };
 
@@ -36,6 +39,7 @@ const CalculatorResults = ({ userResponse }) => {
     <div className="calc-grid">
       {result === "Noneligible" && <ResultNo noneligible={nonEligible} />}
       {result === "ResultYes" && <ResultYes />}
+      {result === "CantDetermine" && <ResultUnsure noneligible={nonEligible} />}
     </div>
   );
 };

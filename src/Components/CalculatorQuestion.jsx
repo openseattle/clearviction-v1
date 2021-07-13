@@ -7,18 +7,28 @@ import "../CSS/Calculator.css";
 import Questions from "../data/calculatorQuestions.json";
 
 /** A component to display an individual question from the question list */
-const CalculatorQuestion = ({ setUserResponse, userResponse }) => {
+const CalculatorQuestion = ({
+  setUserResponse,
+  userResponse,
+  setIfCompleted,
+  isCompleted,
+}) => {
   let { number } = useParams();
   const [showQuestions, setShowQuestions] = useState(true);
   const history = useHistory();
 
   const handleClick = (a) => {
-    // on last question (6) stop delivering question --> reset state --> conditionally push number/question ID or 'results' as slug
-    if (number === "6") setShowQuestions(false);
+    // on last question (6) or "No" on numbers 1-5 stop delivering question --> reset state --> conditionally push number/question ID or 'results' as slug
+    if (number === "6") {
+      setShowQuestions(false);
+      let completed = isCompleted.completed;
+      completed = true;
+      setIfCompleted(completed);
+    }
     let newResponse = userResponse;
     newResponse[number] = a === "Yes" ? true : false;
     setUserResponse(newResponse);
-    if (number === "6") {
+    if (number === "6" || (number < 6 && a === "No")) {
       history.push(`/calculator/results`);
     } else {
       // increases progress bar with each question number
@@ -47,6 +57,7 @@ const CalculatorQuestion = ({ setUserResponse, userResponse }) => {
           <div className="calc-col answers">
             {options.map((a) => (
               <Button
+                key={a}
                 text={a}
                 className="calc-button"
                 onClick={() => handleClick(a)}

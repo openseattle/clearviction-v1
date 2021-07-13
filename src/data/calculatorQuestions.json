@@ -29,14 +29,14 @@
   },
   {
     "id": "5",
-    "text": "Have you completed the terms of the sentence for your offense?",
+    "text": "Was your conviction for less than 40 grams of marijuana?",
     "tooltip": "",
     "options": ["Yes", "No"],
     "next_card": ["6"]
   },
   {
     "id": "6",
-    "text": "Was your conviction for less than 40 grams of marijuana?",
+    "text": "Have you completed the terms of the sentence for your offense?",
     "tooltip": "",
     "options": ["Yes", "No"],
     "next_card": ["results"]
