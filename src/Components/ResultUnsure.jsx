@@ -53,7 +53,7 @@ const ResultUnsure = () => {
           point. We would like to hear your input and learn about your
           experience as we continue building our calculator.
         </p>
-        <a href="link is comming" target="_blank" rel="noreferrer noopener">
+        <a href="https://docs.google.com/forms/d/1sgz7iVlJM8lHc-hD0fu8uqkHGM9Oe2d8NVkf7d6yZUU/edit " target="_blank" rel="noreferrer noopener">
           Take Survey
         </a>
       </div>
