@@ -54,7 +54,7 @@ const ResultUnsure = () => {
           experience as we continue building our calculator.
         </p>
         <a
-          href="https://docs.google.com/forms/d/1sgz7iVlJM8lHc-hD0fu8uqkHGM9Oe2d8NVkf7d6yZUU/edit "
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeuT2oIBnxFAMv6p8tsujNlSugWxFS5la4DUC4rTFekInrcqQ/viewform?usp=sf_link "
           target="_blank"
           rel="noreferrer noopener"
         >
