@@ -50,10 +50,10 @@ const CalculatorQuestion = ({
       const { text, tooltip, options } = foundQuestion();
       return (
         <>
-          <div className="calc-col progress-bar">
+          <div className="calc-col-progress-bar">
             <div className="calc-progress-bar" id="progressBar" />
           </div>
-          <p className="calc-col title">{text}</p>
+          <p className="calc-col title question">{text}</p>
           {tooltip}
           <div className="calc-col answers">
             {options.map((a) => (
@@ -64,8 +64,8 @@ const CalculatorQuestion = ({
                 onClick={() => handleClick(a)}
               />
             ))}
-            <InfoModal />
           </div>
+          <InfoModal />
         </>
       );
     } else {

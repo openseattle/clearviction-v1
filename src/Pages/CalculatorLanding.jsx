@@ -32,7 +32,7 @@ const CalculatorLanding = () => {
           You can use our eligibility calculator to determine whether you are
           eligible to vacate your marijuana conviction.
         </p>
-        <small>
+        <p className="small">
           * This only works for convictions that fall under:
           <ul>
             <li>
@@ -63,7 +63,7 @@ const CalculatorLanding = () => {
               </a>
             </li>
           </ul>
-        </small>
+        </p>
       </div>
 
       {/* When a user clicks this they will begin the questionaire */}

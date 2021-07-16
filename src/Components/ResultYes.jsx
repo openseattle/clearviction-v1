@@ -8,7 +8,7 @@ const ResultYes = () => {
 
   return (
     <>
-      <p className="calc-col title">
+      <p className="calc-col title result">
         From your answers, it seems that you may be eligible to vacate your
         marijuana misdemeanor conviction!
       </p>
@@ -42,9 +42,9 @@ const ResultYes = () => {
               RCW 69.50.401(d)
             </a>
           </li>
-          <li>(Possession of forty grams or less of marijuana)</li>
+          <p>(Possession of forty grams or less of marijuana)</p>
         </ul>
-        <h3>Next steps</h3>
+        <p className="calc-col title result">Next steps</p>
         <ol>
           <li>
             Fill out a Motion and Declaration for Order Vacating Marijuana
@@ -73,7 +73,7 @@ const ResultYes = () => {
           </li>
         </ol>
       </div>
-      <p className="calc-col calc-grid disclaimer">
+      <p className="calc-col disclaimer">
         The information provided by the Conviction Vacation Project is not
         intended to replace legal advice and does not in any way constitute an
         attorney-client relationship. If you need legal advice or assistance, we

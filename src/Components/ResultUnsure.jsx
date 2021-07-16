@@ -8,7 +8,7 @@ const ResultUnsure = () => {
 
   return (
     <>
-      <p className="calc-col title">
+      <p className="calc-col title result">
         Our calculator can’t determine your eligibility
       </p>
       <div className="calc-col results">
@@ -57,11 +57,12 @@ const ResultUnsure = () => {
           href="https://docs.google.com/forms/d/e/1FAIpQLSeuT2oIBnxFAMv6p8tsujNlSugWxFS5la4DUC4rTFekInrcqQ/viewform?usp=sf_link "
           target="_blank"
           rel="noreferrer noopener"
+          className="survey"
         >
           Take Survey
         </a>
       </div>
-      <p className="calc-col calc-grid disclaimer">
+      <p className="calc-col disclaimer">
         The information provided by the Conviction Vacation Project is not
         intended to replace legal advice and does not in any way constitute an
         attorney-client relationship. If you need legal advice or assistance, we
