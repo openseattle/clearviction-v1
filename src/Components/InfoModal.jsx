@@ -9,7 +9,7 @@ function rand() {
 
 function getModalStyle() {
   const top = 50 + rand();
-  const left = 50 + rand();
+  const left = 40 + rand();
 
   return {
     top: `${top}%`,
