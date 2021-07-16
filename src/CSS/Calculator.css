@@ -147,3 +147,7 @@ a {
     text-align: left;
   }
 }
+
+#info-modal-link {
+  text-decoration: underline;
+}

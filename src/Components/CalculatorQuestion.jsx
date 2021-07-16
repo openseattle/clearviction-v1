@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Button from "./Button";
 import { useParams, useHistory } from "react-router-dom";
 import "../CSS/Calculator.css";
+import InfoModal from "../Components/InfoModal";
 
 // data import
 import Questions from "../data/calculatorQuestions.json";
@@ -63,6 +64,7 @@ const CalculatorQuestion = ({
                 onClick={() => handleClick(a)}
               />
             ))}
+            <InfoModal />
           </div>
         </>
       );
