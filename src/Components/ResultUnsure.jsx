@@ -53,10 +53,20 @@ const ResultUnsure = () => {
           point. We would like to hear your input and learn about your
           experience as we continue building our calculator.
         </p>
-        <a href="link is comming" target="_blank" rel="noreferrer noopener">
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLSeuT2oIBnxFAMv6p8tsujNlSugWxFS5la4DUC4rTFekInrcqQ/viewform?usp=sf_link "
+          target="_blank"
+          rel="noreferrer noopener"
+        >
           Take Survey
         </a>
       </div>
+      <p className="calc-col calc-grid disclaimer">
+        The information provided by the Conviction Vacation Project is not
+        intended to replace legal advice and does not in any way constitute an
+        attorney-client relationship. If you need legal advice or assistance, we
+        strongly recommend that you reach out to a licensed professional.
+      </p>
     </>
   );
 };

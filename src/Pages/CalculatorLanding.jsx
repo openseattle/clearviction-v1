@@ -2,6 +2,7 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import Button from "../Components/Button";
 import "../CSS/Calculator.css";
+import InfoModal from "../Components/InfoModal";
 
 /** The page that gets displayed when a user clicks the Calculator link in the Nav Bar
  * Will always show welcome message, description and a start button

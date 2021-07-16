@@ -113,6 +113,10 @@ a {
   text-decoration: underline;
   color: #000;
 }
+.disclaimer {
+  text-align: center;
+  font-size: 11px;
+}
 
 /* ! This section is for mobile */
 @media only screen and (max-width: 600px) {
@@ -165,4 +169,8 @@ a {
     align-items: flex-start;
     text-align: left;
   }
+}
+
+#info-modal-link {
+  text-decoration: underline;
 }
