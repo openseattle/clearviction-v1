@@ -42,7 +42,7 @@ const ResultYes = () => {
               RCW 69.50.401(d)
             </a>
           </li>
-          <li>(Possession of forty grams or less of marijuana)</li>
+          <p>(Possession of forty grams or less of marijuana)</p>
         </ul>
         <p className="calc-col title result">Next steps</p>
         <ol>
@@ -73,7 +73,7 @@ const ResultYes = () => {
           </li>
         </ol>
       </div>
-      <p className="calc-col calc-grid disclaimer">
+      <p className="calc-col disclaimer">
         The information provided by the Conviction Vacation Project is not
         intended to replace legal advice and does not in any way constitute an
         attorney-client relationship. If you need legal advice or assistance, we
