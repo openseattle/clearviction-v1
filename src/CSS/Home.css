@@ -31,4 +31,6 @@ a:hover {
 .white-link {
   color: #fff;
   text-decoration: none;
+  font-size: 2.11vh;
+  line-height: 3.37vh
 }

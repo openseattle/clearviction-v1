@@ -8,7 +8,7 @@ const ResultUnsure = () => {
 
   return (
     <>
-      <p className="calc-col title">
+      <p className="calc-col title result">
         Our calculator can’t determine your eligibility
       </p>
       <div className="calc-col results">

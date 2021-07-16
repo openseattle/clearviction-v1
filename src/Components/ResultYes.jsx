@@ -8,7 +8,7 @@ const ResultYes = () => {
 
   return (
     <>
-      <p className="calc-col title">
+      <p className="calc-col title result">
         From your answers, it seems that you may be eligible to vacate your
         marijuana misdemeanor conviction!
       </p>
@@ -44,7 +44,7 @@ const ResultYes = () => {
           </li>
           <li>(Possession of forty grams or less of marijuana)</li>
         </ul>
-        <h3>Next steps</h3>
+        <p className="calc-col title result">Next steps</p>
         <ol>
           <li>
             Fill out a Motion and Declaration for Order Vacating Marijuana

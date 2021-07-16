@@ -1,17 +1,17 @@
 .footer-cont {
-  left: 0;
+  position: absolute;
   bottom: 0;
   width: 100%;
+  height: 2.5rem;
   background-color: #4e6c99;
   color: white;
-  text-align: center;
+  text-align: center; 
 }
 
 .info-cont {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  height: 60px;
 }
 
 .header-info-cont {
