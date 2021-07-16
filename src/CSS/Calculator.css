@@ -34,12 +34,12 @@
   margin-bottom: 1em;
 }
 
-.calc-col.title.question{
+.calc-col.title.question {
   margin: 4em auto 4em;
   font-size: 2.65vh;
 }
 
-.calc-col.title.result{
+.calc-col.title.result {
   font-size: 2.65vh;
   line-height: 3.04vh;
 }
@@ -87,8 +87,8 @@
 .calc-col.results a {
   font-weight: bold;
 }
-.calc-col.results p a{
-  color: #007CFF;
+.calc-col.results p a {
+  color: #007cff;
   font-size: 1.85vh;
   line-height: 2.11vh;
 }
@@ -102,7 +102,7 @@
   border-radius: 11px;
 }
 
- #progressBar {
+#progressBar {
   width: 0%;
   background-color: #616161;
   height: 10px;
@@ -132,9 +132,8 @@ a.survey {
   margin: 3.43vh auto 5.68vh;
 }
 
-.calc-col.disclaimer.result-no{
+.calc-col.disclaimer.result-no {
   margin-top: 37.12vh;
-
 }
 /* ! This section is for mobile */
 @media only screen and (max-width: 600px) {
@@ -142,18 +141,15 @@ a.survey {
     flex: 0;
   }
   .calc-col.results {
-    flex: .25;
+    flex: 0.25;
   }
   .calc-grid {
     padding: 0 3.17vh;
   }
-
-
 }
 
 /* ! This section is for desktop */
 @media only screen and (min-width: 601px) {
-
   .calc-col {
     width: calc(100vw - 10em);
     max-width: 552px;
@@ -178,7 +174,6 @@ a.survey {
   .calc-col.body ul {
     margin-bottom: 0;
   }
-  
 }
 
 #info-modal-link {

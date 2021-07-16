@@ -14,7 +14,7 @@ const ResultNo = () => {
         attorney-client relationship. If you need legal advice or assistance, we
         strongly recommend that you reach out to a licensed professional.
       </p>
-    </ >
+    </>
   );
 };
 
