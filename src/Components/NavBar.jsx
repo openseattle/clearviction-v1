@@ -41,7 +41,7 @@ const NavBar = () => {
                 className="nav-link"
                 to="/calculator"
                 /** Open in new tab if the user isn't already on the calculator page */
-                target={isCalcOpen ? "" : "_blank"}
+                // target={isCalcOpen ? "" : "_blank"}
               >
                 Calculator
               </NavLink>
