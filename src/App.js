@@ -36,9 +36,9 @@ function App() {
         <Route path="/volunteer">
           <Volunteer />
         </Route>
-        <Route path="/calculator">
+        {/* <Route path="/calculator">
           <CalculatorQuestionContainer />
-        </Route>
+        </Route> */}
         <Route path="/">
           <Home />
         </Route>
