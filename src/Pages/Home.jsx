@@ -1,8 +1,14 @@
 import React from "react";
 import logo from "../Assets/CVP.png";
 import "../CSS/Home.css";
+import { useLocation, useHistory } from "react-router-dom";
 
 const Home = () => {
+  const history = useHistory();
+  const handleCalcRedirect = () => {
+    history.push("/calculator");
+  };
+
   return (
     <div>
       <section className="container-fluid"></section>
@@ -163,7 +169,9 @@ const Home = () => {
             </p>
           </div>
           <div className="col">
-            <h1 className="display-6">Eligibility Calculator</h1>
+            <h1 className="display-6" onClick={handleCalcRedirect}>
+              Eligibility Calculator
+            </h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="56"
