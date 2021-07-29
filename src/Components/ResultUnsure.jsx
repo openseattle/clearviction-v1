@@ -1,10 +1,10 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import "../CSS/Calculator.css";
 
 const ResultUnsure = () => {
-  const history = useHistory();
-  const onClick = () => history.push("/");
+  // const history = useHistory();
+  // const onClick = () => history.push("/");
 
   return (
     <>

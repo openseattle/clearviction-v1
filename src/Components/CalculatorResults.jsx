@@ -20,6 +20,7 @@ const CalculatorResults = ({ userResponse, isCompleted }) => {
     for (const id in userResponse) {
       let value = userResponse[id];
       if (value === false) {
+        // eslint-disable-next-line eqeqeq
         const { text } = calculatorNonEligible.filter((q) => q.id == id)[0];
         nonEligibleItems.push(text);
       }
