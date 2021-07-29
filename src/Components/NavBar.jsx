@@ -1,5 +1,6 @@
 import React from "react";
 import { NavLink, useLocation } from "react-router-dom";
+import config from '../config'
 
 const NavBar = () => {
   const location = useLocation();
@@ -37,14 +38,15 @@ const NavBar = () => {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink
+              <a
                 className="nav-link"
-                to="/calculator"
+                href= {config.BASE_URL+'/calculator'}
                 /** Open in new tab if the user isn't already on the calculator page */
                 target={isCalcOpen ? "" : "_blank"}
+                rel="noreferrer"
               >
                 Calculator
-              </NavLink>
+              </a>
             </li>
             {/* 
             <li className="nav-item">
