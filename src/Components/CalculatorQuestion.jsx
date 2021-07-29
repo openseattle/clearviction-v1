@@ -43,6 +43,7 @@ const CalculatorQuestion = ({
     }
   };
 
+  // eslint-disable-next-line eqeqeq
   const foundQuestion = () => Questions.filter((q) => q.id == number)[0];
 
   const deliverQuestion = () => {

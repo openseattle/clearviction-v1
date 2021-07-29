@@ -30,16 +30,26 @@ function App() {
         <Route exact path="/calculator">
           <CalculatorLanding />
         </Route>
+        <Route path="/calculator">
+          <CalculatorQuestionContainer />
+        </Route>
         <Route path="/resources">
           <Resources />
         </Route>
         <Route path="/volunteer">
           <Volunteer />
         </Route>
-        {/* <Route path="/calculator">
+        {/* <Route path="/calculator/:Id">
           <CalculatorQuestionContainer />
         </Route> */}
-        <Route path="/">
+        {/* {["/calculator/:number"].map(path => (
+                <Route
+                    key={path}
+                    path={path}
+                    component={CalculatorQuestionContainer }
+                />
+        ))} */}
+        <Route exact path="/">
           <Home />
         </Route>
       </Switch>

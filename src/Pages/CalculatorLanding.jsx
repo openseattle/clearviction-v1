@@ -2,7 +2,7 @@ import React from "react";
 import { useHistory } from "react-router-dom";
 import Button from "../Components/Button";
 import "../CSS/Calculator.css";
-import InfoModal from "../Components/InfoModal";
+// import InfoModal from "../Components/InfoModal";
 
 /** The page that gets displayed when a user clicks the Calculator link in the Nav Bar
  * Will always show welcome message, description and a start button
@@ -34,36 +34,36 @@ const CalculatorLanding = () => {
         </p>
         <p className="small">
           * This only works for convictions that fall under:
-          <ul>
-            <li>
-              <a
-                href="https://app.leg.wa.gov/rcw/default.aspx?cite=69.50.4014"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                RCW 69.50.4014
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://leg.wa.gov/CodeReviser/documents/sessionlaw/1979c67.pdf?cite=1979%20c%2067%20%C2%A7%201"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                RCW 69.50.401(e)
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://leg.wa.gov/CodeReviser/documents/sessionlaw/1971ex1c308.pdf?cite=1971%20ex.s.%20c%20308%20%C2%A7%2069.50.406"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                RCW 69.50.401(d)
-              </a>
-            </li>
-          </ul>
         </p>
+        <ul className="small">
+          <li>
+            <a
+              href="https://app.leg.wa.gov/rcw/default.aspx?cite=69.50.4014"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              RCW 69.50.4014
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://leg.wa.gov/CodeReviser/documents/sessionlaw/1979c67.pdf?cite=1979%20c%2067%20%C2%A7%201"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              RCW 69.50.401(e)
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://leg.wa.gov/CodeReviser/documents/sessionlaw/1971ex1c308.pdf?cite=1971%20ex.s.%20c%20308%20%C2%A7%2069.50.406"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              RCW 69.50.401(d)
+            </a>
+          </li>
+        </ul>
       </div>
 
       {/* When a user clicks this they will begin the questionaire */}

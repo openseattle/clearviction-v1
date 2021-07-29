@@ -5,7 +5,7 @@ import CalculatorResults from "../Components/CalculatorResults";
 import "../CSS/Calculator.css";
 
 /** Directs traffic to result screen or current question based on URL */
-const CalculatorQuestionCont = () => {
+const CalculatorQuestionContainer = () => {
   let { path } = useRouteMatch();
 
   /**
@@ -39,17 +39,27 @@ const CalculatorQuestionCont = () => {
             isCompleted={isCompleted}
           />
         </Route>
-        <Route exact path={`${path}/:number`}>
+        {[`${path}/:number`].map((path) => (
+          <Route key={path} path={path}>
+            <CalculatorQuestion
+              userResponse={userResponse}
+              setUserResponse={setUserResponse}
+              isCompleted={isCompleted}
+              setIfCompleted={setIfCompleted}
+            />
+          </Route>
+        ))}
+        {/* <Route  path={`${path}/:number`}>
           <CalculatorQuestion
             userResponse={userResponse}
             setUserResponse={setUserResponse}
             isCompleted={isCompleted}
             setIfCompleted={setIfCompleted}
           />
-        </Route>
+        </Route> */}
       </Switch>
     </>
   );
 };
 
-export default CalculatorQuestionCont;
+export default CalculatorQuestionContainer;
