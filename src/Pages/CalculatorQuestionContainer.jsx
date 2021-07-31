@@ -1,12 +1,20 @@
-import React, { useState } from "react";
-import { useRouteMatch, Switch, Route } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { useRouteMatch, useHistory, Switch, Route } from "react-router-dom";
 import CalculatorQuestion from "../Components/CalculatorQuestion";
 import CalculatorResults from "../Components/CalculatorResults";
 import "../CSS/Calculator.css";
 
+import MJQuestions from "../data/calculatorMJQuestions.json";
+import HeadQuestions from "../data/calculatorHead.json";
+
 /** Directs traffic to result screen or current question based on URL */
 const CalculatorQuestionCont = () => {
   let { path } = useRouteMatch();
+  let history = useHistory();
+  useEffect(() => {
+    history.push(`${path}/head/1`);
+  }, []);
+  let Questions = { head: HeadQuestions, mj: MJQuestions };
 
   /**
    * Default userResponse is false to handle some edge cases
@@ -39,8 +47,9 @@ const CalculatorQuestionCont = () => {
             isCompleted={isCompleted}
           />
         </Route>
-        <Route exact path={`${path}/:number`}>
+        <Route exact path={`${path}/:branchName/:number`}>
           <CalculatorQuestion
+            Questions={Questions}
             userResponse={userResponse}
             setUserResponse={setUserResponse}
             isCompleted={isCompleted}

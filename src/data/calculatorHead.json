@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "text": "Misdemeanor Calculator",
+    "subtext": "You can use our eligibility calculator to determine whether you are eligible to vacate your misdeamor conviction.",
+    "tooltip": "",
+    "options": ["Start"],
+    "next_card": ["2"]
+  },
+  {
+    "id": "2",
+    "text": "Was this offense a misdemeanor?",
+    "tooltip": "",
+    "options": ["Yes", "No"],
+    "next_card": ["3"]
+  },
+  {
+    "id": "3",
+    "text": "Does your conviction fall into any of these special cases?",
+    "tooltip": "",
+    "options": [
+      "Posession of Marijuana",
+      "Prostitution Misdeamnor",
+      "Violation of a Fishing Regulation",
+      "All other cases"
+    ],
+    "next_card": ["4"]
+  }
+]

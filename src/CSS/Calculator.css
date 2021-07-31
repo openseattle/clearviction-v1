@@ -11,6 +11,9 @@
   flex: 1;
 }
 
+.calc-subtext {
+  width: 500px;
+}
 .calc-button {
   background-color: #4e6c99;
   color: #fff;

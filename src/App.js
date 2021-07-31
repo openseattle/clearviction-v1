@@ -27,9 +27,9 @@ function App() {
         <Route path="/contact">
           <Contact />
         </Route>
-        <Route exact path="/calculator">
+        {/* <Route exact path="/calculator">
           <CalculatorLanding />
-        </Route>
+        </Route> */}
         <Route path="/resources">
           <Resources />
         </Route>
