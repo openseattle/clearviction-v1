@@ -47,7 +47,6 @@ const CalculatorQuestionCont = () => {
         </Route>
         <Route exact path={`${path}/:branchName/:number`}>
           <CalculatorQuestion
-            Questions={Questions}
             userResponse={userResponse}
             setUserResponse={setUserResponse}
             isCompleted={isCompleted}

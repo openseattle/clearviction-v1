@@ -23,35 +23,39 @@ const CalculatorQuestion = ({
     // if path changes --> switch the data state to the json matching that branch --> 'calculator/branchName'
   }, [branchName]);
 
-  const handleBranchRedirect = (a) => {
-    if ((a = "Posession of Marijuana")) {
-      history.push(`/calculator/MJ/1`);
-    } else if ((a = "Prostitution Misdemeanor")) {
-      history.push(`/calculator/`);
-    } else if ((a = "Violation of a Fishing Regulation")) {
-      history.push(`/calculator/`);
-    } else if ("All other cases") {
-      history.push(`/calculator/`);
-    } else {
-      history.push(`/home`);
-    }
-  };
+  // const handleBranchRedirect = (a) => {
+  //   if (a == "Possession of Marijuana") {
+  //     // setShowQuestions(false);
+  //     return history.push(`/calculator/MJ/1`);
+  //   } else if (a == "Prostitution Misdemeanor") {
+  //     return history.push(`/calculator/`);
+  //   } else if (a == "Violation of a Fishing Regulation") {
+  //     return history.push(`/calculator/`);
+  //   } else if (a == "All other cases") {
+  //     return history.push(`/calculator/`);
+  //   } else {
+  //     console.log("hi");
+  //   }
+  // };
 
   const handleClick = (a) => {
     // on last question (6) or "No" on numbers 1-5 stop delivering question --> reset state --> conditionally push number/question ID or 'results' as slug
+
+    // attempted to extrapolate this out into a method (above) but for some reason it redirects to 404
     // handleBranchRedirect(a);
-    if (a == "Posession of Marijuana") {
+    if (a == "Possession of Marijuana") {
       // setShowQuestions(false);
       return history.push(`/calculator/MJ/1`);
     } else if (a == "Prostitution Misdemeanor") {
-      history.push(`/calculator/`);
+      return history.push(`/calculator/`);
     } else if (a == "Violation of a Fishing Regulation") {
-      history.push(`/calculator/`);
+      return history.push(`/calculator/`);
     } else if (a == "All other cases") {
-      history.push(`/calculator/`);
+      return history.push(`/calculator/`);
     } else {
-      history.push(`/home`);
+      console.log("hi");
     }
+
     if (number === "6") {
       setShowQuestions(false);
       let completed = isCompleted.completed;
@@ -80,11 +84,10 @@ const CalculatorQuestion = ({
       case "head":
         // code block
         return HeadQuestions.filter((q) => q.id == number)[0];
-        break;
       case "MJ":
         // code block
         return MJQuestions.filter((q) => q.id == number)[0];
-        break;
+
       default:
         console.log("no path given");
     }
@@ -111,7 +114,7 @@ const CalculatorQuestion = ({
               />
             ))}
           </div>
-          <InfoModal />
+          <InfoModal branch={branchName} id={number} />
         </>
       );
     } else {

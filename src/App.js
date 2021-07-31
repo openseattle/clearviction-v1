@@ -12,6 +12,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import CalculatorLanding from "./Pages/CalculatorLanding";
 import CalculatorQuestionContainer from "./Pages/CalculatorQuestionContainer";
+import ResultUnsure from "./Components/ResultUnsure";
 
 function App() {
   return (
@@ -35,6 +36,9 @@ function App() {
         </Route>
         <Route path="/volunteer">
           <Volunteer />
+        </Route>
+        <Route exact path="/calculator/cant_determine">
+          <ResultUnsure />
         </Route>
         <Route path="/calculator">
           <CalculatorQuestionContainer />
