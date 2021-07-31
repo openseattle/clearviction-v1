@@ -11,9 +11,7 @@ import HeadQuestions from "../data/calculatorHead.json";
 const CalculatorQuestionCont = () => {
   let { path } = useRouteMatch();
   let history = useHistory();
-  useEffect(() => {
-    // history.push(`${path}/head/1`);
-  }, []);
+  useEffect(() => {}, []);
   let Questions = { head: HeadQuestions, mj: MJQuestions };
 
   /**

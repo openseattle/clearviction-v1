@@ -20,10 +20,10 @@
     "tooltip": "",
     "options": [
       "Posession of Marijuana",
-      "Prostitution Misdeamnor",
+      "Prostitution Misdemeanor",
       "Violation of a Fishing Regulation",
       "All other cases"
     ],
-    "next_card": ["4"]
+    "next_card": ["redirect"]
   }
 ]

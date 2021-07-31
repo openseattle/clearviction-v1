@@ -23,8 +23,35 @@ const CalculatorQuestion = ({
     // if path changes --> switch the data state to the json matching that branch --> 'calculator/branchName'
   }, [branchName]);
 
+  const handleBranchRedirect = (a) => {
+    if ((a = "Posession of Marijuana")) {
+      history.push(`/calculator/MJ/1`);
+    } else if ((a = "Prostitution Misdemeanor")) {
+      history.push(`/calculator/`);
+    } else if ((a = "Violation of a Fishing Regulation")) {
+      history.push(`/calculator/`);
+    } else if ("All other cases") {
+      history.push(`/calculator/`);
+    } else {
+      history.push(`/home`);
+    }
+  };
+
   const handleClick = (a) => {
     // on last question (6) or "No" on numbers 1-5 stop delivering question --> reset state --> conditionally push number/question ID or 'results' as slug
+    // handleBranchRedirect(a);
+    if (a == "Posession of Marijuana") {
+      // setShowQuestions(false);
+      return history.push(`/calculator/MJ/1`);
+    } else if (a == "Prostitution Misdemeanor") {
+      history.push(`/calculator/`);
+    } else if (a == "Violation of a Fishing Regulation") {
+      history.push(`/calculator/`);
+    } else if (a == "All other cases") {
+      history.push(`/calculator/`);
+    } else {
+      history.push(`/home`);
+    }
     if (number === "6") {
       setShowQuestions(false);
       let completed = isCompleted.completed;
@@ -92,7 +119,7 @@ const CalculatorQuestion = ({
     }
   };
 
-  return <div className="calc-grid">{deliverQuestion()}</div>;
+  return <div className="calc-grid">{showQuestions && deliverQuestion()}</div>;
 };
 
 export default CalculatorQuestion;
