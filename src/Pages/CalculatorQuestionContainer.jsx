@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useRouteMatch, useHistory, Switch, Route } from "react-router-dom";
 import CalculatorQuestion from "../Components/CalculatorQuestion";
 import CalculatorResults from "../Components/CalculatorResults";
+import ResultUnsure from "../Components/ResultUnsure";
 import "../CSS/Calculator.css";
 
 import MJQuestions from "../data/calculatorMJQuestions.json";
@@ -44,6 +45,9 @@ const CalculatorQuestionCont = () => {
             userResponse={userResponse}
             isCompleted={isCompleted}
           />
+        </Route>
+        <Route exact path={`${path}/cant_determine`}>
+          <ResultUnsure />
         </Route>
         <Route exact path={`${path}/:branchName/:number`}>
           <CalculatorQuestion
