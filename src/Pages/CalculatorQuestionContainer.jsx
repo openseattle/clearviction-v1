@@ -12,7 +12,7 @@ const CalculatorQuestionCont = () => {
   let { path } = useRouteMatch();
   let history = useHistory();
   useEffect(() => {
-    history.push(`${path}/head/1`);
+    // history.push(`${path}/head/1`);
   }, []);
   let Questions = { head: HeadQuestions, mj: MJQuestions };
 
