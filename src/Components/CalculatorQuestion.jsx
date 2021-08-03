@@ -37,14 +37,15 @@ const CalculatorQuestion = ({
   //     console.log("hi");
   //   }
   // };
-
+  const progressBar = document.getElementById("progressBar");
   const handleClick = (a) => {
     // on last question (6) or "No" on numbers 1-5 stop delivering question --> reset state --> conditionally push number/question ID or 'results' as slug
 
     // attempted to extrapolate this out into a method (above) but for some reason it redirects to 404
     // handleBranchRedirect(a);
     if (a == "Possession of Marijuana") {
-      // setShowQuestions(false);
+      progressBar.style.visibility = `visible` 
+      progressBar.style.width = 0
       return history.push(`/calculator/MJ/1`);
     } else if (a == "Prostitution Misdemeanor") {
       return history.push(`/calculator/`);
@@ -56,7 +57,7 @@ const CalculatorQuestion = ({
       console.log("hi");
     }
 
-    if (number === "6") {
+    if (number === "4") {
       setShowQuestions(false);
       let completed = isCompleted.completed;
       completed = true;
@@ -65,12 +66,12 @@ const CalculatorQuestion = ({
     let newResponse = userResponse;
     newResponse[number] = a === "Yes" ? true : false;
     setUserResponse(newResponse);
-    if (number === "6" || (number < 6 && a === "No")) {
+    if (number === "4" || (number < 4 && a === "No")) {
       history.push(`/calculator/results`);
     } else {
       // increases progress bar with each question number
       const progressBar = document.getElementById("progressBar");
-      const MAX_QUESTIONS = 6;
+      const MAX_QUESTIONS = 4;
       progressBar.style.width = `${Math.floor(
         (number / MAX_QUESTIONS) * 100
       )}%`;
@@ -86,6 +87,8 @@ const CalculatorQuestion = ({
         return HeadQuestions.filter((q) => q.id == number)[0];
       case "MJ":
         // code block
+        const progressBarWrapper = document.getElementById("progressBarWrapper");
+        progressBarWrapper.style.visibility = `visible` 
         return MJQuestions.filter((q) => q.id == number)[0];
 
       default:
@@ -98,7 +101,7 @@ const CalculatorQuestion = ({
       const { text, subtext, tooltip, options } = foundQuestion();
       return (
         <>
-          <div className="calc-col-progress-bar">
+          <div className="calc-col-progress-bar" id="progressBarWrapper" >
             <div className="calc-progress-bar" id="progressBar" />
           </div>
           <p className="calc-col title question">{text}</p>

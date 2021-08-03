@@ -27,7 +27,7 @@ const CalculatorResults = ({ userResponse, isCompleted }) => {
     //change logic here
     if (nonEligibleItems.length === 0) {
       setResult("ResultYes");
-    } else if (isCompleted === true && userResponse[6] === false) {
+    } else if (isCompleted === true && userResponse[4] === false) {
       setResult("Noneligible");
     } else {
       setNonEligible(nonEligibleItems);
