@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import Modal from "@material-ui/core/Modal";
 import "../CSS/Calculator.css";
 
@@ -38,7 +38,7 @@ export default function InfoModal({ branch, id }) {
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
-  let history = useHistory();
+  // let history = useHistory();
   const handleOpen = () => {
     setOpen(true);
   };
@@ -47,24 +47,12 @@ export default function InfoModal({ branch, id }) {
     setOpen(false);
   };
 
-  const handleRedirect = () => {
-    history.push("/calculator/cant_determine");
-  };
-
   const handleText = () => {
-    if (branch === "head" && id === "1") {
-      return (
-        <p id="info-modal-link" onClick={handleRedirect}>
-          My conviction is not a misdemeanor or I'm not sure
-        </p>
-      );
-    } else {
-      return (
-        <p id="info-modal-link" onClick={handleOpen}>
-          I'm not sure
-        </p>
-      );
-    }
+    return (
+      <p id="info-modal-link" onClick={handleOpen}>
+        I'm not sure
+      </p>
+    );
   };
 
   return (

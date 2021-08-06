@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
-import ResultNo from "./ResultNo";
-import ResultYes from "./ResultYes";
-import ResultUnsure from "./ResultUnsure";
+import ResultNo from "../ResultNo";
+import ResultYes from "../ResultYes";
+import ResultUnsure from "../ResultUnsure";
 
 // data import
-import calculatorNonEligible from "../data/calculatorNonEligible.json";
+import calculatorNonEligible from "../../data/calculatorNonEligible.json";
 
 /** This component determines which result to render based off user input */
 const CalculatorResults = ({ userResponse, isCompleted }) => {
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState("CantDetermine");
   const [nonEligible, setNonEligible] = useState([]);
 
   useEffect(() => {

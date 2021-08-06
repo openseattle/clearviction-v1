@@ -111,11 +111,10 @@
   height: 10px;
   overflow: hidden;
   height: 1vh;
-  /* visibility:hidden; */
 }
 
 #progressBarWrapper {
-  visibility:hidden;
+  visibility: hidden;
 }
 
 ul {

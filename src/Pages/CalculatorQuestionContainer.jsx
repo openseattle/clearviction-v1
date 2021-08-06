@@ -1,38 +1,16 @@
-import React, { useState, useEffect } from "react";
-import { useRouteMatch, useHistory, Switch, Route } from "react-router-dom";
-import CalculatorQuestion from "../Components/CalculatorQuestion";
-import CalculatorResults from "../Components/CalculatorResults";
-import ResultUnsure from "../Components/ResultUnsure";
+import React, { useContext, useEffect } from "react";
+import { useRouteMatch, Switch, Route } from "react-router-dom";
+import CalculatorQuestion from "../Components/calculator/CalculatorQuestion";
+import CalculatorResults from "../Components/calculator/CalculatorResults";
 import "../CSS/Calculator.css";
-
-import MJQuestions from "../data/calculatorMJQuestions.json";
-import HeadQuestions from "../data/calculatorHead.json";
+import CalcContext from "../calcContext";
 
 /** Directs traffic to result screen or current question based on URL */
 const CalculatorQuestionCont = () => {
+  const calcContext = useContext(CalcContext);
   let { path } = useRouteMatch();
-  let history = useHistory();
+  // let history = useHistory();
   useEffect(() => {}, []);
-  let Questions = { head: HeadQuestions, mj: MJQuestions };
-
-  /**
-   * Default userResponse is false to handle some edge cases
-   * 1. They click the link on the landing page because their conviction is not a MJ misdemeanor
-   * 2. They navigate to 'calculator/results' using their url bar
-   */
-  const [userResponse, setUserResponse] = useState({
-    1: false,
-    2: false,
-    3: false,
-    4: false,
-  });
-  /**
-   * Default isCompleted is false to handle some edge cases
-   * 1. If the finish the calculator it will update to true
-   */
-  const [isCompleted, setIfCompleted] = useState({
-    completed: false,
-  });
 
   /** Return a switch that routes to result screen, or question to display */
   return (
@@ -40,19 +18,22 @@ const CalculatorQuestionCont = () => {
       <Switch>
         <Route exact path={`${path}/results`}>
           <CalculatorResults
-            userResponse={userResponse}
-            isCompleted={isCompleted}
+            userResponse={calcContext.userResponse}
+            isCompleted={calcContext.completed}
+            branch={calcContext.branch}
           />
-        </Route>
-        <Route exact path={`${path}/cant_determine`}>
-          <ResultUnsure />
         </Route>
         <Route exact path={`${path}/:branchName/:number`}>
           <CalculatorQuestion
-            userResponse={userResponse}
-            setUserResponse={setUserResponse}
-            isCompleted={isCompleted}
-            setIfCompleted={setIfCompleted}
+            userResponse={calcContext.userResponse}
+            setUserResponse={calcContext.setUserResponse}
+            isCompleted={calcContext.completed}
+            setIfCompleted={calcContext.setCompleted}
+            branch={calcContext.currBranch}
+            setBranch={calcContext.setBranch}
+            branchTheme={calcContext.branchTheme}
+            currBranchQuestions={calcContext.currBranchQuestions}
+            setQuestions={calcContext.setQuestions}
           />
         </Route>
       </Switch>

@@ -12,6 +12,7 @@ import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import CalculatorLanding from "./Pages/CalculatorLanding";
 import CalculatorQuestionContainer from "./Pages/CalculatorQuestionContainer";
+import { CalcProvider } from "./calcContext";
 
 function App() {
   return (
@@ -33,12 +34,17 @@ function App() {
         <Route path="/volunteer">
           <Volunteer />
         </Route>
-        <Route path="/calculator">
-          <CalculatorQuestionContainer />
-        </Route>
-        <Route path="/">
+        <Route exact path="/">
           <Home />
         </Route>
+        <CalcProvider>
+          <Route exact path="/calculator">
+            <CalculatorLanding />
+          </Route>
+          <Route path="/calculator">
+            <CalculatorQuestionContainer />
+          </Route>
+        </CalcProvider>
       </Switch>
       <Footer />
     </div>
