@@ -13,6 +13,7 @@ const CalculatorLanding = () => {
   const calcContext = useContext(CalcContext);
   /** Use reset context if user navigates back to landing screen  */
   const resetContext = calcContext.resetContext;
+
   useEffect(() => {
     resetContext();
   }, [resetContext]);
@@ -22,7 +23,7 @@ const CalculatorLanding = () => {
     /** User clicks start */
     /** User is sent to first question */
     calcContext.setBranch("head");
-    calcContext.setQuestions("head");
+    // calcContext.setQuestions("head");
     history.push("/calculator/head/1");
   };
 

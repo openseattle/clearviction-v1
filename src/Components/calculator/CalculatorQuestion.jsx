@@ -1,80 +1,59 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import Button from "../Button";
 import { useParams, useHistory } from "react-router-dom";
-import "../../CSS/Calculator.css";
 import InfoModal from "../InfoModal";
-
-import MJQuestions from "../../data/calculatorMJQuestions.json";
-import HeadQuestions from "../../data/calculatorHead.json";
+import { CalculatorService } from "./CalculatorService";
+import "../../CSS/Calculator.css";
+import CalcContext from "../../calcContext";
 
 /** A component to display an individual question from the question list */
-const CalculatorQuestion = ({
-  setUserResponse,
-  userResponse,
-  setIfCompleted,
-  isCompleted,
-  branch,
-  branchTheme,
-  setBranch,
-  currBranchQuestions,
-  setQuestions,
-}) => {
-  let { branchName, number } = useParams();
+const CalculatorQuestion = () => {
+  const calcContext = useContext(CalcContext);
+
+  let { number } = useParams();
   const [showQuestions, setShowQuestions] = useState(true);
   const history = useHistory();
 
   useEffect(() => {
-    //set branch by slug helps to prevent errors is user pushes back button
-    setBranch(branchName);
     //set theme by branch. Currenly only handles progress bar visability and size
     const progressBar = document.getElementById("progressBar");
     const progressBarWrapper = document.getElementById("progressBarWrapper");
-    progressBarWrapper.style.visibility = branchTheme[`${branch}`].visibility;
-    progressBar.style.width = branchTheme[`${branch}`].width;
+    progressBarWrapper.style.visibility =
+      calcContext.branchTheme[`${calcContext.currBranch}`].visibility;
+    progressBar.style.width =
+      calcContext.branchTheme[`${calcContext.currBranch}`].width;
     //renders width of progress bar if vissable updates if user uses back button
-    if (branchTheme[`${branch}`].visibility === "visible") {
-      const MAX_QUESTIONS = currBranchQuestions.length;
+    if (
+      calcContext.branchTheme[`${calcContext.currBranch}`].visibility ===
+      "visible"
+    ) {
+      const MAX_QUESTIONS = calcContext.currBranchQuestions.length;
       progressBar.style.width = `${Math.floor(
         ((number - 1) / MAX_QUESTIONS) * 100
       )}%`;
     }
     // if path changes --> switch the data state to the json matching that branch --> 'calculator/branchName'
-  }, [branch, branchTheme, branchName, setBranch, number, currBranchQuestions]);
+  }, [calcContext, number]);
 
   const handleClick = (a) => {
-    // on last question (6) or "No" on numbers 1-5 stop delivering question --> reset state --> conditionally push number/question ID or 'results' as slug
-    // attempted to extrapolate this out into a method (above) but for some reason it redirects to 404
-    // handleBranchRedirect(a);
-
-    if (a === "Possession of Marijuana") {
-      setQuestions("mj");
-      return history.push(`/calculator/mj/1`);
-    } else if (a === "Prostitution Misdemeanor") {
-      return history.push(`/calculator/`);
-    } else if (a === "Violation of a Fishing Regulation") {
-      return history.push(`/calculator/`);
-    } else if (a === "All other cases") {
-      return history.push(`/calculator/`);
+    let slug = `${calcContext.currBranch}/${parseInt(number) + 1}`;
+    // if head branch
+    if (calcContext.currBranch === "head") {
+      slug = CalculatorService.handleHead(a, number, calcContext.setBranch);
     }
 
-    if (number === "4") {
-      setShowQuestions(false);
-      let completed = isCompleted.completed;
-      completed = true;
-      setIfCompleted(completed);
+    // if mj branch
+    else if (calcContext.currBranch === "mj") {
+      slug = CalculatorService.handleMJ(a, number, calcContext.setEligibility);
+      if (slug === "results") {
+        setShowQuestions("false");
+      }
     }
-    let newResponse = userResponse;
-    newResponse[number] = a === "Yes" ? true : false;
-    setUserResponse(newResponse);
-    if (number === "4" || (number < 4 && a === "No")) {
-      history.push(`/calculator/results`);
-    } else {
-      history.push(`/calculator/${branchName}/${parseInt(number) + 1}`);
-    }
+    history.push(`/calculator/${slug}`);
   };
 
   const foundQuestion = () => {
-    return currBranchQuestions.filter((q) => q.id == number)[0];
+    return calcContext.currBranchQuestions.filter((q) => q.id == number)[0];
   };
 
   const deliverQuestion = () => {
@@ -98,7 +77,7 @@ const CalculatorQuestion = ({
               />
             ))}
           </div>
-          <InfoModal branch={branchName} id={number} />
+          <InfoModal branch={calcContext.currBranch} id={number} />
         </>
       );
     } else {

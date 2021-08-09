@@ -24,17 +24,7 @@ const CalculatorQuestionCont = () => {
           />
         </Route>
         <Route exact path={`${path}/:branchName/:number`}>
-          <CalculatorQuestion
-            userResponse={calcContext.userResponse}
-            setUserResponse={calcContext.setUserResponse}
-            isCompleted={calcContext.completed}
-            setIfCompleted={calcContext.setCompleted}
-            branch={calcContext.currBranch}
-            setBranch={calcContext.setBranch}
-            branchTheme={calcContext.branchTheme}
-            currBranchQuestions={calcContext.currBranchQuestions}
-            setQuestions={calcContext.setQuestions}
-          />
+          <CalculatorQuestion />
         </Route>
       </Switch>
     </>

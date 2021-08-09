@@ -1,45 +1,43 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import ResultNo from "../ResultNo";
 import ResultYes from "../ResultYes";
 import ResultUnsure from "../ResultUnsure";
+import CalcContext from "../../calcContext";
 
 // data import
-import calculatorNonEligible from "../../data/calculatorNonEligible.json";
+// import calculatorNonEligible from "../../data/calculatorNonEligible.json";
 
 /** This component determines which result to render based off user input */
-const CalculatorResults = ({ userResponse, isCompleted }) => {
-  const [result, setResult] = useState("CantDetermine");
-  const [nonEligible, setNonEligible] = useState([]);
+const CalculatorResults = () => {
+  const calcContext = useContext(CalcContext);
 
-  useEffect(() => {
-    userResponse && handleCalculation();
-  }, []);
+  // const [result, setResult] = useState("CantDetermine");
+  // const [nonEligible, setNonEligible] = useState([]);
+  // useEffect(() => {
+  //   userResponse && handleCalculation();
+  // }, []);
 
-  const handleCalculation = () => {
-    let nonEligibleItems = [];
-    for (const id in userResponse) {
-      let value = userResponse[id];
-      if (value === false) {
-        const { text } = calculatorNonEligible.filter((q) => q.id == id)[0];
-        nonEligibleItems.push(text);
-      }
-    }
-    //change logic here
-    if (nonEligibleItems.length === 0) {
-      setResult("ResultYes");
-    } else if (isCompleted === true && userResponse[4] === false) {
-      setResult("Noneligible");
-    } else {
-      setNonEligible(nonEligibleItems);
-      setResult("CantDetermine");
-    }
-  };
+  // const handleCalculation = () => {
+  //   let nonEligibleItems = [];
+  //   for (const id in userResponse) {
+  //     let value = userResponse[id];
+  //     if (value === false) {
+  //       const { text } = calculatorNonEligible.filter((q) => q.id == id)[0];
+  //       nonEligibleItems.push(text);
+  //     }
+  //   }
+  // };
+  const result = calcContext.eligible;
 
   return (
     <div className="calc-grid">
-      {result === "Noneligible" && <ResultNo noneligible={nonEligible} />}
-      {result === "ResultYes" && <ResultYes />}
-      {result === "CantDetermine" && <ResultUnsure noneligible={nonEligible} />}
+      {result === "Noneligible" && (
+        <ResultNo branchName={calcContext.currBranch} />
+      )}
+      {result === "Eligible" && <ResultYes />}
+      {result === "CantDetermine" && (
+        <ResultUnsure branchName={calcContext.currBranch} />
+      )}
     </div>
   );
 };

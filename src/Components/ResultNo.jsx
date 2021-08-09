@@ -1,13 +1,16 @@
 import React from "react";
+import { CalculatorService } from "./calculator/CalculatorService";
 
-const ResultNo = () => {
+const ResultNo = ({ branchName }) => {
+  let text = "";
+
+  if (branchName === "mj") {
+    text = CalculatorService.ResultNo.mj;
+  }
+
   return (
     <>
-      <p className="calc-col title result">
-        As of now, it seems you may NOT be eligible to vacate your marijuana
-        misdemeanor conviction because you have not completed the terms of your
-        offense.
-      </p>
+      <p className="calc-col title result">{text}</p>
       <p className="calc-col disclaimer result-no">
         The information provided by the Conviction Vacation Project is not
         intended to replace legal advice and does not in any way constitute an

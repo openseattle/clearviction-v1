@@ -23,20 +23,19 @@ export class CalcProvider extends Component {
       },
     },
     userResponse: [],
-    completed: false,
     result: "",
-    setQuestions: () => {},
+    eligible: "CantDetermine",
+    setEligibility: () => {},
     setBranch: () => {},
-    setCompleted: () => {},
     setUserResponse: () => {},
   };
 
   setBranch = (branch) => {
     this.setState({ currBranch: branch });
-  };
-
-  setCompleted = (isCompleted) => {
-    this.setState({ completed: isCompleted });
+    if (branch === "head")
+      this.setState({ currBranchQuestions: headQuestions });
+    else if (branch === "mj")
+      this.setState({ currBranchQuestions: mjQuestions });
   };
 
   setUserResponse = (question, answer) => {
@@ -45,11 +44,8 @@ export class CalcProvider extends Component {
     }));
   };
 
-  setQuestions = (branch) => {
-    if (branch === "head")
-      this.setState({ currBranchQuestions: headQuestions });
-    else if (branch === "mj")
-      this.setState({ currBranchQuestions: mjQuestions });
+  setEligibility = (response) => {
+    this.setState({ eligible: response });
   };
 
   resetContext = () => {
@@ -57,7 +53,7 @@ export class CalcProvider extends Component {
       ...state,
       currBranch: "head",
       currBranchQuestions: headQuestions,
-      completed: false,
+      eligible: "CantDetermine",
     }));
   };
 
@@ -65,9 +61,8 @@ export class CalcProvider extends Component {
     const value = {
       ...this.state,
       setBranch: this.setBranch,
-      setQuestions: this.setQuestions,
+      setEligibility: this.setEligibility,
       setUserResponse: this.setUserResponse,
-      setCompleted: this.setCompleted,
       resetContext: this.resetContext,
     };
     return (
