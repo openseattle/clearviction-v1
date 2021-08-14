@@ -19,7 +19,6 @@ const CalculatorQuestionCont = () => {
         <Route exact path={`${path}/results`}>
           <CalculatorResults
             userResponse={calcContext.userResponse}
-            isCompleted={calcContext.completed}
             branch={calcContext.branch}
           />
         </Route>

@@ -11,7 +11,7 @@ export class CalcProvider extends Component {
     Default eligible is CantDetermine to handle some edge cases
     */
   state = {
-    currBranch: "",
+    currBranch: localStorage.getItem("currBranch"),
     currBranchQuestions: [],
     branchTheme: {
       head: {
@@ -37,6 +37,7 @@ export class CalcProvider extends Component {
   };
 
   setBranch = (branch) => {
+    localStorage.setItem("currBranch", branch);
     this.setState({ currBranch: branch });
     if (branch === "head")
       this.setState({ currBranchQuestions: headQuestions });

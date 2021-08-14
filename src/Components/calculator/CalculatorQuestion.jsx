@@ -6,6 +6,9 @@ import { CalculatorService } from "./CalculatorService";
 import "../../CSS/Calculator.css";
 import CalcContext from "../../calcContext";
 
+import mjQuestions from "../../data/calculatorMJQuestions.json";
+import headQuestions from "../../data/calculatorHead.json";
+
 /** A component to display an individual question from the question list */
 const CalculatorQuestion = () => {
   const calcContext = useContext(CalcContext);
@@ -14,9 +17,7 @@ const CalculatorQuestion = () => {
   const history = useHistory();
   //css
   const theme = calcContext.branchTheme[calcContext.currBranch];
-  let progressBarWidth = Math.floor(
-    (number / calcContext.currBranchQuestions.length) * 100
-  );
+  let progressBarWidth;
 
   useEffect(() => {}, []);
 
@@ -40,7 +41,20 @@ const CalculatorQuestion = () => {
   };
 
   const foundQuestion = () => {
-    return calcContext.currBranchQuestions.filter((q) => q.id === number)[0];
+    //moved here so data persists on refresh
+    let branchQuestions = [];
+    switch (calcContext.currBranch) {
+      case "head":
+        branchQuestions = headQuestions;
+        break;
+      case "mj":
+        branchQuestions = mjQuestions;
+        progressBarWidth = Math.floor((number / branchQuestions.length) * 100);
+        break;
+      default:
+        history.push("/404");
+    }
+    return branchQuestions.filter((q) => q.id == number)[0];
   };
 
   const deliverQuestion = () => {
@@ -81,7 +95,7 @@ const CalculatorQuestion = () => {
         </>
       );
     } else {
-      history.push("/404");
+      // history.push("/404");
     }
   };
 
