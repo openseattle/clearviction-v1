@@ -8,18 +8,24 @@ export default CalcContext;
 
 export class CalcProvider extends Component {
   /*
-    Default isCompleted is false to handle some edge cases
+    Default eligible is CantDetermine to handle some edge cases
     */
   state = {
     currBranch: "",
     currBranchQuestions: [],
     branchTheme: {
       head: {
-        visibility: "hidden",
+        progressBar: {
+          visibility: "hidden",
+        },
+        buttons: {
+          backgroundColor: "#419D77",
+        },
       },
       mj: {
-        visibility: "visible",
-        width: 0,
+        progressBar: {
+          visibility: "visible",
+        },
       },
     },
     userResponse: [],

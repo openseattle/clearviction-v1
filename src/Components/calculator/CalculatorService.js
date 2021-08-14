@@ -1,6 +1,6 @@
 export const CalculatorService = {
   handleHead(a, qNum, cb) {
-    if (a === "Possession of Marijuana") {
+    if (a === "Possession of Marijuana Misdemeanor") {
       cb("mj");
       return `mj/1`;
     } else if (a === "Prostitution Misdemeanor") {
@@ -13,6 +13,7 @@ export const CalculatorService = {
       return `results`;
     } else return `head/${parseInt(qNum) + 1}`;
   },
+
   handleMJ(a, qNum, cb) {
     if (qNum === "4" && a === "No") {
       cb("Noneligible");
@@ -24,6 +25,7 @@ export const CalculatorService = {
       return "results";
     } else return `mj/${parseInt(qNum) + 1}`;
   },
+
   ResultUnsure: {
     mj: () => {
       return (
@@ -67,6 +69,7 @@ export const CalculatorService = {
     },
     head: "It looks like your conviction may not be a misdemeanor.",
   },
+
   ResultNo: {
     mj: "As of now, it seems you may NOT be eligible to vacate your marijuana misdemeanor conviction because you have not completed the terms of your offense.",
   },

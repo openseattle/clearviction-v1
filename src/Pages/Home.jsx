@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../Assets/CVP.png";
 import "../CSS/Home.css";
-import { useLocation, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const Home = () => {
   const history = useHistory();

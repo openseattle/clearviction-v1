@@ -1,12 +1,11 @@
-import { LocalConvenienceStoreOutlined } from "@material-ui/icons";
 import React from "react";
-import { useHistory } from "react-router-dom";
+// import { useHistory } from "react-router-dom";
 import { CalculatorService } from "./calculator/CalculatorService";
 import "../CSS/Calculator.css";
 
 const ResultUnsure = ({ branchName }) => {
-  const history = useHistory();
-  const onClick = () => history.push("/");
+  // const history = useHistory();
+  // const onClick = () => history.push("/");
   let text;
   if (branchName === "mj") {
     text = CalculatorService.ResultUnsure.mj();
@@ -21,7 +20,7 @@ const ResultUnsure = ({ branchName }) => {
         Our calculator can’t determine your eligibility
       </p>
       <div className="calc-col results">
-        <p>{text}</p>
+        <p className="calc-col branch results">{text}</p>
         <p>
           Our calculator is unable to assist you with your conviction at this
           point. We would like to hear your input and learn about your

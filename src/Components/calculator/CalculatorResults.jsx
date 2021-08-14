@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import ResultNo from "../ResultNo";
 import ResultYes from "../ResultYes";
 import ResultUnsure from "../ResultUnsure";

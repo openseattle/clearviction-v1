@@ -9,34 +9,20 @@ import CalcContext from "../../calcContext";
 /** A component to display an individual question from the question list */
 const CalculatorQuestion = () => {
   const calcContext = useContext(CalcContext);
-
   let { number } = useParams();
   const [showQuestions, setShowQuestions] = useState(true);
   const history = useHistory();
+  //css
+  const theme = calcContext.branchTheme[calcContext.currBranch];
+  let progressBarWidth = Math.floor(
+    (number / calcContext.currBranchQuestions.length) * 100
+  );
 
-  useEffect(() => {
-    //set theme by branch. Currenly only handles progress bar visability and size
-    const progressBar = document.getElementById("progressBar");
-    const progressBarWrapper = document.getElementById("progressBarWrapper");
-    progressBarWrapper.style.visibility =
-      calcContext.branchTheme[`${calcContext.currBranch}`].visibility;
-    progressBar.style.width =
-      calcContext.branchTheme[`${calcContext.currBranch}`].width;
-    //renders width of progress bar if vissable updates if user uses back button
-    if (
-      calcContext.branchTheme[`${calcContext.currBranch}`].visibility ===
-      "visible"
-    ) {
-      const MAX_QUESTIONS = calcContext.currBranchQuestions.length;
-      progressBar.style.width = `${Math.floor(
-        ((number - 1) / MAX_QUESTIONS) * 100
-      )}%`;
-    }
-    // if path changes --> switch the data state to the json matching that branch --> 'calculator/branchName'
-  }, [calcContext, number]);
+  useEffect(() => {}, []);
 
   const handleClick = (a) => {
     let slug = `${calcContext.currBranch}/${parseInt(number) + 1}`;
+
     // if head branch
     if (calcContext.currBranch === "head") {
       slug = CalculatorService.handleHead(a, number, calcContext.setBranch);
@@ -49,11 +35,12 @@ const CalculatorQuestion = () => {
         setShowQuestions("false");
       }
     }
+
     history.push(`/calculator/${slug}`);
   };
 
   const foundQuestion = () => {
-    return calcContext.currBranchQuestions.filter((q) => q.id == number)[0];
+    return calcContext.currBranchQuestions.filter((q) => q.id === number)[0];
   };
 
   const deliverQuestion = () => {
@@ -61,8 +48,16 @@ const CalculatorQuestion = () => {
       const { text, subtext, tooltip, options } = foundQuestion();
       return (
         <>
-          <div className="calc-col-progress-bar" id="progressBarWrapper">
-            <div className="calc-progress-bar" id="progressBar" />
+          <div
+            className="calc progress-bar-wrapper"
+            id="progressBarWrapper"
+            style={{ visibility: theme.progressBar.visibility }}
+          >
+            <div
+              className="calc progress-bar"
+              id="progressBar"
+              style={{ width: `${progressBarWidth}%` }}
+            />
           </div>
           <p className="calc-col title question">{text}</p>
           {subtext && <p className="calc-subtext">{subtext}</p>}
@@ -74,6 +69,11 @@ const CalculatorQuestion = () => {
                 text={a}
                 className="calc-button"
                 onClick={() => handleClick(a)}
+                style={
+                  a === "All other cases"
+                    ? { backgroundColor: theme.buttons.backgroundColor }
+                    : { backgroundColor: "#4e6c99" }
+                }
               />
             ))}
           </div>

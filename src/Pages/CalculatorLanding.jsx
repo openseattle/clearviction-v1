@@ -37,14 +37,18 @@ const CalculatorLanding = () => {
       <h1 className="calc-col title"> Misdemeanor Calculator</h1>
 
       <div className="calc-col body">
-        <p>
+        <p className="calc-col landing-text">
           You can use our eligibility calculator to determine whether you are
           eligible to vacate your misdemeanor conviction.
         </p>
       </div>
 
       {/* When a user clicks this they will begin the questionaire */}
-      <Button className="calc-button" text="Start" onClick={onStartClick} />
+      <Button
+        className="calc-button landing"
+        text="Start"
+        onClick={onStartClick}
+      />
 
       {/* When a user clicks this they will be sent to Ineligible*/}
       <div className="calc-col footer">
