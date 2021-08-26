@@ -1,10 +1,11 @@
-[
+import {MAIN_MISDEMEANOR_COPY} from "../Constants"
+
+export const headQuestions = [
   {
     "id": "1",
     "text": "Was this offense a misdemeanor?",
     "tooltip": "",
-    "options": ["Yes", "No"],
-    "next_card": ["2"]
+    "options": ["Yes", "No"]
   },
   {
     "id": "2",
@@ -14,8 +15,7 @@
       "Possession of Marijuana Misdemeanor",
       "Prostitution Misdemeanor",
       "Violation of a Fishing Regulation",
-      "All other cases"
-    ],
-    "next_card": ["redirect"]
+      MAIN_MISDEMEANOR_COPY
+    ]
   }
 ]

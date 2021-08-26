@@ -9,9 +9,10 @@ const ResultUnsure = ({ branchName }) => {
   let text;
   if (branchName === "mj") {
     text = CalculatorService.ResultUnsure.mj();
-  }
-  if (branchName === "head") {
+  } else if (branchName === "head") {
     text = CalculatorService.ResultUnsure.head;
+  } else if (branchName === "main") {
+    text = CalculatorService.ResultUnsure.main();
   }
 
   return (

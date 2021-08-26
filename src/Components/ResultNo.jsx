@@ -1,11 +1,15 @@
 import React from "react";
 import { CalculatorService } from "./calculator/CalculatorService";
 
-const ResultNo = ({ branchName }) => {
+const ResultNo = ({ variation }) => {
   let text = "";
 
-  if (branchName === "mj") {
+  if (variation === "mj") {
     text = CalculatorService.ResultNo.mj;
+  } else if (variation === "main-violent") {
+    text = CalculatorService.ResultNo.mainViolent;
+  } else if (variation === "main-dui") {
+    text = CalculatorService.ResultNo.mainDui;
   }
 
   return (

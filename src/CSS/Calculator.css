@@ -14,6 +14,7 @@
 .calc-subtext {
   width: 500px;
 }
+
 .calc-button {
   background-color: #4e6c99;
   color: #fff;
@@ -79,6 +80,7 @@
 }
 
 .calc-col.answers {
+  margin-top: 1rem;
   flex-direction: row;
   justify-content: space-between;
 }

@@ -1,3 +1,5 @@
+import {MAIN_MISDEMEANOR_COPY} from "../../Constants";
+
 export const CalculatorService = {
   handleHead(a, qNum, cb) {
     if (a === "Possession of Marijuana Misdemeanor") {
@@ -7,8 +9,9 @@ export const CalculatorService = {
       return `?`;
     } else if (a === "Violation of a Fishing Regulation") {
       return `?`;
-    } else if (a === "All other cases") {
-      return `?`;
+    } else if (a === MAIN_MISDEMEANOR_COPY) {
+      cb("main");
+      return `main/1`;
     } else if (a === "No") {
       return `results`;
     } else return `head/${parseInt(qNum) + 1}`;
@@ -24,6 +27,16 @@ export const CalculatorService = {
       cb("Eligible");
       return "results";
     } else return `mj/${parseInt(qNum) + 1}`;
+  },
+
+  handleMain(a, qNum, cb) {
+    if (qNum == 2 && a === "Yes") {
+      cb("main-violent");
+      return "results";
+    } else if (qNum == 3 && a === "Yes") {
+      cb("main-dui");
+      return "results";
+    } else return `main/${parseInt(qNum) + 1}`;
   },
 
   ResultUnsure: {
@@ -68,9 +81,12 @@ export const CalculatorService = {
       );
     },
     head: "It looks like your conviction may not be a misdemeanor.",
+    main: "TODO:"
   },
 
   ResultNo: {
     mj: "As of now, it seems you may NOT be eligible to vacate your marijuana misdemeanor conviction because you have not completed the terms of your offense.",
+    mainViolent: "As of now, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because your conviction is classified as a violent offense as defined in RCW 9.94A.030.",
+    mainDui: "As of now, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because your offense was on of the following: RCW 46.61.502 (driving while under the influence), RCW 46.61.504 (actual physical control while under the influence), or RCW 9.91.020 (operating a railroad, etc. while intoxicated)."
   },
 };

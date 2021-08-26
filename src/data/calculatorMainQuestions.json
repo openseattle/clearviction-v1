@@ -1,0 +1,38 @@
+[
+    {
+      "id": "1",
+      "text": "We will now ask a few questions about what your conviction was for, to assess your eligibility to vacate the conviction.",
+      "options": ["Continue"]
+    },
+    {
+      "id": "2",
+      "text": "Was your conviction a violent offense as defined in RCW 9.94A.030 or an attempt to commit a violent offense?",
+      "links": [
+        {
+          "text": "RCW 9.94A.030",
+          "href": "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.94A.030"
+        }
+      ],
+      "options": ["Yes", "No"]
+    },
+    {
+      "id": "3",
+      "text": "Was the offense was a violation of any of the following: RCW 46.61.502 (driving while under the influence), RCW 46.61.504 (actual physical control while under the influence), or RCW 9.91.020 (operating a railroad, etc. while intoxicated)?",
+      "links": [
+        {
+          "text": "RCW 46.61.502",
+          "href": "https://www.figma.com/exit?url=https%3A%2F%2Fapp.leg.wa.gov%2Frcw%2Fdefault.aspx%3Fcite%3D46.61.502&fuid=1012596856118198583"
+        },
+        {
+          "text": "RCW 46.61.504",
+          "href": "https://www.figma.com/exit?url=https%3A%2F%2Fapp.leg.wa.gov%2Frcw%2Fdefault.aspx%3Fcite%3D46.61.504&fuid=1012596856118198583"
+        },
+        {
+          "text": "RCW 9.91.020",
+          "href": "https://www.figma.com/exit?url=https%3A%2F%2Fapp.leg.wa.gov%2Frcw%2Fdefault.aspx%3Fcite%3D9.91.020&fuid=1012596856118198583"
+        }
+      ],
+      "options": ["Yes", "No"]
+    }
+  ]
+  
