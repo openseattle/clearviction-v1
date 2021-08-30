@@ -1,1 +1,0 @@
-export const MAIN_MISDEMEANOR_COPY = "My conviction doesn't fall into any of the special cases (most convictions fall in this category)"

@@ -32,17 +32,11 @@ const CalculatorResults = () => {
   return (
     <div className="calc-grid">
       {result === "Noneligible" && (
-        <ResultNo variation="mj" />
+        <ResultNo branchName={calcContext.currBranch} />
       )}
       {result === "Eligible" && <ResultYes />}
       {result === "CantDetermine" && (
         <ResultUnsure branchName={calcContext.currBranch} />
-      )}
-      {result === "main-violent" && (
-        <ResultNo variation={result} />
-      )}
-      {result === "main-dui" && (
-        <ResultNo variation={result} />
       )}
     </div>
   );

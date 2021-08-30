@@ -1,11 +1,10 @@
-import {MAIN_MISDEMEANOR_COPY} from "../Constants"
-
-export const headQuestions = [
+[
   {
     "id": "1",
     "text": "Was this offense a misdemeanor?",
     "tooltip": "",
-    "options": ["Yes", "No"]
+    "options": ["Yes", "No"],
+    "next_card": ["2"]
   },
   {
     "id": "2",
@@ -15,7 +14,8 @@ export const headQuestions = [
       "Possession of Marijuana Misdemeanor",
       "Prostitution Misdemeanor",
       "Violation of a Fishing Regulation",
-      MAIN_MISDEMEANOR_COPY
-    ]
+      "All other cases"
+    ],
+    "next_card": ["redirect"]
   }
 ]

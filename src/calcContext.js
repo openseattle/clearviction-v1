@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import {headQuestions} from "./data/calculatorHead";
+import headQuestions from "./data/calculatorHead.json";
 import mjQuestions from "./data/calculatorMJQuestions.json";
-import mainQuestions from "./data/calculatorMainQuestions.json";
 
 const CalcContext = React.createContext();
 
@@ -28,11 +27,6 @@ export class CalcProvider extends Component {
           visibility: "visible",
         },
       },
-      main: {
-        progressBar: {
-          visibility: "visible",
-        },
-      },
     },
     userResponse: [],
     result: "",
@@ -49,8 +43,6 @@ export class CalcProvider extends Component {
       this.setState({ currBranchQuestions: headQuestions });
     else if (branch === "mj")
       this.setState({ currBranchQuestions: mjQuestions });
-    else if (branch === "main")
-      this.setState({ currBranchQuestions: mainQuestions });
   };
 
   setUserResponse = (question, answer) => {

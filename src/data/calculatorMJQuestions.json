@@ -3,24 +3,28 @@
     "id": "1",
     "text": "Did this offense involve possession of marijuana?",
     "tooltip": "",
-    "options": ["Yes", "No"]
+    "options": ["Yes", "No"],
+    "next_card": ["4"]
   },
   {
     "id": "2",
     "text": "Were you 21 years or older of age at the time of offense?",
     "tooltip": "",
-    "options": ["Yes", "No"]
+    "options": ["Yes", "No"],
+    "next_card": ["5"]
   },
   {
     "id": "3",
     "text": "Was your conviction for less than 40 grams of marijuana?",
     "tooltip": "",
-    "options": ["Yes", "No"]
+    "options": ["Yes", "No"],
+    "next_card": ["6"]
   },
   {
     "id": "4",
     "text": "Have you completed the terms of the sentence for your offense?",
     "tooltip": "",
-    "options": ["Yes", "No"]
+    "options": ["Yes", "No"],
+    "next_card": ["results"]
   }
 ]

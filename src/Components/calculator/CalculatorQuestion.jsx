@@ -7,9 +7,7 @@ import "../../CSS/Calculator.css";
 import CalcContext from "../../calcContext";
 
 import mjQuestions from "../../data/calculatorMJQuestions.json";
-import mainQuestions from "../../data/calculatorMainQuestions.json";
-import {headQuestions} from "../../data/calculatorHead";
-import {MAIN_MISDEMEANOR_COPY} from "../../Constants";
+import headQuestions from "../../data/calculatorHead.json";
 
 /** A component to display an individual question from the question list */
 const CalculatorQuestion = () => {
@@ -39,14 +37,6 @@ const CalculatorQuestion = () => {
       }
     }
 
-    // if main branch
-    else if (calcContext.currBranch === "main") {
-      slug = CalculatorService.handleMain(a, number, calcContext.setEligibility);
-      if (slug === "results") {
-        setShowQuestions("false");
-      }
-    }
-
     history.push(`/calculator/${slug}`);
   };
 
@@ -61,10 +51,6 @@ const CalculatorQuestion = () => {
         branchQuestions = mjQuestions;
         progressBarWidth = Math.floor((number / branchQuestions.length) * 100);
         break;
-      case "main":
-        branchQuestions = mainQuestions;
-        progressBarWidth = Math.floor((number / branchQuestions.length) * 100);
-        break;
       default:
         history.push("/404");
     }
@@ -73,7 +59,7 @@ const CalculatorQuestion = () => {
 
   const deliverQuestion = () => {
     if (foundQuestion()) {
-      const { text, subtext, tooltip, options, links } = foundQuestion();
+      const { text, subtext, tooltip, options } = foundQuestion();
       return (
         <>
           <div
@@ -89,9 +75,6 @@ const CalculatorQuestion = () => {
           </div>
           <p className="calc-col title question">{text}</p>
           {subtext && <p className="calc-subtext">{subtext}</p>}
-          {links?.map(link =>
-            <a key={link.text} href={link.href} target="_blank">{link.text}</a>
-          )}
           {tooltip}
           <div className="calc-col answers">
             {options.map((a) => (
@@ -101,8 +84,8 @@ const CalculatorQuestion = () => {
                 className="calc-button"
                 onClick={() => handleClick(a)}
                 style={
-                  a === MAIN_MISDEMEANOR_COPY
-                    ? { backgroundColor: theme.buttons.backgroundColor, height: "fit-content" }
+                  a === "All other cases"
+                    ? { backgroundColor: theme.buttons.backgroundColor }
                     : { backgroundColor: "#4e6c99" }
                 }
               />
