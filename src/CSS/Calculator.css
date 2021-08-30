@@ -1,3 +1,45 @@
+.calculator {
+  margin: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.calculator-header {
+  font-weight: bold;
+  text-align: left;
+}
+
+.calculator-body {
+  font-family: "Lora", serif;
+  margin-top: 1rem;
+  text-align: left;
+}
+
+.calculator-button {
+  background-color: #4e6c99;
+  color: #fff;
+  border: 0;
+  box-shadow: none;
+  border-radius: 6px;
+  width: 16.5rem;
+  min-height: 2rem;
+  font-weight: bold;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  padding: 0.75rem;
+}
+
+/* TODO: add margin-top to buttons that are not the 1st one  */
+
+.calculator-footer-link {
+  margin-top: 1rem;
+  font-family: "Lora", serif;
+}
+
+.calculator-disclaimer {
+  font-family: "Lora", serif;
+}
+
 .calc-grid {
   display: flex;
   flex-direction: column;
