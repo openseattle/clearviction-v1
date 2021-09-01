@@ -6,19 +6,21 @@
  *   buttons: [
  *     {
  *       text,
- *       href (can be a relative or absolute path)
+ *       href (can be a relative or absolute path),
  *     }
  *   ],
  *   footerLink: {
  *     text,
  *     href (can be a relative or absolute path)
  *   },
+ *   tooltip,
  *   disclaimer
  * }
  */
 
 const CALC_PREFIX = "/calculator"
 const DISCLAIMER = "The information provided by the Conviction Vacation Project is not intended to replace legal advice and does not in any way constitute an attorney-client relationship. If you need legal advice or assistance, we strongly recommend that you reach out to a licensed professional."
+const MODAL_TEXT = "If you don’t know how to answer this question, you may be able to locate your records here: https://www.wsp.wa.gov/crime/criminal-history/";
 
 export default {
     landing0: {
@@ -30,10 +32,7 @@ export default {
                 href: CALC_PREFIX + "/landing1"
             }
         ],
-        footerLink: {
-            text: "My conviction is not a misdemeanor or I’m not sure",
-            href: CALC_PREFIX + "/ineligible0"
-        }
+        tooltip: "My conviction is not a misdemeanor or I’m not sure.",
     },
     ineligible0: {
         header: "Our calculator can’t determine your eligibility",
@@ -54,7 +53,8 @@ export default {
                 text: "No",
                 href: CALC_PREFIX + "/ineligible0"
             }
-        ]
+        ],
+        tooltip: "I'm not sure"
     },
     landing2: {
         header: "Does your conviction fall into any of these special cases?",
