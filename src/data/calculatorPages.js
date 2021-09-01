@@ -7,6 +7,7 @@
  *     {
  *       text,
  *       href (can be a relative or absolute path),
+ *       color (defaults to blue)
  *     }
  *   ],
  *   footerLink: {
@@ -20,7 +21,6 @@
 
 const CALC_PREFIX = "/calculator"
 const DISCLAIMER = "The information provided by the Conviction Vacation Project is not intended to replace legal advice and does not in any way constitute an attorney-client relationship. If you need legal advice or assistance, we strongly recommend that you reach out to a licensed professional."
-const MODAL_TEXT = "If you don’t know how to answer this question, you may be able to locate your records here: https://www.wsp.wa.gov/crime/criminal-history/";
 
 export default {
     landing0: {
@@ -73,8 +73,10 @@ export default {
             },
             {
                 text: "My conviction doesn’t fall into any of the special cases (most convictions fall in this category)",
-                href: CALC_PREFIX + "/main0"
+                href: CALC_PREFIX + "/main0",
+                color: "green"
             }
-        ]
+        ],
+        tooltip: "I'm not sure"
     }
 }

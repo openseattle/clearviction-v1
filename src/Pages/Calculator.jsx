@@ -7,6 +7,11 @@ import Modal from 'react-modal';
 
 // TODO: add progress bar
 
+const BUTTON_COLORS = {
+    blue: "#4e6c99",
+    green: "#419D77"
+};
+
 const Calculator = () => {
     const { pathname } = useLocation();
     const indexOfPageId = pathname.split("/").length - 1;
@@ -39,8 +44,8 @@ const Calculator = () => {
         </Modal>}
         {header && <h4 className="calculator-header">{header}</h4>}
         {body && <p className="calculator-body">{body}</p>}
-        {buttons?.map(({ text, href }) => {
-            return <a className="calculator-button" key={text} href={href}>{text}</a>
+        {buttons?.map(({ text, href, color }) => {
+            return <a className="calculator-button" key={text} href={href} style={{backgroundColor: BUTTON_COLORS[color || "blue"]}}>{text}</a>
         })}
         {tooltip && <a className="calculator-tooltip-link" onClick={openTooltip}>{tooltip}</a>}
         {footerLink && <a className="calculator-footer-link" target="_blank" href={footerLink.href}>{footerLink.text}</a>}
