@@ -6,13 +6,15 @@
  *   buttons: [
  *     {
  *       text,
- *       href (can be a relative or absolute path)
+ *       href (can be a relative or absolute path),
+ *       color (defaults to blue)
  *     }
  *   ],
  *   footerLink: {
  *     text,
  *     href (can be a relative or absolute path)
  *   },
+ *   tooltip,
  *   disclaimer
  * }
  */
@@ -30,10 +32,7 @@ export default {
                 href: CALC_PREFIX + "/landing1"
             }
         ],
-        footerLink: {
-            text: "My conviction is not a misdemeanor or I’m not sure",
-            href: CALC_PREFIX + "/ineligible0"
-        }
+        tooltip: "My conviction is not a misdemeanor or I’m not sure.",
     },
     ineligible0: {
         header: "Our calculator can’t determine your eligibility",
@@ -54,7 +53,8 @@ export default {
                 text: "No",
                 href: CALC_PREFIX + "/ineligible0"
             }
-        ]
+        ],
+        tooltip: "I'm not sure"
     },
     landing2: {
         header: "Does your conviction fall into any of these special cases?",
@@ -73,8 +73,10 @@ export default {
             },
             {
                 text: "My conviction doesn’t fall into any of the special cases (most convictions fall in this category)",
-                href: CALC_PREFIX + "/main0"
+                href: CALC_PREFIX + "/main0",
+                color: "green"
             }
-        ]
+        ],
+        tooltip: "I'm not sure"
     }
 }
