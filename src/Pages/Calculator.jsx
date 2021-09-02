@@ -32,8 +32,8 @@ const Calculator = () => {
         setShowTooltip(false);
     }
 
-    return <div className="calculator">
-        {tooltip && <Modal className="calculator-tooltip-modal" isOpen={showTooltip} onRequestClose={closeTooltip}>
+    const renderTooltipModal = () =>
+        <Modal className="calculator-tooltip-modal" isOpen={showTooltip} onRequestClose={closeTooltip}>
             <p>
                 If you don't know how to answer this question, you may be able to
                 locate your records here:{" "}
@@ -41,12 +41,27 @@ const Calculator = () => {
                     https://www.wsp.wa.gov/crime/criminal-history
                 </a>
             </p>
-        </Modal>}
+        </Modal>
+
+    const renderButtons = buttons =>
+        buttons.map(({ text, href, color }) => {
+            return <a className="calculator-button" key={text} href={href} style={{ backgroundColor: BUTTON_COLORS[color || "blue"] }}>{text}</a>
+        })
+
+    const renderBody = ({ type, text, href, className }) => {
+        switch (type) {
+            case "paragraph":
+                return <p className={className}>{text}</p>
+            case "link":
+                return <a className={className} target="_blank" href={href}>{text}</a>
+        }
+    }
+
+    return <div className="calculator">
+        {tooltip && renderTooltipModal()}
         {header && <h4 className="calculator-header">{header}</h4>}
-        {body && <p className="calculator-body">{body}</p>}
-        {buttons?.map(({ text, href, color }) => {
-            return <a className="calculator-button" key={text} href={href} style={{backgroundColor: BUTTON_COLORS[color || "blue"]}}>{text}</a>
-        })}
+        {body && <div className="calculator-body">{body.map(renderBody)}</div>}
+        {buttons && renderButtons(buttons)}
         {tooltip && <a className="calculator-tooltip-link" onClick={openTooltip}>{tooltip}</a>}
         {footerLink && <a className="calculator-footer-link" target="_blank" href={footerLink.href}>{footerLink.text}</a>}
         {disclaimer && <p className="calculator-disclaimer">{disclaimer}</p>}
