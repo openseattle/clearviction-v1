@@ -1,4 +1,11 @@
 /**
+ * This file contains all page content for the calculator. Routes are handled dynamically using the top-level keys of 
+ * the object exported from this file. For example, the values within the key "landing0" are populated by 
+ * Calculator.jsx at the route: /calculator/landing0. This route can then be linked to from other pages.
+ * 
+ * For custom styling, pass a className into the body[] object you want to style and then make the necessary changes 
+ * in Calculator.css
+ * 
  * SCHEMA (all fields are optional):
  * [page ID]: {
  *   header,
@@ -196,4 +203,12 @@ export default {
         header: "As of now, it seems that you may NOT be eligible to vacate your marijuana misdemeanor conviction because you have not completed the terms of your offense.",
         disclaimer: DISCLAIMER
     },
+    main0: {
+        header: "We will now ask a few questions about what your conviction was for, to assess your eligibility to vacate the conviction.",
+        buttons: [
+            {
+
+            }
+        ]
+    }
 }
