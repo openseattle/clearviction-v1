@@ -32,7 +32,7 @@ const Calculator = () => {
         setShowTooltip(false);
     }
 
-    const renderTooltipModal = () =>
+    const tooltipModal =
         <Modal className="calculator-tooltip-modal" isOpen={showTooltip} onRequestClose={closeTooltip}>
             <p>
                 If you don't know how to answer this question, you may be able to
@@ -58,11 +58,11 @@ const Calculator = () => {
     }
 
     return <div className="calculator">
-        {tooltip && renderTooltipModal()}
+        {tooltip && tooltipModal}
         {header && <h4 className="calculator-header">{header}</h4>}
         {body && <div className="calculator-body">{body.map(renderBody)}</div>}
         {buttons && renderButtons(buttons)}
-        {tooltip && <a className="calculator-tooltip-link" onClick={openTooltip}>{tooltip}</a>}
+        {tooltip && <a className="calculator-tooltip-link" onClick={openTooltip}>I'm not sure</a>}
         {footerLink && <a className="calculator-footer-link" target="_blank" href={footerLink.href}>{footerLink.text}</a>}
         {disclaimer && <p className="calculator-disclaimer">{disclaimer}</p>}
     </div>

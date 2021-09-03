@@ -63,6 +63,11 @@
   font-family: "Lora", serif;
 }
 
+.calculator-numbered-item {
+  text-indent: -1em;
+  margin-left: 1em;
+}
+
 .calc-grid {
   display: flex;
   flex-direction: column;

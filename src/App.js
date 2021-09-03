@@ -41,7 +41,7 @@ function App() {
             <Calculator />
           </Route>
           <Route exact path="/calculator">
-            <Redirect to="/calculator/landing0" />
+            <Redirect to="/calculator/landing-0" />
           </Route>
         </CalcProvider>
       </Switch>
