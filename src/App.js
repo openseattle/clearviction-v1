@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 //component imports
 import NotFoundPage from "./Components/NotFoundPage";
 import About from "./Pages/About";
@@ -10,7 +10,6 @@ import Resources from "./Pages/Resources";
 import Volunteer from "./Pages/Volunteer";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-import CalculatorLanding from "./Pages/CalculatorLanding";
 import Calculator from "./Pages/Calculator";
 import { CalcProvider } from "./calcContext";
 
@@ -38,11 +37,11 @@ function App() {
           <Home />
         </Route>
         <CalcProvider>
-          <Route exact path="/calculator">
-            <CalculatorLanding />
-          </Route>
-          <Route path="/calculator">
+          <Route path="/calculator/:pageId">
             <Calculator />
+          </Route>
+          <Route exact path="/calculator">
+            <Redirect to="/calculator/landing0" />
           </Route>
         </CalcProvider>
       </Switch>
