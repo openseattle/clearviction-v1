@@ -375,6 +375,21 @@ export default {
     ],
     tooltip: true,
   },
+  "main-circumstances-01": {
+    header:
+      "Have you been convicted of a new crime in Washington or any other state in the three years prior to the application for vacation?",
+    buttons: [
+      {
+        text: YES,
+        href: CALC_PREFIX + "/main-circumstances-02",
+      },
+      {
+        text: NO,
+        href: CALC_PREFIX + "/main-circumstances-02",
+      },
+    ],
+    tooltip: true,
+  },
   "main-circumstances-3": {
     header: "Are you currently restrained by any of the following:",
     body: [
@@ -407,6 +422,38 @@ export default {
     ],
     tooltip: true,
   },
+  "main-circumstances-02": {
+    header: "Are you currently restrained by any of the following:",
+    body: [
+      {
+        type: BODY_TYPES.PARAGRAPH,
+        text: "a domestic violence protection order",
+      },
+      {
+        type: BODY_TYPES.PARAGRAPH,
+        text: "a no-contact order",
+      },
+      {
+        type: BODY_TYPES.PARAGRAPH,
+        text: "an antiharassment order",
+      },
+      {
+        type: BODY_TYPES.PARAGRAPH,
+        text: "a civil restraining order which restrains one party from contacting the other party",
+      },
+    ],
+    buttons: [
+      {
+        text: YES,
+        href: CALC_PREFIX + "/main-circumstances-03",
+      },
+      {
+        text: NO,
+        href: CALC_PREFIX + "/main-circumstances-03",
+      },
+    ],
+    tooltip: true,
+  },
   "main-circumstances-4": {
     header:
       "Have you violated a prior restraining order in the five years preceding the application for vacation?",
@@ -421,6 +468,60 @@ export default {
       },
     ],
     tooltip: true,
+  },
+  "main-circumstances-03": {
+    header:
+      "Have you violated a prior restraining order in the five years preceding the application for vacation?",
+    buttons: [
+      {
+        text: YES,
+        href: CALC_PREFIX + "/main-circumstances-ineligible-0",
+      },
+      {
+        text: NO,
+        href: CALC_PREFIX + "/main-circumstances-ineligible-0",
+      },
+    ],
+    tooltip: true,
+  },
+  "main-circumstances-ineligible-0": {
+    header:
+      "As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because you answered YES to one or more of the following questions",
+    body: [
+      {
+        type: BODY_TYPES.PARAGRAPH,
+        text: "1. “Have you been convicted of a new crime in Washington or any other state in the three years prior to the application for vacation?”",
+      },
+      {
+        type: BODY_TYPES.PARAGRAPH,
+        text: "You might become eligible in the future if you apply to vacate a conviction three years or more after your convictions for any new crimes, and if your application meets all other eligibility criteria.",
+      },
+      {
+        type: BODY_TYPES.PARAGRAPH,
+        text: "2. “Do you have any pending criminal charges in any court in Washington or another state, or in any federal court?”",
+      },
+      {
+        type: BODY_TYPES.PARAGRAPH,
+        text: "You might become eligible in the future if all pending criminal charges in any court in Washington, another state, or a federal court are resolved and if your application meets all other eligibility criteria.",
+      },
+      {
+        type: BODY_TYPES.PARAGRAPH,
+        text: "3. “Are you currently restrained by any of the following: a domestic violence protection order a no-contact order an antiharassment order a civil restraining order which restrains one party from contacting the other party”",
+      },
+      {
+        type: BODY_TYPES.PARAGRAPH,
+        text: "You might become eligible in the future if the above orders are removed, and if your application meets all other eligibility criteria.",
+      },
+      {
+        type: BODY_TYPES.PARAGRAPH,
+        text: "4. “Have you violated a prior restraining order in the five years preceding the application for vacation?”",
+      },
+      {
+        type: BODY_TYPES.PARAGRAPH,
+        text: "",
+      },
+    ],
+    disclaimer: DISCLAIMER,
   },
   "main-terms-0": {
     header: "This final set of questions covers the terms of your offense.",
@@ -440,7 +541,7 @@ export default {
       },
       {
         text: NO,
-        href: CALC_PREFIX + "/main-terms-01",
+        href: CALC_PREFIX + "/main-ineligible-0",
       },
     ],
     tooltip: true,
@@ -455,7 +556,7 @@ export default {
       },
       {
         text: NO,
-        href: CALC_PREFIX + "/main-terms-02",
+        href: CALC_PREFIX + "/main-ineligible-1",
       },
     ],
     tooltip: true,
@@ -476,6 +577,28 @@ export default {
       {
         type: BODY_TYPES.PARAGRAPH,
         text: "Thank you for using th CVP eligibility calculator",
+      },
+    ],
+    disclaimer: DISCLAIMER,
+  },
+  "main-ineligible-0": {
+    header:
+      "As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because you have not completed the terms of the conviction for this offense. ",
+    body: [
+      {
+        type: BODY_TYPES.PARAGRAPH,
+        text: "You might be eligible when you’ve completed the terms of your conviction and three hears have passed since the completion of your sentence, including any financial obligations.",
+      },
+    ],
+    disclaimer: DISCLAIMER,
+  },
+  "main-ineligible-1": {
+    header:
+      "As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because it has been less than three years since your conviction was completed including your financial obligations.",
+    body: [
+      {
+        type: BODY_TYPES.PARAGRAPH,
+        text: "You might be eligible when 3 years have passed since completing the terms of your conviction including any financial obligations.",
       },
     ],
     disclaimer: DISCLAIMER,
