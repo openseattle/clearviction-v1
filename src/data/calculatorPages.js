@@ -33,14 +33,15 @@
  * }
  */
 
-const CALC_PREFIX = "/calculator"
-const DISCLAIMER = "The information provided by the Conviction Vacation Project is not intended to replace legal advice and does not in any way constitute an attorney-client relationship. If you need legal advice or assistance, we strongly recommend that you reach out to a licensed professional."
+const CALC_PREFIX = "/calculator";
+const disclaimer = "The information provided by the Conviction Vacation Project is not intended to replace legal advice and does not in any way constitute an attorney-client relationship. If you need legal advice or assistance, we strongly recommend that you reach out to a licensed professional.";
+const tooltip = "I'm not sure";
 const YES = "Yes";
 const NO = "No";
 const BODY_TYPES = {
     PARAGRAPH: "paragraph",
     LINK: "link"
-}
+};
 
 export default {
     "landing-0": {
@@ -84,7 +85,7 @@ export default {
                 href: CALC_PREFIX + "/landing-ineligible-0"
             }
         ],
-        tooltip: true
+        tooltip
     },
     "landing-2": {
         header: "Does your conviction fall into any of these special cases?",
@@ -107,7 +108,7 @@ export default {
                 color: "green"
             }
         ],
-        tooltip: true
+        tooltip
     },
     "marijuana-0": {
         header: "Did this offense involve possession of marijuana?",
@@ -150,7 +151,7 @@ export default {
     },
     "marijuana-ineligible-0": {
         header: "As of now, it seems that you may NOT be eligible to vacate your marijuana misdemeanor conviction because you have not completed the terms of your offense.",
-        disclaimer: DISCLAIMER
+        disclaimer
     },
     "marijuana-eligible-0": {
         header: "From your answers, it seems that you may be eligible to vacate your marijuana misdemeanor conviction!",
@@ -204,11 +205,11 @@ export default {
                 href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38"
             }
         ],
-        disclaimer: DISCLAIMER
+        disclaimer
     },
     "marijuana-ineligible-1": {
         header: "As of now, it seems that you may NOT be eligible to vacate your marijuana misdemeanor conviction because you have not completed the terms of your offense.",
-        disclaimer: DISCLAIMER
+        disclaimer
     },
     "main-0": {
         header: "We will now ask a few questions about what your conviction was for, to assess your eligibility to vacate the conviction.",
@@ -238,7 +239,7 @@ export default {
                 href: CALC_PREFIX + "/main-2"
             }
         ],
-        tooltip: true,
+        tooltip,
     },
     "main-ineligible-0": {
         header: "As of now, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because your conviction is classified as a violent offense as defined in RCW 9.94A.030.",
@@ -249,7 +250,7 @@ export default {
                 href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.94A.030"
             }
         ],
-        disclaimer: DISCLAIMER
+        disclaimer
     },
     "main-2": {
         header: "Was the offense was a violation of any of the following?",
@@ -280,7 +281,7 @@ export default {
                 href: CALC_PREFIX + "/main-3"
             }
         ],
-        tooltip: true
+        tooltip
     },
     "main-ineligible-1": {
         header: "As of now, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because your offense was on of the following:",
@@ -301,7 +302,7 @@ export default {
                 href: "https://app.leg.wa.gov/rcw/default.aspx?cite=9.91.020"
             }
         ],
-        disclaimer: DISCLAIMER
+        disclaimer
     },
     "main-3": {
         header: "Was the offense is considered a \"prior offense\" under RCW 46.61.5055?",
@@ -322,12 +323,160 @@ export default {
                 href: CALC_PREFIX + "/main-5"
             }
         ],
-        tooltip: true
+        tooltip
     },
     "main-4": {
-
+        header: "Did you have an additional alcohol or drug violation within ten years of the date of arrest for the prior offense?",
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/main-ineligible-3"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/main-7"
+            }
+        ],
+        tooltip
     },
     "main-5": {
-
+        header: "Was the offense a misdemeanor or gross misdemeanor violation, including attempt of any of the following:",
+        body: [
+            {
+                type: BODY_TYPES.LINK,
+                text: "Chapter 9.68 RCW - obscenity and pornography",
+                href: "https://app.leg.wa.gov/rcw/default.aspx?cite=9.68"
+            },
+            {
+                type: BODY_TYPES.LINK,
+                text: "Chapter 9.68A RCW - sexual exploitation of children",
+                href: "https://app.leg.wa.gov/rcw/default.aspx?cite=9.68A"
+            },
+            {
+                type: BODY_TYPES.LINK,
+                text: "Chapter 9A.44 RCW - sex offenses, except for failure to register as a sex offender under RCW 9A.44.132",
+                href: "https://app.leg.wa.gov/rcw/default.aspx?cite=9a.44"
+            }
+        ],
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/main-ineligible-2"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/main-8"
+            }
+        ],
+        tooltip
     },
-}
+    "main-ineligible-2": {
+        header: "As of now, it seems that you may NOT be eligible to vacate your  misdemeanor conviction.",
+        body: [
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "Based on RCW 9.94A.640, a misdemeanor or gross misdemeanor violation, including attempt of any of the following are not eligible for vacation:"
+            },
+            {
+                type: BODY_TYPES.LINK,
+                text: "Chapter 9.68 RCW - obscenity and pornography",
+                href: "https://app.leg.wa.gov/rcw/default.aspx?cite=9.68"
+            },
+            {
+                type: BODY_TYPES.LINK,
+                text: "Chapter 9.68A RCW - sexual exploitation of children",
+                href: "https://app.leg.wa.gov/rcw/default.aspx?cite=9.68A"
+            },
+            {
+                type: BODY_TYPES.LINK,
+                text: "Chapter 9A.44 RCW - sex offenses, except for failure to register as a sex offender under RCW 9A.44.132",
+                href: "https://app.leg.wa.gov/rcw/default.aspx?cite=9a.44"
+            }
+        ],
+        disclaimer
+    },
+    "main-ineligible-3": {
+        header: "Unfortunately, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because you have had an additional alcohol or drug violation within ten years of your prior offense.",
+        disclaimer
+    },
+    "main-7": {
+        header: "Has it been ten years or more since the date of the arrest for the prior offense?",
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/main-5"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/main-ineligible-4"
+            }
+        ],
+        tooltip
+    },
+    "main-ineligible-4": {
+        header: "As of now, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because it has been less than 10 years since your arrest for the prior offense.",
+        body: [
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "You might be eligible when 10 years have passed since your prior offense."
+            }
+        ],
+        disclaimer
+    },
+    "main-8": {
+        header: "Was the offense considered domestic violence against family / household member or spouse / partner?",
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/main-9"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "" // TODO: link to first "Questions about circumstances that affect CV eligibility" page
+            }
+        ],
+        tooltip
+    },
+    "main-9": {
+        header: "Have you had two or more domestic violence convictions each stemming from different incidents?",
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/main-ineligible-5"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/main-10"
+            }
+        ],
+        tooltip
+    },
+    "main-ineligible-5": {
+        header: "Unfortunately, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because you have had two or more domestic violence incidents.",
+        disclaimer
+    },
+    "main-10": {
+        header: "Have five or more years passed since fulfillment of all sentencing requirements for this conviction?",
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "" // TODO: link to first "Questions about circumstances that affect CV eligibility" page
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/main-ineligible-6"
+            }
+        ],
+        tooltip
+    },
+    "main-ineligible-6": {
+        header: "As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because it has been less than 5 years since the conviction for this offense.",
+        body: [
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "You might be eligible when 5 years have passed since your conviction."
+            }
+        ],
+        disclaimer
+    }
+};
