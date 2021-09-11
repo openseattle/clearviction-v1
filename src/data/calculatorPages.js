@@ -1,6 +1,6 @@
 /**
  * This file contains all page content for the calculator. Routes are handled dynamically using the top-level keys of 
- * the object exported from this file. For example, the values within the key "landing-0" are populated by 
+ * the object exported from this file. For example, the data within the key "landing-0" is populated by 
  * Calculator.jsx at the route: /calculator/landing-0. This route can then be linked to from other pages.
  * 
  * For custom styling, pass a className into the body[] object you want to style and then make the necessary changes 
@@ -14,7 +14,7 @@
  *       type, (available types: paragraph, link)
  *       text, (use for paragraphs or links)
  *       href, (use for links)
- *       className (can be used for any type)
+ *       className (can be used for any part of the schema)
  *     }
  *   ],
  *   buttons: [
