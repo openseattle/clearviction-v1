@@ -62,40 +62,25 @@ const Calculator = () => {
       );
     });
 
-  const renderBody = ({ type, text, href, className }) => {
-    switch (type) {
-      case "paragraph":
-        return <p className={className}>{text}</p>;
-      case "link":
-        return (
-          <a className={className} target="_blank" href={href}>
-            {text}
-          </a>
-        );
+    const renderBody = ({ type, text, href, className }) => {
+        const key = `${type}-${text}`;
+        switch (type) {
+            case "paragraph":
+                return <p key={key} className={className}>{text}</p>
+            case "link":
+                return <a key={key} className={className} target="_blank" href={href}>{text}</a>
+        }
     }
   };
 
-  return (
-    <div className="calculator">
-      {tooltip && tooltipModal}
-      {header && <h4 className="calculator-header">{header}</h4>}
-      {body && <div className="calculator-body">{body.map(renderBody)}</div>}
-      {buttons && renderButtons(buttons)}
-      {tooltip && (
-        <a className="calculator-tooltip-link" onClick={openTooltip}>
-          I'm not sure
-        </a>
-      )}
-      {footerLink && (
-        <a
-          className="calculator-footer-link"
-          target="_blank"
-          href={footerLink.href}
-        >
-          {footerLink.text}
-        </a>
-      )}
-      {disclaimer && <p className="calculator-disclaimer">{disclaimer}</p>}
+    return <div className="calculator">
+        {tooltip && tooltipModal}
+        {header && <h4 className="calculator-header">{header}</h4>}
+        {body && <div className="calculator-body">{body.map(renderBody)}</div>}
+        {buttons && renderButtons(buttons)}
+        {tooltip && <a className="calculator-tooltip-link" onClick={openTooltip}>{tooltip}</a>}
+        {footerLink && <a className="calculator-footer-link" target="_blank" href={footerLink.href}>{footerLink.text}</a>}
+        {disclaimer && <p className="calculator-disclaimer">{disclaimer}</p>}
     </div>
   );
 };
