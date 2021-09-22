@@ -432,7 +432,7 @@ export default {
             },
             {
                 text: NO,
-                href: CALC_PREFIX + "" // TODO: link to first "Questions about circumstances that affect CV eligibility" page
+                href: CALC_PREFIX + "/main-circumstances-0" // TODO: link to first "Questions about circumstances that affect CV eligibility" page
             }
         ],
         tooltip
