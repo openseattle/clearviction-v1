@@ -460,7 +460,7 @@ export default {
     buttons: [
       {
         text: YES,
-        href: CALC_PREFIX + "/main-circumstances-04",
+        href: CALC_PREFIX + "/main-circumstances-ineligible-0",
       },
       {
         text: NO,
@@ -518,7 +518,7 @@ export default {
       },
       {
         type: BODY_TYPES.PARAGRAPH,
-        text: "",
+        text: "You might become eligible in the future if at least five pass from your prior restraining order violation and when you apply for vacation, and if your application meets all other eligibility criteria.",
       },
     ],
     disclaimer: DISCLAIMER,
