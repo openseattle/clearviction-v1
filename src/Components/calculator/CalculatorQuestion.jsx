@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import Button from "../Button";
+import { PrimaryButton } from "../PrimaryButton";
 import { useParams, useHistory } from "react-router-dom";
 import InfoModal from "../InfoModal";
 import { CalculatorService } from "./CalculatorService";
@@ -78,7 +78,7 @@ const CalculatorQuestion = () => {
           {tooltip}
           <div className="calc-col answers">
             {options.map((a) => (
-              <Button
+              <PrimaryButton
                 key={a}
                 text={a}
                 className="calc-button"

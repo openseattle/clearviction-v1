@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import { useHistory } from "react-router-dom";
-import Button from "../Components/Button";
+import PrimaryButton from "../Components/PrimaryButton";
 import CalcContext from "../calcContext";
 import "../CSS/Calculator.css";
 
@@ -44,7 +44,7 @@ const CalculatorLanding = () => {
       </div>
 
       {/* When a user clicks this they will begin the questionaire */}
-      <Button
+      <PrimaryButton
         className="calc-button landing"
         text="Start"
         onClick={onStartClick}
