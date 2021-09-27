@@ -8,6 +8,7 @@ import Stack from '@mui/material/Stack';
 import BasicModal from "../Components/Modal";
 import { Typography } from "@mui/material";
 
+
 // TODO: add progress bar
 
 const BUTTON_COLORS = {
@@ -20,6 +21,7 @@ const Calculator = () => {
   const indexOfPageId = pathname.split("/").length - 1;
   const pageId = pathname.split("/")[indexOfPageId];
   const content = calculatorPages[pageId];
+
 
   if (!content) window.location = "/404";
 
