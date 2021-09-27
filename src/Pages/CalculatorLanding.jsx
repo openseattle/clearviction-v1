@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from "react";
 import { useHistory } from "react-router-dom";
 import PrimaryButton from "../Components/PrimaryButton";
 import CalcContext from "../calcContext";
-import "../CSS/Calculator.css";
+// import "../CSS/Calculator.css";
 
 /** The page that gets displayed when a user clicks the Calculator link in the Nav Bar
  * Will always show welcome message, description and a start button

@@ -3,11 +3,11 @@ import { PrimaryButton } from "../PrimaryButton";
 import { useParams, useHistory } from "react-router-dom";
 import InfoModal from "../InfoModal";
 import { CalculatorService } from "./CalculatorService";
-import "../../CSS/Calculator.css";
 import CalcContext from "../../calcContext";
 
 import mjQuestions from "../../data/calculatorMJQuestions.json";
 import headQuestions from "../../data/calculatorHead.json";
+import { Typography } from "@mui/material";
 
 /** A component to display an individual question from the question list */
 const CalculatorQuestion = () => {
@@ -73,15 +73,14 @@ const CalculatorQuestion = () => {
               style={{ width: `${progressBarWidth}%` }}
             />
           </div>
-          <p className="calc-col title question">{text}</p>
-          {subtext && <p className="calc-subtext">{subtext}</p>}
+          <Typography variant="title">{text}</Typography>
+          {subtext && <Typography variant="body">{subtext}</Typography>}
           {tooltip}
           <div className="calc-col answers">
             {options.map((a) => (
               <PrimaryButton
                 key={a}
                 text={a}
-                className="calc-button"
                 onClick={() => handleClick(a)}
                 style={
                   a === "All other cases"
@@ -94,9 +93,7 @@ const CalculatorQuestion = () => {
           <InfoModal branch={calcContext.currBranch} id={number} />
         </>
       );
-    } else {
-      // history.push("/404");
-    }
+    } 
   };
 
   return <div className="calc-grid">{showQuestions && deliverQuestion()}</div>;

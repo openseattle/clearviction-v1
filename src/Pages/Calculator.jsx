@@ -6,6 +6,7 @@ import Container from "@mui/material/Container";
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import BasicModal from "../Components/Modal";
+import { Typography } from "@mui/material";
 
 // TODO: add progress bar
 
@@ -38,7 +39,8 @@ const Calculator = () => {
           </Button>
         </Stack>
       );
-    });
+    }
+  );
 
   const renderBody = ({ type, text, href, className }) => {
     const key = `${type}-${text}`;
@@ -61,17 +63,14 @@ const Calculator = () => {
   return (
     <Container>
       <div className="calculator">
-        {header && <h4 className="calculator-header">{header}</h4>}
+        {header && <Typography variant="h4">{header}</Typography> }
         {body && <div className="calculator-body">{body.map(renderBody)}</div>}
         {buttons && renderButtons(buttons)}
         {tooltip && (
-          <a className="calculator-tooltip-link">
-            <BasicModal/>     
-          </a>
+          <BasicModal/>     
         )}
         {footerLink && (
           <a
-            className="calculator-footer-link"
             target="_blank"
             href={footerLink.href}
           >
