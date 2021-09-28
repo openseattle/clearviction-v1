@@ -16,14 +16,21 @@ const style = {
   p: 4,
 };
 
-export default function BasicModal() {
+const ToolTipModal = (props)  => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
   return (
     <div>
-      <Button onClick={handleOpen}>I'm not sure</Button>
+      <Button 
+        onClick={handleOpen}
+        style={
+          { color: "black", textDecoration: "underline" }
+        }
+      >
+        {props.text}
+      </Button>
       <Modal
         open={open}
         onClose={handleClose}
@@ -35,7 +42,7 @@ export default function BasicModal() {
             <p>
                 If you don't know how to answer this question, you may be able to locate
                 your records here:{" "}
-                <a target="_blank" href="https://www.wsp.wa.gov/crime/criminal-history">
+                <a target="_blank" href="https://www.wsp.wa.gov/crime/criminal-history" rel="noreferrer">
                 https://www.wsp.wa.gov/crime/criminal-history
                 </a>
             </p>
@@ -45,3 +52,5 @@ export default function BasicModal() {
     </div>
   );
 }
+
+export default ToolTipModal;

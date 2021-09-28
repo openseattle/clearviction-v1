@@ -35,7 +35,6 @@
 
 const CALC_PREFIX = "/calculator";
 const disclaimer = "The information provided by the Conviction Vacation Project is not intended to replace legal advice and does not in any way constitute an attorney-client relationship. If you need legal advice or assistance, we strongly recommend that you reach out to a licensed professional.";
-const tooltip = "I'm not sure";
 const YES = "Yes";
 const NO = "No";
 const BODY_TYPES = {
@@ -43,7 +42,7 @@ const BODY_TYPES = {
     LINK: "link"
 };
 
-export default {
+const data = {
     "landing-0": {
         header: "Misdemeanor Calculator",
         body: [
@@ -85,7 +84,7 @@ export default {
                 href: CALC_PREFIX + "/landing-ineligible-0"
             }
         ],
-        tooltip
+        tooltip: "I’m not sure.",
     },
     "landing-2": {
         header: "Does your conviction fall into any of these special cases?",
@@ -108,7 +107,7 @@ export default {
                 color: "green"
             }
         ],
-        tooltip
+        tooltip: "I’m not sure.",
     },
     "marijuana-0": {
         header: "Did this offense involve possession of marijuana?",
@@ -121,7 +120,8 @@ export default {
                 text: NO,
                 href: CALC_PREFIX + "/marijuana-ineligible-0"
             }
-        ]
+        ],
+        tooltip: "I’m not sure.",
     },
     "marijuana-1": {
         header: "Were you 21 years or older at the time of offense?",
@@ -134,7 +134,8 @@ export default {
                 text: NO,
                 href: CALC_PREFIX + "/marijuana-ineligible-0"
             }
-        ]
+        ],
+        tooltip: "I’m not sure.",
     },
     "marijuana-2": {
         header: "Have you completed the terms of your sentence for this offense?",
@@ -147,7 +148,8 @@ export default {
                 text: NO,
                 href: CALC_PREFIX + "/marijuana-ineligible-1"
             }
-        ]
+        ],
+        tooltip: "I’m not sure.",
     },
     "marijuana-ineligible-0": {
         header: "As of now, it seems that you may NOT be eligible to vacate your marijuana misdemeanor conviction because you have not completed the terms of your offense.",
@@ -239,7 +241,7 @@ export default {
                 href: CALC_PREFIX + "/main-2"
             }
         ],
-        tooltip,
+        tooltip: "I’m not sure.",
     },
     "main-ineligible-0": {
         header: "As of now, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because your conviction is classified as a violent offense as defined in RCW 9.94A.030.",
@@ -281,7 +283,7 @@ export default {
                 href: CALC_PREFIX + "/main-3"
             }
         ],
-        tooltip
+        tooltip: "I’m not sure.",
     },
     "main-ineligible-1": {
         header: "As of now, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because your offense was on of the following:",
@@ -323,7 +325,7 @@ export default {
                 href: CALC_PREFIX + "/main-5"
             }
         ],
-        tooltip
+        tooltip: "I’m not sure.",
     },
     "main-4": {
         header: "Did you have an additional alcohol or drug violation within ten years of the date of arrest for the prior offense?",
@@ -337,7 +339,7 @@ export default {
                 href: CALC_PREFIX + "/main-7"
             }
         ],
-        tooltip
+        tooltip: "I’m not sure.",
     },
     "main-5": {
         header: "Was the offense a misdemeanor or gross misdemeanor violation, including attempt of any of the following:",
@@ -368,7 +370,7 @@ export default {
                 href: CALC_PREFIX + "/main-8"
             }
         ],
-        tooltip
+        tooltip: "I’m not sure.",
     },
     "main-ineligible-2": {
         header: "As of now, it seems that you may NOT be eligible to vacate your  misdemeanor conviction.",
@@ -411,7 +413,7 @@ export default {
                 href: CALC_PREFIX + "/main-ineligible-4"
             }
         ],
-        tooltip
+        tooltip: "I’m not sure.",
     },
     "main-ineligible-4": {
         header: "As of now, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because it has been less than 10 years since your arrest for the prior offense.",
@@ -435,7 +437,7 @@ export default {
                 href: CALC_PREFIX + "" // TODO: link to first "Questions about circumstances that affect CV eligibility" page
             }
         ],
-        tooltip
+        tooltip: "I’m not sure.",
     },
     "main-9": {
         header: "Have you had two or more domestic violence convictions each stemming from different incidents?",
@@ -449,7 +451,7 @@ export default {
                 href: CALC_PREFIX + "/main-10"
             }
         ],
-        tooltip
+        tooltip: "I’m not sure.",
     },
     "main-ineligible-5": {
         header: "Unfortunately, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because you have had two or more domestic violence incidents.",
@@ -467,7 +469,7 @@ export default {
                 href: CALC_PREFIX + "/main-ineligible-6"
             }
         ],
-        tooltip
+        tooltip: "I’m not sure.",
     },
     "main-ineligible-6": {
         header: "As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because it has been less than 5 years since the conviction for this offense.",
@@ -480,3 +482,5 @@ export default {
         disclaimer
     }
 };
+
+export default data;

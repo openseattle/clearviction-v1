@@ -3,8 +3,9 @@ import "../CSS/About.css";
 import logo from "../Assets/CVP.png";
 import AboutDetails from "../Components/AboutDetails";
 import data from "../data/team.json";
+import { Button } from "@mui/material";
 
-const About = () => {
+const AboutPage = () => {
   return (
     <div>
       <section id="filler"></section>
@@ -33,14 +34,14 @@ const About = () => {
           diverse skillset to help us advance our goal.
         </p>
         <p>Reach out to learn more and opportunities to volunteer with us.</p>
-        <button type="button" className="btn btn-primary">
-          <a className="white-link" href="mailto:cvp@seamus.work">
-            Contact Us!
-          </a>
-        </button>
+        <Button
+          onClick={"mailto:cvp@seamus.work"}
+        >
+          Contact Us!
+        </Button>
       </section>
     </div>
   );
 };
 
-export default About;
+export default AboutPage;
