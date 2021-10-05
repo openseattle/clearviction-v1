@@ -1,33 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useEffect } from "react";
 import { useRouteMatch, Switch, Route } from "react-router-dom";
-import CalculatorQuestion from "../Components/CalculatorQuestion";
-import CalculatorResults from "../Components/CalculatorResults";
+import CalculatorQuestion from "../Components/calculator/CalculatorQuestion";
+import CalculatorResults from "../Components/calculator/CalculatorResults";
 import "../CSS/Calculator.css";
+import CalcContext from "../calcContext";
 
 /** Directs traffic to result screen or current question based on URL */
-const CalculatorQuestionContainer = () => {
+const CalculatorQuestionCont = () => {
+  const calcContext = useContext(CalcContext);
   let { path } = useRouteMatch();
-
-  /**
-   * Default userResponse is false to handle some edge cases
-   * 1. They click the link on the landing page because their conviction is not a MJ misdemeanor
-   * 2. They navigate to 'calculator/results' using their url bar
-   */
-  const [userResponse, setUserResponse] = useState({
-    1: false,
-    2: false,
-    3: false,
-    4: false,
-    5: false,
-    6: false,
-  });
-  /**
-   * Default isCompleted is false to handle some edge cases
-   * 1. If the finish the calculator it will update to true
-   */
-  const [isCompleted, setIfCompleted] = useState({
-    completed: false,
-  });
+  // let history = useHistory();
+  useEffect(() => {}, []);
 
   /** Return a switch that routes to result screen, or question to display */
   return (
@@ -35,28 +18,13 @@ const CalculatorQuestionContainer = () => {
       <Switch>
         <Route exact path={`${path}/results`}>
           <CalculatorResults
-            userResponse={userResponse}
-            isCompleted={isCompleted}
+            userResponse={calcContext.userResponse}
+            branch={calcContext.branch}
           />
         </Route>
-        {[`${path}/:number`].map((path) => (
-          <Route key={path} path={path}>
-            <CalculatorQuestion
-              userResponse={userResponse}
-              setUserResponse={setUserResponse}
-              isCompleted={isCompleted}
-              setIfCompleted={setIfCompleted}
-            />
-          </Route>
-        ))}
-        {/* <Route  path={`${path}/:number`}>
-          <CalculatorQuestion
-            userResponse={userResponse}
-            setUserResponse={setUserResponse}
-            isCompleted={isCompleted}
-            setIfCompleted={setIfCompleted}
-          />
-        </Route> */}
+        <Route exact path={`${path}/:branchName/:number`}>
+          <CalculatorQuestion />
+        </Route>
       </Switch>
     </>
   );

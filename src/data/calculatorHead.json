@@ -1,0 +1,21 @@
+[
+  {
+    "id": "1",
+    "text": "Was this offense a misdemeanor?",
+    "tooltip": "",
+    "options": ["Yes", "No"],
+    "next_card": ["2"]
+  },
+  {
+    "id": "2",
+    "text": "Does your conviction fall into any of these special cases?",
+    "tooltip": "",
+    "options": [
+      "Possession of Marijuana Misdemeanor",
+      "Prostitution Misdemeanor",
+      "Violation of a Fishing Regulation",
+      "All other cases"
+    ],
+    "next_card": ["redirect"]
+  }
+]

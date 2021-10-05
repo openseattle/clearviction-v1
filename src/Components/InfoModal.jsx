@@ -1,5 +1,6 @@
 import React from "react";
 import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
+// import { useHistory } from "react-router-dom";
 import Modal from "@material-ui/core/Modal";
 import "../CSS/Calculator.css";
 
@@ -32,12 +33,12 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-export default function InfoModal() {
+export default function InfoModal({ branch, id }) {
   const classes = useStyles();
   // getModalStyle is not a pure function, we roll the style only on the first render
   const [modalStyle] = React.useState(getModalStyle);
   const [open, setOpen] = React.useState(false);
-
+  // let history = useHistory();
   const handleOpen = () => {
     setOpen(true);
   };
@@ -46,11 +47,17 @@ export default function InfoModal() {
     setOpen(false);
   };
 
-  return (
-    <div>
+  const handleText = () => {
+    return (
       <p id="info-modal-link" onClick={handleOpen}>
         I'm not sure
       </p>
+    );
+  };
+
+  return (
+    <div>
+      {handleText()}
       <Modal
         open={open}
         onClose={handleClose}

@@ -1,6 +1,6 @@
 import "./App.css";
 import React from "react";
-import { Switch, Route } from "react-router-dom";
+import { Switch, Route, Redirect } from "react-router-dom";
 //component imports
 import NotFoundPage from "./Components/NotFoundPage";
 import About from "./Pages/About";
@@ -10,8 +10,8 @@ import Resources from "./Pages/Resources";
 import Volunteer from "./Pages/Volunteer";
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-import CalculatorLanding from "./Pages/CalculatorLanding";
-import CalculatorQuestionContainer from "./Pages/CalculatorQuestionContainer";
+import Calculator from "./Pages/Calculator";
+import { CalcProvider } from "./calcContext";
 
 function App() {
   return (
@@ -27,31 +27,23 @@ function App() {
         <Route path="/contact">
           <Contact />
         </Route>
-        <Route exact path="/calculator">
-          <CalculatorLanding />
-        </Route>
-        <Route path="/calculator">
-          <CalculatorQuestionContainer />
-        </Route>
         <Route path="/resources">
           <Resources />
         </Route>
         <Route path="/volunteer">
           <Volunteer />
         </Route>
-        {/* <Route path="/calculator/:Id">
-          <CalculatorQuestionContainer />
-        </Route> */}
-        {/* {["/calculator/:number"].map(path => (
-                <Route
-                    key={path}
-                    path={path}
-                    component={CalculatorQuestionContainer }
-                />
-        ))} */}
         <Route exact path="/">
           <Home />
         </Route>
+        <CalcProvider>
+          <Route path="/calculator/:pageId">
+            <Calculator />
+          </Route>
+          <Route exact path="/calculator">
+            <Redirect to="/calculator/landing-0" />
+          </Route>
+        </CalcProvider>
       </Switch>
       <Footer />
     </div>
