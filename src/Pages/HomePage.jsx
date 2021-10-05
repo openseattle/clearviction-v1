@@ -3,20 +3,24 @@ import logo from "../Assets/CVP.png";
 import "../CSS/Home.css";
 import { useHistory } from "react-router-dom";
 
-const Home = () => {
+/** MATERIAL UI IMPORTS */
+import { Typography } from "@mui/material";
+import Box from '@material-ui/core/Box';
+import Button from '@mui/material/Button';
+
+const HomePage = () => {
   const history = useHistory();
   const handleCalcRedirect = () => {
     history.push("/calculator");
   };
 
   return (
-    <div>
+    <Box>
       <section className="container-fluid"></section>
       <section className="container-fluid-header">
         <div className="row">
           <div className="col" id="jumbotron-text">
-            <h3>Washington Conviction Vacation Project</h3>
-            {/* <button type="button" className="btn btn-primary" onClick="#section-one">Learn More!</button> */}
+            <Typography variant="h4">Washington Conviction Vacation Project</Typography>
           </div>
           <div className="col">
             <img src={logo} id="logo" alt="logo"></img>
@@ -27,7 +31,7 @@ const Home = () => {
       <section className="container-fluid-content" id="section-one">
         <div className="row">
           <div className="col">
-            <h1 className="display-6">Who We Are</h1>
+            <Typography variant="h5">Who We Are</Typography>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="56"
@@ -43,7 +47,7 @@ const Home = () => {
               />
               <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
             </svg>
-            <p>
+            <Typography variant="body1">
               The Washington Conviction Vacation Project is an all-volunteer
               team focused on reducing barriers faced by people with a
               conviction on their record. If you’d like to know more about the
@@ -53,19 +57,18 @@ const Home = () => {
               <a href="https://www.americanprogress.org/issues/criminal-justice/reports/2020/04/15/483264/expunging-clearing-criminal-records/">
                 great reference.{" "}
               </a>
-            </p>
-            <p>
+            </Typography>
+            <Typography variant="body1">
               “Vacation” is what the court calls it when they make a conviction
               no longer visible to prospective employers, landlords, and the
               like. It’s not gone, it’s just invisible to society.
-            </p>
-            <p>
+      
               We are doing this by streamlining the process of vacating eligible
               convictions in Washington State.
-            </p>
+            </Typography>
           </div>
           <div className="col">
-            <h1 className="display-6">The Problem</h1>
+            <Typography variant="h5">The Problem</Typography>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="56"
@@ -76,7 +79,7 @@ const Home = () => {
             >
               <path d="M5.933.87a2.89 2.89 0 0 1 4.134 0l.622.638.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636zM7.002 11a1 1 0 1 0 2 0 1 1 0 0 0-2 0zm1.602-2.027c.04-.534.198-.815.846-1.26.674-.475 1.05-1.09 1.05-1.986 0-1.325-.92-2.227-2.262-2.227-1.02 0-1.792.492-2.1 1.29A1.71 1.71 0 0 0 6 5.48c0 .393.203.64.545.64.272 0 .455-.147.564-.51.158-.592.525-.915 1.074-.915.61 0 1.03.446 1.03 1.084 0 .563-.208.885-.822 1.325-.619.433-.926.914-.926 1.64v.111c0 .428.208.745.585.745.336 0 .504-.24.554-.627z" />
             </svg>
-            <p>
+            <Typography variant="body1">
               The process of vacating a conviction is convoluted, making it
               difficult for most folks to navigate. It requires a number of
               steps that can be difficult to accomplish: gathering documents,
@@ -84,16 +87,16 @@ const Home = () => {
               as well as determining eligibility. Each step requires time and
               know-how, increasing the barrier of entry for applicants to
               reaching vacation status.
-            </p>
-            <p>
+            </Typography>
+            <Typography variant="body1">
               Hiring an attorney can simplify the process, but it’s unaffordable
               for most, and while free volunteer services are available, these
               clinics are inaccessible, and only cover a few of the steps within
               the process.
-            </p>
+            </Typography>
           </div>
           <div className="col">
-            <h1 className="display-6">Our Goal</h1>
+            <Typography variant="h5">Our Goal</Typography>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="56"
@@ -104,19 +107,19 @@ const Home = () => {
             >
               <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z" />
             </svg>
-            <p>
+            <Typography variant="body1">
               We believe that we can create software that simplifies some of the
               steps people go through when asking a court to vacate their
               convictions.
-            </p>
-            <p>
+            </Typography>
+            <Typography variant="body1">
               We will be creating and releasing the software bit by bit, making
               sure earlier features work before stacking on additional features.
               Whichever parts of the process the software helps with first, and
               whether we limit the first versions to particular counties or
               conviction types will be a function of our Research and Design
               activities, spoken of below.
-            </p>
+            </Typography>
           </div>
         </div>
       </section>
@@ -124,7 +127,7 @@ const Home = () => {
       <section className="container-fluid-content">
         <div className="row">
           <div className="col">
-            <h1 className="display-6">Research Findings</h1>
+            <Typography variant="h5">Research Findings</Typography>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="56"
@@ -137,17 +140,17 @@ const Home = () => {
               <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
               <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
             </svg>
-            <p>
+            <Typography variant="body1">
               We have conducted a round of interviews with attorneys who are
               subject matter experts in conviction vacations and surfaced a
               number of challenges their clients typically face. These pain
               points fall within 4 categories: determining vacation eligibility,
               communication with clients, finding conviction records, and
               interaction with courts.
-            </p>
+            </Typography>
           </div>
           <div className="col">
-            <h1 className="display-6">Product & Design</h1>
+            <Typography variant="h5">Product & Design</Typography>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="56"
@@ -158,7 +161,7 @@ const Home = () => {
             >
               <path d="M8 0a.5.5 0 0 1 .473.337L9.046 2H14a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1.85l1.323 3.837a.5.5 0 1 1-.946.326L11.092 11H8.5v3a.5.5 0 0 1-1 0v-3H4.908l-1.435 4.163a.5.5 0 1 1-.946-.326L3.85 11H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h4.954L7.527.337A.5.5 0 0 1 8 0zM2 3v7h12V3H2z" />
             </svg>
-            <p>
+            <Typography variant="body1">
               Based on our research and product release plan, we have decided to
               tackle <em>determining vacation eligibility</em> first. Multiple
               states have successfully implemented different versions of this
@@ -166,12 +169,10 @@ const Home = () => {
               this type of software is in demand and can work, but they have
               also inspired us with ideas for different features that we could
               incorporate into our work in Washington State.
-            </p>
+            </Typography>
           </div>
           <div className="col">
-            <h1 className="display-6" onClick={handleCalcRedirect}>
-              Eligibility Calculator
-            </h1>
+            <Typography variant="h5" onClick={handleCalcRedirect}>Eligibility Calculator</Typography>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="56"
@@ -183,48 +184,48 @@ const Home = () => {
               <path d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z" />
               <path d="M4 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-2zm0 4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-4z" />
             </svg>
-            <p>
+            <Typography variant="body1">
               Our first release will be a tool that helps clients determine
               whether a conviction they have qualifies for vacationーwhether
               they should even bother trying to get the court to vacate it. This
               eligibility calculator is rooted in the Revised Code of
               Washington/laws (RCW) which the subject matter expert attorneys we
               mentioned above typically use.
-            </p>
+            </Typography>
           </div>
         </div>
       </section>
 
       <section className="container-fluid-content">
         <div className="row">
-          <h1 className="display-6">Future Plans</h1>
+          <Typography variant="h3">Future Plans</Typography>
           <div className="col">
-            <p>
+          <Typography variant="body1">
               We have all sorts of additional tools in mind that could help
               applicants locate court documents, prepare and file relevant
               motions with the court, and track their progress and status. We
               are investigating the feasibility of a Turbo Tax style interface
               to simplify this process, and then e-filing the forms in counties
               where it is permitted.
-            </p>
+            </Typography>
           </div>
           <div className="col">
-            <p>
+            <Typography variant="body1">
               Additional tools are being explored to assist volunteer attorneys
               - ones who normally specialize in other legal areas - navigate the
               conviction vacation domain when they help out in those free legal
               clinics. These tools will help prime these attorneys to be in a
               better position to represent individuals across the state.
-            </p>
+            </Typography>
           </div>
           <div className="col">
-            <p>
+          <Typography variant="body1">
               We are only limited by each court’s cooperation and the bounds of
               our volunteers' time, which is why we can use any help that you
               are willing to offer. If you are interested in learning more about
               the project or volunteering your skills and time, please connect
               with us!
-            </p>
+            </Typography>
           </div>
         </div>
       </section>
@@ -232,17 +233,17 @@ const Home = () => {
       <section className="container-fluid-content">
         <div className="row">
           <div className="col">
-            <h3>Want to Learn More?</h3>
-            <button type="button" className="btn btn-primary">
-              <a className="white-link" href="mailto:cvp@seamus.work">
-                Contact Us!
-              </a>
-            </button>
+            <Typography variant="h5">Want to Learn More?</Typography>
+            <Button 
+              onClick={"mailto:cvp@seamus.work"}
+              style={
+                { backgroundColor: "#4e6c99", color: "#ffffff" }}
+            >Contact Us!</Button>
           </div>
         </div>
       </section>
-    </div>
+    </Box>
   );
 };
 
-export default Home;
+export default HomePage;

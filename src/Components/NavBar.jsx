@@ -1,10 +1,7 @@
 import React from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const NavBar = () => {
-  // const location = useLocation();
-  // const isCalcOpen = location.pathname.includes("/calculator");
-
   return (
     <div
       className="navbar navbar-expand-lg navbar-light bg-light"
@@ -40,23 +37,10 @@ const NavBar = () => {
               <NavLink
                 className="nav-link"
                 to="/calculator"
-                // Open in new tab if the user isn't already on the calculator page
-                // target={isCalcOpen ? "" : "_blank"}
               >
                 Calculator
               </NavLink>
             </li>
-            {/* 
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/volunteer">
-                Volunteer
-              </NavLink>
-            </li>
-            <li className="nav-item">
-              <NavLink className="nav-link" to="/resources">
-                Resources
-              </NavLink>
-            </li> */}
           </ul>
         </div>
       </div>

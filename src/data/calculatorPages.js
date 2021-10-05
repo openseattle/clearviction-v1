@@ -35,15 +35,15 @@
 
 const CALC_PREFIX = "/calculator";
 const disclaimer = "The information provided by the Conviction Vacation Project is not intended to replace legal advice and does not in any way constitute an attorney-client relationship. If you need legal advice or assistance, we strongly recommend that you reach out to a licensed professional.";
-const tooltip = "I'm not sure";
 const YES = "Yes";
 const NO = "No";
+const NA = "Not Applicable";
 const BODY_TYPES = {
     PARAGRAPH: "paragraph",
     LINK: "link"
 };
 
-export default {
+const data = {
     "landing-0": {
         header: "Misdemeanor Calculator",
         body: [
@@ -85,7 +85,7 @@ export default {
                 href: CALC_PREFIX + "/landing-ineligible-0"
             }
         ],
-        tooltip
+        tooltip: "I’m not sure.",
     },
     "landing-2": {
         header: "Does your conviction fall into any of these special cases?",
@@ -108,7 +108,7 @@ export default {
                 color: "green"
             }
         ],
-        tooltip
+        tooltip: "I’m not sure.",
     },
     "marijuana-0": {
         header: "Did this offense involve possession of marijuana?",
@@ -121,7 +121,8 @@ export default {
                 text: NO,
                 href: CALC_PREFIX + "/marijuana-ineligible-0"
             }
-        ]
+        ],
+        tooltip: "I’m not sure.",
     },
     "marijuana-1": {
         header: "Were you 21 years or older at the time of offense?",
@@ -134,7 +135,8 @@ export default {
                 text: NO,
                 href: CALC_PREFIX + "/marijuana-ineligible-0"
             }
-        ]
+        ],
+        tooltip: "I’m not sure.",
     },
     "marijuana-2": {
         header: "Have you completed the terms of your sentence for this offense?",
@@ -147,7 +149,8 @@ export default {
                 text: NO,
                 href: CALC_PREFIX + "/marijuana-ineligible-1"
             }
-        ]
+        ],
+        tooltip: "I’m not sure.",
     },
     "marijuana-ineligible-0": {
         header: "As of now, it seems that you may NOT be eligible to vacate your marijuana misdemeanor conviction because you have not completed the terms of your offense.",
@@ -239,7 +242,7 @@ export default {
                 href: CALC_PREFIX + "/main-2"
             }
         ],
-        tooltip,
+        tooltip: "I’m not sure.",
     },
     "main-ineligible-0": {
         header: "As of now, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because your conviction is classified as a violent offense as defined in RCW 9.94A.030.",
@@ -281,7 +284,7 @@ export default {
                 href: CALC_PREFIX + "/main-3"
             }
         ],
-        tooltip
+        tooltip: "I’m not sure.",
     },
     "main-ineligible-1": {
         header: "As of now, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because your offense was on of the following:",
@@ -323,7 +326,7 @@ export default {
                 href: CALC_PREFIX + "/main-5"
             }
         ],
-        tooltip
+        tooltip: "I’m not sure.",
     },
     "main-4": {
         header: "Did you have an additional alcohol or drug violation within ten years of the date of arrest for the prior offense?",
@@ -337,7 +340,7 @@ export default {
                 href: CALC_PREFIX + "/main-7"
             }
         ],
-        tooltip
+        tooltip: "I’m not sure.",
     },
     "main-5": {
         header: "Was the offense a misdemeanor or gross misdemeanor violation, including attempt of any of the following:",
@@ -368,7 +371,7 @@ export default {
                 href: CALC_PREFIX + "/main-8"
             }
         ],
-        tooltip
+        tooltip: "I’m not sure.",
     },
     "main-ineligible-2": {
         header: "As of now, it seems that you may NOT be eligible to vacate your  misdemeanor conviction.",
@@ -411,7 +414,7 @@ export default {
                 href: CALC_PREFIX + "/main-ineligible-4"
             }
         ],
-        tooltip
+        tooltip: "I’m not sure.",
     },
     "main-ineligible-4": {
         header: "As of now, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because it has been less than 10 years since your arrest for the prior offense.",
@@ -435,7 +438,7 @@ export default {
                 href: CALC_PREFIX + "" // TODO: link to first "Questions about circumstances that affect CV eligibility" page
             }
         ],
-        tooltip
+        tooltip: "I’m not sure.",
     },
     "main-9": {
         header: "Have you had two or more domestic violence convictions each stemming from different incidents?",
@@ -449,7 +452,7 @@ export default {
                 href: CALC_PREFIX + "/main-10"
             }
         ],
-        tooltip
+        tooltip: "I’m not sure.",
     },
     "main-ineligible-5": {
         header: "Unfortunately, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because you have had two or more domestic violence incidents.",
@@ -467,7 +470,7 @@ export default {
                 href: CALC_PREFIX + "/main-ineligible-6"
             }
         ],
-        tooltip
+        tooltip: "I’m not sure.",
     },
     "main-ineligible-6": {
         header: "As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because it has been less than 5 years since the conviction for this offense.",
@@ -478,5 +481,296 @@ export default {
             }
         ],
         disclaimer
-    }
+    },
+    "fishing-0": {
+        header: "Are you a member of a tribe? You can also apply on behalf of a deceased family member in the tribe who meet the criteria.",
+        body: [
+            {
+                type: BODY_TYPES.PARAGRAPH,
+            }
+        ],
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/fishing-1"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/main-0"
+            }
+        ],
+        tooltop: "I'm not sure."
+    },
+    "fishing-1": {
+        header: "Did you (or your family member) receive a fishing related conviction while exercising a treaty right?",
+        body: [
+            {
+                type: BODY_TYPES.PARAGRAPH,
+            }
+        ],
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/fishing-2"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/main-0"
+            }
+        ],
+        tooltop: "I'm not sure."
+    },
+    "fishing-2": {
+        header: "Was it before January 1st, 1975?",
+        body: [
+            {
+                type: BODY_TYPES.PARAGRAPH,
+            }
+        ],
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/fishing-3"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/main-0"
+            }
+        ],
+        tooltop: "I'm not sure."
+    },
+    "fishing-3": {
+        header: "Did your tribe (or your family member's tribe) exercise fishing rights at the location where it occured?",
+        body: [
+            {
+                type: BODY_TYPES.PARAGRAPH,
+            }
+        ],
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/fishing-eligible"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/main-0"
+            }
+        ],
+        tooltop: "I'm not sure."
+    },
+    "fishing-eligible": {
+        header: "From your answers, it seems that you may be eligible to vacate your fishing misdemeanor conviction!",
+        body: [
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "It looks like your conviction may be one of the following:"
+            },
+            {
+                type: BODY_TYPES.LINK,
+                text: "RCW 9.96.060 (4)",
+                href: "https://app.leg.wa.gov/RCW/default.aspx?cite=9.96.060"
+            },
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "Next steps",
+                className: "calculator-subheader"
+            },
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "1. Fill out a Motion and Declaration for Order Vacating Conviction (CrRLJ 09.0100):",
+                className: "calculator-numbered-item"
+            },
+            {
+                type: BODY_TYPES.LINK,
+                text: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
+                href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38"
+            },
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "2. See instructions for vacating a conviction in form CrRLJ 09.0300:",
+                className: "calculator-numbered-item"
+            },
+            {
+                type: BODY_TYPES.LINK,
+                text: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
+                href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38"
+            }
+        ],
+        disclaimer
+    },
+    "prostitution-0": {
+        header: "Were you convicted of a crime involving prostitution? OR are you a family member of a homicide victim seeking to vacate the deceased's victim of prostitution conviction?",
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/prostitution-1"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/main-0"
+            }
+        ]
+    },
+    "prostitution-1": {
+        header: "Was the conviction a result of one of the following:",
+        body: [
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "Being a victim of traffiking"
+            },
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "Being a victim of promoting prostituion in the first degree"
+            },
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "Being a victim of promoting commerical sexual abuse of a minor"
+            },
+        ],
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/prostitution-4"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/prostitution-2"
+            }
+        ]
+    },
+    "prostitution-2": {
+        header: "Is the prosecutor of your crime applying for conviction vacation on behalf of the state?",
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/prostitution-3"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/prostitution-ineligible-1"
+            }
+        ]
+    },
+    "prostitution-3": {
+        header: "Do you have chargers pending in this state or any other state other than for prostition?",
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/prostitution-ineligible-0"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/prostitution-4"
+            }
+        ]
+    },
+    "prostitution-4": {
+        header: "Have you been convicted of another crime in the last 3 years/prior to when you will be applying for vacation?",
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/prostitution-ineligible-0"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/prostitution-5"
+            }
+        ]
+    },
+    "prostitution-5": {
+        header: "Has the crime victim penalty assessment, RCW 7.68.035, been paid in full?",
+        body: {
+            text: "You will need to provide proof except where the conviction to be vacated is for the crime of prostitution, prostitution loitering, or stay out of area of prostitution"
+        },
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/prostitution-6"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/prostitution-ineligible-1"
+            }
+        ]
+    },
+    "prostitution-6": {
+        header: "If applicable, has restitution owed to any victim, exclusing restituion owed to any insurace provider under Title 48 RCW, been paid in full?",
+        body: {
+            text: "You will need to provide proof except where the conviction to be vacated is for the crime of prostitution, prostitution loitering, or stay out of area of prostitution"
+        },
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/prostitution-eligible"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/prostitution-ineligible-1"
+            },
+            {
+                text: NA,
+                href: CALC_PREFIX + "/prostitution-eligible"
+            }
+        ]
+    },
+    "prostitution-eligible": {
+        header: "From your answers, it seems that you may be eligible to vacate your prostituion misdemeanor conviction!",
+        body: [
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "It looks like your conviction may be one of the following:"
+            },
+            {
+                type: BODY_TYPES.LINK,
+                text: "RCW 9.96.060 (3)",
+                href: ""
+            },
+            {
+                type: BODY_TYPES.LINK,
+                text: "RCW 9.96.070",
+                href: ""
+            },
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "Next steps",
+                className: "calculator-subheader"
+            },
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "1. Provide an affidavit, under penalty of perjury, stating the specific facts and circumstances proving, by a preponderance of evidence that the offense was committed as a result of being a victim of sex trafficking, prostitution, or commercial sexual abuse of a minor; sexual assault; or domestic violence as defined in RCW 9.94A.030.  RCW 9.96.060 Sec. 5(2)(a)",
+                className: "calculator-numbered-item"
+            },
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "2. Fill out a Motion and Declaration for Order Vacating Conviction (CrRLJ 09.0100). ",
+                className: "calculator-numbered-item"
+            },
+            {
+                type: BODY_TYPES.LINK,
+                text: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
+                href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38"
+            },
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "3. See instructions for vacating a conviction in form CrRLJ 09.0300:",
+                className: "calculator-numbered-item"
+            },
+            {
+                type: BODY_TYPES.LINK,
+                text: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
+                href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38"
+            },
+        ],
+        disclaimer
+    },
+    "prostitution-ineligible-0": {
+        header: "In order to qualify for vacation, you cannot have any charges for crimes pending in this state or any other state 3 years prior to your application.",
+        disclaimer
+    },
+    "prostitution-ineligible-1": {
+        header: "Unfortunately, you are not eligible for vacation",
+        disclaimer
+    },
 };
+
+export default data;

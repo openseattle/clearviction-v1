@@ -1,125 +1,41 @@
 [
   {
-    "id": 0,
-    "name": "Ann McKenzie",
-    "title": "UX Research",
-    "description": "",
-    "img": "https://i.ibb.co/CHYP72V/T016-YURLXFA-U01-SR7-PA8-SD-70adbd345a78-512.png"
-  },
-  {
-    "id": 1,
-    "name": "Christine Bumpous",
-    "title": "Development & Product",
-    "description": "",
-    "img": "https://i.ibb.co/8BTrJT6/placeholder-headshot-image.jpg"
-  },
-  {
-    "id": 2,
     "name": "Deric Chan",
     "title": "Product",
     "description": "",
     "img": "https://i.ibb.co/v3NhBF4/T016-YURLXFA-U01-DN2-CHRRT-3195c45b1f3e-512.jpg"
   },
   {
-    "id": 3,
-    "name": "Gayatri Shandar",
-    "title": "Development",
-    "description": "",
-    "img": "https://i.ibb.co/5XZgPJj/T016-YURLXFA-U01-J2-J0-QG9-G-6e02f3c93eff-512.jpg"
-  },
-  {
-    "id": 4,
     "name": "Gurveen Sekhon",
     "title": "Design & UX Research",
     "description": "",
     "img": "https://i.ibb.co/yk39fmS/IMG-0386.jpg"
   },
   {
-    "id": 5,
-    "name": "Janu Sung",
-    "title": "Development",
-    "description": "",
-    "img": "https://i.ibb.co/MDVZykB/1603755506464.jpg"
-  },
-  {
-    "id": 6,
-    "name": "Joe Avila",
-    "title": "Development",
-    "description": "",
-    "img": "https://i.ibb.co/zFRNCCj/T016-YURLXFA-U01-UL66-FHCP-bb23b9bc8cc8-512.jpg"
-  },
-  {
-    "id": 7,
-    "name": "Julie Wong",
-    "title": "UX Research",
-    "description": "",
-    "img": "https://i.ibb.co/F4x2d4h/julie-Wong.jpg"
-  },
-  {
-    "id": 8,
     "name": "Kaavya Muralidhar",
     "title": "Product",
     "description": "",
     "img": "https://i.ibb.co/8BTrJT6/placeholder-headshot-image.jpg"
   },
   {
-    "id": 9,
     "name": "Katie Stutts",
     "title": "Development",
     "description": "",
     "img": "https://i.ibb.co/pzvJzH8/T016-YURLXFA-U0169-AECV43-2e65a177e23c-512.jpg"
   },
   {
-    "id": 10,
     "name": "Ken Ohnemus",
     "title": "UX Research",
     "description": "",
     "img": "https://i.ibb.co/PCyxMGy/ken.jpg"
   },
   {
-    "id": 11,
-    "name": "Maliq Winter",
-    "title": "Development",
-    "description": "",
-    "img": "https://i.ibb.co/n0bD0wW/T016-YURLXFA-U01-R6-DKUA11-be7a468e8d1a-512.jpg"
-  },
-  {
-    "id": 12,
-    "name": "Michael Joers",
-    "title": "Design",
-    "description": "",
-    "img": "https://i.ibb.co/gMr6N8Q/T016-YURLXFA-U01-GT990-H7-Y-d2854bb26db9-512.jpg"
-  },
-  {
-    "id": 13,
-    "name": "Rachel Teal",
-    "title": "UX Research",
-    "description": "",
-    "img": "https://i.ibb.co/xs7gcbC/T016-YURLXFA-U01-UJVA579-A-4a1f410cc7b3-512.jpg"
-  },
-  {
-    "id": 14,
     "name": "Seamus Brugh",
     "title": "Project Owner",
     "description": "",
     "img": "https://i.ibb.co/q0Tq2wK/Seamus-headshot-octagon-sm.jpg"
   },
   {
-    "id": 15,
-    "name": "Shannon Chakma",
-    "title": "UX Research & Product",
-    "description": "",
-    "img": "https://i.ibb.co/0M7YNsw/T016-YURLXFA-U01-L5-GGGTKN-49b68167e35e-512.jpg"
-  },
-  {
-    "id": 16,
-    "name": "Dareen Christabel",
-    "title": "UX Research",
-    "description": "",
-    "img": "https://i.ibb.co/DDvbyLM/IMG-0604.jpg"
-  },
-  {
-    "id": 17,
     "name": "Lara Samuelson",
     "title": "Development",
     "description": "",
