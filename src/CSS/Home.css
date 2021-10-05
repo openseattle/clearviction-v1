@@ -15,10 +15,6 @@ section:nth-child(odd) {
   padding: 3em;
 }
 
-.container-fluid-header {
-  /* padding: 1em; */
-}
-
 a {
   color: #13229c;
   text-decoration: none;
