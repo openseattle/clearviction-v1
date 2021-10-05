@@ -37,6 +37,7 @@ const CALC_PREFIX = "/calculator";
 const disclaimer = "The information provided by the Conviction Vacation Project is not intended to replace legal advice and does not in any way constitute an attorney-client relationship. If you need legal advice or assistance, we strongly recommend that you reach out to a licensed professional.";
 const YES = "Yes";
 const NO = "No";
+const NA = "Not Applicable";
 const BODY_TYPES = {
     PARAGRAPH: "paragraph",
     LINK: "link"
@@ -595,6 +596,179 @@ const data = {
                 href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38"
             }
         ],
+        disclaimer
+    },
+    "prostitution-0": {
+        header: "Were you convicted of a crime involving prostitution? OR are you a family member of a homicide victim seeking to vacate the deceased's victim of prostitution conviction?",
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/prostitution-1"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/main-0"
+            }
+        ]
+    },
+    "prostitution-1": {
+        header: "Was the conviction a result of one of the following:",
+        body: [
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "Being a victim of traffiking"
+            },
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "Being a victim of promoting prostituion in the first degree"
+            },
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "Being a victim of promoting commerical sexual abuse of a minor"
+            },
+        ],
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/prostitution-4"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/prostitution-2"
+            }
+        ]
+    },
+    "prostitution-2": {
+        header: "Is the prosecutor of your crime applying for conviction vacation on behalf of the state?",
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/prostitution-3"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/prostitution-ineligible-1"
+            }
+        ]
+    },
+    "prostitution-3": {
+        header: "Do you have chargers pending in this state or any other state other than for prostition?",
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/prostitution-ineligible-0"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/prostitution-4"
+            }
+        ]
+    },
+    "prostitution-4": {
+        header: "Have you been convicted of another crime in the last 3 years/prior to when you will be applying for vacation?",
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/prostitution-ineligible-0"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/prostitution-5"
+            }
+        ]
+    },
+    "prostitution-5": {
+        header: "Has the crime victim penalty assessment, RCW 7.68.035, been paid in full?",
+        body: {
+            text: "You will need to provide proof except where the conviction to be vacated is for the crime of prostitution, prostitution loitering, or stay out of area of prostitution"
+        },
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/prostitution-6"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/prostitution-ineligible-1"
+            }
+        ]
+    },
+    "prostitution-6": {
+        header: "If applicable, has restitution owed to any victim, exclusing restituion owed to any insurace provider under Title 48 RCW, been paid in full?",
+        body: {
+            text: "You will need to provide proof except where the conviction to be vacated is for the crime of prostitution, prostitution loitering, or stay out of area of prostitution"
+        },
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/prostitution-eligible"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/prostitution-ineligible-1"
+            },
+            {
+                text: NA,
+                href: CALC_PREFIX + "/prostitution-eligible"
+            }
+        ]
+    },
+    "prostitution-eligible": {
+        header: "From your answers, it seems that you may be eligible to vacate your prostituion misdemeanor conviction!",
+        body: [
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "It looks like your conviction may be one of the following:"
+            },
+            {
+                type: BODY_TYPES.LINK,
+                text: "RCW 9.96.060 (3)",
+                href: ""
+            },
+            {
+                type: BODY_TYPES.LINK,
+                text: "RCW 9.96.070",
+                href: ""
+            },
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "Next steps",
+                className: "calculator-subheader"
+            },
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "1. Provide an affidavit, under penalty of perjury, stating the specific facts and circumstances proving, by a preponderance of evidence that the offense was committed as a result of being a victim of sex trafficking, prostitution, or commercial sexual abuse of a minor; sexual assault; or domestic violence as defined in RCW 9.94A.030.  RCW 9.96.060 Sec. 5(2)(a)",
+                className: "calculator-numbered-item"
+            },
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "2. Fill out a Motion and Declaration for Order Vacating Conviction (CrRLJ 09.0100). ",
+                className: "calculator-numbered-item"
+            },
+            {
+                type: BODY_TYPES.LINK,
+                text: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
+                href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38"
+            },
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "3. See instructions for vacating a conviction in form CrRLJ 09.0300:",
+                className: "calculator-numbered-item"
+            },
+            {
+                type: BODY_TYPES.LINK,
+                text: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
+                href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38"
+            },
+        ],
+        disclaimer
+    },
+    "prostitution-ineligible-0": {
+        header: "In order to qualify for vacation, you cannot have any charges for crimes pending in this state or any other state 3 years prior to your application.",
+        disclaimer
+    },
+    "prostitution-ineligible-1": {
+        header: "Unfortunately, you are not eligible for vacation",
         disclaimer
     },
 };
