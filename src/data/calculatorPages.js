@@ -480,7 +480,123 @@ const data = {
             }
         ],
         disclaimer
-    }
+    },
+    "fishing-0": {
+        header: "Are you a member of a tribe? You can also apply on behalf of a deceased family member in the tribe who meet the criteria.",
+        body: [
+            {
+                type: BODY_TYPES.PARAGRAPH,
+            }
+        ],
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/fishing-1"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/main-0"
+            }
+        ],
+        tooltop: "I'm not sure."
+    },
+    "fishing-1": {
+        header: "Did you (or your family member) receive a fishing related conviction while exercising a treaty right?",
+        body: [
+            {
+                type: BODY_TYPES.PARAGRAPH,
+            }
+        ],
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/fishing-2"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/main-0"
+            }
+        ],
+        tooltop: "I'm not sure."
+    },
+    "fishing-2": {
+        header: "Was it before January 1st, 1975?",
+        body: [
+            {
+                type: BODY_TYPES.PARAGRAPH,
+            }
+        ],
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/fishing-3"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/main-0"
+            }
+        ],
+        tooltop: "I'm not sure."
+    },
+    "fishing-3": {
+        header: "Did your tribe (or your family member's tribe) exercise fishing rights at the location where it occured?",
+        body: [
+            {
+                type: BODY_TYPES.PARAGRAPH,
+            }
+        ],
+        buttons: [
+            {
+                text: YES,
+                href: CALC_PREFIX + "/fishing-eligible"
+            },
+            {
+                text: NO,
+                href: CALC_PREFIX + "/main-0"
+            }
+        ],
+        tooltop: "I'm not sure."
+    },
+    "fishing-eligible": {
+        header: "From your answers, it seems that you may be eligible to vacate your fishing misdemeanor conviction!",
+        body: [
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "It looks like your conviction may be one of the following:"
+            },
+            {
+                type: BODY_TYPES.LINK,
+                text: "RCW 9.96.060 (4)",
+                href: "https://app.leg.wa.gov/RCW/default.aspx?cite=9.96.060"
+            },
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "Next steps",
+                className: "calculator-subheader"
+            },
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "1. Fill out a Motion and Declaration for Order Vacating Conviction (CrRLJ 09.0100):",
+                className: "calculator-numbered-item"
+            },
+            {
+                type: BODY_TYPES.LINK,
+                text: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
+                href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38"
+            },
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "2. See instructions for vacating a conviction in form CrRLJ 09.0300:",
+                className: "calculator-numbered-item"
+            },
+            {
+                type: BODY_TYPES.LINK,
+                text: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
+                href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38"
+            }
+        ],
+        disclaimer
+    },
 };
 
 export default data;
