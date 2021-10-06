@@ -1,11 +1,11 @@
 /**
- * This file contains all page content for the calculator. Routes are handled dynamically using the top-level keys of
- * the object exported from this file. For example, the data within the key "landing-0" is populated by
+ * This file contains all page content for the calculator. Routes are handled dynamically using the top-level keys of 
+ * the object exported from this file. For example, the data within the key "landing-0" is populated by 
  * Calculator.jsx at the route: /calculator/landing-0. This route can then be linked to from other pages.
- *
- * For custom styling, pass a className into the body[] object you want to style and then make the necessary changes
+ * 
+ * For custom styling, pass a className into the body[] object you want to style and then make the necessary changes 
  * in Calculator.css
- *
+ * 
  * SCHEMA (all fields are optional):
  * [page ID]: {
  *   header,
@@ -34,14 +34,13 @@
  */
 
 const CALC_PREFIX = "/calculator";
-const tooltip = "I'm not sure";
 const disclaimer = "The information provided by the Conviction Vacation Project is not intended to replace legal advice and does not in any way constitute an attorney-client relationship. If you need legal advice or assistance, we strongly recommend that you reach out to a licensed professional.";
 const YES = "Yes";
 const NO = "No";
 const NA = "Not Applicable";
 const BODY_TYPES = {
-  PARAGRAPH: "paragraph",
-  LINK: "link",
+    PARAGRAPH: "paragraph",
+    LINK: "link"
 };
 
 const data = {
@@ -617,21 +616,21 @@ const data = {
         body: [
             {
                 type: BODY_TYPES.PARAGRAPH,
-                text: "Being a victim of traffiking"
+                text: "Being a victim of trafficking"
             },
             {
                 type: BODY_TYPES.PARAGRAPH,
-                text: "Being a victim of promoting prostituion in the first degree"
+                text: "Being a victim of promoting prostitution in the first degree"
             },
             {
                 type: BODY_TYPES.PARAGRAPH,
-                text: "Being a victim of promoting commerical sexual abuse of a minor"
+                text: "Being a victim of promoting commercial sexual abuse of a minor"
             },
         ],
         buttons: [
             {
                 text: YES,
-                href: CALC_PREFIX + "/prostitution-4"
+                href: CALC_PREFIX + "/prostitution-3"
             },
             {
                 text: NO,
@@ -653,7 +652,7 @@ const data = {
         ]
     },
     "prostitution-3": {
-        header: "Do you have chargers pending in this state or any other state other than for prostition?",
+        header: "Do you have charges pending in this state or any other state other than for prostitution?",
         buttons: [
             {
                 text: YES,
@@ -680,9 +679,12 @@ const data = {
     },
     "prostitution-5": {
         header: "Has the crime victim penalty assessment, RCW 7.68.035, been paid in full?",
-        body: {
-            text: "You will need to provide proof except where the conviction to be vacated is for the crime of prostitution, prostitution loitering, or stay out of area of prostitution"
-        },
+        body: [
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "You will need to provide proof except where the conviction to be vacated is for the crime of prostitution, prostitution loitering, or stay out of area of prostitution"
+            }
+        ],
         buttons: [
             {
                 text: YES,
