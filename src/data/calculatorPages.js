@@ -609,7 +609,8 @@ const data = {
                 text: NO,
                 href: CALC_PREFIX + "/main-0"
             }
-        ]
+        ],
+        tooltip: "I’m not sure.",
     },
     "prostitution-1": {
         header: "Was the conviction a result of one of the following:",
@@ -636,7 +637,8 @@ const data = {
                 text: NO,
                 href: CALC_PREFIX + "/prostitution-2"
             }
-        ]
+        ],
+        tooltip: "I’m not sure.",
     },
     "prostitution-2": {
         header: "Is the prosecutor of your crime applying for conviction vacation on behalf of the state?",
@@ -649,20 +651,22 @@ const data = {
                 text: NO,
                 href: CALC_PREFIX + "/prostitution-ineligible-1"
             }
-        ]
+        ],
+        tooltip: "I’m not sure.",
     },
     "prostitution-3": {
         header: "Do you have charges pending in this state or any other state other than for prostitution?",
         buttons: [
             {
                 text: YES,
-                href: CALC_PREFIX + "/prostitution-ineligible-0"
+                href: CALC_PREFIX + "/prostitution-ineligible-2"
             },
             {
                 text: NO,
                 href: CALC_PREFIX + "/prostitution-4"
             }
-        ]
+        ],
+        tooltip: "I’m not sure.",
     },
     "prostitution-4": {
         header: "Have you been convicted of another crime in the last 3 years/prior to when you will be applying for vacation?",
@@ -675,7 +679,8 @@ const data = {
                 text: NO,
                 href: CALC_PREFIX + "/prostitution-5"
             }
-        ]
+        ],
+        tooltip: "I’m not sure.",
     },
     "prostitution-5": {
         header: "Has the crime victim penalty assessment, RCW 7.68.035, been paid in full?",
@@ -694,7 +699,8 @@ const data = {
                 text: NO,
                 href: CALC_PREFIX + "/prostitution-ineligible-1"
             }
-        ]
+        ],
+        tooltip: "I’m not sure.",
     },
     "prostitution-6": {
         header: "If applicable, has restitution owed to any victim, exclusing restituion owed to any insurace provider under Title 48 RCW, been paid in full?",
@@ -714,7 +720,8 @@ const data = {
                 text: NA,
                 href: CALC_PREFIX + "/prostitution-eligible"
             }
-        ]
+        ],
+        tooltip: "I’m not sure.",
     },
     "prostitution-eligible": {
         header: "From your answers, it seems that you may be eligible to vacate your prostituion misdemeanor conviction!",
@@ -772,6 +779,10 @@ const data = {
     },
     "prostitution-ineligible-1": {
         header: "Unfortunately, you are not eligible for vacation",
+        disclaimer
+    },
+    "prostitution-ineligible-2": {
+        header: "In order to qualify for vacation, you cannot have any charges for crimes pending in this state or any other state besides for prostitution.",
         disclaimer
     },
 };
