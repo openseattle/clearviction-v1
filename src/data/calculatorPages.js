@@ -499,7 +499,7 @@ const data = {
                 href: CALC_PREFIX + "/main-0"
             }
         ],
-        tooltop: "I'm not sure."
+        tooltip: "I'm not sure."
     },
     "fishing-1": {
         header: "Did you (or your family member) receive a fishing related conviction while exercising a treaty right?",
@@ -518,7 +518,7 @@ const data = {
                 href: CALC_PREFIX + "/main-0"
             }
         ],
-        tooltop: "I'm not sure."
+        tooltip: "I'm not sure."
     },
     "fishing-2": {
         header: "Was it before January 1st, 1975?",
@@ -537,7 +537,7 @@ const data = {
                 href: CALC_PREFIX + "/main-0"
             }
         ],
-        tooltop: "I'm not sure."
+        tooltip: "I'm not sure."
     },
     "fishing-3": {
         header: "Did your tribe (or your family member's tribe) exercise fishing rights at the location where it occured?",
@@ -556,7 +556,7 @@ const data = {
                 href: CALC_PREFIX + "/main-0"
             }
         ],
-        tooltop: "I'm not sure."
+        tooltip: "I'm not sure."
     },
     "fishing-eligible": {
         header: "From your answers, it seems that you may be eligible to vacate your fishing misdemeanor conviction!",
@@ -703,10 +703,13 @@ const data = {
         tooltip: "I’m not sure.",
     },
     "prostitution-6": {
-        header: "If applicable, has restitution owed to any victim, exclusing restituion owed to any insurace provider under Title 48 RCW, been paid in full?",
-        body: {
-            text: "You will need to provide proof except where the conviction to be vacated is for the crime of prostitution, prostitution loitering, or stay out of area of prostitution"
-        },
+        header: "If applicable,s has restitution owed to any victim, exclusing restituion owed to any insurace provider under Title 48 RCW, been paid in full?",
+        body: [
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "You will need to provide proof except where the conviction to be vacated is for the crime of prostitution, prostitution loitering, or stay out of area of prostitution"
+            }
+        ],
         buttons: [
             {
                 text: YES,
@@ -774,7 +777,7 @@ const data = {
         disclaimer
     },
     "prostitution-ineligible-0": {
-        header: "In order to qualify for vacation, you cannot have any charges for crimes pending in this state or any other state 3 years prior to your application.",
+        header: "In order to qualify for vacation, you cannot have any charges for crimes pending in the last 3 years prior to your application.",
         disclaimer
     },
     "prostitution-ineligible-1": {
