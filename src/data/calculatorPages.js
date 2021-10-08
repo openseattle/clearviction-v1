@@ -703,7 +703,7 @@ const data = {
         tooltip: "I’m not sure.",
     },
     "prostitution-6": {
-        header: "If applicable,s has restitution owed to any victim, exclusing restituion owed to any insurace provider under Title 48 RCW, been paid in full?",
+        header: "If applicable, has restitution owed to any victim, exclusing restituion owed to any insurace provider under Title 48 RCW, been paid in full?",
         body: [
             {
                 type: BODY_TYPES.PARAGRAPH,
