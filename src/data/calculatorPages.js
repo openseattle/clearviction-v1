@@ -32,17 +32,14 @@
  *   disclaimer
  * }
  */
+import { 
+    BODY_TYPES, 
+    BUTTON_TEXT, 
+    TOOLTIP_TYPES
+} from './calculatorEnums';
 
 const CALC_PREFIX = "/calculator";
 const disclaimer = "The information provided by the Conviction Vacation Project is not intended to replace legal advice and does not in any way constitute an attorney-client relationship. If you need legal advice or assistance, we strongly recommend that you reach out to a licensed professional.";
-const YES = "Yes";
-const NO = "No";
-const NA = "Not Applicable";
-const BODY_TYPES = {
-    PARAGRAPH: "paragraph",
-    LINK: "link",
-    LIST: "list"
-};
 
 const data = {
     "landing-0": {
@@ -59,7 +56,7 @@ const data = {
                 href: CALC_PREFIX + "/landing-1"
             }
         ],
-        tooltip: "My conviction is not a misdemeanor or I’m not sure.",
+        tooltip: TOOLTIP_TYPES.NOT_A_MISDEMEANOR,
     },
     "landing-ineligible-0": {
         header: "Our calculator can’t determine your eligibility",
@@ -78,30 +75,30 @@ const data = {
         header: "Was this offense a misdemeanor?",
         buttons: [
             {
-                text: YES,
+                text: BUTTON_TEXT.YES,
                 href: CALC_PREFIX + "/landing-2"
             },
             {
-                text: NO,
+                text: BUTTON_TEXT.NO,
                 href: CALC_PREFIX + "/landing-ineligible-0"
             }
         ],
-        tooltip: "I’m not sure.",
+        tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
     "landing-2": {
         header: "Does your conviction fall into any of these special cases?",
         buttons: [
             {
                 text: "Possession of Marijuana Misdemeanor",
-                href: CALC_PREFIX + "/marijuana-0"
+                href: CALC_PREFIX + "/mar-0"
             },
             {
                 text: "Prostitution Misdemeanor",
-                href: CALC_PREFIX + "/prostitution-0"
+                href: CALC_PREFIX + "/pro-0"
             },
             {
                 text: "Violation of a Fishing Regulation",
-                href: CALC_PREFIX + "/fishing-0"
+                href: CALC_PREFIX + "/fsh-0"
             },
             {
                 text: "My conviction doesn’t fall into any of the special cases (most convictions fall in this category)",
@@ -109,55 +106,55 @@ const data = {
                 color: "green"
             }
         ],
-        tooltip: "I’m not sure.",
+        tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
-    "marijuana-0": {
+    "mar-0": {
         header: "Did this offense involve possession of marijuana?",
         buttons: [
             {
-                text: YES,
-                href: CALC_PREFIX + "/marijuana-1"
+                text: BUTTON_TEXT.YES,
+                href: CALC_PREFIX + "/mar-1"
             },
             {
-                text: NO,
-                href: CALC_PREFIX + "/marijuana-ineligible-0"
+                text: BUTTON_TEXT.NO,
+                href: CALC_PREFIX + "/mar-ineligible-0"
             }
         ],
-        tooltip: "I’m not sure.",
+        tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
-    "marijuana-1": {
+    "mar-1": {
         header: "Were you 21 years or older at the time of offense?",
         buttons: [
             {
-                text: YES,
-                href: CALC_PREFIX + "/marijuana-2"
+                text: BUTTON_TEXT.YES,
+                href: CALC_PREFIX + "/mar-2"
             },
             {
-                text: NO,
-                href: CALC_PREFIX + "/marijuana-ineligible-0"
+                text: BUTTON_TEXT.NO,
+                href: CALC_PREFIX + "/mar-ineligible-0"
             }
         ],
-        tooltip: "I’m not sure.",
+        tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
-    "marijuana-2": {
+    "mar-2": {
         header: "Have you completed the terms of your sentence for this offense?",
         buttons: [
             {
-                text: YES,
-                href: CALC_PREFIX + "/marijuana-eligible-0"
+                text: BUTTON_TEXT.YES,
+                href: CALC_PREFIX + "/mar-eligible-0"
             },
             {
-                text: NO,
-                href: CALC_PREFIX + "/marijuana-ineligible-1"
+                text: BUTTON_TEXT.NO,
+                href: CALC_PREFIX + "/mar-ineligible-1"
             }
         ],
-        tooltip: "I’m not sure.",
+        tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
-    "marijuana-ineligible-0": {
+    "mar-ineligible-0": {
         header: "As of now, it seems that you may NOT be eligible to vacate your marijuana misdemeanor conviction because you have not completed the terms of your offense.",
         disclaimer
     },
-    "marijuana-eligible-0": {
+    "mar-eligible-0": {
         header: "From your answers, it seems that you may be eligible to vacate your marijuana misdemeanor conviction!",
         body: [
             {
@@ -211,7 +208,7 @@ const data = {
         ],
         disclaimer
     },
-    "marijuana-ineligible-1": {
+    "mar-ineligible-1": {
         header: "As of now, it seems that you may NOT be eligible to vacate your marijuana misdemeanor conviction because you have not completed the terms of your offense.",
         disclaimer
     },
@@ -219,7 +216,7 @@ const data = {
         header: "We will now ask a few questions about what your conviction was for, to assess your eligibility to vacate the conviction.",
         buttons: [
             {
-                text: "Continue",
+                text: BUTTON_TEXT.CONTINUE,
                 href: CALC_PREFIX + "/main-1"
             }
         ]
@@ -235,15 +232,15 @@ const data = {
         ],
         buttons: [
             {
-                text: YES,
+                text: BUTTON_TEXT.YES,
                 href: CALC_PREFIX + "/main-ineligible-0"
             },
             {
-                text: NO,
+                text: BUTTON_TEXT.NO,
                 href: CALC_PREFIX + "/main-2"
             }
         ],
-        tooltip: "I’m not sure.",
+        tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
     "main-ineligible-0": {
         header: "As of now, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because your conviction is classified as a violent offense as defined in RCW 9.94A.030.",
@@ -277,18 +274,18 @@ const data = {
         ],
         buttons: [
             {
-                text: YES,
+                text: BUTTON_TEXT.YES,
                 href: CALC_PREFIX + "/main-ineligible-1"
             },
             {
-                text: NO,
+                text: BUTTON_TEXT.NO,
                 href: CALC_PREFIX + "/main-3"
             }
         ],
-        tooltip: "I’m not sure.",
+        tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
     "main-ineligible-1": {
-        header: "As of now, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because your offense was on of the following:",
+        header: "As of now, it seems that you may NOT be eligible to vacate your misdemeanor conviction because your offense was on of the following:",
         body: [
             {
                 type: BODY_TYPES.LINK,
@@ -319,29 +316,29 @@ const data = {
         ],
         buttons: [
             {
-                text: YES,
+                text: BUTTON_TEXT.YES,
                 href: CALC_PREFIX + "/main-4"
             },
             {
-                text: NO,
+                text: BUTTON_TEXT.NO,
                 href: CALC_PREFIX + "/main-5"
             }
         ],
-        tooltip: "I’m not sure.",
+        tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
     "main-4": {
         header: "Did you have an additional alcohol or drug violation within ten years of the date of arrest for the prior offense?",
         buttons: [
             {
-                text: YES,
+                text: BUTTON_TEXT.YES,
                 href: CALC_PREFIX + "/main-ineligible-3"
             },
             {
-                text: NO,
+                text:BUTTON_TEXT.NO,
                 href: CALC_PREFIX + "/main-7"
             }
         ],
-        tooltip: "I’m not sure.",
+        tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
     "main-5": {
         header: "Was the offense a misdemeanor or gross misdemeanor violation, including attempt of any of the following:",
@@ -364,15 +361,15 @@ const data = {
         ],
         buttons: [
             {
-                text: YES,
+                text: BUTTON_TEXT.YES,
                 href: CALC_PREFIX + "/main-ineligible-2"
             },
             {
-                text: NO,
+                text: BUTTON_TEXT.NO,
                 href: CALC_PREFIX + "/main-8"
             }
         ],
-        tooltip: "I’m not sure.",
+        tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
     "main-ineligible-2": {
         header: "As of now, it seems that you may NOT be eligible to vacate your  misdemeanor conviction.",
@@ -407,15 +404,15 @@ const data = {
         header: "Has it been ten years or more since the date of the arrest for the prior offense?",
         buttons: [
             {
-                text: YES,
+                text: BUTTON_TEXT.YES,
                 href: CALC_PREFIX + "/main-5"
             },
             {
-                text: NO,
+                text: BUTTON_TEXT.NO,
                 href: CALC_PREFIX + "/main-ineligible-4"
             }
         ],
-        tooltip: "I’m not sure.",
+        tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
     "main-ineligible-4": {
         header: "As of now, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because it has been less than 10 years since your arrest for the prior offense.",
@@ -431,29 +428,29 @@ const data = {
         header: "Was the offense considered domestic violence against family / household member or spouse / partner?",
         buttons: [
             {
-                text: YES,
+                text: BUTTON_TEXT.YES,
                 href: CALC_PREFIX + "/main-9"
             },
             {
-                text: NO,
+                text: BUTTON_TEXT.NO,
                 href: CALC_PREFIX + "" // TODO: link to first "Questions about circumstances that affect CV eligibility" page
             }
         ],
-        tooltip: "I’m not sure.",
+        tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
     "main-9": {
         header: "Have you had two or more domestic violence convictions each stemming from different incidents?",
         buttons: [
             {
-                text: YES,
+                text: BUTTON_TEXT.YES,
                 href: CALC_PREFIX + "/main-ineligible-5"
             },
             {
-                text: NO,
+                text: BUTTON_TEXT.NO,
                 href: CALC_PREFIX + "/main-10"
             }
         ],
-        tooltip: "I’m not sure.",
+        tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
     "main-ineligible-5": {
         header: "Unfortunately, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because you have had two or more domestic violence incidents.",
@@ -463,15 +460,15 @@ const data = {
         header: "Have five or more years passed since fulfillment of all sentencing requirements for this conviction?",
         buttons: [
             {
-                text: YES,
+                text: BUTTON_TEXT.YES,
                 href: CALC_PREFIX + "" // TODO: link to first "Questions about circumstances that affect CV eligibility" page
             },
             {
-                text: NO,
+                text: BUTTON_TEXT.NO,
                 href: CALC_PREFIX + "/main-ineligible-6"
             }
         ],
-        tooltip: "I’m not sure.",
+        tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
     "main-ineligible-6": {
         header: "As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because it has been less than 5 years since the conviction for this offense.",
@@ -483,7 +480,7 @@ const data = {
         ],
         disclaimer
     },
-    "fishing-0": {
+    "fsh-0": {
         header: "Are you a member of a tribe? You can also apply on behalf of a deceased family member in the tribe who meet the criteria.",
         body: [
             {
@@ -492,17 +489,17 @@ const data = {
         ],
         buttons: [
             {
-                text: YES,
-                href: CALC_PREFIX + "/fishing-1"
+                text: BUTTON_TEXT.YES,
+                href: CALC_PREFIX + "/fsh-1"
             },
             {
-                text: NO,
+                text: BUTTON_TEXT.NO,
                 href: CALC_PREFIX + "/main-0"
             }
         ],
-        tooltip: "I'm not sure."
+        tooltip: TOOLTIP_TYPES.NOT_SURE
     },
-    "fishing-1": {
+    "fsh-1": {
         header: "Did you (or your family member) receive a fishing related conviction while exercising a treaty right?",
         body: [
             {
@@ -511,17 +508,17 @@ const data = {
         ],
         buttons: [
             {
-                text: YES,
-                href: CALC_PREFIX + "/fishing-2"
+                text: BUTTON_TEXT.YES,
+                href: CALC_PREFIX + "/fsh-2"
             },
             {
-                text: NO,
+                text: BUTTON_TEXT.NO,
                 href: CALC_PREFIX + "/main-0"
             }
         ],
-        tooltip: "I'm not sure."
+        tooltip: TOOLTIP_TYPES.NOT_SURE
     },
-    "fishing-2": {
+    "fsh-2": {
         header: "Was it before January 1st, 1975?",
         body: [
             {
@@ -530,17 +527,17 @@ const data = {
         ],
         buttons: [
             {
-                text: YES,
-                href: CALC_PREFIX + "/fishing-3"
+                text: BUTTON_TEXT.YES,
+                href: CALC_PREFIX + "/fsh-3"
             },
             {
-                text: NO,
+                text: BUTTON_TEXT.NO,
                 href: CALC_PREFIX + "/main-0"
             }
         ],
-        tooltip: "I'm not sure."
+        tooltip: TOOLTIP_TYPES.NOT_SURE
     },
-    "fishing-3": {
+    "fsh-3": {
         header: "Did your tribe (or your family member's tribe) exercise fishing rights at the location where it occured?",
         body: [
             {
@@ -549,17 +546,17 @@ const data = {
         ],
         buttons: [
             {
-                text: YES,
-                href: CALC_PREFIX + "/fishing-eligible"
+                text: BUTTON_TEXT.YES,
+                href: CALC_PREFIX + "/fsh-eligible"
             },
             {
-                text: NO,
+                text: BUTTON_TEXT.NO,
                 href: CALC_PREFIX + "/main-0"
             }
         ],
-        tooltip: "I'm not sure."
+        tooltip: TOOLTIP_TYPES.NOT_SURE
     },
-    "fishing-eligible": {
+    "fsh-eligible": {
         header: "From your answers, it seems that you may be eligible to vacate your fishing misdemeanor conviction!",
         body: [
             {
@@ -599,21 +596,21 @@ const data = {
         ],
         disclaimer
     },
-    "prostitution-0": {
+    "pro-0": {
         header: "Were you convicted of a crime involving prostitution? OR are you a family member of a homicide victim seeking to vacate the deceased's victim of prostitution conviction?",
         buttons: [
             {
-                text: YES,
-                href: CALC_PREFIX + "/prostitution-1"
+                text: BUTTON_TEXT.YES,
+                href: CALC_PREFIX + "/pro-1"
             },
             {
-                text: NO,
+                text: BUTTON_TEXT.NO,
                 href: CALC_PREFIX + "/main-0"
             }
         ],
-        tooltip: "I’m not sure.",
+        tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
-    "prostitution-1": {
+    "pro-1": {
         header: "Was the conviction a result of one of the following:",
         body: [
             {
@@ -623,59 +620,59 @@ const data = {
         ],
         buttons: [
             {
-                text: YES,
-                href: CALC_PREFIX + "/prostitution-3"
+                text: BUTTON_TEXT.YES,
+                href: CALC_PREFIX + "/pro-3"
             },
             {
-                text: NO,
-                href: CALC_PREFIX + "/prostitution-2"
+                text: BUTTON_TEXT.NO,
+                href: CALC_PREFIX + "/pro-2"
             }
         ],
-        tooltip: "I’m not sure.",
+        tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
-    "prostitution-2": {
+    "pro-2": {
         header: "Is the prosecutor of your crime applying for conviction vacation on behalf of the state?",
         buttons: [
             {
-                text: YES,
-                href: CALC_PREFIX + "/prostitution-3"
+                text: BUTTON_TEXT.YES,
+                href: CALC_PREFIX + "/pro-3"
             },
             {
-                text: NO,
-                href: CALC_PREFIX + "/prostitution-ineligible-1"
+                text: BUTTON_TEXT.NO,
+                href: CALC_PREFIX + "/pro-ineligible-1"
             }
         ],
-        tooltip: "I’m not sure.",
+        tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
-    "prostitution-3": {
+    "pro-3": {
         header: "Do you have charges pending in this state or any other state other than for prostitution?",
         buttons: [
             {
-                text: YES,
-                href: CALC_PREFIX + "/prostitution-ineligible-2"
+                text: BUTTON_TEXT.YES,
+                href: CALC_PREFIX + "/pro-ineligible-2"
             },
             {
-                text: NO,
-                href: CALC_PREFIX + "/prostitution-4"
+                text: BUTTON_TEXT.NO,
+                href: CALC_PREFIX + "/pro-4"
             }
         ],
-        tooltip: "I’m not sure.",
+        tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
-    "prostitution-4": {
+    "pro-4": {
         header: "Have you been convicted of another crime in the last 3 years/prior to when you will be applying for vacation?",
         buttons: [
             {
-                text: YES,
-                href: CALC_PREFIX + "/prostitution-ineligible-0"
+                text: BUTTON_TEXT.YES,
+                href: CALC_PREFIX + "/pro-ineligible-0"
             },
             {
-                text: NO,
-                href: CALC_PREFIX + "/prostitution-5"
+                text: BUTTON_TEXT.NO,
+                href: CALC_PREFIX + "/pro-5"
             }
         ],
-        tooltip: "I’m not sure.",
+        tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
-    "prostitution-5": {
+    "pro-5": {
         header: "Has the crime victim penalty assessment, RCW 7.68.035, been paid in full?",
         body: [
             {
@@ -685,17 +682,17 @@ const data = {
         ],
         buttons: [
             {
-                text: YES,
-                href: CALC_PREFIX + "/prostitution-6"
+                text: BUTTON_TEXT.YES,
+                href: CALC_PREFIX + "/pro-6"
             },
             {
-                text: NO,
-                href: CALC_PREFIX + "/prostitution-ineligible-1"
+                text: BUTTON_TEXT.NO,
+                href: CALC_PREFIX + "/pro-ineligible-1"
             }
         ],
-        tooltip: "I’m not sure.",
+        tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
-    "prostitution-6": {
+    "pro-6": {
         header: "If applicable, has restitution owed to any victim, exclusing restituion owed to any insurace provider under Title 48 RCW, been paid in full?",
         body: [
             {
@@ -705,21 +702,21 @@ const data = {
         ],
         buttons: [
             {
-                text: YES,
-                href: CALC_PREFIX + "/prostitution-eligible"
+                text: BUTTON_TEXT.YES,
+                href: CALC_PREFIX + "/pro-eligible"
             },
             {
-                text: NO,
-                href: CALC_PREFIX + "/prostitution-ineligible-1"
+                text: BUTTON_TEXT.NO,
+                href: CALC_PREFIX + "/pro-ineligible-1"
             },
             {
-                text: NA,
-                href: CALC_PREFIX + "/prostitution-eligible"
+                text: BUTTON_TEXT.NA,
+                href: CALC_PREFIX + "/pro-eligible"
             }
         ],
-        tooltip: "I’m not sure.",
+        tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
-    "prostitution-eligible": {
+    "pro-eligible": {
         header: "From your answers, it seems that you may be eligible to vacate your prostituion misdemeanor conviction!",
         body: [
             {
@@ -769,15 +766,15 @@ const data = {
         ],
         disclaimer
     },
-    "prostitution-ineligible-0": {
+    "pro-ineligible-0": {
         header: "In order to qualify for vacation, you cannot have any charges for crimes pending in the last 3 years prior to your application.",
         disclaimer
     },
-    "prostitution-ineligible-1": {
+    "pro-ineligible-1": {
         header: "Unfortunately, you are not eligible for vacation",
         disclaimer
     },
-    "prostitution-ineligible-2": {
+    "pro-ineligible-2": {
         header: "In order to qualify for vacation, you cannot have any charges for crimes pending in this state or any other state besides for prostitution.",
         disclaimer
     },
