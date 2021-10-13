@@ -40,7 +40,8 @@ const NO = "No";
 const NA = "Not Applicable";
 const BODY_TYPES = {
     PARAGRAPH: "paragraph",
-    LINK: "link"
+    LINK: "link",
+    LIST: "list"
 };
 
 const data = {
@@ -616,16 +617,8 @@ const data = {
         header: "Was the conviction a result of one of the following:",
         body: [
             {
-                type: BODY_TYPES.PARAGRAPH,
-                text: "Being a victim of trafficking"
-            },
-            {
-                type: BODY_TYPES.PARAGRAPH,
-                text: "Being a victim of promoting prostitution in the first degree"
-            },
-            {
-                type: BODY_TYPES.PARAGRAPH,
-                text: "Being a victim of promoting commercial sexual abuse of a minor"
+                type: BODY_TYPES.LIST,
+                items: ["Being a victim of trafficking", "Being a victim of promoting prostitution in the first degree", "Being a victim of promoting commercial sexual abuse of a minor"]
             },
         ],
         buttons: [

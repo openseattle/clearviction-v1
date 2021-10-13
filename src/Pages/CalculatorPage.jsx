@@ -43,7 +43,7 @@ const CalculatorPage = () => {
     }
   );
 
-  const renderBody = ({ type, text, href }) => {
+  const renderBody = ({ type, text, href, items }) => {
     switch (type) {
       case "paragraph":
         return (
@@ -57,6 +57,12 @@ const CalculatorPage = () => {
             {text}
           </Link>
         );
+      case "list":
+        return (
+          <ul>
+            { items.map((item) => <li>{item}</li>) }
+          </ul>
+        )
       default:
         break;
     }
