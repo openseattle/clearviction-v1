@@ -520,26 +520,31 @@ const data = {
         disclaimer
     },
     "fsh-0": {
-        header: "Are you a member of a tribe? You can also apply on behalf of a deceased family member in the tribe who meet the criteria.",
+        header: "You may be eligible for conviction vacation based on a special clause in conviction vacation eligibility law.",
         body: [
             {
+                type: BODY_TYPES.LINK,
+                text: "RCW 9.96.060(4)",
+                href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.96.060"
+            },
+            {
                 type: BODY_TYPES.PARAGRAPH,
+                text: "This clause applies to people convicted for violating fishing regulations who claimed to be exercising a treaty Indian fishing right."
+            },
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "We will ask you 4 questions to determine if you may be eligible for Conviction Vacation through this exception."
             }
         ],
         buttons: [
             {
-                text: BUTTON_TEXT.YES,
+                text: BUTTON_TEXT.CONTINUE,
                 href: CALC_PREFIX + "/fsh-1"
-            },
-            {
-                text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/main-0"
             }
-        ],
-        tooltip: TOOLTIP_TYPES.NOT_SURE
+        ]
     },
     "fsh-1": {
-        header: "Did you (or your family member) receive a fishing related conviction while exercising a treaty right?",
+        header: "Are you a member of a tribe? You can also apply on behalf of a deceased family member in the tribe who meet the criteria.",
         body: [
             {
                 type: BODY_TYPES.PARAGRAPH,
@@ -558,7 +563,7 @@ const data = {
         tooltip: TOOLTIP_TYPES.NOT_SURE
     },
     "fsh-2": {
-        header: "Was it before January 1st, 1975?",
+        header: "Did you (or your family member) receive a fishing related conviction while exercising a treaty right?",
         body: [
             {
                 type: BODY_TYPES.PARAGRAPH,
@@ -577,7 +582,26 @@ const data = {
         tooltip: TOOLTIP_TYPES.NOT_SURE
     },
     "fsh-3": {
-        header: "Did your tribe (or your family member's tribe) exercise fishing rights at the location where it occured?",
+        header: "Was it before January 1st, 1975?",
+        body: [
+            {
+                type: BODY_TYPES.PARAGRAPH,
+            }
+        ],
+        buttons: [
+            {
+                text: BUTTON_TEXT.YES,
+                href: CALC_PREFIX + "/fsh-4"
+            },
+            {
+                text: BUTTON_TEXT.NO,
+                href: CALC_PREFIX + "/main-0"
+            }
+        ],
+        tooltip: TOOLTIP_TYPES.NOT_SURE
+    },
+    "fsh-4": {
+        header: "Did your tribe (or your family member's tribe) exercise fishing rights at the location where it occurred?",
         body: [
             {
                 type: BODY_TYPES.PARAGRAPH,
