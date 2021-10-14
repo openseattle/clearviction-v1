@@ -795,7 +795,7 @@ const data = {
         tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
     "pro-7": {
-        header: "If applicable, has restitution owed to any victim, exclusing restituion owed to any insurace provider under Title 48 RCW, been paid in full?",
+        header: "If applicable, has restitution owed to any victim, excluding restitution owed to any insurance provider under Title 48 RCW, been paid in full?",
         body: [
             {
                 type: BODY_TYPES.PARAGRAPH,
@@ -819,7 +819,7 @@ const data = {
         tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
     "pro-eligible": {
-        header: "From your answers, it seems that you may be eligible to vacate your prostituion misdemeanor conviction!",
+        header: "From your answers, it seems that you may be eligible to vacate your prostitution misdemeanor conviction!",
         body: [
             {
                 type: BODY_TYPES.PARAGRAPH,
