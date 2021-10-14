@@ -247,7 +247,7 @@ const data = {
         buttons: [
             {
                 text: BUTTON_TEXT.CONTINUE,
-                href: CALC_PREFIX + "/main-1"
+                href: CALC_PREFIX + "/main-0"
             }
         ]
     },
@@ -557,7 +557,7 @@ const data = {
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/main-0"
+                href: CALC_PREFIX + "/fsh-to-main"
             }
         ],
         tooltip: TOOLTIP_TYPES.NOT_SURE
@@ -576,7 +576,7 @@ const data = {
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/main-0"
+                href: CALC_PREFIX + "/fsh-to-main"
             }
         ],
         tooltip: TOOLTIP_TYPES.NOT_SURE
@@ -595,7 +595,7 @@ const data = {
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/main-0"
+                href: CALC_PREFIX + "/fsh-to-main"
             }
         ],
         tooltip: TOOLTIP_TYPES.NOT_SURE
@@ -614,7 +614,7 @@ const data = {
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/main-0"
+                href: CALC_PREFIX + "/fsh-to-main"
             }
         ],
         tooltip: TOOLTIP_TYPES.NOT_SURE
@@ -658,6 +658,21 @@ const data = {
             }
         ],
         disclaimer
+    },
+    "fsh-to-main": {
+        header: "Based on your answers, it looks like you don't fall into the fishing regulation exception.",
+        body: [
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "However, your misdemeanor may still be eligible for conviction vacation through the general eligibility criteria that apply to most misdemeanors."
+            }
+        ],
+        buttons: [
+            {
+                text: BUTTON_TEXT.CONTINUE,
+                href: CALC_PREFIX + "/main-0"
+            }
+        ]
     },
     "pro-0": {
         header: "Were you convicted of a crime involving prostitution? OR are you a family member of a homicide victim seeking to vacate the deceased's victim of prostitution conviction?",
