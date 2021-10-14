@@ -109,21 +109,31 @@ const data = {
         tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
     "mar-0": {
-        header: "Did this offense involve possession of marijuana?",
-        buttons: [
+        header: "You may be eligible for conviction vacation based on a special clause in conviction vacation eligibility law.",
+        body: [
             {
-                text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/mar-1"
+                type: BODY_TYPES.LINK,
+                text: "(RCW 9.96.060(5))",
+                href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.96.060"
             },
             {
-                text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/mar-ineligible-0"
+                type: BODY_TYPES.PARAGRAPH,
+                text: "This clause applies to certain marijuana misdemeanors for possession of 40g or less.",
+            },
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "We will ask you up to 4 questions to determine if you may be eligible for Conviction Vacation through this exception.",
             }
         ],
-        tooltip: TOOLTIP_TYPES.NOT_SURE,
+        buttons: [
+            {
+                text: BUTTON_TEXT.CONTINUE,
+                href: CALC_PREFIX + "/mar-1"
+            }
+        ]
     },
     "mar-1": {
-        header: "Were you 21 years or older at the time of offense?",
+        header: "Did this offense involve possession of marijuana?",
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
@@ -137,6 +147,20 @@ const data = {
         tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
     "mar-2": {
+        header: "Were you 21 years or older at the time of offense?",
+        buttons: [
+            {
+                text: BUTTON_TEXT.YES,
+                href: CALC_PREFIX + "/mar-3"
+            },
+            {
+                text: BUTTON_TEXT.NO,
+                href: CALC_PREFIX + "/mar-ineligible-0"
+            }
+        ],
+        tooltip: TOOLTIP_TYPES.NOT_SURE,
+    },
+    "mar-3": {
         header: "Have you completed the terms of your sentence for this offense?",
         buttons: [
             {
