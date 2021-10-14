@@ -141,7 +141,7 @@ const data = {
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/mar-ineligible-0"
+                href: CALC_PREFIX + "/mar-to-main"
             }
         ],
         tooltip: TOOLTIP_TYPES.NOT_SURE,
@@ -155,7 +155,7 @@ const data = {
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/mar-ineligible-0"
+                href: CALC_PREFIX + "/mar-to-main"
             }
         ],
         tooltip: TOOLTIP_TYPES.NOT_SURE,
@@ -169,7 +169,7 @@ const data = {
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/mar-ineligible-1"
+                href: CALC_PREFIX + "/mar-to-main"
             }
         ],
         tooltip: TOOLTIP_TYPES.NOT_SURE,
@@ -235,6 +235,21 @@ const data = {
     "mar-ineligible-1": {
         header: "As of now, it seems that you may NOT be eligible to vacate your marijuana misdemeanor conviction because you have not completed the terms of your offense.",
         disclaimer
+    },
+    "mar-to-main": {
+        header: "Based on your answers, it looks like you don't qualify for the marijuana misdemeanor exception.",
+        body: [
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "However, your misdemeanor may still be eligible for conviction vacation through the general eligibility criteria that apply to most misdemeanors.",
+            }
+        ],
+        buttons: [
+            {
+                text: BUTTON_TEXT.CONTINUE,
+                href: CALC_PREFIX + "/main-1"
+            }
+        ]
     },
     "main-0": {
         header: "We will now ask a few questions about what your conviction was for, to assess your eligibility to vacate the conviction.",
