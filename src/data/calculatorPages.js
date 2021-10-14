@@ -113,7 +113,7 @@ const data = {
         body: [
             {
                 type: BODY_TYPES.LINK,
-                text: "(RCW 9.96.060(5))",
+                text: "RCW 9.96.060(5)",
                 href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.96.060"
             },
             {
@@ -660,11 +660,35 @@ const data = {
         disclaimer
     },
     "pro-0": {
+        header: "You may be eligible for conviction vacation based on a special clause in conviction vacation eligibility law",
+        body: [
+            {
+                type: BODY_TYPES.LINK,
+                text: "RCW 9.96.060(3)",
+                href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.96.060"
+            },
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "This clause applies to certain prostitution misdemeanors for victims of prostitution, sex trafficking, and similar crimes.",
+            },
+            {
+                type: BODY_TYPES.PARAGRAPH,
+                text: "We will ask you a few questions to determine if you may be eligible for Conviction Vacation through this exception.",
+            }
+        ],
+        buttons: [
+            {
+                text: BUTTON_TEXT.CONTINUE,
+                href: CALC_PREFIX + "/pro-1"
+            }
+        ]
+    },
+    "pro-1": {
         header: "Were you convicted of a crime involving prostitution? OR are you a family member of a homicide victim seeking to vacate the deceased's victim of prostitution conviction?",
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/pro-1"
+                href: CALC_PREFIX + "/pro-2"
             },
             {
                 text: BUTTON_TEXT.NO,
@@ -673,7 +697,7 @@ const data = {
         ],
         tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
-    "pro-1": {
+    "pro-2": {
         header: "Was the conviction a result of one of the following:",
         body: [
             {
@@ -684,21 +708,21 @@ const data = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/pro-3"
+                href: CALC_PREFIX + "/pro-4"
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/pro-2"
+                href: CALC_PREFIX + "/pro-3"
             }
         ],
         tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
-    "pro-2": {
+    "pro-3": {
         header: "Is the prosecutor of your crime applying for conviction vacation on behalf of the state?",
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/pro-3"
+                href: CALC_PREFIX + "/pro-4"
             },
             {
                 text: BUTTON_TEXT.NO,
@@ -707,26 +731,12 @@ const data = {
         ],
         tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
-    "pro-3": {
+    "pro-4": {
         header: "Do you have charges pending in this state or any other state other than for prostitution?",
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
                 href: CALC_PREFIX + "/pro-ineligible-2"
-            },
-            {
-                text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/pro-4"
-            }
-        ],
-        tooltip: TOOLTIP_TYPES.NOT_SURE,
-    },
-    "pro-4": {
-        header: "Have you been convicted of another crime in the last 3 years/prior to when you will be applying for vacation?",
-        buttons: [
-            {
-                text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/pro-ineligible-0"
             },
             {
                 text: BUTTON_TEXT.NO,
@@ -736,6 +746,20 @@ const data = {
         tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
     "pro-5": {
+        header: "Have you been convicted of another crime in the last 3 years/prior to when you will be applying for vacation?",
+        buttons: [
+            {
+                text: BUTTON_TEXT.YES,
+                href: CALC_PREFIX + "/pro-ineligible-0"
+            },
+            {
+                text: BUTTON_TEXT.NO,
+                href: CALC_PREFIX + "/pro-6"
+            }
+        ],
+        tooltip: TOOLTIP_TYPES.NOT_SURE,
+    },
+    "pro-6": {
         header: "Has the crime victim penalty assessment, RCW 7.68.035, been paid in full?",
         body: [
             {
@@ -746,7 +770,7 @@ const data = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/pro-6"
+                href: CALC_PREFIX + "/pro-7"
             },
             {
                 text: BUTTON_TEXT.NO,
@@ -755,7 +779,7 @@ const data = {
         ],
         tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
-    "pro-6": {
+    "pro-7": {
         header: "If applicable, has restitution owed to any victim, exclusing restituion owed to any insurace provider under Title 48 RCW, been paid in full?",
         body: [
             {
