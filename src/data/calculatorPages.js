@@ -161,6 +161,20 @@ const data = {
         tooltip: TOOLTIP_TYPES.NOT_SURE,
     },
     "mar-3": {
+        header: "Was your conviction for possession of 40 grams or less of marijuana?",
+        buttons: [
+            {
+                text: BUTTON_TEXT.YES,
+                href: CALC_PREFIX + "/mar-4"
+            },
+            {
+                text: BUTTON_TEXT.NO,
+                href: CALC_PREFIX + "/mar-to-main"
+            }
+        ],
+        tooltip: TOOLTIP_TYPES.NOT_SURE,
+    },
+    "mar-4": {
         header: "Have you completed the terms of your sentence for this offense?",
         buttons: [
             {
@@ -169,7 +183,7 @@ const data = {
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/mar-to-main"
+                href: CALC_PREFIX + "/mar-ineligible-1"
             }
         ],
         tooltip: TOOLTIP_TYPES.NOT_SURE,
