@@ -26,6 +26,9 @@ const Navigation = () => {
                         <a href="/about">About</a>
                         {/* <a href="">Contact</a> */}
                     </nav>
+                    <div className="nav-menu__disclaimer">
+                        The information on this site is not, nor should it be, considered legal advice.
+                    </div>
                 </div>
             )}
         </>

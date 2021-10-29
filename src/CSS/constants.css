@@ -1,4 +1,5 @@
 :root {
     --dark-blue: #2D3047;
     --light-gray: #DCDCDC;
+    --z-index-front: 999;
 }
