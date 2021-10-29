@@ -4,7 +4,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 //component imports
 import AboutPage from "./Pages/AboutPage";
 import HomePage from "./Pages/HomePage";
-import Header from "./Components/Header";
+import Navigation from "./Components/Navigation";
 import Footer from "./Components/Footer";
 import CalculatorPage from "./Pages/CalculatorPage";
 import ErrorPage from "./Pages/ErrorPage";
@@ -13,7 +13,7 @@ import { CalcProvider } from "./calcContext";
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Navigation />
       <Switch>
         <Route path="/404">
           <ErrorPage />
