@@ -5,7 +5,6 @@ import { Switch, Route, Redirect } from "react-router-dom";
 import AboutPage from "./Pages/AboutPage";
 import HomePage from "./Pages/HomePage";
 import Navigation from "./Components/Navigation";
-import Footer from "./Components/Footer";
 import CalculatorPage from "./Pages/CalculatorPage";
 import ErrorPage from "./Pages/ErrorPage";
 import { CalcProvider } from "./calcContext";
@@ -33,7 +32,6 @@ function App() {
           </Route>
         </CalcProvider>
       </Switch>
-      <Footer />
     </div>
   );
 }

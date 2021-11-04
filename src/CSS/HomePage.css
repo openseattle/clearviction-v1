@@ -1,0 +1,27 @@
+.icons {
+    width: 200px;
+    height: 200px;
+}
+
+.dark-bg {
+    background-color: var(--dark-blue);
+    color: #ffffff;
+}
+
+.light-bg {
+    background-color: var(--grey);
+}
+
+#cvp-logo {
+    width: 120px;
+    height: 112px;
+    margin: 20px;
+}
+
+#description {
+    max-width: 200px;
+}
+
+#main {
+    padding: 0px;
+}

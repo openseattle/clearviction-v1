@@ -8,9 +8,13 @@ const Navigation = () => {
 
     return (
         <>
-            <div className="nav-bar">
-                CVP
-                <MenuIcon onClick={() => setMenuIsOpen(!menuIsOpen)} />
+            <div className="nav-bar__desktop">
+                <a className="logo" href="/">Washington Conviction Vacation Project</a>
+                <a className="nav-items" href="/calculator">Calculator</a>
+                <a className="nav-items" href="/about">About</a>
+                <a className="nav-items" href="/">Volunteer</a>
+                <a className="nav-items" href="/">Resources</a>
+                <a className="nav-items" href="/">Contact</a>
             </div>
             {menuIsOpen && (
                 <div className="nav-menu">

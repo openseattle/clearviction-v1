@@ -50,3 +50,39 @@
     font-size: 0.875rem;
     margin-top: 1.75rem;
 }
+
+.nav-bar__desktop {
+    display: flex;
+    align-items: flex-end;
+    background-color: var(--dark-blue);
+    color: var(--light-gray);
+    height: 2.875rem;
+    justify-content: flex-end;
+    line-height: 2.875rem;
+    padding: 0 1.5rem;
+}
+
+.logo {
+    margin-right: auto;
+    color: var(--light-gray);
+    text-decoration: none;
+    padding: 0 2em;
+}
+
+.logo:hover {
+    color: var(--light-gray);
+    text-decoration: none;
+    padding: 0 2em;
+}
+
+.nav-items {
+    color: var(--light-gray);
+    text-decoration: none;
+    padding: 0 2em;
+}
+
+.nav-items:hover {
+    color: var(--light-gray);
+    text-decoration: none;
+    padding: 0 2em;
+}
