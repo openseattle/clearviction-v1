@@ -15,8 +15,9 @@ import ListItem from '@mui/material/ListItem';
 import Divider from '@mui/material/Divider';
 
 import cvpLogoWhite from '../Assets/cvp-logo-white.png'
-import logo1 from '../Assets/logo1.png'
-import logo2 from '../Assets/logo2.png'
+import cvpLogoLeftHalf from "../Assets/cvp-logo-white-left-half.png";
+import democracylabLogo from '../Assets/democracylab-logo.png'
+import openseattleLogo from '../Assets/openseattle-logo.png'
 import housing from '../Assets/housing.svg';
 import employment from '../Assets/employment.svg';
 import education from '../Assets/education.svg';
@@ -55,11 +56,14 @@ const HomePage = () => {
 
   return (
     <Container maxWidth={false} id="main">
-      <Container maxWidth={false} className={classes.alignItemsAndJustifyContent} sx={{ backgroundColor: 'var(--light-gray)'}}>
-        <Stack direction="column" spacing={6} >
-            <Typography variant="h4">Vacation Eligibility Calculator</Typography>
-            <Typography variant="body1">Check your eligibility to vacate your conviction for free in less than 10 minutes!</Typography>
-            <Button variant="contained" sx={{ backgroundColor: "#4E6C99", width: "200px", textTransform: 'none'}}> Check My Eligibility </Button>
+      <Container maxWidth={false} className={classes.alignItemsAndJustifyContent} sx={{ backgroundColor: 'var(--light-gray)', height: '25rem'}}>
+        <Stack direction="row">
+          <Stack spacing={6} sx={{transform: "translateY(50%)"}} alignItems="flex-start">
+              <Typography variant="h3">Vacation Eligibility Calculator</Typography>
+              <Typography variant="h6">Check your eligibility to vacate your conviction for free in less than 10 minutes!</Typography>
+              <Button variant="contained" sx={{ backgroundColor: "#4E6C99", width: "200px", textTransform: 'none'}}> Check My Eligibility </Button>
+            </Stack>
+            <img src={cvpLogoLeftHalf} className="homepage__cvp-logo"/>
         </Stack>
       </Container>
 
@@ -73,7 +77,7 @@ const HomePage = () => {
 
       <Container maxWidth={false} className={classes.alignItemsAndJustifyContent} sx={{ backgroundColor: 'var(--dark-blue)', color: '#ffffff', padding: 5}}>
         <Typography variant="h3">How It Works</Typography>
-        <Stack direction="row">
+        <Stack direction="row" alignItems="center">
             <img className="icons" src={teamwork} />
             <Typography variant="subtitle1">
               We break down the laws into understandable language.
@@ -153,9 +157,9 @@ const HomePage = () => {
           <Button variant="contained" sx={{ backgroundColor: "#4E6C99", width: "200px", textTransform: 'none', marginBottom: 5 }}> Join the Team </Button>
         </Container>
 
-        <Container maxWidth={false} sx={{ margin: 5,}}>
+        <Container maxWidth={false} sx={{padding: 0}}>
           <Stack direction="row" sx={{ display: 'flex', padding: 5 }}>
-            <Grid container columns={2} spacing={6} >
+            <Grid container columns={2} spacing={6} justifyContent="space-between">
               <Grid item>
                 <List>
                   <ListItem>Home</ListItem>
@@ -169,8 +173,8 @@ const HomePage = () => {
             
               <Grid item sx={{ float: 'right', position: 'relative' }}>
                 <Stack direction="column" >
-                  <img src={logo2} />
-                  <img src={logo1} />
+                  <img src={openseattleLogo} />
+                  <img src={democracylabLogo} />
                 </Stack>
               </Grid>
             </Grid>

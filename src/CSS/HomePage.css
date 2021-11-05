@@ -12,16 +12,15 @@
     background-color: var(--grey);
 }
 
-#cvp-logo {
-    width: 120px;
-    height: 112px;
-    margin: 20px;
-}
-
 #description {
     max-width: 200px;
 }
 
 #main {
     padding: 0px;
+}
+
+.homepage__cvp-logo {
+    position: absolute;
+    right: 0;
 }
