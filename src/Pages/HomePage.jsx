@@ -63,7 +63,8 @@ const HomePage = () => {
           <Stack spacing={4} sx={{ paddingTop: '5em', paddingLeft: '16.3em' }} alignItems="flex-start" >
             <Typography variant="h3" style={{ fontWeight: 600 }}>Vacation Eligibility Calculator</Typography>
             <Typography variant="h6" sx={{ textAlign: 'left' }}>Check your eligibility to vacate your conviction <br /> for free in less than 10 minutes!</Typography>
-            <Button variant="contained" sx={{ backgroundColor: "#4E6C99", width: "200px", textTransform: 'none'}}> Check My Eligibility </Button>
+            <Typography variant="h5" style={{ fontWeight: 600 }}>Coming in January 2022!</Typography>
+            {/* <Button variant="contained" sx={{ backgroundColor: "#4E6C99", width: "200px", textTransform: 'none'}}> Check My Eligibility </Button> */}
           </Stack>
           <img src={cvpLogoLeftHalf} className="homepage__cvp-logo" alt={"CVP Logo"}/>
         </Stack>
