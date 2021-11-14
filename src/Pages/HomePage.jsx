@@ -138,9 +138,9 @@ const HomePage = () => {
 
           <Stack direction="column" sx={{ alignItems: 'center'}}>
             <img className="icons" src={travel} alt={"Travel Icon"}/>
-            <Typography varint="h6" style={{ fontWeight: 600 }}>Travel</Typography>
+            <Typography varint="h6" style={{ fontWeight: 600 }}>Government Assistance</Typography>
             <Typography variant="subtitle1" sx={{ width: '200px'}}>
-              Make it easier to travel when and where you want to.
+              Receive government help.
             </Typography>
           </Stack>
         </Stack>
