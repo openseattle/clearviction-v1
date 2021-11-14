@@ -26,5 +26,10 @@
 }
 
 #vector3 {
-    transform: rotate(12deg);
+    padding: 1em;
+    transform: rotate(180deg);
+}
+
+#vector2 { 
+    padding: 1em;
 }

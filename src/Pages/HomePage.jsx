@@ -84,12 +84,13 @@ const HomePage = () => {
             <Typography variant="subtitle1" sx={{ textAlign: 'left' }}>
               We break down the laws into <br /> understandable language.
             </Typography>
-            {/* <img src={vector3} id="vector3" /> */}
+            <img src={vector3} id="vector3" />
                 
             <img className="icons" src={phone} alt={"Mobile Phone Icon"}/>
             <Typography variant="body1" sx={{ textAlign: 'left' }}>
               You answer a few simple <br /> yes/no questions.
             </Typography>
+            <img src={vector3} id="vector2"/>
             
             <img className="icons" src={employment} alt={"Employment Icon"}/>
             <Typography variant="body1" sx={{ textAlign: 'left' }}>
