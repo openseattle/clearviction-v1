@@ -4,8 +4,7 @@ import { Switch, Route, Redirect } from "react-router-dom";
 //component imports
 import AboutPage from "./Pages/AboutPage";
 import HomePage from "./Pages/HomePage";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
+import Navigation from "./Components/Navigation";
 import CalculatorPage from "./Pages/CalculatorPage";
 import ErrorPage from "./Pages/ErrorPage";
 import { CalcProvider } from "./calcContext";
@@ -13,7 +12,7 @@ import { CalcProvider } from "./calcContext";
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Navigation />
       <Switch>
         <Route path="/404">
           <ErrorPage />
@@ -33,7 +32,6 @@ function App() {
           </Route>
         </CalcProvider>
       </Switch>
-      <Footer />
     </div>
   );
 }
