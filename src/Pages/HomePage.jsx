@@ -98,7 +98,9 @@ const HomePage = () => {
               This helps determine <br /> your vacation eligibility.
             </Typography>
         </Stack>
-        <Button variant="contained" sx={{ backgroundColor: "#4E6C99", width: "200px", textTransform: 'none'}}> Check My Eligibility </Button>
+        <Typography variant="h5" style={{ fontWeight: 600 }}>Coming in January 2022!</Typography>
+
+        {/* <Button variant="contained" sx={{ backgroundColor: "#4E6C99", width: "200px", textTransform: 'none'}}> Check My Eligibility </Button> */}
       </Container>
 
       <Container maxWidth={false} className={classes.alignItemsAndJustifyContent} sx={{ backgroundColor: 'var(--gray)', padding: 5 }}>
