@@ -24,3 +24,7 @@
     position: absolute;
     right: 0;
 }
+
+#vector3 {
+    transform: rotate(12deg);
+}
