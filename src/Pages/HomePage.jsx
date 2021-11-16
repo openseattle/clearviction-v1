@@ -22,7 +22,6 @@ import housing from '../Assets/housing.svg';
 import employment from '../Assets/employment.svg';
 import education from '../Assets/education.svg';
 import travel from '../Assets/travel.svg';
-import vector2 from '../Assets/Vector 2.svg';
 import vector3 from '../Assets/Vector 2.svg';
 import teamwork from '../Assets/teamwork.svg'
 import phone from '../Assets/phone.svg'
@@ -72,13 +71,42 @@ const HomePage = () => {
 
       <Container maxWidth={false}>        
         <Stack direction="row" spacing={12} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 10 }}>
-          <Button variant="contained" sx={{ backgroundColor: 'var(--light-gray)', color: '#000000', width: '341px', height: '44px', textTransform: 'none', fontWeight: '600'}}> How It Works </Button>
-          <Button variant="contained" sx={{ backgroundColor: 'var(--light-gray)', color: '#000000', width: '341px', height: '44px', textTransform: 'none', fontWeight: '600'}}> FAQs</Button>
-          <Button variant="contained" sx={{ backgroundColor: 'var(--light-gray)', color: '#000000', width: '341px', height: '44px', textTransform: 'none', fontWeight: '600'}}> Why Vacate? </Button>
+          <Button 
+            variant="contained" 
+            sx={{ 
+              backgroundColor: 'var(--light-gray)', 
+              color: '#000000', 
+              width: '341px', 
+              height: '44px', 
+              textTransform: 'none', 
+              fontWeight: '600'
+            }}>
+            <a href="#how-it-works">How It Works</a>
+          </Button>
+          <Button 
+            variant="contained" 
+            sx={{ 
+              backgroundColor: 'var(--light-gray)', 
+              color: '#000000', 
+              width: '341px', 
+              height: '44px', 
+              textTransform: 'none', 
+              fontWeight: '600'
+            }}><a href="#faq">FAQs</a></Button>
+          <Button 
+            variant="contained" 
+            sx={{ 
+              backgroundColor: 'var(--light-gray)', 
+              color: '#000000', 
+              width: '341px', 
+              height: '44px', 
+              textTransform: 'none', 
+              fontWeight: '600'
+            }}><a href="#why-vacate">Why Vacate?</a></Button>
         </Stack>
       </Container>
 
-      <Container maxWidth={false} className={classes.alignItemsAndJustifyContent} sx={{ backgroundColor: 'var(--dark-blue)', color: '#ffffff', padding: 5}}>
+      <Container id="how-it-works" maxWidth={false} className={classes.alignItemsAndJustifyContent} sx={{ backgroundColor: 'var(--dark-blue)', color: '#ffffff', padding: 5}}>
         <Typography variant="h3">How It Works</Typography>
         <Stack direction="row" alignItems="center" sx={{ justifyContent: 'center' }}>
             <img className="icons" src={teamwork} alt={"Teamwork Icon"}/>
@@ -103,14 +131,14 @@ const HomePage = () => {
         {/* <Button variant="contained" sx={{ backgroundColor: "#4E6C99", width: "200px", textTransform: 'none'}}> Check My Eligibility </Button> */}
       </Container>
 
-      <Container maxWidth={false} className={classes.alignItemsAndJustifyContent} sx={{ backgroundColor: 'var(--gray)', padding: 5 }}>
+      <Container id="faq" maxWidth={false} className={classes.alignItemsAndJustifyContent} sx={{ backgroundColor: 'var(--gray)', padding: 5 }}>
         <Stack direction="column" sx={{ alignItems: 'center', paddingTop: '1em' }}>
         <Typography variant="h3" sx={{ paddingBottom: '1em'}}>FAQs</Typography>
           <FAQAccordion />
         </Stack>
       </Container>
 
-      <Container maxWidth={false} className={classes.alignItemsAndJustifyContent} sx={{ padding: 5 }}>
+      <Container id="why-vacate" maxWidth={false} className={classes.alignItemsAndJustifyContent} sx={{ padding: 5 }}>
         <Typography variant="h3">Why Vacate?</Typography>
         <Typography varient="h5">A conviction vacation seals the offense from your record, <br /> and will give you more chance to access:</Typography>
 
