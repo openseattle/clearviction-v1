@@ -3,9 +3,13 @@ import {shallow} from 'enzyme';
 import Footer from '../Footer'
 
 describe("Footer", () => {
+    let footer;
 
-    const footer = shallow(<Footer />);
-
+    beforeEach((q)=>{
+            footer = shallow(<Footer />);
+        }
+    );
+    
     it("Should be a footer", () => {
         
         expect(footer.find(".footer-cont")).toHaveLength(1);
