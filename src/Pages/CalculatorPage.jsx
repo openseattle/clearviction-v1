@@ -29,7 +29,7 @@ const CalculatorPage = () => {
   const renderButtons = (buttons) =>
     buttons.map(({ text, href, color }) => {
       return (
-        <Stack direction="column" style={{padding: 10}}>
+        <Stack key={text} direction="column" style={{padding: 10}}>
           <Button
             variant="contained"
             href={href}
@@ -43,20 +43,26 @@ const CalculatorPage = () => {
     }
   );
 
-  const renderBody = ({ type, text, href }) => {
+  const renderBody = ({ type, text, href, items }) => {
     switch (type) {
       case "paragraph":
         return (
-          <Typography variant="body1">
+          <Typography variant="body1" key={text}>
             {text}
           </Typography>
         );
       case "link":
         return (
-          <Link href={href} target="_blank" rel="noreferrer">
+          <Link href={href} target="_blank" rel="noreferrer" key={text}>
             {text}
           </Link>
         );
+      case "list":
+        return (
+          <ul key={items[0]}>
+            { items.map((item) => <li key={item}>{item}</li>) }
+          </ul>
+        )
       default:
         break;
     }

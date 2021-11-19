@@ -1,248 +1,223 @@
-import React from "react";
-import logo from "../Assets/CVP.png";
-import "../CSS/Home.css";
+import "../CSS/HomePage.css";
 import { useHistory } from "react-router-dom";
+import { makeStyles } from '@material-ui/core/styles'
+
+import FAQAccordion from '../Components/Accordion'
 
 /** MATERIAL UI IMPORTS */
 import { Typography } from "@mui/material";
-import Box from '@material-ui/core/Box';
 import Button from '@mui/material/Button';
+import Grid from '@mui/material/Grid';
+import Container from '@mui/material/Container';
+import Stack from '@mui/material/Stack';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import Divider from '@mui/material/Divider';
+
+import cvpLogoWhite from '../Assets/cvp-logo-white.png'
+import cvpLogoLeftHalf from "../Assets/cvp-logo-white-left-half.png";
+import democracylabLogo from '../Assets/democracylab-logo.png'
+import openseattleLogo from '../Assets/openseattle-logo.png'
+import housing from '../Assets/housing.svg';
+import employment from '../Assets/employment.svg';
+import education from '../Assets/education.svg';
+import travel from '../Assets/travel.svg';
+import vector3 from '../Assets/Vector 2.svg';
+import teamwork from '../Assets/teamwork.svg'
+import phone from '../Assets/phone.svg'
+
+const useStyles = makeStyles(theme => ({
+    marginAutoContainer: {
+      width: 500,
+      height: 80,
+      display: 'flex',
+      backgroundColor: 'gold',
+    },
+    marginAutoItem: {
+      margin: 'auto'
+    },
+    secondaryButton: {
+      backgroundColor: "#DCDCDC", 
+      color: "#000000", 
+      width: "300px", 
+      textTransform: 'none'
+    },
+    typogoraphy: {
+      h3: 600
+    }  
+}))
 
 const HomePage = () => {
-  const history = useHistory();
-  const handleCalcRedirect = () => {
-    history.push("/calculator");
-  };
+  // const history = useHistory();
+  // const handleCalcRedirect = () => {
+  //   history.push("/calculator");
+  // };
+
+  const classes = useStyles()
 
   return (
-    <Box>
-      <section className="container-fluid"></section>
-      <section className="container-fluid-header">
-        <div className="row">
-          <div className="col" id="jumbotron-text">
-            <Typography variant="h4">Washington Conviction Vacation Project</Typography>
-          </div>
-          <div className="col">
-            <img src={logo} id="logo" alt="logo"></img>
-          </div>
-        </div>
-      </section>
+    <Container maxWidth={false} id="main">
+      <Container maxWidth={false} className={classes.alignItemsAndJustifyContent} sx={{ backgroundColor: 'var(--light-gray)', height: '25rem'}}>
+        <Stack direction="row">
+          <Stack spacing={4} sx={{ paddingTop: '5em', paddingLeft: '16.3em' }} alignItems="flex-start" >
+            <Typography variant="h3" style={{ fontWeight: 600 }}>Vacation Eligibility Calculator</Typography>
+            <Typography variant="h6" sx={{ textAlign: 'left' }}>Check your eligibility to vacate your conviction <br /> for free in less than 10 minutes!</Typography>
+            <Typography variant="h5" style={{ fontWeight: 600 }}>Coming in January 2022!</Typography>
+            {/* <Button variant="contained" sx={{ backgroundColor: "#4E6C99", width: "200px", textTransform: 'none'}}> Check My Eligibility </Button> */}
+          </Stack>
+          <img src={cvpLogoLeftHalf} className="homepage__cvp-logo" alt={"CVP Logo"}/>
+        </Stack>
+      </Container>
 
-      <section className="container-fluid-content" id="section-one">
-        <div className="row">
-          <div className="col">
-            <Typography variant="h5">Who We Are</Typography>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="56"
-              height="56"
-              fill="currentColor"
-              className="bi bi-people-fill"
-              viewBox="0 0 16 16"
-            >
-              <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-              <path
-                fillRule="evenodd"
-                d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"
-              />
-              <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z" />
-            </svg>
-            <Typography variant="body1">
-              The Washington Conviction Vacation Project is an all-volunteer
-              team focused on reducing barriers faced by people with a
-              conviction on their record. If you’d like to know more about the
-              barriers that people continue to face for years after satisfying
-              the sentence they are issued by a court, Center for American
-              Progress has created a{" "}
-              <a href="https://www.americanprogress.org/issues/criminal-justice/reports/2020/04/15/483264/expunging-clearing-criminal-records/">
-                great reference.{" "}
-              </a>
-            </Typography>
-            <Typography variant="body1">
-              “Vacation” is what the court calls it when they make a conviction
-              no longer visible to prospective employers, landlords, and the
-              like. It’s not gone, it’s just invisible to society.
-      
-              We are doing this by streamlining the process of vacating eligible
-              convictions in Washington State.
-            </Typography>
-          </div>
-          <div className="col">
-            <Typography variant="h5">The Problem</Typography>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="56"
-              height="56"
-              fill="currentColor"
-              className="bi bi-patch-question-fill"
-              viewBox="0 0 16 16"
-            >
-              <path d="M5.933.87a2.89 2.89 0 0 1 4.134 0l.622.638.89-.011a2.89 2.89 0 0 1 2.924 2.924l-.01.89.636.622a2.89 2.89 0 0 1 0 4.134l-.637.622.011.89a2.89 2.89 0 0 1-2.924 2.924l-.89-.01-.622.636a2.89 2.89 0 0 1-4.134 0l-.622-.637-.89.011a2.89 2.89 0 0 1-2.924-2.924l.01-.89-.636-.622a2.89 2.89 0 0 1 0-4.134l.637-.622-.011-.89a2.89 2.89 0 0 1 2.924-2.924l.89.01.622-.636zM7.002 11a1 1 0 1 0 2 0 1 1 0 0 0-2 0zm1.602-2.027c.04-.534.198-.815.846-1.26.674-.475 1.05-1.09 1.05-1.986 0-1.325-.92-2.227-2.262-2.227-1.02 0-1.792.492-2.1 1.29A1.71 1.71 0 0 0 6 5.48c0 .393.203.64.545.64.272 0 .455-.147.564-.51.158-.592.525-.915 1.074-.915.61 0 1.03.446 1.03 1.084 0 .563-.208.885-.822 1.325-.619.433-.926.914-.926 1.64v.111c0 .428.208.745.585.745.336 0 .504-.24.554-.627z" />
-            </svg>
-            <Typography variant="body1">
-              The process of vacating a conviction is convoluted, making it
-              difficult for most folks to navigate. It requires a number of
-              steps that can be difficult to accomplish: gathering documents,
-              filing motions with the court, scheduling hearings with a judge,
-              as well as determining eligibility. Each step requires time and
-              know-how, increasing the barrier of entry for applicants to
-              reaching vacation status.
-            </Typography>
-            <Typography variant="body1">
-              Hiring an attorney can simplify the process, but it’s unaffordable
-              for most, and while free volunteer services are available, these
-              clinics are inaccessible, and only cover a few of the steps within
-              the process.
-            </Typography>
-          </div>
-          <div className="col">
-            <Typography variant="h5">Our Goal</Typography>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="56"
-              height="56"
-              fill="currentColor"
-              className="bi bi-lightbulb-fill"
-              viewBox="0 0 16 16"
-            >
-              <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z" />
-            </svg>
-            <Typography variant="body1">
-              We believe that we can create software that simplifies some of the
-              steps people go through when asking a court to vacate their
-              convictions.
-            </Typography>
-            <Typography variant="body1">
-              We will be creating and releasing the software bit by bit, making
-              sure earlier features work before stacking on additional features.
-              Whichever parts of the process the software helps with first, and
-              whether we limit the first versions to particular counties or
-              conviction types will be a function of our Research and Design
-              activities, spoken of below.
-            </Typography>
-          </div>
-        </div>
-      </section>
+      <Container maxWidth={false}>        
+        <Stack direction="row" spacing={12} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', padding: 10 }}>
+          <Button 
+            variant="contained" 
+            sx={{ 
+              backgroundColor: 'var(--light-gray)', 
+              color: '#000000', 
+              width: '341px', 
+              height: '44px', 
+              textTransform: 'none', 
+              fontWeight: '600'
+            }}>
+            <a href="#how-it-works">How It Works</a>
+          </Button>
+          <Button 
+            variant="contained" 
+            sx={{ 
+              backgroundColor: 'var(--light-gray)', 
+              color: '#000000', 
+              width: '341px', 
+              height: '44px', 
+              textTransform: 'none', 
+              fontWeight: '600'
+            }}><a href="#faq">FAQs</a></Button>
+          <Button 
+            variant="contained" 
+            sx={{ 
+              backgroundColor: 'var(--light-gray)', 
+              color: '#000000', 
+              width: '341px', 
+              height: '44px', 
+              textTransform: 'none', 
+              fontWeight: '600'
+            }}><a href="#why-vacate">Why Vacate?</a></Button>
+        </Stack>
+      </Container>
 
-      <section className="container-fluid-content">
-        <div className="row">
-          <div className="col">
-            <Typography variant="h5">Research Findings</Typography>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="56"
-              height="56"
-              fill="currentColor"
-              className="bi bi-clipboard-data"
-              viewBox="0 0 16 16"
-            >
-              <path d="M4 11a1 1 0 1 1 2 0v1a1 1 0 1 1-2 0v-1zm6-4a1 1 0 1 1 2 0v5a1 1 0 1 1-2 0V7zM7 9a1 1 0 0 1 2 0v3a1 1 0 1 1-2 0V9z" />
-              <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z" />
-              <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z" />
-            </svg>
-            <Typography variant="body1">
-              We have conducted a round of interviews with attorneys who are
-              subject matter experts in conviction vacations and surfaced a
-              number of challenges their clients typically face. These pain
-              points fall within 4 categories: determining vacation eligibility,
-              communication with clients, finding conviction records, and
-              interaction with courts.
+      <Container id="how-it-works" maxWidth={false} className={classes.alignItemsAndJustifyContent} sx={{ backgroundColor: 'var(--dark-blue)', color: '#ffffff', padding: 5}}>
+        <Typography variant="h3">How It Works</Typography>
+        <Stack direction="row" alignItems="center" sx={{ justifyContent: 'center' }}>
+            <img className="icons" src={teamwork} alt={"Teamwork Icon"}/>
+            <Typography variant="subtitle1" sx={{ textAlign: 'left' }}>
+              We break down the laws into <br /> understandable language.
             </Typography>
-          </div>
-          <div className="col">
-            <Typography variant="h5">Product & Design</Typography>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="56"
-              height="56"
-              fill="currentColor"
-              className="bi bi-easel"
-              viewBox="0 0 16 16"
-            >
-              <path d="M8 0a.5.5 0 0 1 .473.337L9.046 2H14a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1h-1.85l1.323 3.837a.5.5 0 1 1-.946.326L11.092 11H8.5v3a.5.5 0 0 1-1 0v-3H4.908l-1.435 4.163a.5.5 0 1 1-.946-.326L3.85 11H2a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h4.954L7.527.337A.5.5 0 0 1 8 0zM2 3v7h12V3H2z" />
-            </svg>
-            <Typography variant="body1">
-              Based on our research and product release plan, we have decided to
-              tackle <em>determining vacation eligibility</em> first. Multiple
-              states have successfully implemented different versions of this
-              type of software. Not only do they provide a proof of concept that
-              this type of software is in demand and can work, but they have
-              also inspired us with ideas for different features that we could
-              incorporate into our work in Washington State.
+            <img src={vector3} id="vector3" />
+                
+            <img className="icons" src={phone} alt={"Mobile Phone Icon"}/>
+            <Typography variant="body1" sx={{ textAlign: 'left' }}>
+              You answer a few simple <br /> yes/no questions.
             </Typography>
-          </div>
-          <div className="col">
-            <Typography variant="h5" onClick={handleCalcRedirect}>Eligibility Calculator</Typography>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="56"
-              height="56"
-              fill="currentColor"
-              className="bi bi-calculator"
-              viewBox="0 0 16 16"
-            >
-              <path d="M12 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h8zM4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H4z" />
-              <path d="M4 2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-2zm0 4a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3-6a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm0 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-4z" />
-            </svg>
-            <Typography variant="body1">
-              Our first release will be a tool that helps clients determine
-              whether a conviction they have qualifies for vacationーwhether
-              they should even bother trying to get the court to vacate it. This
-              eligibility calculator is rooted in the Revised Code of
-              Washington/laws (RCW) which the subject matter expert attorneys we
-              mentioned above typically use.
+            <img src={vector3} id="vector2"/>
+            
+            <img className="icons" src={employment} alt={"Employment Icon"}/>
+            <Typography variant="body1" sx={{ textAlign: 'left' }}>
+              This helps determine <br /> your vacation eligibility.
             </Typography>
-          </div>
-        </div>
-      </section>
+        </Stack>
+        <Typography variant="h5" style={{ fontWeight: 600 }}>Coming in January 2022!</Typography>
 
-      <section className="container-fluid-content">
-        <div className="row">
-          <Typography variant="h3">Future Plans</Typography>
-          <div className="col">
-          <Typography variant="body1">
-              We have all sorts of additional tools in mind that could help
-              applicants locate court documents, prepare and file relevant
-              motions with the court, and track their progress and status. We
-              are investigating the feasibility of a Turbo Tax style interface
-              to simplify this process, and then e-filing the forms in counties
-              where it is permitted.
-            </Typography>
-          </div>
-          <div className="col">
-            <Typography variant="body1">
-              Additional tools are being explored to assist volunteer attorneys
-              - ones who normally specialize in other legal areas - navigate the
-              conviction vacation domain when they help out in those free legal
-              clinics. These tools will help prime these attorneys to be in a
-              better position to represent individuals across the state.
-            </Typography>
-          </div>
-          <div className="col">
-          <Typography variant="body1">
-              We are only limited by each court’s cooperation and the bounds of
-              our volunteers' time, which is why we can use any help that you
-              are willing to offer. If you are interested in learning more about
-              the project or volunteering your skills and time, please connect
-              with us!
-            </Typography>
-          </div>
-        </div>
-      </section>
+        {/* <Button variant="contained" sx={{ backgroundColor: "#4E6C99", width: "200px", textTransform: 'none'}}> Check My Eligibility </Button> */}
+      </Container>
 
-      <section className="container-fluid-content">
-        <div className="row">
-          <div className="col">
-            <Typography variant="h5">Want to Learn More?</Typography>
-            <Button 
-              onClick={"mailto:cvp@seamus.work"}
-              style={
-                { backgroundColor: "#4e6c99", color: "#ffffff" }}
-            >Contact Us!</Button>
-          </div>
-        </div>
-      </section>
-    </Box>
+      <Container id="faq" maxWidth={false} className={classes.alignItemsAndJustifyContent} sx={{ backgroundColor: 'var(--gray)', padding: 5 }}>
+        <Stack direction="column" sx={{ alignItems: 'center', paddingTop: '1em' }}>
+        <Typography variant="h3" sx={{ paddingBottom: '1em'}}>FAQs</Typography>
+          <FAQAccordion />
+        </Stack>
+      </Container>
+
+      <Container id="why-vacate" maxWidth={false} className={classes.alignItemsAndJustifyContent} sx={{ padding: 5 }}>
+        <Typography variant="h3">Why Vacate?</Typography>
+        <Typography varient="h5">A conviction vacation seals the offense from your record, <br /> and will give you more chance to access:</Typography>
+
+        <Stack direction="row" spacing={16} sx={{ justifyContent: 'center', padding: '2em'}}>
+          <Stack direction="column">
+            <img className="icons" src={housing} alt={"Housing Icon"}/>
+            <Typography varint="h6" style={{ fontWeight: 600 }}>Housing</Typography>
+            <Typography variant="subtitle1" sx={{ width: '200px'}}>
+              Make it easier to find and be approved for rent or purchasing a home.
+            </Typography>
+          </Stack>
+        
+          <Stack direction="column" sx={{ alignItems: 'center'}}>
+            <img className="icons" src={employment} alt={"Employment Icon"}/>
+            <Typography varint="h6" style={{ fontWeight: 600 }}>Employment</Typography>
+            <Typography variant="subtitle1" sx={{ width: '200px'}}>
+              Reduce barriers to finding and obtaining employment.
+            </Typography>
+          </Stack>
+
+          <Stack direction="column" sx={{ alignItems: 'center'}}>
+            <img className="icons" src={education} alt={"Education Icon"}/>
+            <Typography varint="h6" style={{ fontWeight: 600 }}>Education</Typography>
+            <Typography variant="subtitle1" sx={{ width: '200px'}}>
+              Apply for scholarships, programs, degrees or certificates.
+            </Typography>
+          </Stack>
+
+          <Stack direction="column" sx={{ alignItems: 'center'}}>
+            <img className="icons" src={travel} alt={"Travel Icon"}/>
+            <Typography varint="h6" style={{ fontWeight: 600 }}>Government Assistance</Typography>
+            <Typography variant="subtitle1" sx={{ width: '200px'}}>
+              Receive government help.
+            </Typography>
+          </Stack>
+        </Stack>
+
+          <Button variant="contained" sx={{ backgroundColor: "#4E6C99", width: "200px", textTransform: 'none', marginTop: 5}}> Learn More </Button>
+        </Container>
+
+        <Container maxWidth={false} className={classes.alignItemsAndJustifyContent} sx={{ backgroundColor: 'var(--dark-blue)', color: '#ffffff', padding: 5}}>
+          <img src={cvpLogoWhite} id="cvp-logo" alt={"CVP Logo"}/>
+          <Stack direction="column" spacing={4} sx={{ padding: 5, alignItems: 'center' }}>
+            <Typography variant="body1" sx={{width: '800px', textAlign: 'center'}}>
+              The Conviction Vacation Project connects volunteers passionate about reducing barriers and making it easier for those with convictions in Washington State. 
+            </Typography>
+            <Typography variant="body1" sx={{width: '800px', textAlign: 'center'}}>
+              We’re working together to create a tool to make navigating the conviction vacation process easier. Currently we are designing and building an eligibility calculator to help people determine if their conviction is eligible for vacation.
+            </Typography>
+          </Stack>
+          <Button variant="contained" sx={{ backgroundColor: "#4E6C99", width: "200px", textTransform: 'none', marginBottom: 5 }}> Join the Team </Button>
+        </Container>
+
+        <Container maxWidth={false} sx={{padding: 0}}>
+          <Stack direction="row" sx={{ display: 'flex', padding: 5 }}>
+            <Grid container columns={2} spacing={6} justifyContent="space-between">
+              <Grid item>
+                <List>
+                  <ListItem>Home</ListItem>
+                  <ListItem>Volunteer</ListItem>
+                  <ListItem>Calculator</ListItem>
+                  <ListItem>Resources</ListItem>
+                  <ListItem>About</ListItem>
+                  <ListItem>Contact</ListItem>
+                </List>
+              </Grid>
+            
+              <Grid item sx={{ float: 'right', position: 'relative' }}>
+                <Stack direction="column" >
+                  <img src={openseattleLogo} alt={"Open Seattle Logo"}/>
+                  <img src={democracylabLogo} alt={"Democracy Lab Logo"}/>
+                </Stack>
+              </Grid>
+            </Grid>
+          </Stack>
+          <Divider sx={{ marginTop: 1, marginBottom: 1 }} />
+          <Typography sx={{paddingBottom: '3em'}}>The information on this site is not, nor should it be, considered legal advice.</Typography>
+        </Container>
+      </Container>
   );
 };
 

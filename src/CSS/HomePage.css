@@ -1,0 +1,39 @@
+a {
+    text-decoration: none;
+    color: #000000;
+}
+.icons {
+    width: 200px;
+    height: 200px;
+}
+
+.dark-bg {
+    background-color: var(--dark-blue);
+    color: #ffffff;
+}
+
+.light-bg {
+    background-color: var(--grey);
+}
+
+#description {
+    max-width: 200px;
+}
+
+#main {
+    padding: 0px;
+}
+
+.homepage__cvp-logo {
+    position: absolute;
+    right: 0;
+}
+
+#vector3 {
+    padding: 1em;
+    transform: rotate(180deg);
+}
+
+#vector2 { 
+    padding: 1em;
+}
