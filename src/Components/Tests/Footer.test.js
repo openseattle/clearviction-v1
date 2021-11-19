@@ -5,7 +5,7 @@ import Footer from '../Footer'
 describe("Footer", () => {
     let footer;
 
-    beforeEach((q)=>{
+    beforeEach(()=>{
             footer = shallow(<Footer />);
         }
     );
