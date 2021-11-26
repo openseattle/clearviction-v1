@@ -4,7 +4,7 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Typography } from "@mui/material";
 
-const ACCORDIAN_WIDTH = '852px'
+const ACCORDIAN_WIDTH = '500px'
 
 export default function FAQAccordion() {
     return (

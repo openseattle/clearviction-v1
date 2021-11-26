@@ -1,4 +1,5 @@
 import "./App.css";
+
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
 //component imports
@@ -8,10 +9,20 @@ import Navigation from "./Components/Navigation";
 import CalculatorPage from "./Pages/CalculatorPage";
 import ErrorPage from "./Pages/ErrorPage";
 import { CalcProvider } from "./calcContext";
+import { makeStyles, Grid } from '@material-ui/core';
+
+// const useStyles = makeStyles(() => ({
+//   container: {
+//       border: '3px solid purple',
+//       padding: '10px',
+//       display: 'block'
+//   }
+// }));
 
 function App() {
+  // const classes = useStyles();
   return (
-    <div className="App">
+    <div>
       <Navigation />
       <Switch>
         <Route path="/404">

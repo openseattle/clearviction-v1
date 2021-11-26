@@ -1,34 +1,36 @@
-a {
-    text-decoration: none;
-    color: #000000;
+html,body {
+    margin:0px;
+    padding:0px;
 }
+
 .icons {
     width: 200px;
     height: 200px;
 }
 
+.row {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+}
+
 .dark-bg {
     background-color: var(--dark-blue);
+    text-align: center;
     color: #ffffff;
 }
 
 .light-bg {
     background-color: var(--grey);
-}
-
-#description {
-    max-width: 200px;
-}
-
-#main {
-    padding: 0px;
+    text-align: center;
 }
 
 .homepage__cvp-logo {
     position: absolute;
     right: 0;
+    padding: 20px;
 }
-
+/* 
 #vector3 {
     padding: 1em;
     transform: rotate(180deg);
@@ -36,4 +38,4 @@ a {
 
 #vector2 { 
     padding: 1em;
-}
+} */
