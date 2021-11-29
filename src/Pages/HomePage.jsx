@@ -12,7 +12,7 @@ import ListItem from '@mui/material/ListItem';
 import Divider from '@mui/material/Divider';
 
 import cvpLogoWhite from '../Assets/cvp-logo-white.png'
-// import cvpLogoLeftHalf from "../Assets/cvp-logo-white-left-half.png";
+import cvpLogoLeftHalf from "../Assets/cvp-logo-white-left-half.png";
 import democracylabLogo from '../Assets/democracylab-logo.png'
 import openseattleLogo from '../Assets/openseattle-logo.png'
 import housing from '../Assets/housing.svg';
@@ -25,23 +25,28 @@ import phone from '../Assets/phone.svg'
 const HomePage = () => {
   return (
     <div class="container-fluid">
-      <div class="row">
+      <div class="row light-bg">
         <div class="col-lg">
+          <div id="hero-parent">
+          <div id="left-content">
           <Text variant={"h2"} text={"Vacation Eligibility Calculator"}></Text>
           <Text variant={"h3"} text={"Check your eligibility to vacate your conviction for free in less than 10 minutes!"}></Text>
           <Text variant={"h5"} text={"Coming in January 2022!"}></Text>
+          </div>
+          <div id="right-content"><img src={cvpLogoLeftHalf} id="hero-logo" alt={"CVP Logo"}/></div>
+        </div>
         </div>
       </div>
 
       <div class="row">
         <div class="col-lg">
-          <PrimaryButton text={"How It Works"}/>
-          <PrimaryButton text={"FAQs"}/>
-          <PrimaryButton text={"Why Vacate?"}/>
+          <PrimaryButton text={"How It Works"} href={"#how-it-works"}/>
+          <PrimaryButton text={"FAQs"} href={"#faq"}/>
+          <PrimaryButton text={"Why Vacate"} href={"#why-vacate"}/>
         </div>
       </div>
 
-      <div class="row" id="dark-bg">
+      <div class="row dark-bg" id="how-it-works">
         <Text variant="h3" text={"How It Works"}></Text>
 
         <div class="col-sm">
@@ -60,14 +65,14 @@ const HomePage = () => {
         <Text variant="h5" text={"Coming in January 2022!"}></Text>
       </div>
 
-      <div class="row" id="light-bg">
+      <div class="row light-bg" id="faq">
         <div class="col-sm">
           <Text variant="h3" text={"FAQs"}></Text>
           <div id="accordion"><FAQAccordion /></div>
         </div>
       </div>
 
-      <div class="row">
+      <div class="row" id="why-vacate">
         <Text variant={"h3"} text={"Why Vacate?"}></Text>
         <Text variant={"subtitle"} text={"A conviction vacation seals the offense from your record, and will give you more chance to access:"}></Text>
 
@@ -96,12 +101,12 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div class="row" id="dark-bg">
+      <div class="row dark-bg">
         <div class="col-lg">
           <br/><img src={cvpLogoWhite} id="cvp-logo" alt={"CVP Logo"}/>
           <br/><Text variant={"subtitle"} text={"The Conviction Vacation Project connects volunteers passionate about reducing barriers and making it easier for those with convictions in Washington State."}></Text>
           <br/><Text variant={"subtitle"} text={"We’re working together to create a tool to make navigating the conviction vacation process easier. Currently we are designing and building an eligibility calculator to help people determine if their conviction is eligible for vacation."}></Text>
-          <br/><SecondaryButton text={"Join the Team "}/>
+          <br/><SecondaryButton text={"Join the Team"}/>
         </div>
       </div>
 

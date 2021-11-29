@@ -3,27 +3,44 @@
     height: 150px;
 }
 
+.container-fluid {
+    margin-top: -20px;
+}
+
 .row {
     text-align: center;
     justify-content: center;
     padding: 10px;
 }
 
-#dark-bg {
+.dark-bg {
     background-color: var(--dark-blue);
     text-align: center;
     color: #ffffff;
 }
 
-#light-bg {
+.light-bg {
     background-color: var(--gray);
     text-align: center;
 }
 
-.homepage__cvp-logo {
+#hero-parent {
+    height: 17vw;
+}
+
+#hero-logo {
     position: absolute;
-    right: 0;
-    padding: 20px;
+    right: 0px;
+    height: 300px;
+}
+
+#left-content {
+    float: left;
+    padding-left: 20vw;
+}
+
+#right-content {
+    float: right;
 }
 
 #cvp-logo {
@@ -32,4 +49,18 @@
 
 #accordion {
     display: inline-block;
+}
+
+a {
+    color: #000000;
+}
+
+@media only screen and (max-width: 600px) {
+    #hero-logo {
+        display: none;
+    }
+
+    #left-content {
+        padding-left: 0px;
+    }   
 }
