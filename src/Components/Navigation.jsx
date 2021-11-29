@@ -1,36 +1,30 @@
 import "../CSS/Navigation.css";
-import Close from "@mui/icons-material/Close";
 import { useState } from "react";
 import navLogo from '../Assets/cvp-logo-white.png';
 
 const Navigation = () => {
-    const [menuIsOpen, setMenuIsOpen] = useState(false);
-
     return (
         <>
-            {/* <div className="nav-bar__desktop">
-                <a href="/"><img src={navLogo} width={25} alt="cvp logo"/></a>
-                <a className="logo" href="/">Washington Conviction Vacation Project</a>
-                <a className="nav-items" href="/calculator">Calculator</a>
-                <a className="nav-items" href="/about">About</a>
+            <nav class="navbar navbar-expand-lg navbar-dark" id="nav">
+                <a class="navbar-brand" href="/"><img id="nav-logo" src={navLogo} alt="cvp logo"/>Washington Conviction Vacation Project</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            </div>
-            {menuIsOpen && (
-                <div className="nav-menu">
-                    <div className="nav-menu__header">
-                        Menu
-                        <Close onClick={() => setMenuIsOpen(false)} />
-                    </div>
-                    <nav className="nav-menu__body">
-                        <a href="/">Home</a>
-                        <a href="/calculator">Calculator</a>
-                        <a href="/about">About</a>
-                    </nav>
-                    <div className="nav-menu__disclaimer">
-                        The information on this site is not, nor should it be, considered legal advice.
-                    </div>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/calculator">Calculator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about">About</a>
+                    </li>
+                </ul>
                 </div>
-            )} */}
+            </nav>
         </>
     );
 };
