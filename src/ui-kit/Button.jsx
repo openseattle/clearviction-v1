@@ -8,7 +8,8 @@ export default function PrimaryButton({ text }) {
             color: 'black',
             width: '327px',
             padding: '10px',
-            margin: '10px'
+            margin: '10px',
+            fontSize: '16px'
         }}>
             {text}
         </Button>        

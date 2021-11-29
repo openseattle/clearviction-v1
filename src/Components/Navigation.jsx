@@ -1,5 +1,4 @@
 import "../CSS/Navigation.css";
-import { useState } from "react";
 import navLogo from '../Assets/cvp-logo-white.png';
 
 const Navigation = () => {

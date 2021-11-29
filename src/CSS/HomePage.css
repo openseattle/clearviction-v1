@@ -1,8 +1,3 @@
-html,body {
-    margin:0px;
-    padding:0px;
-}
-
 .icons {
     width: 150px;
     height: 150px;
@@ -11,17 +6,16 @@ html,body {
 .row {
     text-align: center;
     justify-content: center;
-    padding: 20px;
-    margin: 20px;
+    padding: 10px;
 }
 
-.dark-bg {
+#dark-bg {
     background-color: var(--dark-blue);
     text-align: center;
     color: #ffffff;
 }
 
-.light-bg {
+#light-bg {
     background-color: var(--gray);
     text-align: center;
 }
@@ -36,12 +30,6 @@ html,body {
     padding: 20px;
 }
 
-/* 
-#vector3 {
-    padding: 1em;
-    transform: rotate(180deg);
+#accordion {
+    display: inline-block;
 }
-
-#vector2 { 
-    padding: 1em;
-} */
