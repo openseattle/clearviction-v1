@@ -86,3 +86,21 @@
     text-decoration: none;
     padding: 0 2em;
 }
+
+#nav {
+    background-color: var(--dark-blue);
+    color: #ffffff;
+}
+
+#nav a {
+    color: #ffffff;
+}
+
+#nav-logo {
+    width: 25px;
+    margin: 0px 10px;
+}
+
+.navbar-nav .nav-link {
+    margin: 0px 10px;
+}

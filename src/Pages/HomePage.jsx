@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles'
 import FAQAccordion from '../Components/Accordion'
 
 import PrimaryButton from '../ui-kit/Button';
+import SecondaryButton from '../ui-kit/SecondaryButton';
 import Text from '../ui-kit/Text';
 
 /** MATERIAL UI IMPORTS */
@@ -36,35 +37,35 @@ const HomePage = () => {
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg">
-            <PrimaryButton text={"How It Works"}/>
-            <PrimaryButton text={"FAQs"}/>
-            <PrimaryButton text={"Why Vacate?"}/>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg">
             <Text variant="h3" text={"Vacation Eligibility Calculator"}></Text>
             <Text variant="body" text={"Check your eligibility to vacate your conviction for free in less than 10 minutes!"}></Text>
             <Text variant="h5" text={"Coming in January 2022!"}></Text>
           </div>
         </div>
 
+        <div class="row">
+          <div class="col-lg">
+            <PrimaryButton text={"How It Works"}/>
+            <PrimaryButton text={"FAQs"}/>
+            <PrimaryButton text={"Why Vacate?"}/>
+          </div>
+        </div>
+
         <div class="row" className="dark-bg">
           <Text variant="h3" text={"How It Works"}></Text>
 
-          <div class="col-">
+          <div class="col-sm">
             <img className="icons" src={teamwork} alt={"Teamwork Icon"}/>
-            <Text variant="subtitle" text={"We break down the laws into understandable language."}></Text>
+            <br/><Text variant="subtitle" text={"We break down the laws into understandable language."}></Text>
           </div>
 
-          <div class="col-">
+          <div class="col-sm">
             <img className="icons" src={phone} alt={"Mobile Phone Icon"}/>
-            <Text variant="subtitle" text={"You answer a few simple yes/no questions."}></Text>
+            <br/><Text variant="subtitle" text={"You answer a few simple yes/no questions."}></Text>
           </div>
-          <div class="col-">
+          <div class="col-sm">
           <img className="icons" src={employment} alt={"Employment Icon"}/>
-          <Text variant="subtitle" text={"This helps determine your vacation eligibility."}></Text>
+          <br/><Text variant="subtitle" text={"This helps determine your vacation eligibility."}></Text>
           </div>
           <Text variant="h5" text={"Coming in January 2022!"}></Text>
         </div>
@@ -122,7 +123,7 @@ const HomePage = () => {
             <Typography variant="body1">
               We’re working together to create a tool to make navigating the conviction vacation process easier. Currently we are designing and building an eligibility calculator to help people determine if their conviction is eligible for vacation.
             </Typography>
-            <Button variant="contained" sx={{ backgroundColor: "#4E6C99", width: "200px", textTransform: 'none', marginBottom: 5 }}> Join the Team </Button>
+            <SecondaryButton text={"Join the Team "}/>
           </div>
         </div>
 
@@ -150,11 +151,9 @@ const HomePage = () => {
               </Grid>
             </Stack>
             <Divider sx={{ marginTop: 1, marginBottom: 1 }} />
-            <Typography sx={{paddingBottom: '3em'}}>The information on this site is not, nor should it be, considered legal advice.</Typography> 
+            <Text variant="body" style="paddingBottom: 3em" text={"The information on this site is not, nor should it be, considered legal advice."}></Text>
           </div>
         </div>
-
-
       </div>
     </>
   );

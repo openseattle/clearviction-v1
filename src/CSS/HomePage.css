@@ -4,12 +4,13 @@ html,body {
 }
 
 .icons {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
 }
 
 .row {
     text-align: center;
+    justify-content: center;
     padding: 20px;
     margin: 20px;
 }
@@ -21,7 +22,7 @@ html,body {
 }
 
 .light-bg {
-    background-color: var(--grey);
+    background-color: var(--gray);
     text-align: center;
 }
 
@@ -30,6 +31,11 @@ html,body {
     right: 0;
     padding: 20px;
 }
+
+#cvp-logo {
+    padding: 20px;
+}
+
 /* 
 #vector3 {
     padding: 1em;
