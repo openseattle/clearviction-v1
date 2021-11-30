@@ -37,10 +37,12 @@
 #left-content {
     float: left;
     padding-left: 20vw;
+    width: 80%;
 }
 
 #right-content {
     float: right;
+    width: 20%;
 }
 
 #cvp-logo {
