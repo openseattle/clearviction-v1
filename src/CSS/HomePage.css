@@ -35,6 +35,7 @@
 }
 
 #left-content {
+    text-align: left;
     float: left;
     padding-left: 20vw;
     width: 80%;
@@ -53,8 +54,8 @@
     display: inline-block;
 }
 
-a {
-    color: #000000;
+.line-vector {
+    width: 100px;
 }
 
 @media only screen and (max-width: 600px) {
@@ -64,5 +65,15 @@ a {
 
     #left-content {
         padding-left: 0px;
+        width: 100%;
     }   
+
+    #right-content {
+        float: right;
+        width: 0%;
+    }
+}
+
+a {
+    color: #000000;
 }
