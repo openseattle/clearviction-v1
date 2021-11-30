@@ -4,12 +4,10 @@ import AccordionDetails from '@mui/material/AccordionDetails';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Typography } from "@mui/material";
 
-const ACCORDIAN_WIDTH = '852px'
-
 export default function FAQAccordion() {
     return (
         <>
-        <Accordion sx={{ width: ACCORDIAN_WIDTH }}>
+        <Accordion>
             <AccordionSummary
             expandIcon={<ExpandMoreIcon sx={{color: '#ffffff' }}/>}
             aria-controls="panel1a-content"
@@ -25,7 +23,7 @@ export default function FAQAccordion() {
                 </Typography>
             </AccordionDetails>
         </Accordion>
-        <Accordion sx={{ width: ACCORDIAN_WIDTH }}>
+        <Accordion>
             <AccordionSummary
             expandIcon={<ExpandMoreIcon sx={{color: '#ffffff' }}/>}
             aria-controls="panel2a-content"
@@ -41,7 +39,7 @@ export default function FAQAccordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion sx={{ width: ACCORDIAN_WIDTH }}>
+      <Accordion>
             <AccordionSummary
             expandIcon={<ExpandMoreIcon sx={{color: '#ffffff' }}/>}
             aria-controls="panel2a-content"
@@ -57,7 +55,7 @@ export default function FAQAccordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion sx={{ width: ACCORDIAN_WIDTH }}> 
+      <Accordion> 
             <AccordionSummary
             expandIcon={<ExpandMoreIcon sx={{color: '#ffffff' }}/>}
             aria-controls="panel2a-content"
@@ -73,7 +71,7 @@ export default function FAQAccordion() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion sx={{ width: ACCORDIAN_WIDTH }}>
+      <Accordion>
             <AccordionSummary
             expandIcon={<ExpandMoreIcon sx={{color: '#ffffff' }}/>}
             aria-controls="panel2a-content"

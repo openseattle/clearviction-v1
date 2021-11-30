@@ -1,7 +1,7 @@
 import "./App.css";
+
 import React from "react";
 import { Switch, Route, Redirect } from "react-router-dom";
-//component imports
 import AboutPage from "./Pages/AboutPage";
 import HomePage from "./Pages/HomePage";
 import Navigation from "./Components/Navigation";
@@ -11,7 +11,7 @@ import { CalcProvider } from "./calcContext";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <Navigation />
       <Switch>
         <Route path="/404">
