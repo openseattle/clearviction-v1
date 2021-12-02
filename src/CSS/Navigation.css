@@ -15,3 +15,13 @@
 .navbar-nav .nav-link {
     margin: 0px 10px;
 }
+
+#navbar-text {
+    padding: 15px;
+}
+
+@media only screen and (min-width: 600px) {
+    #navbar-text {
+        display: none;
+    }
+}
