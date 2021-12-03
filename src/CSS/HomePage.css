@@ -1,39 +1,79 @@
-a {
-    text-decoration: none;
-    color: #000000;
-}
 .icons {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
+}
+
+.container-fluid {
+    margin-top: -20px;
+}
+
+.row {
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
 }
 
 .dark-bg {
     background-color: var(--dark-blue);
+    text-align: center;
     color: #ffffff;
 }
 
 .light-bg {
-    background-color: var(--grey);
+    background-color: var(--gray);
+    text-align: center;
 }
 
-#description {
-    max-width: 200px;
+#hero-parent {
+    height: 17vw;
 }
 
-#main {
-    padding: 0px;
-}
-
-.homepage__cvp-logo {
+#hero-logo {
     position: absolute;
-    right: 0;
+    right: 0px;
+    height: 300px;
 }
 
-#vector3 {
-    padding: 1em;
-    transform: rotate(180deg);
+#left-content {
+    text-align: left;
+    float: left;
+    padding-left: 20vw;
+    width: 80%;
 }
 
-#vector2 { 
-    padding: 1em;
+#right-content {
+    float: right;
+    width: 20%;
+}
+
+#cvp-logo {
+    padding: 20px;
+}
+
+#accordion {
+    display: inline-block;
+}
+
+.line-vector {
+    width: 100px;
+}
+
+@media only screen and (max-width: 600px) {
+    #hero-logo {
+        display: none;
+    }
+
+    #left-content {
+        padding-left: 0px;
+        width: 100%;
+    }   
+
+    #right-content {
+        float: right;
+        width: 0%;
+    }
+}
+
+a {
+    color: #000000;
 }
