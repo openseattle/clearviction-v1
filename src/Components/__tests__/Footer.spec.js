@@ -3,8 +3,10 @@ import {shallow} from 'enzyme';
 import Footer from '../Footer'
 
 describe("Footer", () => {
-
-    const footer = shallow(<Footer />);
+    let footer;
+    beforeEach(
+        () =>  footer = shallow(<Footer />)
+    );
 
     it("Should be a footer", () => {
         
