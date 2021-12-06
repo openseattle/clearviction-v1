@@ -19,10 +19,17 @@ describe("<ToolTipModal />", () => {
 
     it("displays passed in props tooltip data on the button", () => {
         const wrapper = mount(<ToolTipModel text={"test"}/>);
-        expect(wrapper.props().text).toEqual("test");
+        expect(wrapper.find(Button).text()).toEqual("test");
 
         const button = wrapper.find(Button);
         expect(button.text()).toEqual("test");
+    })
+
+    it("simulates button changes modal state", () => {
+        const wrapper = shallow(<ToolTipModel />);
+        expect(wrapper.find(Modal).props().open).toBe(false)
+        wrapper.find(Button).simulate('click');
+        expect(wrapper.find(Modal).props().open).toBe(true);
     })
 
 });
