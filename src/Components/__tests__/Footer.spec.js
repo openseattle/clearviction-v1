@@ -1,12 +1,14 @@
 import React from 'react';
 import {shallow} from 'enzyme';
-import Footer from '../Components/Footer'
+import Footer from '../Footer'
 
-describe("Footer", () => {
+describe("<Footer />", () => {
+    let footer;
+    beforeEach( () =>  {
+        footer = shallow(<Footer />)
+    });
 
-    const footer = shallow(<Footer />);
-
-    it("Should be a footer", () => {
+    it("should be a footer", () => {
         
         expect(footer.find(".footer-cont")).toHaveLength(1);
     })
