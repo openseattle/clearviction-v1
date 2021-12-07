@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import Text from "../ui-kit/Text";
 
 const style = {
   position: 'absolute',
@@ -29,7 +30,7 @@ const ToolTipModal = (props)  => {
           { color: "black", textDecoration: "underline" }
         }
       >
-        {props.text}
+        <Text text={props.text} variant={"h5"}></Text>
       </Button>
       <Modal
         open={open}
@@ -38,7 +39,7 @@ const ToolTipModal = (props)  => {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+          <Typography id="modal-modal-description" sx={{ mt: 2, fontSize: '18px' }}>
             <p>
                 If you don't know how to answer this question, you may be able to locate
                 your records here:{" "}

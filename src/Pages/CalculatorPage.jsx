@@ -2,9 +2,9 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 import calculatorPages from "../data/calculatorPages";
 import ToolTipModal from "../Components/ToolTipModal";
+import Text from "../ui-kit/Text";
 
 /** MATERIAL UI IMPORTS */
-import { Typography } from "@mui/material";
 import Box from '@material-ui/core/Box';
 import Link from '@mui/material/Link';
 import Container from "@mui/material/Container";
@@ -36,7 +36,7 @@ const CalculatorPage = () => {
             style={
               { backgroundColor: BUTTON_COLORS[color || "blue"] }}
           >
-            {text}
+            <Text text={text} variant={"h6"}></Text>
           </Button>
         </Stack>
       );
@@ -47,9 +47,7 @@ const CalculatorPage = () => {
     switch (type) {
       case "paragraph":
         return (
-          <Typography variant="body1" key={text}>
-            {text}
-          </Typography>
+          <Text text={text} variant={"h4"}></Text>
         );
       case "link":
         return (
@@ -77,7 +75,7 @@ const CalculatorPage = () => {
       <Container maxWidth="xs" padding={10}>
         <Stack direction="column" spacing={2}>
           { header && 
-              <Typography variant="h5">{header}</Typography> 
+              <Text text={header} variant={"h3"}></Text>
           }
           { body && 
             <Container maxWidth="sm">{ body.map(renderBody) }</Container>
@@ -100,7 +98,7 @@ const CalculatorPage = () => {
             </a>
           ) }
           { disclaimer && 
-            <Typography variant="body1">{disclaimer}</Typography> 
+            <Text text={disclaimer} variant={"h6"}></Text>
           }
         </Stack>
       </Container>
