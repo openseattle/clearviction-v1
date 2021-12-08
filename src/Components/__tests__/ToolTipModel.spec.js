@@ -1,6 +1,7 @@
 import React from 'react';
 import {mount,} from 'enzyme';
 import Modal from '@mui/material/Modal';
+import Backdrop from '@mui/material/Backdrop';
 import Button  from '@mui/material/Button';
 
 import ToolTipModel from '../ToolTipModal';
@@ -26,10 +27,14 @@ describe("<ToolTipModal />", () => {
         expect(button.text()).toEqual("test");
     })
 
-    it("simulates button changes modal state", () => {
-        expect(wrapper.find(Modal).props().open).toBe(false)
+    it("simulates button opening and closing modal", () => {
+        expect(wrapper.find(Modal).props().open).toBe(false);
         wrapper.find(Button).simulate('click');
         expect(wrapper.find(Modal).props().open).toBe(true);
+        wrapper.find(Backdrop).simulate('click');
+        expect(wrapper.find(Modal).props().open).toBe(false);
     })
+
+
 
 });
