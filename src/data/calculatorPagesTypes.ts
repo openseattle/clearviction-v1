@@ -9,6 +9,7 @@ interface PageData {
     tooltip?: TooltipType;
     footerLink?: FooterLink;
     disclaimer?: string;
+    thankYou?: string;
 }
 
 type NonEmptyList<T> = {

@@ -12,6 +12,7 @@ import { Pages, BodyType, TooltipType } from "./calculatorPagesTypes";
 const CALC_PREFIX = "/calculator";
 const disclaimer =
     "The information provided by the Conviction Vacation Project is not intended to replace legal advice and does not in any way constitute an attorney-client relationship. If you need legal advice or assistance, we strongly recommend that you reach out to a licensed professional.";
+const thankYou = "Thank you for using the CVP eligibility calculator"
 
 const data: Pages = {
     "landing-0": {
@@ -455,7 +456,7 @@ const data: Pages = {
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "", // TODO: link to first "Questions about circumstances that affect CV eligibility" page
+                href: CALC_PREFIX + "/qac-0",
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -854,6 +855,234 @@ const data: Pages = {
                 href: CALC_PREFIX + "/main-0",
             },
         ],
+        disclaimer,
+    },
+    "qac-0": {
+        header: "This set of questions covers other conviction-related circumstances that will affect conviction eligibility.",
+        buttons: [
+            {
+                text: BUTTON_TEXT.CONTINUE,
+                href: CALC_PREFIX + "/qac-1",
+            },
+        ]
+    },
+    "qac-1": {
+        header: "Do you have any pending criminal charges in any court in Washington or another state, or in any federal court?",
+        buttons: [
+            {
+                text: BUTTON_TEXT.YES,
+                href: CALC_PREFIX + "/qac-ineligible-0",
+            },
+            {
+                text: BUTTON_TEXT.NO,
+                href: CALC_PREFIX + "/qac-2",
+            },
+        ],
+        tooltip: TooltipType.NOT_SURE,
+    },
+    "qac-2": {
+        header: "Have you been convicted of a new crime in Washington or any other state in the three years prior to the application for vacation?",
+        buttons: [
+            {
+                text: BUTTON_TEXT.YES,
+                href: CALC_PREFIX + "/qac-ineligible-1",
+            },
+            {
+                text: BUTTON_TEXT.NO,
+                href: CALC_PREFIX + "/qac-3",
+            },
+        ],
+        tooltip: TooltipType.NOT_SURE,
+    },
+    "qac-3": {
+        header: "Are you currently restrained by any of the following: ",
+        body: [
+            {
+                type: BodyType.LIST,
+                items: [
+                    "a domestic violence protection order",
+                    "a no-contact order",
+                    "an antiharassment order ",
+                    "a civil restraining order which restrains one party from contacting the other party"
+                ],
+            },
+        ],
+        buttons: [
+            {
+                text: BUTTON_TEXT.YES,
+                href: CALC_PREFIX + "/qac-ineligible-3",
+            },
+            {
+                text: BUTTON_TEXT.NO,
+                href: CALC_PREFIX + "/qac-4",
+            },
+        ],
+        tooltip: TooltipType.NOT_SURE,
+    },
+    "qac-4": {
+        header: "Have you violated a prior restraining order in the five years preceding the application for vacation?",
+        buttons: [
+            {
+                text: BUTTON_TEXT.YES,
+                href: CALC_PREFIX + "/qac-ineligible-4",
+            },
+            {
+                text: BUTTON_TEXT.NO,
+                href: CALC_PREFIX + "",
+            },
+        ],
+        tooltip: TooltipType.NOT_SURE,
+    },
+    "qac-ineligible-0": {
+        body: [
+            {
+                type: BodyType.PARAGRAPH,
+                text: "As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because you answered YES to the below question:",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "“Do you have any pending criminal charges in any court in Washington or another state, or in any federal court?”",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "You might become eligible in the future if all pending criminal charges in any court in Washington, another state, or a federal court are resolved and if your application meets all other eligibility criteria.",
+            },
+        ],
+        disclaimer,
+    },
+    "qac-ineligible-1": {
+        body: [
+            {
+                type: BodyType.PARAGRAPH,
+                text: "As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because you answered YES to the below question: ",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "“Have you been convicted of a new crime in Washington or any other state in the three years prior to the application for vacation?”",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "You might become eligible in the future if you apply to vacate a conviction three years or more after your convictions for any new crimes, and if your application meets all other eligibility criteria.",
+            },
+        ],
+        disclaimer,
+    },
+    "qac-ineligible-2": {
+        body: [
+            {
+                type: BodyType.PARAGRAPH,
+                text: "As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because you answered YES to the below question: ",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "“Have you been convicted of a new crime in Washington or any other state in the three years prior to the application for vacation?”",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "You might become eligible in the future if you apply to vacate a conviction three years or more after your convictions for any new crimes, and if your application meets all other eligibility criteria.",
+            },
+        ],
+        disclaimer,
+    },
+    "qac-ineligible-3": {
+        header: `As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because you answered YES to the below question: 
+                 Are you currently restrained by any of the following:`,
+        body: [
+            {
+                type: BodyType.LIST,
+                items: [
+                    "a domestic violence protection order",
+                    "a no-contact order",
+                    "an antiharassment order ",
+                    "a civil restraining order which restrains one party from contacting the other party"
+                ],
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "You might become eligible in the future if the above orders are removed, and if your application meets all other eligibility criteria."
+            }
+        ],
+        disclaimer,
+    },
+    "qac-ineligible-4": {
+        body: [
+        {
+            type: BodyType.PARAGRAPH,
+            text: "As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because you answered YES to the below question: ",
+        },
+        {
+            type: BodyType.PARAGRAPH,
+            text: "“Have you violated a prior restraining order in the five years preceding the application for vacation?”",
+        },
+        {
+            type: BodyType.PARAGRAPH,
+            text: `You might become eligible in the future if at least five pass from your prior restraining order violation and when you apply 
+            for vacation, and if your application meets all other eligibility criteria.`
+        },
+    ],
+        disclaimer,
+    },
+    "too-0": {
+        header: "This final set of questions covers the terms of your offense.",
+        buttons: [
+            {
+                text: BUTTON_TEXT.CONTINUE,
+                href: CALC_PREFIX + "/too-1",
+            },
+        ]
+    },
+    "too-1": {
+        header: "Have you completed the terms of the sentence for your offense?",
+        buttons: [
+            {
+                text: BUTTON_TEXT.YES,
+                href: CALC_PREFIX + "/too-2",
+            },
+            {
+                text: BUTTON_TEXT.NO,
+                href: CALC_PREFIX + "/too-ineligible-0",
+            },
+        ],
+        tooltip: TooltipType.NOT_SURE,
+    },
+    "too-2": {
+        header: "Have three years passed since completion of the sentence including financial obligations?",
+        buttons: [
+            {
+                text: BUTTON_TEXT.YES,
+                href: CALC_PREFIX + "/too-eligible-0",
+            },
+            {
+                text: BUTTON_TEXT.NO,
+                href: CALC_PREFIX + "/too-ineligible-1",
+            },
+        ],
+        tooltip: TooltipType.NOT_SURE,
+    },
+    "too-eligible-0": {
+        header: "You are eligible!",
+        body: [
+            {
+                type: BodyType.PARAGRAPH,
+                text: "Your next step is to fill out a Motion and Declaration for Order Vacating Conviction (Court Form No. CrRLJ 09.0100)",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "Next steps, including scheduling your hearing, can be found on the court's instruction sheet, CrRLJ 09.0300, found at the same website referenced",
+            },
+        ],
+        thankYou,
+    },
+    "too-ineligible-0": {
+        header: `As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because you have not completed the terms of the conviction for this offense.  
+                You might be eligible when you’ve completed the terms of your conviction and three hears have passed since the completion of your sentence, 
+                including any financial obligations.`,
+        disclaimer,
+    },
+    "too-ineligible-1": {
+        header: `As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because it has been less than three years since your 
+                conviction was completed including your financial obligations.
+                You might be eligible when 3 years have passed since completing the terms of your conviction including any financial obligations.`,
         disclaimer,
     },
 };
