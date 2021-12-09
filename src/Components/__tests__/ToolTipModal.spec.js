@@ -31,7 +31,4 @@ describe("<ToolTipModal />", () => {
         wrapper.find(Backdrop).simulate('click');
         expect(wrapper.find(Modal).props().open).toBe(false);
     })
-
-
-
 });
