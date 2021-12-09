@@ -12,23 +12,35 @@ describe("<ToolTipModal />", () => {
         wrapper = mount(<ToolTipModal text={"test"} />)
     })
 
-    it("renders a modal", () => {
-        expect(wrapper.find(Modal)).toHaveLength(1);
+    describe("ui", () => {
+        it("should render a modal", () => {
+            expect(wrapper.exists(Modal)).toEqual(true);
+        });
+        
+        it("should render a button", () => {
+            expect(wrapper.exists(Button)).toEqual(true);
+        });
+
+        it("should render correct text on the button", () => {
+            expect(wrapper.find(Button).text()).toEqual("test");
+        });
     });
 
-    it("renders a button", () => {
-        expect(wrapper.find(Button)).toHaveLength(1);
+    describe("clicking on the button", () => {
+        it("should open the modal", () => {
+            expect(wrapper.find(Modal).props().open).toEqual(false);
+            wrapper.find(Button).simulate('click');
+            expect(wrapper.find(Modal).props().open).toEqual(true);
+        });
     });
+    
+    describe("clicking outside the modal", ()=> {
+        it("should close the modal", () => {
+            wrapper.find(Button).simulate("click");
+            expect(wrapper.find(Modal).prop("open")).toEqual(true);
+            wrapper.find(Backdrop).simulate('click');
+            expect(wrapper.find(Modal).prop("open")).toEqual(false);
 
-    it("displays passed in props tooltip data on the button", () => {
-        expect(wrapper.find(Button).text()).toEqual("test");
-    })
-
-    it("simulates button opening and closing modal", () => {
-        expect(wrapper.find(Modal).props().open).toBe(false);
-        wrapper.find(Button).simulate('click');
-        expect(wrapper.find(Modal).props().open).toBe(true);
-        wrapper.find(Backdrop).simulate('click');
-        expect(wrapper.find(Modal).props().open).toBe(false);
+        })
     })
 });
