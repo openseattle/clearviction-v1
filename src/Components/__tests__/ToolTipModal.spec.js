@@ -1,15 +1,15 @@
 import React from 'react';
-import {mount,} from 'enzyme';
+import {mount} from 'enzyme';
 import Modal from '@mui/material/Modal';
 import Backdrop from '@mui/material/Backdrop';
 import Button  from '@mui/material/Button';
 
-import ToolTipModel from '../ToolTipModal';
+import ToolTipModal from '../ToolTipModal';
 
 describe("<ToolTipModal />", () => {
     let wrapper;
     beforeEach(() => {
-        wrapper = mount(<ToolTipModel text={"test"} />)
+        wrapper = mount(<ToolTipModal text={"test"} />)
     })
 
     it("renders a modal", () => {
@@ -22,9 +22,6 @@ describe("<ToolTipModal />", () => {
 
     it("displays passed in props tooltip data on the button", () => {
         expect(wrapper.find(Button).text()).toEqual("test");
-
-        const button = wrapper.find(Button);
-        expect(button.text()).toEqual("test");
     })
 
     it("simulates button opening and closing modal", () => {
