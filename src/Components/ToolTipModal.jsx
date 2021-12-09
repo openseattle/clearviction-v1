@@ -40,13 +40,11 @@ const ToolTipModal = (props)  => {
       >
         <Box sx={style}>
           <Typography id="modal-modal-description" sx={{ mt: 2, fontSize: '18px' }}>
-            <p>
                 If you don't know how to answer this question, you may be able to locate
                 your records here:{" "}
                 <a target="_blank" href="https://www.wsp.wa.gov/crime/criminal-history" rel="noreferrer">
                 https://www.wsp.wa.gov/crime/criminal-history
                 </a>
-            </p>
           </Typography>
         </Box>
       </Modal>
