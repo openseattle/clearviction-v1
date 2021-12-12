@@ -28,12 +28,7 @@ describe("<FAQAccordian />", () => {
     });
 
     describe("clicking the accordion", () => {
-        it("opens the accordian", () => {
-            const accordion = wrapper.find(Accordion).at(0);
-            accordion.simulate("click");
-            console.log(accordion.props().debug())
-            expect(accordion.props().expanded).toEqual(true)
-        });
+        it.todo("opens the accordian");
         it.todo("closes the accordian");
     });
 })
