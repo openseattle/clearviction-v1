@@ -12,19 +12,19 @@ describe("<AboutDetails />", () => {
         });
 
         it('should render container', () => {
-            expect(wrapper.exists('.container-sm')).toEqual(true);
+            expect(wrapper.exists('#about-details')).toEqual(true);
         });
         it('should render an image', () => {
-            expect(wrapper.exists('.about-img')).toEqual(true);
+            expect(wrapper.exists('#about-profile-pic')).toEqual(true);
         });
         it('should render a title', () => {
             expect(wrapper.exists('#about-title')).toEqual(true);
         });
         it('should render a h5 for a name', () => {
-            expect(wrapper.exists('h5')).toEqual(true);
+            expect(wrapper.exists('#about-name')).toEqual(true);
         });
         it('should render a description', () => {
-            expect(wrapper.exists('p')).toEqual(true);
+            expect(wrapper.exists('#about-desc')).toEqual(true);
         });
 
         describe('content', () => {
@@ -40,13 +40,13 @@ describe("<AboutDetails />", () => {
             });
            
             it('text should match prop name value', () => {
-                expect(wrapperMounted.find('h5').text()).toEqual('test');
+                expect(wrapperMounted.find('#about-name').text()).toEqual('test');
             });
             it('text should match prop title value', () => {
                 expect(wrapperMounted.find('#about-title').text()).toEqual('test title');
             });
             it('text should match prop description value', () => {
-                expect(wrapperMounted.find('p').text()).toEqual('test desc');
+                expect(wrapperMounted.find('#about-desc').text()).toEqual('test desc');
             });
         });
     });
