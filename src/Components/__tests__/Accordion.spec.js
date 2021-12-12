@@ -12,18 +12,17 @@ describe("<FAQAccordian />", () => {
     });
 
     describe("ui", () => {
-
         it("renders accordian elements", () => {
-            expect(wrapper.find(Accordion)).not.toHaveLength(0);
+            expect(wrapper.exists(Accordion)).toEqual(true);
         });
         it("renders the summarys", () => {
-            expect(wrapper.find(AccordionSummary)).not.toHaveLength(0);
+            expect(wrapper.exists(AccordionSummary)).toEqual(true);
         });
         it("renders the details", () => {
-            expect(wrapper.find(AccordionDetails)).not.toHaveLength(0);
+            expect(wrapper.exists(AccordionDetails)).toEqual(true);
         });
         it("renders the text", () => {
-            expect(wrapper.find(Text)).not.toHaveLength(0);
+            expect(wrapper.exists(Text)).toEqual(true);
         });
     });
 
