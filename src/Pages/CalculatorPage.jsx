@@ -47,7 +47,7 @@ const CalculatorPage = () => {
     switch (type) {
       case "paragraph":
         return (
-          <Text text={text} variant={"h4"}></Text>
+          <Text key={text} text={text} variant={"h4"} ></Text>
         );
       case "link":
         return (

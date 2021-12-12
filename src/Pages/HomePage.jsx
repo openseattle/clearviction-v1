@@ -23,9 +23,9 @@ import "../CSS/HomePage.css";
 
 const HomePage = () => {
   return (
-    <div class="container-fluid">
-      <div class="row light-bg">
-        <div class="col-lg">
+    <div className="container-fluid">
+      <div className="row light-bg">
+        <div className="col-lg">
           <div id="hero-parent">
             <div id="left-content">
               <Text
@@ -47,18 +47,18 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-lg">
+      <div className="row">
+        <div className="col-lg">
           <PrimaryButton text={"How It Works"} href={"#how-it-works"} />
           <PrimaryButton text={"FAQs"} href={"#faq"} />
           <PrimaryButton text={"Why Vacate"} href={"#why-vacate"} />
         </div>
       </div>
 
-      <div class="row dark-bg" id="how-it-works">
+      <div className="row dark-bg" id="how-it-works">
         <Text variant={"h3"} text={"How It Works"}></Text>
 
-        <div class="col-sm">
+        <div className="col-sm">
           <img className="icons" src={teamwork} alt={"Teamwork Icon"} />
           <br />
           <Text
@@ -68,7 +68,7 @@ const HomePage = () => {
           ></Text>
         </div>
 
-        <div class="col-sm">
+        <div className="col-sm">
           <img className="icons" src={phone} alt={"Mobile Phone Icon"} />
           <br />
           <Text
@@ -77,7 +77,7 @@ const HomePage = () => {
             fontFamily={"Lora"}
           ></Text>
         </div>
-        <div class="col-sm">
+        <div className="col-sm">
           <img className="icons" src={employment} alt={"Employment Icon"} />
           <br />
           <Text
@@ -89,8 +89,8 @@ const HomePage = () => {
         <Text variant={"h3"} text={"Coming in January 2022!"}></Text>
       </div>
 
-      <div class="row light-bg" id="faq">
-        <div class="col-sm">
+      <div className="row light-bg" id="faq">
+        <div className="col-sm">
           <Text variant="h3" text={"FAQs"}></Text>
           <div id="accordion">
             <FAQAccordion />
@@ -98,7 +98,7 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div class="row" id="why-vacate">
+      <div className="row" id="why-vacate">
         <Text variant={"h3"} text={"Why Vacate?"}></Text>
         <Text
           variant={"h4"}
@@ -107,7 +107,7 @@ const HomePage = () => {
           }
         ></Text>
 
-        <div class="col-sm">
+        <div className="col-sm">
           <img className="icons" src={housing} alt={"Housing Icon"} />
           <Text variant={"h6"} text={"Housing"} fontWeight={"600"}></Text>
           <Text
@@ -119,7 +119,7 @@ const HomePage = () => {
           ></Text>
         </div>
 
-        <div class="col-sm">
+        <div className="col-sm">
           <img className="icons" src={employment} alt={"Employment Icon"} />
           <Text variant={"h6"} text={"Employment"} fontWeight={"600"}></Text>
           <Text
@@ -129,7 +129,7 @@ const HomePage = () => {
           ></Text>
         </div>
 
-        <div class="col-sm">
+        <div className="col-sm">
           <img className="icons" src={education} alt={"Education Icon"} />
           <Text variant={"h6"} text={"Education"} fontWeight={"600"}></Text>
           <Text
@@ -139,7 +139,7 @@ const HomePage = () => {
           ></Text>
         </div>
 
-        <div class="col-sm">
+        <div className="col-sm">
           <img className="icons" src={travel} alt={"Travel Icon"} />
           <Text
             variant={"h6"}
@@ -152,15 +152,15 @@ const HomePage = () => {
             fontFamily={"Lora"}
           ></Text>
         </div>
-        <div class="row">
-          <div class="col-lg">
+        <div className="row">
+          <div className="col-lg">
             <SecondaryButton text={"Learn More"} />
           </div>
         </div>
       </div>
 
-      <div class="row dark-bg">
-        <div class="col-lg">
+      <div className="row dark-bg">
+        <div className="col-lg">
           <br />
           <img src={cvpLogoWhite} id="cvp-logo" alt={"CVP Logo"} />
           <br />
@@ -185,8 +185,8 @@ const HomePage = () => {
         </div>
       </div>
 
-      <div class="row">
-        <div class="col-lg">
+      <div className="row">
+        <div className="col-lg">
           <Stack direction="row" sx={{ display: "flex", padding: 5 }}>
             <Grid
               container
