@@ -1,8 +1,6 @@
 import react from 'react';
 import { mount, shallow } from 'enzyme';
-
 import AboutDetails from '../AboutDetails';
-
 
 describe("<AboutDetails />", () => {
     describe('ui', () => {

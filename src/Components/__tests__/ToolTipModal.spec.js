@@ -3,7 +3,6 @@ import {mount} from 'enzyme';
 import Modal from '@mui/material/Modal';
 import Backdrop from '@mui/material/Backdrop';
 import Button  from '@mui/material/Button';
-
 import ToolTipModal from '../ToolTipModal';
 
 describe("<ToolTipModal />", () => {
