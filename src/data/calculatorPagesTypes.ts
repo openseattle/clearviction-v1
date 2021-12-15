@@ -10,6 +10,13 @@ interface PageData {
     footerLink?: FooterLink;
     disclaimer?: string;
     thankYou?: string;
+    progressBar?: ProgressBar;
+}
+
+interface ProgressBar {
+    currentSectionName: string;
+    currentSection: number;
+    totalSections: number; // TODO: can this be calculated dynamically?
 }
 
 type NonEmptyList<T> = {
