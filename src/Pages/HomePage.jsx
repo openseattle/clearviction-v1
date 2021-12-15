@@ -1,6 +1,6 @@
 import FAQAccordion from "../Components/Accordion";
 import PrimaryButton from "../ui-kit/Button";
-import SecondaryButton from "../ui-kit/SecondaryButton";
+// import SecondaryButton from "../ui-kit/SecondaryButton";
 import Text from "../ui-kit/Text";
 
 import Grid from "@mui/material/Grid";
