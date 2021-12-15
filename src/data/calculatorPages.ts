@@ -6,8 +6,7 @@
  * See calculatorPagesTypes.ts for schema to identify the available page types and required fields.
  */
 
-import { BUTTON_TEXT } from "./calculatorEnums";
-import { Pages, BodyType, TooltipType } from "./calculatorPagesTypes";
+import { Pages, BodyType, TooltipType, BUTTON_TEXT } from "./calculatorPagesTypes";
 
 const CALC_PREFIX = "/calculator";
 const disclaimer =

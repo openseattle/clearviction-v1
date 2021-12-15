@@ -1,6 +1,6 @@
 import FAQAccordion from "../Components/Accordion";
 import PrimaryButton from "../ui-kit/Button";
-import SecondaryButton from "../ui-kit/SecondaryButton";
+// import SecondaryButton from "../ui-kit/SecondaryButton";
 import Text from "../ui-kit/Text";
 
 import Grid from "@mui/material/Grid";
@@ -154,7 +154,7 @@ const HomePage = () => {
         </div>
         <div className="row">
           <div className="col-lg">
-            <SecondaryButton text={"Learn More"} />
+            {/* <SecondaryButton text={"Learn More"} /> */}
           </div>
         </div>
       </div>
@@ -181,7 +181,7 @@ const HomePage = () => {
             }
           ></Text>
           <br />
-          <SecondaryButton text={"Join the Team"} />
+          {/* <SecondaryButton text={"Join the Team"} /> */}
         </div>
       </div>
 
@@ -206,11 +206,11 @@ const HomePage = () => {
                       Calculator
                     </a>
                   </ListItem>
-                  <ListItem>
+                  {/* <ListItem>
                     <a href="/" style={{ color: "#000000" }}>
                       Contact
                     </a>
-                  </ListItem>
+                  </ListItem> */}
                 </List>
               </Grid>
 
