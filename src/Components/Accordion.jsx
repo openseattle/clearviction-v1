@@ -23,16 +23,16 @@ export default function FAQAccordion() {
               <Text fontFamily={"Lora"} variant={"h5"} text={header}></Text>
             </AccordionSummary>
             <AccordionDetails>
-              <Text fontFamily={"Lora"} variant={"h5"} text={body1}></Text>
-              <Text fontFamily={"Lora"} variant={"h5"} text={body2}></Text>
+              <Text fontFamily={"Lora"} variant={"h5"} textAlign={"left"} text={body1}></Text>
+              <Text fontFamily={"Lora"} variant={"h5"} textAlign={"left"} text={body2}></Text>
               {body3 && (
-                <Text fontFamily={"Lora"} variant={"h5"} text={body3}></Text>
+                <Text fontFamily={"Lora"} variant={"h5"} textAlign={"left"} text={body3}></Text>
               )}
               {body4 && (
-                <Text fontFamily={"Lora"} variant={"h5"} text={body4}></Text>
+                <Text fontFamily={"Lora"} variant={"h5"} textAlign={"left"} text={body4}></Text>
               )}
               {body5 && (
-                <Text fontFamily={"Lora"} variant={"h5"} text={body5}></Text>
+                <Text fontFamily={"Lora"} variant={"h5"} textAlign={"left"} text={body5}></Text>
               )}
             </AccordionDetails>
           </Accordion>
