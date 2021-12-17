@@ -927,7 +927,7 @@ const data: Pages = {
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "",
+                href: CALC_PREFIX + "/too-0",
             },
         ],
         tooltip: TooltipType.NOT_SURE,
