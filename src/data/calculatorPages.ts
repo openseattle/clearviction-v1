@@ -6,8 +6,7 @@
  * See calculatorPagesTypes.ts for schema to identify the available page types and required fields.
  */
 
-import { BUTTON_TEXT } from "./calculatorEnums";
-import { Pages, BodyType, TooltipType } from "./calculatorPagesTypes";
+import { Pages, BodyType, TooltipType, BUTTON_TEXT } from "./calculatorPagesTypes";
 
 const CALC_PREFIX = "/calculator";
 const disclaimer =
@@ -1107,7 +1106,7 @@ const data: Pages = {
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "",
+                href: CALC_PREFIX + "/too-0",
             },
         ],
         tooltip: TooltipType.NOT_SURE,
