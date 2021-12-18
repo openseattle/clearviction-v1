@@ -8,21 +8,21 @@ import ErrorPage from "./Pages/ErrorPage";
 function App() {
   return (
     <div>
-        <Navigation />
-        <Switch>
+      <Navigation />
+      <Switch>
         <Route path="/404">
-            <ErrorPage />
+          <ErrorPage />
         </Route>
         <Route exact path="/">
-            <HomePage />
+          <HomePage />
         </Route>
         <Route path="/calculator/:pageId">
-            <CalculatorPage />
+          <CalculatorPage />
         </Route>
         <Route exact path="/calculator">
-            <Redirect to="/calculator/landing-0" />
+          <Redirect to="/calculator/landing-0" />
         </Route>
-        </Switch>
+      </Switch>
     </div>
   );
 }

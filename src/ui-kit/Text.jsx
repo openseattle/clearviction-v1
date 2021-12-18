@@ -7,7 +7,7 @@ export default function Text({
   fontWeight,
   fontFamily,
   fontSize,
-  textAlign
+  textAlign,
 }) {
   return (
     <Typography
@@ -19,7 +19,7 @@ export default function Text({
         padding: "5px",
         fontWeight: fontWeight,
         fontFamily: fontFamily,
-        textAlign: textAlign
+        textAlign: textAlign,
       }}
     >
       {text}
