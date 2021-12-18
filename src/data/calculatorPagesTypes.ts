@@ -1,65 +1,65 @@
 export interface Pages {
-    [pageId: string]: PageData;
+  [pageId: string]: PageData;
 }
 
 interface PageData {
-    header?: string;
-    body?: NonEmptyList<Body>;
-    buttons?: NonEmptyList<Button>;
-    tooltip?: TooltipType;
-    footerLink?: FooterLink;
-    disclaimer?: string;
-    thankYou?: string;
-    progressBar?: ProgressBar;
+  header?: string;
+  body?: NonEmptyList<Body>;
+  buttons?: NonEmptyList<Button>;
+  tooltip?: TooltipType;
+  footerLink?: FooterLink;
+  disclaimer?: string;
+  thankYou?: string;
+  progressBar?: ProgressBar;
 }
 
 interface ProgressBar {
-    currentSectionName: string;
-    currentSection: number;
-    totalSections: number; // TODO: can this be calculated dynamically?
+  currentSectionName: string;
+  currentSection: number;
+  totalSections: number; // TODO: can this be calculated dynamically?
 }
 
 type NonEmptyList<T> = {
-    0: T;
+  0: T;
 } & Array<T>;
 
 type Body = ParagraphBody | LinkBody | ListBody;
 
 export enum BodyType {
-    PARAGRAPH = "paragraph",
-    LINK = "link",
-    LIST = "list",
+  PARAGRAPH = "paragraph",
+  LINK = "link",
+  LIST = "list",
 }
 
 interface BaseBody {
-    type: BodyType;
+  type: BodyType;
 }
 
 interface ParagraphBody extends BaseBody {
-    text: string;
+  text: string;
 }
 
 interface LinkBody extends BaseBody {
-    text: string;
-    href: string;
+  text: string;
+  href: string;
 }
 
 interface ListBody extends BaseBody {
-    items: NonEmptyList<string>;
+  items: NonEmptyList<string>;
 }
 
 interface Button {
-    text: string;
-    href: string;
-    color?: string;
+  text: string;
+  href: string;
+  color?: string;
 }
 
 export enum TooltipType {
-    NOT_SURE = "I'm not sure.",
-    NOT_A_MISDEMEANOR = "My conviction is not a misdemeanor or I’m not sure.",
+  NOT_SURE = "I'm not sure.",
+  NOT_A_MISDEMEANOR = "My conviction is not a misdemeanor or I’m not sure.",
 }
 
 interface FooterLink {
-    text: string;
-    href: string;
+  text: string;
+  href: string;
 }

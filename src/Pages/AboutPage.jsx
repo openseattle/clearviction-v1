@@ -34,11 +34,7 @@ const AboutPage = () => {
           diverse skillset to help us advance our goal.
         </p>
         <p>Reach out to learn more and opportunities to volunteer with us.</p>
-        <Button
-          onClick={"mailto:cvp@seamus.work"}
-        >
-          Contact Us!
-        </Button>
+        <Button onClick={"mailto:cvp@seamus.work"}>Contact Us!</Button>
       </section>
     </div>
   );
