@@ -31,15 +31,6 @@
   max-height: calc(100vh- 10em);
 }
 
-.progressBar-wrapper
-{
-  width: 100%;
-  align-items: flex-start;
-  background-color:rgba(229, 229, 229, 1);
-  height: 15px;
-  border-radius: 10px;
-}
-
 .progressBar{
   width: 100%;
   background-color: rgba(229, 229, 229, 1);
@@ -51,17 +42,29 @@
   z-index:1;
   position: relative;
 }
+
 .progressBar-active {
   width: 0%;
   background-color: #4E6C99 ;
   height: 15px;
   overflow: hidden;
-  border-radius: 10px;
+  z-index:3;
+  position: absolute; 
+  top: 0; 
+  left: 0;
+}
+
+.progressBar-current {
+  width: 0%;
+  background-color: #8fa5c5 ;
+  height: 15px;
+  overflow: hidden;
   z-index:2;
   position: absolute; 
   top: 0; 
   left: 0;
 }
+
 .progressBar li {
   position:relative;
   list-style-type: none;
@@ -71,16 +74,22 @@
   border: 1px solid #FFFFFF;
   box-sizing: border-box;
   border-radius: 50%;
-  width: 17px;
-  height: 17px;
+  width: 16px;
+  height: 16px;
   font-size: 12px;
   color: #FFFFFF;
   float: left;
-  z-index:3;
+  z-index:4;
 }
 
-.progressBar li:nth-child(2)  {
+.progressBar li:nth-child(3)  {
   background: #4E6C99;
+}
+
+.progress-bar-title{
+  font-size: 14px;
+  line-height: 16px;
+  color: rgba(78, 108, 153, 0.65);
 }
 
 ul {

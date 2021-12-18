@@ -4,7 +4,6 @@ import calculatorPages from "../data/calculatorPages";
 import ToolTipModal from "../Components/ToolTipModal";
 import Text from "../ui-kit/Text";
 import ProgressBar from "../Components/ProgressBar";
-import "../CSS/Calculator.css";
 
 /** MATERIAL UI IMPORTS */
 import Box from '@material-ui/core/Box';

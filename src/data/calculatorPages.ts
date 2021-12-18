@@ -192,6 +192,11 @@ const data: Pages = {
     },
     "mar-eligible-0": {
         header: "From your answers, it seems that you may be eligible to vacate your marijuana misdemeanor conviction!",
+        progressBar: {
+            currentSectionName: "mar",
+            currentSection: 5,
+            totalSections: 4
+        },
         body: [
             {
                 type: BodyType.PARAGRAPH,
@@ -685,6 +690,11 @@ const data: Pages = {
     },
     "fsh-eligible": {
         header: "From your answers, it seems that you may be eligible to vacate your fishing misdemeanor conviction!",
+        progressBar: {
+            currentSectionName: "fsh",
+            currentSection: 5,
+            totalSections: 4
+        },
         body: [
             {
                 type: BodyType.PARAGRAPH,
@@ -924,6 +934,11 @@ const data: Pages = {
     },
     "pro-eligible": {
         header: "From your answers, it seems that you may be eligible to vacate your prostitution misdemeanor conviction!",
+        progressBar: {
+            currentSectionName: "pro",
+            currentSection: 8,
+            totalSections: 7
+        },
         body: [
             {
                 type: BodyType.PARAGRAPH,
@@ -1242,7 +1257,7 @@ const data: Pages = {
         header: "You are eligible!",
         progressBar: {
             currentSectionName: "ter",
-            currentSection: 3,
+            currentSection: 4,
             totalSections: 3
         },
         body: [
