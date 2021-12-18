@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { trackPageview } from "../trackingUtils"
 import FAQAccordion from "../Components/Accordion";
 import PrimaryButton from "../ui-kit/Button";
 // import SecondaryButton from "../ui-kit/SecondaryButton";
@@ -22,6 +24,8 @@ import phone from "../Assets/phone.svg";
 import "../CSS/HomePage.css";
 
 const HomePage = () => {
+  useEffect(() => trackPageview("Home"), []);
+
   return (
     <div className="container-fluid">
       <div className="row light-bg">

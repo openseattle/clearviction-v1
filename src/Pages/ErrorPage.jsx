@@ -1,4 +1,5 @@
-import React from "react";
+import { useEffect } from "react";
+import { trackPageview } from "../trackingUtils"
 
 /** MATERIAL UI IMPORTS */
 import { Typography } from "@mui/material";
@@ -7,6 +8,8 @@ import Container from "@mui/material/Container";
 import Stack from "@mui/material/Stack";
 
 const ErrorPage = () => {
+  useEffect(() => trackPageview("Error"), []);
+
   return (
     <Box
       sx={{

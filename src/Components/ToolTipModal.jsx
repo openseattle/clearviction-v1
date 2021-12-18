@@ -1,4 +1,5 @@
-import * as React from "react";
+import { useState } from "react";
+import { trackClick } from "../trackingUtils"
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
@@ -18,9 +19,13 @@ const style = {
 };
 
 const ToolTipModal = (props) => {
-  const [open, setOpen] = React.useState(false);
-  const handleOpen = () => setOpen(true);
+  const [open, setOpen] = useState(false);
+
   const handleClose = () => setOpen(false);
+  const handleOpen = () => { 
+    setOpen(true);
+    trackClick(props.text)
+  }
 
   return (
     <div>
