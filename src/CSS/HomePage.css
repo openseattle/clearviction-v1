@@ -1,79 +1,79 @@
 .icons {
-    width: 150px;
-    height: 150px;
+  width: 150px;
+  height: 150px;
 }
 
 .container-fluid {
-    margin-top: -20px;
+  margin-top: -20px;
 }
 
 .row {
-    text-align: center;
-    justify-content: center;
-    padding: 10px;
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
 }
 
 .dark-bg {
-    background-color: var(--dark-blue);
-    text-align: center;
-    color: #ffffff;
+  background-color: var(--dark-blue);
+  text-align: center;
+  color: #ffffff;
 }
 
 .light-bg {
-    background-color: var(--gray);
-    text-align: center;
+  background-color: var(--gray);
+  text-align: center;
 }
 
 #hero-parent {
-    height: 17vw;
+  height: 17vw;
 }
 
 #hero-logo {
-    position: absolute;
-    right: 0px;
-    height: 300px;
+  position: absolute;
+  right: 0px;
+  height: 300px;
 }
 
 #left-content {
-    text-align: left;
-    float: left;
-    padding-left: 20vw;
-    width: 80%;
+  text-align: left;
+  float: left;
+  padding-left: 20vw;
+  width: 80%;
 }
 
 #right-content {
-    float: right;
-    width: 20%;
+  float: right;
+  width: 20%;
 }
 
 #cvp-logo {
-    padding: 20px;
+  padding: 20px;
 }
 
 #accordion {
-    display: inline-block;
+  display: inline-block;
 }
 
 .line-vector {
-    width: 100px;
+  width: 100px;
 }
 
 @media only screen and (max-width: 600px) {
-    #hero-logo {
-        display: none;
-    }
+  #hero-logo {
+    display: none;
+  }
 
-    #left-content {
-        padding-left: 0px;
-        width: 100%;
-    }   
+  #left-content {
+    padding-left: 0px;
+    width: 100%;
+  }
 
-    #right-content {
-        float: right;
-        width: 0%;
-    }
+  #right-content {
+    float: right;
+    width: 0%;
+  }
 }
 
 a {
-    color: #000000;
+  color: #000000;
 }

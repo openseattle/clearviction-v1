@@ -3,6 +3,7 @@ import { useLocation } from "react-router-dom";
 import calculatorPages from "../data/calculatorPages";
 import ToolTipModal from "../Components/ToolTipModal";
 import Text from "../ui-kit/Text";
+import ProgressBar from "../Components/ProgressBar";
 
 /** MATERIAL UI IMPORTS */
 import Box from "@material-ui/core/Box";
@@ -24,7 +25,15 @@ const CalculatorPage = () => {
 
   if (!content) window.location = "/404";
 
-  const { header, body, buttons, footerLink, disclaimer, tooltip } = content;
+  const {
+    header,
+    body,
+    buttons,
+    footerLink,
+    disclaimer,
+    tooltip,
+    progressBar,
+  } = content;
 
   const renderButtons = (buttons) =>
     buttons.map(({ text, href, color }) => {
@@ -72,6 +81,13 @@ const CalculatorPage = () => {
     >
       <Container maxWidth="xs" padding={10}>
         <Stack direction="column" spacing={2}>
+          {progressBar && (
+            <ProgressBar
+              currentSectionName={progressBar.currentSectionName}
+              currentSection={progressBar.currentSection}
+              totalSections={progressBar.totalSections}
+            />
+          )}
           {header && <Text text={header} variant={"h3"}></Text>}
           {body && <Container maxWidth="sm">{body.map(renderBody)}</Container>}
           {buttons && renderButtons(buttons)}
