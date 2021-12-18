@@ -1,4 +1,5 @@
-import React from "react";
+import { useEffect } from "react";
+import { trackPageview, trackClick } from "../trackingUtils"
 import { useLocation } from "react-router-dom";
 import calculatorPages from "../data/calculatorPages";
 import ToolTipModal from "../Components/ToolTipModal";
@@ -23,6 +24,7 @@ const CalculatorPage = () => {
   const content = calculatorPages[pageId];
 
   if (!content) window.location = "/404";
+  useEffect(() => trackPageview("Calculator"), []);
 
   const { header, body, buttons, footerLink, disclaimer, tooltip } = content;
 
@@ -31,6 +33,7 @@ const CalculatorPage = () => {
       return (
         <Stack key={text} direction="column" style={{ padding: 10 }}>
           <Button
+            onClick={() => trackClick(text)}
             variant="contained"
             href={href}
             style={{ backgroundColor: BUTTON_COLORS[color || "blue"] }}
@@ -47,7 +50,7 @@ const CalculatorPage = () => {
         return <Text key={text} text={text} variant={"h4"}></Text>;
       case "link":
         return (
-          <Link href={href} target="_blank" rel="noreferrer" key={text}>
+          <Link href={href} target="_blank" rel="noreferrer" key={text} onClick={() => trackClick(text)}>
             {text}
           </Link>
         );
@@ -77,7 +80,7 @@ const CalculatorPage = () => {
           {buttons && renderButtons(buttons)}
           {tooltip && <ToolTipModal text={tooltip} />}
           {footerLink && (
-            <a target="_blank" rel="noreferrer" href={footerLink.href}>
+            <a target="_blank" rel="noreferrer" href={footerLink.href} onClick={() => trackClick(footerLink.text)}>
               {footerLink.text}
             </a>
           )}
