@@ -1,34 +1,36 @@
 import "../CSS/Calculator.css";
 
-const ProgressBar = ({ currentSectionName, currentSection, totalSections }) => {
+const ProgressBar = ({ currentSectionName, totalSections }) => {
   let sectionName;
-  let barWidthCurrent = `${Math.floor(
-    (currentSection / totalSections) * 100
-  )}%`;
-  let barWidthActive = `${Math.floor(
-    ((currentSection - 1) / totalSections) * 100
-  )}%`;
-  let stepArr = [];
-  let stepWidth = `${100 / totalSections - 4.5}%`;
+  let currentSection;
+  let stepWidth = `29%`;
+  let stepBackground = "#e5e5e5";
+  let stepBackgroundActive = "#4E6C99";
 
   switch (currentSectionName) {
     case "conv":
       sectionName = "Your Conviction";
+      currentSection = 1;
       break;
     case "circ":
       sectionName = "Surrounding Circumstances";
+      currentSection = 2;
       break;
     case "ter":
       sectionName = "Terms of Offence";
+      currentSection = 3;
+      break;
+    case "conv-1" || "circ-1" || "ter-1":
+      currentSection = 4;
       break;
     default:
       break;
   }
 
-  for (let i = 1; i <= totalSections; i++) {
-    stepArr.push(i);
-  }
+  let barWidthCurrent = `${currentSection * 34}%`;
+  let barWidthActive = `${(currentSection - 1) * 34}%`;
 
+  console.log(currentSectionName, totalSections);
   return (
     <div className="progressBar-Wrapper">
       {sectionName && <p className="progress-bar-title">{sectionName}</p>}
@@ -41,24 +43,35 @@ const ProgressBar = ({ currentSectionName, currentSection, totalSections }) => {
           className="progressBar-current"
           style={{ width: barWidthCurrent }}
         ></div>
-        {stepArr.map((a) => {
-          if (a <= currentSection) {
-            return (
-              <li
-                classname="steps"
-                style={{ marginRight: stepWidth, background: "#4E6C99" }}
-                key={a}
-              >
-                {a}
-              </li>
-            );
-          } else
-            return (
-              <li classname="steps" style={{ marginRight: stepWidth }} key={a}>
-                {a}
-              </li>
-            );
-        })}
+        <li
+          className="steps"
+          style={{ marginRight: stepWidth, background: stepBackgroundActive }}
+          key="step1"
+        >
+          1
+        </li>
+        <li
+          className="steps"
+          style={{
+            marginRight: stepWidth,
+            background:
+              currentSection >= 2 ? stepBackgroundActive : stepBackground,
+          }}
+          key="step2"
+        >
+          2
+        </li>
+        <li
+          className="steps"
+          style={{
+            marginRight: stepWidth,
+            background:
+              currentSection >= 3 ? stepBackgroundActive : stepBackground,
+          }}
+          key="step3"
+        >
+          3
+        </li>
       </ul>
     </div>
   );

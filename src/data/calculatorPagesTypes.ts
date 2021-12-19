@@ -15,7 +15,6 @@ interface PageData {
 
 interface ProgressBar {
   currentSectionName: string;
-  currentSection: number;
   totalSections: number; // TODO: can this be calculated dynamically?
 }
 

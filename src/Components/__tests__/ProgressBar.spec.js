@@ -6,7 +6,6 @@ describe("<ProgressBar />", () => {
   let progressBar;
   const props = {
     currentSectionName: "conv",
-    currentSection: 0,
     totalSections: 7,
   };
   beforeEach(() => {
