@@ -11,7 +11,7 @@ import Footer from "../Components/Footer";
 
 const useStyles = makeStyles({
   bg: {
-    backgroundColor: "#2D3047",
+    backgroundColor: "var(--light-gray)",
   },
 });
 
@@ -23,7 +23,7 @@ const ContactPage = () => {
         <Typography variant="h1" align="center">
           Contact Us
         </Typography>
-        <Paper style={{ backgroundColor: "lightgrey" }}>
+        <Paper className={classes.bg}>
           <Box padding={5} margin={5}>
             <Typography variant="h5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
