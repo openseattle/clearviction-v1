@@ -94,7 +94,6 @@ const AboutPage = () => {
       <Box className={classes.actionItem} padding={5} marginTop={3}>
         <Grid container justifyContent="center" spacing={3}>
           <Grid item>
-            {" "}
             <Typography variant="h3" align="center">
               Get In Touch
             </Typography>
