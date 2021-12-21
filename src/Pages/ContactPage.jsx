@@ -7,9 +7,7 @@ import {
   Paper,
   makeStyles,
 } from "@material-ui/core";
-import PrimaryButton from "../ui-kit/Button";
 import Footer from "../Components/Footer";
-import SecondaryButton from "../ui-kit/SecondaryButton";
 
 const useStyles = makeStyles({
   bg: {
@@ -26,12 +24,13 @@ const ContactPage = () => {
           Contact Us
         </Typography>
         <Paper style={{ backgroundColor: "lightgrey" }}>
-          <Box padding={5}>
-            <Typography variant="h4">
+          <Box padding={5} margin={5}>
+            <Typography variant="h5">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </Typography>
-            <Typography variant="h3">
+            <br />
+            <Typography variant="h5">
               <a href="mailto:contact@cvp.org"> Email Us</a>
             </Typography>
           </Box>
