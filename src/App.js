@@ -5,6 +5,7 @@ import Navigation from "./Components/Navigation";
 import CalculatorPage from "./Pages/CalculatorPage";
 import ErrorPage from "./Pages/ErrorPage";
 import AboutPage from "./Pages/AboutPage";
+import ContactPage from "./Pages/ContactPage";
 
 function App() {
   return (
@@ -24,7 +25,8 @@ function App() {
           <Redirect to="/calculator/landing-0" />
         </Route>
         <Route exact path="/about">
-          <AboutPage />
+          <ContactPage />
+          {/* <AboutPage /> */}
         </Route>
       </Switch>
     </div>

@@ -16,7 +16,6 @@ const useStyles = makeStyles({
     backgroundColor: "#2D3047",
   },
   contactButton: {
-    borderRadius: 20,
     minWidth: 125,
     textTransform: "none",
     backgroundColor: "#C4C4C4",
