@@ -1,16 +1,14 @@
+import React from "react";
+
 import {
   Container,
   Grid,
   Typography,
   Box,
-  Button,
-  Paper,
   CardContent,
   Card,
   makeStyles,
-  ThemeProvider,
 } from "@material-ui/core";
-import React from "react";
 import TeamCard from "../Components/TeamCard";
 import PrimaryButton from "../ui-kit/Button";
 import Footer from "../Components/Footer";
@@ -51,7 +49,7 @@ const AboutPage = () => {
         <Box className={classes.textSpace}>
           <Typography variant="h1">About Us</Typography>
 
-          <Typography variant="h4">
+          <Typography variant="h3">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </Typography>
@@ -81,7 +79,11 @@ const AboutPage = () => {
         </Grid>
 
         <Box className={classes.textSpace}>
-          <Typography variant="h2">Our Team</Typography>{" "}
+          <Typography variant="h2">Our Team</Typography>
+          <Typography variant="h4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          </Typography>
         </Box>
         <Grid container justifyContent="center" maxWidth="xs" spacing={3}>
           {team.map((id) => (
@@ -102,7 +104,7 @@ const AboutPage = () => {
             >
               Get In Touch
             </Typography>
-            <PrimaryButton text="Contact" />
+            <PrimaryButton text="Contact" href="/contact" />
           </Grid>
         </Grid>
       </Box>
