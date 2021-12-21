@@ -25,8 +25,10 @@ function App() {
           <Redirect to="/calculator/landing-0" />
         </Route>
         <Route exact path="/about">
-          {/* <ContactPage /> */}
           <AboutPage />
+        </Route>
+        <Route exact path="/contact">
+          <ContactPage />
         </Route>
       </Switch>
     </div>

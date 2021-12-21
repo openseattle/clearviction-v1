@@ -1,14 +1,15 @@
+import React from "react";
+
 import {
   Container,
-  Grid,
   Typography,
   Box,
-  Button,
+  Paper,
   makeStyles,
 } from "@material-ui/core";
-import React from "react";
 import PrimaryButton from "../ui-kit/Button";
 import Footer from "../Components/Footer";
+import SecondaryButton from "../ui-kit/SecondaryButton";
 
 const useStyles = makeStyles({
   bg: {
@@ -24,11 +25,19 @@ const ContactPage = () => {
         <Typography variant="h1" align="center">
           Contact Us
         </Typography>
-        <PrimaryButton text={"Email"} />
-
-        <Box padding={5} margin={5}></Box>
-        <Footer />
+        <Paper style={{ backgroundColor: "lightgrey" }}>
+          <Box padding={5}>
+            <Typography variant="h4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </Typography>
+            <Typography variant="h3">
+              <a href="mailto:contact@cvp.org"> Email Us</a>
+            </Typography>
+          </Box>
+        </Paper>
       </Container>
+      <Footer />
     </>
   );
 };
