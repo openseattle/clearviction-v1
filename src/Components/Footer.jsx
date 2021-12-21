@@ -1,4 +1,3 @@
-import React from "react";
 import { Grid, Box, Container } from "@material-ui/core";
 import { List, ListItem } from "@material-ui/core";
 import { Stack, Typography } from "@mui/material";
