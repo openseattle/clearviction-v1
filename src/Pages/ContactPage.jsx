@@ -8,6 +8,7 @@ import {
 } from "@material-ui/core";
 import React from "react";
 import PrimaryButton from "../ui-kit/Button";
+import Footer from "../Components/Footer";
 
 const useStyles = makeStyles({
   bg: {
@@ -26,6 +27,7 @@ const ContactPage = () => {
         <PrimaryButton text={"Email"} />
 
         <Box padding={5} margin={5}></Box>
+        <Footer />
       </Container>
     </>
   );
