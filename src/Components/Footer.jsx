@@ -25,8 +25,13 @@ const Footer = () => {
                 </a>
               </ListItem>
               <ListItem>
-                <a href="/" style={{ color: "#000000" }}>
+                <a href="/contact" style={{ color: "#000000" }}>
                   Contact
+                </a>
+              </ListItem>
+              <ListItem>
+                <a href="/about" style={{ color: "#000000" }}>
+                  About
                 </a>
               </ListItem>
             </List>
