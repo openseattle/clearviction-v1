@@ -15,20 +15,20 @@ const team = [1, 2, 3, 4, 5, 6];
 
 const useStyles = makeStyles({
   root: {
-    backgroundColor: "#C4C4C4",
+    backgroundColor: "var(--gray)",
   },
   actionItem: {
-    backgroundColor: "#2D3047",
+    backgroundColor: "var(--dark-blue)",
     color: "white",
   },
   infoDark: {
-    backgroundColor: "#2D3047",
+    backgroundColor: "var(--dark-blue)",
     color: "white",
     minHeight: "10em",
     borderRadius: 0,
   },
   infoLight: {
-    backgroundColor: "#4E6C99",
+    backgroundColor: "var(--light-blue)",
     color: "white",
     minHeight: "10em",
     borderRadius: 0,
@@ -95,11 +95,7 @@ const AboutPage = () => {
         <Grid container justifyContent="center" spacing={3}>
           <Grid item>
             {" "}
-            <Typography
-              variant="h3"
-              style={{ color: "#EDEDED" }}
-              align="center"
-            >
+            <Typography variant="h3" align="center">
               Get In Touch
             </Typography>
             <PrimaryButton text="Contact" href="/contact" />

@@ -1,7 +1,5 @@
-import { Grid, Box, Container } from "@material-ui/core";
-import { List, ListItem } from "@material-ui/core";
-import { Stack, Typography } from "@mui/material";
-import { Divider } from "@mui/material";
+import { Grid, Box, Container, List, ListItem } from "@material-ui/core";
+import { Stack, Typography, Divider } from "@mui/material";
 
 import democracylabLogo from "../Assets/democracylab-logo.png";
 import openseattleLogo from "../Assets/openseattle-logo.png";
