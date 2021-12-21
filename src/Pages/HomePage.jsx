@@ -18,7 +18,7 @@ import openseattleLogo from "../Assets/openseattle-logo.png";
 import housing from "../Assets/housing.svg";
 import employment from "../Assets/employment.svg";
 import education from "../Assets/education.svg";
-import travel from "../Assets/travel.svg";
+import lawyer from "../Assets/lawyer.svg";
 import teamwork from "../Assets/teamwork.svg";
 import phone from "../Assets/phone.svg";
 import "../CSS/HomePage.css";
@@ -144,7 +144,7 @@ const HomePage = () => {
         </div>
 
         <div className="col-sm">
-          <img className="icons" src={travel} alt={"Travel Icon"} />
+          <img className="icons" src={lawyer} alt={"Lawyer Icon"} />
           <Text
             variant={"h6"}
             text={"Government Assistance"}
