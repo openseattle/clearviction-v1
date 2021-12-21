@@ -16,7 +16,7 @@ import {
 const CALC_PREFIX = "/calculator";
 const disclaimer =
   "The information provided by the Conviction Vacation Project is not intended to replace legal advice and does not in any way constitute an attorney-client relationship. If you need legal advice or assistance, we strongly recommend that you reach out to a licensed professional.";
-const thankYou = "Thank you for using the CVP eligibility calculator";
+const thankYou = "Thank you for using the CVP eligibility calculator"; // TODO: add logic for this in CalculatorPage.jsx since it currently gets ignored
 
 const data: Pages = {
   "landing-0": {
@@ -1119,7 +1119,7 @@ const data: Pages = {
       },
       {
         text: BUTTON_TEXT.NO,
-        href: CALC_PREFIX + "",
+        href: CALC_PREFIX + "/too-0",
       },
     ],
     tooltip: TooltipType.NOT_SURE,
