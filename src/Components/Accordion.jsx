@@ -1,10 +1,12 @@
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import {
+  Container,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+} from "@material-ui/core";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Text from "../ui-kit/Text";
 import data from "../data/FAQdata";
-import { Container } from "@mui/material";
 
 export default function FAQAccordion() {
   const content = data.questions;
