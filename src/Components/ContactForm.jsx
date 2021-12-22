@@ -1,17 +1,5 @@
 import React from "react";
-import {
-  Box,
-  FormControl,
-  Grid,
-  Container,
-  List,
-  ListItem,
-  makeStyles,
-  MenuItem,
-  Select,
-  TextField,
-  Typography,
-} from "@material-ui/core";
+import { Box, makeStyles } from "@material-ui/core";
 
 import SecondaryButton from "../ui-kit/SecondaryButton";
 
