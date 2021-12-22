@@ -3,9 +3,11 @@ import "../CSS/Calculator.css";
 const ProgressBar = ({ currentSectionName, totalSections }) => {
   let sectionName;
   let currentSection;
-  let stepWidth = `${Math.floor(100 / totalSections - totalSections * 1.25)}%`;
-  const stepBackground = "#e5e5e5";
-  const stepBackgroundActive = "#4E6C99";
+  const stepWidth = `${Math.floor(
+    100 / totalSections - totalSections * 1.25
+  )}%`;
+  const stepBackground = "var(--gray90)";
+  const stepBackgroundActive = "var(--light-blue)";
   const stepArray = [];
 
   for (let i = 1; i <= totalSections; i++) {
@@ -25,15 +27,20 @@ const ProgressBar = ({ currentSectionName, totalSections }) => {
       sectionName = "Terms of Offence";
       currentSection = 3;
       break;
-    case "conv-1" || "circ-1" || "ter-1":
+    case "eligible":
       currentSection = 4;
       break;
     default:
       break;
   }
 
-  let barWidthCurrent = `${currentSection * 34}%`;
-  let barWidthActive = `${(currentSection - 1) * 34}%`;
+  let barWidthCurrent =
+    currentSection > totalSections
+      ? `100%`
+      : `${currentSection * Math.ceil(100 / totalSections)}%`;
+  let barWidthActive = `${
+    (currentSection - 1) * Math.ceil(100 / totalSections)
+  }%`;
 
   return (
     <div className="progressBar-Wrapper">

@@ -196,7 +196,7 @@ const data: Pages = {
     header:
       "From your answers, it seems that you may be eligible to vacate your marijuana misdemeanor conviction!",
     progressBar: {
-      currentSectionName: "conv-1",
+      currentSectionName: "eligible",
       totalSections: 3,
     },
     body: [
@@ -701,7 +701,7 @@ const data: Pages = {
     header:
       "From your answers, it seems that you may be eligible to vacate your fishing misdemeanor conviction!",
     progressBar: {
-      currentSectionName: "conv-1",
+      currentSectionName: "eligible",
       totalSections: 3,
     },
     body: [
@@ -946,7 +946,7 @@ const data: Pages = {
     header:
       "From your answers, it seems that you may be eligible to vacate your prostitution misdemeanor conviction!",
     progressBar: {
-      currentSectionName: "conv-1",
+      currentSectionName: "eligible",
       totalSections: 3,
     },
     body: [
@@ -1266,7 +1266,7 @@ const data: Pages = {
   "too-eligible-0": {
     header: "You are eligible!",
     progressBar: {
-      currentSectionName: "ter-1",
+      currentSectionName: "eligible",
       totalSections: 3,
     },
     body: [
