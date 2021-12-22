@@ -1,10 +1,25 @@
-import { Grid, Box, Container, List, ListItem } from "@material-ui/core";
+import {
+  Grid,
+  Box,
+  Container,
+  List,
+  ListItem,
+  makeStyles,
+} from "@material-ui/core";
 import { Stack, Typography, Divider } from "@mui/material";
 
 import democracylabLogo from "../Assets/democracylab-logo.png";
 import openseattleLogo from "../Assets/openseattle-logo.png";
 
+const useStyles = makeStyles({
+  linkStyles: {
+    color: "black",
+    "&:hover": { color: "black" },
+  },
+});
 const Footer = () => {
+  const classes = useStyles();
+
   return (
     <Container maxWidth="xl">
       <Stack direction="row" sx={{ display: "flex", padding: 5 }}>
@@ -12,22 +27,22 @@ const Footer = () => {
           <Grid item>
             <List>
               <ListItem>
-                <a href="/" style={{ color: "#000000" }}>
+                <a href="/" className={classes.linkStyles}>
                   Home
                 </a>
               </ListItem>
               <ListItem>
-                <a href="/calculator" style={{ color: "#000000" }}>
+                <a href="/calculator" className={classes.linkStyles}>
                   Calculator
                 </a>
               </ListItem>
               <ListItem>
-                <a href="/contact" style={{ color: "#000000" }}>
+                <a href="/contact" className={classes.linkStyles}>
                   Contact
                 </a>
               </ListItem>
               <ListItem>
-                <a href="/about" style={{ color: "#000000" }}>
+                <a href="/about" className={classes.linkStyles}>
                   About
                 </a>
               </ListItem>
