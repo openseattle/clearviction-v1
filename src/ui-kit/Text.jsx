@@ -12,15 +12,17 @@ export default function Text({
   return (
     <Typography
       variant={variant}
-      style={{ style }}
-      sx={{
-        size: fontSize,
-        margin: "5px",
-        padding: "5px",
-        fontWeight: fontWeight,
-        fontFamily: fontFamily,
-        textAlign: textAlign,
-      }}
+      style={
+        (style,
+        {
+          size: fontSize,
+          margin: "5px",
+          padding: "5px",
+          fontWeight: fontWeight,
+          fontFamily: fontFamily,
+          textAlign: textAlign,
+        })
+      }
     >
       {text}
     </Typography>
