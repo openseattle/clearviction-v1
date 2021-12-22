@@ -223,7 +223,7 @@ const HomePage = () => {
           </Grid>
           <Divider sx={{ marginTop: 1, marginBottom: 1 }} />
           <Text
-            variant={"body"}
+            variant={"body1"}
             text={
               "The information on this site is not, nor should it be, considered legal advice."
             }
