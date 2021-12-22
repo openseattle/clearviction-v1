@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { trackPageview, trackClick } from "../trackingUtils"
+import { trackPageview, trackClick } from "../trackingUtils";
 import { useLocation } from "react-router-dom";
 import calculatorPages from "../data/calculatorPages";
 import ToolTipModal from "../Components/ToolTipModal";
@@ -59,7 +59,13 @@ const CalculatorPage = () => {
         return <Text key={text} text={text} variant={"h4"}></Text>;
       case "link":
         return (
-          <Link href={href} target="_blank" rel="noreferrer" key={text} onClick={() => trackClick(text)}>
+          <Link
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+            key={text}
+            onClick={() => trackClick(text)}
+          >
             {text}
           </Link>
         );
@@ -96,7 +102,12 @@ const CalculatorPage = () => {
           {buttons && renderButtons(buttons)}
           {tooltip && <ToolTipModal text={tooltip} />}
           {footerLink && (
-            <a target="_blank" rel="noreferrer" href={footerLink.href} onClick={() => trackClick(footerLink.text)}>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href={footerLink.href}
+              onClick={() => trackClick(footerLink.text)}
+            >
               {footerLink.text}
             </a>
           )}

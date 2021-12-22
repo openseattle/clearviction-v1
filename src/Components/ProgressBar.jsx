@@ -3,9 +3,14 @@ import "../CSS/Calculator.css";
 const ProgressBar = ({ currentSectionName, totalSections }) => {
   let sectionName;
   let currentSection;
-  let stepWidth = `29%`;
-  let stepBackground = "#e5e5e5";
-  let stepBackgroundActive = "#4E6C99";
+  let stepWidth = `${Math.floor(100 / totalSections - totalSections * 1.25)}%`;
+  const stepBackground = "#e5e5e5";
+  const stepBackgroundActive = "#4E6C99";
+  const stepArray = [];
+
+  for (let i = 1; i <= totalSections; i++) {
+    stepArray.push(i);
+  }
 
   switch (currentSectionName) {
     case "conv":
@@ -30,7 +35,6 @@ const ProgressBar = ({ currentSectionName, totalSections }) => {
   let barWidthCurrent = `${currentSection * 34}%`;
   let barWidthActive = `${(currentSection - 1) * 34}%`;
 
-  console.log(currentSectionName, totalSections);
   return (
     <div className="progressBar-Wrapper">
       {sectionName && <p className="progress-bar-title">{sectionName}</p>}
@@ -43,35 +47,19 @@ const ProgressBar = ({ currentSectionName, totalSections }) => {
           className="progressBar-current"
           style={{ width: barWidthCurrent }}
         ></div>
-        <li
-          className="steps"
-          style={{ marginRight: stepWidth, background: stepBackgroundActive }}
-          key="step1"
-        >
-          1
-        </li>
-        <li
-          className="steps"
-          style={{
-            marginRight: stepWidth,
-            background:
-              currentSection >= 2 ? stepBackgroundActive : stepBackground,
-          }}
-          key="step2"
-        >
-          2
-        </li>
-        <li
-          className="steps"
-          style={{
-            marginRight: stepWidth,
-            background:
-              currentSection >= 3 ? stepBackgroundActive : stepBackground,
-          }}
-          key="step3"
-        >
-          3
-        </li>
+        {stepArray.map((num) => (
+          <li
+            className="steps"
+            style={{
+              marginRight: stepWidth,
+              background:
+                num <= currentSection ? stepBackgroundActive : stepBackground,
+            }}
+            key={`step${num}`}
+          >
+            {num}
+          </li>
+        ))}
       </ul>
     </div>
   );

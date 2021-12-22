@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { trackPageview } from "../trackingUtils"
+import { trackPageview } from "../trackingUtils";
 
 /** MATERIAL UI IMPORTS */
 import { Typography } from "@mui/material";

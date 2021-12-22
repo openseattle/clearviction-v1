@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { trackPageview } from "../trackingUtils"
+import { trackPageview } from "../trackingUtils";
 import FAQAccordion from "../Components/Accordion";
 import PrimaryButton from "../ui-kit/Button";
 // import SecondaryButton from "../ui-kit/SecondaryButton";
