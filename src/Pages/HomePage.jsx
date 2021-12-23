@@ -11,7 +11,7 @@ import cvpLogoLeftHalf from "../Assets/cvp-logo-white-left-half.png";
 import housing from "../Assets/housing.svg";
 import employment from "../Assets/employment.svg";
 import education from "../Assets/education.svg";
-import travel from "../Assets/travel.svg";
+import lawyer from "../Assets/lawyer.svg";
 import teamwork from "../Assets/teamwork.svg";
 import phone from "../Assets/phone.svg";
 import "../CSS/HomePage.css";
@@ -96,91 +96,89 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className="row" id="why-vacate">
-          <Text variant={"h3"} text={"Why Vacate?"}></Text>
+      <div className="row" id="why-vacate">
+        <Text variant={"h3"} text={"Why Vacate?"}></Text>
+        <Text
+          variant={"h4"}
+          text={
+            "A conviction vacation seals the offense from your record, and will give you more chance to access:"
+          }
+        ></Text>
+
+        <div className="col-sm">
+          <img className="icons" src={housing} alt={"Housing Icon"} />
+          <Text variant={"h6"} text={"Housing"} fontWeight={"600"}></Text>
           <Text
-            variant={"h4"}
+            variant={"h5"}
             text={
-              "A conviction vacation seals the offense from your record, and will give you more chance to access:"
+              "Make it easier to find and be approved for rent or purchasing a home."
             }
+            fontFamily={"Lora"}
           ></Text>
-
-          <div className="col-sm">
-            <img className="icons" src={housing} alt={"Housing Icon"} />
-            <Text variant={"h6"} text={"Housing"} fontWeight={"600"}></Text>
-            <Text
-              variant={"h5"}
-              text={
-                "Make it easier to find and be approved for rent or purchasing a home."
-              }
-              fontFamily={"Lora"}
-            ></Text>
-          </div>
-
-          <div className="col-sm">
-            <img className="icons" src={employment} alt={"Employment Icon"} />
-            <Text variant={"h6"} text={"Employment"} fontWeight={"600"}></Text>
-            <Text
-              variant={"h5"}
-              text={"Reduce barriers to finding and obtaining employment."}
-              fontFamily={"Lora"}
-            ></Text>
-          </div>
-
-          <div className="col-sm">
-            <img className="icons" src={education} alt={"Education Icon"} />
-            <Text variant={"h6"} text={"Education"} fontWeight={"600"}></Text>
-            <Text
-              variant={"h5"}
-              text={
-                "Apply for scholarships, programs, degrees or certificates."
-              }
-              fontFamily={"Lora"}
-            ></Text>
-          </div>
-
-          <div className="col-sm">
-            <img className="icons" src={travel} alt={"Travel Icon"} />
-            <Text
-              variant={"h6"}
-              text={"Government Assistance"}
-              fontWeight={"600"}
-            ></Text>
-            <Text
-              variant={"h5"}
-              text={"Receive government help."}
-              fontFamily={"Lora"}
-            ></Text>
-          </div>
-          <div className="row">
-            <div className="col-lg">
-              {/* <SecondaryButton text={"Learn More"} /> */}
-            </div>
-          </div>
         </div>
 
-        <div className="row dark-bg">
+        <div className="col-sm">
+          <img className="icons" src={employment} alt={"Employment Icon"} />
+          <Text variant={"h6"} text={"Employment"} fontWeight={"600"}></Text>
+          <Text
+            variant={"h5"}
+            text={"Reduce barriers to finding and obtaining employment."}
+            fontFamily={"Lora"}
+          ></Text>
+        </div>
+
+        <div className="col-sm">
+          <img className="icons" src={education} alt={"Education Icon"} />
+          <Text variant={"h6"} text={"Education"} fontWeight={"600"}></Text>
+          <Text
+            variant={"h5"}
+            text={"Apply for scholarships, programs, degrees or certificates."}
+            fontFamily={"Lora"}
+          ></Text>
+        </div>
+
+        <div className="col-sm">
+          <img className="icons" src={lawyer} alt={"Lawyer Icon"} />
+          <Text
+            variant={"h6"}
+            text={"Government Assistance"}
+            fontWeight={"600"}
+          ></Text>
+          <Text
+            variant={"h5"}
+            text={"Receive government help."}
+            fontFamily={"Lora"}
+          ></Text>
+        </div>
+        <div className="row">
           <div className="col-lg">
-            <br />
-            <img src={cvpLogoWhite} id="cvp-logo" alt={"CVP Logo"} />
-            <br />
-            <Text
-              variant={"h5"}
-              fontFamily={"Lora"}
-              text={
-                "The Conviction Vacation Project connects volunteers passionate about reducing barriers and making it easier for those with convictions in Washington State."
-              }
-            ></Text>
-            <br />
-            <br />
-            <Text
-              variant={"h5"}
-              fontFamily={"Lora"}
-              text={
-                "We’re working together to create a tool to make navigating the conviction vacation process easier. Currently we are designing and building an eligibility calculator to help people determine if their conviction is eligible for vacation."
-              }
-            ></Text>
-            <br />
+            {/* <SecondaryButton text={"Learn More"} /> */}
+          </div>
+        </div>
+      </div>
+
+      <div className="row dark-bg">
+        <div className="col-lg">
+          <br />
+          <img src={cvpLogoWhite} id="cvp-logo" alt={"CVP Logo"} />
+          <br />
+          <Text
+            variant={"h5"}
+            fontFamily={"Lora"}
+            text={
+              "The Conviction Vacation Project connects volunteers passionate about reducing barriers and making it easier for those with convictions in Washington State."
+            }
+          ></Text>
+          <br />
+          <br />
+          <Text
+            variant={"h5"}
+            fontFamily={"Lora"}
+            text={
+              "We’re working together to create a tool to make navigating the conviction vacation process easier. Currently we are designing and building an eligibility calculator to help people determine if their conviction is eligible for vacation."
+            }
+          ></Text>
+          <br />
             {/* <SecondaryButton text={"Join the Team"} /> */}
           </div>
         </div>
