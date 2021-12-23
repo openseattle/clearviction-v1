@@ -221,7 +221,7 @@ const HomePage = () => {
               </Grid>
             </Grid>
           </Grid>
-          <Divider sx={{ marginTop: 1, marginBottom: 1 }} />
+          <Divider style={{ marginTop: "1em", marginBottom: "1em" }} />
           <Text
             variant={"body1"}
             text={
