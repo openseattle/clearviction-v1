@@ -19,6 +19,18 @@ const theme = createTheme({
   typography: {
     body1: "Lora",
   },
+  overrides: {
+    MuiButton: {
+      root: {
+        width: "327px",
+        margin: "10px",
+      },
+      text: {
+        padding: "10px",
+        fontSize: "16px",
+      },
+    },
+  },
 });
 
 export default theme;

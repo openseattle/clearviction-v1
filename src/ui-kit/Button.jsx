@@ -7,10 +7,6 @@ const useStyles = makeStyles((theme) => ({
   button: {
     backgroundColor: theme.palette.secondary.light,
     color: theme.palette.text.primary,
-    width: "327px",
-    padding: "10px",
-    margin: "10px",
-    fontSize: "16px",
     "&:hover": {
       backgroundColor: theme.palette.secondary.main,
       color: theme.palette.text.primary,
