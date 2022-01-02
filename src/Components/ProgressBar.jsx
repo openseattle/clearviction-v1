@@ -1,7 +1,6 @@
 import "../CSS/Calculator.css";
 
 const ProgressBar = ({ currentSectionName, totalSections }) => {
-  let sectionName;
   let currentSection;
   const stepWidth = `${Math.floor(
     100 / totalSections - totalSections * 1.25
@@ -15,19 +14,16 @@ const ProgressBar = ({ currentSectionName, totalSections }) => {
   }
 
   switch (currentSectionName) {
-    case "conv":
-      sectionName = "Your Conviction";
+    case "Your Conviction":
       currentSection = 1;
       break;
-    case "circ":
-      sectionName = "Surrounding Circumstances";
+    case "Surrounding Circumstances":
       currentSection = 2;
       break;
-    case "ter":
-      sectionName = "Terms of Offence";
+    case "Terms of Offence":
       currentSection = 3;
       break;
-    case "eligible":
+    case "":
       currentSection = 4;
       break;
     default:
@@ -44,7 +40,9 @@ const ProgressBar = ({ currentSectionName, totalSections }) => {
 
   return (
     <div className="progressBar-Wrapper">
-      {sectionName && <p className="progress-bar-title">{sectionName}</p>}
+      {currentSectionName && (
+        <p className="progress-bar-title">{currentSectionName}</p>
+      )}
       <ul className="progressBar">
         <div
           className="progressBar-active"

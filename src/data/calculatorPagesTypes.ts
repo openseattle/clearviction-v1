@@ -13,8 +13,15 @@ interface PageData {
   progressBar?: ProgressBar;
 }
 
+export enum SectionName {
+  CONV = "Your Conviction",
+  CIRC = "Surrounding Circumstances",
+  TER = "Terms of Offence",
+  ELIGIBLE = "",
+}
+
 interface ProgressBar {
-  currentSectionName: string;
+  currentSectionName: SectionName;
   totalSections: number; // TODO: can this be calculated dynamically?
 }
 
