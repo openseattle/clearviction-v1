@@ -1,13 +1,6 @@
-import {
-  Container,
-  Typography,
-  Box,
-  makeStyles,
-  Paper,
-} from "@material-ui/core";
+import { Container, Typography, Box, makeStyles } from "@material-ui/core";
 import Footer from "../Components/Footer";
 import placeholder from "../Assets/placeholder_contact.png";
-import ContactForm from "../Components/ContactForm";
 
 const useStyles = makeStyles({
   bg: {
