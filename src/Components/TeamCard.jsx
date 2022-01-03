@@ -1,5 +1,10 @@
-import { Avatar, Card, makeStyles, Typography } from "@material-ui/core";
-import { CardContent } from "@mui/material";
+import {
+  Avatar,
+  Card,
+  makeStyles,
+  Typography,
+  CardContent,
+} from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
