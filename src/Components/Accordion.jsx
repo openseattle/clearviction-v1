@@ -4,6 +4,7 @@ import {
   AccordionSummary,
   AccordionDetails,
   makeStyles,
+  Grid,
 } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Text from "../ui-kit/Text";
@@ -37,42 +38,44 @@ export default function FAQAccordion() {
               <Text fontFamily={"Lora"} variant={"h5"} text={header}></Text>
             </AccordionSummary>
             <AccordionDetails>
-              <Text
-                fontFamily={"Lora"}
-                variant={"h5"}
-                textAlign={"left"}
-                text={body1}
-              ></Text>
-              <Text
-                fontFamily={"Lora"}
-                variant={"h5"}
-                textAlign={"left"}
-                text={body2}
-              ></Text>
-              {body3 && (
+              <Grid>
                 <Text
                   fontFamily={"Lora"}
                   variant={"h5"}
                   textAlign={"left"}
-                  text={body3}
+                  text={body1}
                 ></Text>
-              )}
-              {body4 && (
                 <Text
                   fontFamily={"Lora"}
                   variant={"h5"}
                   textAlign={"left"}
-                  text={body4}
+                  text={body2}
                 ></Text>
-              )}
-              {body5 && (
-                <Text
-                  fontFamily={"Lora"}
-                  variant={"h5"}
-                  textAlign={"left"}
-                  text={body5}
-                ></Text>
-              )}
+                {body3 && (
+                  <Text
+                    fontFamily={"Lora"}
+                    variant={"h5"}
+                    textAlign={"left"}
+                    text={body3}
+                  ></Text>
+                )}
+                {body4 && (
+                  <Text
+                    fontFamily={"Lora"}
+                    variant={"h5"}
+                    textAlign={"left"}
+                    text={body4}
+                  ></Text>
+                )}
+                {body5 && (
+                  <Text
+                    fontFamily={"Lora"}
+                    variant={"h5"}
+                    textAlign={"left"}
+                    text={body5}
+                  ></Text>
+                )}
+              </Grid>
             </AccordionDetails>
           </Accordion>
         ))}

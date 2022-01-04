@@ -5,8 +5,9 @@ import {
   List,
   ListItem,
   makeStyles,
+  Divider,
+  Typography,
 } from "@material-ui/core";
-import { Stack, Typography, Divider } from "@mui/material";
 
 import democracylabLogo from "../Assets/democracylab-logo.png";
 import openseattleLogo from "../Assets/openseattle-logo.png";
@@ -22,7 +23,7 @@ const Footer = () => {
 
   return (
     <Container maxWidth="xl">
-      <Stack direction="row" sx={{ display: "flex", padding: 5 }}>
+      <Grid direction="row" sx={{ display: "flex", padding: 5 }}>
         <Grid container columns={2} spacing={6} justifyContent="space-between">
           <Grid item>
             <List>
@@ -50,13 +51,13 @@ const Footer = () => {
           </Grid>
 
           <Grid item sx={{ float: "right", position: "relative" }}>
-            <Stack direction="column">
+            <Grid direction="column">
               <img src={openseattleLogo} alt={"Open Seattle Logo"} />
               <img src={democracylabLogo} alt={"Democracy Lab Logo"} />
-            </Stack>
+            </Grid>
           </Grid>
         </Grid>
-      </Stack>
+      </Grid>
       <Divider sx={{ marginTop: 1, marginBottom: 1 }} />
       <Box justifyContent="center" marginBottom={1}>
         <Typography align="center" fontFamily={"sans-serif"} fontSize="14px">
