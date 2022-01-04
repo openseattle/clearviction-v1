@@ -3,5 +3,7 @@
   --light-gray: #dcdcdc;
   --gray: #c4c4c4;
   --light-blue: #4e6c99;
+  --light-blue-transparent: rgba(78, 108, 153, 0.5);
   --z-index-front: 999;
+  --gray90: #e5e5e5;
 }
