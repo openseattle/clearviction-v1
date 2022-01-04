@@ -1,5 +1,4 @@
-import Button from "@mui/material/Button";
-import { makeStyles } from "@material-ui/styles";
+import { Button, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles({
   flexGrow: {
