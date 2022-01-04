@@ -1,9 +1,6 @@
 import { useState } from "react";
-import { trackClick } from "../trackingUtils"
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
-import Modal from "@mui/material/Modal";
+import { trackClick } from "../trackingUtils";
+import { Modal, Box, Button, Typography } from "@material-ui/core";
 import Text from "../ui-kit/Text";
 
 const style = {
@@ -22,10 +19,10 @@ const ToolTipModal = (props) => {
   const [open, setOpen] = useState(false);
 
   const handleClose = () => setOpen(false);
-  const handleOpen = () => { 
+  const handleOpen = () => {
     setOpen(true);
-    trackClick(props.text)
-  }
+    trackClick(props.text);
+  };
 
   return (
     <div>

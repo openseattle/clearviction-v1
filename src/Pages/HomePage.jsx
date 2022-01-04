@@ -1,15 +1,10 @@
 import { useEffect } from "react";
-import { trackPageview } from "../trackingUtils"
+import { trackPageview } from "../trackingUtils";
 import FAQAccordion from "../Components/Accordion";
 import PrimaryButton from "../ui-kit/Button";
-// import SecondaryButton from "../ui-kit/SecondaryButton";
 import Text from "../ui-kit/Text";
 
-import Grid from "@mui/material/Grid";
-import Stack from "@mui/material/Stack";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import Divider from "@mui/material/Divider";
+import { Grid, List, ListItem, Divider } from "@material-ui/core";
 
 import cvpLogoWhite from "../Assets/cvp-logo-white.png";
 import cvpLogoLeftHalf from "../Assets/cvp-logo-white-left-half.png";
@@ -191,7 +186,7 @@ const HomePage = () => {
 
       <div className="row">
         <div className="col-lg">
-          <Stack direction="row" sx={{ display: "flex", padding: 5 }}>
+          <Grid container direction="row" sx={{ display: "flex", padding: 5 }}>
             <Grid
               container
               columns={2}
@@ -219,16 +214,16 @@ const HomePage = () => {
               </Grid>
 
               <Grid item sx={{ float: "right", position: "relative" }}>
-                <Stack direction="column">
+                <Grid container direction="column">
                   <img src={openseattleLogo} alt={"Open Seattle Logo"} />
                   <img src={democracylabLogo} alt={"Democracy Lab Logo"} />
-                </Stack>
+                </Grid>
               </Grid>
             </Grid>
-          </Stack>
-          <Divider sx={{ marginTop: 1, marginBottom: 1 }} />
+          </Grid>
+          <Divider style={{ marginTop: "1em", marginBottom: "1em" }} />
           <Text
-            variant={"body"}
+            variant={"body1"}
             text={
               "The information on this site is not, nor should it be, considered legal advice."
             }

@@ -1,24 +1,38 @@
-import Accordion from "@mui/material/Accordion";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import {
+  Container,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+  makeStyles,
+} from "@material-ui/core";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Text from "../ui-kit/Text";
 import data from "../data/FAQdata";
-import { Container } from "@mui/material";
+
+const useStyles = makeStyles({
+  accordionSummary: {
+    backgroundColor: "var(--light-blue)",
+    color: "white",
+    height: "5em",
+  },
+  iconStyle: {
+    color: "white",
+  },
+});
 
 export default function FAQAccordion() {
   const content = data.questions;
-
+  const classes = useStyles();
   return (
     <>
       <Container maxWidth="md">
         {content.map(({ header, body1, body2, body3, body4, body5 }, idx) => (
           <Accordion key={idx}>
             <AccordionSummary
-              expandIcon={<ExpandMoreIcon sx={{ color: "#ffffff" }} />}
+              className={classes.accordionSummary}
+              expandIcon={<ExpandMoreIcon className={classes.iconStyle} />}
               aria-controls="panel1a-content"
               id="panel1a-header"
-              sx={{ backgroundColor: "var(--light-blue)", color: "#ffffff" }}
             >
               <Text fontFamily={"Lora"} variant={"h5"} text={header}></Text>
             </AccordionSummary>

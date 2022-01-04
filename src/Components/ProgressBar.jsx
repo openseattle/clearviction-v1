@@ -45,7 +45,7 @@ const ProgressBar = ({ currentSectionName, currentSection, totalSections }) => {
           if (a <= currentSection) {
             return (
               <li
-                classname="steps"
+                className="steps"
                 style={{ marginRight: stepWidth, background: "#4E6C99" }}
                 key={a}
               >
@@ -54,7 +54,7 @@ const ProgressBar = ({ currentSectionName, currentSection, totalSections }) => {
             );
           } else
             return (
-              <li classname="steps" style={{ marginRight: stepWidth }} key={a}>
+              <li className="steps" style={{ marginRight: stepWidth }} key={a}>
                 {a}
               </li>
             );

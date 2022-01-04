@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Typography } from "@material-ui/core";
 
 export default function Text({
   variant,
@@ -12,15 +12,17 @@ export default function Text({
   return (
     <Typography
       variant={variant}
-      style={{ style }}
-      sx={{
-        size: fontSize,
-        margin: "5px",
-        padding: "5px",
-        fontWeight: fontWeight,
-        fontFamily: fontFamily,
-        textAlign: textAlign,
-      }}
+      style={
+        (style,
+        {
+          size: fontSize,
+          margin: "5px",
+          padding: "5px",
+          fontWeight: fontWeight,
+          fontFamily: fontFamily,
+          textAlign: textAlign,
+        })
+      }
     >
       {text}
     </Typography>

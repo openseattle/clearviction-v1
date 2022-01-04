@@ -1,17 +1,14 @@
 import { useEffect } from "react";
-import { trackPageview, trackClick } from "../trackingUtils"
+import { trackPageview, trackClick } from "../trackingUtils";
 import { useLocation } from "react-router-dom";
 import calculatorPages from "../data/calculatorPages";
 import ToolTipModal from "../Components/ToolTipModal";
 import Text from "../ui-kit/Text";
 import ProgressBar from "../Components/ProgressBar";
+import "../CSS/Calculator.css";
 
 /** MATERIAL UI IMPORTS */
-import Box from "@material-ui/core/Box";
-import Link from "@mui/material/Link";
-import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
+import { Box, Link, Container, Button, Grid } from "@material-ui/core";
 
 const BUTTON_COLORS = {
   blue: "#4e6c99",
@@ -40,7 +37,7 @@ const CalculatorPage = () => {
   const renderButtons = (buttons) =>
     buttons.map(({ text, href, color }) => {
       return (
-        <Stack key={text} direction="column" style={{ padding: 10 }}>
+        <Grid container key={text} direction="column" style={{ padding: 10 }}>
           <Button
             onClick={() => trackClick(text)}
             variant="contained"
@@ -49,7 +46,7 @@ const CalculatorPage = () => {
           >
             <Text text={text} variant={"h6"}></Text>
           </Button>
-        </Stack>
+        </Grid>
       );
     });
 
@@ -59,7 +56,13 @@ const CalculatorPage = () => {
         return <Text key={text} text={text} variant={"h4"}></Text>;
       case "link":
         return (
-          <Link href={href} target="_blank" rel="noreferrer" key={text} onClick={() => trackClick(text)}>
+          <Link
+            href={href}
+            target="_blank"
+            rel="noreferrer"
+            key={text}
+            onClick={() => trackClick(text)}
+          >
             {text}
           </Link>
         );
@@ -83,7 +86,7 @@ const CalculatorPage = () => {
       }}
     >
       <Container maxWidth="xs" padding={10}>
-        <Stack direction="column" spacing={2}>
+        <Grid container direction="column" spacing={2}>
           {progressBar && (
             <ProgressBar
               currentSectionName={progressBar.currentSectionName}
@@ -96,12 +99,17 @@ const CalculatorPage = () => {
           {buttons && renderButtons(buttons)}
           {tooltip && <ToolTipModal text={tooltip} />}
           {footerLink && (
-            <a target="_blank" rel="noreferrer" href={footerLink.href} onClick={() => trackClick(footerLink.text)}>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href={footerLink.href}
+              onClick={() => trackClick(footerLink.text)}
+            >
               {footerLink.text}
             </a>
           )}
           {disclaimer && <Text text={disclaimer} variant={"h6"}></Text>}
-        </Stack>
+        </Grid>
       </Container>
     </Box>
   );
