@@ -33,7 +33,7 @@
 
 .progressBar {
   width: 100%;
-  background-color: rgba(229, 229, 229, 1);
+  background-color: var(--gray90);
   height: 15px;
   overflow: hidden;
   border-radius: 10px;
@@ -45,7 +45,7 @@
 
 .progressBar-active {
   width: 0%;
-  background-color: #4e6c99;
+  background-color: var(--light-blue);
   height: 15px;
   overflow: hidden;
   z-index: 3;
@@ -56,7 +56,7 @@
 
 .progressBar-current {
   width: 0%;
-  background-color: #8fa5c5;
+  background-color: var(--light-blue-transparent);
   height: 15px;
   overflow: hidden;
   z-index: 2;
@@ -70,7 +70,7 @@
   list-style-type: none;
   text-align: center;
   display: inline;
-  background: #e5e5e5;
+  background: var(--gray90);
   border: 1px solid #ffffff;
   box-sizing: border-box;
   border-radius: 50%;
@@ -83,13 +83,13 @@
 }
 
 .progressBar li:nth-child(3) {
-  background: #4e6c99;
+  background: var(--light-blue);
 }
 
 .progress-bar-title {
   font-size: 14px;
   line-height: 16px;
-  color: rgba(78, 108, 153, 0.65);
+  color: var(--light-blue-transparent);
 }
 
 ul {
