@@ -7,6 +7,7 @@ import ErrorPage from "./Pages/ErrorPage";
 import AboutPage from "./Pages/AboutPage";
 import ContactPage from "./Pages/ContactPage";
 import VolunteerPage from "./Pages/VolunteerPage";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <VolunteerPage />
         </Route>
       </Switch>
+      <Footer />
     </div>
   );
 }

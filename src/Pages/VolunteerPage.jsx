@@ -119,7 +119,6 @@ const VolunteerPage = () => {
           <SecondaryButton text="Join Us" />
         </Box>
       </Box>
-      <Footer />
     </>
   );
 };

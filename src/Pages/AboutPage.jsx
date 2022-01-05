@@ -113,7 +113,6 @@ const AboutPage = () => {
           </Grid>
         </Grid>
       </Box>
-      <Footer />
     </>
   );
 };

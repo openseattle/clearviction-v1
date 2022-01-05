@@ -51,7 +51,7 @@ const Footer = () => {
           </Grid>
 
           <Grid item sx={{ float: "right", position: "relative" }}>
-            <Grid direction="column">
+            <Grid container direction="column">
               <img src={openseattleLogo} alt={"Open Seattle Logo"} />
               <img src={democracylabLogo} alt={"Democracy Lab Logo"} />
             </Grid>

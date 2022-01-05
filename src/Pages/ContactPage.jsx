@@ -37,7 +37,6 @@ const ContactPage = () => {
           alt="big interesting image"
         />
       </Container>
-      <Footer />
     </>
   );
 };

@@ -183,53 +183,6 @@ const HomePage = () => {
           {/* <SecondaryButton text={"Join the Team"} /> */}
         </div>
       </div>
-
-      <div className="row">
-        <div className="col-lg">
-          <Grid container direction="row" sx={{ display: "flex", padding: 5 }}>
-            <Grid
-              container
-              columns={2}
-              spacing={6}
-              justifyContent="space-between"
-            >
-              <Grid item>
-                <List>
-                  <ListItem>
-                    <a href="/" style={{ color: "#000000" }}>
-                      Home
-                    </a>
-                  </ListItem>
-                  <ListItem>
-                    <a href="/calculator" style={{ color: "#000000" }}>
-                      Calculator
-                    </a>
-                  </ListItem>
-                  {/* <ListItem>
-                    <a href="/" style={{ color: "#000000" }}>
-                      Contact
-                    </a>
-                  </ListItem> */}
-                </List>
-              </Grid>
-
-              <Grid item sx={{ float: "right", position: "relative" }}>
-                <Grid container direction="column">
-                  <img src={openseattleLogo} alt={"Open Seattle Logo"} />
-                  <img src={democracylabLogo} alt={"Democracy Lab Logo"} />
-                </Grid>
-              </Grid>
-            </Grid>
-          </Grid>
-          <Divider style={{ marginTop: "1em", marginBottom: "1em" }} />
-          <Text
-            variant={"body1"}
-            text={
-              "The information on this site is not, nor should it be, considered legal advice."
-            }
-          ></Text>
-        </div>
-      </div>
     </div>
   );
 };
