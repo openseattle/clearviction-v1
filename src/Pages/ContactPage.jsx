@@ -1,6 +1,7 @@
 import { Container, Typography, Box, makeStyles } from "@material-ui/core";
 import Footer from "../Components/Footer";
 import placeholder from "../Assets/placeholder_contact.png";
+import VolunteerPage from "./VolunteerPage";
 
 const useStyles = makeStyles({
   bg: {
@@ -36,7 +37,6 @@ const ContactPage = () => {
           alt="big interesting image"
         />
       </Container>
-
       <Footer />
     </>
   );

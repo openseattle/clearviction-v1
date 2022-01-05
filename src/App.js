@@ -6,6 +6,7 @@ import CalculatorPage from "./Pages/CalculatorPage";
 import ErrorPage from "./Pages/ErrorPage";
 import AboutPage from "./Pages/AboutPage";
 import ContactPage from "./Pages/ContactPage";
+import VolunteerPage from "./Pages/VolunteerPage";
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
         </Route>
         <Route exact path="/contact">
           <ContactPage />
+        </Route>
+        <Route exact path="/volunteer">
+          <VolunteerPage />
         </Route>
       </Switch>
     </div>

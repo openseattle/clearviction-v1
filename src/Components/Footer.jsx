@@ -23,7 +23,7 @@ const Footer = () => {
 
   return (
     <Container maxWidth="xl">
-      <Grid direction="row" sx={{ display: "flex", padding: 5 }}>
+      <Grid container direction="row" sx={{ display: "flex", padding: 5 }}>
         <Grid container columns={2} spacing={6} justifyContent="space-between">
           <Grid item>
             <List>
