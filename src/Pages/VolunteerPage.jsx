@@ -3,15 +3,11 @@ import {
   Grid,
   makeStyles,
   Typography,
-  Container,
-  List,
-  ListItem,
   Card,
   CardContent,
-  Paper,
 } from "@material-ui/core";
 import placeholder from "../Assets/placeholder_contact.png";
-import Footer from "../Components/Footer";
+import HeroPanel from "../Components/HeroPanel";
 import SecondaryButton from "../ui-kit/SecondaryButton";
 
 const useStyles = makeStyles({
@@ -35,12 +31,7 @@ const VolunteerPage = () => {
   const classes = useStyles();
   return (
     <>
-      <Box>
-        <Typography variant="h1">Volunteer</Typography>
-        <Typography variant="h5" className={classes.subtext}>
-          subtext
-        </Typography>
-      </Box>
+      <HeroPanel title="Volunteer" />
       <Box style={{ backgroundColor: "var(--dark-blue)" }}>
         <Grid container spacing={5}>
           <Grid item xs={12} sm={6} md={6} align="center">

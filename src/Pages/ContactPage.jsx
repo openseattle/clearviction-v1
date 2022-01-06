@@ -1,7 +1,6 @@
 import { Container, Typography, Box, makeStyles } from "@material-ui/core";
-import Footer from "../Components/Footer";
 import placeholder from "../Assets/placeholder_contact.png";
-import VolunteerPage from "./VolunteerPage";
+import HeroPanel from "../Components/HeroPanel";
 
 const useStyles = makeStyles({
   bg: {
@@ -17,12 +16,13 @@ const useStyles = makeStyles({
 });
 
 const ContactPage = () => {
+  const pageTitle = "Contact";
   const classes = useStyles();
   return (
     <>
       <Container maxWidth="md">
+        <HeroPanel title={pageTitle} />
         <Box>
-          <Typography variant="h1">Contact Us</Typography>
           <Typography variant="h5" className={classes.subtext}>
             Have questions? Send us an email at{" "}
             <a href="mailto:contact@cvp.com">contact@cvp.com</a> and we’ll get
