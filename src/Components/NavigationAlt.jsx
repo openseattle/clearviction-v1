@@ -8,7 +8,6 @@ import {
   Drawer,
   List,
   ListItem,
-  ButtonGroup,
   Container,
 } from "@material-ui/core";
 import { MenuSharp as MenuIcon, CloseSharp } from "@material-ui/icons";
@@ -58,7 +57,6 @@ const NavigationAlt = () => {
           <Box style={{ flexGrow: 1 }} />
           {/* desktop menu */}
           <Box display={{ xs: "none", md: "flex" }}>
-            <ButtonGroup variant="text">
               {pages.map((page) => (
                 <NavButton
                   key={page.name}
@@ -66,19 +64,18 @@ const NavigationAlt = () => {
                   url={page.url}
                 />
               ))}
-            </ButtonGroup>
           </Box>
           {/* mobile menu */}
 
           <Box display={{ xs: "flex", md: "none" }}>
             <IconButton
-              size="large"
+              size="medium"
               edge="start"
               color="inherit"
               aria-label="menu"
               onClick={handleOpenMenu}
             >
-              <MenuIcon fontSize="large" />
+              <MenuIcon fontSize="large"/>
             </IconButton>
           </Box>
           <Drawer

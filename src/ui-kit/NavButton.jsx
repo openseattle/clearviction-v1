@@ -17,7 +17,7 @@ const NavButton = (props) => {
   const classes = useStyles(theme);
 
   return (
-    <Link className={classes.navLink} href={url} variant="text">
+    <Link className={classes.navLink} href={url} >
       <Typography className={classes.navText}>{pageName}</Typography>
     </Link>
   );

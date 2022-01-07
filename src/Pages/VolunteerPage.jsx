@@ -3,6 +3,7 @@ import placeholder from "../Assets/placeholder_contact.png";
 import HeroPanel from "../Components/HeroPanel";
 import RolesDisplay from "../Components/RolesDisplay";
 import SecondaryButton from "../ui-kit/SecondaryButton";
+import ThemedList from "../ui-kit/ThemedList";
 
 const useStyles = makeStyles({
   textColor: {
@@ -71,12 +72,7 @@ const VolunteerPage = () => {
               <Typography variant="h2" className={classes.textColor}>
                 Who can apply?
               </Typography>
-              <Typography className={classes.textColor}>
-                <ul
-                  style={{
-                    listStyleType: "disc",
-                  }}
-                >
+                  <ThemedList>
                   <li>
                     You can commit to 4 hours a week for at least 6 months
                   </li>
@@ -87,8 +83,7 @@ const VolunteerPage = () => {
                   <li>
                     You are self-motivated and are comfortable with remote work
                   </li>
-                </ul>
-              </Typography>
+                  </ThemedList>
             </Box>
           </Box>
         </Grid>
