@@ -13,6 +13,7 @@ const Theme = createTheme({
   typography: {
     body1: {
       fontFamily: "lora",
+      fontSize: "15px"
     },
   },
 });

@@ -82,7 +82,7 @@ const NavigationAlt = () => {
             anchor="right"
             open={Boolean(menuState)}
             onClose={handleCloseMenu}
-            PaperProps={{ style: { backgroundColor: "#2d3047" } }}
+            PaperProps={{ style: { backgroundColor: "#2d3047", width: "250px" } }}
           >
             <List>
               <ListItem style={{ justifyContent: "center" }}>
@@ -95,6 +95,15 @@ const NavigationAlt = () => {
                   <NavButton pageName={page.name} url={page.url} />
                 </ListItem>
               ))}
+              <ListItem>
+              <Box justifyContent="center" >
+          <Typography style={{fontSize: "10px", textAlign: "center"}} color="primary">
+            {" "}
+            The information on this site is not, nor should it be, considered
+            legal advice.
+          </Typography>
+        </Box>
+              </ListItem>
             </List>
           </Drawer>
         </Toolbar>
