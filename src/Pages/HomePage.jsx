@@ -3,13 +3,8 @@ import { trackPageview } from "../trackingUtils";
 import FAQAccordion from "../Components/Accordion";
 import PrimaryButton from "../ui-kit/Button";
 import Text from "../ui-kit/Text";
-
-import { Grid, List, ListItem, Divider } from "@material-ui/core";
-
 import cvpLogoWhite from "../Assets/cvp-logo-white.png";
 import cvpLogoLeftHalf from "../Assets/cvp-logo-white-left-half.png";
-import democracylabLogo from "../Assets/democracylab-logo.png";
-import openseattleLogo from "../Assets/openseattle-logo.png";
 import housing from "../Assets/housing.svg";
 import employment from "../Assets/employment.svg";
 import education from "../Assets/education.svg";
