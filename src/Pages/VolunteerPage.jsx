@@ -1,16 +1,6 @@
-import {
-  Box,
-  Grid,
-  makeStyles,
-  Typography,
-  Card,
-  CardContent,
-  Container,
-  CardMedia,
-} from "@material-ui/core";
+import { Box, Grid, makeStyles, Typography } from "@material-ui/core";
 import placeholder from "../Assets/placeholder_contact.png";
 import HeroPanel from "../Components/HeroPanel";
-import InfoCard from "../Components/InfoCard";
 import RolesDisplay from "../Components/RolesDisplay";
 import SecondaryButton from "../ui-kit/SecondaryButton";
 
