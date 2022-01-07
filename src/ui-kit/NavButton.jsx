@@ -1,19 +1,25 @@
-import { Button, Typography } from "@material-ui/core";
+import { Link, makeStyles, Typography } from "@material-ui/core";
 
+const useStyles = makeStyles((theme) => ({
+  navLink: {
+    margin: 15,
+    color: "white",
+    textTransform: "none",
+    "&:hover": { color: "white", textDecoration: "underline" },
+  },
+  navText: {
+    fontFamily: ["Helvetica Neue", "sans-serif"],
+    fontSize: "14px",
+  },
+}));
 const NavButton = (props) => {
-  const { pageName, url } = props;
+  const { pageName, url, theme } = props;
+  const classes = useStyles(theme);
+
   return (
-    <Button
-      href={url}
-      style={{
-        minWidth: "80px",
-        color: "white",
-        textTransform: "none",
-        "&:hover": { color: "white", textDecoration: "underline" },
-      }}
-    >
-      <Typography fontSize="14px">{pageName}</Typography>
-    </Button>
+    <Link className={classes.navLink} href={url} variant="text">
+      <Typography className={classes.navText}>{pageName}</Typography>
+    </Link>
   );
 };
 
