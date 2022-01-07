@@ -75,7 +75,7 @@ const NavigationAlt = () => {
               aria-label="menu"
               onClick={handleOpenMenu}
             >
-              <MenuIcon fontSize="large"/>
+              <MenuIcon style={{fontSize: "3rem"}}/>
             </IconButton>
           </Box>
           <Drawer
@@ -87,7 +87,7 @@ const NavigationAlt = () => {
             <List>
               <ListItem style={{ justifyContent: "center" }}>
                 <IconButton onClick={handleCloseMenu}>
-                  <CloseSharp fontSize="large" style={{ color: "white" }} />
+                  <CloseSharp style={{ color: "white", fontSize: "3rem" }} />
                 </IconButton>
               </ListItem>
               {pages.map((page) => (
