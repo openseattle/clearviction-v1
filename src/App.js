@@ -1,5 +1,5 @@
 import "./App.css";
-import { CssBaseline, ThemeProvider } from "@material-ui/core";
+import { CssBaseline, ThemeProvider, Box } from "@material-ui/core";
 import Theme from "./Components/Theme";
 import { Switch, Route, Redirect } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
@@ -15,6 +15,9 @@ function App() {
   return (
     <div>
       <ThemeProvider theme={Theme}>
+      <Box
+      style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
+    >
         <CssBaseline />
         <NavigationAlt />
         <Switch>
@@ -41,6 +44,7 @@ function App() {
           </Route>
         </Switch>
         <Footer />
+        </Box>
       </ThemeProvider>
     </div>
   );
