@@ -30,8 +30,8 @@ const useStyles = makeStyles({
     borderRadius: 0,
   },
   ourTeam: {
-    marginTop: "2em",
-    marginBottom: "2em",
+    marginTop: "2rem",
+    marginBottom: "2rem",
   },
 });
 
@@ -49,37 +49,24 @@ const AboutPage = () => {
         <Grid container spacing={2}>
           <Grid item lg={6} md={6} sm={12}>
             <Card className={classes.infoDark} variant="outlined">
-              <CardActionArea>
-                <CardContent>
-                  <Typography variant="h5">
-                    Washingtonians will face significant barriers to daily life
-                    after completing their sentence, making it harder to access
-                    housing, employment, and community. The first step in
-                    overcoming these barriers is to vacate the conviction (a
-                    process which hides the conviction record from background
-                    checks and makes it legal to answer, “No, I have never been
-                    convicted of a crime,” in a job interview or housing
-                    application).
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
+              <CardContent>
+                <Typography variant="h5">Content</Typography>
+              </CardContent>
             </Card>
           </Grid>
           <Grid item lg={6} md={6} sm={12}>
             <Card className={classes.infoLight} variant="outlined">
               <CardContent>
-                <Typography variant="h5">
-                  We are a civic-tech open-source project, run by volunteers
-                  with different backgrounds from all over the world. CVP is
-                  associated with Democracy Lab and Open Seattle org.
-                </Typography>
+                <Typography variant="h5">Content</Typography>
               </CardContent>
             </Card>
           </Grid>
         </Grid>
 
         <Box className={classes.ourTeam}>
-          <Typography variant="h2">Our Team</Typography>
+          <Typography style={{ marginBottom: "1rem" }} variant="h2">
+            Our Team
+          </Typography>
           <Typography variant="h5">
             We are a group of dedicated volunteers working together to create
             tools that help people navigate the conviction vacation process. We
