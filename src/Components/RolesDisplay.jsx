@@ -1,4 +1,4 @@
-import { Grid, Card, CardContent, Typography } from "@material-ui/core";
+import { Grid, Card,Typography } from "@material-ui/core";
 
 const roles = [
   "User Research",

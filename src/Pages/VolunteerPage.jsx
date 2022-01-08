@@ -79,6 +79,7 @@ const VolunteerPage = () => {
               height: "250px",
               justifyContent: "center",
               display: "flex",
+              width: "100%"
             }}
           >
             <Box style={{ maxWidth: "500px", margin: "2em" }}>
@@ -105,6 +106,7 @@ const VolunteerPage = () => {
               justifyContent: "center",
               height: "250px",
               display: "flex",
+              width: "100%"
             }}
           >
             <Box style={{ maxWidth: "500px", margin: "2em" }}>

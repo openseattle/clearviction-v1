@@ -10,7 +10,7 @@ import AboutPage from "./Pages/AboutPage";
 import ContactPage from "./Pages/ContactPage";
 import VolunteerPage from "./Pages/VolunteerPage";
 import Footer from "./Components/Footer";
-import Navigation from "./Components/Navigation";
+// import Navigation from "./Components/Navigation";
 
 function App() {
   return (
@@ -20,8 +20,8 @@ function App() {
       style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
     >
         <CssBaseline />
-        {/* <NavigationAlt /> */}
-        <Navigation />
+        <NavigationAlt />
+        {/* <Navigation /> */}
         <Switch>
           <Route path="/404">
             <ErrorPage />
