@@ -6,7 +6,6 @@ import {
   CardContent,
   Card,
   makeStyles,
-  CardActionArea,
 } from "@material-ui/core";
 import TeamCard from "../Components/TeamCard";
 import PrimaryButton from "../ui-kit/Button";
