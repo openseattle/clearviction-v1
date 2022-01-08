@@ -41,17 +41,16 @@ const NavigationAlt = () => {
               component="img"
               src={navLogo}
               alt="conviction vacation project logo"
-              style={{ height: 25, paddingRight: 2 }}
+              style={{ height: "4rem", paddingRight: "2rem" }}
             />
             <Typography
               style={{
                 color: "white",
                 fontFamily: "helvetica",
-                fontSize: "2em",
-                mr: { xl: 10 },
+                fontSize: "2rem",
               }}
             >
-              WA Conviction Vacation Project
+              Washington Conviction Vacation Project
             </Typography>
           </Box>
           <Box style={{ flexGrow: 1 }} />
