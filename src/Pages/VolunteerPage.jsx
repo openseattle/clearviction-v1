@@ -1,4 +1,4 @@
-import { Box, Grid, makeStyles, Typography } from "@material-ui/core";
+import { Box, Grid, makeStyles, Typography, Container } from "@material-ui/core";
 import placeholder from "../Assets/placeholder_contact.png";
 import HeroPanel from "../Components/HeroPanel";
 import RolesDisplay from "../Components/RolesDisplay";
@@ -20,12 +20,17 @@ const VolunteerPage = () => {
   const classes = useStyles();
   return (
     <>
+    <Container maxWidth="lg">
       <HeroPanel title="Volunteer" />
+      </Container>
+        
+    <Box style={{ backgroundColor: "var(--dark-blue)" }}>
+    <Container maxWidth="lg">
+
       <Grid
         container
         justifyContent="center"
         alignItems="center"
-        style={{ backgroundColor: "var(--dark-blue)" }}
       >
         <Grid item md={6}>
           <Box justifyContent="center" display="flex">
@@ -56,67 +61,76 @@ const VolunteerPage = () => {
           </Box>
         </Grid>
       </Grid>
+      </Container>
+      </Box>
       <Grid
         container
         justifyContent="center"
         alignItems="center"
         style={{ marginTop: "0em" }}
       >
-        <Grid item md={6}>
-          <Box
-            justifyContent="center"
-            display="flex"
-            style={{ backgroundColor: "var(--light-blue)" }}
-          >
-            <Box style={{ maxWidth: "500px", margin: "2em" }}>
-              <Typography variant="h2" className={classes.textColor}>
-                Who can apply?
-              </Typography>
-                  <ThemedList>
-                  <li>
-                    You can commit to 4 hours a week for at least 6 months
-                  </li>
-                  <li>
-                    You want to share your expertise in a field to help us make
-                    a better product
-                  </li>
-                  <li>
-                    You are self-motivated and are comfortable with remote work
-                  </li>
-                  </ThemedList>
-            </Box>
+        <Grid
+          item
+          md={6}
+          style={{
+            backgroundColor: "var(--light-blue)",
+            width: "100%",
+            justifyContent: "center",
+            display: "flex",
+          }}
+        >
+          <Box style={{ maxWidth: "500px", margin: "2em" }}>
+            <Typography variant="h2" className={classes.textColor}>
+              Who can apply?
+            </Typography>
+            <ThemedList>
+              <li>You can commit to 4 hours a week for at least 6 months</li>
+              <li>
+                You want to share your expertise in a field to help us make a
+                better product
+              </li>
+              <li>
+                You are self-motivated and are comfortable with remote work
+              </li>
+            </ThemedList>
           </Box>
         </Grid>
-        <Grid item md={6}>
-          <Box
-            justifyContent="center"
-            display="flex"
-            style={{ backgroundColor: "white" }}
-          >
-            <Box style={{ maxWidth: "500px", margin: "2em" }}>
-              <Typography variant="h2">How can you apply?</Typography>
-              <Typography variant="body1">
-                We are currently using DemocracyLab to streamline the
-                volunteering process, which you can find clicking the button
-                below.
-              </Typography>
-              <Typography variant="body1">
-                If you want further information and want to have a chat, don’t
-                hesitate to contact us though our form.
-              </Typography>
-            </Box>
+        <Grid
+          item
+          md={6}
+          style={{
+            backgroundColor: "white",
+            justifyContent: "center",
+            display: "flex",
+          }}
+        >
+          <Box style={{ maxWidth: "500px", margin: "2em" }}>
+            <Typography className={classes.textAltColor} variant="h2">How can you apply?</Typography>
+            <Typography variant="body1">
+              We are currently using DemocracyLab to streamline the volunteering
+              process, which you can find clicking the button below.
+            </Typography>
+            <Typography  variant="body1">
+              If you want further information and want to have a chat, don’t
+              hesitate to contact us though our form.
+            </Typography>
           </Box>
         </Grid>
       </Grid>
       <Box style={{ backgroundColor: "var(--dark-blue)" }}>
-        <Typography className={classes.textColor} variant="h2">
+      <Container maxWidth="lg">
+
+        <Typography className={classes.textColor} style={{marginTop: "1em", marginBottom: "1em"}} variant="h2">
           Open Roles
         </Typography>
         <RolesDisplay />
         <Box justifyContent="center" display="flex">
           <SecondaryButton text="Join Us" />
         </Box>
+      </Container>
+
       </Box>
+
     </>
   );
 };
