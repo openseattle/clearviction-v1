@@ -47,6 +47,7 @@ const Theme = createTheme({
   },
 });
 
+// Font will resize for these elements depending on screen size
 Theme.typography.h1 = {
   fontSize: "4rem",
   [Theme.breakpoints.up("sm")]: {
