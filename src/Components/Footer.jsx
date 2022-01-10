@@ -22,15 +22,10 @@ const Footer = () => {
   const classes = useStyles();
 
   return (
-      <Box component="footer" style={{marginTop: "auto"}}>
-      <Container maxWidth="xl" >
-        <Grid container direction="row" sx={{ display: "flex", padding: 5 }}>
-          <Grid
-            container
-            columns={2}
-            spacing={6}
-            justifyContent="space-between"
-          >
+    <Box component="footer" style={{ marginTop: "auto" }}>
+      <Container maxWidth="xl">
+        <Grid container direction="row" style={{ display: "flex" }}>
+          <Grid container columns={2} justifyContent="space-between">
             <Grid item>
               <List>
                 <ListItem>
@@ -56,7 +51,7 @@ const Footer = () => {
               </List>
             </Grid>
 
-            <Grid item sx={{ float: "right", position: "relative" }}>
+            <Grid item>
               <Grid container direction="column">
                 <img src={openseattleLogo} alt={"Open Seattle Logo"} />
                 <img src={democracylabLogo} alt={"Democracy Lab Logo"} />
@@ -64,8 +59,8 @@ const Footer = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Divider sx={{ marginTop: 1, marginBottom: 1 }} />
-        <Box justifyContent="center" marginBottom={1}>
+        <Divider style={{ marginTop: 1, marginBottom: 1 }} />
+        <Box justifyContent="center">
           <Typography align="center" fontFamily={"sans-serif"} fontSize="14px">
             {" "}
             The information on this site is not, nor should it be, considered
@@ -73,7 +68,7 @@ const Footer = () => {
           </Typography>
         </Box>
       </Container>
-      </Box>
+    </Box>
   );
 };
 

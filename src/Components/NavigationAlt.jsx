@@ -35,7 +35,6 @@ const NavigationAlt = () => {
             component={Button}
             href="/"
             disableRipple
-            style={{ textTransform: "none" }}
           >
             <Box
               component="img"
@@ -47,7 +46,9 @@ const NavigationAlt = () => {
               style={{
                 color: "white",
                 fontFamily: "helvetica",
-                fontSize: "2rem",
+                fontSize: "1.75rem",
+                textAlign: "left",
+                maxWidth: "25rem"
               }}
             >
               Washington Conviction Vacation Project
