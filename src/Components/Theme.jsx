@@ -19,7 +19,7 @@ const Theme = createTheme({
     }
   },
   typography: {
-    fontSize: "16px",
+    fontSize: 16,
     body1: {
       fontFamily: "Lora",
       fontSize: "1.25rem",

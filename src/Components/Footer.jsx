@@ -24,7 +24,7 @@ const Footer = () => {
   return (
     <Box component="footer" style={{ marginTop: "auto" }}>
       <Container maxWidth="xl">
-        <Grid container direction="row" style={{ display: "flex" }}>
+        <Grid container direction="row" style={{ display: "flex", backgroundColor: "primary" }}>
           <Grid container columns={2} justifyContent="space-between">
             <Grid item>
               <List>

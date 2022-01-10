@@ -13,18 +13,18 @@ import HeroPanel from "../Components/HeroPanel";
 
 const team = [1, 2, 3, 4, 5, 6];
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   actionItem: {
-    backgroundColor: "var(--dark-blue)",
+    backgroundColor: theme.palette.primary.main,
     color: "white",
   },
   infoDark: {
-    backgroundColor: "var(--dark-blue)",
+    backgroundColor: theme.palette.secondary.main,
     color: "white",
     borderRadius: 0,
   },
   infoLight: {
-    backgroundColor: "var(--blue)",
+    backgroundColor: theme.palette.secondary.light,
     color: "white",
     borderRadius: 0,
   },
@@ -32,7 +32,7 @@ const useStyles = makeStyles({
     marginTop: "2rem",
     marginBottom: "2rem",
   },
-});
+}));
 
 const AboutPage = () => {
   const classes = useStyles();
