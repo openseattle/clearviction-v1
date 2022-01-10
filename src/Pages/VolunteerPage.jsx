@@ -9,7 +9,7 @@ import placeholder from "../Assets/placeholder_contact.png";
 import HeroPanel from "../Components/HeroPanel";
 import RolesDisplay from "../Components/RolesDisplay";
 import SecondaryButton from "../ui-kit/SecondaryButton";
-import ThemedList from "../ui-kit/ThemedList";
+import BulletedListMui from "../ui-kit/BulletedListMui";
 
 const useStyles = makeStyles({
   textColor: {
@@ -31,21 +31,22 @@ const VolunteerPage = () => {
         <Box style={{ backgroundColor: "var(--dark-blue)" }}>
           <Grid container justifyContent="center" alignItems="center">
             <Grid item md={6}>
-              <Box justifyContent="center" display="flex">
+              <Box justifyContent="center" display="flex" >
                 <Box
                   component="img"
                   src={placeholder}
                   style={{
                     maxHeight: "250px",
                     maxWidth: "100%",
-                    padding: "2rem",
+                    marginTop: "3rem",
+                    marginBottom: "3rem"
                   }}
                 />
               </Box>
             </Grid>
             <Grid item md={6}>
               <Box justifyContent="center" display="flex">
-                <Box style={{ maxWidth: "500px", margin: "2em" }}>
+                <Box style={{ maxWidth: "500px", margin: "2rem" }}>
                   <Typography className={classes.textColor} variant="h2">
                     Why Volunteer?
                   </Typography>
@@ -69,7 +70,7 @@ const VolunteerPage = () => {
           container
           justifyContent="center"
           alignItems="center"
-          style={{ marginTop: "0em" }}
+          style={{ marginTop: "0rem" }}
         >
           <Grid
             item
@@ -82,11 +83,11 @@ const VolunteerPage = () => {
               width: "100%"
             }}
           >
-            <Box style={{ maxWidth: "500px", margin: "2em" }}>
+            <Box style={{ maxWidth: "500px", margin: "2rem" }}>
               <Typography variant="h2" className={classes.textColor}>
                 Who can apply?
               </Typography>
-              <ThemedList>
+              <BulletedListMui>
                 <li>You can commit to 4 hours a week for at least 6 months</li>
                 <li>
                   You want to share your expertise in a field to help us make a
@@ -95,7 +96,7 @@ const VolunteerPage = () => {
                 <li>
                   You are self-motivated and are comfortable with remote work
                 </li>
-              </ThemedList>
+              </BulletedListMui>
             </Box>
           </Grid>
           <Grid
@@ -109,7 +110,7 @@ const VolunteerPage = () => {
               width: "100%"
             }}
           >
-            <Box style={{ maxWidth: "500px", margin: "2em" }}>
+            <Box style={{ maxWidth: "500px", margin: "2rem" }}>
               <Typography className={classes.textAltColor} variant="h2">
                 How can you apply?
               </Typography>
