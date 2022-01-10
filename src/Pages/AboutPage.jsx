@@ -19,12 +19,12 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
   },
   infoDark: {
-    backgroundColor: theme.palette.secondary.main,
+    backgroundColor: theme.palette.primary.main,
     color: "white",
     borderRadius: 0,
   },
   infoLight: {
-    backgroundColor: theme.palette.secondary.light,
+    backgroundColor: theme.palette.primary.light,
     color: "white",
     borderRadius: 0,
   },

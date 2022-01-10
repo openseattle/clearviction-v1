@@ -12,7 +12,7 @@ import data from "../data/FAQdata";
 
 const useStyles = makeStyles( (theme) => ({
   accordionSummary: {
-    backgroundColor: theme.palette.secondary.light,
+    backgroundColor: theme.palette.primary.light,
     color: "white",
     height: "8rem",
   },
