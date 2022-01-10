@@ -9,6 +9,7 @@ import {
   List,
   ListItem,
   Container,
+  makeStyles,
 } from "@material-ui/core";
 import { MenuSharp as MenuIcon, CloseSharp } from "@material-ui/icons";
 import pages from "../data/siteMap";
@@ -16,7 +17,31 @@ import navLogo from "../Assets/cvp-logo-white.png";
 import { useState } from "react";
 import NavButton from "../ui-kit/NavButton";
 
+const useStyles = makeStyles((theme) => ({
+  navigationLogo: {
+    height: "4rem",
+    paddingRight: "2rem",
+  },
+  navigationLogoText: {
+    color: "white",
+    fontFamily: "helvetica",
+    fontSize: "1.75rem",
+    textAlign: "left",
+    maxWidth: "25rem",
+  },
+  disclaimer: {
+    fontSize: "10px", 
+    textAlign: "center"
+  },
+  closeIcon: {
+    color: "white", 
+    fontSize: "3rem" 
+  }
+}));
+
 const NavigationAlt = () => {
+  const classes = useStyles();
+
   const [menuState, setMenuState] = useState(null);
 
   const handleOpenMenu = (event) => {
@@ -31,39 +56,24 @@ const NavigationAlt = () => {
     <AppBar position="static" color="secondary">
       <Container>
         <Toolbar>
-          <Box
-            component={Button}
-            href="/"
-            disableRipple
-          >
+          <Box component={Button} href="/" disableRipple>
             <Box
+              className={classes.navigationLogo}
               component="img"
               src={navLogo}
-              alt="conviction vacation project logo"
-              style={{ height: "4rem", paddingRight: "2rem" }}
+              alt="conviction vacation project next white scales of justice"
             />
-            <Typography
-              style={{
-                color: "white",
-                fontFamily: "helvetica",
-                fontSize: "1.75rem",
-                textAlign: "left",
-                maxWidth: "25rem"
-              }}
-            >
+            <Typography className={classes.navigationLogoText}>
               Washington Conviction Vacation Project
             </Typography>
           </Box>
           <Box style={{ flexGrow: 1 }} />
+
           {/* desktop menu */}
           <Box display={{ xs: "none", md: "flex" }}>
-              {pages.map((page) => (
-                <NavButton
-                  key={page.name}
-                  pageName={page.name}
-                  url={page.url}
-                />
-              ))}
+            {pages.map((page) => (
+              <NavButton key={page.name} pageName={page.name} url={page.url} />
+            ))}
           </Box>
           {/* mobile menu */}
 
@@ -75,19 +85,21 @@ const NavigationAlt = () => {
               aria-label="menu"
               onClick={handleOpenMenu}
             >
-              <MenuIcon style={{fontSize: "3rem"}}/>
+              <MenuIcon style={{ fontSize: "3rem" }} />
             </IconButton>
           </Box>
           <Drawer
             anchor="right"
             open={Boolean(menuState)}
             onClose={handleCloseMenu}
-            PaperProps={{ style: { backgroundColor: "#2d3047", width: "250px" } }}
+            PaperProps={{
+              style: { backgroundColor: "#2d3047", width: "250px" },
+            }}
           >
             <List>
               <ListItem style={{ justifyContent: "center" }}>
                 <IconButton onClick={handleCloseMenu}>
-                  <CloseSharp style={{ color: "white", fontSize: "3rem" }} />
+                  <CloseSharp className={classes.closeIcon} />
                 </IconButton>
               </ListItem>
               {pages.map((page) => (
@@ -96,13 +108,16 @@ const NavigationAlt = () => {
                 </ListItem>
               ))}
               <ListItem>
-              <Box justifyContent="center" >
-          <Typography style={{fontSize: "10px", textAlign: "center"}} color="primary">
-            {" "}
-            The information on this site is not, nor should it be, considered
-            legal advice.
-          </Typography>
-        </Box>
+                <Box justifyContent="center">
+                  <Typography
+                    className={classes.disclaimer}
+                    color="primary"
+                  >
+                    {" "}
+                    The information on this site is not, nor should it be,
+                    considered legal advice.
+                  </Typography>
+                </Box>
               </ListItem>
             </List>
           </Drawer>
