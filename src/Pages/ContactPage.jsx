@@ -2,18 +2,18 @@ import { Container, Typography, Box, makeStyles } from "@material-ui/core";
 import placeholder from "../Assets/placeholder_contact.png";
 import HeroPanel from "../Components/HeroPanel";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles( (theme) => ({
   bg: {
-    backgroundColor: "var(--light-gray)",
+    backgroundColor: theme.palette.primary.light,
     borderRadius: 0,
     padding: "2.5em",
   },
-  bigImage: { width: "100%" },
+  contactImage: { width: "100%" },
   subtext: {
     marginTop: "5em",
     marginBottom: "5em",
   },
-});
+}));
 
 const ContactPage = () => {
   const pageTitle = "Contact";
@@ -31,7 +31,7 @@ const ContactPage = () => {
         </Box>
 
         <Box
-          className={classes.bigImage}
+          className={classes.contactImage}
           component="img"
           src={placeholder}
           alt="big interesting image"
