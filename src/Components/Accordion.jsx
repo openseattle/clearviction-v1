@@ -10,16 +10,16 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Text from "../ui-kit/Text";
 import data from "../data/FAQdata";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles( (theme) => ({
   accordionSummary: {
-    backgroundColor: "var(--light-blue)",
+    backgroundColor: theme.palette.secondary.light,
     color: "white",
-    height: "5em",
+    height: "8rem",
   },
   iconStyle: {
     color: "white",
   },
-});
+}));
 
 export default function FAQAccordion() {
   const content = data.questions;
