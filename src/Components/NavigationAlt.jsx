@@ -16,6 +16,7 @@ import pages from "../data/siteMap";
 import navLogo from "../Assets/cvp-logo-white.png";
 import { useState } from "react";
 import NavButton from "../ui-kit/NavButton";
+import { useTheme } from "@material-ui/styles";
 
 const useStyles = makeStyles((theme) => ({
   navigationLogo: {
@@ -40,6 +41,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const NavigationAlt = () => {
+
   const classes = useStyles();
 
   const [menuState, setMenuState] = useState(null);
@@ -53,7 +55,7 @@ const NavigationAlt = () => {
   };
 
   return (
-    <AppBar position="static" color="secondary">
+    <AppBar position="static" color="primary">
       <Container>
         <Toolbar>
           <Box component={Button} href="/" disableRipple>
@@ -92,9 +94,6 @@ const NavigationAlt = () => {
             anchor="right"
             open={Boolean(menuState)}
             onClose={handleCloseMenu}
-            PaperProps={{
-              style: { backgroundColor: "#2d3047", width: "250px" },
-            }}
           >
             <List>
               <ListItem style={{ justifyContent: "center" }}>
@@ -111,7 +110,7 @@ const NavigationAlt = () => {
                 <Box justifyContent="center">
                   <Typography
                     className={classes.disclaimer}
-                    color="primary"
+                    color="secondary"
                   >
                     {" "}
                     The information on this site is not, nor should it be,

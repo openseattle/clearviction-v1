@@ -11,7 +11,7 @@ import RolesDisplay from "../Components/RolesDisplay";
 import SecondaryButton from "../ui-kit/SecondaryButton";
 import BulletedListMui from "../ui-kit/BulletedListMui";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   textColor: {
     color: "white",
     marginBottom: 20,
@@ -20,7 +20,38 @@ const useStyles = makeStyles({
     color: "black",
     marginBottom: 20,
   },
-});
+  backgroundSecondary: {
+    backgroundColor: theme.palette.primary.main,
+  },
+  backgroundLightSecondary: {
+    backgroundColor: theme.palette.primary.light,
+    height: "250px",
+    justifyContent: "center",
+    display: "flex",
+    width: "100%",
+  },
+  backgroundWhite: {
+    backgroundColor: "white",
+    justifyContent: "center",
+    height: "250px",
+    display: "flex",
+    width: "100%",
+  },
+  contentBox: {
+    maxWidth: "500px",
+    margin: "2rem",
+  },
+  mainImage:{
+    maxHeight: "250px",
+    maxWidth: "100%",
+    padding: "2rem",
+  },
+  rolesHeading: {
+    color: "white",
+    paddingTop: "4rem",
+    marginBottom: "4rem",
+  },
+}));
 
 const VolunteerPage = () => {
   const classes = useStyles();
@@ -28,24 +59,20 @@ const VolunteerPage = () => {
     <>
       <Container maxWidth="lg">
         <HeroPanel title="Volunteer" />
-        <Box style={{ backgroundColor: "var(--dark-blue)" }}>
+        <Box className={classes.backgroundSecondary}>
           <Grid container justifyContent="center" alignItems="center">
             <Grid item md={6}>
-              <Box justifyContent="center" display="flex" >
+              <Box justifyContent="center" display="flex">
                 <Box
                   component="img"
                   src={placeholder}
-                  style={{
-                    maxHeight: "250px",
-                    maxWidth: "100%",
-                    padding: "2rem"
-                  }}
+                  className={classes.mainImage}
                 />
               </Box>
             </Grid>
             <Grid item md={6}>
               <Box justifyContent="center" display="flex">
-                <Box style={{ maxWidth: "500px", margin: "2rem" }}>
+                <Box className={classes.contentBox}>
                   <Typography className={classes.textColor} variant="h2">
                     Why Volunteer?
                   </Typography>
@@ -71,18 +98,8 @@ const VolunteerPage = () => {
           alignItems="center"
           style={{ marginTop: "0rem" }}
         >
-          <Grid
-            item
-            md={6}
-            style={{
-              backgroundColor: "var(--light-blue)",
-              height: "250px",
-              justifyContent: "center",
-              display: "flex",
-              width: "100%"
-            }}
-          >
-            <Box style={{ maxWidth: "500px", margin: "2rem" }}>
+          <Grid item md={6} className={classes.backgroundLightSecondary}>
+            <Box className={classes.contentBox}>
               <Typography variant="h2" className={classes.textColor}>
                 Who can apply?
               </Typography>
@@ -98,18 +115,8 @@ const VolunteerPage = () => {
               </BulletedListMui>
             </Box>
           </Grid>
-          <Grid
-            item
-            md={6}
-            style={{
-              backgroundColor: "white",
-              justifyContent: "center",
-              height: "250px",
-              display: "flex",
-              width: "100%"
-            }}
-          >
-            <Box style={{ maxWidth: "500px", margin: "2rem" }}>
+          <Grid item md={6} className={classes.backgroundWhite}>
+            <Box className={classes.contentBox}>
               <Typography className={classes.textAltColor} variant="h2">
                 How can you apply?
               </Typography>
@@ -125,16 +132,16 @@ const VolunteerPage = () => {
             </Box>
           </Grid>
         </Grid>
-        <Box style={{ backgroundColor: "var(--dark-blue)" }}>
-          <Typography
-            className={classes.textColor}
-            style={{ paddingTop: "4rem", marginBottom: "4rem" }}
-            variant="h2"
-          >
+        <Box className={classes.backgroundSecondary}>
+          <Typography className={classes.rolesHeading} variant="h2">
             Open Roles
           </Typography>
           <RolesDisplay />
-          <Box justifyContent="center" display="flex" style={{padding: "4rem"}}>
+          <Box
+            justifyContent="center"
+            display="flex"
+            style={{ padding: "4rem" }}
+          >
             <SecondaryButton text="Join Us" />
           </Box>
         </Box>

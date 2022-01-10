@@ -1,11 +1,11 @@
 import { createTheme } from "@material-ui/core";
 const Theme = createTheme({
   palette: {
-    primary: {
+    secondary: {
       main: "#c4c4c4",
       light: "#dcdcdc",
     },
-    secondary: {
+    primary: {
       main: "#2d3047",
       light: "#4e6c99",
     },
@@ -65,6 +65,15 @@ Theme.typography.h3 = {
   [Theme.breakpoints.up("sm")]: {
     fontSize: "3rem",
   },
+};
+
+Theme.overrides = {
+  MuiDrawer: {
+    paper: {
+      backgroundColor: Theme.palette.primary.main,
+      width: "250px"
+    }
+  }
 };
 
 export default Theme;
