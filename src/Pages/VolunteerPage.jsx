@@ -38,8 +38,7 @@ const VolunteerPage = () => {
                   style={{
                     maxHeight: "250px",
                     maxWidth: "100%",
-                    marginTop: "3rem",
-                    marginBottom: "3rem"
+                    padding: "2rem"
                   }}
                 />
               </Box>
