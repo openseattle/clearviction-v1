@@ -76,6 +76,7 @@ const data: Pages = {
         href: CALC_PREFIX + "/landing-2",
       }
     ],
+    tooltip: TooltipType.NOT_A_MISDEMEANOR
   },
   "landing-ineligible-0": {
     header: "Our calculator can’t determine your eligibility",
