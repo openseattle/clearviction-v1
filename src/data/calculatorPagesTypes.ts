@@ -9,7 +9,6 @@ interface PageData {
   tooltip?: TooltipType;
   footerLink?: FooterLink;
   disclaimer?: string;
-  thankYou?: string;
   progressBar?: ProgressBar;
 }
 
@@ -73,7 +72,7 @@ interface FooterLink {
 export const BUTTON_TEXT = {
   YES: "Yes",
   NO: "No",
-  NA: "Not Applicable",
+  NA: "Not applicable",
   CONTINUE: "Continue",
   START: "Start",
   NEXT: "Next"
