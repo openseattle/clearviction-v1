@@ -54,30 +54,16 @@ const AboutPage = () => {
           <Typography style={{ marginBottom: "1rem" }} variant="h2">
             The Team
           </Typography>
-          <Typography variant="h5">
-            We are a group of dedicated volunteers working together to create
-            tools that help people navigate the conviction vacation process. We
-            are a diverse crew, drawn together by a drive for social justice.
-          </Typography>
-        </Box>
-        <Grid container justifyContent="center" spacing={3}>
+        <Grid container  spacing={2} justifyContent="center">
           {team.map((id) => (
-            <Grid item key={id}>
+            <Grid item key={id} sm={12} md={3} lg={3}>
               <TeamCard teamNumber={id} />
             </Grid>
           ))}
         </Grid>
+        </Box>
+
       </Container>
-      <Box className={classes.actionItem} padding={5} marginTop={3}>
-        <Grid container justifyContent="center" spacing={3}>
-          <Grid item>
-            <Typography variant="h3" align="center">
-              Get In Touch
-            </Typography>
-            <PrimaryButton text="Contact" href="/contact" />
-          </Grid>
-        </Grid>
-      </Box>
     </>
   );
 };

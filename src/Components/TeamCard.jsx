@@ -9,13 +9,14 @@ import {
 const useStyles = makeStyles({
   root: {
     borderRadius: 0,
+    maxWidth: 250,
   },
   name: {
     fontWeight: "bold",
   },
   avatar: {
-    width: 200,
-    height: 200,
+    width: 250,
+    height: 250,
   },
 });
 
@@ -25,11 +26,11 @@ const TeamCard = (props) => {
     <Card className={classes.root}>
       <Avatar className={classes.avatar} variant="square" />
       <CardContent>
-        <Typography className={classes.name} variant="h5" align="center">
-          Volunteer Name {props.teamNumber}
+        <Typography className={classes.name} variant="h5" >
+           Name Surname {props.teamNumber}
         </Typography>
-        <Typography variant="h6" align="center">
-          Volunteer Title {props.teamNumber}
+        <Typography variant="h6" >
+           Title {props.teamNumber}
         </Typography>
       </CardContent>
     </Card>
