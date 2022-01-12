@@ -48,8 +48,7 @@ const useStyles = makeStyles((theme) => ({
   },
   rolesHeading: {
     color: "white",
-    paddingTop: "4rem",
-    marginBottom: "4rem",
+    padding: "4rem"
   },
 }));
 
