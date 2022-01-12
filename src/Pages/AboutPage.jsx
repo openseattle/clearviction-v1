@@ -37,34 +37,22 @@ const useStyles = makeStyles((theme) => ({
 const AboutPage = () => {
   const classes = useStyles();
   const pageTitle = "About Us";
-  const pageSubtitle = `We are the Washington Conviction Vacation Project. 
-  Our mission is to identify opportunities to use technology to streamline 
-  the conviction vacation process so that formerly sentenced individuals 
-  from Washington state can make a fresh start.`;
+  const pageSubtitle = `We are a civic-tech open-source project working to make the 
+  conviction vacation process easier and more straightforward, starting with an 
+  eligibility calculator.`;
   return (
     <>
       <Container maxWidth="lg">
         <HeroPanel title={pageTitle} subtitle={pageSubtitle} />
-        <Grid container spacing={2}>
-          <Grid item lg={6} md={6} sm={12}>
-            <Card className={classes.infoDark} variant="outlined">
-              <CardContent>
-                <Typography variant="h5">Content</Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-          <Grid item lg={6} md={6} sm={12}>
-            <Card className={classes.infoLight} variant="outlined">
-              <CardContent>
-                <Typography variant="h5">Content</Typography>
-              </CardContent>
-            </Card>
-          </Grid>
-        </Grid>
 
+
+        <Box>
+        <Typography variant="h2">The roots of our project</Typography>
+
+        </Box>
         <Box className={classes.ourTeam}>
           <Typography style={{ marginBottom: "1rem" }} variant="h2">
-            Our Team
+            The Team
           </Typography>
           <Typography variant="h5">
             We are a group of dedicated volunteers working together to create

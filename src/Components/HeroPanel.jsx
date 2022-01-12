@@ -2,14 +2,16 @@ import { Box, makeStyles, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles({
   hero: {
-    marginTop: "2em",
-    marginBottom: "2em",
+    marginTop: "3rem",
+    marginBottom: "3rem",
   },
   heroTitle: {
     marginBottom: "0",
   },
   heroSubtitle: {
-    marginTop: "1em",
+    marginTop: "2rem",
+    fontSize: 20,
+    maxWidth: "780px"
   },
 });
 const HeroPanel = (props) => {
@@ -21,7 +23,7 @@ const HeroPanel = (props) => {
         {title}
       </Typography>
       {subtitle && (
-        <Typography className={classes.heroSubtitle} variant="h4">
+        <Typography className={classes.heroSubtitle} variant="body1">
           {subtitle}
         </Typography>
       )}
