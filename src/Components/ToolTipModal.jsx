@@ -12,7 +12,7 @@ const style = {
   bgcolor: "background.paper",
   border: "2px solid #000",
   boxShadow: 24,
-  p: 4,
+  padding: 4,
 };
 
 const ToolTipModal = (props) => {
@@ -38,10 +38,10 @@ const ToolTipModal = (props) => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box sx={style}>
+        <Box style={style}>
           <Typography
             id="modal-modal-description"
-            sx={{ mt: 2, fontSize: "18px" }}
+            style={{ mt: 2, fontSize: "18px" }}
           >
             If you don't know how to answer this question, you may be able to
             locate your records here:{" "}

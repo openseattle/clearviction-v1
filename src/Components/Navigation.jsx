@@ -33,6 +33,21 @@ const Navigation = () => {
                 Calculator
               </a>
             </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/volunteer">
+                Volunteer
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/about">
+                About
+              </a>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="/contact">
+                Contact
+              </a>
+            </li>
             <span id="navbar-text" className="navbar-text">
               The information on this site is not, nor should it be, considered
               legal advice.
