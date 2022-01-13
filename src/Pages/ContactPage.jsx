@@ -1,5 +1,5 @@
 import { Container, Typography, Box, makeStyles } from "@material-ui/core";
-import placeholder from "../Assets/placeholder_contact.png";
+import contactUs from "../Assets/contact-us.svg";
 import HeroPanel from "../Components/HeroPanel";
 
 const useStyles = makeStyles((theme) => ({
@@ -29,12 +29,11 @@ const ContactPage = () => {
             back to you within 24 hours.
           </Typography>
         </Box>
-
         <Box
           className={classes.contactImage}
           component="img"
-          src={placeholder}
-          alt="big interesting image"
+          src={contactUs}
+          alt="Contact Us"
         />
       </Container>
     </>
