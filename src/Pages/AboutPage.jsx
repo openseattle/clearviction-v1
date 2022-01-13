@@ -76,12 +76,14 @@ const useStyles = makeStyles((theme) => ({
   ourMission: {
     backgroundColor: theme.palette.primary.light,
     color: "white",
-    paddingTop: "10rem",
-    paddingBottom: "10rem",
+    paddingTop: "5rem",
+    paddingBottom: "5rem",
+    display: "flex",
+    justifyContent: "center",
   },
   ourMissionText: {
-    margin: theme.spacing(2),
-    maxWidth: 750,
+    margin: "5rem",
+    maxWidth: 775,
     textAlign: "center",
   },
   ourJourneyTitle: {
@@ -203,8 +205,8 @@ const AboutPage = () => {
             </Grid>
           </Grid>
         </Box>
-        <Box style={{padding: "6rem"}}>
-          <Grid container >
+        <Box style={{ padding: "6rem" }}>
+          <Grid container>
             <Grid className={classes.theProblemRootleft} item xs={12} sm={6}>
               <Typography className={classes.problemLeftTitle} variant="h2">
                 The problem
@@ -260,20 +262,22 @@ const AboutPage = () => {
           </Grid>
         </Box>
         <Box className={classes.ourMission}>
-          <Typography className={classes.ourMissionText} variant="h4">
-            Our mission is to benefit individuals with criminal convictions and
-            decrease lifelong collateral consequences.
-          </Typography>
-          <Typography className={classes.ourMissionText} variant="h4">
-            To support this mission, we first focused on creating a{" "}
-            <span style={{ color: "#FFD200" }}>
-              Conviciton Eligibility Calculator
-            </span>{" "}
-            to help people determine if they are eligible to vacate their
-            conviction.
-          </Typography>
+          <Box>
+            <Typography className={classes.ourMissionText} variant="h4">
+              Our mission is to benefit individuals with criminal convictions
+              and decrease lifelong collateral consequences.
+            </Typography>
+            <Typography className={classes.ourMissionText} variant="h4">
+              To support this mission, we first focused on creating a{" "}
+              <span style={{ color: "#FFD200" }}>
+                Conviciton Eligibility Calculator
+              </span>{" "}
+              to help people determine if they are eligible to vacate their
+              conviction.
+            </Typography>
+          </Box>
         </Box>
-        <Box style={{ height: 750 }}>
+        <Box style={{ height: 500 }}>
           <Typography className={classes.ourJourneyTitle} variant="h2">
             Our journey
           </Typography>

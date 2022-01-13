@@ -68,9 +68,10 @@ Theme.typography.h3 = {
   },
 };
 Theme.typography.h4 = {
+  fontWeight: 500,
   fontSize: "1.875rem",
   [Theme.breakpoints.up("sm")]: {
-    fontSize: "2.5rem",
+    fontSize: "2.25rem",
   },
 };
 
