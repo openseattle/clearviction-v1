@@ -1,5 +1,6 @@
 import { createTheme } from "@material-ui/core";
 const Theme = createTheme({
+  spacing: 8,
   palette: {
     secondary: {
       main: "#c4c4c4",
