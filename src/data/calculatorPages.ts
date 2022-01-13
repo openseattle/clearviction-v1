@@ -309,7 +309,7 @@ const data: Pages = {
   },
   "mar-to-main": {
     header:
-      "Based on your answers, it looks like you don't qualify for the marijuana misdemeanor exception.",
+      "Based on your response, it looks like you don't qualify for the marijuana misdemeanor exception.",
     body: [
       {
         type: BodyType.PARAGRAPH,
