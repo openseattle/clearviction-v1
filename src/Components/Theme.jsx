@@ -67,6 +67,12 @@ Theme.typography.h3 = {
     fontSize: "3rem",
   },
 };
+Theme.typography.h4 = {
+  fontSize: "1.875rem",
+  [Theme.breakpoints.up("sm")]: {
+    fontSize: "2.5rem",
+  },
+};
 
 Theme.overrides = {
   MuiDrawer: {
