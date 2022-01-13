@@ -8,15 +8,15 @@ const ErrorPage = () => {
   useEffect(() => trackPageview("Error"), []);
 
   return (
- 
-      <Container maxWidth="xs" padding={10}>
-        <Grid container direction="column" justifyContent="center">
-          <Grid item>
-          <Typography variant="h5" align="center">Oops, page not found!</Typography>
-            
-          </Grid>
+    <Container maxWidth="xs" padding={10}>
+      <Grid container direction="column" justifyContent="center">
+        <Grid item>
+          <Typography variant="h5" align="center">
+            Oops, page not found!
+          </Typography>
         </Grid>
-      </Container>
+      </Grid>
+    </Container>
   );
 };
 

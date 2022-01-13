@@ -12,11 +12,11 @@ const Theme = createTheme({
     success: {
       main: "#419d77",
       light: "#9ed6be",
-      dark: "#396452"
+      dark: "#396452",
     },
     error: {
       main: "#DF1F1F",
-    }
+    },
   },
   typography: {
     fontSize: 16,
@@ -43,7 +43,7 @@ const Theme = createTheme({
       fontWeight: "bold",
       lineHeight: "3rem",
       textTransform: "none",
-    }
+    },
   },
 });
 
@@ -71,9 +71,9 @@ Theme.overrides = {
   MuiDrawer: {
     paper: {
       backgroundColor: Theme.palette.primary.main,
-      width: "250px"
-    }
-  }
+      width: "250px",
+    },
+  },
 };
 
 export default Theme;

@@ -16,36 +16,40 @@ function App() {
   return (
     <div>
       <ThemeProvider theme={Theme}>
-      <Box
-      style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}
-    >
-        <CssBaseline />
-        <NavigationAlt />
-        {/* <Navigation /> */}
-        <Switch>
-          <Route path="/404">
-            <ErrorPage />
-          </Route>
-          <Route exact path="/">
-            <HomePage />
-          </Route>
-          <Route path="/calculator/:pageId">
-            <CalculatorPage />
-          </Route>
-          <Route exact path="/calculator">
-            <Redirect to="/calculator/landing-0" />
-          </Route>
-          <Route exact path="/about">
-            <AboutPage />
-          </Route>
-          <Route exact path="/contact">
-            <ContactPage />
-          </Route>
-          <Route exact path="/volunteer">
-            <VolunteerPage />
-          </Route>
-        </Switch>
-        <Footer />
+        <Box
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            minHeight: "100vh",
+          }}
+        >
+          <CssBaseline />
+          <NavigationAlt />
+          {/* <Navigation /> */}
+          <Switch>
+            <Route path="/404">
+              <ErrorPage />
+            </Route>
+            <Route exact path="/">
+              <HomePage />
+            </Route>
+            <Route path="/calculator/:pageId">
+              <CalculatorPage />
+            </Route>
+            <Route exact path="/calculator">
+              <Redirect to="/calculator/landing-0" />
+            </Route>
+            <Route exact path="/about">
+              <AboutPage />
+            </Route>
+            <Route exact path="/contact">
+              <ContactPage />
+            </Route>
+            <Route exact path="/volunteer">
+              <VolunteerPage />
+            </Route>
+          </Switch>
+          <Footer />
         </Box>
       </ThemeProvider>
     </div>

@@ -2,7 +2,7 @@ import { Container, Typography, Box, makeStyles } from "@material-ui/core";
 import placeholder from "../Assets/placeholder_contact.png";
 import HeroPanel from "../Components/HeroPanel";
 
-const useStyles = makeStyles( (theme) => ({
+const useStyles = makeStyles((theme) => ({
   bg: {
     backgroundColor: theme.palette.primary.light,
     borderRadius: 0,

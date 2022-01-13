@@ -41,11 +41,11 @@ const data: Pages = {
     body: [
       {
         type: BodyType.PARAGRAPH,
-        text: "Going through this calculator is expected to take 10-30 minutes."
+        text: "Going through this calculator is expected to take 10-30 minutes.",
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "You will need to know:"
+        text: "You will need to know:",
       },
       {
         type: BodyType.LIST,
@@ -53,12 +53,12 @@ const data: Pages = {
           "• The date and violation of your misdemeanor conviction",
           "• If and when you completed the terms of your sentence",
           "• Pending charges and/or new convictions",
-          "• Any court orders against you*"
-        ]
+          "• Any court orders against you*",
+        ],
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "*Court orders include:"
+        text: "*Court orders include:",
       },
       {
         type: BodyType.LIST,
@@ -66,17 +66,17 @@ const data: Pages = {
           "• A domestic violence protection order",
           "• A no-contact order",
           "• An antiharassment order",
-          "• A civil restraining order"
-        ]
-      }
+          "• A civil restraining order",
+        ],
+      },
     ],
     buttons: [
       {
         text: BUTTON_TEXT.START,
         href: CALC_PREFIX + "/landing-2",
-      }
+      },
     ],
-    tooltip: TooltipType.NOT_A_MISDEMEANOR
+    tooltip: TooltipType.NOT_A_MISDEMEANOR,
   },
   "landing-ineligible-0": {
     header: "Our calculator can’t determine your eligibility",

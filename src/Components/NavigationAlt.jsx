@@ -31,17 +31,16 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "25rem",
   },
   disclaimer: {
-    fontSize: "10px", 
-    textAlign: "center"
+    fontSize: "10px",
+    textAlign: "center",
   },
   closeIcon: {
-    color: "white", 
-    fontSize: "3rem" 
-  }
+    color: "white",
+    fontSize: "3rem",
+  },
 }));
 
 const NavigationAlt = () => {
-
   const classes = useStyles();
 
   const [menuState, setMenuState] = useState(null);
@@ -108,10 +107,7 @@ const NavigationAlt = () => {
               ))}
               <ListItem>
                 <Box justifyContent="center">
-                  <Typography
-                    className={classes.disclaimer}
-                    color="secondary"
-                  >
+                  <Typography className={classes.disclaimer} color="secondary">
                     {" "}
                     The information on this site is not, nor should it be,
                     considered legal advice.

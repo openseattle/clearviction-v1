@@ -7,9 +7,10 @@ const useStyles = makeStyles({
   button: {
     backgroundColor: "var(--light-blue)",
     color: "#ffffff",
-    width: "327px",
+    width: "207px",
     padding: "10px",
     margin: "10px",
+    textTransform: "none",
     fontSize: "16px",
     "&:hover": {
       backgroundColor: "var(--gray)",
@@ -18,8 +19,12 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SecondaryButton({ text }) {
+export default function SecondaryButton({ text, href }) {
   const classes = useStyles();
 
-  return <Button className={classes.button}>{text}</Button>;
+  return (
+    <Button className={classes.button} href={href}>
+      {text}
+    </Button>
+  );
 }
