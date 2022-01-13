@@ -20,7 +20,7 @@ import {
 
 import lawyer from "../Assets/lawyer.svg";
 
-const team = [1, 2, 3, 4, 5, 6];
+const team = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,];
 
 const useStyles = makeStyles((theme) => ({
   alignItemContent: {
@@ -167,12 +167,15 @@ const AboutPage = () => {
                 className={classes.rootsImage}
               />
             </Grid>
-            <Grid className={classes.alignItemContent} item xs={12} sm={6}>
+            <Grid  item xs={12} sm={6}>
+              <Box display="flex" justifyContent="center">
               <Typography className={classes.rootsBodyText} variant="body1">
                 One in four Washingtonians have been involved in the criminal
                 justice system. Those with a criminal record face significant
                 barriers to daily life after completing their prison terms.
               </Typography>
+              </Box>
+
             </Grid>
             <Grid className={classes.alignItemContent} item xs={12} sm={6}>
               <Box
@@ -277,18 +280,14 @@ const AboutPage = () => {
             </Typography>
           </Box>
         </Box>
-        <Box style={{ height: 500 }}>
-          <Typography className={classes.ourJourneyTitle} variant="h2">
-            Our journey
-          </Typography>
-        </Box>
+
         <Box className={classes.ourTeam}>
           <Typography style={{ padding: "32px", color: "white" }} variant="h2">
             The Team
           </Typography>
           <Grid
             container
-            spacing={4}
+            spacing={3}
             justifyContent="center"
             alignItems="center"
           >

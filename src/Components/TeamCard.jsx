@@ -9,7 +9,7 @@ import {
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 280,
+    maxWidth: 200,
   },
   card: {
     borderRadius: 0,
@@ -18,8 +18,8 @@ const useStyles = makeStyles({
     fontWeight: "bold",
   },
   avatar: {
-    width: 250,
-    height: 250,
+    width: "100%",
+    height: 175,
   },
 });
 
