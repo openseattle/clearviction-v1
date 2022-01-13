@@ -62,7 +62,7 @@ interface Button {
 
 export enum TooltipType {
   NOT_SURE = "I'm not sure.",
-  NOT_A_MISDEMEANOR = "My conviction is not a misdemeanor or I’m not sure.",
+  NOT_A_MISDEMEANOR = "My conviction is not a misdemeanor or I'm not sure.",
 }
 
 interface FooterLink {
@@ -75,6 +75,8 @@ export const BUTTON_TEXT = {
   NO: "No",
   NA: "Not Applicable",
   CONTINUE: "Continue",
+  START: "Start",
+  NEXT: "Next",
 };
 
 export const BRANCH_TYPES = {

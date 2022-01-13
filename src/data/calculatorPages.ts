@@ -30,8 +30,50 @@ const data: Pages = {
     ],
     buttons: [
       {
-        text: "Start",
+        text: BUTTON_TEXT.NEXT,
         href: CALC_PREFIX + "/landing-1",
+      },
+    ],
+    tooltip: TooltipType.NOT_A_MISDEMEANOR,
+  },
+  "landing-1": {
+    header: "Quick Start Guide",
+    body: [
+      {
+        type: BodyType.PARAGRAPH,
+        text: "Going through this calculator is expected to take 10-30 minutes.",
+      },
+      {
+        type: BodyType.PARAGRAPH,
+        text: "You will need to know:",
+      },
+      {
+        type: BodyType.LIST,
+        items: [
+          "• The date and violation of your misdemeanor conviction",
+          "• If and when you completed the terms of your sentence",
+          "• Pending charges and/or new convictions",
+          "• Any court orders against you*",
+        ],
+      },
+      {
+        type: BodyType.PARAGRAPH,
+        text: "*Court orders include:",
+      },
+      {
+        type: BodyType.LIST,
+        items: [
+          "• A domestic violence protection order",
+          "• A no-contact order",
+          "• An antiharassment order",
+          "• A civil restraining order",
+        ],
+      },
+    ],
+    buttons: [
+      {
+        text: BUTTON_TEXT.START,
+        href: CALC_PREFIX + "/landing-2",
       },
     ],
     tooltip: TooltipType.NOT_A_MISDEMEANOR,
@@ -49,12 +91,12 @@ const data: Pages = {
       href: "https://docs.google.com/forms/d/e/1FAIpQLSeuT2oIBnxFAMv6p8tsujNlSugWxFS5la4DUC4rTFekInrcqQ/viewform?usp=sf_link",
     },
   },
-  "landing-1": {
+  "landing-2": {
     header: "Was this offense a misdemeanor?",
     buttons: [
       {
         text: BUTTON_TEXT.YES,
-        href: CALC_PREFIX + "/landing-2",
+        href: CALC_PREFIX + "/landing-3",
       },
       {
         text: BUTTON_TEXT.NO,
@@ -63,7 +105,7 @@ const data: Pages = {
     ],
     tooltip: TooltipType.NOT_SURE,
   },
-  "landing-2": {
+  "landing-3": {
     header: "Does your conviction fall into any of these special cases?",
     buttons: [
       {
