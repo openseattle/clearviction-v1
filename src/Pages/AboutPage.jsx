@@ -3,8 +3,6 @@ import {
   Grid,
   Typography,
   Box,
-  CardContent,
-  Card,
   makeStyles,
   List,
   ListItem,
@@ -19,8 +17,10 @@ import {
 } from "@material-ui/icons";
 
 import lawyer from "../Assets/lawyer.svg";
+import seattle from "../Assets/seattle.svg";
+import innovation from "../Assets/innovation.svg";
 
-const team = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,];
+const team = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
 const useStyles = makeStyles((theme) => ({
   alignItemContent: {
@@ -32,6 +32,9 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     borderRadius: 0,
     padding: "2rem",
+    [theme.breakpoints.up("sm")]: {
+      padding: "4rem",
+    }
   },
   rootsTitle: {
     padding: theme.spacing(1),
@@ -39,13 +42,18 @@ const useStyles = makeStyles((theme) => ({
   rootsImage: {
     width: 300,
     height: 180,
-    // [theme.breakpoints.down("sm")]: {
-    //   width: 150,
-    //   height: 90,
-    // },
+    [theme.breakpoints.down("sm")]: {
+      width: 150,
+      height: 90,
+    },
   },
   rootsBodyText: {
     minWidth: 150,
+  },
+  problemRoot: {
+    marginTop: "6rem",
+    marginBottom: "6rem",
+    padding: "4rem",
   },
   theProblemRootleft: {
     backgroundColor: "white",
@@ -56,14 +64,14 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "2rem",
   },
   problemLeftBody: {
-    paddingBottom: "2rem",
+    marginBottom: "3rem",
   },
   problemRootRight: {
     backgroundColor: theme.palette.primary.main,
     color: "white",
     padding: "1rem",
-    [theme.breakpoints.up("md")]: {
-      padding: "6rem",
+    [theme.breakpoints.up("sm")]: {
+      padding: "1rem",
     },
   },
   problemRightListItem: {
@@ -71,7 +79,8 @@ const useStyles = makeStyles((theme) => ({
   },
   theProblemIcon: {
     color: "#FFD200",
-    fontSize: "4rem",
+    fontSize: "5rem",
+    margin: "2rem",
   },
   ourMission: {
     backgroundColor: theme.palette.primary.light,
@@ -82,7 +91,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   ourMissionText: {
-    margin: "5rem",
+    margin: "6rem",
     maxWidth: 775,
     textAlign: "center",
   },
@@ -91,8 +100,13 @@ const useStyles = makeStyles((theme) => ({
   },
   ourTeam: {
     backgroundColor: theme.palette.primary.main,
-    paddingTop: theme.spacing(4),
-    paddingBottom: theme.spacing(4),
+    paddingTop: "8rem",
+    paddingBottom: "8rem",
+  },
+  ourTeamTitle: {
+    marginLeft: "5rem",
+    marginBottom: "8rem",
+    color: "white",
   },
 }));
 
@@ -113,12 +127,12 @@ const AboutPage = () => {
           </Typography>
 
           {/* First Solution */}
-          {/* <List>
-            <ListItem >
+          <List>
+            <ListItem>
               <ListItemIcon>
                 <Box
                   component="img"
-                  src={lawyer}
+                  src={seattle}
                   className={classes.rootsImage}
                 />
               </ListItemIcon>
@@ -146,7 +160,7 @@ const AboutPage = () => {
               <ListItemIcon>
                 <Box
                   component="img"
-                  src={lawyer}
+                  src={innovation}
                   className={classes.rootsImage}
                 />
               </ListItemIcon>
@@ -156,10 +170,10 @@ const AboutPage = () => {
                 user needs, creating an easier way to vacate convictions.
               </Typography>
             </ListItem>
-          </List> */}
+          </List>
 
           {/* Alternative Solution */}
-          <Grid container justifyContent="center">
+          {/* <Grid container justifyContent="center">
             <Grid className={classes.alignItemContent} item xs={12} sm={6}>
               <Box
                 component="img"
@@ -206,9 +220,9 @@ const AboutPage = () => {
                 user needs, creating an easier way to vacate convictions.
               </Typography>
             </Grid>
-          </Grid>
+          </Grid> */}
         </Box>
-        <Box style={{ padding: "6rem" }}>
+        <Box className={classes.problemRoot}>
           <Grid container>
             <Grid className={classes.theProblemRootleft} item xs={12} sm={6}>
               <Typography className={classes.problemLeftTitle} variant="h2">
@@ -236,7 +250,7 @@ const AboutPage = () => {
                   <ListItemIcon>
                     <HourglassEmpty className={classes.theProblemIcon} />
                   </ListItemIcon>
-                  <Typography>
+                  <Typography variant="subtitle1">
                     Each step requires time and know-how, increasing the barrier
                     of entry for applicants
                   </Typography>
@@ -246,7 +260,7 @@ const AboutPage = () => {
                   <ListItemIcon>
                     <LocalAtmOutlined className={classes.theProblemIcon} />
                   </ListItemIcon>
-                  <Typography>
+                  <Typography variant="subtitle1">
                     While hiring an attorney can help simplify the process, it’s
                     unaffordable for most
                   </Typography>
@@ -255,7 +269,7 @@ const AboutPage = () => {
                   <ListItemIcon>
                     <PanToolOutlined className={classes.theProblemIcon} />
                   </ListItemIcon>
-                  <Typography>
+                  <Typography variant="subtitle1">
                     Free volunteer services are available but they are often
                     inaccessible and don’t cover all steps of the process
                   </Typography>
@@ -271,7 +285,7 @@ const AboutPage = () => {
               and decrease lifelong collateral consequences.
             </Typography>
             <Typography className={classes.ourMissionText} variant="h4">
-              To support this mission, we first focused on creating a{" "}
+              To support this mission, we first focused on creating a <br />
               <span style={{ color: "#FFD200" }}>
                 Conviciton Eligibility Calculator
               </span>{" "}
@@ -282,7 +296,7 @@ const AboutPage = () => {
         </Box>
 
         <Box className={classes.ourTeam}>
-          <Typography style={{ padding: "32px", color: "white" }} variant="h2">
+          <Typography className={classes.ourTeamTitle} variant="h2">
             The Team
           </Typography>
           <Grid

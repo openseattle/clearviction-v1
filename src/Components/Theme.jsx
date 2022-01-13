@@ -17,25 +17,30 @@ const Theme = createTheme({
     },
     error: {
       main: "#DF1F1F",
-    }
+    },
+    hightlight: {
+      main: "#FFD200"
+    } 
   },
   typography: {
     fontSize: 16,
     body1: {
       fontFamily: "Lora",
-      fontSize: "1.25rem",
+      fontSize: "1.5rem",
     },
     body2: {
       fontFamily: "Lora",
-      fontSize: ".875rem",
+      fontSize: "1.25rem",
     },
     subtitle1: {
-      fontFamily: "Roboto",
-      fontSize: ".875rem",
+      fontFamily: ["Roboto", "sans-serif"],
+      fontSize: "1.5rem",
+      fontWeight: "normal",
+      lineHeight: "24px"
     },
     subtitle2: {
       fontFamily: "Roboto",
-      fontSize: ".6875rem",
+      fontSize: ".875rem",
     },
     button: {
       textAlign: "center",
