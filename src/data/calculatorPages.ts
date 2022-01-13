@@ -289,7 +289,7 @@ const data: Pages = {
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "To better understand misdemeanor conviction vacation, please click the link below:"
+        text: "3. To better understand misdemeanor conviction vacation, please click the link below:"
       },
       {
         type: BodyType.LINK,
@@ -318,7 +318,7 @@ const data: Pages = {
     ],
     buttons: [
       {
-        text: BUTTON_TEXT.CONTINUE,
+        text: BUTTON_TEXT.CONTINUE_JOURNEY,
         href: CALC_PREFIX + "/main-0",
       },
     ],
@@ -1062,7 +1062,7 @@ const data: Pages = {
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "To better understand misdemeanor conviction vacation, please click the link below:"
+        text: "4. To better understand misdemeanor conviction vacation, please click the link below:"
       },
       {
         type: BodyType.LINK,
@@ -1114,7 +1114,7 @@ const data: Pages = {
     ],
     buttons: [
       {
-        text: BUTTON_TEXT.CONTINUE,
+        text: BUTTON_TEXT.CONTINUE_JOURNEY,
         href: CALC_PREFIX + "/main-0",
       },
     ],

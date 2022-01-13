@@ -74,6 +74,7 @@ export const BUTTON_TEXT = {
   NO: "No",
   NA: "Not applicable",
   CONTINUE: "Continue",
+  CONTINUE_JOURNEY: "Continue journey",
   START: "Start",
   NEXT: "Next"
 };
