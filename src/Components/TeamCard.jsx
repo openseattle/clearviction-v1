@@ -4,12 +4,15 @@ import {
   makeStyles,
   Typography,
   CardContent,
+  Grid,
 } from "@material-ui/core";
 
 const useStyles = makeStyles({
   root: {
+    maxWidth: 280,
+  },
+  card: {
     borderRadius: 0,
-    maxWidth: 250,
   },
   name: {
     fontWeight: "bold",
@@ -23,7 +26,8 @@ const useStyles = makeStyles({
 const TeamCard = (props) => {
   const classes = useStyles();
   return (
-    <Card className={classes.root}>
+    <Grid className={classes.root} item xs={12} sm={6} md={4} lg={3}>
+    <Card className={classes.card}>
       <Avatar className={classes.avatar} variant="square" />
       <CardContent>
         <Typography className={classes.name} variant="h5" >
@@ -34,6 +38,7 @@ const TeamCard = (props) => {
         </Typography>
       </CardContent>
     </Card>
+    </Grid>
   );
 };
 

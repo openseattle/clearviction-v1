@@ -8,10 +8,15 @@ import {
   makeStyles,
   List,
   ListItem,
+  ListItemIcon,
 } from "@material-ui/core";
 import TeamCard from "../Components/TeamCard";
-import PrimaryButton from "../ui-kit/Button";
 import HeroPanel from "../Components/HeroPanel";
+import {
+  HourglassEmpty,
+  LocalAtmOutlined,
+  PanToolOutlined,
+} from "@material-ui/icons";
 
 const team = [1, 2, 3, 4, 5, 6];
 
@@ -34,7 +39,21 @@ const useStyles = makeStyles((theme) => ({
   rootsBodyText: {
     maxWidth: 750,
   },
+  theProblemRoot: {
+    backgroundColor: theme.palette.primary.main,
+    color: "white",
+  },
+  theProblemIcon: {
+    color: "#FFD200",
+    fontSize: "4rem",
+  },
+  ourMission: {
+    backgroundColor: theme.palette.primary.light,
+    color: "white",
+    padding: "3rem",
+  },
   ourTeam: {
+    backgroundColor: theme.palette.primary.main,
     marginTop: "2rem",
     marginBottom: "2rem",
   },
@@ -101,7 +120,7 @@ const AboutPage = () => {
         </Box>
         <Box>
           <Grid container>
-            <Grid item>
+            <Grid item xs={12} sm={6}>
               <Typography variant="h2">the problem</Typography>
               <Typography variant="body1">
                 The process of vacating a conviction is convoluted, making it
@@ -120,39 +139,61 @@ const AboutPage = () => {
                 </ol>
               </Typography>
             </Grid>
-            <Grid item>
+            <Grid className={classes.theProblemRoot} item xs={12} sm={6}>
               <List>
                 <ListItem>
+                  <ListItemIcon>
+                    <HourglassEmpty className={classes.theProblemIcon} />
+                  </ListItemIcon>
                   <Typography>
                     Each step requires time and know-how, increasing the barrier
                     of entry for applicants
+                  </Typography>
+                </ListItem>
+
+                <ListItem>
+                  <ListItemIcon>
+                    <LocalAtmOutlined className={classes.theProblemIcon} />
+                  </ListItemIcon>
+                  <Typography>
+                    While hiring an attorney can help simplify the process, it’s
+                    unaffordable for most
+                  </Typography>
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <PanToolOutlined className={classes.theProblemIcon} />
+                  </ListItemIcon>
+                  <Typography>
+                    Free volunteer services are available but they are often
+                    inaccessible and don’t cover all steps of the process
                   </Typography>
                 </ListItem>
               </List>
             </Grid>
           </Grid>
         </Box>
-        <Box>
-          <Typography variant="h3">
+        <Box className={classes.ourMission}>
+          <Typography variant="h4" align="center">
             Our mission is to benefit individuals with criminal convictions and
-            decrease lifelong collateral consequences. To support this mission,
-            we first focused on creating a Conviciton Eligibility Calculator to
-            help people determine if they are eligible to vacate their
-            conviction.
+            decrease lifelong collateral consequences.
+          </Typography>
+          <Typography variant="h4" align="center">
+            To support this mission, we first focused on creating a <span style={{color: "#FFD200"}}>Conviciton
+            Eligibility Calculator</span> to help people determine if they are eligible
+            to vacate their conviction.
           </Typography>
         </Box>
         <Box>
           <Typography variant="h2">the process</Typography>
         </Box>
         <Box className={classes.ourTeam}>
-          <Typography style={{ marginBottom: "1rem" }} variant="h2">
+          <Typography style={{ margin: "3rem", color: "white" }} variant="h2">
             The Team
           </Typography>
-          <Grid container spacing={2} justifyContent="center">
+          <Grid container spacing={4} justifyContent="center" alignItems="center">
             {team.map((id) => (
-              <Grid item key={id} sm={12} md={3} lg={3}>
-                <TeamCard teamNumber={id} />
-              </Grid>
+                <TeamCard teamNumber={id}/>
             ))}
           </Grid>
         </Box>
