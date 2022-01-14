@@ -16,7 +16,6 @@ import pages from "../data/siteMap";
 import navLogo from "../Assets/cvp-logo-white.png";
 import { useState } from "react";
 import NavButton from "../ui-kit/NavButton";
-import { useTheme } from "@material-ui/styles";
 
 const useStyles = makeStyles((theme) => ({
   navigationLogo: {

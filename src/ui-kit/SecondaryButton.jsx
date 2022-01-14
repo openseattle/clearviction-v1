@@ -18,8 +18,8 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SecondaryButton({ text }) {
+export default function SecondaryButton({ text, type }) {
   const classes = useStyles();
 
-  return <Button className={classes.button}>{text}</Button>;
+  return <Button type={type} className={classes.button}>{text}</Button>;
 }

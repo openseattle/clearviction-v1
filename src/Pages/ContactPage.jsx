@@ -1,5 +1,5 @@
 import { Container, Typography, Box, makeStyles } from "@material-ui/core";
-import placeholder from "../Assets/placeholder_contact.png";
+import ContactForm from "../Components/ContactForm";
 import HeroPanel from "../Components/HeroPanel";
 
 const useStyles = makeStyles( (theme) => ({
@@ -10,8 +10,8 @@ const useStyles = makeStyles( (theme) => ({
   },
   contactImage: { width: "100%" },
   subtext: {
-    marginTop: "5em",
-    marginBottom: "5em",
+    marginTop: "2em",
+    marginBottom: "2em",
   },
 }));
 
@@ -24,18 +24,11 @@ const ContactPage = () => {
         <HeroPanel title={pageTitle} />
         <Box>
           <Typography variant="h5" className={classes.subtext}>
-            Have questions? Send us an email at{" "}
-            <a href="mailto:contact@cvp.com">contact@cvp.com</a> and we’ll get
+            Have questions? Send us a message and we’ll get
             back to you within 24 hours.
           </Typography>
+          <ContactForm />
         </Box>
-
-        <Box
-          className={classes.contactImage}
-          component="img"
-          src={placeholder}
-          alt="big interesting image"
-        />
       </Container>
     </>
   );
