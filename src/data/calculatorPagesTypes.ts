@@ -76,7 +76,7 @@ export const BUTTON_TEXT = {
   NA: "Not Applicable",
   CONTINUE: "Continue",
   START: "Start",
-  NEXT: "Next"
+  NEXT: "Next",
 };
 
 export const BRANCH_TYPES = {

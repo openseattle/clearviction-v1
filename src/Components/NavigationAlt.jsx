@@ -16,7 +16,6 @@ import pages from "../data/siteMap";
 import navLogo from "../Assets/cvp-logo-white.png";
 import { useState } from "react";
 import NavButton from "../ui-kit/NavButton";
-import { useTheme } from "@material-ui/styles";
 
 const useStyles = makeStyles((theme) => ({
   navigationLogo: {
@@ -31,17 +30,16 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "25rem",
   },
   disclaimer: {
-    fontSize: "10px", 
-    textAlign: "center"
+    fontSize: "10px",
+    textAlign: "center",
   },
   closeIcon: {
-    color: "white", 
-    fontSize: "3rem" 
-  }
+    color: "white",
+    fontSize: "3rem",
+  },
 }));
 
 const NavigationAlt = () => {
-
   const classes = useStyles();
 
   const [menuState, setMenuState] = useState(null);
@@ -108,10 +106,7 @@ const NavigationAlt = () => {
               ))}
               <ListItem>
                 <Box justifyContent="center">
-                  <Typography
-                    className={classes.disclaimer}
-                    color="secondary"
-                  >
+                  <Typography className={classes.disclaimer} color="secondary">
                     {" "}
                     The information on this site is not, nor should it be,
                     considered legal advice.
