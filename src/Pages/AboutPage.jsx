@@ -86,7 +86,7 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
   },
   ourMissionText: {
-    margin: "6rem",
+    margin: "5rem",
     maxWidth: 775,
     textAlign: "center",
   },
