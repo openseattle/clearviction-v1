@@ -70,7 +70,8 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     padding: "1rem",
     [theme.breakpoints.up("sm")]: {
-      padding: "1rem",
+      paddingTop: "3rem",
+      padding: "2rem",
     },
   },
   problemRightListItem: {
@@ -105,8 +106,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   highlightText: {
-    color: theme.palette.highlight.main
-  }
+    color: theme.palette.highlight.main,
+  },
 }));
 
 const AboutPage = () => {
@@ -123,9 +124,7 @@ const AboutPage = () => {
 
       <Box className={classes.roots}>
         <Container maxWidth="lg" className={classes.rootsContainer}>
-          <Typography  variant="h2">
-            The roots of our project
-          </Typography>
+          <Typography variant="h2">The roots of our project</Typography>
 
           <List>
             <ListItemMobileSnap
@@ -185,7 +184,7 @@ const AboutPage = () => {
       <Box className={classes.problemRoot}>
         <Container maxWidth="lg">
           <Grid container>
-            <Grid className={classes.theProblemRootleft} item xs={12} sm={6}>
+            <Grid className={classes.theProblemRootleft} item sm={12} md={6}>
               <Typography className={classes.problemLeftTitle} variant="h2">
                 The problem
               </Typography>
@@ -197,15 +196,18 @@ const AboutPage = () => {
                 It requires a number of steps that can be difficult to
                 accomplish:
               </Typography>
-              <Typography className={classes.problemLeftBody} component="ol" variant="body1" >
+              <Typography
+                className={classes.problemLeftBody}
+                component="ol"
+                variant="body1"
+              >
                 <li>Gathering documents</li>
                 <li>Determining eligibility</li>
-                <li>
-                  Filing motions with the court Scheduling hearings with a judge
-                </li>
+                <li>Filing motions with the court</li>
+                <li>Scheduling hearings with a judge</li>
               </Typography>
             </Grid>
-            <Grid className={classes.problemRootRight} item xs={12} sm={6}>
+            <Grid className={classes.problemRootRight} item sm={12} md={6}>
               <List>
                 <ListItem>
                   <ListItemIcon>
@@ -275,7 +277,7 @@ const AboutPage = () => {
           <Grid container>
             {team.map((id) => (
               <Grid
-              key={id}
+                key={id}
                 item
                 xs={6}
                 sm={4}
