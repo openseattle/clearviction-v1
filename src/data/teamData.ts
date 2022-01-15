@@ -5,7 +5,7 @@ const team = [
         lastName: "Brugh",
         role: "Project Owner",
         photo: Seamus_Brugh,
-        linkedIn: "https://www.linkedin.com/in/seamusbrugh/"
+        linkedIn: ""
     },
 ];
 
