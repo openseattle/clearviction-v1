@@ -18,7 +18,7 @@ const Theme = createTheme({
     error: {
       main: "#DF1F1F",
     },
-    hightlight: {
+    highlight: {
       main: "#FFD200"
     } 
   },

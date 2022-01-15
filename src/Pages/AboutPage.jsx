@@ -19,6 +19,7 @@ import {
 import lawyer from "../Assets/lawyer.svg";
 import seattle from "../Assets/seattle.svg";
 import innovation from "../Assets/innovation.svg";
+import ListItemMobileSnap from "../ui-kit/ListItemMobileSnap";
 
 const team = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 
@@ -31,24 +32,22 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.primary.light,
     color: "white",
     borderRadius: 0,
-    padding: "2rem",
-    [theme.breakpoints.up("sm")]: {
-      padding: "4rem",
-    }
   },
-  rootsTitle: {
-    padding: theme.spacing(1),
+  rootsContainer: {
+    marginTop: "4rem",
+    padding: "4rem",
+    [theme.breakpoints.down("sm")]: {
+      padding: "2rem",
+    },
   },
   rootsImage: {
     width: 300,
     height: 180,
-    [theme.breakpoints.down("sm")]: {
-      width: 150,
-      height: 90,
-    },
   },
   rootsBodyText: {
     minWidth: 150,
+    fontFamily: ["Roboto", "sans-serif"],
+    fontSize: 18,
   },
   problemRoot: {
     marginTop: "6rem",
@@ -61,10 +60,10 @@ const useStyles = makeStyles((theme) => ({
     padding: "3rem",
   },
   problemLeftTitle: {
-    paddingBottom: "2rem",
+    marginBottom: "4rem",
   },
   problemLeftBody: {
-    marginBottom: "3rem",
+    marginTop: "3rem",
   },
   problemRootRight: {
     backgroundColor: theme.palette.primary.main,
@@ -78,17 +77,13 @@ const useStyles = makeStyles((theme) => ({
     padding: "2rem",
   },
   theProblemIcon: {
-    color: "#FFD200",
+    color: theme.palette.highlight.main,
     fontSize: "5rem",
     margin: "2rem",
   },
   ourMission: {
     backgroundColor: theme.palette.primary.light,
     color: "white",
-    paddingTop: "5rem",
-    paddingBottom: "5rem",
-    display: "flex",
-    justifyContent: "center",
   },
   ourMissionText: {
     margin: "6rem",
@@ -108,6 +103,10 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: "8rem",
     color: "white",
   },
+
+  highlightText: {
+    color: theme.palette.highlight.main
+  }
 }));
 
 const AboutPage = () => {
@@ -120,109 +119,71 @@ const AboutPage = () => {
     <>
       <Container maxWidth="lg">
         <HeroPanel title={pageTitle} subtitle={pageSubtitle} />
+      </Container>
 
-        <Box className={classes.roots}>
-          <Typography className={classes.rootsTitle} variant="h2">
+      <Box className={classes.roots}>
+        <Container maxWidth="lg" className={classes.rootsContainer}>
+          <Typography  variant="h2">
             The roots of our project
           </Typography>
 
-          {/* First Solution */}
           <List>
-            <ListItem>
-              <ListItemIcon>
+            <ListItemMobileSnap
+              image={
                 <Box
                   component="img"
                   src={seattle}
                   className={classes.rootsImage}
                 />
-              </ListItemIcon>
-              <Typography className={classes.rootsBodyText} variant="body1">
-                One in four Washingtonians have been involved in the criminal
-                justice system. Those with a criminal record face significant
-                barriers to daily life after completing their prison terms.
-              </Typography>
-            </ListItem>
-            <ListItem>
-              <Typography className={classes.rootsBodyText} variant="body1">
-                Washington State’s New Hope Act makes it easier for people with
-                past criminal records to have their convictions vacated. Yet the
-                system is slow and inefficient.
-              </Typography>
-              <ListItemIcon>
+              }
+              text={
+                <Typography className={classes.rootsBodyText} variant="body1">
+                  One in four Washingtonians have been involved in the criminal
+                  justice system. Those with a criminal record face significant
+                  barriers to daily life after completing their prison terms.
+                </Typography>
+              }
+            />
+            <ListItemMobileSnap
+              image={
                 <Box
                   component="img"
                   src={lawyer}
                   className={classes.rootsImage}
                 />
-              </ListItemIcon>
-            </ListItem>
-            <ListItem>
-              <ListItemIcon>
+              }
+              text={
+                <Typography className={classes.rootsBodyText} variant="body1">
+                  Washington State’s New Hope Act makes it easier for people
+                  with past criminal records to have their convictions vacated.
+                  Yet the system is slow and inefficient.
+                </Typography>
+              }
+              textLeft
+            />
+
+            <ListItemMobileSnap
+              image={
                 <Box
                   component="img"
                   src={innovation}
                   className={classes.rootsImage}
                 />
-              </ListItemIcon>
-              <Typography className={classes.rootsBodyText} variant="body1">
-                We have identified opportunities to use technology to streamline
-                this process and want to use our resources to appropriately met
-                user needs, creating an easier way to vacate convictions.
-              </Typography>
-            </ListItem>
+              }
+              text={
+                <Typography className={classes.rootsBodyText} variant="body1">
+                  We have identified opportunities to use technology to
+                  streamline this process and want to use our resources to
+                  appropriately met user needs, creating an easier way to vacate
+                  convictions.
+                </Typography>
+              }
+            />
           </List>
-
-          {/* Alternative Solution */}
-          {/* <Grid container justifyContent="center">
-            <Grid className={classes.alignItemContent} item xs={12} sm={6}>
-              <Box
-                component="img"
-                src={lawyer}
-                className={classes.rootsImage}
-              />
-            </Grid>
-            <Grid  item xs={12} sm={6}>
-              <Box display="flex" justifyContent="center">
-              <Typography className={classes.rootsBodyText} variant="body1">
-                One in four Washingtonians have been involved in the criminal
-                justice system. Those with a criminal record face significant
-                barriers to daily life after completing their prison terms.
-              </Typography>
-              </Box>
-
-            </Grid>
-            <Grid className={classes.alignItemContent} item xs={12} sm={6}>
-              <Box
-                component="img"
-                src={lawyer}
-                className={classes.rootsImage}
-              />
-            </Grid>
-            <Grid item xs={12} sm={6}>
-              <Typography className={classes.rootsBodyText} variant="body1">
-                Washington State’s New Hope Act makes it easier for people with
-                past criminal records to have their convictions vacated. Yet the
-                system is slow and inefficient.
-              </Typography>
-            </Grid>
-            <Grid className={classes.alignItemContent} item xs={12} sm={6}>
-              <Box
-                component="img"
-                src={lawyer}
-                className={classes.rootsImage}
-              />
-            </Grid>
-
-            <Grid className={classes.alignItemContent} item xs={12} sm={6}>
-              <Typography className={classes.rootsBodyText} variant="body1">
-                We have identified opportunities to use technology to streamline
-                this process and want to use our resources to appropriately met
-                user needs, creating an easier way to vacate convictions.
-              </Typography>
-            </Grid>
-          </Grid> */}
-        </Box>
-        <Box className={classes.problemRoot}>
+        </Container>
+      </Box>
+      <Box className={classes.problemRoot}>
+        <Container maxWidth="lg">
           <Grid container>
             <Grid className={classes.theProblemRootleft} item xs={12} sm={6}>
               <Typography className={classes.problemLeftTitle} variant="h2">
@@ -236,7 +197,7 @@ const AboutPage = () => {
                 It requires a number of steps that can be difficult to
                 accomplish:
               </Typography>
-              <Typography component="ol" variant="body1">
+              <Typography className={classes.problemLeftBody} component="ol" variant="body1" >
                 <li>Gathering documents</li>
                 <li>Determining eligibility</li>
                 <li>
@@ -277,8 +238,18 @@ const AboutPage = () => {
               </List>
             </Grid>
           </Grid>
-        </Box>
-        <Box className={classes.ourMission}>
+        </Container>
+      </Box>
+
+      <Box className={classes.ourMission}>
+        <Container
+          style={{
+            paddingTop: "5rem",
+            paddingBottom: "5rem",
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
           <Box>
             <Typography className={classes.ourMissionText} variant="h4">
               Our mission is to benefit individuals with criminal convictions
@@ -286,31 +257,42 @@ const AboutPage = () => {
             </Typography>
             <Typography className={classes.ourMissionText} variant="h4">
               To support this mission, we first focused on creating a <br />
-              <span style={{ color: "#FFD200" }}>
+              <span className={classes.highlightText}>
                 Conviciton Eligibility Calculator
               </span>{" "}
               to help people determine if they are eligible to vacate their
               conviction.
             </Typography>
           </Box>
-        </Box>
+        </Container>
+      </Box>
 
-        <Box className={classes.ourTeam}>
+      <Box className={classes.ourTeam}>
+        <Container maxWidth="lg">
           <Typography className={classes.ourTeamTitle} variant="h2">
             The Team
           </Typography>
-          <Grid
-            container
-            spacing={3}
-            justifyContent="center"
-            alignItems="center"
-          >
+          <Grid container>
             {team.map((id) => (
-              <TeamCard key={id} teamNumber={id} />
+              <Grid
+              key={id}
+                item
+                xs={6}
+                sm={4}
+                md={3}
+                lg={3}
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  padding: "1rem",
+                }}
+              >
+                <TeamCard key={id} teamNumber={id} />
+              </Grid>
             ))}
           </Grid>
-        </Box>
-      </Container>
+        </Container>
+      </Box>
     </>
   );
 };
