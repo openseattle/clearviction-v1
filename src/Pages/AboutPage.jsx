@@ -21,7 +21,7 @@ import seattle from "../Assets/seattle.svg";
 import innovation from "../Assets/innovation.svg";
 import ListItemMobileSnap from "../ui-kit/ListItemMobileSnap";
 
-const team = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
+import team from "../data/teamData";
 
 const useStyles = makeStyles((theme) => ({
   alignItemContent: {
@@ -275,9 +275,9 @@ const AboutPage = () => {
             The Team
           </Typography>
           <Grid container>
-            {team.map((id) => (
+            {team.map((member) => (
               <Grid
-                key={id}
+                key={member.firstName}
                 item
                 xs={6}
                 sm={4}
@@ -289,7 +289,7 @@ const AboutPage = () => {
                   padding: "1rem",
                 }}
               >
-                <TeamCard key={id} teamNumber={id} />
+                <TeamCard key={member.firstName} member={member} />
               </Grid>
             ))}
           </Grid>

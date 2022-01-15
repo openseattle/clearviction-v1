@@ -26,19 +26,22 @@ const useStyles = makeStyles({
 
 const TeamCard = (props) => {
   const classes = useStyles();
+
+  const {firstName, lastName, role, photo, linkedIn} = props.member;
+
   return (
     <Card className={classes.card}>
       <CardMedia>
-        <Avatar className={classes.avatar} variant="square" />
+        <Avatar className={classes.avatar} variant="square" src={photo} />
       </CardMedia>
       <CardContent style={{ marginBottom: "-45px" }}>
         <Typography className={classes.name} variant="h6">
-          Name Surname {props.teamNumber}
+          {firstName} {lastName}
         </Typography>
-        <Typography variant="h6">Title {props.teamNumber}</Typography>
+        <Typography variant="h6">{role}</Typography>
       </CardContent>
       <CardActions style={{ display: "flex", justifyContent: "right" }}>
-        <IconButton>
+        <IconButton href={linkedIn} target="_blank" rel="noopener noreferrer">
           <LinkedIn fontSize="large" />
         </IconButton>
       </CardActions>
