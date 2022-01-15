@@ -173,7 +173,7 @@ const AboutPage = () => {
                 <Typography className={classes.rootsBodyText} variant="body1">
                   We have identified opportunities to use technology to
                   streamline this process and want to use our resources to
-                  appropriately met user needs, creating an easier way to vacate
+                  appropriately meet user needs, creating an easier way to vacate
                   convictions.
                 </Typography>
               }
@@ -215,7 +215,7 @@ const AboutPage = () => {
                   </ListItemIcon>
                   <Typography variant="subtitle1">
                     Each step requires time and know-how, increasing the barrier
-                    of entry for applicants
+                    to entry for applicants
                   </Typography>
                 </ListItem>
 
