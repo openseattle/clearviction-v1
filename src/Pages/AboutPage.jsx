@@ -251,14 +251,14 @@ const AboutPage = () => {
           }}
         >
           <Box>
-            <Typography className={classes.ourMissionText} variant="h4">
+            <Typography className={classes.ourMissionText} variant="h3">
               Our mission is to benefit individuals with criminal convictions
               and decrease lifelong collateral consequences.
             </Typography>
-            <Typography className={classes.ourMissionText} variant="h4">
+            <Typography className={classes.ourMissionText} variant="h3">
               To support this mission, we first focused on creating a <br />
               <span className={classes.highlightText}>
-                Conviciton Eligibility Calculator
+                Conviction Eligibility Calculator
               </span>{" "}
               to help people determine if they are eligible to vacate their
               conviction.
