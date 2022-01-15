@@ -4,8 +4,6 @@ import {
   makeStyles,
   Typography,
   CardContent,
-  Grid,
-  Box,
   IconButton,
   CardActions,
   CardMedia,
