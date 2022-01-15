@@ -21,7 +21,7 @@ const useStyles = makeStyles({
     fontWeight: "bold",
   },
   avatar: {
-    width: 200,
+    width: "100%",
     height: 200,
   },
 });
