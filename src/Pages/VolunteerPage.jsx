@@ -4,47 +4,67 @@ import {
   makeStyles,
   Typography,
   Container,
+  ButtonGroup,
+  Button,
+  List,
+  ListItem,
+  ListItemIcon,
 } from "@material-ui/core";
-import placeholder from "../Assets/placeholder_contact.png";
+import meeting from "../Assets/team_meeting.svg";
 import HeroPanel from "../Components/HeroPanel";
 import RolesDisplay from "../Components/RolesDisplay";
 import SecondaryButton from "../ui-kit/SecondaryButton";
-import BulletedListMui from "../ui-kit/BulletedListMui";
+import { Alarm, CloudDoneOutlined, SchoolOutlined } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
-  textColor: {
-    color: "white",
-    marginBottom: 20,
+  icon: {
+    fontSize: "4rem",
+    color: "yellow",
   },
-  textAltColor: {
-    color: "black",
-    marginBottom: 20,
+  contentText: {
+    margin: theme.spacing(2),
+  },
+  contentTextAlt: {
+    color: "white",
+    margin: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
+  },
+  listTextAlt: {
+    color: "white",
+  },
+  title: {
+    margin: theme.spacing(2),
+  },
+  titleAlt: {
+    margin: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
+    color: "white",
   },
   backgroundSecondary: {
+    height: 400,
     backgroundColor: theme.palette.primary.main,
+    padding: theme.spacing(5),
+    [theme.breakpoints.down("sm")]: {
+      padding: theme.spacing(2),
+    },
+    [theme.breakpoints.down("xs")]: {
+      height: 300,
+    },
   },
   backgroundLightSecondary: {
+    height: 400,
     backgroundColor: theme.palette.primary.light,
-    height: "250px",
-    justifyContent: "center",
-    display: "flex",
-    width: "100%",
+    padding: theme.spacing(5),
+    [theme.breakpoints.down("sm")]: {
+      padding: theme.spacing(1),
+    },
+    [theme.breakpoints.down("xs")]: {
+      height: 300,
+    },
   },
-  backgroundWhite: {
-    backgroundColor: "white",
-    justifyContent: "center",
-    height: "250px",
-    display: "flex",
-    width: "100%",
-  },
-  contentBox: {
+  teamMeeting: {
+    maxHeight: "500px",
     maxWidth: "500px",
-    margin: "2rem",
-  },
-  mainImage: {
-    maxHeight: "250px",
-    maxWidth: "100%",
-    padding: "2rem",
   },
   rolesHeading: {
     color: "white",
@@ -57,30 +77,44 @@ const VolunteerPage = () => {
   return (
     <>
       <Container maxWidth="lg">
-        <HeroPanel title="Volunteer" />
-        <Box className={classes.backgroundSecondary}>
+        <HeroPanel
+          title={"Get involved"}
+          subtitle={
+            "There are many ways to participate with the CVP team, and we appreciate all of them!"
+          }
+        />
+        <Box style={{ display: "flex", justifyContent: "center" }}>
+          <ButtonGroup>
+            <Button>Volunteer</Button>
+            <Button>Donate</Button>
+            <Button>Partner With Us</Button>
+          </ButtonGroup>
+        </Box>
+
+        <Box>
           <Grid container justifyContent="center" alignItems="center">
-            <Grid item md={6}>
+            <Grid item xs={12} sm={6} md={6}>
               <Box justifyContent="center" display="flex">
                 <Box
                   component="img"
-                  src={placeholder}
+                  src={meeting}
                   className={classes.mainImage}
                 />
               </Box>
             </Grid>
-            <Grid item md={6}>
+            <Grid item xs={12} sm={6} md={6}>
               <Box justifyContent="center" display="flex">
-                <Box className={classes.contentBox}>
-                  <Typography className={classes.textColor} variant="h2">
-                    Why Volunteer?
+                <Box>
+                  <Typography className={classes.title} variant="h2">
+                    Why volunteer?
                   </Typography>
-                  <Typography className={classes.textColor} variant="body1">
-                    Conviction vacation improves the chances of successful
-                    reentry into society for formerly incarcerated individuals
-                    and reduces recidivism.
+                  <Typography className={classes.contentText} variant="body1">
+                    Conviction vacation makes it easier for formerly
+                    incarcerated individuals to access housing and employment.
+                    The two things that are crucial for reducing the odds of
+                    re-incarceration.
                   </Typography>
-                  <Typography className={classes.textColor} variant="body1">
+                  <Typography className={classes.contentText} variant="body1">
                     By volunteering, you will help us reduce barriers and
                     streamline the process of vacating eligible convictions in
                     Washington state to make it easier for people to move
@@ -89,53 +123,88 @@ const VolunteerPage = () => {
                 </Box>
               </Box>
             </Grid>
-          </Grid>
-        </Box>
-        <Grid
-          container
-          justifyContent="center"
-          alignItems="center"
-          style={{ marginTop: "0rem" }}
-        >
-          <Grid item md={6} className={classes.backgroundLightSecondary}>
-            <Box className={classes.contentBox}>
-              <Typography variant="h2" className={classes.textColor}>
+            <Grid
+              className={classes.backgroundLightSecondary}
+              item
+              xs={12}
+              sm={6}
+              md={6}
+            >
+              <Typography className={classes.titleAlt} variant="h2">
                 Who can apply?
               </Typography>
-              <BulletedListMui>
-                <li>You can commit to 4 hours a week for at least 6 months</li>
-                <li>
-                  You want to share your expertise in a field to help us make a
-                  better product
-                </li>
-                <li>
-                  You are self-motivated and are comfortable with remote work
-                </li>
-              </BulletedListMui>
-            </Box>
+              <List>
+                <ListItem>
+                  <ListItemIcon>
+                    <Alarm className={classes.icon} />
+                  </ListItemIcon>
+                  <Typography className={classes.listTextAlt}>
+                    You can commit to 4 hours a week for at least 6 months
+                  </Typography>
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <SchoolOutlined className={classes.icon} />
+                  </ListItemIcon>
+                  <Typography className={classes.listTextAlt}>
+                    You want to share your expertise in a field to help us make
+                    a better product
+                  </Typography>
+                </ListItem>
+                <ListItem>
+                  <ListItemIcon>
+                    <CloudDoneOutlined className={classes.icon} />
+                  </ListItemIcon>
+                  <Typography className={classes.listTextAlt}>
+                    You are self-motivated and are comfortable with remote work
+                  </Typography>
+                </ListItem>
+              </List>
+            </Grid>
+            <Grid
+              className={classes.backgroundSecondary}
+              item
+              xs={12}
+              sm={6}
+              md={6}
+            >
+              <Box>
+                <Typography
+                  className={classes.titleAlt}
+                  variant="h2"
+                  align="right"
+                >
+                  How can you apply?
+                </Typography>
+                <Typography
+                  className={classes.contentTextAlt}
+                  variant="body1"
+                  align="right"
+                >
+                  We are currently using DemocracyLab to streamline the
+                  volunteering process, which you can find by clicking the
+                  button below.
+                </Typography>
+                <Typography
+                  className={classes.contentTextAlt}
+                  variant="body1"
+                  align="right"
+                >
+                  If you want further information and want to have a chat, don’t
+                  hesitate to contact us by email at{" "}
+                  <a href="/contact">contact@cvp.com</a> and we’ll get back to
+                  you within 24 hours.
+                </Typography>
+              </Box>
+            </Grid>
           </Grid>
-          <Grid item md={6} className={classes.backgroundWhite}>
-            <Box className={classes.contentBox}>
-              <Typography className={classes.textAltColor} variant="h2">
-                How can you apply?
-              </Typography>
-              <Typography variant="body1">
-                We are currently using DemocracyLab to streamline the
-                volunteering process, which you can find clicking the button
-                below.
-              </Typography>
-              <Typography variant="body1">
-                If you want further information and want to have a chat, don’t
-                hesitate to contact us though our form.
-              </Typography>
-            </Box>
-          </Grid>
-        </Grid>
-        <Box className={classes.backgroundSecondary}>
-          <Typography className={classes.rolesHeading} variant="h2">
+        </Box>
+
+        <Box>
+          <Typography variant="h2" align="center">
             Open Roles
           </Typography>
-          <RolesDisplay />
+          
           <Box
             justifyContent="center"
             display="flex"
