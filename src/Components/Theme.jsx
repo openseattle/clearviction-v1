@@ -33,8 +33,9 @@ const Theme = createTheme({
       fontSize: ".875rem",
     },
     subtitle2: {
-      fontFamily: "Roboto",
-      fontSize: ".6875rem",
+      fontFamily: ["Roboto", "sans-serif"],
+      fontSize: ".875rem",
+      fontWeight: 400,
     },
     button: {
       textAlign: "center",
