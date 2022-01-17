@@ -9,30 +9,34 @@ import {
   Typography,
 } from "@material-ui/core";
 import { ExpandMoreOutlined } from "@material-ui/icons";
+import laptop from "../Assets/laptop.svg";
+import progress from "../Assets/progress.svg";
+import note from "../Assets/note_taking.svg";
+import discovery from "../Assets/science_discovery.svg";
 
 const donationLevels = [
   {
     name: "level 1",
     amount: "$10",
-    donationImage: "img src",
+    donationImage: progress,
     desc: "pay for a monthly fee for one of our technological tools",
   },
   {
     name: "level 2",
     amount: "$15",
-    donationImage: "img src",
+    donationImage: discovery,
     desc: "fund a research participant’s time",
   },
   {
     name: "level 3",
     amount: "$30",
-    donationImage: "img src",
+    donationImage: laptop,
     desc: "pay the filing fee for a low-income individual",
   },
   {
     name: "level 4",
     amount: "any",
-    donationImage: "img src",
+    donationImage: note,
     desc: "directly help support those with convictions start fresh",
   },
 ];
@@ -53,7 +57,17 @@ const useStyles = makeStyles((theme) => ({
   },
   donationDescStyle: {
     textAlign: "center",
+    fontFamily: ["roboto", "sans-serif"],
+    fontSize: 20,
   },
+  title: {
+    textAlign: "center",
+    margin: theme.spacing(2),
+  },
+  qrCode: {
+    height: 440,
+    width: 610,
+  }
 }));
 
 const DonatePage = () => {
@@ -61,7 +75,7 @@ const DonatePage = () => {
   return (
     <>
       <Container maxWidth="lg">
-        <Typography variant="h2">Why donate?</Typography>
+        <Typography className={classes.title} variant="h2">Why donate?</Typography>
         <Typography variant="body1">
           We depend on your generosity to let this project grow!
         </Typography>
@@ -91,22 +105,21 @@ const DonatePage = () => {
             </Grid>
           ))}
         </Grid>
-        <Box>
-          <Box component={"img"} />
+        <Box >
+          
+          <Box className={classes.qrCode} component={"img"} />
           <Typography variant="h2">title</Typography>
           <Typography>text</Typography>
           <Typography>list</Typography>
           <Typography>disclaimer</Typography>
         </Box>
         <Box>
-          <Typography variant="h2">FAQs</Typography>
+          <Typography className={classes.title} variant="h2">FAQs</Typography>
           <Accordion>
             <AccordionSummary expandIcon={<ExpandMoreOutlined />}>
               <Typography>Summary</Typography>
             </AccordionSummary>
-            <AccordionDetails>
-                details
-            </AccordionDetails>
+            <AccordionDetails>details</AccordionDetails>
           </Accordion>
         </Box>
       </Container>
