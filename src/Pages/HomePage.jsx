@@ -3,6 +3,7 @@ import { trackPageview } from "../trackingUtils";
 import FAQAccordion from "../Components/Accordion";
 import PrimaryButton from "../ui-kit/Button";
 import Text from "../ui-kit/Text";
+import SecondaryButton from "../ui-kit/SecondaryButton";
 import cvpLogoWhite from "../Assets/cvp-logo-white.png";
 import cvpLogoLeftHalf from "../Assets/cvp-logo-white-left-half.png";
 import housing from "../Assets/housing.svg";
@@ -32,7 +33,10 @@ const HomePage = () => {
                   "Check your eligibility to vacate your conviction for free in less than 10 minutes!"
                 }
               ></Text>
-              <Text variant={"h5"} text={"Coming in January 2022!"}></Text>
+              <SecondaryButton
+                text={"Check My Eligibility"}
+                href={"/calculator/landing-0"}
+              ></SecondaryButton>
             </div>
             <div id="right-content">
               <img src={cvpLogoLeftHalf} id="hero-logo" alt={"CVP Logo"} />
@@ -80,7 +84,12 @@ const HomePage = () => {
             fontFamily={"Lora"}
           ></Text>
         </div>
-        <Text variant={"h3"} text={"Coming in January 2022!"}></Text>
+        <div>
+          <SecondaryButton
+            text={"Check My Eligibility"}
+            href={"/calculator/landing-0"}
+          ></SecondaryButton>
+        </div>
       </div>
 
       <div className="row light-bg" id="faq">

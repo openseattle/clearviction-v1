@@ -41,14 +41,14 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "500px",
     margin: "2rem",
   },
-  mainImage:{
+  mainImage: {
     maxHeight: "250px",
     maxWidth: "100%",
     padding: "2rem",
   },
   rolesHeading: {
     color: "white",
-    padding: "4rem"
+    padding: "4rem",
   },
 }));
 

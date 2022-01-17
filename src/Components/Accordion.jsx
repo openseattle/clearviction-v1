@@ -10,7 +10,7 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import Text from "../ui-kit/Text";
 import data from "../data/FAQdata";
 
-const useStyles = makeStyles( (theme) => ({
+const useStyles = makeStyles((theme) => ({
   accordionSummary: {
     backgroundColor: theme.palette.primary.light,
     color: "white",

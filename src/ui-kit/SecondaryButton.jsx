@@ -7,9 +7,10 @@ const useStyles = makeStyles({
   button: {
     backgroundColor: "var(--light-blue)",
     color: "#ffffff",
-    width: "327px",
+    width: "207px",
     padding: "10px",
     margin: "10px",
+    textTransform: "none",
     fontSize: "16px",
     "&:hover": {
       backgroundColor: "var(--gray)",
