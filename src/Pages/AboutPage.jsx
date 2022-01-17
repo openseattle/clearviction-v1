@@ -34,10 +34,10 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: 0,
   },
   rootsContainer: {
-    marginTop: "4rem",
-    padding: "4rem",
+    marginTop: theme.spacing(5),
+    padding: theme.spacing(5),
     [theme.breakpoints.down("sm")]: {
-      padding: "2rem",
+      padding: theme.spacing(3),
     },
   },
   rootsImage: {
@@ -50,60 +50,60 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 18,
   },
   problemRoot: {
-    marginTop: "5rem",
-    marginBottom: "5rem",
-    padding: "4rem",
+    marginTop: theme.spacing(6),
+    marginBottom: theme.spacing(6),
+    padding: theme.spacing(5),
   },
   theProblemRootleft: {
     backgroundColor: "white",
     color: "black",
-    paddingBottom: "3rem",
-    paddingRight: "3rem",
-    paddingLeft: "3rem",
+    paddingBottom: theme.spacing(4),
+    paddingRight: theme.spacing(4),
+    paddingLeft: theme.spacing(4),
   },
   problemLeftTitle: {
-    marginBottom: "3rem",
+    marginBottom: theme.spacing(4),
   },
   problemLeftBody: {
-    marginTop: "3rem",
+    marginTop: theme.spacing(4),
   },
   problemRootRight: {
     backgroundColor: theme.palette.primary.main,
     color: "white",
-    padding: "1rem",
+    padding: theme.spacing(2),
     [theme.breakpoints.up("sm")]: {
-      paddingTop: "3rem",
-      padding: "2rem",
+      paddingTop: theme.spacing(4),
+      padding: theme.spacing(3),
     },
   },
   problemRightListItem: {
-    padding: "2rem",
+    padding: theme.spacing(3),
   },
   theProblemIcon: {
     color: theme.palette.highlight.main,
     fontSize: "5rem",
-    margin: "2rem",
+    margin: theme.spacing(3),
   },
   ourMission: {
     backgroundColor: theme.palette.primary.light,
     color: "white",
   },
   ourMissionText: {
-    margin: "5rem",
+    margin: theme.spacing(6),
     maxWidth: 775,
     textAlign: "center",
   },
   ourJourneyTitle: {
-    margin: "3rem",
+    margin: theme.spacing(4),
   },
   ourTeam: {
     backgroundColor: theme.palette.primary.main,
-    paddingTop: "8rem",
-    paddingBottom: "8rem",
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8),
   },
   ourTeamTitle: {
-    marginLeft: "5rem",
-    marginBottom: "8rem",
+    marginLeft: theme.spacing(6),
+    marginBottom: theme.spacing(9),
     color: "white",
   },
 
