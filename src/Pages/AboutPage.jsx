@@ -50,17 +50,19 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 18,
   },
   problemRoot: {
-    marginTop: "6rem",
-    marginBottom: "6rem",
+    marginTop: "5rem",
+    marginBottom: "5rem",
     padding: "4rem",
   },
   theProblemRootleft: {
     backgroundColor: "white",
     color: "black",
-    padding: "3rem",
+    paddingBottom: "3rem",
+    paddingRight: "3rem",
+    paddingLeft: "3rem",
   },
   problemLeftTitle: {
-    marginBottom: "4rem",
+    marginBottom: "3rem",
   },
   problemLeftBody: {
     marginTop: "3rem",
