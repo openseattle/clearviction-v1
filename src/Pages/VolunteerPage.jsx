@@ -10,13 +10,19 @@ import {
   ListItem,
   ListItemIcon,
 } from "@material-ui/core";
-import meeting from "../Assets/team_meeting.svg";
 import HeroPanel from "../Components/HeroPanel";
-import RolesDisplay from "../Components/RolesDisplay";
 import SecondaryButton from "../ui-kit/SecondaryButton";
 import { Alarm, CloudDoneOutlined, SchoolOutlined } from "@material-ui/icons";
 
+import meeting from "../Assets/team_meeting.svg";
+import team from "../Assets/team_building.svg";
+import brainstorm from "../Assets/brainstorming_session.svg";
+import laptop from "../Assets/laptop.svg";
+
 const useStyles = makeStyles((theme) => ({
+  volunteer: {
+    marginTop: theme.spacing(5),
+  },
   icon: {
     fontSize: "4rem",
     color: "yellow",
@@ -63,42 +69,42 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   teamMeeting: {
-    maxHeight: "500px",
-    maxWidth: "500px",
+    maxHeight: 500,
+    maxWidth: 500,
   },
-  rolesHeading: {
-    color: "white",
-    padding: "4rem",
+  roleImage: {
+    height: 300,
+    width: 300,
   },
+  titleRoles: {
+    padding: theme.spacing(5),
+  },
+  headingRoles: {
+    color: theme.palette.primary.light,
+    paddingBottom: theme.spacing(2),
+  },
+  roleAdjust: {
+    [theme.breakpoints.up("sm")]: {
+      paddingTop: theme.spacing(5),
+    }
+  },
+  buttonPad: {
+    margin: theme.spacing(10),
+  }
 }));
 
 const VolunteerPage = () => {
   const classes = useStyles();
   return (
     <>
-      <Container maxWidth="lg">
-        <HeroPanel
-          title={"Get involved"}
-          subtitle={
-            "There are many ways to participate with the CVP team, and we appreciate all of them!"
-          }
-        />
-        <Box style={{ display: "flex", justifyContent: "center" }}>
-          <ButtonGroup>
-            <Button>Volunteer</Button>
-            <Button>Donate</Button>
-            <Button>Partner With Us</Button>
-          </ButtonGroup>
-        </Box>
-
-        <Box>
+      <Container className={classes.volunteer} maxWidth="lg">
           <Grid container justifyContent="center" alignItems="center">
             <Grid item xs={12} sm={6} md={6}>
               <Box justifyContent="center" display="flex">
                 <Box
                   component="img"
                   src={meeting}
-                  className={classes.mainImage}
+                  className={classes.teamMeeting}
                 />
               </Box>
             </Grid>
@@ -198,19 +204,80 @@ const VolunteerPage = () => {
               </Box>
             </Grid>
           </Grid>
-        </Box>
 
         <Box>
-          <Typography variant="h2" align="center">
-            Open Roles
+          <Typography className={classes.titleRoles} variant="h2" align="center">
+            Open roles
           </Typography>
-          
+          <Grid container>
+            <Grid item xs={12} sm={4} md={4}>
+              <Box display="flex" justifyContent="center">
+                <Box component="img" src={team} className={classes.roleImage} />
+              </Box>
+              <Typography
+                className={classes.headingRoles}
+                variant="h3"
+                align="center"
+              >
+                User Experience
+              </Typography>
+              <Typography variant="body1" align="center">
+                Designers
+              </Typography>
+              <Typography variant="body1" align="center">
+                Researchers
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={4} md={4}>
+              <Box className={classes.roleAdjust} display="flex" justifyContent="center">
+                <Box
+                  component="img"
+                  src={brainstorm}
+                  className={classes.roleImage}
+                />
+              </Box>
+              <Typography
+                className={classes.headingRoles}
+                variant="h3"
+                align="center"
+              >
+                Development
+              </Typography>
+              <Typography variant="body1" align="center">
+                Front-End Developers
+              </Typography>
+              <Typography variant="body1" align="center">
+                Back-End Developers
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={4} md={4}>
+              <Box display="flex" justifyContent="center">
+                <Box
+                  component="img"
+                  src={laptop}
+                  className={classes.roleImage}
+                />
+              </Box>
+              <Typography
+                className={classes.headingRoles}
+                variant="h3"
+                align="center"
+              >{`Content & Outreach`}</Typography>
+              <Typography variant="body1" align="center">
+                Copy Writers
+              </Typography>
+              <Typography variant="body1" align="center">
+                Marketing Directors
+              </Typography>
+            </Grid>
+          </Grid>
+
           <Box
             justifyContent="center"
             display="flex"
-            style={{ padding: "4rem" }}
+            className={classes.buttonPad}
           >
-            <SecondaryButton text="Join Us" />
+            <SecondaryButton text={"Join Our Team"} />
           </Box>
         </Box>
       </Container>
