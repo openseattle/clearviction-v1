@@ -4,13 +4,10 @@ import {
   makeStyles,
   Typography,
   Container,
-  ButtonGroup,
-  Button,
   List,
   ListItem,
   ListItemIcon,
 } from "@material-ui/core";
-import HeroPanel from "../Components/HeroPanel";
 import SecondaryButton from "../ui-kit/SecondaryButton";
 import { Alarm, CloudDoneOutlined, SchoolOutlined } from "@material-ui/icons";
 
