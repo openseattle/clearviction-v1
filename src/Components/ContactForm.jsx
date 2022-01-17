@@ -2,7 +2,7 @@ import { useState } from "react";
 import { TextField, Grid, MenuItem, makeStyles, FormControl, FormGroup, FormLabel } from "@material-ui/core";
 import SecondaryButton from "../ui-kit/SecondaryButton";
 import { send } from '@emailjs/browser';
-import ModalAlert from "../ui-kit/AlertDialog";
+
 const useStyles = makeStyles({
   root: {
     display: "flex",
