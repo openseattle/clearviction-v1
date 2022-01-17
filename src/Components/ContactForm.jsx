@@ -1,7 +1,8 @@
-import React from "react";
+import { useState } from "react";
 import { TextField, Grid, MenuItem, makeStyles, FormControl, FormGroup, FormLabel } from "@material-ui/core";
 import SecondaryButton from "../ui-kit/SecondaryButton";
-
+import { send } from '@emailjs/browser';
+import ModalAlert from "../ui-kit/AlertDialog";
 const useStyles = makeStyles({
   root: {
     display: "flex",
@@ -31,14 +32,37 @@ const useStyles = makeStyles({
 
 const ContactForm = () => {
   const classes = useStyles();
-  const [name, setName] = React.useState("")
-  const [email, setEmail] = React.useState("")
-  const [contactType, setContactType] = React.useState("");
-  const [message, setMessage] = React.useState("")
+
+  const [toSend, setToSend] = useState({
+    from_name: "",
+    reply_to: "",
+    contact_type: "",
+    message: ""
+  })
+
+  const handleChange = (e) => {
+    setToSend({ ...toSend, [e.target.name]: e.target.value })
+  }
+
+  const SERVICE_ID = process.env.REACT_APP_SERVICE_ID
+  const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID
+  const USER_ID = process.env.REACT_APP_USER_ID
 
   const handleFormSubmit = e => {
     e.preventDefault();
-    console.log(name, email, contactType, message);
+    send(
+      SERVICE_ID, TEMPLATE_ID, toSend, USER_ID
+    )
+    .then((response) => {
+      console.log('success', response.status, response.text)
+      alert("Email Sent Successfully")
+      // TODO: create custom pop up alert
+    })
+    .catch((error) => {
+      console.log('failed', error)
+      alert("ERROR. Please try again.")
+      // TODO: create custom pop up alert
+    })
   };
 
   const contactTypes = [
@@ -79,8 +103,9 @@ const ContactForm = () => {
               className={classes.inputStyle}
               label="Enter Your Full Name" 
               required
-              value={name}
-              onChange={e => setName(e.target.value)}
+              name='from_name'
+              value={toSend.from_name}
+              onChange={handleChange}
               variant="outlined" 
             />
             <FormLabel className={classes.labelStyle} component="legend">Email</FormLabel>
@@ -88,9 +113,11 @@ const ContactForm = () => {
               id="standard-basic"
               className={classes.inputStyle}
               label="Enter Your Email Address" 
+              type="email"
               required
-              value={email}
-              onChange={e => setEmail(e.target.value)}
+              name='reply_to'
+              value={toSend.reply_to}
+              onChange={handleChange}
               variant="outlined" 
             />
             <FormLabel className={classes.labelStyle} component="legend">I am a(n)</FormLabel>
@@ -100,8 +127,9 @@ const ContactForm = () => {
               select
               label="Please Select An Option"
               required
-              value={contactType}
-              onChange={e => setContactType(e.target.value)}
+              name='contact_type'
+              value={toSend.contact_type}
+              onChange={handleChange}
               variant="outlined"
             >
               {contactTypes.map((option) => (
@@ -118,9 +146,10 @@ const ContactForm = () => {
               multiline
               minRows={4}
               maxRows={10}
-              value={message}
+              value={toSend.message}
               required
-              onChange={e => setMessage(e.target.value)}
+              name='message'
+              onChange={handleChange}
               variant="outlined"
             />
             <SecondaryButton type={"submit"} text={"Send Message"}/>
