@@ -24,7 +24,8 @@ const ContactPage = () => {
         <HeroPanel title={pageTitle} />
         <Box>
           <Typography variant="h5" className={classes.subtext}>
-            Have questions? Send us a message and we’ll get
+            Have questions? Send us an email at{" "}
+            <a href="mailto:convictionvacation@gmail.com">convictionvacation@gmail.com</a> and we’ll get
             back to you within 24 hours.
           </Typography>
           <ContactForm />

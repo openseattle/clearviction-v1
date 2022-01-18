@@ -43,14 +43,13 @@ const ToolTipModal = (props) => {
             id="modal-modal-description"
             style={{ mt: 2, fontSize: "18px" }}
           >
-            If you don't know how to answer this question, you may be able to
-            locate your records here:{" "}
+            If you don't know the answer, you may check your criminal record{" "}
             <a
               target="_blank"
               href="https://www.wsp.wa.gov/crime/criminal-history"
               rel="noreferrer"
             >
-              https://www.wsp.wa.gov/crime/criminal-history
+              here
             </a>
           </Typography>
         </Box>
