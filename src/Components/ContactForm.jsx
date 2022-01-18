@@ -25,8 +25,14 @@ const useStyles = makeStyles({
     color: "var(--white)"
   },
   formStyle: {
-    maxWidth: "363px",
+    width: "800px",
     padding: "10px"
+  },
+  '@media (max-width: 480px)' : {
+    formStyle: {
+      maxWidth: "363px",
+      padding: "10px"
+    },
   },
 });
 
