@@ -1,5 +1,6 @@
 import { createTheme } from "@material-ui/core";
 const Theme = createTheme({
+  spacing: 8,
   palette: {
     secondary: {
       main: "#c4c4c4",
@@ -12,29 +13,34 @@ const Theme = createTheme({
     success: {
       main: "#419d77",
       light: "#9ed6be",
-      dark: "#396452",
+      dark: "#396452"
     },
     error: {
       main: "#DF1F1F",
     },
+    highlight: {
+      main: "#FFD200"
+    } 
   },
   typography: {
     fontSize: 16,
     body1: {
       fontFamily: "Lora",
-      fontSize: "1.25rem",
+      fontSize: "1.5rem",
     },
     body2: {
       fontFamily: "Lora",
-      fontSize: ".875rem",
+      fontSize: "1.25rem",
     },
     subtitle1: {
-      fontFamily: "Roboto",
-      fontSize: ".875rem",
+      fontFamily: ["Roboto", "sans-serif"],
+      fontSize: "1.5rem",
+      fontWeight: "normal",
+      lineHeight: "24px"
     },
     subtitle2: {
       fontFamily: "Roboto",
-      fontSize: ".6875rem",
+      fontSize: ".875rem",
     },
     button: {
       textAlign: "center",
@@ -43,7 +49,7 @@ const Theme = createTheme({
       fontWeight: "bold",
       lineHeight: "3rem",
       textTransform: "none",
-    },
+    }
   },
 });
 
@@ -66,14 +72,21 @@ Theme.typography.h3 = {
     fontSize: "3rem",
   },
 };
+Theme.typography.h4 = {
+  fontWeight: 500,
+  fontSize: "1.875rem",
+  [Theme.breakpoints.up("sm")]: {
+    fontSize: "2.25rem",
+  },
+};
 
 Theme.overrides = {
   MuiDrawer: {
     paper: {
       backgroundColor: Theme.palette.primary.main,
-      width: "250px",
-    },
-  },
+      width: "250px"
+    }
+  }
 };
 
 export default Theme;
