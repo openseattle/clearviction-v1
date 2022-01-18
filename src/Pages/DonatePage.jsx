@@ -5,8 +5,6 @@ import {
   Box,
   Container,
   Grid,
-  List,
-  ListItem,
   makeStyles,
   Typography,
 } from "@material-ui/core";
@@ -17,34 +15,11 @@ import note from "../Assets/note_taking.svg";
 import discovery from "../Assets/science_discovery.svg";
 import code from "../Assets/qr_code.svg";
 
-const donationLevels = [
-  {
-    name: "level 1",
-    amount: "$10",
-    donationImage: progress,
-    desc: "pay for a monthly fee for one of our technological tools",
-  },
-  {
-    name: "level 2",
-    amount: "$15",
-    donationImage: discovery,
-    desc: "fund a research participant’s time",
-  },
-  {
-    name: "level 3",
-    amount: "$30",
-    donationImage: laptop,
-    desc: "pay the filing fee for a low-income individual",
-  },
-  {
-    name: "level 4",
-    amount: "any",
-    donationImage: note,
-    desc: "directly help support those with convictions start fresh",
-  },
-];
-
 const useStyles = makeStyles((theme) => ({
+  donationRoot: {
+    marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(8),
+  },
   donation: {
     padding: theme.spacing(2),
   },
@@ -94,17 +69,26 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(3),
   },
   faq: {
-    marginTop: theme.spacing(5),
-    marginBottom: theme.spacing(5),
+    marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(8),
     marginRight: theme.spacing(6),
     marginLeft: theme.spacing(6),
   },
   faqAccordionStyle: {
     borderRadius: 4,
+    marginBottom: theme.spacing(2),
   },
   faqSummary: {
     backgroundColor: theme.palette.primary.light,
     color: "white",
+    borderRadius: 4,
+  },
+  faqSumText: {
+    fontFamily: ["roboto", "sans-serif"],
+    fontSize: 20,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 16,
+    }
   },
   expand: {
     color: "white",
@@ -112,11 +96,38 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+const donationLevels = [
+  {
+    name: "level 1",
+    amount: "$10",
+    donationImage: progress,
+    desc: "pay for a monthly fee for one of our technological tools",
+  },
+  {
+    name: "level 2",
+    amount: "$15",
+    donationImage: discovery,
+    desc: "fund a research participant’s time",
+  },
+  {
+    name: "level 3",
+    amount: "$30",
+    donationImage: laptop,
+    desc: "pay the filing fee for a low-income individual",
+  },
+  {
+    name: "level 4",
+    amount: "Any",
+    donationImage: note,
+    desc: "directly help support those with convictions start fresh",
+  },
+];
+
 const DonatePage = () => {
   const classes = useStyles();
   return (
     <>
-      <Container maxWidth="lg">
+      <Container className={classes.donationRoot} maxWidth="lg">
         <Typography className={classes.title} variant="h2">
           Why donate?
         </Typography>
@@ -149,7 +160,10 @@ const DonatePage = () => {
             </Grid>
           ))}
         </Grid>
+        </Container>
+      
         <Box className={classes.donate}>
+          <Container maxWidth="lg">
           <Grid container>
             <Grid item xs={12} sm={6}>
               <Box display={"flex"} justifyContent={"center"}>
@@ -160,17 +174,19 @@ const DonatePage = () => {
               <Typography className={classes.donateHeading} variant="h2">
                 How to donate:
               </Typography>
-              <Typography className={classes.donateBody}>text</Typography>
+              <Typography className={classes.donateBody}>Venmo @Seamus-Brugh by</Typography>
               <Typography component="ol" className={classes.donateBody}>
-                <li>item</li>
-                <li>item</li>
+                <li>Searching the username</li>
+                <li>Scanning the QR code in-app</li>
               </Typography>
               <Typography className={classes.donateBody2}>
-                disclaimer
+                Note: do not mark as goods or service!
               </Typography>
             </Grid>
           </Grid>
+          </Container>
         </Box>
+        <Container maxWidth="lg">
         <Box className={classes.faq}>
           <Typography className={classes.title} variant="h2">
             FAQs
@@ -183,7 +199,9 @@ const DonatePage = () => {
               aria-controls="panel1a-content"
               expandIcon={<ArrowDropDownOutlined className={classes.expand} />}
             >
-              <Typography>How will my donation be used?</Typography>
+              <Typography className={classes.faqSumText}>
+                How will my donation be used?
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
@@ -207,7 +225,7 @@ const DonatePage = () => {
               aria-controls="panel2a-content"
               expandIcon={<ArrowDropDownOutlined className={classes.expand} />}
             >
-              <Typography>
+              <Typography className={classes.faqSumText}>
                 Is it safe and secure for me to donate online?
               </Typography>
             </AccordionSummary>
@@ -228,12 +246,12 @@ const DonatePage = () => {
               aria-controls="panel3a-content"
               expandIcon={<ArrowDropDownOutlined className={classes.expand} />}
             >
-              <Typography>
+              <Typography className={classes.faqSumText}>
                 I do not have a Venmo account, can I still donate online?
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>
+              <Typography >
                 You will need a Venmo account to donate online. This can easily
                 be set up using only a mobile phone or email address. You can
                 then choose to either add funds to your Venmo account or link an
@@ -251,18 +269,19 @@ const DonatePage = () => {
               aria-controls="panel4a-content"
               expandIcon={<ArrowDropDownOutlined className={classes.expand} />}
             >
-              <Typography>Can I make a donation by check?</Typography>
+              <Typography className={classes.faqSumText}>
+                Can I make a donation by check?
+              </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>
+              <Typography >
                 Yes, please make the check out to Seamus Brugh and mail it to:
                 <br />
+                <br />
                 Seamus Brugh <br />
-                802 5th Ave N,
+                802 5th Ave N, unit 213 
                 <br />
-                unit 213 Seattle,
-                <br />
-                WA 98109
+                Seattle, WA 98109
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -273,7 +292,7 @@ const DonatePage = () => {
               aria-controls="panel5a-content"
               expandIcon={<ArrowDropDownOutlined className={classes.expand} />}
             >
-              <Typography>
+              <Typography className={classes.faqSumText}>
                 Who should I contact if I have more questions?
               </Typography>
             </AccordionSummary>
