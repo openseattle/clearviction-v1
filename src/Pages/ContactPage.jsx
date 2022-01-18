@@ -25,7 +25,7 @@ const ContactPage = () => {
         <Box>
           <Typography variant="h5" className={classes.subtext}>
             Have questions? Send us an email at{" "}
-            <a href="mailto:convictionvacation@gmail.com">convictionvacation@gmail.com</a> and we’ll get
+            <a href="mailto:contact@cvp.com">contact@cvp.com</a> and we’ll get
             back to you within 24 hours.
           </Typography>
         </Box>

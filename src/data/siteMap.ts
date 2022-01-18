@@ -4,9 +4,9 @@ type Page = {
 };
 
 const pages: Page[] = [
-  { name: "Get Involved", url: "/get_involved" },
+  { name: "Home", url: "/" },
   { name: "Calculator", url: "/calculator" },
-  { name: "Resources", url: "/resources" },
+  { name: "Volunteer", url: "/volunteer" },
   { name: "About", url: "/about" },
   { name: "Contact", url: "/contact" },
 ];

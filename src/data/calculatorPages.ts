@@ -17,6 +17,7 @@ import {
 const CALC_PREFIX = "/calculator";
 const disclaimer =
   "The information provided by the Conviction Vacation Project is not intended to replace legal advice and does not in any way constitute an attorney-client relationship. If you need legal advice or assistance, we strongly recommend that you reach out to a licensed professional.";
+const thankYou = "Thank you for using the CVP eligibility calculator"; // TODO: add logic for this in CalculatorPage.jsx since it currently gets ignored
 
 const data: Pages = {
   "landing-0": {
@@ -78,7 +79,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_A_MISDEMEANOR,
   },
   "landing-ineligible-0": {
-    header: "Our calculator can't determine your eligibility",
+    header: "Our calculator can’t determine your eligibility",
     body: [
       {
         type: BodyType.PARAGRAPH,
@@ -108,19 +109,19 @@ const data: Pages = {
     header: "Does your conviction fall into any of these special cases?",
     buttons: [
       {
-        text: "Possession of marijuana misdemeanor",
+        text: "Possession of Marijuana Misdemeanor",
         href: CALC_PREFIX + "/mar-0",
       },
       {
-        text: "Prostitution misdemeanor",
+        text: "Prostitution Misdemeanor",
         href: CALC_PREFIX + "/pro-0",
       },
       {
-        text: "Violation of a fishing regulation",
+        text: "Violation of a Fishing Regulation",
         href: CALC_PREFIX + "/fsh-0",
       },
       {
-        text: "My conviction doesn't fall into any of the special cases (most convictions fall in this category)",
+        text: "My conviction doesn’t fall into any of the special cases (most convictions fall in this category)",
         href: CALC_PREFIX + "/main-0",
         color: "green",
       },
@@ -263,7 +264,7 @@ const data: Pages = {
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "(Possession of 40 grams or less of marijuana)",
+        text: "(Possession of forty grams or less of marijuana)",
       },
       {
         type: BodyType.PARAGRAPH,
@@ -275,7 +276,7 @@ const data: Pages = {
       },
       {
         type: BodyType.LINK,
-        text: "CrRLJ 09.0100",
+        text: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
         href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
       },
       {
@@ -284,18 +285,9 @@ const data: Pages = {
       },
       {
         type: BodyType.LINK,
-        text: "CrRLJ 09.0300",
+        text: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
         href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
       },
-      {
-        type: BodyType.PARAGRAPH,
-        text: "3. To better understand misdemeanor conviction vacation, please click the link below:"
-      },
-      {
-        type: BodyType.LINK,
-        text: "Click here.",
-        href: "https://www.washingtonlawhelp.org/resource/get-misdemeanor-convictions-off-your-criminal-record"
-      }
     ],
     disclaimer,
   },
@@ -304,12 +296,9 @@ const data: Pages = {
       "As of now, it seems that you may NOT be eligible to vacate your marijuana misdemeanor conviction because you have not completed the terms of your offense.",
     disclaimer,
   },
-  "mar-ineligible-2": {
-
-  },
   "mar-to-main": {
     header:
-      "Based on your response, it looks like you don't qualify for the marijuana misdemeanor exception.",
+      "Based on your answers, it looks like you don't qualify for the marijuana misdemeanor exception.",
     body: [
       {
         type: BodyType.PARAGRAPH,
@@ -318,7 +307,7 @@ const data: Pages = {
     ],
     buttons: [
       {
-        text: BUTTON_TEXT.CONTINUE_JOURNEY,
+        text: BUTTON_TEXT.CONTINUE,
         href: CALC_PREFIX + "/main-0",
       },
     ],
@@ -412,7 +401,7 @@ const data: Pages = {
   },
   "main-ineligible-1": {
     header:
-      "As of now, it seems that you may NOT be eligible to vacate your misdemeanor conviction because your offense was one of the following:",
+      "As of now, it seems that you may NOT be eligible to vacate your misdemeanor conviction because your offense was on of the following:",
     body: [
       {
         type: BodyType.LINK,
@@ -460,7 +449,7 @@ const data: Pages = {
   },
   "main-4": {
     header:
-      "Did you have an additional alcohol or drug violation within 10 years of the date of arrest for the prior offense?",
+      "Did you have an additional alcohol or drug violation within ten years of the date of arrest for the prior offense?",
     progressBar: {
       currentSectionName: SectionName.CONV,
       totalSections: 3,
@@ -541,12 +530,12 @@ const data: Pages = {
   },
   "main-ineligible-3": {
     header:
-      "Unfortunately, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because you have had an additional alcohol or drug violation within 10 years of your prior offense.",
+      "Unfortunately, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because you have had an additional alcohol or drug violation within ten years of your prior offense.",
     disclaimer,
   },
   "main-7": {
     header:
-      "Has it been 10 years or more since the date of the arrest for the prior offense?",
+      "Has it been ten years or more since the date of the arrest for the prior offense?",
     progressBar: {
       currentSectionName: SectionName.CONV,
       totalSections: 3,
@@ -577,13 +566,6 @@ const data: Pages = {
   "main-8": {
     header:
       "Was the offense considered domestic violence against family / household member or spouse / partner?",
-    body: [
-      {
-        type: BodyType.LINK,
-        text: "Domestic Violence Information",
-        href: "https://www.courts.wa.gov/dv/?fa=dv.guide"
-      }
-    ],
     progressBar: {
       currentSectionName: SectionName.CONV,
       totalSections: 3,
@@ -602,7 +584,7 @@ const data: Pages = {
   },
   "main-9": {
     header:
-      "Have you had 2 or more domestic violence convictions each stemming from different incidents?",
+      "Have you had two or more domestic violence convictions each stemming from different incidents?",
     progressBar: {
       currentSectionName: SectionName.CONV,
       totalSections: 3,
@@ -621,12 +603,12 @@ const data: Pages = {
   },
   "main-ineligible-5": {
     header:
-      "Unfortunately, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because you have had 2 or more domestic violence incidents.",
+      "Unfortunately, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because you have had two or more domestic violence incidents.",
     disclaimer,
   },
   "main-10": {
     header:
-      "Have 5 or more years passed since fulfillment of all sentencing requirements for this conviction?",
+      "Have five or more years passed since fulfillment of all sentencing requirements for this conviction?",
     progressBar: {
       currentSectionName: SectionName.CONV,
       totalSections: 3,
@@ -685,7 +667,7 @@ const data: Pages = {
   },
   "fsh-1": {
     header:
-      "Are you a member of a tribe? You can also apply on behalf of a deceased family member in the tribe who meets the criteria.",
+      "Are you a member of a tribe? You can also apply on behalf of a deceased family member in the tribe who meet the criteria.",
     progressBar: {
       currentSectionName: SectionName.CONV,
       totalSections: 3,
@@ -760,7 +742,7 @@ const data: Pages = {
   },
   "fsh-eligible": {
     header:
-      "It seems that you may be eligible to vacate your fishing misdemeanor conviction!",
+      "From your answers, it seems that you may be eligible to vacate your fishing misdemeanor conviction!",
     progressBar: {
       currentSectionName: SectionName.ELIGIBLE,
       totalSections: 3,
@@ -777,7 +759,7 @@ const data: Pages = {
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "Next steps:",
+        text: "Next steps",
       },
       {
         type: BodyType.PARAGRAPH,
@@ -785,7 +767,7 @@ const data: Pages = {
       },
       {
         type: BodyType.LINK,
-        text: "CrRLJ 09.0100",
+        text: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
         href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
       },
       {
@@ -794,18 +776,9 @@ const data: Pages = {
       },
       {
         type: BodyType.LINK,
-        text: "CrRLJ 09.0300",
+        text: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
         href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
       },
-      {
-        type: BodyType.PARAGRAPH,
-        text: "3. To better understand misdemeanor conviction vacation, please click the link below:"
-      },
-      {
-        type: BodyType.LINK,
-        text: "Click here.",
-        href: "https://www.washingtonlawhelp.org/resource/get-misdemeanor-convictions-off-your-criminal-record"
-      }
     ],
     disclaimer,
   },
@@ -874,7 +847,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "pro-2": {
-    header: "Was the conviction a result of being a victim of one of the following?:",
+    header: "Was the conviction a result of one of the following:",
     progressBar: {
       currentSectionName: SectionName.CONV,
       totalSections: 3,
@@ -883,9 +856,9 @@ const data: Pages = {
       {
         type: BodyType.LIST,
         items: [
-          "Human trafficking",
-          "First-degree promotion of prostitution",
-          "Promotion of commercial sexual abuse of a minor",
+          "Being a victim of trafficking",
+          "Being a victim of promoting prostitution in the first degree",
+          "Being a victim of promoting commercial sexual abuse of a minor",
         ],
       },
     ],
@@ -968,7 +941,7 @@ const data: Pages = {
     body: [
       {
         type: BodyType.PARAGRAPH,
-        text: "You will need to provide proof except where the conviction to be vacated is for the crime of prostitution, prostitution loitering, or staying out of area of prostitution",
+        text: "You will need to provide proof except where the conviction to be vacated is for the crime of prostitution, prostitution loitering, or stay out of area of prostitution",
       },
     ],
     buttons: [
@@ -1014,7 +987,7 @@ const data: Pages = {
   },
   "pro-eligible": {
     header:
-      "It seems that you may be eligible to vacate your prostitution misdemeanor conviction!",
+      "From your answers, it seems that you may be eligible to vacate your prostitution misdemeanor conviction!",
     progressBar: {
       currentSectionName: SectionName.ELIGIBLE,
       totalSections: 3,
@@ -1027,28 +1000,28 @@ const data: Pages = {
       {
         type: BodyType.LINK,
         text: "RCW 9.96.060 (3)",
-        href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.96.060",
+        href: "",
       },
       {
         type: BodyType.LINK,
         text: "RCW 9.96.070",
-        href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.96.060",
+        href: "",
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "Next steps:",
+        text: "Next steps",
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "1. Provide an affidavit, under penalty of perjury, stating the specific facts and circumstances proving, by a preponderance of evidence that the offense was committed as a result of being a victim of sex trafficking, prostitution, or commercial sexual abuse of a minor; sexual assault; or domestic violence as defined in RCW 9.94A.030. RCW 9.96.060 Sec. 5(2)(a).",
+        text: "1. Provide an affidavit, under penalty of perjury, stating the specific facts and circumstances proving, by a preponderance of evidence that the offense was committed as a result of being a victim of sex trafficking, prostitution, or commercial sexual abuse of a minor; sexual assault; or domestic violence as defined in RCW 9.94A.030.  RCW 9.96.060 Sec. 5(2)(a)",
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "2. Fill out a Motion and Declaration for Order Vacating Conviction (CrRLJ 09.0100).",
+        text: "2. Fill out a Motion and Declaration for Order Vacating Conviction (CrRLJ 09.0100). ",
       },
       {
         type: BodyType.LINK,
-        text: "CrRLJ 09.0100",
+        text: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
         href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
       },
       {
@@ -1057,18 +1030,9 @@ const data: Pages = {
       },
       {
         type: BodyType.LINK,
-        text: "CrRLJ 09.0300",
+        text: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
         href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
       },
-      {
-        type: BodyType.PARAGRAPH,
-        text: "4. To better understand misdemeanor conviction vacation, please click the link below:"
-      },
-      {
-        type: BodyType.LINK,
-        text: "Click here.",
-        href: "https://www.washingtonlawhelp.org/resource/get-misdemeanor-convictions-off-your-criminal-record"
-      }
     ],
     disclaimer,
   },
@@ -1102,22 +1066,6 @@ const data: Pages = {
       },
     ],
     disclaimer,
-  },
-  "pro-to-main": {
-    header:
-      "Based on your response, you are not eligible for this exception. However, your conviction may be eligible under other laws.",
-    body: [
-      {
-        type: BodyType.PARAGRAPH,
-        text: "Please click below to continue to the main misdemeanor branch.",
-      },
-    ],
-    buttons: [
-      {
-        text: BUTTON_TEXT.CONTINUE_JOURNEY,
-        href: CALC_PREFIX + "/main-0",
-      },
-    ],
   },
   "qac-0": {
     header:
@@ -1154,7 +1102,7 @@ const data: Pages = {
   },
   "qac-2": {
     header:
-      "Have you been convicted of a new crime in Washington or any other state in the 3 years prior to the application for vacation?",
+      "Have you been convicted of a new crime in Washington or any other state in the three years prior to the application for vacation?",
     progressBar: {
       currentSectionName: SectionName.CIRC,
       totalSections: 3,
@@ -1202,7 +1150,7 @@ const data: Pages = {
   },
   "qac-4": {
     header:
-      "Have you violated a prior restraining order in the 5 years preceding the application for vacation?",
+      "Have you violated a prior restraining order in the five years preceding the application for vacation?",
     progressBar: {
       currentSectionName: SectionName.CIRC,
       totalSections: 3,
@@ -1244,11 +1192,11 @@ const data: Pages = {
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "“Have you been convicted of a new crime in Washington or any other state in the 3 years prior to the application for vacation?”",
+        text: "“Have you been convicted of a new crime in Washington or any other state in the three years prior to the application for vacation?”",
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "You might become eligible in the future if you apply to vacate a conviction 3 years or more after your convictions for any new crimes, and if your application meets all other eligibility criteria.",
+        text: "You might become eligible in the future if you apply to vacate a conviction three years or more after your convictions for any new crimes, and if your application meets all other eligibility criteria.",
       },
     ],
     disclaimer,
@@ -1261,11 +1209,11 @@ const data: Pages = {
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "“Have you been convicted of a new crime in Washington or any other state in the 3 years prior to the application for vacation?”",
+        text: "“Have you been convicted of a new crime in Washington or any other state in the three years prior to the application for vacation?”",
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "You might become eligible in the future if you apply to vacate a conviction 3 years or more after your convictions for any new crimes, and if your application meets all other eligibility criteria.",
+        text: "You might become eligible in the future if you apply to vacate a conviction three years or more after your convictions for any new crimes, and if your application meets all other eligibility criteria.",
       },
     ],
     disclaimer,
@@ -1298,11 +1246,11 @@ const data: Pages = {
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "Have you violated a prior restraining order in the 5 years preceding the application for vacation?",
+        text: "“Have you violated a prior restraining order in the five years preceding the application for vacation?”",
       },
       {
         type: BodyType.PARAGRAPH,
-        text: `You might become eligible in the future if at least 5 years pass from your prior restraining order violation and when you apply 
+        text: `You might become eligible in the future if at least five pass from your prior restraining order violation and when you apply 
             for vacation, and if your application meets all other eligibility criteria.`,
       },
     ],
@@ -1341,18 +1289,11 @@ const data: Pages = {
   },
   "too-2": {
     header:
-      "Have 3 years passed since completion of the sentence including financial obligations?",
+      "Have three years passed since completion of the sentence including financial obligations?",
     progressBar: {
       currentSectionName: SectionName.TER,
       totalSections: 3,
     },
-    body: [
-      {
-        type: BodyType.LINK,
-        text: "Legal financial obligations",
-        href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.94A.760"
-      }
-    ],
     buttons: [
       {
         text: BUTTON_TEXT.YES,
@@ -1366,7 +1307,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "too-eligible-0": {
-    header: "It seems that you may be eligible to vacate your misdemeanor conviction!",
+    header: "You are eligible!",
     progressBar: {
       currentSectionName: SectionName.ELIGIBLE,
       totalSections: 3,
@@ -1374,46 +1315,23 @@ const data: Pages = {
     body: [
       {
         type: BodyType.PARAGRAPH,
-        text: "Next steps:"
+        text: "Your next step is to fill out a Motion and Declaration for Order Vacating Conviction (Court Form No. CrRLJ 09.0100)",
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "1. Fill out a Motion and Declaration for Order Vacating Conviction (CrRLJ 09.0100).",
-      },
-      {
-        type: BodyType.LINK,
-        text: "CrRLJ 09.0100",
-        href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
-      },
-      {
-        type: BodyType.PARAGRAPH,
-        text: "2. See instructions for vacating a conviction in form CrRLJ 09.0300.",
-      },
-      {
-        type: BodyType.LINK,
-        text: "CrRLJ 09.0300",
-        href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
-      },
-      {
-        type: BodyType.PARAGRAPH,
-        text: "3. To better understand misdemeanor conviction vacation, please click below:",
-      },
-      {
-        type: BodyType.LINK,
-        text: "Click here.",
-        href: "https://www.washingtonlawhelp.org/resource/get-misdemeanor-convictions-off-your-criminal-record",
+        text: "Next steps, including scheduling your hearing, can be found on the court's instruction sheet, CrRLJ 09.0300, found at the same website referenced",
       },
     ],
-    disclaimer,
+    thankYou,
   },
   "too-ineligible-0": {
     header: `As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because you have not completed the terms of the conviction for this offense.  
-                You might be eligible when you've completed the terms of your conviction and 3 hears have passed since the completion of your sentence, 
+                You might be eligible when you’ve completed the terms of your conviction and three hears have passed since the completion of your sentence, 
                 including any financial obligations.`,
     disclaimer,
   },
   "too-ineligible-1": {
-    header: `As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because it has been less than 3 years since your 
+    header: `As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because it has been less than three years since your 
                 conviction was completed including your financial obligations.
                 You might be eligible when 3 years have passed since completing the terms of your conviction including any financial obligations.`,
     disclaimer,
