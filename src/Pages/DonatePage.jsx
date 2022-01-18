@@ -10,7 +10,7 @@ import {
   makeStyles,
   Typography,
 } from "@material-ui/core";
-import { ExpandMoreOutlined } from "@material-ui/icons";
+import { ArrowDropDownOutlined } from "@material-ui/icons";
 import laptop from "../Assets/laptop.svg";
 import progress from "../Assets/progress.svg";
 import note from "../Assets/note_taking.svg";
@@ -93,8 +93,22 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 16,
     margin: theme.spacing(3),
   },
+  faq: {
+    marginTop: theme.spacing(5),
+    marginBottom: theme.spacing(5),
+    marginRight: theme.spacing(6),
+    marginLeft: theme.spacing(6),
+  },
+  faqAccordionStyle: {
+    borderRadius: 4,
+  },
   faqSummary: {
     backgroundColor: theme.palette.primary.light,
+    color: "white",
+  },
+  expand: {
+    color: "white",
+    fontSize: 24,
   },
 }));
 
@@ -157,47 +171,41 @@ const DonatePage = () => {
             </Grid>
           </Grid>
         </Box>
-        <Box>
+        <Box className={classes.faq}>
           <Typography className={classes.title} variant="h2">
             FAQs
           </Typography>
 
-          <Accordion>
+          <Accordion className={classes.faqAccordionStyle}>
             <AccordionSummary
               className={classes.faqSummary}
               id="panel1a-header"
               aria-controls="panel1a-content"
-              expandIcon={<ExpandMoreOutlined />}
+              expandIcon={<ArrowDropDownOutlined className={classes.expand} />}
             >
               <Typography>How will my donation be used?</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <List>
-                <ListItem>
-                  <Typography>
-                    As we're all volunteers, any of our donations will go
-                    directly to helped those convicted and give them a fresh
-                    start.
-                  </Typography>
-                </ListItem>
-                <ListItem>
-                  <Typography>
-                    Your support will help pay for the technological tools
-                    needed by our team to let this project grow. To develop
-                    needed resources for those with convictions, supermarket
-                    vouchers will be provided for participants in our research.
-                    Your aid will also help support low-income individuals
-                    overcome the financial barriers to vacate their record.
-                  </Typography>
-                </ListItem>
-              </List>
+              <Typography>
+                As we're all volunteers, any of our donations will go directly
+                to helped those convicted and give them a fresh start.
+                <br />
+                <br />
+                Your support will help pay for the technological tools needed by
+                our team to let this project grow. To develop needed resources
+                for those with convictions, supermarket vouchers will be
+                provided for participants in our research. Your aid will also
+                help support low-income individuals overcome the financial
+                barriers to vacate their record.
+              </Typography>
             </AccordionDetails>
           </Accordion>
-          <Accordion>
+          <Accordion className={classes.faqAccordionStyle}>
             <AccordionSummary
+              className={classes.faqSummary}
               id="panel2a-header"
               aria-controls="panel2a-content"
-              expandIcon={<ExpandMoreOutlined />}
+              expandIcon={<ArrowDropDownOutlined className={classes.expand} />}
             >
               <Typography>
                 Is it safe and secure for me to donate online?
@@ -213,11 +221,12 @@ const DonatePage = () => {
               </Typography>
             </AccordionDetails>
           </Accordion>
-          <Accordion>
+          <Accordion className={classes.faqAccordionStyle}>
             <AccordionSummary
+              className={classes.faqSummary}
               id="panel3a-header"
               aria-controls="panel3a-content"
-              expandIcon={<ExpandMoreOutlined />}
+              expandIcon={<ArrowDropDownOutlined className={classes.expand} />}
             >
               <Typography>
                 I do not have a Venmo account, can I still donate online?
@@ -229,17 +238,18 @@ const DonatePage = () => {
                 be set up using only a mobile phone or email address. You can
                 then choose to either add funds to your Venmo account or link an
                 external payment method like a bank account or credit card.
-              </Typography>
-              <Typography>
+                <br />
+                <br />
                 You can sign up for a Venmo account here: https://get.venmo.com
               </Typography>
             </AccordionDetails>
           </Accordion>
-          <Accordion>
+          <Accordion className={classes.faqAccordionStyle}>
             <AccordionSummary
+              className={classes.faqSummary}
               id="panel4a-header"
               aria-controls="panel4a-content"
-              expandIcon={<ExpandMoreOutlined />}
+              expandIcon={<ArrowDropDownOutlined className={classes.expand} />}
             >
               <Typography>Can I make a donation by check?</Typography>
             </AccordionSummary>
@@ -256,11 +266,12 @@ const DonatePage = () => {
               </Typography>
             </AccordionDetails>
           </Accordion>
-          <Accordion>
+          <Accordion className={classes.faqAccordionStyle}>
             <AccordionSummary
+              className={classes.faqSummary}
               id="panel5a-header"
               aria-controls="panel5a-content"
-              expandIcon={<ExpandMoreOutlined />}
+              expandIcon={<ArrowDropDownOutlined className={classes.expand} />}
             >
               <Typography>
                 Who should I contact if I have more questions?
