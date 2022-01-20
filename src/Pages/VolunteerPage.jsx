@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
   icon: {
     fontSize: "4rem",
-    color: "yellow",
+    color: theme.palette.highlight.main,
   },
   contentText: {
     margin: theme.spacing(2),
