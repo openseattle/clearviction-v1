@@ -19,8 +19,8 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SecondaryButton({ text, type }) {
+export default function SecondaryButton({ text, type, href }) {
   const classes = useStyles();
 
-  return <Button type={type} className={classes.button}>{text}</Button>;
+  return <Button href={href} type={type} className={classes.button}>{text}</Button>;
 }

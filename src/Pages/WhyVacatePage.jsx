@@ -1,4 +1,4 @@
-import { Container, ButtonGroup, Button } from "@material-ui/core";
+import { Container, ButtonGroup, Button, Box } from "@material-ui/core";
 import { Route, Link as RouterLink } from "react-router-dom";
 import HeroPanel from "../Components/HeroPanel";
 import WhyVacateAssistance from "./WhyVacateAssistance";
@@ -16,12 +16,25 @@ const WhyVacatePage = () => {
             "A conviction vacation seals the offense from your record and will give you more chance to access:"
           }
         />
-        <ButtonGroup>
-          <Button to="/why-vacate/housing" component={RouterLink}>Housing</Button>
-          <Button to="/why-vacate/employment" component={RouterLink}>Employment</Button>
-          <Button to="/why-vacate/education" component={RouterLink}>Education</Button>
-          <Button to="/why-vacate/government-assistance" component={RouterLink}>Government assistance</Button>
-        </ButtonGroup>
+        <Box display="flex" justifyContent={"center"}>
+          <ButtonGroup>
+            <Button to="/why-vacate/housing" component={RouterLink}>
+              Housing
+            </Button>
+            <Button to="/why-vacate/employment" component={RouterLink}>
+              Employment
+            </Button>
+            <Button to="/why-vacate/education" component={RouterLink}>
+              Education
+            </Button>
+            <Button
+              to="/why-vacate/government-assistance"
+              component={RouterLink}
+            >
+              Government assistance
+            </Button>
+          </ButtonGroup>
+        </Box>
       </Container>
       <Route exact path="/why-vacate/housing">
         <WhyVacateHousing />
