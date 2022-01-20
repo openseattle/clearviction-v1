@@ -195,7 +195,7 @@ const VolunteerPage = () => {
                 >
                   If you want further information and want to have a chat, don’t
                   hesitate to contact us by email at{" "}
-                  <a href="/contact">contact@cvp.com</a> and we’ll get back to
+                  <a href="/contact">convictionvacation@gmail.com</a> and we’ll get back to
                   you within 24 hours.
                 </Typography>
               </Box>
