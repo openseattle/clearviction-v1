@@ -1,6 +1,4 @@
 import {
-  Button,
-  ButtonGroup,
   Container,
   Box,
   Card,
@@ -21,10 +19,14 @@ const subPages = [
     desc: "Join our dedicated volunteer team and help us bring theresources to those who need them.",
   },
   {
-      name: "Donate"
+      name: "Donate",
+      link: "/get_involved/donate",
+      desc: "Your gift makes it possible to continue helping our community. "
   },
   {
-      name: "Partner with us"
+      name: "Partner with us",
+      link: "/get_involved/partner-with-us",
+      desc: "Create change by sharing our story and reaching out to your peers."
   }
 
 ];
@@ -43,8 +45,8 @@ const GetInvolvedPage = () => {
           <Card key={pageCard.name} component={RouterLink} to={pageCard.link}>
             <CardActionArea>
               <CardContent>
-                <Typography variant="h3">{pageCard.name}</Typography>
-                <Typography variant="body1">{pageCard.desc}</Typography>
+                <Typography variant="h3" align="center">{pageCard.name}</Typography>
+                <Typography variant="body1" align="center">{pageCard.desc}</Typography>
               </CardContent>
             </CardActionArea>
           </Card>
