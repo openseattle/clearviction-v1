@@ -1,13 +1,9 @@
 import {
   Container,
-  Box,
-  Card,
-  CardActionArea,
-  CardContent,
-  Typography,
 } from "@material-ui/core";
-import { Route, Link as RouterLink } from "react-router-dom";
+import { Route } from "react-router-dom";
 import HeroPanel from "../Components/HeroPanel";
+import NavCardGroup from "../Components/NavCardGroup";
 import DonatePage from "./DonatePage";
 import PartnerPage from "./PartnerPage";
 import VolunteerPage from "./VolunteerPage";
@@ -40,18 +36,7 @@ const GetInvolvedPage = () => {
           "There are many ways to participate with the CVP team, and we appreciate all of them!"
         }
       />
-      <Box display={"flex"} justifyContent={"center"}>
-        {subPages.map((pageCard) => (
-          <Card key={pageCard.name} component={RouterLink} to={pageCard.link}>
-            <CardActionArea>
-              <CardContent>
-                <Typography variant="h3" align="center">{pageCard.name}</Typography>
-                <Typography variant="body1" align="center">{pageCard.desc}</Typography>
-              </CardContent>
-            </CardActionArea>
-          </Card>
-        ))}
-      </Box>
+     <NavCardGroup subPages={subPages} />
 
       <Route exact path="/get_involved/volunteer">
         <VolunteerPage />
