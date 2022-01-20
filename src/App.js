@@ -8,9 +8,8 @@ import CalculatorPage from "./Pages/CalculatorPage";
 import ErrorPage from "./Pages/ErrorPage";
 import AboutPage from "./Pages/AboutPage";
 import ContactPage from "./Pages/ContactPage";
-import VolunteerPage from "./Pages/VolunteerPage";
 import Footer from "./Components/Footer";
-import DonatePage from "./Pages/DonatePage";
+import GetInvolvedPage from "./Pages/GetInvolvedPage";
 // import Navigation from "./Components/Navigation";
 
 function App() {
@@ -46,9 +45,8 @@ function App() {
             <Route exact path="/contact">
               <ContactPage />
             </Route>
-            <Route exact path="/get_involved">
-              <VolunteerPage />
-              <DonatePage />
+            <Route path="/get_involved">
+              <GetInvolvedPage />
             </Route>
           </Switch>
           <Footer />

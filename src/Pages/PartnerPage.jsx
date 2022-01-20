@@ -22,6 +22,7 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.primary.light,
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
+    marginBottom: theme.spacing(8),
   },
   sharePR: {
     maxHeight: 400,
