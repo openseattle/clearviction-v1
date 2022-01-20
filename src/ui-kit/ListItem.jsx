@@ -12,7 +12,7 @@ export const CVPListItem = (props) => {
     return (
         <ListItem>
             <ListItemIcon>
-                <FiberManualRecordIcon fontSize="small"/>
+                <FiberManualRecordIcon  style={{ color: "black", fontSize: 8 }}/>
             </ListItemIcon>
             <Grid container alignItems="flex-start">
                 <Typography variant="body1">

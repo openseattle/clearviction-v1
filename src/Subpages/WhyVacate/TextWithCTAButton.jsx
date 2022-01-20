@@ -1,9 +1,9 @@
 import {
-    Box,
-    Typography,
-    Container,
-    makeStyles
-  } from "@material-ui/core";
+  Box,
+  Typography,
+  Container,
+  makeStyles
+} from "@material-ui/core";
 import SecondaryButton from "../../ui-kit/SecondaryButton";
 
 const useStyles = makeStyles((theme) => ({
@@ -13,13 +13,14 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 22,
   },
   backgroundSecondary: {
-    height: 300,
+    height: 250,
     backgroundColor: theme.palette.primary.main,
     color: "white",
     align: "center",
-    paddingTop: theme.spacing(10),
+    paddingTop: theme.spacing(5),
     padding: theme.spacing(5),
     [theme.breakpoints.down("sm")]: {
+      paddingTop: theme.spacing(5),
       padding: theme.spacing(2),
     },
     [theme.breakpoints.down("xs")]: {
@@ -27,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   buttonBoxStyles: {
-    margin: theme.spacing(5),
+    marginTop: theme.spacing(5),
     justifyContent: "center",
     display: "flex"
   }
