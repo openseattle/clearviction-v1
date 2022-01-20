@@ -12,7 +12,7 @@ const subPages = [
   {
     name: "Volunteer",
     link: "/get_involved/volunteer",
-    desc: "Join our dedicated volunteer team and help us bring theresources to those who need them.",
+    desc: "Join our dedicated volunteer team and help us bring the resources to those who need them.",
   },
   {
       name: "Donate",

@@ -87,6 +87,12 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonPad: {
     margin: theme.spacing(10),
+  },
+  emailLink: {
+    color: theme.palette.highlight.main,
+    "&:hover": {
+      color: theme.palette.highlight.main,
+    }
   }
 }));
 
@@ -195,7 +201,7 @@ const VolunteerPage = () => {
                 >
                   If you want further information and want to have a chat, don’t
                   hesitate to contact us by email at{" "}
-                  <a href="/contact">convictionvacation@gmail.com</a> and we’ll get back to
+                  <a className={classes.emailLink} href="/contact">convictionvacation@gmail.com</a> and we’ll get back to
                   you within 24 hours.
                 </Typography>
               </Box>
