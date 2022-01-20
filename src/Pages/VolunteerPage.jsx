@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(2),
     },
     [theme.breakpoints.down("xs")]: {
-      height: 300,
+      height: 350,
     },
   },
   backgroundLightSecondary: {
@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(1),
     },
     [theme.breakpoints.down("xs")]: {
-      height: 300,
+      height: 350,
     },
   },
   teamMeeting: {
