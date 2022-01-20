@@ -18,9 +18,9 @@ const WhyVacatePage = () => {
         />
         <ButtonGroup>
           <Button to="/why-vacate/housing" component={RouterLink}>Housing</Button>
-          <Button href="/why-vacate/employment">Employment</Button>
-          <Button href="/why-vacate/education">Education</Button>
-          <Button href="/why-vacate/government-assistance">Government assistance</Button>
+          <Button to="/why-vacate/employment" component={RouterLink}>Employment</Button>
+          <Button to="/why-vacate/education" component={RouterLink}>Education</Button>
+          <Button to="/why-vacate/government-assistance" component={RouterLink}>Government assistance</Button>
         </ButtonGroup>
       </Container>
       <Route exact path="/why-vacate/housing">
