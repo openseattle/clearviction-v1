@@ -7,15 +7,17 @@ import {
 import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
 
 export const CVPListItem = (props) => {
-    const { text } = props;
+    const { text, useBulletPoint, textAlignment } = props;
 
     return (
         <ListItem>
-            <ListItemIcon>
-                <FiberManualRecordIcon  style={{ color: "black", fontSize: 8 }}/>
-            </ListItemIcon>
+            { useBulletPoint &&
+                <ListItemIcon>
+                    <FiberManualRecordIcon  style={{ color: "black", fontSize: 8 }}/>
+                </ListItemIcon>
+            }
             <Grid container alignItems="flex-start">
-                <Typography variant="body1">
+                <Typography align={textAlignment} variant="body1">
                     {text}
                 </Typography>
             </Grid>
