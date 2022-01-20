@@ -7,7 +7,7 @@ const useStyles = makeStyles({
   button: {
     backgroundColor: "var(--light-blue)",
     color: "#ffffff",
-    width: "207px",
+    width: "flex",
     padding: "10px",
     margin: "10px",
     textTransform: "none",
