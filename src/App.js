@@ -8,8 +8,8 @@ import CalculatorPage from "./Pages/CalculatorPage";
 import ErrorPage from "./Pages/ErrorPage";
 import AboutPage from "./Pages/AboutPage";
 import ContactPage from "./Pages/ContactPage";
-import VolunteerPage from "./Pages/VolunteerPage";
 import Footer from "./Components/Footer";
+import GetInvolvedPage from "./Pages/GetInvolvedPage";
 import WhyVacatePage from "./Pages/WhyVacatePage";
 // import Navigation from "./Components/Navigation";
 
@@ -46,8 +46,8 @@ function App() {
             <Route exact path="/contact">
               <ContactPage />
             </Route>
-            <Route exact path="/volunteer">
-              <VolunteerPage />
+            <Route path="/get_involved">
+              <GetInvolvedPage />
             </Route>
             <Route path="/why-vacate">
               <WhyVacatePage />
