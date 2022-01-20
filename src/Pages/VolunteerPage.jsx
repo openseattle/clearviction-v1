@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
   icon: {
     fontSize: "4rem",
-    color: "yellow",
+    color: theme.palette.highlight.main,
   },
   contentText: {
     margin: theme.spacing(2),
@@ -51,7 +51,7 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(2),
     },
     [theme.breakpoints.down("xs")]: {
-      height: 300,
+      height: 350,
     },
   },
   backgroundLightSecondary: {
@@ -62,7 +62,7 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(1),
     },
     [theme.breakpoints.down("xs")]: {
-      height: 300,
+      height: 350,
     },
   },
   teamMeeting: {
@@ -87,6 +87,12 @@ const useStyles = makeStyles((theme) => ({
   },
   buttonPad: {
     margin: theme.spacing(10),
+  },
+  emailLink: {
+    color: theme.palette.highlight.main,
+    "&:hover": {
+      color: theme.palette.highlight.main,
+    }
   }
 }));
 
@@ -195,7 +201,7 @@ const VolunteerPage = () => {
                 >
                   If you want further information and want to have a chat, don’t
                   hesitate to contact us by email at{" "}
-                  <a href="/contact">contact@cvp.com</a> and we’ll get back to
+                  <a className={classes.emailLink} href="/contact">convictionvacation@gmail.com</a> and we’ll get back to
                   you within 24 hours.
                 </Typography>
               </Box>
@@ -274,7 +280,7 @@ const VolunteerPage = () => {
             display="flex"
             className={classes.buttonPad}
           >
-            <SecondaryButton text={"Join Our Team"} />
+            <SecondaryButton text={"Join Our Team"} linkTo={"https://www.democracylab.org/projects/226"} />
           </Box>
         </Box>
       </Container>
