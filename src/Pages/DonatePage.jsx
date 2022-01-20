@@ -298,7 +298,7 @@ const DonatePage = () => {
             </AccordionSummary>
             <AccordionDetails>
               <Typography>
-                You can send us an email at contact@cvp.com. We will get back to
+                You can send us an email at convictionvacation@gmail.com. We will get back to
                 you within 24 hours.
               </Typography>
             </AccordionDetails>
