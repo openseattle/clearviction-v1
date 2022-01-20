@@ -13,6 +13,8 @@ import lawyer from "../Assets/lawyer.svg";
 import teamwork from "../Assets/teamwork.svg";
 import phone from "../Assets/phone.svg";
 import "../CSS/HomePage.css";
+import { Link } from "react-router-dom";
+import { Button } from "@material-ui/core";
 
 const HomePage = () => {
   useEffect(() => trackPageview("Home"), []);
@@ -157,7 +159,7 @@ const HomePage = () => {
         </div>
         <div className="row">
           <div className="col-lg">
-            {/* <SecondaryButton text={"Learn More"} /> */}
+            <SecondaryButton text={"Learn More"} href={"/why-vacate"}/>
           </div>
         </div>
       </div>

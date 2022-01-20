@@ -10,6 +10,7 @@ import AboutPage from "./Pages/AboutPage";
 import ContactPage from "./Pages/ContactPage";
 import Footer from "./Components/Footer";
 import GetInvolvedPage from "./Pages/GetInvolvedPage";
+import WhyVacatePage from "./Pages/WhyVacatePage";
 // import Navigation from "./Components/Navigation";
 
 function App() {
@@ -47,6 +48,9 @@ function App() {
             </Route>
             <Route path="/get_involved">
               <GetInvolvedPage />
+            </Route>
+            <Route path="/why-vacate">
+              <WhyVacatePage />
             </Route>
           </Switch>
           <Footer />
