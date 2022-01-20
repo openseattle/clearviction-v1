@@ -1,0 +1,42 @@
+import { Container, ButtonGroup, Button } from "@material-ui/core";
+import { Route, Link as RouterLink } from "react-router-dom";
+import HeroPanel from "../Components/HeroPanel";
+import WhyVacateAssistance from "./WhyVacateAssistance";
+import WhyVacateEducation from "./WhyVacateEducation";
+import WhyVacateEmployment from "./WhyVacateEmployment";
+import WhyVacateHousing from "./WhyVacateHousing";
+
+const WhyVacatePage = () => {
+  return (
+    <>
+      <Container>
+        <HeroPanel
+          title={"Why vacate"}
+          subtitle={
+            "A conviction vacation seals the offense from your record and will give you more chance to access:"
+          }
+        />
+        <ButtonGroup>
+          <Button to="/why-vacate/housing" component={RouterLink}>Housing</Button>
+          <Button href="/why-vacate/employment">Employment</Button>
+          <Button href="/why-vacate/education">Education</Button>
+          <Button href="/why-vacate/government-assistance">Government assistance</Button>
+        </ButtonGroup>
+      </Container>
+      <Route exact path="/why-vacate/housing">
+        <WhyVacateHousing />
+      </Route>
+      <Route exact path="/why-vacate/employment">
+        <WhyVacateEmployment />
+      </Route>
+      <Route exact path="/why-vacate/education">
+        <WhyVacateEducation />
+      </Route>
+      <Route exact path="/why-vacate/government-assistance">
+        <WhyVacateAssistance />
+      </Route>
+    </>
+  );
+};
+
+export default WhyVacatePage;
