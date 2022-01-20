@@ -274,7 +274,7 @@ const VolunteerPage = () => {
             display="flex"
             className={classes.buttonPad}
           >
-            <SecondaryButton text={"Join Our Team"} />
+            <SecondaryButton text={"Join Our Team"} linkTo={"https://www.democracylab.org/projects/226"} />
           </Box>
         </Box>
       </Container>

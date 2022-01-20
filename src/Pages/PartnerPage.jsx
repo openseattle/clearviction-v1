@@ -62,7 +62,7 @@ const PartnerPage = () => {
           guidance or support, we'd love to hear more.
         </Typography>
         <Box display="flex" justifyContent={"center"}>
-          <SecondaryButton text={"Contact Us"} />
+          <SecondaryButton text={"Contact Us"} linkTo={"/contact"} />
         </Box>
       </Container>
       <Container className={classes.share} maxWidth="lg">
