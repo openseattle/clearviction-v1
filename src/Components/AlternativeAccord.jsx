@@ -19,8 +19,8 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(6),
     marginLeft: theme.spacing(6),
     [theme.breakpoints.down("xs")]:{
-      marginRight: 0,
-      marginLeft: 0,
+      marginRight: theme.spacing(2),
+      marginLeft: theme.spacing(2),
     }
   },
   faqAccordionStyle: {
@@ -48,13 +48,13 @@ const AlternativeAccord = (props) => {
   const { faqs, sectionHeading } = props;
   const classes = useStyles();
   return (
-    <Box className={classes.faq}>
+    <Box className={classes.faq} >
       <Typography className={classes.title} variant="h2">
         {sectionHeading}
       </Typography>
 
       {faqs.map((faq) => (
-        <Accordion className={classes.faqAccordionStyle}>
+        <Accordion key={faq.summary} className={classes.faqAccordionStyle}>
           <AccordionSummary
             className={classes.faqSummary}
             expandIcon={<ArrowDropDownOutlined className={classes.expand} />}

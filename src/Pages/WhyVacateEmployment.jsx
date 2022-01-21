@@ -10,17 +10,23 @@ import { WhyVacateEmploymentStyles } from "../Styles/WhyVacateEmploymentStyle";
 const unemployment = {
   graphic: timeGraphic,
   title: "Long unemployment periods",
-  text: "Getting back into society may not happen as quickly as most would prefer. Jobs in the manufacturing industry or part-time jobs can help.",
+  text: [
+    "Getting back into society may not happen as quickly as most would prefer. Jobs in the manufacturing industry or part-time jobs can help.",
+  ],
 };
 const rejected = {
   graphic: emails,
   title: "Rejected Applications",
-  text: "These are a common circumstance for people who have previously been convicted of significant criminal offenses.",
+  text: [
+    "These are a common circumstance for people who have previously been convicted of significant criminal offenses.",
+  ],
 };
 const education = {
   graphic: question,
   title: "Lack of education or experience",
-  text: "Getting a job in a new field can be complicated, especially with convictions in your record.",
+  text: [
+    "Getting a job in a new field can be complicated, especially with convictions in your record.",
+  ],
 };
 
 const friendlyIndustries = [
@@ -78,19 +84,21 @@ const friendlyIndustries = [
 const WhyVacateEmployment = () => {
   const classes = WhyVacateEmploymentStyles();
   return (
-    <Container maxWidth="lg">
-      <Grid container alignItems="flex-start">
-        <Typography className={classes.title} variant="h2">
-          Employment barriers
-        </Typography>
-        <Typography className={classes.contentText} variant="body1">
-          Simply having a conviction does not prevent you from having a job,
-          however, it can be more difficult depending on the type of job and the
-          employer. It is important to not lose hope while facing challenges
-          such as:
-        </Typography>
+    <>
+      <Container maxWidth="lg">
+        <Grid container alignItems="flex-start">
+          <Typography className={classes.title} variant="h2">
+            Employment barriers
+          </Typography>
+          <Typography className={classes.contentText} variant="body1">
+            Simply having a conviction does not prevent you from having a job,
+            however, it can be more difficult depending on the type of job and
+            the employer. It is important to not lose hope while facing
+            challenges such as:
+          </Typography>
         </Grid>
-      <FactGroup fact1={unemployment} fact2={rejected} fact3={education} />
+        <FactGroup fact1={unemployment} fact2={rejected} fact3={education} />
+      </Container>
       <TextWithCTAButton
         text={
           "The best way to avoid these obstacles is to expunge your record by vacating your conviction. Learn if you’re eligible with our Misdemeanor Eligibility Calculator."
@@ -98,55 +106,58 @@ const WhyVacateEmployment = () => {
         buttonText={"Check Eligibility"}
       />
       <Box className={classes.lightBlueSectionBackground}>
-        <Grid container>
-          <Grid item xs={12} sm={6}>
-            <Box className={classes.spacer}>
-              <Typography className={classes.emphasizedText} variant="h1">
-                2/3
-              </Typography>
-              <Typography className={classes.regularText}>
-                of ex-prisoners remain out of work a year after prison release,
-                and 60 percent are rearrested within three years
-              </Typography>
-              <Typography className={classes.regularText}>
-                Those that can find steady work are less likely to return to
-                prison
-              </Typography>
+        <Container maxWidth="lg">
+          <Grid container>
+            <Grid item xs={12} sm={6}>
+              <Box className={classes.spacer}>
+                <Typography className={classes.emphasizedText} variant="h1">
+                  2/3
+                </Typography>
+                <Typography className={classes.regularText}>
+                  of ex-prisoners remain out of work a year after prison
+                  release, and 60 percent are rearrested within three years
+                </Typography>
+                <Typography className={classes.regularText}>
+                  Those that can find steady work are less likely to return to
+                  prison
+                </Typography>
 
-              <Typography className={classes.citeText}>
-                {" "}
-                (Bureau of Justice Statistics 2002; Petersilia 2003; Travis
-                2005).
-              </Typography>
-            </Box>
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <Box className={classes.spacer}>
-              <Typography className={classes.emphasizedText} variant="h1">
-                -50%
-              </Typography>
-              <Typography className={classes.regularText}>
-                A criminal record reduces the likelihood of a callback or job
-                offer by nearly 50 percent (28 vs. 15 percent).
-              </Typography>
-              <Typography className={classes.regularText}>
-                Furthermore, the negative effect of a criminal conviction is
-                substantially larger for Black people than for White people.
-              </Typography>
+                <Typography className={classes.citeText}>
+                  {" "}
+                  (Bureau of Justice Statistics 2002; Petersilia 2003; Travis
+                  2005).
+                </Typography>
+              </Box>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <Box className={classes.spacer}>
+                <Typography className={classes.emphasizedText} variant="h1">
+                  -50%
+                </Typography>
+                <Typography className={classes.regularText}>
+                  A criminal record reduces the likelihood of a callback or job
+                  offer by nearly 50 percent (28 vs. 15 percent).
+                </Typography>
+                <Typography className={classes.regularText}>
+                  Furthermore, the negative effect of a criminal conviction is
+                  substantially larger for Black people than for White people.
+                </Typography>
 
-              <Typography className={classes.citeText}>
-                (Lopoo and Western 2005; Sampson and Laub 1993; Uggen 2000).
-              </Typography>
-            </Box>
+                <Typography className={classes.citeText}>
+                  (Lopoo and Western 2005; Sampson and Laub 1993; Uggen 2000).
+                </Typography>
+              </Box>
+            </Grid>
           </Grid>
-        </Grid>
+        </Container>
       </Box>
-
-      <AlternativeAccord
-        sectionHeading={"Conviction-friendly industries"}
-        faqs={friendlyIndustries}
-      />
-    </Container>
+      <Container maxWidth="lg">
+        <AlternativeAccord
+          sectionHeading={"Conviction-friendly industries"}
+          faqs={friendlyIndustries}
+        />
+      </Container>
+    </>
   );
 };
 
