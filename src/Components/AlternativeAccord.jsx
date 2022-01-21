@@ -18,6 +18,10 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(8),
     marginRight: theme.spacing(6),
     marginLeft: theme.spacing(6),
+    [theme.breakpoints.down("xs")]:{
+      marginRight: 0,
+      marginLeft: 0,
+    }
   },
   faqAccordionStyle: {
     borderRadius: 4,
