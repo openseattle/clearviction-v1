@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export const TextWithCTAButton = (props) => {
-  const { text, buttonText } = props;
+  const { text, buttonText, buttonLinkTo } = props;
   const classes = useStyles();
   return (
     <>
@@ -45,7 +45,7 @@ export const TextWithCTAButton = (props) => {
               {text}
           </Typography>
           <Box className={classes.buttonBoxStyles}>
-            <SecondaryButton text={buttonText} />
+            <SecondaryButton linkTo={buttonLinkTo} text={buttonText} />
           </Box>
         </Container>
       </Box>

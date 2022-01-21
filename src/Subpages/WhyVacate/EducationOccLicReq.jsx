@@ -37,26 +37,24 @@ export const EducationOccLicReq = () => {
                             The following factors will be considered in determining whether a criminal conviction should be grounds to deny a license:
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} sm={6} md={6}>
-                        <List>
-                            <CVPListItem useBulletPoint={false} textAlignment={"center"} text={"Find a flexible landlord. Using craigslist was often mentioned as a resource"}/>
-                            <CVPListItem useBulletPoint={false} textAlignment={"center"} text={"Stay with friends/ family at their will"}/>
-                            <CVPListItem useBulletPoint={false} textAlignment={"center"} text={"Look for townhouses, duplexes, single-family homes and trailers. Stay away from large apartment complexes"}/>
-                            <CVPListItem useBulletPoint={false} textAlignment={"center"}  text={"Have someone rent for you and pay them back under the table"}/>
-                            <CVPListItem useBulletPoint={false} textAlignment={"center"}  text={"Subletting from someone looking to get out of a lease"}/>
-                            <CVPListItem useBulletPoint={false} textAlignment={"center"}  text={"Subletting from someone looking to get out of a lease"}/>
-                        </List>
-                    </Grid>
-                    <Grid item xs={12} sm={6} md={6}>
-                        <List>
-                            <CVPListItem useBulletPoint={false} textAlignment={"center"} text={"Find a flexible landlord. Using craigslist was often mentioned as a resource"}/>
-                            <CVPListItem useBulletPoint={false} textAlignment={"center"} text={"Stay with friends/ family at their will"}/>
-                            <CVPListItem useBulletPoint={false} textAlignment={"center"} text={"Look for townhouses, duplexes, single-family homes and trailers. Stay away from large apartment complexes"}/>
-                            <CVPListItem useBulletPoint={false} textAlignment={"center"}  text={"Have someone rent for you and pay them back under the table"}/>
-                            <CVPListItem useBulletPoint={false} textAlignment={"center"}  text={"Subletting from someone looking to get out of a lease"}/>
-                            <CVPListItem useBulletPoint={false} textAlignment={"center"}  text={"Subletting from someone looking to get out of a lease"}/>
-                        </List>
-                    </Grid>
+                        <Grid item xs={12} sm={6} md={6}>
+                            <List>
+                                <CVPListItem useBulletPoint={false} textAlignment={"left"} text={"Amount of time that has elapsed since the last criminal activity"}/>
+                                <CVPListItem useBulletPoint={false} textAlignment={"left"} text={"Work activity of the applicant before and after the criminal conviction"}/>
+                                <CVPListItem useBulletPoint={false} textAlignment={"left"} text={"Age of the person when the crime was committed"}/>
+                                <CVPListItem useBulletPoint={false} textAlignment={"left"} text={"The nature and seriousness of the crime"}/>
+                                <CVPListItem useBulletPoint={false} textAlignment={"left"} text={"Extent to which a license might offer an opportunity to engage in further criminal activity"}/>
+                            </List>
+                        </Grid>
+                        <Grid item xs={12} sm={6} md={6}>
+                            <List>
+                                <CVPListItem useBulletPoint={false} textAlignment={"left"} text={"Evidence of the person’s rehabilitation while incarcerated or after release"}/>
+                                <CVPListItem useBulletPoint={false} textAlignment={"left"} text={"Relationship of a crime to the ability, capacity, or fitness to perform the duties"}/>
+                                <CVPListItem useBulletPoint={false} textAlignment={"left"} text={"Extent and nature of the applicant’s past criminal activity"}/>
+                                <CVPListItem useBulletPoint={false} textAlignment={"left"} text={"Relationship of the crime to the purposes for requiring a license"}/>
+                                <CVPListItem useBulletPoint={false} textAlignment={"left"} text={"Other evidence of the person’s fitness from people with knowledge of the applicant"}/>
+                            </List>
+                        </Grid>
                 </Grid>
             </Container>
           </Box>
