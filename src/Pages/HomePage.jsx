@@ -35,7 +35,7 @@ const HomePage = () => {
               ></Text>
               <SecondaryButton
                 text={"Check My Eligibility"}
-                href={"/calculator/landing-0"}
+                linkTo={"/calculator/landing-0"}
               ></SecondaryButton>
             </div>
             <div id="right-content">
