@@ -5,7 +5,6 @@ import {
   List,
   ListItem,
   makeStyles,
-  Divider,
   Link,
   Typography,
 } from "@material-ui/core";
@@ -13,8 +12,6 @@ import { ArrowRight } from "@material-ui/icons";
 
 import democracylabLogo from "../Assets/democracylab-logo.png";
 import openseattleLogo from "../Assets/openseattle-logo.png";
-import cvpLogo from "../Assets/cvp-logo-white.png";
-
 import pages from "../data/siteMap";
 
 const useStyles = makeStyles((theme) => ({
@@ -40,6 +37,12 @@ const useStyles = makeStyles((theme) => ({
   },
   disclaimer: {
     margin: theme.spacing(2),
+    fontSize: 16,
+    fontFamily: ["Roboto", "sans-serif"],
+  },
+  subHeader: {
+    fontSize: 16,
+    fontFamily: ["Roboto", "sans-serif"],
   },
   openSeattle: {
     width: 100,
@@ -84,7 +87,7 @@ const Footer = () => {
             </Typography>
             <List>
               <ListItem>
-                <Typography variant="subtitle2" style={{maxWidth: 250}}>
+                <Typography className={classes.subHeader} variant="subtitle2" style={{maxWidth: 250}}>
                   CVP is reducing barriers faced by formerly incarcerated
                   individuals by streamlining the process of vacating eligible
                   convictions in Washington state.
