@@ -11,17 +11,17 @@ import VolunteerPage from "./VolunteerPage";
 const subPages = [
   {
     name: "Volunteer",
-    link: "/get_involved/volunteer",
+    link: "/get-involved/volunteer",
     desc: "Join our dedicated volunteer team and help us bring the resources to those who need them.",
   },
   {
       name: "Donate",
-      link: "/get_involved/donate",
+      link: "/get-involved/donate",
       desc: "Your gift makes it possible to continue helping our community. "
   },
   {
       name: "Partner with us",
-      link: "/get_involved/partner-with-us",
+      link: "/get-involved/partner-with-us",
       desc: "Create change by sharing our story and reaching out to your peers."
   }
 
