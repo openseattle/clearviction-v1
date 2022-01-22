@@ -1,15 +1,34 @@
 import { Container, ButtonGroup, Button, Box } from "@material-ui/core";
 import { Route, Link as RouterLink } from "react-router-dom";
 import HeroPanel from "../Components/HeroPanel";
+import NavCardGroup from "../Components/NavCardGroup";
 import WhyVacateAssistance from "./WhyVacateAssistance";
 import WhyVacateEducation from "./WhyVacateEducation";
 import WhyVacateEmployment from "./WhyVacateEmployment";
 import WhyVacateHousing from "./WhyVacateHousing";
 
+const pages = [
+  {
+    name: "Housing",
+    link: "/why-vacate/housing",
+  },
+  {
+      name: "Employment",
+      link: "/why-vacate/employment",
+  },
+  {
+      name: "Partner with us",
+      link: "/why-vacate/education",
+  },
+  {
+    name: "Government assistance",
+    link: "/why-vacate/government-assistance",
+}
+]
 const WhyVacatePage = () => {
   return (
     <>
-      <Container>
+      <Container maxWidth="lg">
         <HeroPanel
           title={"Why vacate"}
           subtitle={
@@ -17,23 +36,7 @@ const WhyVacatePage = () => {
           }
         />
         <Box display="flex" justifyContent={"center"}>
-          <ButtonGroup>
-            <Button to="/why-vacate/housing" component={RouterLink}>
-              Housing
-            </Button>
-            <Button to="/why-vacate/employment" component={RouterLink}>
-              Employment
-            </Button>
-            <Button to="/why-vacate/education" component={RouterLink}>
-              Education
-            </Button>
-            <Button
-              to="/why-vacate/government-assistance"
-              component={RouterLink}
-            >
-              Government assistance
-            </Button>
-          </ButtonGroup>
+          <NavCardGroup subPages={pages}/>
         </Box>
       </Container>
       <Route exact path="/why-vacate/housing">
