@@ -14,17 +14,20 @@ const FactGroup = (props) => {
             img={fact1.graphic}
             header={fact1.title}
             text={fact1.text}
+            cols={4}
           />
           <Box style={{paddingTop: "20px"}} />
           <TextWithImage
             img={fact2.graphic}
             header={fact2.title}
             text={fact2.text}
+            cols={4}
           />
           <TextWithImage
             img={fact3.graphic}
             header={fact3.title}
             text={fact3.text}
+            cols={4}
           />
       </Grid>
     </Box>
