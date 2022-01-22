@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
   },
   backgroundSecondary: {
     height: 400,
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: theme.palette.primary.dark,
     padding: theme.spacing(5),
     [theme.breakpoints.down("sm")]: {
       padding: theme.spacing(2),
