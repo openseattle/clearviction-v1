@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 
 export const TextWithImage = (props) => {
     const classes = useStyles();
-    const { img, header, text } = props;
+    const { img, header, text, cols } = props;
     const textItems = text.map((t, idx) => (
         <Typography key={idx} variant="body1" align="center">
             {t}
@@ -26,7 +26,7 @@ export const TextWithImage = (props) => {
     ))
 
     return (
-        <Grid item xs={12} sm={6} md={6}>
+        <Grid item xs={12} sm={cols} md={cols}>
             <Box display="flex" justifyContent="center">
                 <Box component="img" src={img} className={classes.roleImage} />
             </Box>
