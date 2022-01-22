@@ -38,13 +38,13 @@ const GetInvolvedPage = () => {
       />
      <NavCardGroup subPages={subPages} />
 
-      <Route exact path="/get_involved/volunteer">
+      <Route exact path="/get-involved/volunteer">
         <VolunteerPage />
       </Route>
-      <Route exact path="/get_involved/donate">
+      <Route exact path="/get-involved/donate">
         <DonatePage />
       </Route>
-      <Route exact path="/get_involved/partner-with-us">
+      <Route exact path="/get-involved/partner-with-us">
         <PartnerPage />
       </Route>
     </Container>
