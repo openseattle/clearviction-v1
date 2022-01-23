@@ -9,6 +9,14 @@ export const WhyVacateEmploymentStyles = makeStyles((theme) => ({
       padding: theme.spacing(3),
     },
   },
+  containerStylesAlt: {
+      margin: theme.spacing(2),
+      marginTop: theme.spacing(15),
+      marginBottom: theme.spacing(10),
+      [theme.breakpoints.down("sm")]: {
+        padding: theme.spacing(3),
+      },
+  },
     title: {
       margin: theme.spacing(2),
     },
@@ -17,6 +25,10 @@ export const WhyVacateEmploymentStyles = makeStyles((theme) => ({
     },
     lightBlueSectionBackground: {
       backgroundColor: theme.palette.primary.light,
+      color: "white",
+    },
+    darkBlueSectionBackground: {
+      backgroundColor: theme.palette.primary.dark,
       color: "white",
     },
     spacer: {

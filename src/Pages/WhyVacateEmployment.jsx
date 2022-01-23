@@ -6,6 +6,7 @@ import question from "../Assets/question.svg";
 import { TextWithCTAButton } from "../Subpages/WhyVacate/TextWithCTAButton";
 import AlternativeAccord from "../Components/AlternativeAccord";
 import { WhyVacateEmploymentStyles } from "../Styles/WhyVacateEmploymentStyle";
+import BulletedListMui from "../ui-kit/BulletedListMui";
 
 const unemployment = {
   graphic: timeGraphic,
@@ -158,7 +159,55 @@ const WhyVacateEmployment = () => {
           faqs={friendlyIndustries}
         />
       </Container>
+      <Grid container>
+        <Grid
+          className={classes.lightBlueSectionBackground}
+          item
+          xs={12}
+          sm={6}
+        >
+          <Box className={classes.containerStyles}>
+            <Typography className={classes.title} variant="h3">
+              Laws that protect people with convictions
+            </Typography>
+            <Typography className={classes.contentText} variant="body1">
+              Rights may be violated during the search for employment in two
+              ways:
+            </Typography>
+            <BulletedListMui>
+              <Box style={{ padding: "10px" }}>
+                <li className={classes.contentText}>
+                  Adverse Impact (disparate impact or unintentional
+                  discrimination)
+                </li>
+                <li className={classes.contentText}>
+                  Adverse Treatment (disparate treatment or intentional
+                  discrimination)
+                </li>
+              </Box>
+            </BulletedListMui>
 
+            <Typography className={classes.contentText} variant="body1">
+              The Equal Employment Opportunity Commission enforces the most
+              critical law with regards to the protection of felons, as stated
+              in Title VII of the Civil Rights Act of 1964.{" "}
+            </Typography>
+          </Box>
+        </Grid>
+        <Grid className={classes.darkBlueSectionBackground} item xs={12} sm={6}>
+          <Box className={classes.containerStylesAlt}>
+            <Typography variant="body1" align="center">
+              To find out whether your offense will or may disqualify you from a
+              certain type of job, you can check the Council of State
+              Governments Map.
+              <br />
+              <br />
+              To use the map, click on Washington State, and do a search for the
+              category “Employment.”
+            </Typography>
+          </Box>
+        </Grid>
+      </Grid>
     </>
   );
 };
