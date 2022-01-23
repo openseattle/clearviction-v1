@@ -188,9 +188,13 @@ const WhyVacateEmployment = () => {
             </BulletedListMui>
 
             <Typography className={classes.contentText} variant="body1">
-              The Equal Employment Opportunity Commission enforces the most
-              critical law with regards to the protection of felons, as stated
-              in Title VII of the Civil Rights Act of 1964.{" "}
+              The{" "}
+              <a className={classes.linkStyle} href="https://www.eeoc.gov/laws/guidance/enforcement-guidance-consideration-arrest-and-conviction-records-employment-decisions">
+                Equal Employment Opportunity{" "}
+              </a>{" "}
+              Commission enforces the most critical law with regards to the
+              protection of felons, as stated in Title VII of the Civil Rights
+              Act of 1964.{" "}
             </Typography>
           </Box>
         </Grid>
@@ -198,8 +202,11 @@ const WhyVacateEmployment = () => {
           <Box className={classes.containerStylesAlt}>
             <Typography variant="body1" align="center">
               To find out whether your offense will or may disqualify you from a
-              certain type of job, you can check the Council of State
-              Governments Map.
+              certain type of job, you can check the{" "}
+              <a className={classes.linkStyle} href="https://niccc.csgjusticecenter.org/map/">
+                Council of State Governments Map{" "}
+              </a>
+              .
               <br />
               <br />
               To use the map, click on Washington State, and do a search for the

@@ -51,5 +51,9 @@ export const WhyVacateEmploymentStyles = makeStyles((theme) => ({
       margin: theme.spacing(2),
       textAlign: "center",
       fontSize: 12,
+    },
+    linkStyle: {
+      color: "white",
+      textDecoration: "underline",
     }
 }));
