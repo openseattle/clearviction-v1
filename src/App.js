@@ -46,7 +46,7 @@ function App() {
             <Route exact path="/contact">
               <ContactPage />
             </Route>
-            <Route path="/get_involved">
+            <Route path="/get-involved">
               <GetInvolvedPage />
             </Route>
             <Route path="/why-vacate">

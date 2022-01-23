@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
       paddingTop: 5
     },
     icons: {
-        color: "#FFD200", // TODO: fix color 
+        color: theme.palette.highlight.main,
         fontSize: "5rem",
         margin: theme.spacing(3),
       }

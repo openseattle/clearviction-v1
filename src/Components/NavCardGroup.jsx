@@ -55,13 +55,13 @@ const NavCardGroup = (props) => {
                 >
                   {pageCard.name}
                 </Typography>
-                <Typography
+                { pageCard.desc && <Typography
                   className={classes.cardTextStyle}
                   variant="body1"
                   align="center"
                 >
                   {pageCard.desc}
-                </Typography>
+                </Typography>}
               </Box>
             </CardActionArea>
           </Card>

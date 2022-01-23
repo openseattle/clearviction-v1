@@ -47,7 +47,7 @@ const useStyles = makeStyles((theme) => ({
     width: 400,
   },
   donate: {
-    backgroundColor: "#2F3554",
+    backgroundColor: theme.palette.primary.dark,
     paddingTop: theme.spacing(5),
     paddingBottom: theme.spacing(5),
   },

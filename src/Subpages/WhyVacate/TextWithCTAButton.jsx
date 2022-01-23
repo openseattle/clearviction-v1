@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
   backgroundSecondary: {
     height: 250,
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: theme.palette.primary.dark,
     color: "white",
     align: "center",
     paddingTop: theme.spacing(5),

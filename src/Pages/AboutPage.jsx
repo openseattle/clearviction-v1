@@ -68,7 +68,7 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(4),
   },
   problemRootRight: {
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: theme.palette.primary.dark,
     color: "white",
     padding: theme.spacing(2),
     [theme.breakpoints.up("sm")]: {
@@ -97,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(4),
   },
   ourTeam: {
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: theme.palette.primary.dark,
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
   },

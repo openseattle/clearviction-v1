@@ -6,6 +6,7 @@ import question from "../Assets/question.svg";
 import { TextWithCTAButton } from "../Subpages/WhyVacate/TextWithCTAButton";
 import AlternativeAccord from "../Components/AlternativeAccord";
 import { WhyVacateEmploymentStyles } from "../Styles/WhyVacateEmploymentStyle";
+import BulletedListMui from "../ui-kit/BulletedListMui";
 
 const unemployment = {
   graphic: timeGraphic,
@@ -77,7 +78,7 @@ const friendlyIndustries = [
   },
   {
     summary: "Food services and grocery stores",
-    details: "Missing",
+    details: "Missing in Figma",
   },
 ];
 
@@ -104,6 +105,7 @@ const WhyVacateEmployment = () => {
           "The best way to avoid these obstacles is to expunge your record by vacating your conviction. Learn if you’re eligible with our Misdemeanor Eligibility Calculator."
         }
         buttonText={"Check Eligibility"}
+        buttonLinkTo={"/calculator"}
       />
       <Box className={classes.lightBlueSectionBackground}>
         <Container maxWidth="lg">
@@ -157,6 +159,62 @@ const WhyVacateEmployment = () => {
           faqs={friendlyIndustries}
         />
       </Container>
+      <Grid container>
+        <Grid
+          className={classes.lightBlueSectionBackground}
+          item
+          xs={12}
+          sm={6}
+        >
+          <Box className={classes.containerStyles}>
+            <Typography className={classes.title} variant="h3">
+              Laws that protect people with convictions
+            </Typography>
+            <Typography className={classes.contentText} variant="body1">
+              Rights may be violated during the search for employment in two
+              ways:
+            </Typography>
+            <BulletedListMui>
+              <Box style={{ padding: "10px" }}>
+                <li className={classes.contentText}>
+                  Adverse Impact (disparate impact or unintentional
+                  discrimination)
+                </li>
+                <li className={classes.contentText}>
+                  Adverse Treatment (disparate treatment or intentional
+                  discrimination)
+                </li>
+              </Box>
+            </BulletedListMui>
+
+            <Typography className={classes.contentText} variant="body1">
+              The{" "}
+              <a className={classes.linkStyle} href="https://www.eeoc.gov/laws/guidance/enforcement-guidance-consideration-arrest-and-conviction-records-employment-decisions">
+                Equal Employment Opportunity{" "}
+              </a>{" "}
+              Commission enforces the most critical law with regards to the
+              protection of felons, as stated in Title VII of the Civil Rights
+              Act of 1964.{" "}
+            </Typography>
+          </Box>
+        </Grid>
+        <Grid className={classes.darkBlueSectionBackground} item xs={12} sm={6}>
+          <Box className={classes.containerStylesAlt}>
+            <Typography variant="body1" align="center">
+              To find out whether your offense will or may disqualify you from a
+              certain type of job, you can check the{" "}
+              <a className={classes.linkStyle} href="https://niccc.csgjusticecenter.org/map/">
+                Council of State Governments Map{" "}
+              </a>
+              .
+              <br />
+              <br />
+              To use the map, click on Washington State, and do a search for the
+              category “Employment.”
+            </Typography>
+          </Box>
+        </Grid>
+      </Grid>
     </>
   );
 };
