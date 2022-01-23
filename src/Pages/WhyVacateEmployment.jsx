@@ -77,7 +77,7 @@ const friendlyIndustries = [
   },
   {
     summary: "Food services and grocery stores",
-    details: "Missing",
+    details: "Missing in Figma",
   },
 ];
 
