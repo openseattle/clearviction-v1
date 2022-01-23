@@ -17,7 +17,7 @@ const pages = [
       link: "/why-vacate/employment",
   },
   {
-      name: "Partner with us",
+      name: "Education",
       link: "/why-vacate/education",
   },
   {
