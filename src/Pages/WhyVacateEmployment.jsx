@@ -104,6 +104,7 @@ const WhyVacateEmployment = () => {
           "The best way to avoid these obstacles is to expunge your record by vacating your conviction. Learn if you’re eligible with our Misdemeanor Eligibility Calculator."
         }
         buttonText={"Check Eligibility"}
+        buttonLinkTo={"/calculator"}
       />
       <Box className={classes.lightBlueSectionBackground}>
         <Container maxWidth="lg">
@@ -157,6 +158,7 @@ const WhyVacateEmployment = () => {
           faqs={friendlyIndustries}
         />
       </Container>
+
     </>
   );
 };
