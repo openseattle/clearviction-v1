@@ -3,13 +3,13 @@ import { trackClick } from "../trackingUtils";
 import { Modal, Box, Button, Typography } from "@material-ui/core";
 import Text from "../ui-kit/Text";
 
-const style = {
+const boxStyle = {
   position: "absolute",
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
   width: 400,
-  bgcolor: "background.paper",
+  backgroundColor: "var(--white)",
   border: "2px solid #000",
   boxShadow: 24,
   padding: 4,
@@ -38,7 +38,7 @@ const ToolTipModal = (props) => {
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
       >
-        <Box style={style}>
+        <Box style={boxStyle}>
           <Typography
             id="modal-modal-description"
             style={{ mt: 2, fontSize: "18px" }}
