@@ -12,6 +12,8 @@ import Footer from "./Components/Footer";
 import GetInvolvedPage from "./Pages/GetInvolvedPage";
 import WhyVacatePage from "./Pages/WhyVacatePage";
 import ResourcesPage from "./Pages/ResourcesPage";
+import TheProcessPage from "./Subpages/Resources/TheProcessPage";
+import AssistancePage from "./Subpages/Resources/AssistancePage";
 // import Navigation from "./Components/Navigation";
 
 function App() {
@@ -53,8 +55,14 @@ function App() {
             <Route path="/why-vacate">
               <WhyVacatePage />
             </Route>
-            <Route path="/resources">
+            <Route exact path="/resources">
               <ResourcesPage />
+            </Route>
+            <Route exact path="/resources/the-process">
+              <TheProcessPage />
+            </Route>
+            <Route exact path="/resources/assistance">
+              <AssistancePage />
             </Route>
           </Switch>
           <Footer />
