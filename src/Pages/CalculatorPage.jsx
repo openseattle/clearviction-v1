@@ -42,7 +42,7 @@ const CalculatorPage = () => {
             onClick={() => trackClick(text)}
             variant="contained"
             href={href}
-            style={{ backgroundColor: BUTTON_COLORS[color || "blue"] }}
+            style={{ backgroundColor: BUTTON_COLORS[color || "blue"], color: "var(--white)" }}
           >
             <Text text={text} variant={"h6"}></Text>
           </Button>
