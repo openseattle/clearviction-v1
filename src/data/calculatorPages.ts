@@ -434,7 +434,7 @@ const data: Pages = {
   },
   "main-3": {
     header:
-      'Was the offense is considered a "prior offense" under RCW 46.61.5055?',
+      'Was the offense considered a "prior offense" under RCW 46.61.5055?',
     progressBar: {
       currentSectionName: SectionName.CONV,
       totalSections: 3,
