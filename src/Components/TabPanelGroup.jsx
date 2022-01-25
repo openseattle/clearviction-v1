@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     backgroundColor: "white",
     borderRadius: "5px",
-    color: "black"
+    color: "black",
   }
 }));
 
@@ -38,9 +38,9 @@ const TabPanelGroup = (props) => {
   };
   return (
     <Box className={classes.root}>
-      <Tabs value={value} onChange={handleChange}>
+      <Tabs value={value} onChange={handleChange} centered>
         {tabs.map((tab) => (
-          <Tab key={tab.index} label={tab.label} />
+          <Tab key={tab.index} label={tab.label}/>
         ))}
       </Tabs>
 
