@@ -1,7 +1,6 @@
 import {
   Tabs,
   Tab,
-  Typography,
   Box,
   makeStyles,
 } from "@material-ui/core";
@@ -14,14 +13,20 @@ const TabPanel = (props) => {
     <div role="tabpanel" hidden={value !== index} {...other}>
       {value === index && (
         <Box p={3}>
-          <Typography>{children}</Typography>
+          {children}
         </Box>
       )}
     </div>
   );
 };
 
-const useStyles = makeStyles((theme) => ({}));
+const useStyles = makeStyles((theme) => ({
+  root: {
+    backgroundColor: "white",
+    borderRadius: "5px",
+    color: "black"
+  }
+}));
 
 const TabPanelGroup = (props) => {
   const classes = useStyles();
@@ -32,7 +37,7 @@ const TabPanelGroup = (props) => {
     setValue(newValue);
   };
   return (
-    <Box>
+    <Box className={classes.root}>
       <Tabs value={value} onChange={handleChange}>
         {tabs.map((tab) => (
           <Tab key={tab.index} label={tab.label} />
