@@ -62,6 +62,7 @@ const CalculatorPage = () => {
             rel="noreferrer"
             key={text}
             onClick={() => trackClick(text)}
+            style={{display: "block", marginTop: "0.5em", textDecoration: "underline"}}
           >
             {text}
           </Link>
