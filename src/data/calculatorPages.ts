@@ -442,7 +442,7 @@ const data: Pages = {
     body: [
       {
         type: BodyType.LINK,
-        text: "RCW 46.61.5055 (refer to Section 14 for definitions)",
+        text: "What is a prior offense? | RCW 46.61.5055 (refer to Section 14 for definitions)",
         href: "https://app.leg.wa.gov/RCW/default.aspx?cite=46.61.5055",
       },
     ],
