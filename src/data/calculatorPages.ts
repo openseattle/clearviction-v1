@@ -874,7 +874,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "pro-2": {
-    header: "Was the conviction a result of being a victim of one of the following?:",
+    header: "Was the conviction a result of being a victim of one of the following:",
     progressBar: {
       currentSectionName: SectionName.CONV,
       totalSections: 3,
