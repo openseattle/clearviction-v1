@@ -915,7 +915,7 @@ const data: Pages = {
       },
       {
         text: BUTTON_TEXT.NO,
-        href: CALC_PREFIX + "/pro-ineligible-1",
+        href: CALC_PREFIX + "/pro-ineligible-3",
       },
     ],
     tooltip: TooltipType.NOT_SURE,
