@@ -6,6 +6,12 @@ export const ResourcesStyles = makeStyles((theme) => ({
     color: "white",
   },
   headingStyle: {
-    padding: theme.spacing(3),
+    padding: theme.spacing(2),
+  },
+  contentTextStyle: {
+    margin: theme.spacing(2)
+  },
+  listItemsStyle: {
+    margin: theme.spacing(2)
   }
 }))
