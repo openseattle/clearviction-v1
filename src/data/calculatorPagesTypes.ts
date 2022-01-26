@@ -15,7 +15,7 @@ interface PageData {
 export enum SectionName {
   CONV = "Your Conviction",
   CIRC = "Surrounding Circumstances",
-  TER = "Terms of Offence",
+  TER = "Terms of Offense",
   ELIGIBLE = "",
 }
 

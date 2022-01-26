@@ -20,7 +20,7 @@ const ProgressBar = ({ currentSectionName, totalSections }) => {
     case "Surrounding Circumstances":
       currentSection = 2;
       break;
-    case "Terms of Offence":
+    case "Terms of Offense":
       currentSection = 3;
       break;
     case "":

@@ -434,7 +434,7 @@ const data: Pages = {
   },
   "main-3": {
     header:
-      'Was the offense is considered a "prior offense" under RCW 46.61.5055?',
+      'Was the offense considered a "prior offense" under RCW 46.61.5055?',
     progressBar: {
       currentSectionName: SectionName.CONV,
       totalSections: 3,
@@ -1341,7 +1341,7 @@ const data: Pages = {
   },
   "too-2": {
     header:
-      "Have 3 years passed since completion of the sentence including financial obligations?",
+      "Have 3 years passed since completing the terms of your sentence including financial obligations?",
     progressBar: {
       currentSectionName: SectionName.TER,
       totalSections: 3,
