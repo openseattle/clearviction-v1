@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography } from "@material-ui/core";
+import { Box, Container, Grid, Link, Typography } from "@material-ui/core";
 import { useResourcesStyles } from "../../Styles/useResourcesStyles";
 import ListItemMobileSnap from "../../ui-kit/ListItemMobileSnap";
 import wallet from "../../Assets/wallet.svg";
@@ -11,6 +11,8 @@ import {
 import TeamSuccess from "../../Assets/team_success.svg";
 import Achievement from "../../Assets/achievement.svg";
 import { TextWithImage } from "../WhyVacate/TextWithImage";
+import EducationHelp from "./EducationHelp";
+import FedAidRestrictions from "./FedAidRestrictions";
 
 const AssistanceEducation = () => {
   const classes = useResourcesStyles();
@@ -76,33 +78,48 @@ const AssistanceEducation = () => {
           former incarcerated.
           <br />
           <br />
-          If you want to know more, check out the Federal Government’s FAQ on
-          Incarcerated Individuals and Eligibility for Federal Student Aid.
+          If you want to know more, check out the Federal Government’s{" "}
+          <Link
+            href="https://studentaid.ed.gov/sites/default/files/aid-info-for-incarcerated-individuals.pdf"
+            color="initial"
+          >
+            FAQ on Incarcerated Individuals and Eligibility for Federal Student
+            Aid.
+          </Link>
         </Typography>
         <Box className={classes.regularContainer}>
           <IconWithHeaderAndText
             icon={LocalAtmOutlined}
-            header={"Free Application for Federal Student Aid (FAFSA)"}
+            header={
+              <Link color="initial" href="http://www.fafsa.gov">
+                Free Application for Federal Student Aid (FAFSA)
+              </Link>
+            }
             text={[
               "The main Federal Student Aid, necessary to apply for further. May be completed online at FAFSA’s website.",
             ]}
           />
           <IconWithHeaderAndText
             icon={CreateOutlined}
-            header={"Federal Pell Grants"}
+            header={
+              <Link color="initial" href="https://studentaid.ed.gov/sa/types/grants-scholarships/pell">
+                Federal Pell Grants
+              </Link>
+            }
             text={[
               "Federal Pell Grants are awarded to undergraduate students who display exceptional financial need and have not earned a bachelor's, graduate, or professional degree.",
             ]}
           />
           <IconWithHeaderAndText
             icon={AssignmentIndOutlined}
-            header={"Federal Work-Study Programs"}
+            header={<Link color="initial" href="https://studentaid.ed.gov/types/work-study">Federal Work-Study Programs</Link>}
             text={[
               "This program provides part-time jobs for undergraduate and graduate students with financial need, allowing them to earn money to help pay education expenses.You apply through your school, you will be paid by your school, and you will work either at your school or an organization that partners with your school. ",
             ]}
           />
         </Box>
       </Container>
+      <FedAidRestrictions />
       <Box className={classes.lightBlueBackGround}>
         <Container>
           <Typography className={classes.headingStyle} variant="h2">
@@ -139,15 +156,7 @@ const AssistanceEducation = () => {
           </Grid>
         </Container>
       </Box>
-      <Container className={classes.regularContainer}>
-        <Typography
-          className={classes.colorfulHeadingStyle}
-          variant="h3"
-          align="center"
-        >
-          Other resources to help you find educational assistance
-        </Typography>
-      </Container>
+      <EducationHelp />
     </>
   );
 };
