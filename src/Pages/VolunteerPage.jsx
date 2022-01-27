@@ -181,14 +181,14 @@ const VolunteerPage = () => {
                 <Typography
                   className={classes.titleAlt}
                   variant="h2"
-                  align="right"
+                  align="left"
                 >
                   How can you apply?
                 </Typography>
                 <Typography
                   className={classes.contentTextAlt}
                   variant="body1"
-                  align="right"
+                  align="left"
                 >
                   We are currently using <a className={classes.emailLink} href="https://www.democracylab.org/projects/226">DemocracyLab</a> to streamline the
                   volunteering process.
@@ -196,7 +196,7 @@ const VolunteerPage = () => {
                 <Typography
                   className={classes.contentTextAlt}
                   variant="body1"
-                  align="right"
+                  align="left"
                 >
                   If you want further information and want to have a chat, don’t
                   hesitate to contact us by email at{" "}
