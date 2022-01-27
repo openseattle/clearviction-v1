@@ -1,4 +1,4 @@
-import { List, ListItem, Grid, Typography, Link, Divider } from "@material-ui/core";
+import { List, ListItem, Grid, Typography, Link, } from "@material-ui/core";
 import { Email, HomeWorkOutlined, Call } from "@material-ui/icons";
 import { ResourcesStyles } from "../Styles/ResourcesStyles";
 

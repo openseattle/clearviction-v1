@@ -59,7 +59,7 @@ const AssistanceHousing = () => {
     <>
       <Box className={classes.darkBlueBackground}>
         <Container maxWidth={"sm"}>
-          <Typography variant="h2" align="center">
+          <Typography className={classes.headingStyle} variant="h2" align="center">
             Emergency Shelters
           </Typography>
           <TabPanelGroup tabs={emergencySheltersTabs} />
