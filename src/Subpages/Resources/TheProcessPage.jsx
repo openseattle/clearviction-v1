@@ -37,7 +37,7 @@ const TheProcessPage = () => {
               </Typography>
             }
           />
-          <SecondaryButton text={"Check Eligibility"} />
+          <SecondaryButton text={"Check Eligibility"} linkTo={"/calculator"} />
 
           <Typography className={classes.headingStyle} variant="h2">
             Step 3: File with Court
