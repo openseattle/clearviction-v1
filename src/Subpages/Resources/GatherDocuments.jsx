@@ -2,7 +2,7 @@ import { Container, Typography } from "@material-ui/core";
 import TabPanelGroup from "../../Components/TabPanelGroup";
 import AlternativeAccord from "../../Components/AlternativeAccord";
 import BackgroundReportHelp from "./BackgroundReportHelp";
-import { ResourcesStyles } from "../../Styles/ResourcesStyles";
+import { useResourcesStyles } from "../../Styles/useResourcesStyles";
 import BulletedListMui from "../../ui-kit/BulletedListMui";
 
 const nwJusticeProjectLink = (
@@ -171,7 +171,7 @@ const gatherDocumentsTabGroup = [
   { index: 1, label: "My Records", content: <BackgroundReportHelp /> },
 ];
 export const GatherDocuments = () => {
-  const classes = ResourcesStyles();
+  const classes = useResourcesStyles();
   return (
     <Container maxWidth={"sm"}>
       <Typography className={classes.headingStyle} variant={"h2"}>

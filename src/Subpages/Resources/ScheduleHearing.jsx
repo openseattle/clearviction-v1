@@ -1,7 +1,7 @@
 import { Container, List, ListItem, Typography } from "@material-ui/core";
 import AlternativeAccord from "../../Components/AlternativeAccord";
 import TabPanelGroup from "../../Components/TabPanelGroup";
-import { ResourcesStyles } from "../../Styles/ResourcesStyles";
+import { useResourcesStyles } from "../../Styles/useResourcesStyles";
 import BulletedListMui from "../../ui-kit/BulletedListMui";
 
 const LFODetails = (
@@ -229,7 +229,7 @@ const scheduleHearingTabPanelGroup = [
   },
 ];
 export const ScheduleHearing = () => {
-  const classes = ResourcesStyles();
+  const classes = useResourcesStyles();
   return (
     <Container maxWidth={"sm"}>
       <Typography className={classes.headingStyle} variant="h2">

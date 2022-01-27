@@ -1,12 +1,12 @@
 import { Box, Container, Grid, Link, Typography } from "@material-ui/core";
-import { ResourcesStyles } from "../../Styles/ResourcesStyles";
+import { useResourcesStyles } from "../../Styles/useResourcesStyles";
 import officeWork from "../../Assets/office_work.svg";
 import worldMap from "../../Assets/world_map.svg";
 import ListItemMobileSnap from "../../ui-kit/ListItemMobileSnap";
 import SecondaryButton from "../../ui-kit/SecondaryButton";
 
 const AssistanceEmployment = () => {
-  const classes = ResourcesStyles();
+  const classes = useResourcesStyles();
   return (
     <>
       <Box className={classes.darkBlueBackground}>

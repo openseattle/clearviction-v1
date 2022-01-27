@@ -1,9 +1,9 @@
 import { List, ListItem, Grid, Typography, Link, } from "@material-ui/core";
 import { Email, HomeWorkOutlined, Call } from "@material-ui/icons";
-import { ResourcesStyles } from "../Styles/ResourcesStyles";
+import { useResourcesStyles } from "../Styles/useResourcesStyles";
 
 const HousingFinderList = ({ resources }) => {
-  const classes = ResourcesStyles();
+  const classes = useResourcesStyles();
   return (
     <List>
       {resources.map((contact, idx) => (

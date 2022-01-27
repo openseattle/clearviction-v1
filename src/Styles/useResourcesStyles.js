@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 
-export const ResourcesStyles = makeStyles((theme) => ({
+export const useResourcesStyles = makeStyles((theme) => ({
   darkBlueBackground: {
     backgroundColor: theme.palette.primary.dark,
     color: "white",
@@ -20,6 +20,11 @@ export const ResourcesStyles = makeStyles((theme) => ({
   headingStyle: {
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
+  },
+  colorfulHeadingStyle: {
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
+    color: theme.palette.primary.light,
   },
   contentTextStyle: {
     marginTop: theme.spacing(2),

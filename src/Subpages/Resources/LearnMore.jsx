@@ -1,7 +1,7 @@
 import { Container, Box, Typography, List, ListItem } from "@material-ui/core";
 import ListItemMobileSnap from "../../ui-kit/ListItemMobileSnap";
 import brainstorm from "../../Assets/brainstorming_session.svg";
-import { ResourcesStyles } from "../../Styles/ResourcesStyles";
+import { useResourcesStyles } from "../../Styles/useResourcesStyles";
 
 const links = [
   {
@@ -27,7 +27,7 @@ const links = [
 ];
 
 export const LearnMore = () => {
-  const classes = ResourcesStyles();
+  const classes = useResourcesStyles();
   return (
     <Container className={classes.regularContainer}>
       <ListItemMobileSnap

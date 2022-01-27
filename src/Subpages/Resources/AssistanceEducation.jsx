@@ -1,11 +1,19 @@
 import { Box, Container, Grid, Typography } from "@material-ui/core";
-import { ResourcesStyles } from "../../Styles/ResourcesStyles";
+import { useResourcesStyles } from "../../Styles/useResourcesStyles";
 import ListItemMobileSnap from "../../ui-kit/ListItemMobileSnap";
 import wallet from "../../Assets/wallet.svg";
 import { IconWithHeaderAndText } from "../WhyVacate/IconWithHeaderAndText";
-import { LocalAtmOutlined, CreateOutlined, AssignmentIndOutlined  } from "@material-ui/icons";
+import {
+  LocalAtmOutlined,
+  CreateOutlined,
+  AssignmentIndOutlined,
+} from "@material-ui/icons";
+import TeamSuccess from "../../Assets/team_success.svg";
+import Achievement from "../../Assets/achievement.svg";
+import { TextWithImage } from "../WhyVacate/TextWithImage";
+
 const AssistanceEducation = () => {
-  const classes = ResourcesStyles();
+  const classes = useResourcesStyles();
   return (
     <>
       <Container className={classes.regularContainer} maxWidth="lg">
@@ -76,7 +84,7 @@ const AssistanceEducation = () => {
             icon={LocalAtmOutlined}
             header={"Free Application for Federal Student Aid (FAFSA)"}
             text={[
-              "The main Federal Student Aid, necessary to apply for further grants. May be completed online at FAFSA’s website.",
+              "The main Federal Student Aid, necessary to apply for further. May be completed online at FAFSA’s website.",
             ]}
           />
           <IconWithHeaderAndText
@@ -94,6 +102,51 @@ const AssistanceEducation = () => {
             ]}
           />
         </Box>
+      </Container>
+      <Box className={classes.lightBlueBackGround}>
+        <Container>
+          <Typography className={classes.headingStyle} variant="h2">
+            Student Loans
+          </Typography>
+          <Grid container>
+            <TextWithImage
+              cols={6}
+              img={TeamSuccess}
+              header={"Federal"}
+              text={[
+                "Funded by the federal government and come with many benefits that aren’t typically offered with private loans, such as:",
+                "No credit checks",
+                "Fixed interest rates",
+                "Subsidized loans",
+                "Ability to postpone payments",
+              ]}
+              altStyle
+            />
+
+            <TextWithImage
+              cols={6}
+              img={Achievement}
+              header={"Private"}
+              text={[
+                "Comes from lenders such as banks, credit unions and schools. They're secure but have some disadvantages: ",
+                "Price depends on credit score",
+                "More expensive",
+                "Variable interest rates",
+                "Options vary by lender",
+              ]}
+              altStyle
+            />
+          </Grid>
+        </Container>
+      </Box>
+      <Container className={classes.regularContainer}>
+        <Typography
+          className={classes.colorfulHeadingStyle}
+          variant="h3"
+          align="center"
+        >
+          Other resources to help you find educational assistance
+        </Typography>
       </Container>
     </>
   );

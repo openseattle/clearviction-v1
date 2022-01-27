@@ -7,7 +7,7 @@ import {
   ListItem,
 } from "@material-ui/core";
 import TabPanelGroup from "../../Components/TabPanelGroup";
-import { ResourcesStyles } from "../../Styles/ResourcesStyles";
+import { useResourcesStyles } from "../../Styles/useResourcesStyles";
 import ShelterList from "../../Components/ShelterList";
 import {
   forMen,
@@ -56,7 +56,7 @@ const housingAssistanceAccord = [
   },
 ];
 const AssistanceHousing = () => {
-  const classes = ResourcesStyles();
+  const classes = useResourcesStyles();
   return (
     <>
       <Box className={classes.darkBlueBackground}>

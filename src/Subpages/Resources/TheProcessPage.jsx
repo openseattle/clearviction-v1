@@ -1,7 +1,7 @@
 import { Box, Container, Typography } from "@material-ui/core";
 import teamBuilding from "../../Assets/team_building.svg";
 import HeroPanel from "../../Components/HeroPanel";
-import { ResourcesStyles } from "../../Styles/ResourcesStyles";
+import { useResourcesStyles } from "../../Styles/useResourcesStyles";
 import ListItemMobileSnap from "../../ui-kit/ListItemMobileSnap";
 import SecondaryButton from "../../ui-kit/SecondaryButton";
 import { GatherDocuments } from "./GatherDocuments";
@@ -9,7 +9,7 @@ import { LearnMore } from "./LearnMore";
 import { ScheduleHearing } from "./ScheduleHearing";
 
 const TheProcessPage = () => {
-  const classes = ResourcesStyles();
+  const classes = useResourcesStyles();
   return (
     <>
       <Container>

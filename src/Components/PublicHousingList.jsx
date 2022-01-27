@@ -8,10 +8,10 @@ import {
 } from "@material-ui/core";
 import { HomeWorkOutlined } from "@material-ui/icons";
 import { Call } from "@material-ui/icons";
-import { ResourcesStyles } from "../Styles/ResourcesStyles";
+import { useResourcesStyles } from "../Styles/useResourcesStyles";
 
 const PublicHousingList = ({ publicAssociations }) => {
-  const classes = ResourcesStyles();
+  const classes = useResourcesStyles();
   return (
     <List className={classes.publicHousingListStyle}>
       {publicAssociations.map((association, idx) => (
