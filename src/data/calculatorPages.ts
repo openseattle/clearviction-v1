@@ -271,7 +271,7 @@ const data: Pages = {
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "1. Fill out a Motion and Declaration for Order Vacating Marijuana Conviction (CrRLJ 09.0100):",
+        text: '1. Fill out a "Petition and Declaration for Order Vacating Conviction" (CrRLJ 09.0100).',
       },
       {
         type: BodyType.LINK,
@@ -280,7 +280,7 @@ const data: Pages = {
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "2. See instructions for vacating a conviction in form CrRLJ 09.0300:",
+        text: '2. Read "Instructions for Vacating Misdemeanor and Gross Misdemeanor Convictions" (CrRLJ 09.0300).',
       },
       {
         type: BodyType.LINK,
@@ -781,7 +781,7 @@ const data: Pages = {
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "1. Fill out a Motion and Declaration for Order Vacating Conviction (CrRLJ 09.0100):",
+        text: '1. Fill out a "Petition and Declaration for Order Vacating Conviction" (CrRLJ 09.0100).',
       },
       {
         type: BodyType.LINK,
@@ -790,7 +790,7 @@ const data: Pages = {
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "2. See instructions for vacating a conviction in form CrRLJ 09.0300:",
+        text: '2. Read "Instructions for Vacating Misdemeanor and Gross Misdemeanor Convictions" (CrRLJ 09.0300).',
       },
       {
         type: BodyType.LINK,
@@ -1044,7 +1044,7 @@ const data: Pages = {
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "2. Fill out a Motion and Declaration for Order Vacating Conviction (CrRLJ 09.0100).",
+        text: '2. Fill out a "Petition and Declaration for Order Vacating Conviction" (CrRLJ 09.0100).',
       },
       {
         type: BodyType.LINK,
@@ -1053,7 +1053,7 @@ const data: Pages = {
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "3. See instructions for vacating a conviction in form CrRLJ 09.0300:",
+        text: '3. Read "Instructions for Vacating Misdemeanor and Gross Misdemeanor Convictions" (CrRLJ 09.0300).',
       },
       {
         type: BodyType.LINK,
@@ -1378,7 +1378,7 @@ const data: Pages = {
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "1. Fill out a Motion and Declaration for Order Vacating Conviction (CrRLJ 09.0100).",
+        text: '1. Fill out a "Petition and Declaration for Order Vacating Conviction" (CrRLJ 09.0100).',
       },
       {
         type: BodyType.LINK,
@@ -1387,7 +1387,7 @@ const data: Pages = {
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "2. See instructions for vacating a conviction in form CrRLJ 09.0300.",
+        text: '2. Read "Instructions for Vacating Misdemeanor and Gross Misdemeanor Convictions" (CrRLJ 09.0300).',
       },
       {
         type: BodyType.LINK,
