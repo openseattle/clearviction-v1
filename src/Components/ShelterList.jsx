@@ -8,7 +8,7 @@ const ShelterList = ({shelters}) => {
   return (
     <List>
     {shelters.map((shelter, idx) => (
-      <ListItem key={idx} style={{ display: "block" }}>
+      <ListItem key={idx} style={{ display: "block" }} divider>
         <Grid container>
           <Grid item xs={6}>
             <Typography align="left">{shelter.name} </Typography>

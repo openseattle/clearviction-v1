@@ -4,6 +4,16 @@ type shelter = {
   city: string;
   phone: string;
 };
+
+type housingFinderResource = {
+  name: string;
+  url: string;
+  desc: string;
+  address: string;
+  phone: string;
+  email: string;
+};
+
 const forMen: shelter[] = [
   {
     name: "Union Gospel Mission Men’s Shelter",
@@ -70,4 +80,39 @@ const forWomen: shelter[] = [
   },
 ]
 
-export {forMen, forWomen};
+const findHousing: housingFinderResource[] = [
+  {
+    name: "Catholic Community Services/Housing Services ",
+    url: "https://ccsww.org/",
+    desc: "Owns a large number of housing units including shelters, transitional and permanent housing for low-income individuals in Western Washington.",
+    address: "",
+    phone: "(206)-328-5696",
+    email: "CatholicHousingServicesInfo@ccsww.org",
+  },
+  {
+    name: "The STAR Project",
+    url: "http://www.thestarproject.us/",
+    desc: "Has relationships with a number of local landlords who have agreed to provide transitional housing for some formerly incarcerated individuals.",
+    address: "321 Wellington Avenue PO Box 159 Walla Walla, WA 99362",
+    phone: "(509)-525-3612",
+    email: "info@thestarproject.us",
+  },
+  {
+    name: "Compass Housing Alliance",
+    url: "http://www.compasshousingalliance.org",
+    desc: "Owns a large number of housing units and provides emergency shelter, transitional and permanent housing for low-income individuals.",
+    address: "377 S. Washington Street, 5th Floor, Seattle, WA 98104",
+    phone: "(206)-474-1000",
+    email: "",
+  },
+  {
+    name: "Pioneer Human Services",
+    url: "http://pioneerhumanservices.org/housing",
+    desc: "Owns housing units in King, Pierce, Skagit, Spokane, and Whatcom counties and provides transitional and permanent housing rental programs for people with criminal histories.",
+    address: "",
+    phone: `Seattle: (206)-624-0082 Tacoma: (253)-272-5486`,
+    email: "housing@p-h-s.com",
+  },
+]
+
+export {forMen, forWomen, findHousing};
