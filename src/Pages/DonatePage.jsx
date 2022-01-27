@@ -206,7 +206,7 @@ const DonatePage = () => {
             <AccordionDetails>
               <Typography>
                 As we're all volunteers, any of our donations will go directly
-                to helped those convicted and give them a fresh start.
+                to helping those convicted and give them a fresh start.
                 <br />
                 <br />
                 Your support will help pay for the technological tools needed by
