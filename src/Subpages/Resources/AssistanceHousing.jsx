@@ -15,8 +15,10 @@ import {
   findHousing,
   additionalLinks,
 } from "../../data/sheltersData";
+import associations from "../../data/publicHousingData";
 import AlternativeAccord from "../../Components/AlternativeAccord";
 import HousingFinderList from "../../Components/HousingFinderList";
+import PublicHousingList from "../../Components/PublicHousingList";
 
 const emergencySheltersTabs = [
   { index: 0, label: "For Men", content: <ShelterList shelters={forMen} /> },
@@ -34,7 +36,7 @@ const housingAssistanceAccord = [
   },
   {
     summary: "Public Housing Associations",
-    details: "",
+    details: <PublicHousingList publicAssociations={associations} />,
   },
   {
     summary: "Additional links",

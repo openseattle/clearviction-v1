@@ -30,5 +30,8 @@ export const ResourcesStyles = makeStyles((theme) => ({
   shelterIcon: {
     color: theme.palette.success.main,
     margin: theme.spacing(1),
+  },
+  publicHousingListStyle: {
+    width: "100%",
   }
 }));
