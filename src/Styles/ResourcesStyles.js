@@ -27,4 +27,8 @@ export const ResourcesStyles = makeStyles((theme) => ({
     justifyContent: "center",
     margin: theme.spacing(5),
   },
+  shelterIcon: {
+    color: theme.palette.success.main,
+    margin: theme.spacing(1),
+  }
 }));
