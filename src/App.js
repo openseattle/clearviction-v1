@@ -61,7 +61,7 @@ function App() {
             <Route exact path="/resources/the-process">
               <TheProcessPage />
             </Route>
-            <Route exact path="/resources/assistance">
+            <Route path="/resources/assistance">
               <AssistancePage />
             </Route>
           </Switch>
