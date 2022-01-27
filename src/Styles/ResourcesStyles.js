@@ -7,6 +7,12 @@ export const ResourcesStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
   },
+  lightBlueBackGround: {
+    backgroundColor: theme.palette.primary.light,
+    color: "white",
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8),
+  },
   regularContainer: {
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
@@ -33,5 +39,18 @@ export const ResourcesStyles = makeStyles((theme) => ({
   },
   publicHousingListStyle: {
     width: "100%",
-  }
+  },
+  titleLinkStyle:{
+    paddingTop: theme.spacing(3),
+    paddingBottom: theme.spacing(3),
+    color: "white",
+    fontWeight: "bold",
+    textDecoration: "underline",
+    "&:hover": {
+      color: "white",
+      fontWeight: "bold",
+      textDecoration: "underline",
+    }
+  },
+
 }));
