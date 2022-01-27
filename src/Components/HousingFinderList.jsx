@@ -9,7 +9,7 @@ const HousingFinderList = ({ resources }) => {
       {resources.map((contact, idx) => (
         <ListItem key={idx} style={{ display: "block" }} divider>
           <Grid container>
-            <Grid item xs={6}>
+            <Grid item xs={12} sm={6}>
               <Typography>
                 <Link href={contact.url} color="initial">
                   {contact.name}
@@ -18,8 +18,8 @@ const HousingFinderList = ({ resources }) => {
               <br />
               <Typography>{contact.desc}</Typography>
             </Grid>
-            <Grid item xs={6}>
-              <Typography align="right">
+            <Grid item xs={12} sm={6}>
+              <Typography >
                 {contact.address && (
                   <HomeWorkOutlined className={classes.shelterIcon} />
                 )}

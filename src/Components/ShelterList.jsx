@@ -10,14 +10,14 @@ const ShelterList = ({shelters}) => {
     {shelters.map((shelter, idx) => (
       <ListItem key={idx} style={{ display: "block" }} divider>
         <Grid container>
-          <Grid item xs={6}>
-            <Typography align="left">{shelter.name} </Typography>
+          <Grid item xs={12} sm={6}>
+            <Typography >{shelter.name} </Typography>
           </Grid>
-          <Grid item xs={6}>
-            <Typography align="right">
+          <Grid item xs={12} sm={6}>
+            <Typography >
               {<HomeWorkOutlined className={classes.shelterIcon} />}{shelter.address}
-              <br />
-              {shelter.city}
+             
+              {" "}{shelter.city}
               <br/>
               {<Call className={classes.shelterIcon} />}{shelter.phone}
             </Typography>

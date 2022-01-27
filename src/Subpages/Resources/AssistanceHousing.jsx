@@ -1,8 +1,20 @@
-import { Container, Typography, Box, Link } from "@material-ui/core";
+import {
+  Container,
+  Typography,
+  Box,
+  Link,
+  Grid,
+  ListItem,
+} from "@material-ui/core";
 import TabPanelGroup from "../../Components/TabPanelGroup";
 import { ResourcesStyles } from "../../Styles/ResourcesStyles";
 import ShelterList from "../../Components/ShelterList";
-import { forMen, forWomen, findHousing } from "../../data/sheltersData";
+import {
+  forMen,
+  forWomen,
+  findHousing,
+  additionalLinks,
+} from "../../data/sheltersData";
 import AlternativeAccord from "../../Components/AlternativeAccord";
 import HousingFinderList from "../../Components/HousingFinderList";
 
@@ -26,7 +38,19 @@ const housingAssistanceAccord = [
   },
   {
     summary: "Additional links",
-    details: "",
+    details: (
+      <Grid container>
+        {additionalLinks.map((theLink, idx) => (
+          <Grid item xs={6} key={idx}>
+            <ListItem>
+              <Link href={theLink.url} color="initial">
+                {theLink.name}
+              </Link>
+            </ListItem>
+          </Grid>
+        ))}
+      </Grid>
+    ),
   },
 ];
 const AssistanceHousing = () => {

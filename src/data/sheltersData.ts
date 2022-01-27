@@ -14,6 +14,11 @@ type housingFinderResource = {
   email: string;
 };
 
+type additionalLinksType = {
+  name: string;
+  url: string;
+}
+
 const forMen: shelter[] = [
   {
     name: "Union Gospel Mission Men’s Shelter",
@@ -115,4 +120,23 @@ const findHousing: housingFinderResource[] = [
   },
 ]
 
-export {forMen, forWomen, findHousing};
+const additionalLinks: additionalLinksType[] = [
+  {
+    name: "Affordable Apartment Search",
+    url: "http://www.hud.gov/apps/section8/step2.cfm?state=WA%2CWashington",
+  },
+  {
+    name: "Apartment Finder",
+    url: "http://aptfinder.org",
+  },
+  {
+    name: "HousingSearchNW.org",
+    url: "http://www.housingsearchnw.org",
+  },
+  {
+    name: "Affordable Housing Online",
+    url: "https://affordablehousingonline.com/housing-search/Washington",
+  },
+]
+
+export {forMen, forWomen, findHousing, additionalLinks};
