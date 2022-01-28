@@ -3,7 +3,6 @@ import {
   ListItem,
   Grid,
   Typography,
-  ListItemIcon,
   ListItemText,
 } from "@material-ui/core";
 import { HomeWorkOutlined } from "@material-ui/icons";
