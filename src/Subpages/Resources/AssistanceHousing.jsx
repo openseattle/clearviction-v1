@@ -2,7 +2,6 @@ import {
   Container,
   Typography,
   Box,
-  Link,
   Grid,
   ListItem,
 } from "@material-ui/core";

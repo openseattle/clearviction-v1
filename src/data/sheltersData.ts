@@ -11,6 +11,8 @@ type housingFinderResource = {
   desc: string;
   address: string;
   phone: string;
+  phone2?: string;
+  tags2Phones?: string[];
   email: string;
 };
 
@@ -115,7 +117,9 @@ const findHousing: housingFinderResource[] = [
     url: "http://pioneerhumanservices.org/housing",
     desc: "Owns housing units in King, Pierce, Skagit, Spokane, and Whatcom counties and provides transitional and permanent housing rental programs for people with criminal histories.",
     address: "",
-    phone: `Seattle: (206)-624-0082 Tacoma: (253)-272-5486`,
+    phone: "(206)-624-0082",
+    phone2: "(253)-272-5486",
+    tags2Phones: ["Seattle: ", "Tacoma: "],
     email: "housing@p-h-s.com",
   },
 ]

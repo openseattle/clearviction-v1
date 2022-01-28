@@ -9,6 +9,7 @@ import {
 import { HomeWorkOutlined } from "@material-ui/icons";
 import { Call } from "@material-ui/icons";
 import { useResourcesStyles } from "../Styles/useResourcesStyles";
+import { ListItemLink } from "../ui-kit/ListItemLink";
 
 const PublicHousingList = ({ publicAssociations }) => {
   const classes = useResourcesStyles();
@@ -21,25 +22,21 @@ const PublicHousingList = ({ publicAssociations }) => {
               <Typography> {association.area} </Typography>
             </Grid>
             <Grid item xs={12} sm={4}>
-              <List >
-                <ListItem>
-                  <ListItemIcon>
-                    {<HomeWorkOutlined className={classes.shelterIcon} />}
-                  </ListItemIcon>
+              <List>
+                <ListItemLink target="_blank" rel="noopener noreferrer" href={`https://www.google.com/maps/search/?api=1&query=${association.area}+${association.address}+${association.city}`}>
+                  <HomeWorkOutlined className={classes.shelterIcon} />
                   <ListItemText
                     primary={association.address + " " + association.city}
                   />
-                </ListItem>
+                </ListItemLink>
               </List>
             </Grid>
             <Grid item xs={12} sm={4}>
               <List >
-                <ListItem>
-                  <ListItemIcon>
+                <ListItemLink href={`tel:+${association.phone}`}>
                     <Call className={classes.shelterIcon} />
-                  </ListItemIcon>
                   <ListItemText primary={association.phone} />
-                </ListItem>
+                </ListItemLink>
               </List>
             </Grid>
           </Grid>

@@ -91,7 +91,7 @@ const AssistanceEducation = () => {
           <IconWithHeaderAndText
             icon={LocalAtmOutlined}
             header={
-              <ExternalLink href="http://www.fafsa.gov">
+              <ExternalLink href="https://studentaid.gov/h/apply-for-aid/fafsa">
                 Free Application for Federal Student Aid (FAFSA)
               </ExternalLink>
             }
