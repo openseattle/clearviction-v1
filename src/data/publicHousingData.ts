@@ -76,7 +76,7 @@ const associations:publicHousingContact[] = [
   area: "King County",
   address: "600 Andover Park W",
   city: "Seattle, WA 98188",
-  phone: "",
+  phone: "(206) 574‑1100",
 },
 {
   area: "Housing Kitsap",
