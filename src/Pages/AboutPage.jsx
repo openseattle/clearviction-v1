@@ -106,10 +106,13 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(9),
     color: "white",
   },
-
   highlightText: {
     color: theme.palette.highlight.main,
   },
+  cardGrid: {
+    padding: theme.spacing(3),
+  }
+
 }));
 
 const AboutPage = () => {
@@ -276,22 +279,19 @@ const AboutPage = () => {
           <Typography className={classes.ourTeamTitle} variant="h2">
             The Team
           </Typography>
-          <Grid container>
-            {team.map((member) => (
+          <Grid container style={{borderStyle: "solid", borderColor: "white", justifyContent: "space-evenly"}}>
+            {team.map((member, idx) => (
               <Grid
-                key={member.firstName}
+                className={classes.cardGrid}
+                key={idx}
                 item
                 xs={6}
                 sm={4}
                 md={3}
                 lg={3}
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  padding: "1rem",
-                }}
+                style={{borderStyle: "solid", borderColor: "white", justifyContent: "space-evenly"}}
               >
-                <TeamCard key={member.firstName} member={member} />
+                <TeamCard  member={member} />
               </Grid>
             ))}
           </Grid>

@@ -2,17 +2,16 @@ import {
   Avatar,
   Card,
   makeStyles,
-  Typography,
-  CardContent,
   IconButton,
-  CardActions,
   CardMedia,
+  List,
+  ListItem,
+  ListItemText,
 } from "@material-ui/core";
 import { LinkedIn } from "@material-ui/icons";
 
 const useStyles = makeStyles({
   card: {
-    width: 200,
     borderRadius: 0,
   },
   name: {
@@ -26,25 +25,24 @@ const useStyles = makeStyles({
 
 const TeamCard = (props) => {
   const classes = useStyles();
-
-  const {firstName, lastName, role, photo, linkedIn} = props.member;
-
+  const { firstName, lastName, role, profileImage, linkedIn } = props.member;
   return (
     <Card className={classes.card}>
       <CardMedia>
-        <Avatar className={classes.avatar} variant="square" src={photo} />
+        <Avatar
+          className={classes.avatar}
+          variant="square"
+          src={profileImage}
+        />
       </CardMedia>
-      <CardContent style={{ marginBottom: "-45px" }}>
-        <Typography className={classes.name} variant="h6">
-          {firstName} {lastName}
-        </Typography>
-        <Typography variant="h6">{role}</Typography>
-      </CardContent>
-      <CardActions style={{ display: "flex", justifyContent: "right" }}>
-        <IconButton href={linkedIn} target="_blank" rel="noopener noreferrer">
-          <LinkedIn fontSize="large" />
-        </IconButton>
-      </CardActions>
+      <List>
+        <ListItem>
+          <ListItemText primary={firstName + " " + lastName} secondary={role} />
+          <IconButton href={linkedIn} target="_blank" rel="noopener noreferrer">
+            {linkedIn && <LinkedIn fontSize="large" />}
+          </IconButton>
+        </ListItem>
+      </List>
     </Card>
   );
 };
