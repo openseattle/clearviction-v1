@@ -22,30 +22,33 @@ const TheProcessPage = () => {
       </Container>
       <Box className={classes.darkBlueBackground}>
         <GatherDocuments />
-        <Container>
-          <Typography className={classes.headingStyle} variant="h2">
-            Step 2: Determine Eligibility
-          </Typography>
+        <Container className={classes.regularContainer} maxWidth="md">
           <ListItemMobileSnap
             image={<Box height={175} component="img" src={teamBuilding} />}
             textLeft={true}
             text={
-              <Typography>
-                Once you have your records and forms gathered, use our
-                eligibilty calculator to determine if your conviction can be
-                vacated.
-              </Typography>
+              <div>
+                <Typography className={classes.headingStyle} variant="h2">
+                  Step 2: Determine Eligibility
+                </Typography>{" "}
+                <Typography>
+                  Once you have your records and forms gathered, use our
+                  eligibilty calculator to determine if your conviction can be
+                  vacated.
+                </Typography>
+              </div>
             }
           />
           <SecondaryButton text={"Check Eligibility"} linkTo={"/calculator"} />
-
-          <Typography className={classes.headingStyle} variant="h2">
-            Step 3: File with Court
-          </Typography>
+        </Container>
+        <Container className={classes.regularContainer} maxWidth="md">
           <ListItemMobileSnap
             image={<Box height={175} component="img" src={teamBuilding} />}
             text={
               <div>
+                <Typography className={classes.headingStyle} variant="h2">
+                  Step 3: File with Court
+                </Typography>
                 <Typography>
                   Next, submit a request to have your conviction vacated (refer
                   to court directory). Please note that the request to vacate is
