@@ -19,6 +19,7 @@ import associations from "../../data/publicHousingData";
 import AlternativeAccord from "../../Components/AlternativeAccord";
 import HousingFinderList from "../../Components/HousingFinderList";
 import PublicHousingList from "../../Components/PublicHousingList";
+import { ExternalLink } from "../../ui-kit/ExternalLink";
 
 const emergencySheltersTabs = [
   { index: 0, label: "For Men", content: <ShelterList shelters={forMen} /> },
@@ -45,9 +46,9 @@ const housingAssistanceAccord = [
         {additionalLinks.map((theLink, idx) => (
           <Grid item xs={6} key={idx}>
             <ListItem>
-              <Link href={theLink.url} color="initial">
+              <ExternalLink href={theLink.url}>
                 {theLink.name}
-              </Link>
+              </ExternalLink>
             </ListItem>
           </Grid>
         ))}
@@ -70,23 +71,22 @@ const AssistanceHousing = () => {
           <Typography className={classes.contentTextStyle} variant="subtitle1">
             We are not affiliated with any shelters, including the ones listed
             above. Under Washington state law,{" "}
-            <Link
+            <ExternalLink
               href="http://transgenderlawcenter.org/wp-content/uploads/2016/02/03.09.2016-Model-Homeless-Shelter-TG-Policy-single-pages.pdf"
-              color="initial"
             >
               it is illegal to deny shelter
-            </Link>{" "}
+            </ExternalLink>{" "}
             to transgender and gender non-conforming people on the basis of
             their gender identity or expression.
           </Typography>
           <Typography className={classes.contentTextStyle} variant="subtitle1">
             You can find a full list of shelters in Washington{" "}
-            <Link
+            <ExternalLink
               href="https://www.shelterlist.com/state/washington"
               color="initial"
             >
               here
-            </Link>
+            </ExternalLink>
             . You can also contact a homeless service provider here to get help
             finding shelter.
           </Typography>

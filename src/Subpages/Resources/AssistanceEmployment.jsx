@@ -1,9 +1,43 @@
-import { Box, Container, Grid, Link, Typography } from "@material-ui/core";
+import { Box, Container, Grid, Typography } from "@material-ui/core";
 import { useResourcesStyles } from "../../Styles/useResourcesStyles";
 import officeWork from "../../Assets/office_work.svg";
 import worldMap from "../../Assets/world_map.svg";
 import ListItemMobileSnap from "../../ui-kit/ListItemMobileSnap";
 import SecondaryButton from "../../ui-kit/SecondaryButton";
+import { ExternalLink } from "../../ui-kit/ExternalLink";
+
+const findWorkContent = [
+  {
+    name:"Washington State WorkSource",
+    url: "https://www.worksourcewa.com/",
+    body: "WorkSource offers self-help programs, group programs and activities, workshops, one on one consultations, and training programs for job seekers.",
+  },
+  {
+    name:"Employment Security Department",
+    url: "http://www.esd.wa.gov/jobs-and-training",
+    body: "The agency works with local WorkSource centers and other sites in addition to providing placement assistance.",
+  },
+  {
+    name:"People for People",
+    url: "http://www.pfp.org/",
+    body: "Provides several resources, including employment training",
+  },
+  {
+    name:"Goodwill",
+    url: "http://www.goodwill.org/find-jobs-and-services/find-a-job/",
+    body: "Offers those with criminal backgrounds pre-release services, basic skills development, employment readiness training, occupational skill training, and job placement assistance",
+  },
+  {
+    name:"Careeronestop",
+    url: "http://www.careeronestop.org/",
+    body: "Sponsored by the U.S. Department of Labor, and is a resource for finding jobs and job training",
+  },
+  {
+    name:"Craigslist",
+    url: "http://seattle.craigslist.org/",
+    body: "Lists many jobs in a variety of occupations",
+  },
+]
 
 const AssistanceEmployment = () => {
   const classes = useResourcesStyles();
@@ -78,7 +112,7 @@ const AssistanceEmployment = () => {
                 <li>Select Washington State</li>
                 <li>Search a category under “Employment”</li>
               </Typography>
-              <SecondaryButton text={"View Map"} linkTo={"https://niccc.csgjusticecenter.org/map/"} />
+              <SecondaryButton text={"View Map"} linkTo={"https://niccc.csgjusticecenter.org/map/"} externalLink/>
             </div>
           }
           image={<Box component="img" src={worldMap} height={300} margin={5} />}
@@ -94,12 +128,12 @@ const AssistanceEmployment = () => {
             text={
               <div>
                 <Typography className={classes.headingStyle}>
-                  <Link
+                  <ExternalLink
                     href="http://www.lni.wa.gov/tradeslicensing/apprenticeship/programs/"
                     className={classes.titleLinkStyle}
                   >
                     Washington State Department of Labor & Industries
-                  </Link>
+                  </ExternalLink>
                 </Typography>
                 <Typography variant="body2">
                   Apprenticeship Programs in Washington. Apprenticeships are
@@ -114,90 +148,23 @@ const AssistanceEmployment = () => {
           />
 
           <Grid container spacing={4}>
-            <Grid item xs={12} sm={6} md={4}>
-              <Typography className={classes.headingStyle}>
-                <Link
-                  href="https://www.worksourcewa.com"
-                  className={classes.titleLinkStyle}
-                >
-                  Washington State WorkSource
-                </Link>
-              </Typography>
-              <Typography variant="body2">
-                WorkSource offers self-help programs, group programs and
-                activities, workshops, one on one consultations, and training
-                programs for job seekers.
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <Typography className={classes.headingStyle}>
-                <Link
-                  href="http://www.esd.wa.gov/jobs-and-training"
-                  className={classes.titleLinkStyle}
-                >
-                  Employment Security Department
-                </Link>
-              </Typography>
-              <Typography variant="body2">
-                The agency works with local WorkSource centers and other sites
-                in addition to providing placement assistance.
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <Typography className={classes.headingStyle}>
-                <Link
-                  href="http://www.pfp.org/"
-                  className={classes.titleLinkStyle}
-                >
-                  People for People
-                </Link>
-              </Typography>
-              <Typography variant="body2">
-                Provides several resources, including employment training
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <Typography className={classes.headingStyle}>
-                <Link
-                  href="http://www.goodwill.org/find-jobs-and-services/find-a-job/"
-                  className={classes.titleLinkStyle}
-                >
-                  Goodwill
-                </Link>
-              </Typography>
-              <Typography variant="body2">
-                Offers those with criminal backgrounds pre-release services,
-                basic skills development, employment readiness training,
-                occupational skill training, and job placement assistance
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <Typography className={classes.headingStyle}>
-                <Link
-                  href="http://www.careeronestop.org/"
-                  className={classes.titleLinkStyle}
-                >
-                  Careeronestop
-                </Link>
-              </Typography>
-              <Typography variant="body2">
-                Sponsored by the U.S. Department of Labor, and is a resource for
-                finding jobs and job training
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={6} md={4}>
-              <Typography className={classes.headingStyle}>
-                <Link
-                  href="http://seattle.craigslist.org/"
-                  className={classes.titleLinkStyle}
-                >
-                  Craigslist
-                </Link>
-              </Typography>
-              <Typography variant="body2">
-                Lists many jobs in a variety of occupations
-              </Typography>
-            </Grid>
+            {findWorkContent.map((workSource, idx) => (
+            <Grid key={idx} item xs={12} sm={6} md={4}>
+            <Typography className={classes.headingStyle}>
+              <ExternalLink
+                href={workSource.url}
+                className={classes.titleLinkStyle}
+                name={workSource.name}
+              >
+                {workSource.name}
+              </ExternalLink>
+            </Typography>
+            <Typography variant="body2">
+             {workSource.body}
+            </Typography>
+          </Grid>
+            ))}
+
           </Grid>
         </Container>
       </Box>

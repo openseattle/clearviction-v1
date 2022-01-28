@@ -1,18 +1,19 @@
-import { Box, Container, Grid, Link, Typography } from "@material-ui/core";
+import { Box, Container, Grid, Typography } from "@material-ui/core";
 import { useResourcesStyles } from "../../Styles/useResourcesStyles";
 import ListItemMobileSnap from "../../ui-kit/ListItemMobileSnap";
-import wallet from "../../Assets/wallet.svg";
 import { IconWithHeaderAndText } from "../WhyVacate/IconWithHeaderAndText";
 import {
   LocalAtmOutlined,
   CreateOutlined,
   AssignmentIndOutlined,
 } from "@material-ui/icons";
+import wallet from "../../Assets/wallet.svg";
 import TeamSuccess from "../../Assets/team_success.svg";
 import Achievement from "../../Assets/achievement.svg";
 import { TextWithImage } from "../WhyVacate/TextWithImage";
 import EducationHelp from "./EducationHelp";
 import FedAidRestrictions from "./FedAidRestrictions";
+import { ExternalLink } from "../../ui-kit/ExternalLink";
 
 const AssistanceEducation = () => {
   const classes = useResourcesStyles();
@@ -79,21 +80,20 @@ const AssistanceEducation = () => {
           <br />
           <br />
           If you want to know more, check out the Federal Government’s{" "}
-          <Link
+          <ExternalLink
             href="https://studentaid.ed.gov/sites/default/files/aid-info-for-incarcerated-individuals.pdf"
-            color="initial"
           >
             FAQ on Incarcerated Individuals and Eligibility for Federal Student
             Aid.
-          </Link>
+          </ExternalLink>
         </Typography>
         <Box className={classes.regularContainer}>
           <IconWithHeaderAndText
             icon={LocalAtmOutlined}
             header={
-              <Link color="initial" href="http://www.fafsa.gov">
+              <ExternalLink href="http://www.fafsa.gov">
                 Free Application for Federal Student Aid (FAFSA)
-              </Link>
+              </ExternalLink>
             }
             text={[
               "The main Federal Student Aid, necessary to apply for further. May be completed online at FAFSA’s website.",
@@ -102,9 +102,9 @@ const AssistanceEducation = () => {
           <IconWithHeaderAndText
             icon={CreateOutlined}
             header={
-              <Link color="initial" href="https://studentaid.ed.gov/sa/types/grants-scholarships/pell">
+              <ExternalLink href="https://studentaid.ed.gov/sa/types/grants-scholarships/pell">
                 Federal Pell Grants
-              </Link>
+              </ExternalLink>
             }
             text={[
               "Federal Pell Grants are awarded to undergraduate students who display exceptional financial need and have not earned a bachelor's, graduate, or professional degree.",
@@ -112,9 +112,17 @@ const AssistanceEducation = () => {
           />
           <IconWithHeaderAndText
             icon={AssignmentIndOutlined}
-            header={<Link color="initial" href="https://studentaid.ed.gov/types/work-study">Federal Work-Study Programs</Link>}
+            header={
+              <ExternalLink href="https://studentaid.ed.gov/types/work-study">
+                Federal Work-Study Programs
+              </ExternalLink>
+            }
             text={[
-              "This program provides part-time jobs for undergraduate and graduate students with financial need, allowing them to earn money to help pay education expenses.You apply through your school, you will be paid by your school, and you will work either at your school or an organization that partners with your school. ",
+              `This program provides part-time jobs for undergraduate and 
+              graduate students with financial need, allowing them to earn 
+              money to help pay education expenses.You apply through your school, 
+              you will be paid by your school, and you will work either at your school 
+              or an organization that partners with your school. `,
             ]}
           />
         </Box>
@@ -131,7 +139,8 @@ const AssistanceEducation = () => {
               img={TeamSuccess}
               header={"Federal"}
               text={[
-                "Funded by the federal government and come with many benefits that aren’t typically offered with private loans, such as:",
+                `Funded by the federal government and come with many benefits that aren’t 
+                typically offered with private loans, such as:`,
                 "No credit checks",
                 "Fixed interest rates",
                 "Subsidized loans",

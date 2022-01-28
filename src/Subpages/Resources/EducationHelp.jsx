@@ -1,5 +1,6 @@
-import { Container, Link, List, ListItem, Typography } from "@material-ui/core";
+import { Container, List, ListItem, Typography } from "@material-ui/core";
 import { useResourcesStyles } from "../../Styles/useResourcesStyles";
+import { ExternalLink } from "../../ui-kit/ExternalLink";
 
 const help = [
   {
@@ -64,9 +65,9 @@ const EducationHelp = () => {
         {help.map((helpItem, idx) => (
           <ListItem key={idx}>
             <Typography>
-              <Link color="initial" href={helpItem.url}>
+              <ExternalLink href={helpItem.url}>
                 {helpItem.linkText}
-              </Link>
+              </ExternalLink>
               {helpItem.text}
             </Typography>
           </ListItem>
