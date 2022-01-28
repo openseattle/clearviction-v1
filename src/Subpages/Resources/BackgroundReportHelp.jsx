@@ -14,6 +14,7 @@ const BackgroundReportHelp = () => {
         to vacate your record. There are two options:
       </Typography>
       <BulletedListMui>
+        <Typography variant="h4">Option 1</Typography>
         <li className={classes.listItemsStyle}>
           Get an “unofficial” copy through WATCH for a $11.00 fee. This report
           is not always accurate as it is not based on fingerprint verification.
@@ -22,6 +23,7 @@ const BackgroundReportHelp = () => {
         <Typography variant="h4" align="center">
           OR
         </Typography>
+        <Typography variant="h4">Option 2</Typography>
         <li className={classes.listItemsStyle}>
           If the WATCH printout is not good enough, go to your local police or
           sheriff’s office for an official “record review/challenge” fingerprint
