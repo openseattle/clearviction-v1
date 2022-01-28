@@ -36,7 +36,6 @@ const ShelterList = ({ shelters }) => {
                 <ListItemText primary={shelter.phone} />
               </ListItemLink>
               </List>
-
             </Grid>
           </Grid>
         </ListItem>
