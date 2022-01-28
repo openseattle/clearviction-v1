@@ -5,39 +5,9 @@ import worldMap from "../../Assets/world_map.svg";
 import ListItemMobileSnap from "../../ui-kit/ListItemMobileSnap";
 import SecondaryButton from "../../ui-kit/SecondaryButton";
 import { ExternalLink } from "../../ui-kit/ExternalLink";
+import { workResources } from "../../data/resourcesData";
 
-const findWorkContent = [
-  {
-    name:"Washington State WorkSource",
-    url: "https://www.worksourcewa.com/",
-    body: "WorkSource offers self-help programs, group programs and activities, workshops, one on one consultations, and training programs for job seekers.",
-  },
-  {
-    name:"Employment Security Department",
-    url: "http://www.esd.wa.gov/jobs-and-training",
-    body: "The agency works with local WorkSource centers and other sites in addition to providing placement assistance.",
-  },
-  {
-    name:"People for People",
-    url: "http://www.pfp.org/",
-    body: "Provides several resources, including employment training",
-  },
-  {
-    name:"Goodwill",
-    url: "http://www.goodwill.org/find-jobs-and-services/find-a-job/",
-    body: "Offers those with criminal backgrounds pre-release services, basic skills development, employment readiness training, occupational skill training, and job placement assistance",
-  },
-  {
-    name:"Careeronestop",
-    url: "http://www.careeronestop.org/",
-    body: "Sponsored by the U.S. Department of Labor, and is a resource for finding jobs and job training",
-  },
-  {
-    name:"Craigslist",
-    url: "http://seattle.craigslist.org/",
-    body: "Lists many jobs in a variety of occupations",
-  },
-]
+
 
 const AssistanceEmployment = () => {
   const classes = useResourcesStyles();
@@ -148,7 +118,7 @@ const AssistanceEmployment = () => {
           />
 
           <Grid container spacing={4}>
-            {findWorkContent.map((workSource, idx) => (
+            {workResources.map((workSource, idx) => (
             <Grid key={idx} item xs={12} sm={6} md={4}>
             <Typography className={classes.headingStyle}>
               <ExternalLink
