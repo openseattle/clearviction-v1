@@ -4,34 +4,35 @@ import AlternativeAccord from "../../Components/AlternativeAccord";
 import BackgroundReportHelp from "./BackgroundReportHelp";
 import { useResourcesStyles } from "../../Styles/useResourcesStyles";
 import BulletedListMui from "../../ui-kit/BulletedListMui";
+import { ExternalLink } from "../../ui-kit/ExternalLink";
 
 const nwJusticeProjectLink = (
-  <a href="https://www.washingtonlawhelp.org/files/C9D2EA3F-0350-D9AF-ACAE-BF37E9BC9FFA/attachments/21968678-A4F9-42E5-BA32-58826390C62D/8705en_get-misdemeanor-convictions-off-criminal-record.pdf">
+  <ExternalLink href="https://www.washingtonlawhelp.org/files/C9D2EA3F-0350-D9AF-ACAE-BF37E9BC9FFA/attachments/21968678-A4F9-42E5-BA32-58826390C62D/8705en_get-misdemeanor-convictions-off-criminal-record.pdf">
     Vacation packet from Northwest Justice Project
-  </a>
+  </ExternalLink>
 );
 const courtsWALink = (
-  <a href="https://www.courts.wa.gov/forms/documents/CR08.0670_Obtaining a Certificate of Discharge_2019 07.pdf">
+  <ExternalLink href="https://www.courts.wa.gov/forms/documents/CR08.0670_Obtaining a Certificate of Discharge_2019 07.pdf">
     This packet
-  </a>
+  </ExternalLink>
 );
 
 const teamChildLink = (
-  <a href="https://teamchild.org/wp-content/uploads/2019/03/Sealing-Juvenile-Court-Records-in-Washington-State-2018.pdf">
+  <ExternalLink href="https://teamchild.org/wp-content/uploads/2019/03/Sealing-Juvenile-Court-Records-in-Washington-State-2018.pdf">
     packet from TeamChild
-  </a>
+  </ExternalLink>
 );
 
 const kingCourtLink = (
-  <a href="https://kingcounty.gov/~/media/courts/superior-court/docs/juvenile/juvenile-forms/10-sealing-records-instructions-and-forms-pdf-web.ashx?la=en">
+  <ExternalLink href="https://kingcounty.gov/~/media/courts/superior-court/docs/juvenile/juvenile-forms/10-sealing-records-instructions-and-forms-pdf-web.ashx?la=en">
     packet from King County Superior Court
-  </a>
+  </ExternalLink>
 );
 
 const waCourtFormsLink = (
-  <a href="https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38">
+  <ExternalLink href="https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38">
     Here you can find a full list of all Washington state court forms
-  </a>
+  </ExternalLink>
 );
 
 const misdemeanorDetails = (
@@ -115,14 +116,14 @@ const allFormsDetails = (
       that the version of Word you are using may affect the layout of the
       document. The completed document should conform to all rules governing
       acceptable document format (see{" "}
-      <a href="https://www.courts.wa.gov/court_rules/pdf/GR/GA_GR_14_00_00.pdf">
+      <ExternalLink href="https://www.courts.wa.gov/court_rules/pdf/GR/GA_GR_14_00_00.pdf">
         General Rule 14
-      </a>
+      </ExternalLink>
       ) - source:{" "}
-      <a href="https://kingcounty.gov/courts/superior-court/juvenile.aspx">
+      <ExternalLink href="https://kingcounty.gov/courts/superior-court/juvenile.aspx">
         {" "}
         King County Juvenile Court
-      </a>
+      </ExternalLink>
     </Typography>
   </div>
 );

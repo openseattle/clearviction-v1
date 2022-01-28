@@ -3,6 +3,7 @@ import AlternativeAccord from "../../Components/AlternativeAccord";
 import TabPanelGroup from "../../Components/TabPanelGroup";
 import { useResourcesStyles } from "../../Styles/useResourcesStyles";
 import BulletedListMui from "../../ui-kit/BulletedListMui";
+import { ExternalLink } from "../../ui-kit/ExternalLink";
 
 const LFODetails = (
   <div>
@@ -12,13 +13,13 @@ const LFODetails = (
     </Typography>
     <BulletedListMui>
       <li>
-        <a href="https://nwjustice.org/clear-hotline">CLEAR hotline</a> - refer
+        <ExternalLink href="https://nwjustice.org/clear-hotline">CLEAR hotline</ExternalLink> - refer
         you to legal organizations
       </li>
       <li>
-        <a href="https://columbialegal.org/wp-content/uploads/2019/10/CLS-Re-Entry-Clinic-Brochure.pdf">
+        <ExternalLink href="https://columbialegal.org/wp-content/uploads/2019/10/CLS-Re-Entry-Clinic-Brochure.pdf">
           Re-Entry Clinic
-        </a>{" "}
+        </ExternalLink>{" "}
         - a joint project of Columbia Legal Services and FareStart, focusing on
         legal issues related to LFO's
       </li>
@@ -30,9 +31,9 @@ const LFODetails = (
     <Typography>
       If you want more info about your rights concerning LFOs, consult the
       website of{" "}
-      <a href="https://www.washingtonlawhelp.org/issues/criminal/legal-financial-obligations-restitution-reduc-1?location=Yakima%20County">
+      <ExternalLink href="https://www.washingtonlawhelp.org/issues/criminal/legal-financial-obligations-restitution-reduc-1?location=Yakima%20County">
         WashingtonLawHelp
-      </a>
+      </ExternalLink>
       .
     </Typography>
   </div>
@@ -45,9 +46,9 @@ const CourtFeesDetails = (
         Ask the Court Clerk which court will hear your motion and which fees
         will have to be paid. Even if there is no hearing, there might be an Ex
         Parte fee for an agreed order (refer to{" "}
-        <a href="https://www.courts.wa.gov/court_dir/?fa=court_dir.county">
+        <ExternalLink href="https://www.courts.wa.gov/court_dir/?fa=court_dir.county">
           directory of County Clerk’s offices
-        </a>
+        </ExternalLink>
         )
       </li>
       <li>
@@ -62,16 +63,16 @@ const CourtFeesDetails = (
     <BulletedListMui>
       <li>
         Use this{" "}
-        <a href="https://www.washingtonlawhelp.org/files/C9D2EA3F-0350-D9AF-ACAE-BF37E9BC9FFA/attachments/3928A184-D6E5-9324-4FB9-495A060A017B/3204en_filing-motion-for-fee-waiver.pdf">
+        <ExternalLink href="https://www.washingtonlawhelp.org/files/C9D2EA3F-0350-D9AF-ACAE-BF37E9BC9FFA/attachments/3928A184-D6E5-9324-4FB9-495A060A017B/3204en_filing-motion-for-fee-waiver.pdf">
           packet from WashingtonLawHelp
-        </a>{" "}
+        </ExternalLink>{" "}
         to find out if you are eligible to waive your fees (p. 1-2). It also
         includes the instructions to ask for a fee waiver (p. 4-9) and all
         necessary forms (p. 10-14). If you have trouble filling out the
         documents, use this website created by Northwest Justice{" "}
-        <a href="https://lawhelpinteractive.org/Interview/GenerateInterview/7063/engine">
+        <ExternalLink href="https://lawhelpinteractive.org/Interview/GenerateInterview/7063/engine">
           to help fill out the documents for free
-        </a>
+        </ExternalLink>
         .
       </li>
       <li>
@@ -97,7 +98,7 @@ const legalHotlineDetails = (
   <div>
     <Typography>
       Many pro bono services are only available after being refered by{" "}
-      <a href="https://nwjustice.org/clear-hotline">CLEAR</a>, a toll-free legal
+      <ExternalLink href="https://nwjustice.org/clear-hotline">CLEAR</ExternalLink>, a toll-free legal
       hotline:
     </Typography>
     <BulletedListMui>
@@ -108,7 +109,7 @@ const legalHotlineDetails = (
     </BulletedListMui>
     <Typography>
       You can also apply online at{" "}
-      <a href="https://nwjustice.org/apply-online">CLEAR*Online</a>.
+      <ExternalLink href="https://nwjustice.org/apply-online">CLEAR*Online</ExternalLink>.
     </Typography>
     <Typography>
       Listed below are attorneys and clinics you can contact directly.
@@ -119,29 +120,29 @@ const legalHotlineDetails = (
 const adultDetails = (
   <List>
     <ListItem>
-      <a href="https://serve.gonzaga.edu/agency/detail/?agency_id=101214">
+      <ExternalLink href="https://serve.gonzaga.edu/agency/detail/?agency_id=101214">
         Center for Justice (Spokane County)
-      </a>
+      </ExternalLink>
     </ListItem>
     <ListItem>
-      <a href="https://ccvlp.org/">
+      <ExternalLink href="https://ccvlp.org/">
         Clark County Volunteer Lawyers Program (CCVLP) (Clark County)
-      </a>
+      </ExternalLink>
     </ListItem>
     <ListItem>
-      <a href="http://cwlap.org/">
+      <ExternalLink href="http://cwlap.org/">
         Cowlitz-Wahkiakum Legal Aid (Cowlitz & Wahkiakum County)
-      </a>
+      </ExternalLink>
     </ListItem>
     <ListItem>
-      <a href="https://nwjustice.org/get-legal-help">
+      <ExternalLink href="https://nwjustice.org/get-legal-help">
         Northwest Justice Project (Statewide - 15 offices)
-      </a>
+      </ExternalLink>
     </ListItem>
     <ListItem>
-      <a href="https://www.kcba.org/For-the-Public/Free-Legal-Assistance/The-Records-Project">
+      <ExternalLink href="https://www.kcba.org/For-the-Public/Free-Legal-Assistance/The-Records-Project">
         The Records Project (if conviction is in King County)
-      </a>
+      </ExternalLink>
     </ListItem>
   </List>
 );
@@ -149,15 +150,15 @@ const adultDetails = (
 const juvenilesDetails = (
   <List>
     <ListItem>
-      <a href="https://teamchild.org/record-sealing/">
+      <ExternalLink href="https://teamchild.org/record-sealing/">
         TeamChild (Statewide - 4 offices)
-      </a>
+      </ExternalLink>
     </ListItem>
     <ListItem>
-      <a href="https://ccyj.org/our-work/empowering-foster-homeless-youth/">
+      <ExternalLink href="https://ccyj.org/our-work/empowering-foster-homeless-youth/">
         Center for Children & Youth Justice (CCYJ) (Brenton, Franklin, King &
         Walla Walla County)
-      </a>
+      </ExternalLink>
     </ListItem>
   </List>
 );
@@ -165,24 +166,24 @@ const juvenilesDetails = (
 const patronsDetails = (
   <List>
     <ListItem>
-      <a href="https://kcll.org/contact-us/">
+      <ExternalLink href="https://kcll.org/contact-us/">
         Public Law Library of King County Legal Clinics (KCLL) (King County)
-      </a>
+      </ExternalLink>
     </ListItem>
     <ListItem>
-      <a href="https://www.kcba.org/For-Lawyers/Pro-Bono-Services/YLD-Law-Library-Walk-in-Clinic">
+      <ExternalLink href="https://www.kcba.org/For-Lawyers/Pro-Bono-Services/YLD-Law-Library-Walk-in-Clinic">
         Walk-In Clinic (WIC) (King County)
-      </a>
+      </ExternalLink>
     </ListItem>
     <ListItem>
-      <a href="http://www.kcba.org/For-the-Public/Free-Legal-Assistance/Neighborhood-Legal-Clinics">
+      <ExternalLink href="http://www.kcba.org/For-the-Public/Free-Legal-Assistance/Neighborhood-Legal-Clinics">
         King County Bar (King County)
-      </a>
+      </ExternalLink>
     </ListItem>
     <ListItem>
-      <a href="https://www.ugm.org/what-we-do/stabilization/legal-services/#">
+      <ExternalLink href="https://www.ugm.org/what-we-do/stabilization/legal-services/#">
         Open Door Legal Services (Seattle, Bellevue & Everett)
-      </a>
+      </ExternalLink>
     </ListItem>
   </List>
 );
