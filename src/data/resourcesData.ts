@@ -4,7 +4,7 @@ type JobHelpResource ={
   body: string;
 }
 
-export const workResources: JobHelpResource[] = [
+const workResources: JobHelpResource[] = [
   {
     name:"Washington State WorkSource",
     url: "https://www.worksourcewa.com/",
@@ -36,3 +36,4 @@ export const workResources: JobHelpResource[] = [
     body: "Lists many jobs in a variety of occupations",
   },
 ]
+export default workResources;

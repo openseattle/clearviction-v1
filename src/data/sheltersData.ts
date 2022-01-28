@@ -142,5 +142,4 @@ const additionalLinks: additionalLinksType[] = [
     url: "https://affordablehousingonline.com/housing-search/Washington",
   },
 ]
-
 export {forMen, forWomen, findHousing, additionalLinks};

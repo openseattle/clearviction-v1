@@ -211,6 +211,4 @@ const associations:publicHousingContact[] = [
   phone: "(509) 453-3106",
 },
 ]
-
-
 export default associations;

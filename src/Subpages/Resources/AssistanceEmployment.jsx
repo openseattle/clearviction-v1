@@ -5,7 +5,7 @@ import worldMap from "../../Assets/world_map.svg";
 import ListItemMobileSnap from "../../ui-kit/ListItemMobileSnap";
 import SecondaryButton from "../../ui-kit/SecondaryButton";
 import { ExternalLink } from "../../ui-kit/ExternalLink";
-import { workResources } from "../../data/resourcesData";
+import workResources from "../../data/resourcesData";
 
 
 
