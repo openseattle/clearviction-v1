@@ -279,7 +279,7 @@ const AboutPage = () => {
           <Typography className={classes.ourTeamTitle} variant="h2">
             The Team
           </Typography>
-          <Grid container style={{borderStyle: "solid", borderColor: "white", justifyContent: "space-evenly"}}>
+          <Grid container >
             {team.map((member, idx) => (
               <Grid
                 className={classes.cardGrid}
@@ -289,7 +289,6 @@ const AboutPage = () => {
                 sm={4}
                 md={3}
                 lg={3}
-                style={{borderStyle: "solid", borderColor: "white", justifyContent: "space-evenly"}}
               >
                 <TeamCard  member={member} />
               </Grid>
