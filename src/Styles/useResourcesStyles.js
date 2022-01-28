@@ -57,5 +57,14 @@ export const useResourcesStyles = makeStyles((theme) => ({
       textDecoration: "underline",
     }
   },
+  reportStyle: {
+    padding: theme.spacing(3),
+    [theme.breakpoints.down("xs")]: {
+      padding: theme.spacing(0),
+    }
+  },
+  reportHeading: {
+    marginBottom: theme.spacing(3),
 
+  },
 }));
