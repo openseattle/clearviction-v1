@@ -70,8 +70,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 500,
   },
   roleImage: {
-    height: 300,
-    width: 300,
+    width: "100%",
   },
   titleRoles: {
     padding: theme.spacing(5),
