@@ -6,6 +6,12 @@ type Page = {
 
 const pages: Page[] = [
   { name: "Calculator", url: "/calculator" },
+  { name: "Why Vacate", url: "/why-vacate", subpages: [
+    {name: "Housing", url: "/why-vacate/housing" },
+    {name: "Employment", url: "/why-vacate/employment" },
+    {name: "Education", url: "/why-vacate/education" },
+    {name: "Government Assistance", url: "/why-vacate/government-assistance" }
+  ]},
   {
     name: "Get Involved",
     url: "/get-involved",

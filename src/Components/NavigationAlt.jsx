@@ -10,11 +10,9 @@ import {
   ListItem,
   Container,
   makeStyles,
+  ButtonGroup,
 } from "@material-ui/core";
-import {
-  MenuSharp as MenuIcon,
-  CloseSharp,
-} from "@material-ui/icons";
+import { MenuSharp as MenuIcon, CloseSharp } from "@material-ui/icons";
 import pages from "../data/siteMap";
 import navLogo from "../Assets/cvp-logo-white.png";
 import { useState } from "react";
@@ -90,9 +88,11 @@ const NavigationAlt = () => {
 
           {/* desktop menu */}
           <Box display={{ xs: "none", md: "flex" }}>
-            {pages.map((page) => (
-              <NavButton page={page} />
-            ))}
+            <ButtonGroup>
+              {pages.map((page) => (
+                <NavButton page={page} />
+              ))}
+            </ButtonGroup>
           </Box>
           {/* mobile menu */}
 
@@ -119,7 +119,7 @@ const NavigationAlt = () => {
                 </IconButton>
               </ListItem>
               {pages.map((page, idx) => (
-               <NavButtonMobile key={idx} page={page} classes={classes}/> 
+                <NavButtonMobile key={idx} page={page} classes={classes} />
               ))}
               <ListItem>
                 <Box justifyContent="center">

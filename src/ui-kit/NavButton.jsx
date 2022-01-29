@@ -9,8 +9,7 @@ import { ExpandMoreOutlined } from "@material-ui/icons";
 import { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
-  navLink: {
-    margin: 15,
+  navButtonStyle: {
     color: "white",
     textTransform: "none",
     "&:hover": { color: "white", textDecoration: "underline" },
@@ -35,7 +34,7 @@ const NavButton = ({ page, theme }) => {
   if (subpages) {
     return (
       <div>
-        <Button className={classes.navLink} onClick={handleClick}>
+        <Button className={classes.navButtonStyle} onClick={handleClick}>
           <Typography className={classes.navText}>{name}</Typography>
           <ExpandMoreOutlined />
         </Button>
@@ -57,7 +56,7 @@ const NavButton = ({ page, theme }) => {
     );
   } else {
     return (
-      <Button className={classes.navLink} href={url}>
+      <Button className={classes.navButtonStyle} href={url}>
         <Typography className={classes.navText}>{name}</Typography>
       </Button>
     );
