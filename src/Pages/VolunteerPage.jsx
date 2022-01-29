@@ -66,8 +66,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   teamMeeting: {
-    maxHeight: 500,
-    maxWidth: 500,
+    width: "100%",
   },
   roleImage: {
     width: "100%",
