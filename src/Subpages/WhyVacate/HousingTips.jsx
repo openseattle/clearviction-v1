@@ -62,7 +62,7 @@ export const HousingTips = () => {
                 <IconWithHeaderAndText
                   icon={AttachFileOutlined}
                   header={"Provide the “University of Minnesota Study” (if applicable)"}
-                  text={["In the 1960s, the University of Minnesota conducted a study on criminal activity concluding that if you’ve committed a crime, but don’t commit another crime for at least seven years, you are aren’t any more likely to commit a crime as someone who had never been convicted in the first place.", 
+                  text={["In the 1960s, the University of Minnesota conducted a study on criminal activity concluding that if you’ve committed a crime, but don’t commit another crime for at least seven years, you aren’t any more likely to commit a crime as someone who had never been convicted in the first place.", 
                   "If you have been a member of everyday society for seven years without committing a crime, you can provide this study, which the Department of Housing and Urban Development is pointing to in an effort to have landlords broaden their application standards."]}
                 />
               </List>

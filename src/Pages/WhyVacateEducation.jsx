@@ -17,7 +17,7 @@ const WhyVacateEducation = () => {
           <Grid container alignItems="flex-start">
             <Typography className={classes.title} variant="h2">Educational barriers</Typography>
             <Typography className={classes.contentText} variant="body1">
-              Conviction history should not affect educational opportunities after jail or prison, however, many college and universities will collect background information and have full discretion over the admistion deciding process. These are the main educational challenges faced by those with convicitons:
+              Conviction history should not affect educational opportunities after jail or prison, however, many college and universities will collect background information and have full discretion over the admistion deciding process. These are the main educational challenges faced by those with convictions:
             </Typography>
           </Grid>
         </Container>

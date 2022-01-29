@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     fontFamily: ["roboto", "sans-serif"],
     fontWeight: 500,
-    fontSize: 60,
+    fontSize: 40,
   },
   donationDescStyle: {
     textAlign: "center",
@@ -101,25 +101,25 @@ const donationLevels = [
     name: "level 1",
     amount: "$10",
     donationImage: progress,
-    desc: "pay for a monthly fee for one of our technological tools",
+    desc: "Contribute toward the monthly cost of the tools required to provide this service",
   },
   {
     name: "level 2",
     amount: "$15",
     donationImage: discovery,
-    desc: "fund a research participant’s time",
+    desc: "Buy groceries for one of our research subjects",
   },
   {
     name: "level 3",
     amount: "$30",
     donationImage: laptop,
-    desc: "pay the filing fee for a low-income individual",
+    desc: "Pay the filing fee for a low-income individual",
   },
   {
     name: "level 4",
-    amount: "Any",
+    amount: "Any $ Amount",
     donationImage: note,
-    desc: "directly help support those with convictions start fresh",
+    desc: "Directly help support those with convictions start fresh",
   },
 ];
 
@@ -176,11 +176,14 @@ const DonatePage = () => {
               </Typography>
               <Typography className={classes.donateBody}>Venmo @Seamus-Brugh by</Typography>
               <Typography component="ol" className={classes.donateBody}>
-                <li>Searching the username</li>
+                <li>Searching the username (@Seamus-Brugh)</li>
+                OR
                 <li>Scanning the QR code in-app</li>
               </Typography>
               <Typography className={classes.donateBody2}>
-                Note: do not mark as goods or service!
+                Note: 
+                <li>Do not mark as goods or service!</li>
+                <li>Be sure to include "Helping people get a fresh start!" in the Venmo description section!</li>
               </Typography>
             </Grid>
           </Grid>
@@ -206,7 +209,7 @@ const DonatePage = () => {
             <AccordionDetails>
               <Typography>
                 As we're all volunteers, any of our donations will go directly
-                to helped those convicted and give them a fresh start.
+                to helping those convicted and give them a fresh start.
                 <br />
                 <br />
                 Your support will help pay for the technological tools needed by
@@ -258,7 +261,7 @@ const DonatePage = () => {
                 external payment method like a bank account or credit card.
                 <br />
                 <br />
-                You can sign up for a Venmo account here: https://get.venmo.com
+                You can sign up for a Venmo account here: <a href="https://account.venmo.com/signup">https://get.venmo.com</a>
               </Typography>
             </AccordionDetails>
           </Accordion>
