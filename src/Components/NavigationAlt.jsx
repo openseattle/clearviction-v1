@@ -11,11 +11,15 @@ import {
   Container,
   makeStyles,
 } from "@material-ui/core";
-import { MenuSharp as MenuIcon, CloseSharp } from "@material-ui/icons";
+import {
+  MenuSharp as MenuIcon,
+  CloseSharp,
+} from "@material-ui/icons";
 import pages from "../data/siteMap";
 import navLogo from "../Assets/cvp-logo-white.png";
 import { useState } from "react";
 import NavButton from "../ui-kit/NavButton";
+import NavButtonMobile from "../ui-kit/NavButtonMobile";
 
 const useStyles = makeStyles((theme) => ({
   navigationLogo: {
@@ -37,13 +41,26 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     fontSize: "3rem",
   },
+  menuButton: {
+    color: "white",
+    fontFamily: ["Roboto", "sans-serif"],
+  },
+  subMenuButton: {
+    color: "white",
+    fontFamily: ["Roboto", "sans-serif"],
+    marginLeft: theme.spacing(2),
+  },
+  menuStyle: {
+    padding: theme.spacing(3),
+  },
+  expandIconStyle: {
+    color: "white",
+    margin: theme.spacing(1),
+  },
 }));
 
 const NavigationAlt = () => {
-  const classes = useStyles();
-
   const [menuState, setMenuState] = useState(null);
-
   const handleOpenMenu = (event) => {
     setMenuState(event.currentTarget);
   };
@@ -52,11 +69,13 @@ const NavigationAlt = () => {
     setMenuState(null);
   };
 
+  const classes = useStyles();
+
   return (
     <AppBar position="static" color="primary">
       <Container>
         <Toolbar>
-          <Box component={Button} href="/" disableRipple>
+          <Box component={Button} href="/">
             <Box
               className={classes.navigationLogo}
               component="img"
@@ -72,7 +91,7 @@ const NavigationAlt = () => {
           {/* desktop menu */}
           <Box display={{ xs: "none", md: "flex" }}>
             {pages.map((page) => (
-              <NavButton key={page.name} pageName={page.name} url={page.url} />
+              <NavButton page={page} />
             ))}
           </Box>
           {/* mobile menu */}
@@ -93,16 +112,14 @@ const NavigationAlt = () => {
             open={Boolean(menuState)}
             onClose={handleCloseMenu}
           >
-            <List>
+            <List className={classes.menuStyle}>
               <ListItem style={{ justifyContent: "center" }}>
                 <IconButton onClick={handleCloseMenu}>
                   <CloseSharp className={classes.closeIcon} />
                 </IconButton>
               </ListItem>
-              {pages.map((page) => (
-                <ListItem key={page.name} style={{ justifyContent: "center" }}>
-                  <NavButton pageName={page.name} url={page.url} />
-                </ListItem>
+              {pages.map((page, idx) => (
+               <NavButtonMobile key={idx} page={page} classes={classes}/> 
               ))}
               <ListItem>
                 <Box justifyContent="center">
