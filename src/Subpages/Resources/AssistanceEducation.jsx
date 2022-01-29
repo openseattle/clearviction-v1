@@ -64,7 +64,7 @@ const AssistanceEducation = () => {
                 </Typography>
               </div>
             }
-            image={<Box component="img" src={wallet} height={300} />}
+            image={<Box component="img" src={wallet} width={"100%"} />}
           />
         </Container>
       </Box>
