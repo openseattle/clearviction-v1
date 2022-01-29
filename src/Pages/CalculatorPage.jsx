@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { trackPageview, trackClick } from "../trackingUtils";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import calculatorPages from "../data/calculatorPages";
 import ToolTipModal from "../Components/ToolTipModal";
 import Text from "../ui-kit/Text";
@@ -8,7 +8,8 @@ import ProgressBar from "../Components/ProgressBar";
 import "../CSS/Calculator.css";
 
 /** MATERIAL UI IMPORTS */
-import { Box, Link, Container, Button, Grid } from "@material-ui/core";
+import { Box, List, Container, Button, Grid, Typography } from "@material-ui/core";
+import { CVPListItem } from "../ui-kit/ListItem";
 
 const BUTTON_COLORS = {
   blue: "#4e6c99",
@@ -56,24 +57,27 @@ const CalculatorPage = () => {
         return <Text key={text} text={text} variant={"h4"}></Text>;
       case "link":
         return (
-          <Link
-            href={href}
-            target="_blank"
-            rel="noreferrer"
-            key={text}
-            onClick={() => trackClick(text)}
-            style={{display: "block", marginTop: "0.5em", textDecoration: "underline"}}
-          >
-            {text}
-          </Link>
+          <List>
+            <CVPListItem
+              isLink={true}
+              useBulletPoint={true}
+              text={text}
+              href={href}
+              onClick={() => trackClick(text)}
+            />
+          </List>
         );
       case "list":
         return (
-          <ul key={items[0]}>
-            {items.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
+          <List>
+            { items.map((item) => (
+              <CVPListItem
+                isLink={false}
+                useBulletPoint={true}
+                text={item}
+              />
+            ))} 
+          </List>
         );
       default:
         break;
@@ -86,7 +90,7 @@ const CalculatorPage = () => {
         padding: 20,
       }}
     >
-      <Container maxWidth="xs" padding={10}>
+      <Container maxWidth="sm" padding={10}>
         <Grid container direction="column" spacing={2}>
           {progressBar && (
             <ProgressBar
@@ -100,16 +104,19 @@ const CalculatorPage = () => {
           {buttons && renderButtons(buttons)}
           {tooltip && <ToolTipModal text={tooltip} />}
           {footerLink && (
-            <a
+            <Link
               target="_blank"
               rel="noreferrer"
               href={footerLink.href}
               onClick={() => trackClick(footerLink.text)}
             >
               {footerLink.text}
-            </a>
+            </Link>
           )}
-          {disclaimer && <Text text={disclaimer} variant={"h6"}></Text>}
+          {disclaimer && 
+            <Container className="disclaimer">
+              <Typography variant="h6">{disclaimer}</Typography>
+            </Container>}
         </Grid>
       </Container>
     </Box>

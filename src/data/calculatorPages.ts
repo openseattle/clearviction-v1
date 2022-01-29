@@ -49,10 +49,10 @@ const data: Pages = {
       {
         type: BodyType.LIST,
         items: [
-          "• The date and violation of your misdemeanor conviction",
-          "• If and when you completed the terms of your sentence",
-          "• Pending charges and/or new convictions",
-          "• Any court orders against you*",
+          "The date and violation of your misdemeanor conviction",
+          "If and when you completed the terms of your sentence",
+          "Pending charges and/or new convictions",
+          "Any court orders against you*",
         ],
       },
       {
@@ -62,10 +62,10 @@ const data: Pages = {
       {
         type: BodyType.LIST,
         items: [
-          "• A domestic violence protection order",
-          "• A no-contact order",
-          "• An antiharassment order",
-          "• A civil restraining order",
+          "A domestic violence protection order",
+          "A no-contact order",
+          "An antiharassment order",
+          "A civil restraining order",
         ],
       },
     ],
