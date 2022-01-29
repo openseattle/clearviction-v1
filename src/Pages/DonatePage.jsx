@@ -183,7 +183,7 @@ const DonatePage = () => {
               <Typography className={classes.donateBody2}>
                 Note: 
                 <li>Do not mark as goods or service!</li>
-                <li>Be sure to include "Helping people get a fresh start!" in the Venmo description section!</li>
+                <li>Be sure to include "Helping people get a fresh start!" in the Venmo description section.</li>
               </Typography>
             </Grid>
           </Grid>
