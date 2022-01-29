@@ -11,7 +11,6 @@ const useStyles = makeStyles({
   heroSubtitle: {
     marginTop: "2rem",
     fontSize: 20,
-    maxWidth: "780px"
   },
 });
 const HeroPanel = (props) => {
