@@ -115,7 +115,7 @@ const AssistanceEmployment = () => {
                 </div>
               </Grid>
             </Grid>
-            <Grid item xs={12} sm={6} justifyContent="center">
+            <Grid item xs={12} sm={6} >
               <Box component="img" src={officeWork} height={"100%"} />
             </Grid>
             {workResources.map((workSource, idx) => (
