@@ -40,29 +40,23 @@ const useStyles = makeStyles((theme) => ({
   },
   titleAlt: {
     margin: theme.spacing(2),
-    paddingBottom: theme.spacing(2),
+    paddingBottom: theme.spacing(1),
     color: "white",
   },
   backgroundSecondary: {
-    height: 400,
+    minHeight: 357,
     backgroundColor: theme.palette.primary.dark,
     padding: theme.spacing(5),
     [theme.breakpoints.down("sm")]: {
       padding: theme.spacing(2),
     },
-    [theme.breakpoints.down("xs")]: {
-      height: 350,
-    },
   },
   backgroundLightSecondary: {
-    height: 400,
+    minHeight: 350,
     backgroundColor: theme.palette.primary.light,
     padding: theme.spacing(5),
     [theme.breakpoints.down("sm")]: {
       padding: theme.spacing(1),
-    },
-    [theme.breakpoints.down("xs")]: {
-      height: 350,
     },
   },
   teamMeeting: {
@@ -84,7 +78,8 @@ const useStyles = makeStyles((theme) => ({
     }
   },
   buttonPad: {
-    margin: theme.spacing(10),
+    marginTop: theme.spacing(10),
+    marginBottom: theme.spacing(10),
   },
   emailLink: {
     color: theme.palette.highlight.main,
@@ -134,7 +129,7 @@ const VolunteerPage = () => {
               className={classes.backgroundLightSecondary}
               item
               xs={12}
-              sm={6}
+              sm={12}
               md={6}
             >
               <Typography className={classes.titleAlt} variant="h2">
@@ -172,7 +167,7 @@ const VolunteerPage = () => {
               className={classes.backgroundSecondary}
               item
               xs={12}
-              sm={6}
+              sm={12}
               md={6}
             >
               <Box>
