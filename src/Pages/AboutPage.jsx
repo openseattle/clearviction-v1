@@ -5,7 +5,6 @@ import {
   Box,
   makeStyles,
   List,
-  ListItem,
   ListItemIcon,
 } from "@material-ui/core";
 import TeamCard from "../Components/TeamCard";
@@ -53,6 +52,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: theme.spacing(6),
     marginBottom: theme.spacing(6),
     padding: theme.spacing(5),
+    [theme.breakpoints.down("xs")]: {
+      paddingLeft: theme.spacing(1),
+      paddingRight: theme.spacing(1),
+    }
   },
   theProblemRootleft: {
     backgroundColor: "white",
@@ -70,11 +73,8 @@ const useStyles = makeStyles((theme) => ({
   problemRootRight: {
     backgroundColor: theme.palette.primary.dark,
     color: "white",
-    padding: theme.spacing(2),
-    [theme.breakpoints.up("sm")]: {
-      paddingTop: theme.spacing(4),
-      padding: theme.spacing(3),
-    },
+    padding: theme.spacing(4),
+    paddingBottom: theme.spacing(5),
   },
   problemRightListItem: {
     padding: theme.spacing(3),
@@ -175,8 +175,8 @@ const AboutPage = () => {
                 <Typography className={classes.rootsBodyText} variant="body1">
                   We have identified opportunities to use technology to
                   streamline this process and want to use our resources to
-                  appropriately meet user needs, creating an easier way to vacate
-                  convictions.
+                  appropriately meet user needs, creating an easier way to
+                  vacate convictions.
                 </Typography>
               }
             />
@@ -210,36 +210,39 @@ const AboutPage = () => {
               </Typography>
             </Grid>
             <Grid className={classes.problemRootRight} item sm={12} md={6}>
-              <List>
-                <ListItem>
-                  <ListItemIcon>
+              <Grid container justifyContent="center">
+                <Grid item  md={3} >
                     <HourglassEmpty className={classes.theProblemIcon} />
-                  </ListItemIcon>
-                  <Typography variant="subtitle1">
+                </Grid>
+                <Grid item sm={12} md={8}>
+                  <Typography>
                     Each step requires time and know-how, increasing the barrier
                     to entry for applicants
                   </Typography>
-                </ListItem>
-
-                <ListItem>
+                </Grid>
+                <Grid item md={3}>
                   <ListItemIcon>
                     <LocalAtmOutlined className={classes.theProblemIcon} />
                   </ListItemIcon>
-                  <Typography variant="subtitle1">
+                </Grid>
+                <Grid item sm={12}  md={8} >
+                  <Typography>
                     While hiring an attorney can help simplify the process, it’s
                     unaffordable for most
                   </Typography>
-                </ListItem>
-                <ListItem>
+                </Grid>
+                <Grid item md={3}>
                   <ListItemIcon>
                     <PanToolOutlined className={classes.theProblemIcon} />
                   </ListItemIcon>
-                  <Typography variant="subtitle1">
+                </Grid>
+                <Grid item sm={12}  md={8}>
+                  <Typography>
                     Free volunteer services are available but they are often
                     inaccessible and don’t cover all steps of the process
                   </Typography>
-                </ListItem>
-              </List>
+                </Grid>
+              </Grid>
             </Grid>
           </Grid>
         </Container>
