@@ -82,6 +82,7 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(10),
   },
   emailLink: {
+    overflowWrap: "break-word",
     color: theme.palette.highlight.main,
     "&:hover": {
       color: theme.palette.highlight.main,
