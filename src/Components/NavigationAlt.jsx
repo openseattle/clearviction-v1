@@ -89,8 +89,8 @@ const NavigationAlt = () => {
           {/* desktop menu */}
           <Box display={{ xs: "none", md: "flex" }}>
             <ButtonGroup>
-              {pages.map((page) => (
-                <NavButton page={page} />
+              {pages.map((page, idx) => (
+                <NavButton key={idx} page={page} />
               ))}
             </ButtonGroup>
           </Box>

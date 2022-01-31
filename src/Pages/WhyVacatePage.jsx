@@ -35,9 +35,7 @@ const WhyVacatePage = () => {
             "A conviction vacation seals the offense from your record and will give you more chance to access:"
           }
         />
-        <Box display="flex" justifyContent={"center"}>
-          <NavCardGroup subPages={pages}/>
-        </Box>
+      <NavCardGroup subPages={pages} xs={12} sm={3} md={3}/>
       </Container>
       <Route exact path="/why-vacate/housing">
         <WhyVacateHousing />

@@ -1,7 +1,6 @@
 import {
   Box,
-  Card,
-  CardActionArea,
+  Button,
   Grid,
   makeStyles,
   Typography,
@@ -9,18 +8,14 @@ import {
 import { NavLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    justifyContent: "center",
-  },
   cardStyle: {
-    maxWidth: 400,
+    width: "100%",
+    minHeight: 80,
     borderRadius: 0,
-    margin: 1,
     backgroundColor: theme.palette.primary.light,
     color: "white",
     "&:hover": {
-      color: "white",
+      color: "black",
     },
   },
   cardStyleActive: {
@@ -30,41 +25,32 @@ const useStyles = makeStyles((theme) => ({
   cardTextStyle: {
     padding: theme.spacing(1),
   },
+  gridStyle: {
+    padding: 2,
+  }
 }));
 
 const NavCardGroup = (props) => {
   const classes = useStyles();
-  const { subPages } = props;
+  const { subPages, xs, sm, md } = props;
   return (
     <Box>
-      <Grid container className={classes.root}>
+      <Grid container >
         {subPages.map((pageCard) => (
-          <Card
-            className={classes.cardStyle}
-            activeClassName={classes.cardStyleActive}
-            key={pageCard.name}
-            component={NavLink}
-            to={pageCard.link}
-          >
-            <CardActionArea>
-              <Box padding={3}>
-                <Typography
-                  className={classes.cardTextStyle}
-                  variant="h3"
-                  align="center"
-                >
-                  {pageCard.name}
-                </Typography>
-                { pageCard.desc && <Typography
-                  className={classes.cardTextStyle}
-                  variant="body1"
-                  align="center"
-                >
-                  {pageCard.desc}
-                </Typography>}
-              </Box>
-            </CardActionArea>
-          </Card>
+          <Grid className={classes.gridStyle} item key={pageCard.name} xs={xs} sm={sm} md={md}>
+            <Button
+              className={classes.cardStyle}
+              activeClassName={classes.cardStyleActive}
+              component={NavLink}
+              to={pageCard.link} 
+              >
+                <div>
+                <Typography variant="h4">{pageCard.name}</Typography>
+                <Typography variant="body2">{pageCard.desc}</Typography>
+
+                </div>
+            </Button>
+          </Grid>
         ))}
       </Grid>
     </Box>
