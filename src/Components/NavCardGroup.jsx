@@ -11,6 +11,9 @@ const useStyles = makeStyles((theme) => ({
   cardStyle: {
     width: "100%",
     minHeight: 80,
+    [theme.breakpoints.up("sm")]:{
+      minHeight: 120,
+    },
     borderRadius: 0,
     backgroundColor: theme.palette.primary.light,
     color: "white",
