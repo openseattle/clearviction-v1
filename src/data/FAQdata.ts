@@ -26,7 +26,7 @@ const data = {
       header:
         "If my conviction meets the eligibility criteria, does that guarantee that I can vacate it?",
       body1:
-        "A request to vacate may be denied for other reasons, and is up to the discretion of the judge.The most common reasons that a request can be denied is if: ",
+        "A request to vacate may be denied for other reasons, and is up to the discretion of the judge. The most common reasons that a request can be denied is if: ",
       body2:
         "(1) the court does not believe that vacating your conviction will be in the interest of society, ",
       body3: "(2) you violated probation or have not paid off your fines, ",
