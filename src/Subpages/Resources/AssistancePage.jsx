@@ -34,7 +34,7 @@ const AssistancePage = () => {
             "Re-entry programs to help you find housing, get a new job, and further your education after a felony conviction."
           }
         />
-        <NavCardGroup subPages={subPages} />
+        <NavCardGroup subPages={subPages} xs={12} sm={12} md={4} />
       </Container>
       <Route exact path="/resources/assistance/housing">
         <AssistanceHousing />
