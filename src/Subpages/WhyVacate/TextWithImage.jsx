@@ -18,13 +18,16 @@ const useStyles = makeStyles((theme) => ({
         height: 300,
         width: 300,
       },
+      textMinimumStyle: {
+        minHeight: "4em"
+      },
 }));
 
 export const TextWithImage = (props) => {
     const classes = useStyles();
     const { img, header, text, cols, altStyle } = props;
     const textItems = text.map((t, idx) => (
-        <Typography key={idx} variant="body1" align="center">
+        <Typography className={classes.textMinimumStyle} key={idx} variant="body1" align="center">
             {t}
         </Typography>
     ))
