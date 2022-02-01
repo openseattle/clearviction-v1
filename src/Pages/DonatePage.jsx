@@ -309,7 +309,7 @@ const DonatePage = () => {
             </AccordionSummary>
             <AccordionDetails>
               <Typography className={classes.faqDetailsText}>
-                You can send us an email at contact@clearviction.org We will get back to
+                You can send us an email at contact@clearviction.org and we will get back to
                 you within 24 hours.
               </Typography>
             </AccordionDetails>
