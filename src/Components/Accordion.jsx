@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   accordionSummary: {
     backgroundColor: theme.palette.primary.light,
     color: "white",
-    height: "8rem",
+    minHeight: "8rem",
   },
   iconStyle: {
     color: "white",
