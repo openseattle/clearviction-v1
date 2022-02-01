@@ -3,7 +3,7 @@ import { TextField, Grid, MenuItem, makeStyles, FormControl, FormGroup, FormLabe
 import SecondaryButton from "../ui-kit/SecondaryButton";
 import { send } from '@emailjs/browser';
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     justifyContent: "center",
@@ -28,13 +28,13 @@ const useStyles = makeStyles({
     width: "800px",
     padding: "10px"
   },
-  '@media (max-width: 480px)' : {
+  [theme.breakpoints.down("sm")]: {
     formStyle: {
-      maxWidth: "363px",
+      width: "100%",
       padding: "10px"
     },
   },
-});
+}));
 
 const ContactForm = () => {
   const classes = useStyles();
