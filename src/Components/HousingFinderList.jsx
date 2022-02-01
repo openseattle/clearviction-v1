@@ -13,7 +13,7 @@ import { ListItemLink } from "../ui-kit/ListItemLink";
 const HousingFinderList = ({ resources }) => {
   const classes = useResourcesStyles();
   return (
-    <List dense style={{ borderStyle: "solid", width: "100%" }}>
+    <List dense style={{ width: "100%" }}>
       {resources.map((contact, idx) => (
         <ListItem key={idx} divider>
           <Grid container>
