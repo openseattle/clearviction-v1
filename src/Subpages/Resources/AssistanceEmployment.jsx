@@ -7,8 +7,6 @@ import SecondaryButton from "../../ui-kit/SecondaryButton";
 import { ExternalLink } from "../../ui-kit/ExternalLink";
 import workResources from "../../data/resourcesData";
 
-
-
 const AssistanceEmployment = () => {
   const classes = useResourcesStyles();
   return (
@@ -82,7 +80,11 @@ const AssistanceEmployment = () => {
                 <li>Select Washington State</li>
                 <li>Search a category under “Employment”</li>
               </Typography>
-              <SecondaryButton text={"View Map"} linkTo={"https://niccc.csgjusticecenter.org/map/"} externalLink/>
+              <SecondaryButton
+                text={"View Map"}
+                linkTo={"https://niccc.csgjusticecenter.org/map/"}
+                externalLink
+              />
             </div>
           }
           image={<Box component="img" src={worldMap} height={300} margin={5} />}
@@ -93,48 +95,43 @@ const AssistanceEmployment = () => {
           <Typography className={classes.headingStyle} variant="h2">
             Find work!
           </Typography>
-          <ListItemMobileSnap
-            textLeft
-            text={
-              <div>
+          <Grid container spacing={4}>
+            <Grid item xs={12} sm={6} >
+              <Grid container  style={{height:"100%"}} alignItems="center">
+                <div>
+                  <Typography className={classes.headingStyle}>
+                    <ExternalLink
+                      href="http://www.lni.wa.gov/tradeslicensing/apprenticeship/programs/"
+                      className={classes.titleLinkStyle}
+                    >
+                      Washington State Department of Labor & Industries
+                    </ExternalLink>
+                  </Typography>
+                  <Typography variant="body2">
+                    Apprenticeship Programs in Washington. Apprenticeships are
+                    generally a mix of work and school that results in the
+                    apprentice being trained in a specific field
+                  </Typography>
+                </div>
+              </Grid>
+            </Grid>
+            <Grid item xs={12} sm={6} >
+              <Box component="img" src={officeWork} height={"100%"} />
+            </Grid>
+            {workResources.map((workSource, idx) => (
+              <Grid key={idx} item xs={12} sm={6} md={4}>
                 <Typography className={classes.headingStyle}>
                   <ExternalLink
-                    href="http://www.lni.wa.gov/tradeslicensing/apprenticeship/programs/"
+                    href={workSource.url}
                     className={classes.titleLinkStyle}
+                    name={workSource.name}
                   >
-                    Washington State Department of Labor & Industries
+                    {workSource.name}
                   </ExternalLink>
                 </Typography>
-                <Typography variant="body2">
-                  Apprenticeship Programs in Washington. Apprenticeships are
-                  generally a mix of work and school that results in the
-                  apprentice being trained in a specific field
-                </Typography>
-              </div>
-            }
-            image={
-              <Box component="img" src={officeWork} height={200} margin={5} />
-            }
-          />
-
-          <Grid container spacing={4}>
-            {workResources.map((workSource, idx) => (
-            <Grid key={idx} item xs={12} sm={6} md={4}>
-            <Typography className={classes.headingStyle}>
-              <ExternalLink
-                href={workSource.url}
-                className={classes.titleLinkStyle}
-                name={workSource.name}
-              >
-                {workSource.name}
-              </ExternalLink>
-            </Typography>
-            <Typography variant="body2">
-             {workSource.body}
-            </Typography>
-          </Grid>
+                <Typography variant="body2">{workSource.body}</Typography>
+              </Grid>
             ))}
-
           </Grid>
         </Container>
       </Box>
