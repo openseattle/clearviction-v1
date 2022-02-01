@@ -134,7 +134,7 @@ const additionalLinks: additionalLinksType[] = [
     url: "http://aptfinder.org",
   },
   {
-    name: "HousingSearchNW.org",
+    name: "Housing Search NW.org",
     url: "http://www.housingsearchnw.org",
   },
   {
