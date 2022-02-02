@@ -49,7 +49,7 @@ const NavCardGroup = (props) => {
               to={pageCard.link}
             >
               <div>
-                <Typography variant="h4">{pageCard.name}</Typography>
+                <Typography className={classes.cardTextStyle} variant="h4">{pageCard.name}</Typography>
                 <Box display={{xs: "none", sm: "none", md: "block"}}>
                   <Typography variant="body2">{pageCard.desc}</Typography>
                 </Box>
