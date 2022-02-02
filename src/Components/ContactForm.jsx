@@ -59,7 +59,53 @@ const ContactForm = () => {
     errorMessage: "",
   });
 
+
+  // TODO
+  // Create a proper email validation service with formik + yup
+  // https://formik.org/docs/guides/validation
+  //
+
+  // TODO short term
+  // add unit tests to this simple validation
+  // move it to a util
+
+  /**
+   * Validates emails entered by the user onChange
+   * This a fast and simple way to do this but only covers most, but not all cases.
+   * Regex sourced from https://www.w3resource.com/javascript/form/email-validation.php
+   * 
+   * Follows personal_info@domain where:
+   * Personal_info rules:
+   *  - Uppercase + Lowercase (A-z)
+   *  - Digits (0-9)
+   *  - Chars ! # $ % & ' * + - / = ? ^ _ ` { | } ~
+   *  - Char . provided its not the first or last char or next to itself
+   * 
+   * Domain rules: 
+   * The domain name [for example com, org, net, in, us, info] part contains letters, digits, hyphens,
+   *  and dots. 
+   * 
+   * Examples of valid emails:
+   * mysite@ourearth.com
+   * my.ownsite@ourearth.org
+   * mysite@you.me.net
+   * 
+   * Example of invalid email id 
+   * mysite.ourearth.com [@ is not present] 
+   * mysite@.com.my [ tld (Top Level domain) can not start with dot "." ] 
+   * @you.me.net [ No character before @ ] 
+   * mysite123@gmail.b [ ".b" is not a valid tld ]
+   * mysite@.org.org [ tld can not start with dot "." ] 
+   * .mysite@mysite.org [ an email should not be start with "." ]
+   * mysite()*@gmail.com [ here the regular expression only allows character, digit, underscore,
+   *  and dash ] 
+   * mysite..1234@yahoo.com [double dots are not allowed] 
+   * 
+   * @param {*} email 
+   * 
+   */
   const validateEmail = (email) => {
+
     const validEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     if (validEmail.test(email)) {
       setEmailError({errorStatus: false, errorMessage: ""});
