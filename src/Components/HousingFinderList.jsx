@@ -22,7 +22,6 @@ const HousingFinderList = ({ resources }) => {
                 <ExternalLink href={contact.url}>{contact.name}</ExternalLink>
               </Typography>
               <br />
-              {/* <Typography variant="body2">{contact.desc}</Typography> */}
             </Grid>
             <Grid item xs={12} sm={6}>
               <List dense>
