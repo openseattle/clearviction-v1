@@ -57,7 +57,7 @@ const PartnerPage = () => {
           Help us bring a message of hope into your community.
         </Typography>
         <Typography className={classes.partnerHeading} variant="h5">
-          We appreciate finding new ways to work with organisations and people
+          We appreciate finding new ways to work with organizations and people
           who share our goals and want to help us raise awareness. Whether it be
           guidance or support, we'd love to hear more.
         </Typography>
