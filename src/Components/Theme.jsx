@@ -87,6 +87,26 @@ Theme.overrides = {
       backgroundColor: Theme.palette.primary.main,
       width: "250px"
     }
+  },
+  MuiTabs: {
+    root: {
+      borderTopLeftRadius: 5,
+      borderTopRightRadius: 5,
+
+    },
+    indicator: {
+      height: 0,
+    }
+  },
+  MuiTab: {
+    root: {
+      fontSize: 14,
+      backgroundColor: Theme.palette.primary.light,
+    },
+    selected: {
+      color: Theme.palette.primary.dark,
+      backgroundColor: "white",
+    }
   }
 };
 
