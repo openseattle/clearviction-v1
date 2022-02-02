@@ -35,8 +35,8 @@ export const TwoParagraphTextWithHeader = (props) => {
     const { header, text } = props;
     const textItems = text.map((t, idx) => (
         <>
-            <Grid item xs={12} sm={6} md={6}>
-                <Typography className={classes.text} key={idx} align="left">
+            <Grid key={idx} item xs={12} sm={6} md={6}>
+                <Typography className={classes.text}  align="left">
                     {t}
                 </Typography>
             </Grid>

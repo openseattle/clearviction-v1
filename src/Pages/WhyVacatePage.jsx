@@ -1,4 +1,4 @@
-import { Container, Box } from "@material-ui/core";
+import { Container, } from "@material-ui/core";
 import { Route} from "react-router-dom";
 import HeroPanel from "../Components/HeroPanel";
 import NavCardGroup from "../Components/NavCardGroup";
@@ -35,9 +35,7 @@ const WhyVacatePage = () => {
             "A conviction vacation seals the offense from your record and will give you more chance to access:"
           }
         />
-        <Box display="flex" justifyContent={"center"}>
-          <NavCardGroup subPages={pages}/>
-        </Box>
+      <NavCardGroup subPages={pages} xs={12} sm={3} md={3}/>
       </Container>
       <Route exact path="/why-vacate/housing">
         <WhyVacateHousing />

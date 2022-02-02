@@ -36,7 +36,7 @@ const GetInvolvedPage = () => {
           "There are many ways to participate with the CVP team, and we appreciate all of them!"
         }
       />
-     <NavCardGroup subPages={subPages} />
+     <NavCardGroup subPages={subPages} xs={12} sm={4} md={4}/>
 
       <Route exact path="/get-involved/volunteer">
         <VolunteerPage />
