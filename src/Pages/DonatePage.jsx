@@ -77,8 +77,6 @@ const useStyles = makeStyles((theme) => ({
   faq: {
     marginTop: theme.spacing(8),
     marginBottom: theme.spacing(8),
-    marginRight: theme.spacing(6),
-    marginLeft: theme.spacing(6),
   },
   faqAccordionStyle: {
     borderRadius: 4,
@@ -197,7 +195,7 @@ const DonatePage = () => {
           </Grid>
         </Container>
       </Box>
-      <Container maxWidth="lg">
+      <Container maxWidth="md">
         <Box className={classes.faq}>
           <Typography className={classes.title} variant="h2">
             FAQs
