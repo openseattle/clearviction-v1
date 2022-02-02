@@ -20,7 +20,7 @@ const subPages = [
   {
     name: "Education",
     link: "/resources/assistance/education",
-    desc: "CEducational programs and financial assistance options",
+    desc: "Educational programs and financial assistance options",
   },
 ];
 
