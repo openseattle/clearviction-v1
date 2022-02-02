@@ -24,8 +24,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
   },
   donationImageStyle: {
-    height: 200,
-    width: 270,
+    width: "100%",
   },
   donationAmountStyle: {
     textAlign: "center",
@@ -43,8 +42,8 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(2),
   },
   qrCode: {
-    height: 400,
-    width: 400,
+    marginTop: theme.spacing(5),
+    width: "100%",
   },
   donate: {
     backgroundColor: theme.palette.primary.dark,
