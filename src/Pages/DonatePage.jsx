@@ -21,7 +21,6 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(8),
   },
   donation: {
-    padding: theme.spacing(2),
   },
   donationImageStyle: {
     width: "100%",
@@ -133,14 +132,16 @@ const DonatePage = () => {
         <Typography variant="body1" align="center">
           We depend on your generosity to let this project grow!
         </Typography>
-        <Grid container>
-          {donationLevels.map((level) => (
+        <Grid container spacing={3}>
+          {donationLevels.map((level, idx) => (
             <Grid
               className={classes.donation}
               item
-              key={level.name}
+              key={level.idx}
               xs={12}
-              sm={3}
+              sm={6}
+              md={6}
+              lg={3}
             >
               <Box display="flex" justifyContent="center">
                 <Box
