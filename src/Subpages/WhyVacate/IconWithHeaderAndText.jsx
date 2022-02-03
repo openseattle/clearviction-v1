@@ -2,8 +2,6 @@ import { SvgIcon } from "@material-ui/core";
 import {
   Grid,
   Typography,
-  ListItem,
-  ListItemIcon,
   makeStyles,
 } from "@material-ui/core";
 

@@ -3,6 +3,8 @@ import {
   AccordionDetails,
   AccordionSummary,
   Box,
+  Card,
+  CardContent,
   Container,
   Grid,
   makeStyles,
@@ -21,30 +23,34 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(8),
   },
   donation: {
-    padding: theme.spacing(2),
+    height: "100%",
   },
   donationImageStyle: {
-    height: 200,
-    width: 270,
+    width: "100%",
   },
   donationAmountStyle: {
     textAlign: "center",
     fontFamily: ["roboto", "sans-serif"],
-    fontWeight: 500,
-    fontSize: 40,
+    fontWeight: "Bold",
+    fontSize: 50,
   },
   donationDescStyle: {
+    padding: theme.spacing(3),
     textAlign: "center",
     fontFamily: ["roboto", "sans-serif"],
     fontSize: 20,
+    [theme.breakpoints.down("sm")]: {
+      fontSize: 16,
+    }
   },
   title: {
-    textAlign: "center",
-    margin: theme.spacing(2),
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(3),
+
   },
   qrCode: {
-    height: 400,
-    width: 400,
+    marginTop: theme.spacing(5),
+    width: "100%",
   },
   donate: {
     backgroundColor: theme.palette.primary.dark,
@@ -71,12 +77,6 @@ const useStyles = makeStyles((theme) => ({
   faq: {
     marginTop: theme.spacing(8),
     marginBottom: theme.spacing(8),
-    marginRight: theme.spacing(6),
-    marginLeft: theme.spacing(6),
-    [theme.breakpoints.down("sm")]: {
-      marginLeft: theme.spacing(0),
-      marginRight: theme.spacing(0),
-    }
   },
   faqAccordionStyle: {
     borderRadius: 4,
@@ -92,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 20,
     [theme.breakpoints.down("sm")]: {
       fontSize: 16,
-    }
+    },
   },
   faqDetailsText: {
     overflowWrap: "break-word", 
@@ -125,7 +125,7 @@ const donationLevels = [
   },
   {
     name: "level 4",
-    amount: "Any $ Amount",
+    amount: "Any $",
     donationImage: note,
     desc: "Directly help support those with convictions start fresh",
   },
@@ -136,42 +136,39 @@ const DonatePage = () => {
   return (
     <>
       <Container className={classes.donationRoot} maxWidth="lg">
-        <Typography className={classes.title} variant="h2">
+        <Typography className={classes.title} variant="h2" align="center">
           Why donate?
         </Typography>
-        <Typography variant="body1" align="center">
+        <Typography className={classes.title} variant="body1" align="center">
           We depend on your generosity to let this project grow!
         </Typography>
-        <Grid container>
-          {donationLevels.map((level) => (
-            <Grid
-              className={classes.donation}
-              item
-              key={level.name}
-              xs={12}
-              sm={3}
-            >
-              <Box display="flex" justifyContent="center">
-                <Box
-                  className={classes.donationImageStyle}
-                  component="img"
-                  src={level.donationImage}
-                />
-              </Box>
-
-              <Typography className={classes.donationAmountStyle}>
-                {level.amount}
-              </Typography>
-              <Typography className={classes.donationDescStyle}>
-                {level.desc}
-              </Typography>
+        <Grid container spacing={3}>
+          {donationLevels.map((level, idx) => (
+            <Grid item key={idx} xs={12} sm={6} md={6} lg={3}>
+              <Card className={classes.donation} >
+                <Box display="flex" justifyContent="center">
+                  <Box
+                    className={classes.donationImageStyle}
+                    component="img"
+                    src={level.donationImage}
+                  />
+                </Box>
+                <CardContent>
+                <Typography className={classes.donationAmountStyle}>
+                      {level.amount}
+                    </Typography>
+                  <Typography className={classes.donationDescStyle}>
+                    {level.desc}
+                  </Typography>
+                </CardContent>
+              </Card>
             </Grid>
           ))}
         </Grid>
-        </Container>
-      
-        <Box className={classes.donate}>
-          <Container maxWidth="lg">
+      </Container>
+
+      <Box className={classes.donate}>
+        <Container maxWidth="lg">
           <Grid container>
             <Grid item xs={12} sm={6}>
               <Box display={"flex"} justifyContent={"center"}>
@@ -182,22 +179,27 @@ const DonatePage = () => {
               <Typography className={classes.donateHeading} variant="h2">
                 How to donate:
               </Typography>
-              <Typography className={classes.donateBody}>Venmo @Seamus-Brugh by</Typography>
+              <Typography className={classes.donateBody}>
+                Venmo @Seamus-Brugh by
+              </Typography>
               <Typography component="ol" className={classes.donateBody}>
                 <li>Searching the username (@Seamus-Brugh)</li>
                 OR
                 <li>Scanning the QR code in-app</li>
               </Typography>
               <Typography className={classes.donateBody2}>
-                Note: 
+                Note:
                 <li>Do not mark as goods or service!</li>
-                <li>Be sure to include "Helping people get a fresh start!" in the Venmo description section.</li>
+                <li>
+                  Be sure to include "Helping people get a fresh start!" in the
+                  Venmo description section.
+                </li>
               </Typography>
             </Grid>
           </Grid>
-          </Container>
-        </Box>
-        <Container maxWidth="lg">
+        </Container>
+      </Box>
+      <Container maxWidth="md">
         <Box className={classes.faq}>
           <Typography className={classes.title} variant="h2">
             FAQs
@@ -262,14 +264,17 @@ const DonatePage = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography style={{overflowWrap: "break-word", width: "100%"}} >
+              <Typography style={{overflowWrap: "break-word", width: "100%"}}>
                 You will need a Venmo account to donate online. This can easily
                 be set up using only a mobile phone or email address. You can
                 then choose to either add funds to your Venmo account or link an
                 external payment method like a bank account or credit card.
                 <br />
                 <br />
-                You can sign up for a Venmo account here: <a href="https://account.venmo.com/signup">https://get.venmo.com</a>
+                You can sign up for a Venmo account here:{" "}
+                <a href="https://account.venmo.com/signup">
+                  https://get.venmo.com
+                </a>
               </Typography>
             </AccordionDetails>
           </Accordion>
@@ -285,12 +290,12 @@ const DonatePage = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography >
+              <Typography>
                 Yes, please make the check out to Seamus Brugh and mail it to:
                 <br />
                 <br />
                 Seamus Brugh <br />
-                802 5th Ave N, unit 213 
+                802 5th Ave N, unit 213
                 <br />
                 Seattle, WA 98109
               </Typography>
