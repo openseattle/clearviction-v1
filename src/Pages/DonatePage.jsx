@@ -94,6 +94,10 @@ const useStyles = makeStyles((theme) => ({
       fontSize: 16,
     },
   },
+  faqDetailsText: {
+    overflowWrap: "break-word", 
+    width: "100%",
+  },
   expand: {
     color: "white",
     fontSize: 24,
@@ -260,7 +264,7 @@ const DonatePage = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>
+              <Typography style={{overflowWrap: "break-word", width: "100%"}}>
                 You will need a Venmo account to donate online. This can easily
                 be set up using only a mobile phone or email address. You can
                 then choose to either add funds to your Venmo account or link an
@@ -309,9 +313,9 @@ const DonatePage = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>
-                You can send us an email at convictionvacation@gmail.com. We
-                will get back to you within 24 hours.
+              <Typography className={classes.faqDetailsText}>
+                You can send us an email at contact@clearviction.org and we will get back to
+                you within 24 hours.
               </Typography>
             </AccordionDetails>
           </Accordion>

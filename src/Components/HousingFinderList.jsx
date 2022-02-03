@@ -13,16 +13,15 @@ import { ListItemLink } from "../ui-kit/ListItemLink";
 const HousingFinderList = ({ resources }) => {
   const classes = useResourcesStyles();
   return (
-    <List dense>
+    <List dense style={{ width: "100%" }}>
       {resources.map((contact, idx) => (
-        <ListItem key={idx}  divider>
+        <ListItem key={idx} divider>
           <Grid container>
             <Grid item xs={12} sm={6}>
               <Typography>
                 <ExternalLink href={contact.url}>{contact.name}</ExternalLink>
               </Typography>
               <br />
-              <Typography variant="body2">{contact.desc}</Typography>
             </Grid>
             <Grid item xs={12} sm={6}>
               <List dense>
@@ -40,22 +39,31 @@ const HousingFinderList = ({ resources }) => {
                 )}
                 {contact.phone && (
                   <ListItemLink href={`tel:+${contact.phone}`}>
-                    {contact.tags2Phones && <Typography>{contact.tags2Phones[0]}</Typography>}
                     <Call className={classes.shelterIcon} />
+                    {contact.tags2Phones && (
+                      <Typography variant="body2">{contact.tags2Phones[0]}</Typography>
+                    )}
                     <ListItemText primary={contact.phone} />
                   </ListItemLink>
                 )}
                 {contact.phone2 && (
                   <ListItemLink href={`tel:+${contact.phone2}`}>
-                    {contact.tags2Phones && <Typography>{contact.tags2Phones[1]}</Typography>}
                     <Call className={classes.shelterIcon} />
+                    {contact.tags2Phones && (
+                      <Typography variant="body2">{contact.tags2Phones[1]}</Typography>
+                    )}
                     <ListItemText primary={contact.phone2} />
                   </ListItemLink>
                 )}
                 {contact.email && (
                   <ListItemLink href={`mailto:${contact.email}`}>
-                    <Email className={classes.shelterIcon} />{" "}
-                    <ListItemText primary={contact.email} />
+                    <Email className={classes.shelterIcon} />
+                    <ListItemText
+                      primaryTypographyProps={{
+                        style: { overflowWrap: "break-word" },
+                      }}
+                      primary={contact.email}
+                    />
                   </ListItemLink>
                 )}
               </List>

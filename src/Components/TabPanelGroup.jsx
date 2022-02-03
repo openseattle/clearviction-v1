@@ -21,10 +21,11 @@ const TabPanel = (props) => {
 };
 
 const useStyles = makeStyles((theme) => ({
-  root: {
+  tabPanelStyle: {
     backgroundColor: "white",
-    borderRadius: "5px",
     color: "black",
+    borderBottomRightRadius: 5,
+    borderBottomLeftRadius: 5,
   }
 }));
 
@@ -37,15 +38,15 @@ const TabPanelGroup = (props) => {
     setValue(newValue);
   };
   return (
-    <Box className={classes.root}>
-      <Tabs value={value} onChange={handleChange} centered>
+    <Box >
+      <Tabs  value={value} onChange={handleChange} variant="fullWidth">
         {tabs.map((tab) => (
-          <Tab key={tab.index} label={tab.label}/>
+          <Tab className={classes.tabStyle} key={tab.index} label={tab.label}/>
         ))}
       </Tabs>
 
       {tabs.map((tab) => (
-        <TabPanel key={tab.index} value={value} index={tab.index}>
+        <TabPanel className={classes.tabPanelStyle} key={tab.index} value={value} index={tab.index}>
           {tab.content}
         </TabPanel>
       ))}
