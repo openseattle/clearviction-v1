@@ -1408,7 +1408,7 @@ const data: Pages = {
   },
   "too-ineligible-0": {
     header: `As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because you have not completed the terms of the conviction for this offense.  
-                You might be eligible when you've completed the terms of your conviction and 3 hears have passed since the completion of your sentence, 
+                You might be eligible when you've completed the terms of your conviction and 3 years have passed since the completion of your sentence, 
                 including any financial obligations.`,
     disclaimer,
   },
