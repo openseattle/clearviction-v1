@@ -634,7 +634,7 @@ const data: Pages = {
     buttons: [
       {
         text: BUTTON_TEXT.YES,
-        href: CALC_PREFIX + "/main-0",
+        href: CALC_PREFIX + "/qac-0",
       },
       {
         text: BUTTON_TEXT.NO,
