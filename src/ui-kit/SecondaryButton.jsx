@@ -19,10 +19,21 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SecondaryButton({ text, type, linkTo, externalLink,  }) {
+export default function SecondaryButton({ text, type, linkTo, externalLink }) {
   const classes = useStyles();
-  return (
-    externalLink ? 
-    <Button rel="noopener noreferrer" href={linkTo} type={type} className={classes.button} target={"_blank"}>{text}</Button>
-    :<Button href={linkTo} type={type} className={classes.button}>{text}</Button>)
+  return externalLink ? (
+    <Button
+      rel="noopener noreferrer"
+      href={linkTo}
+      type={type}
+      className={classes.button}
+      target={"_blank"}
+    >
+      {text}
+    </Button>
+  ) : (
+    <Button href={linkTo} type={type} className={classes.button}>
+      {text}
+    </Button>
+  );
 }
