@@ -1,4 +1,3 @@
-import Seamus_Brugh from "../Assets/team/Seamus Brugh.png";
 
 type teamMember = {
   firstName: string;
@@ -14,7 +13,6 @@ const team: teamMember[] = [
     lastName: "Brugh",
     role: "Project Owner",
     linkedIn: "https://www.linkedin.com/in/seamusbrugh/",
-    profileImage: Seamus_Brugh,
 },
 {
     firstName: "Andrew",
@@ -27,7 +25,7 @@ const team: teamMember[] = [
     role: "Researcher",
 },
 {
-    firstName: "Andrew",
+    firstName: "Alexander",
     lastName: "Yung",
     role: "Content Designer",
 },

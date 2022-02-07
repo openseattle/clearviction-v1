@@ -8,7 +8,6 @@ import {
   ListItem,
   ListItemIcon,
 } from "@material-ui/core";
-import TeamCard from "../Components/TeamCard";
 import HeroPanel from "../Components/HeroPanel";
 import {
   HourglassEmpty,
@@ -22,6 +21,9 @@ import innovation from "../Assets/innovation.svg";
 import ListItemMobileSnap from "../ui-kit/ListItemMobileSnap";
 
 import team from "../data/teamData";
+import { lazy, Suspense } from "react";
+
+const TeamCard = lazy(() => import("../Components/TeamCard"));
 
 const useStyles = makeStyles((theme) => ({
   alignItemContent: {
@@ -111,8 +113,11 @@ const useStyles = makeStyles((theme) => ({
   },
   cardGrid: {
     padding: theme.spacing(3),
-  }
-
+    [theme.breakpoints.down("")]: {
+      paddingLeft: theme.spacing(5),
+      paddingRight: theme.spacing(5),
+    }
+  },
 }));
 
 const AboutPage = () => {
@@ -178,8 +183,8 @@ const AboutPage = () => {
                 <Typography className={classes.rootsBodyText} variant="body1">
                   We have identified opportunities to use technology to
                   streamline this process and want to use our resources to
-                  appropriately meet user needs, creating an easier way to vacate
-                  convictions.
+                  appropriately meet user needs, creating an easier way to
+                  vacate convictions.
                 </Typography>
               }
             />
@@ -279,18 +284,20 @@ const AboutPage = () => {
           <Typography className={classes.ourTeamTitle} variant="h2">
             The Team
           </Typography>
-          <Grid container >
+          <Grid container>
             {team.map((member, idx) => (
               <Grid
                 className={classes.cardGrid}
                 key={idx}
                 item
-                xs={6}
-                sm={4}
-                md={3}
+                xs={12}
+                sm={6}
+                md={4}
                 lg={3}
               >
-                <TeamCard  member={member} />
+                <Suspense fallback={<div>Loading...</div>}>
+                  <TeamCard member={member} />
+                </Suspense>
               </Grid>
             ))}
           </Grid>

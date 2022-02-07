@@ -19,20 +19,22 @@ const useStyles = makeStyles({
   },
   avatar: {
     width: "100%",
-    height: 200,
+    height: 250,
   },
 });
 
 const TeamCard = (props) => {
   const classes = useStyles();
-  const { firstName, lastName, role, profileImage, linkedIn } = props.member;
+  const { firstName, lastName, role, linkedIn } = props.member;
+
+
   return (
     <Card className={classes.card}>
       <CardMedia>
         <Avatar
           className={classes.avatar}
           variant="square"
-          src={profileImage}
+          src={`https://cvp-team-photos.s3.us-west-2.amazonaws.com/${firstName+lastName}.jpg`}
         />
       </CardMedia>
       <List>
