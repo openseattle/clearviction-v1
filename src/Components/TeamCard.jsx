@@ -40,7 +40,7 @@ const TeamCard = (props) => {
       <List>
         <ListItem>
           <ListItemText primary={firstName + " " + lastName} secondary={role} />
-          <IconButton href={linkedIn} target="_blank" rel="noopener noreferrer">
+          <IconButton href={linkedIn} target="_blank" rel="noopener noreferrer" size="small">
             {linkedIn && <LinkedIn fontSize="large" />}
           </IconButton>
         </ListItem>

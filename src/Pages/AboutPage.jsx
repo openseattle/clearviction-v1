@@ -9,6 +9,7 @@ import {
   ListItemIcon,
 } from "@material-ui/core";
 import HeroPanel from "../Components/HeroPanel";
+import TeamCard from "../Components/TeamCard";
 import {
   HourglassEmpty,
   LocalAtmOutlined,
@@ -21,9 +22,6 @@ import innovation from "../Assets/innovation.svg";
 import ListItemMobileSnap from "../ui-kit/ListItemMobileSnap";
 
 import team from "../data/teamData";
-import { lazy, Suspense } from "react";
-
-const TeamCard = lazy(() => import("../Components/TeamCard"));
 
 const useStyles = makeStyles((theme) => ({
   alignItemContent: {
@@ -295,9 +293,7 @@ const AboutPage = () => {
                 md={4}
                 lg={3}
               >
-                <Suspense fallback={<div>Loading...</div>}>
                   <TeamCard member={member} />
-                </Suspense>
               </Grid>
             ))}
           </Grid>
