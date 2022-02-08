@@ -24,7 +24,8 @@ const ContactPage = () => {
         <HeroPanel title={pageTitle} />
         <Box>
           <Typography variant="h5" className={classes.subtext}>
-          Have questions? Send us a message and we’ll get back to you within 24 hours.
+            Have questions? Send us a message and we’ll get back to you within
+            24 hours.
           </Typography>
           <ContactForm />
         </Box>

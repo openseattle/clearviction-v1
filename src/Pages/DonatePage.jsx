@@ -41,12 +41,11 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 20,
     [theme.breakpoints.down("sm")]: {
       fontSize: 16,
-    }
+    },
   },
   title: {
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(3),
-
   },
   qrCode: {
     marginTop: theme.spacing(5),
@@ -95,7 +94,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   faqDetailsText: {
-    overflowWrap: "break-word", 
+    overflowWrap: "break-word",
     width: "100%",
   },
   expand: {
@@ -145,7 +144,7 @@ const DonatePage = () => {
         <Grid container spacing={3}>
           {donationLevels.map((level, idx) => (
             <Grid item key={idx} xs={12} sm={6} md={6} lg={3}>
-              <Card className={classes.donation} >
+              <Card className={classes.donation}>
                 <Box display="flex" justifyContent="center">
                   <Box
                     className={classes.donationImageStyle}
@@ -154,9 +153,9 @@ const DonatePage = () => {
                   />
                 </Box>
                 <CardContent>
-                <Typography className={classes.donationAmountStyle}>
-                      {level.amount}
-                    </Typography>
+                  <Typography className={classes.donationAmountStyle}>
+                    {level.amount}
+                  </Typography>
                   <Typography className={classes.donationDescStyle}>
                     {level.desc}
                   </Typography>
@@ -264,7 +263,7 @@ const DonatePage = () => {
               </Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography style={{overflowWrap: "break-word", width: "100%"}}>
+              <Typography style={{ overflowWrap: "break-word", width: "100%" }}>
                 You will need a Venmo account to donate online. This can easily
                 be set up using only a mobile phone or email address. You can
                 then choose to either add funds to your Venmo account or link an
@@ -314,8 +313,8 @@ const DonatePage = () => {
             </AccordionSummary>
             <AccordionDetails>
               <Typography className={classes.faqDetailsText}>
-                You can send us an email at contact@clearviction.org and we will get back to
-                you within 24 hours.
+                You can send us an email at contact@clearviction.org and we will
+                get back to you within 24 hours.
               </Typography>
             </AccordionDetails>
           </Accordion>

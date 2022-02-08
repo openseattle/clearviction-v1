@@ -80,9 +80,7 @@ const AssistanceEducation = () => {
           <br />
           <br />
           If you want to know more, check out the Federal Government’s{" "}
-          <ExternalLink
-            href="https://studentaid.ed.gov/sites/default/files/aid-info-for-incarcerated-individuals.pdf"
-          >
+          <ExternalLink href="https://studentaid.ed.gov/sites/default/files/aid-info-for-incarcerated-individuals.pdf">
             FAQ on Incarcerated Individuals and Eligibility for Federal Student
             Aid.
           </ExternalLink>

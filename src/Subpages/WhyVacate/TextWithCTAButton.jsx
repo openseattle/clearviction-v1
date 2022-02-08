@@ -1,9 +1,4 @@
-import {
-  Box,
-  Typography,
-  Container,
-  makeStyles
-} from "@material-ui/core";
+import { Box, Typography, Container, makeStyles } from "@material-ui/core";
 import SecondaryButton from "../../ui-kit/SecondaryButton";
 
 const useStyles = makeStyles((theme) => ({
@@ -30,8 +25,8 @@ const useStyles = makeStyles((theme) => ({
   buttonBoxStyles: {
     marginTop: theme.spacing(5),
     justifyContent: "center",
-    display: "flex"
-  }
+    display: "flex",
+  },
 }));
 
 export const TextWithCTAButton = (props) => {
@@ -41,8 +36,12 @@ export const TextWithCTAButton = (props) => {
     <>
       <Box className={classes.backgroundSecondary}>
         <Container maxWidth="lg">
-          <Typography variant="body1" className={classes.mainText} align="center">
-              {text}
+          <Typography
+            variant="body1"
+            className={classes.mainText}
+            align="center"
+          >
+            {text}
           </Typography>
           <Box className={classes.buttonBoxStyles}>
             <SecondaryButton linkTo={buttonLinkTo} text={buttonText} />
@@ -50,5 +49,5 @@ export const TextWithCTAButton = (props) => {
         </Container>
       </Box>
     </>
-  )
-}
+  );
+};

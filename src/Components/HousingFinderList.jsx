@@ -41,7 +41,9 @@ const HousingFinderList = ({ resources }) => {
                   <ListItemLink href={`tel:+${contact.phone}`}>
                     <Call className={classes.shelterIcon} />
                     {contact.tags2Phones && (
-                      <Typography variant="body2">{contact.tags2Phones[0]}</Typography>
+                      <Typography variant="body2">
+                        {contact.tags2Phones[0]}
+                      </Typography>
                     )}
                     <ListItemText primary={contact.phone} />
                   </ListItemLink>
@@ -50,7 +52,9 @@ const HousingFinderList = ({ resources }) => {
                   <ListItemLink href={`tel:+${contact.phone2}`}>
                     <Call className={classes.shelterIcon} />
                     {contact.tags2Phones && (
-                      <Typography variant="body2">{contact.tags2Phones[1]}</Typography>
+                      <Typography variant="body2">
+                        {contact.tags2Phones[1]}
+                      </Typography>
                     )}
                     <ListItemText primary={contact.phone2} />
                   </ListItemLink>

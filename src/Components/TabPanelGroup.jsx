@@ -1,9 +1,4 @@
-import {
-  Tabs,
-  Tab,
-  Box,
-  makeStyles,
-} from "@material-ui/core";
+import { Tabs, Tab, Box, makeStyles } from "@material-ui/core";
 import { useState } from "react";
 
 const TabPanel = (props) => {
@@ -11,11 +6,7 @@ const TabPanel = (props) => {
 
   return (
     <div role="tabpanel" hidden={value !== index} {...other}>
-      {value === index && (
-        <Box p={3}>
-          {children}
-        </Box>
-      )}
+      {value === index && <Box p={3}>{children}</Box>}
     </div>
   );
 };
@@ -26,27 +17,32 @@ const useStyles = makeStyles((theme) => ({
     color: "black",
     borderBottomRightRadius: 5,
     borderBottomLeftRadius: 5,
-  }
+  },
 }));
 
 const TabPanelGroup = (props) => {
   const classes = useStyles();
   const [value, setValue] = useState(0);
-  const {tabs} = props;
+  const { tabs } = props;
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
   return (
-    <Box >
-      <Tabs  value={value} onChange={handleChange} variant="fullWidth">
+    <Box>
+      <Tabs value={value} onChange={handleChange} variant="fullWidth">
         {tabs.map((tab) => (
-          <Tab className={classes.tabStyle} key={tab.index} label={tab.label}/>
+          <Tab className={classes.tabStyle} key={tab.index} label={tab.label} />
         ))}
       </Tabs>
 
       {tabs.map((tab) => (
-        <TabPanel className={classes.tabPanelStyle} key={tab.index} value={value} index={tab.index}>
+        <TabPanel
+          className={classes.tabPanelStyle}
+          key={tab.index}
+          value={value}
+          index={tab.index}
+        >
           {tab.content}
         </TabPanel>
       ))}

@@ -189,7 +189,10 @@ const WhyVacateEmployment = () => {
 
             <Typography className={classes.contentText} variant="body1">
               The{" "}
-              <a className={classes.linkStyle} href="https://www.eeoc.gov/laws/guidance/enforcement-guidance-consideration-arrest-and-conviction-records-employment-decisions">
+              <a
+                className={classes.linkStyle}
+                href="https://www.eeoc.gov/laws/guidance/enforcement-guidance-consideration-arrest-and-conviction-records-employment-decisions"
+              >
                 Equal Employment Opportunity{" "}
               </a>{" "}
               Commission enforces the most critical law with regards to the
@@ -203,7 +206,10 @@ const WhyVacateEmployment = () => {
             <Typography variant="body1" align="center">
               To find out whether your offense will or may disqualify you from a
               certain type of job, you can check the{" "}
-              <a className={classes.linkStyle} href="https://niccc.csgjusticecenter.org/map/">
+              <a
+                className={classes.linkStyle}
+                href="https://niccc.csgjusticecenter.org/map/"
+              >
                 Council of State Governments Map{" "}
               </a>
               .

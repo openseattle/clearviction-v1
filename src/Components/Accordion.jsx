@@ -35,7 +35,12 @@ export default function FAQAccordion() {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Text fontFamily={"Lora"} variant={"h5"} textAlign={"left"}  text={header}></Text>
+              <Text
+                fontFamily={"Lora"}
+                variant={"h5"}
+                textAlign={"left"}
+                text={header}
+              ></Text>
             </AccordionSummary>
             <AccordionDetails>
               <Grid>

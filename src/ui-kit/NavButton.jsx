@@ -47,7 +47,12 @@ const NavButton = ({ page, theme }) => {
           keepMounted
         >
           {subpages.map((subpage, idx) => (
-            <MenuItem key={idx} onClick={handleClose} component={Button} href={subpage.url}>
+            <MenuItem
+              key={idx}
+              onClick={handleClose}
+              component={Button}
+              href={subpage.url}
+            >
               {subpage.name}
             </MenuItem>
           ))}

@@ -1,10 +1,4 @@
-import {
-  Container,
-  Typography,
-  Box,
-  Grid,
-  ListItem,
-} from "@material-ui/core";
+import { Container, Typography, Box, Grid, ListItem } from "@material-ui/core";
 import TabPanelGroup from "../../Components/TabPanelGroup";
 import { useResourcesStyles } from "../../Styles/useResourcesStyles";
 import ShelterList from "../../Components/ShelterList";
@@ -45,9 +39,7 @@ const housingAssistanceAccord = [
         {additionalLinks.map((theLink, idx) => (
           <Grid item xs={6} key={idx}>
             <ListItem>
-              <ExternalLink href={theLink.url}>
-                {theLink.name}
-              </ExternalLink>
+              <ExternalLink href={theLink.url}>{theLink.name}</ExternalLink>
             </ListItem>
           </Grid>
         ))}
@@ -61,7 +53,11 @@ const AssistanceHousing = () => {
     <>
       <Box className={classes.darkBlueBackground}>
         <Container maxWidth={"sm"}>
-          <Typography className={classes.headingStyle} variant="h2" align="center">
+          <Typography
+            className={classes.headingStyle}
+            variant="h2"
+            align="center"
+          >
             Emergency Shelters
           </Typography>
           <TabPanelGroup tabs={emergencySheltersTabs} />
@@ -70,9 +66,7 @@ const AssistanceHousing = () => {
           <Typography className={classes.contentTextStyle} variant="subtitle1">
             We are not affiliated with any shelters, including the ones listed
             above. Under Washington state law,{" "}
-            <ExternalLink
-              href="http://transgenderlawcenter.org/wp-content/uploads/2016/02/03.09.2016-Model-Homeless-Shelter-TG-Policy-single-pages.pdf"
-            >
+            <ExternalLink href="http://transgenderlawcenter.org/wp-content/uploads/2016/02/03.09.2016-Model-Homeless-Shelter-TG-Policy-single-pages.pdf">
               it is illegal to deny shelter
             </ExternalLink>{" "}
             to transgender and gender non-conforming people on the basis of

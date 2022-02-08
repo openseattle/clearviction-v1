@@ -14,12 +14,12 @@ const FactGroup = (props) => {
           text={fact1.text}
           cols={4}
         />
-          <TextWithImage
-            img={fact2.graphic}
-            header={fact2.title}
-            text={fact2.text}
-            cols={4}
-          />
+        <TextWithImage
+          img={fact2.graphic}
+          header={fact2.title}
+          text={fact2.text}
+          cols={4}
+        />
         <TextWithImage
           img={fact3.graphic}
           header={fact3.title}

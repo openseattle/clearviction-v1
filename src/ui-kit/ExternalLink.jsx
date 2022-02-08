@@ -15,6 +15,7 @@ export const ExternalLink = ({
     href={href}
     color={color}
   >
-    {children}<OpenInNewOutlined fontSize="inherit"/>
+    {children}
+    <OpenInNewOutlined fontSize="inherit" />
   </Link>
 );

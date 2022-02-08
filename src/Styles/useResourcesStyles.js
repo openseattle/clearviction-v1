@@ -45,7 +45,7 @@ export const useResourcesStyles = makeStyles((theme) => ({
   publicHousingListStyle: {
     width: "100%",
   },
-  titleLinkStyle:{
+  titleLinkStyle: {
     paddingTop: theme.spacing(3),
     paddingBottom: theme.spacing(3),
     color: "white",
@@ -55,16 +55,15 @@ export const useResourcesStyles = makeStyles((theme) => ({
       color: "white",
       fontWeight: "bold",
       textDecoration: "underline",
-    }
+    },
   },
   reportStyle: {
     padding: theme.spacing(3),
     [theme.breakpoints.down("xs")]: {
       padding: theme.spacing(0),
-    }
+    },
   },
   reportHeading: {
     marginBottom: theme.spacing(3),
-
   },
 }));

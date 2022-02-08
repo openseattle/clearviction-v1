@@ -11,7 +11,7 @@ const BulletedListMui = (props) => {
   return (
     <Typography
       component="ul"
-      style={{ listStyleType: "disc", color: textColor, }}
+      style={{ listStyleType: "disc", color: textColor }}
     >
       {children}
     </Typography>
