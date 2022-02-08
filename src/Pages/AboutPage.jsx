@@ -7,8 +7,8 @@ import {
   List,
   ListItemIcon,
 } from "@material-ui/core";
-import TeamCard from "../Components/TeamCard";
 import HeroPanel from "../Components/HeroPanel";
+import TeamCard from "../Components/TeamCard";
 import {
   HourglassEmpty,
   LocalAtmOutlined,
@@ -106,9 +106,15 @@ const useStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(9),
     color: "white",
   },
-
   highlightText: {
     color: theme.palette.highlight.main,
+  },
+  cardGrid: {
+    padding: theme.spacing(3),
+    [theme.breakpoints.down("")]: {
+      paddingLeft: theme.spacing(5),
+      paddingRight: theme.spacing(5),
+    }
   },
 }));
 
@@ -280,21 +286,17 @@ const AboutPage = () => {
             The Team
           </Typography>
           <Grid container>
-            {team.map((member) => (
+            {team.map((member, idx) => (
               <Grid
-                key={member.firstName}
+                className={classes.cardGrid}
+                key={idx}
                 item
-                xs={6}
-                sm={4}
-                md={3}
+                xs={12}
+                sm={6}
+                md={4}
                 lg={3}
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  padding: "1rem",
-                }}
               >
-                <TeamCard key={member.firstName} member={member} />
+                  <TeamCard member={member} />
               </Grid>
             ))}
           </Grid>
