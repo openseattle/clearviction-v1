@@ -4,11 +4,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emotion/react": "^11.4.1",
-    "@emotion/styled": "^11.3.0",
+    "@emailjs/browser": "^3.4.0",
     "@material-ui/core": "^4.12.1",
-    "@mui/icons-material": "^5.0.5",
-    "@mui/material": "^5.0.0",
+    "@material-ui/icons": "^4.11.2",
+    "@material-ui/lab": "^4.0.0-alpha.60",
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -16,11 +15,11 @@
     "@types/node": "^16.11.6",
     "@types/react": "^17.0.14",
     "@types/react-dom": "^17.0.10",
-    "gh-pages": "^3.2.3",
+    "dotenv": "^13.0.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^4.0.3",
+    "react-scripts": "^5.0.0",
     "typescript": "^4.5.2",
     "web-vitals": "^1.0.1"
   },
@@ -53,7 +52,9 @@
     ]
   },
   "devDependencies": {
+    "@types/react-router-dom": "^5.3.2",
     "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.6"
+    "enzyme-adapter-react-16": "^1.15.6",
+    "prettier": "2.5.1"
   }
 }

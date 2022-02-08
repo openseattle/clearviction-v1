@@ -1,15 +1,22 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import { trackPageview, trackClick } from "../trackingUtils";
+import { Link, useLocation } from "react-router-dom";
 import calculatorPages from "../data/calculatorPages";
 import ToolTipModal from "../Components/ToolTipModal";
 import Text from "../ui-kit/Text";
+import ProgressBar from "../Components/ProgressBar";
+import "../CSS/Calculator.css";
 
 /** MATERIAL UI IMPORTS */
-import Box from '@material-ui/core/Box';
-import Link from '@mui/material/Link';
-import Container from "@mui/material/Container";
-import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
+import {
+  Box,
+  List,
+  Container,
+  Button,
+  Grid,
+  Typography,
+} from "@material-ui/core";
+import { CVPListItem } from "../ui-kit/ListItem";
 
 const BUTTON_COLORS = {
   blue: "#4e6c99",
@@ -23,84 +30,101 @@ const CalculatorPage = () => {
   const content = calculatorPages[pageId];
 
   if (!content) window.location = "/404";
+  useEffect(() => trackPageview("Calculator"), []);
 
-  const { header, body, buttons, footerLink, disclaimer, tooltip } = content;
+  const {
+    header,
+    body,
+    buttons,
+    footerLink,
+    disclaimer,
+    tooltip,
+    progressBar,
+  } = content;
 
   const renderButtons = (buttons) =>
     buttons.map(({ text, href, color }) => {
       return (
-        <Stack key={text} direction="column" style={{padding: 10}}>
+        <Grid container key={text} direction="column" style={{ padding: 10 }}>
           <Button
+            onClick={() => trackClick(text)}
             variant="contained"
             href={href}
-            style={
-              { backgroundColor: BUTTON_COLORS[color || "blue"] }}
+            style={{
+              backgroundColor: BUTTON_COLORS[color || "blue"],
+              color: "var(--white)",
+            }}
           >
             <Text text={text} variant={"h6"}></Text>
           </Button>
-        </Stack>
+        </Grid>
       );
-    }
-  );
+    });
 
   const renderBody = ({ type, text, href, items }) => {
     switch (type) {
       case "paragraph":
-        return (
-          <Text key={text} text={text} variant={"h4"} ></Text>
-        );
+        return <Text key={text} text={text} variant={"h4"}></Text>;
       case "link":
         return (
-          <Link href={href} target="_blank" rel="noreferrer" key={text}>
-            {text}
-          </Link>
+          <List>
+            <CVPListItem
+              isLink={true}
+              useBulletPoint={true}
+              text={text}
+              href={href}
+              onClick={() => trackClick(text)}
+            />
+          </List>
         );
       case "list":
         return (
-          <ul key={items[0]}>
-            { items.map((item) => <li key={item}>{item}</li>) }
-          </ul>
-        )
+          <List>
+            {items.map((item) => (
+              <CVPListItem isLink={false} useBulletPoint={true} text={item} />
+            ))}
+          </List>
+        );
       default:
         break;
     }
   };
 
   return (
-    <Box 
+    <Box
       sx={{
         padding: 20,
       }}
     >
-      <Container maxWidth="xs" padding={10}>
-        <Stack direction="column" spacing={2}>
-          { header && 
-              <Text text={header} variant={"h3"}></Text>
-          }
-          { body && 
-            <Container maxWidth="sm">{ body.map(renderBody) }</Container>
-          }
-          { buttons && 
-            renderButtons(buttons)
-          }
-          { tooltip &&
-            <ToolTipModal
-              text={tooltip}
-            />     
-          }
-          { footerLink && (
-            <a
+      <Container maxWidth="sm" padding={10}>
+        <Grid container direction="column" spacing={2}>
+          {progressBar && (
+            <ProgressBar
+              currentSectionName={progressBar.currentSectionName}
+              currentSection={progressBar.currentSection}
+              totalSections={progressBar.totalSections}
+            />
+          )}
+          {header && <Text text={header} variant={"h3"}></Text>}
+          {body && <Container maxWidth="sm">{body.map(renderBody)}</Container>}
+          {buttons && renderButtons(buttons)}
+          {tooltip && <ToolTipModal text={tooltip} />}
+          {footerLink && (
+            <Link
               target="_blank"
               rel="noreferrer"
               href={footerLink.href}
+              onClick={() => trackClick(footerLink.text)}
             >
               {footerLink.text}
-            </a>
-          ) }
-          { disclaimer && 
-            <Text text={disclaimer} variant={"h6"}></Text>
-          }
-        </Stack>
+            </Link>
+          )}
+          {disclaimer && (
+            <Container className="disclaimer">
+              <Typography variant="h6">{disclaimer}</Typography>
+            </Container>
+          )}
+        </Grid>
       </Container>
     </Box>
   );

@@ -1,33 +1,32 @@
-import Button from '@mui/material/Button';
-import { makeStyles } from '@material-ui/styles';
+import { Button, makeStyles } from "@material-ui/core";
 
-const useStyles = makeStyles({
-    flexGrow: {
-      flex: '1',
+const useStyles = makeStyles((theme) => ({
+  flexGrow: {
+    flex: "1",
+  },
+  button: {
+    backgroundColor: "var(--light-gray)",
+    color: "#000000",
+    width: "327px",
+    [theme.breakpoints.down("xs")]: {
+      width: "50vw",
     },
-    button: {
-      backgroundColor: 'var(--light-gray)',
-      color: '#000000',
-      width: '327px',
-      padding: '10px',
-      margin: '10px',
-      fontSize: '16px',
-      '&:hover': {
-        backgroundColor: 'var(--gray)',
-        color: '#000000',
+    padding: "10px",
+    margin: "10px",
+    fontSize: "16px",
+    "&:hover": {
+      backgroundColor: "var(--gray)",
+      color: "#000000",
     },
-  }})
+  },
+}));
 
-  
 export default function PrimaryButton({ text, href }) {
-    const classes = useStyles()
+  const classes = useStyles();
 
-    return (
-        <Button 
-            className={classes.button}
-            href={href}
-        >
-            {text}
-        </Button>        
-    );
-  }
+  return (
+    <Button className={classes.button} href={href}>
+      {text}
+    </Button>
+  );
+}

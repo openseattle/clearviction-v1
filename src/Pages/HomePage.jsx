@@ -1,27 +1,22 @@
+import { useEffect } from "react";
+import { trackPageview } from "../trackingUtils";
 import FAQAccordion from "../Components/Accordion";
 import PrimaryButton from "../ui-kit/Button";
-import SecondaryButton from "../ui-kit/SecondaryButton";
 import Text from "../ui-kit/Text";
-
-import Grid from "@mui/material/Grid";
-import Stack from "@mui/material/Stack";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import Divider from "@mui/material/Divider";
-
+import SecondaryButton from "../ui-kit/SecondaryButton";
 import cvpLogoWhite from "../Assets/cvp-logo-white.png";
 import cvpLogoLeftHalf from "../Assets/cvp-logo-white-left-half.png";
-import democracylabLogo from "../Assets/democracylab-logo.png";
-import openseattleLogo from "../Assets/openseattle-logo.png";
 import housing from "../Assets/housing.svg";
 import employment from "../Assets/employment.svg";
 import education from "../Assets/education.svg";
-import travel from "../Assets/travel.svg";
+import lawyer from "../Assets/lawyer.svg";
 import teamwork from "../Assets/teamwork.svg";
 import phone from "../Assets/phone.svg";
 import "../CSS/HomePage.css";
 
 const HomePage = () => {
+  useEffect(() => trackPageview("Home"), []);
+
   return (
     <div className="container-fluid">
       <div className="row light-bg">
@@ -38,7 +33,10 @@ const HomePage = () => {
                   "Check your eligibility to vacate your conviction for free in less than 10 minutes!"
                 }
               ></Text>
-              <Text variant={"h5"} text={"Coming in January 2022!"}></Text>
+              <SecondaryButton
+                text={"Check My Eligibility"}
+                linkTo={"/calculator/landing-0"}
+              ></SecondaryButton>
             </div>
             <div id="right-content">
               <img src={cvpLogoLeftHalf} id="hero-logo" alt={"CVP Logo"} />
@@ -86,7 +84,12 @@ const HomePage = () => {
             fontFamily={"Lora"}
           ></Text>
         </div>
-        <Text variant={"h3"} text={"Coming in January 2022!"}></Text>
+        <div>
+          <SecondaryButton
+            text={"Check My Eligibility"}
+            linkTo={"/calculator/landing-0"}
+          ></SecondaryButton>
+        </div>
       </div>
 
       <div className="row light-bg" id="faq">
@@ -140,7 +143,7 @@ const HomePage = () => {
         </div>
 
         <div className="col-sm">
-          <img className="icons" src={travel} alt={"Travel Icon"} />
+          <img className="icons" src={lawyer} alt={"Lawyer Icon"} />
           <Text
             variant={"h6"}
             text={"Government Assistance"}
@@ -154,7 +157,7 @@ const HomePage = () => {
         </div>
         <div className="row">
           <div className="col-lg">
-            {/* <SecondaryButton text={"Learn More"} /> */}
+            <SecondaryButton text={"Learn More"} linkTo={"/why-vacate"} />
           </div>
         </div>
       </div>
@@ -182,53 +185,6 @@ const HomePage = () => {
           ></Text>
           <br />
           {/* <SecondaryButton text={"Join the Team"} /> */}
-        </div>
-      </div>
-
-      <div className="row">
-        <div className="col-lg">
-          <Stack direction="row" sx={{ display: "flex", padding: 5 }}>
-            <Grid
-              container
-              columns={2}
-              spacing={6}
-              justifyContent="space-between"
-            >
-              <Grid item>
-                <List>
-                  <ListItem>
-                    <a href="/" style={{ color: "#000000" }}>
-                      Home
-                    </a>
-                  </ListItem>
-                  <ListItem>
-                    <a href="/calculator" style={{ color: "#000000" }}>
-                      Calculator
-                    </a>
-                  </ListItem>
-                  {/* <ListItem>
-                    <a href="/" style={{ color: "#000000" }}>
-                      Contact
-                    </a>
-                  </ListItem> */}
-                </List>
-              </Grid>
-
-              <Grid item sx={{ float: "right", position: "relative" }}>
-                <Stack direction="column">
-                  <img src={openseattleLogo} alt={"Open Seattle Logo"} />
-                  <img src={democracylabLogo} alt={"Democracy Lab Logo"} />
-                </Stack>
-              </Grid>
-            </Grid>
-          </Stack>
-          <Divider sx={{ marginTop: 1, marginBottom: 1 }} />
-          <Text
-            variant={"body"}
-            text={
-              "The information on this site is not, nor should it be, considered legal advice."
-            }
-          ></Text>
         </div>
       </div>
     </div>
