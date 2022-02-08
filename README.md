@@ -1,4 +1,4 @@
-# Washington Conviction Vacation Project
+# Clearviction
 
 ## Table of Contents
 
