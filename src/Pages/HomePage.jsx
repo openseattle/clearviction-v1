@@ -171,7 +171,7 @@ const HomePage = () => {
             variant={"h5"}
             fontFamily={"Lora"}
             text={
-              "The Conviction Vacation Project connects volunteers passionate about reducing barriers and making it easier for those with convictions in Washington State."
+              "Clearviction connects volunteers passionate about reducing barriers and making it easier for those with convictions in Washington State."
             }
           ></Text>
           <br />

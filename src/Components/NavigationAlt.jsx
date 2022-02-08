@@ -78,10 +78,10 @@ const NavigationAlt = () => {
               className={classes.navigationLogo}
               component="img"
               src={navLogo}
-              alt="conviction vacation project next white scales of justice"
+              alt="clearviction logo broken chains"
             />
             <Typography className={classes.navigationLogoText}>
-              Washington Conviction Vacation Project
+              Clearviction
             </Typography>
           </Box>
           <Box style={{ flexGrow: 1 }} />
