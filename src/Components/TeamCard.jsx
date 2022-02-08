@@ -27,20 +27,26 @@ const TeamCard = (props) => {
   const classes = useStyles();
   const { firstName, lastName, role, linkedIn } = props.member;
 
-
   return (
     <Card className={classes.card}>
       <CardMedia>
         <Avatar
           className={classes.avatar}
           variant="square"
-          src={`https://cvp-team-photos.s3.us-west-2.amazonaws.com/${firstName+lastName}.jpg`}
+          src={`https://cvp-team-photos.s3.us-west-2.amazonaws.com/${
+            firstName + lastName
+          }.jpg`}
         />
       </CardMedia>
       <List>
         <ListItem>
           <ListItemText primary={firstName + " " + lastName} secondary={role} />
-          <IconButton href={linkedIn} target="_blank" rel="noopener noreferrer" size="small">
+          <IconButton
+            href={linkedIn}
+            target="_blank"
+            rel="noopener noreferrer"
+            size="small"
+          >
             {linkedIn && <LinkedIn fontSize="large" />}
           </IconButton>
         </ListItem>

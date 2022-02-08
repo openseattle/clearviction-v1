@@ -289,13 +289,13 @@ const data: Pages = {
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "3. To better understand misdemeanor conviction vacation, please click the link below:"
+        text: "3. To better understand misdemeanor conviction vacation, please click the link below:",
       },
       {
         type: BodyType.LINK,
         text: "Click here.",
-        href: "https://www.washingtonlawhelp.org/resource/get-misdemeanor-convictions-off-your-criminal-record"
-      }
+        href: "https://www.washingtonlawhelp.org/resource/get-misdemeanor-convictions-off-your-criminal-record",
+      },
     ],
     disclaimer,
   },
@@ -304,9 +304,7 @@ const data: Pages = {
       "As of now, it seems that you may NOT be eligible to vacate your marijuana misdemeanor conviction because you have not completed the terms of your offense.",
     disclaimer,
   },
-  "mar-ineligible-2": {
-
-  },
+  "mar-ineligible-2": {},
   "mar-to-main": {
     header:
       "Based on your response, it looks like you don't qualify for the marijuana misdemeanor exception.",
@@ -581,8 +579,8 @@ const data: Pages = {
       {
         type: BodyType.LINK,
         text: "Domestic Violence Information",
-        href: "https://www.courts.wa.gov/dv/?fa=dv.guide"
-      }
+        href: "https://www.courts.wa.gov/dv/?fa=dv.guide",
+      },
     ],
     progressBar: {
       currentSectionName: SectionName.CONV,
@@ -799,13 +797,13 @@ const data: Pages = {
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "3. To better understand misdemeanor conviction vacation, please click the link below:"
+        text: "3. To better understand misdemeanor conviction vacation, please click the link below:",
       },
       {
         type: BodyType.LINK,
         text: "Click here.",
-        href: "https://www.washingtonlawhelp.org/resource/get-misdemeanor-convictions-off-your-criminal-record"
-      }
+        href: "https://www.washingtonlawhelp.org/resource/get-misdemeanor-convictions-off-your-criminal-record",
+      },
     ],
     disclaimer,
   },
@@ -874,7 +872,8 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "pro-2": {
-    header: "Was the conviction a result of being a victim of one of the following:",
+    header:
+      "Was the conviction a result of being a victim of one of the following:",
     progressBar: {
       currentSectionName: SectionName.CONV,
       totalSections: 3,
@@ -1062,13 +1061,13 @@ const data: Pages = {
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "4. To better understand misdemeanor conviction vacation, please click the link below:"
+        text: "4. To better understand misdemeanor conviction vacation, please click the link below:",
       },
       {
         type: BodyType.LINK,
         text: "Click here.",
-        href: "https://www.washingtonlawhelp.org/resource/get-misdemeanor-convictions-off-your-criminal-record"
-      }
+        href: "https://www.washingtonlawhelp.org/resource/get-misdemeanor-convictions-off-your-criminal-record",
+      },
     ],
     disclaimer,
   },
@@ -1350,8 +1349,8 @@ const data: Pages = {
       {
         type: BodyType.LINK,
         text: "Legal financial obligations",
-        href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.94A.760"
-      }
+        href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.94A.760",
+      },
     ],
     buttons: [
       {
@@ -1366,7 +1365,8 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "too-eligible-0": {
-    header: "It seems that you may be eligible to vacate your misdemeanor conviction!",
+    header:
+      "It seems that you may be eligible to vacate your misdemeanor conviction!",
     progressBar: {
       currentSectionName: SectionName.ELIGIBLE,
       totalSections: 3,
@@ -1374,7 +1374,7 @@ const data: Pages = {
     body: [
       {
         type: BodyType.PARAGRAPH,
-        text: "Next steps:"
+        text: "Next steps:",
       },
       {
         type: BodyType.PARAGRAPH,

@@ -6,20 +6,30 @@ type Page = {
 
 const pages: Page[] = [
   { name: "Calculator", url: "/calculator" },
-  { name: "Why Vacate", url: "/why-vacate", subpages: [
-    {name: "Housing", url: "/why-vacate/housing" },
-    {name: "Employment", url: "/why-vacate/employment" },
-    {name: "Education", url: "/why-vacate/education" },
-    {name: "Government Assistance", url: "/why-vacate/government-assistance" }
-  ]},
+  {
+    name: "Why Vacate",
+    url: "/why-vacate",
+    subpages: [
+      { name: "Housing", url: "/why-vacate/housing" },
+      { name: "Employment", url: "/why-vacate/employment" },
+      { name: "Education", url: "/why-vacate/education" },
+      {
+        name: "Government Assistance",
+        url: "/why-vacate/government-assistance",
+      },
+    ],
+  },
   {
     name: "Resources",
     url: "/resources",
     subpages: [
       { name: "The Process", url: "/resources/the-process" },
-      { name: "Housing Assistance", url: "/resources/assistance/housing"},
-      { name: "Employment Assistance", url: "/resources/assistance/employment"},
-      { name: "Education Assistance", url: "/resources/assistance/education"},
+      { name: "Housing Assistance", url: "/resources/assistance/housing" },
+      {
+        name: "Employment Assistance",
+        url: "/resources/assistance/employment",
+      },
+      { name: "Education Assistance", url: "/resources/assistance/education" },
     ],
   },
   {

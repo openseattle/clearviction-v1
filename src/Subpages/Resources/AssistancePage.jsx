@@ -1,4 +1,4 @@
-import { Container, } from "@material-ui/core";
+import { Container } from "@material-ui/core";
 import { Route } from "react-router-dom";
 import HeroPanel from "../../Components/HeroPanel";
 import NavCardGroup from "../../Components/NavCardGroup";
@@ -40,10 +40,10 @@ const AssistancePage = () => {
         <AssistanceHousing />
       </Route>
       <Route exact path="/resources/assistance/employment">
-      <AssistanceEmployment />
+        <AssistanceEmployment />
       </Route>
       <Route exact path="/resources/assistance/education">
-      <AssistanceEducation />
+        <AssistanceEducation />
       </Route>
     </>
   );

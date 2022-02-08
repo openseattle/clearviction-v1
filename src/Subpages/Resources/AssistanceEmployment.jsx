@@ -96,8 +96,8 @@ const AssistanceEmployment = () => {
             Find work!
           </Typography>
           <Grid container spacing={4}>
-            <Grid item xs={12} sm={6} >
-              <Grid container  style={{height:"100%"}} alignItems="center">
+            <Grid item xs={12} sm={6}>
+              <Grid container style={{ height: "100%" }} alignItems="center">
                 <div>
                   <Typography className={classes.headingStyle}>
                     <ExternalLink
@@ -115,7 +115,7 @@ const AssistanceEmployment = () => {
                 </div>
               </Grid>
             </Grid>
-            <Grid item xs={12} sm={6} >
+            <Grid item xs={12} sm={6}>
               <Box component="img" src={officeWork} height={"100%"} />
             </Grid>
             {workResources.map((workSource, idx) => (

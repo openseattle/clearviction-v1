@@ -4,7 +4,7 @@ import {
   AccordionSummary,
   Box,
   makeStyles,
-  Typography
+  Typography,
 } from "@material-ui/core";
 import { ArrowDropDownOutlined } from "@material-ui/icons";
 
@@ -12,17 +12,16 @@ const useStyles = makeStyles((theme) => ({
   title: {
     marginTop: theme.spacing(3),
     marginBottom: theme.spacing(3),
-
   },
   faq: {
     marginTop: theme.spacing(5),
     marginBottom: theme.spacing(5),
     marginRight: theme.spacing(3),
     marginLeft: theme.spacing(3),
-    [theme.breakpoints.down("xs")]:{
+    [theme.breakpoints.down("xs")]: {
       marginRight: theme.spacing(2),
       marginLeft: theme.spacing(2),
-    }
+    },
   },
   faqAccordionStyle: {
     borderRadius: 4,
@@ -49,7 +48,7 @@ const AlternativeAccord = (props) => {
   const { faqs, sectionHeading } = props;
   const classes = useStyles();
   return (
-    <Box className={classes.faq} >
+    <Box className={classes.faq}>
       <Typography className={classes.title} variant="h3">
         {sectionHeading}
       </Typography>
@@ -64,9 +63,7 @@ const AlternativeAccord = (props) => {
               {faq.summary}
             </Typography>
           </AccordionSummary>
-          <AccordionDetails>
-                {faq.details}
-          </AccordionDetails>
+          <AccordionDetails>{faq.details}</AccordionDetails>
         </Accordion>
       ))}
     </Box>

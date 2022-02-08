@@ -51,7 +51,8 @@ const ToolTipModal = (props) => {
               rel="noreferrer"
             >
               here
-            </a>.
+            </a>
+            .
           </Typography>
         </Box>
       </Modal>

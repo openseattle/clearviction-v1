@@ -8,7 +8,14 @@ import ProgressBar from "../Components/ProgressBar";
 import "../CSS/Calculator.css";
 
 /** MATERIAL UI IMPORTS */
-import { Box, List, Container, Button, Grid, Typography } from "@material-ui/core";
+import {
+  Box,
+  List,
+  Container,
+  Button,
+  Grid,
+  Typography,
+} from "@material-ui/core";
 import { CVPListItem } from "../ui-kit/ListItem";
 
 const BUTTON_COLORS = {
@@ -43,7 +50,10 @@ const CalculatorPage = () => {
             onClick={() => trackClick(text)}
             variant="contained"
             href={href}
-            style={{ backgroundColor: BUTTON_COLORS[color || "blue"], color: "var(--white)" }}
+            style={{
+              backgroundColor: BUTTON_COLORS[color || "blue"],
+              color: "var(--white)",
+            }}
           >
             <Text text={text} variant={"h6"}></Text>
           </Button>
@@ -70,13 +80,9 @@ const CalculatorPage = () => {
       case "list":
         return (
           <List>
-            { items.map((item) => (
-              <CVPListItem
-                isLink={false}
-                useBulletPoint={true}
-                text={item}
-              />
-            ))} 
+            {items.map((item) => (
+              <CVPListItem isLink={false} useBulletPoint={true} text={item} />
+            ))}
           </List>
         );
       default:
@@ -113,10 +119,11 @@ const CalculatorPage = () => {
               {footerLink.text}
             </Link>
           )}
-          {disclaimer && 
+          {disclaimer && (
             <Container className="disclaimer">
               <Typography variant="h6">{disclaimer}</Typography>
-            </Container>}
+            </Container>
+          )}
         </Grid>
       </Container>
     </Box>

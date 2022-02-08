@@ -157,7 +157,7 @@ const HomePage = () => {
         </div>
         <div className="row">
           <div className="col-lg">
-            <SecondaryButton text={"Learn More"} linkTo={"/why-vacate"}/>
+            <SecondaryButton text={"Learn More"} linkTo={"/why-vacate"} />
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import { Typography, } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import { useResourcesStyles } from "../../Styles/useResourcesStyles";
 import BulletedListMui from "../../ui-kit/BulletedListMui";
 

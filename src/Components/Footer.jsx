@@ -87,10 +87,14 @@ const Footer = () => {
             </Typography>
             <List>
               <ListItem>
-                <Typography className={classes.subHeader} variant="subtitle2" style={{maxWidth: 250}}>
-                  ClearViction is reducing barriers faced by formerly incarcerated
-                  individuals by streamlining the process of vacating eligible
-                  convictions in Washington state.
+                <Typography
+                  className={classes.subHeader}
+                  variant="subtitle2"
+                  style={{ maxWidth: 250 }}
+                >
+                  ClearViction is reducing barriers faced by formerly
+                  incarcerated individuals by streamlining the process of
+                  vacating eligible convictions in Washington state.
                 </Typography>
               </ListItem>
             </List>

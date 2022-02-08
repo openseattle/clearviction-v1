@@ -14,14 +14,14 @@ const Theme = createTheme({
     success: {
       main: "#419d77",
       light: "#9ed6be",
-      dark: "#396452"
+      dark: "#396452",
     },
     error: {
       main: "#DF1F1F",
     },
     highlight: {
-      main: "#FFD200"
-    } 
+      main: "#FFD200",
+    },
   },
   typography: {
     fontSize: 16,
@@ -37,7 +37,7 @@ const Theme = createTheme({
       fontFamily: ["Roboto", "sans-serif"],
       fontSize: "1.5rem",
       fontWeight: "normal",
-      lineHeight: "24px"
+      lineHeight: "24px",
     },
     subtitle2: {
       fontFamily: "Roboto",
@@ -50,7 +50,7 @@ const Theme = createTheme({
       fontWeight: "bold",
       lineHeight: "3rem",
       textTransform: "none",
-    }
+    },
   },
 });
 
@@ -85,18 +85,17 @@ Theme.overrides = {
   MuiDrawer: {
     paper: {
       backgroundColor: Theme.palette.primary.main,
-      width: "250px"
-    }
+      width: "250px",
+    },
   },
   MuiTabs: {
     root: {
       borderTopLeftRadius: 5,
       borderTopRightRadius: 5,
-
     },
     indicator: {
       height: 0,
-    }
+    },
   },
   MuiTab: {
     root: {
@@ -106,8 +105,8 @@ Theme.overrides = {
     selected: {
       color: Theme.palette.primary.dark,
       backgroundColor: "white",
-    }
-  }
+    },
+  },
 };
 
 export default Theme;

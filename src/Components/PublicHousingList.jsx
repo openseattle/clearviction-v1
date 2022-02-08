@@ -22,7 +22,11 @@ const PublicHousingList = ({ publicAssociations }) => {
             </Grid>
             <Grid item xs={12} sm={4}>
               <List>
-                <ListItemLink target="_blank" rel="noopener noreferrer" href={`https://www.google.com/maps/search/?api=1&query=${association.area}+${association.address}+${association.city}`}>
+                <ListItemLink
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={`https://www.google.com/maps/search/?api=1&query=${association.area}+${association.address}+${association.city}`}
+                >
                   <HomeWorkOutlined className={classes.shelterIcon} />
                   <ListItemText
                     primary={association.address + " " + association.city}
@@ -31,9 +35,9 @@ const PublicHousingList = ({ publicAssociations }) => {
               </List>
             </Grid>
             <Grid item xs={12} sm={4}>
-              <List >
+              <List>
                 <ListItemLink href={`tel:+${association.phone}`}>
-                    <Call className={classes.shelterIcon} />
+                  <Call className={classes.shelterIcon} />
                   <ListItemText primary={association.phone} />
                 </ListItemLink>
               </List>

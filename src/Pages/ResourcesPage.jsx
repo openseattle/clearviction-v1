@@ -1,4 +1,4 @@
-import { Container, Grid, } from "@material-ui/core";
+import { Container, Grid } from "@material-ui/core";
 import HeroPanel from "../Components/HeroPanel";
 import { TextWithImage } from "../Subpages/WhyVacate/TextWithImage";
 import arranging from "../Assets/data_arranging.svg";
@@ -8,9 +8,12 @@ import PrimaryButton from "../ui-kit/Button";
 const ResourcesPage = () => {
   return (
     <>
-      <Container maxWidth={"lg"} style={{paddingBottom: "50px"}}>
-        <HeroPanel title={"Resources"} subtitle={"We have compiled a list of resources to get you started."} />
-        <Grid  container>
+      <Container maxWidth={"lg"} style={{ paddingBottom: "50px" }}>
+        <HeroPanel
+          title={"Resources"}
+          subtitle={"We have compiled a list of resources to get you started."}
+        />
+        <Grid container>
           <TextWithImage
             img={arranging}
             header={"The process"}

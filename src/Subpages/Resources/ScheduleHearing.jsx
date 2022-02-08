@@ -13,8 +13,10 @@ const LFODetails = (
     </Typography>
     <BulletedListMui>
       <li>
-        <ExternalLink href="https://nwjustice.org/clear-hotline">CLEAR hotline</ExternalLink> - refer
-        you to legal organizations
+        <ExternalLink href="https://nwjustice.org/clear-hotline">
+          CLEAR hotline
+        </ExternalLink>{" "}
+        - refer you to legal organizations
       </li>
       <li>
         <ExternalLink href="https://columbialegal.org/wp-content/uploads/2019/10/CLS-Re-Entry-Clinic-Brochure.pdf">
@@ -98,8 +100,10 @@ const legalHotlineDetails = (
   <div>
     <Typography>
       Many pro bono services are only available after being refered by{" "}
-      <ExternalLink href="https://nwjustice.org/clear-hotline">CLEAR</ExternalLink>, a toll-free legal
-      hotline:
+      <ExternalLink href="https://nwjustice.org/clear-hotline">
+        CLEAR
+      </ExternalLink>
+      , a toll-free legal hotline:
     </Typography>
     <BulletedListMui>
       <li>
@@ -109,7 +113,10 @@ const legalHotlineDetails = (
     </BulletedListMui>
     <Typography>
       You can also apply online at{" "}
-      <ExternalLink href="https://nwjustice.org/apply-online">CLEAR*Online</ExternalLink>.
+      <ExternalLink href="https://nwjustice.org/apply-online">
+        CLEAR*Online
+      </ExternalLink>
+      .
     </Typography>
     <Typography>
       Listed below are attorneys and clinics you can contact directly.

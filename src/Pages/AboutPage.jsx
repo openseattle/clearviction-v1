@@ -55,7 +55,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       paddingLeft: theme.spacing(1),
       paddingRight: theme.spacing(1),
-    }
+    },
   },
   theProblemRootleft: {
     backgroundColor: "white",
@@ -114,7 +114,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("")]: {
       paddingLeft: theme.spacing(5),
       paddingRight: theme.spacing(5),
-    }
+    },
   },
 }));
 
@@ -217,8 +217,8 @@ const AboutPage = () => {
             </Grid>
             <Grid className={classes.problemRootRight} item sm={12} md={6}>
               <Grid container justifyContent="center">
-                <Grid item  md={3} >
-                    <HourglassEmpty className={classes.theProblemIcon} />
+                <Grid item md={3}>
+                  <HourglassEmpty className={classes.theProblemIcon} />
                 </Grid>
                 <Grid item sm={12} md={8}>
                   <Typography>
@@ -231,7 +231,7 @@ const AboutPage = () => {
                     <LocalAtmOutlined className={classes.theProblemIcon} />
                   </ListItemIcon>
                 </Grid>
-                <Grid item sm={12}  md={8} >
+                <Grid item sm={12} md={8}>
                   <Typography>
                     While hiring an attorney can help simplify the process, it’s
                     unaffordable for most
@@ -242,7 +242,7 @@ const AboutPage = () => {
                     <PanToolOutlined className={classes.theProblemIcon} />
                   </ListItemIcon>
                 </Grid>
-                <Grid item sm={12}  md={8}>
+                <Grid item sm={12} md={8}>
                   <Typography>
                     Free volunteer services are available but they are often
                     inaccessible and don’t cover all steps of the process
@@ -296,7 +296,7 @@ const AboutPage = () => {
                 md={4}
                 lg={3}
               >
-                  <TeamCard member={member} />
+                <TeamCard member={member} />
               </Grid>
             ))}
           </Grid>

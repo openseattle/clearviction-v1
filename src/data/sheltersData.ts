@@ -19,7 +19,7 @@ type housingFinderResource = {
 type additionalLinksType = {
   name: string;
   url: string;
-}
+};
 
 const forMen: shelter[] = [
   {
@@ -85,7 +85,7 @@ const forWomen: shelter[] = [
     city: "Seattle, WA 98121",
     phone: "(206) 441-3210",
   },
-]
+];
 
 const findHousing: housingFinderResource[] = [
   {
@@ -122,7 +122,7 @@ const findHousing: housingFinderResource[] = [
     tags2Phones: ["Seattle: ", "Tacoma: "],
     email: "housing@p-h-s.com",
   },
-]
+];
 
 const additionalLinks: additionalLinksType[] = [
   {
@@ -141,5 +141,5 @@ const additionalLinks: additionalLinksType[] = [
     name: "Affordable Housing Online",
     url: "https://affordablehousingonline.com/housing-search/Washington",
   },
-]
-export {forMen, forWomen, findHousing, additionalLinks};
+];
+export { forMen, forWomen, findHousing, additionalLinks };

@@ -1,9 +1,5 @@
 import { SvgIcon } from "@material-ui/core";
-import {
-  Grid,
-  Typography,
-  makeStyles,
-} from "@material-ui/core";
+import { Grid, Typography, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   mainText: {
@@ -42,7 +38,15 @@ export const IconWithHeaderAndText = (props) => {
         <Grid item>
           <SvgIcon component={icon} className={classes.icons} />
         </Grid>
-        <Grid className={classes.gridItemStyle} item xs={12} sm={10} md={10} lg={10} xl={10}>
+        <Grid
+          className={classes.gridItemStyle}
+          item
+          xs={12}
+          sm={10}
+          md={10}
+          lg={10}
+          xl={10}
+        >
           <Grid container alignItems="flex-start">
             <Typography variant="h4">{header}</Typography>
             {textItems}
