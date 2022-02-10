@@ -26,12 +26,12 @@ const Theme = createTheme({
   typography: {
     fontSize: 16,
     body1: {
-      fontFamily: "Lora",
+      fontFamily: ["Roboto", "sans-serif"],
       fontSize: "1.5rem",
     },
     body2: {
-      fontFamily: "Lora",
-      fontSize: "1.25rem",
+      fontFamily: ["Lora", "serif"],
+      fontSize: "1.5rem",
     },
     subtitle1: {
       fontFamily: ["Roboto", "sans-serif"],
@@ -45,7 +45,7 @@ const Theme = createTheme({
     },
     button: {
       textAlign: "center",
-      fontSize: "1.125rem",
+      fontSize: "1.5rem",
       fontFamily: ["Roboto", "sans-serif"],
       fontWeight: "bold",
       lineHeight: "3rem",
