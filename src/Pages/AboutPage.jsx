@@ -69,7 +69,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(4),
     paddingBottom: theme.spacing(5),
   },
-  problemRightListItem: {
+  problemRightListText: {
     padding: theme.spacing(3),
   },
   theProblemIcon: {
@@ -104,7 +104,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardGrid: {
     padding: theme.spacing(3),
-    [theme.breakpoints.down("")]: {
+    [theme.breakpoints.down("xs")]: {
       paddingLeft: theme.spacing(5),
       paddingRight: theme.spacing(5),
     },
@@ -222,29 +222,25 @@ const AboutPage = () => {
                   <HourglassEmpty className={classes.theProblemIcon} />
                 </Grid>
                 <Grid item xs={12} sm={8} md={8}>
-                  <Typography>
+                  <Typography className={classes.problemRightListText}>
                     Each step requires time and know-how, increasing the barrier
                     to entry for applicants
                   </Typography>
                 </Grid>
                 <Grid item sm={3} md={3}>
-                  <ListItemIcon>
                     <LocalAtmOutlined className={classes.theProblemIcon} />
-                  </ListItemIcon>
                 </Grid>
                 <Grid item xs={12} sm={8} md={8}>
-                  <Typography>
+                  <Typography className={classes.problemRightListText}>
                     While hiring an attorney can help simplify the process, it’s
                     unaffordable for most
                   </Typography>
                 </Grid>
                 <Grid item sm={3} md={3}>
-                  <ListItemIcon>
                     <PanToolOutlined className={classes.theProblemIcon} />
-                  </ListItemIcon>
                 </Grid>
                 <Grid item xs={12} sm={8} md={8}>
-                  <Typography>
+                  <Typography className={classes.problemRightListText}>
                     Free volunteer services are available but they are often
                     inaccessible and don’t cover all steps of the process
                   </Typography>
