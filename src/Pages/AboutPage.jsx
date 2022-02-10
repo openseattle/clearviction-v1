@@ -65,10 +65,12 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(4),
   },
   problemLeftTitle: {
-    marginBottom: theme.spacing(4),
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
   },
   problemLeftBody: {
-    marginTop: theme.spacing(4),
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
   },
   problemRootRight: {
     backgroundColor: theme.palette.primary.dark,
@@ -120,14 +122,16 @@ const useStyles = makeStyles((theme) => ({
 
 const AboutPage = () => {
   const classes = useStyles();
-  const pageTitle = "About Us";
-  const pageSubtitle = `We are a civic-tech open-source project working to make the 
-  conviction vacation process easier and more straightforward, starting with an 
-  eligibility calculator.`;
   return (
     <>
       <Container maxWidth="lg">
-        <HeroPanel title={pageTitle} subtitle={pageSubtitle} />
+        <HeroPanel
+          title={"About Us"}
+          subtitle={
+            `We are a civic-tech open-source project working to make the conviction vacation 
+            process easier and more straightforward, starting with an eligibility calculator.`
+          }
+        />
       </Container>
 
       <Box className={classes.roots}>
@@ -215,7 +219,13 @@ const AboutPage = () => {
                 <li>Scheduling hearings with a judge</li>
               </Typography>
             </Grid>
-            <Grid className={classes.problemRootRight} item xs={12} sm={12} md={6}>
+            <Grid
+              className={classes.problemRootRight}
+              item
+              xs={12}
+              sm={12}
+              md={6}
+            >
               <Grid container justifyContent="center">
                 <Grid item sm={3} md={3}>
                   <HourglassEmpty className={classes.theProblemIcon} />
@@ -269,7 +279,7 @@ const AboutPage = () => {
               and decrease lifelong collateral consequences.
             </Typography>
             <Typography className={classes.ourMissionText} variant="h3">
-              To support this mission, we first focused on creating a <br />
+              To support this mission, we first focused on creating a{" "}
               <span className={classes.highlightText}>
                 Conviction Eligibility Calculator
               </span>{" "}
