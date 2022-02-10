@@ -39,15 +39,6 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(3),
     },
   },
-  rootsImage: {
-    width: 300,
-    height: 180,
-  },
-  rootsBodyText: {
-    minWidth: 150,
-    fontFamily: ["Roboto", "sans-serif"],
-    fontSize: 18,
-  },
   problemRoot: {
     marginTop: theme.spacing(6),
     marginBottom: theme.spacing(6),
