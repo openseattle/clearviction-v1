@@ -215,34 +215,34 @@ const AboutPage = () => {
                 <li>Scheduling hearings with a judge</li>
               </Typography>
             </Grid>
-            <Grid className={classes.problemRootRight} item sm={12} md={6}>
+            <Grid className={classes.problemRootRight} item xs={12} sm={12} md={6}>
               <Grid container justifyContent="center">
-                <Grid item md={3}>
+                <Grid item sm={3} md={3}>
                   <HourglassEmpty className={classes.theProblemIcon} />
                 </Grid>
-                <Grid item sm={12} md={8}>
+                <Grid item xs={12} sm={8} md={8}>
                   <Typography>
                     Each step requires time and know-how, increasing the barrier
                     to entry for applicants
                   </Typography>
                 </Grid>
-                <Grid item md={3}>
+                <Grid item sm={3} md={3}>
                   <ListItemIcon>
                     <LocalAtmOutlined className={classes.theProblemIcon} />
                   </ListItemIcon>
                 </Grid>
-                <Grid item sm={12} md={8}>
+                <Grid item xs={12} sm={8} md={8}>
                   <Typography>
                     While hiring an attorney can help simplify the process, it’s
                     unaffordable for most
                   </Typography>
                 </Grid>
-                <Grid item md={3}>
+                <Grid item sm={3} md={3}>
                   <ListItemIcon>
                     <PanToolOutlined className={classes.theProblemIcon} />
                   </ListItemIcon>
                 </Grid>
-                <Grid item sm={12} md={8}>
+                <Grid item xs={12} sm={8} md={8}>
                   <Typography>
                     Free volunteer services are available but they are often
                     inaccessible and don’t cover all steps of the process
