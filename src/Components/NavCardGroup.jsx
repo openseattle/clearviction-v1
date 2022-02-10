@@ -2,11 +2,15 @@ import { Box, Button, Grid, makeStyles, Typography } from "@material-ui/core";
 import { NavLink } from "react-router-dom";
 
 const useStyles = makeStyles((theme) => ({
+  cardGroupStyle: {
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(8),
+  },
   cardStyle: {
     width: "100%",
-    minHeight: 120,
+    minHeight: 164,
     [theme.breakpoints.down("sm")]: {
-      minHeight: 50,
+      minHeight: 48,
     },
     borderRadius: 0,
     backgroundColor: theme.palette.primary.light,
@@ -20,7 +24,10 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
   },
   cardTextStyle: {
-    padding: theme.spacing(1),
+    padding: theme.spacing(2),
+    [theme.breakpoints.down("sm")]:{
+      padding: theme.spacing(1),
+    }
   },
   gridStyle: {
     padding: 2,
@@ -31,7 +38,7 @@ const NavCardGroup = (props) => {
   const classes = useStyles();
   const { subPages, xs, sm, md } = props;
   return (
-    <Box>
+    <Box className={classes.cardGroupStyle}>
       <Grid container>
         {subPages.map((pageCard) => (
           <Grid
@@ -53,7 +60,7 @@ const NavCardGroup = (props) => {
                   {pageCard.name}
                 </Typography>
                 <Box display={{ xs: "none", sm: "none", md: "block" }}>
-                  <Typography variant="body2">{pageCard.desc}</Typography>
+                  {pageCard.desc && <Typography className={classes.cardTextStyle} variant="body2">{pageCard.desc}</Typography>}
                 </Box>
               </div>
             </Button>
