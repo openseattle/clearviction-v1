@@ -1,6 +1,9 @@
 import { Box, Grid, Typography, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
+  rootGrid: {
+    padding: theme.spacing(3),
+  },
   headingRoles: {
     color: theme.palette.primary.light,
     paddingBottom: theme.spacing(2),
@@ -11,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   },
   roleImage: {
     height: 300,
-    maxWidth: 300,
+    width: "100%",
   },
   textMinimumStyle: {
     minHeight: "4em",
@@ -33,7 +36,7 @@ export const TextWithImage = (props) => {
   ));
 
   return (
-    <Grid item xs={12} sm={cols} md={cols}>
+    <Grid className={classes.rootGrid} item xs={12} sm={cols} md={cols}>
       <Box display="flex" justifyContent="center">
         <Box component="img" src={img} className={classes.roleImage} />
       </Box>

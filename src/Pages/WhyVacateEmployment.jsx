@@ -108,7 +108,7 @@ const WhyVacateEmployment = () => {
         buttonLinkTo={"/calculator"}
       />
       <Box className={classes.lightBlueSectionBackground}>
-        <Container maxWidth="lg">
+        <Container className={classes.sectionSpaceStyle} maxWidth="lg" >
           <Grid container>
             <Grid item xs={12} sm={6}>
               <Box className={classes.spacer}>
@@ -153,7 +153,7 @@ const WhyVacateEmployment = () => {
           </Grid>
         </Container>
       </Box>
-      <Container maxWidth="lg">
+      <Container className={classes.sectionSpaceStyle} maxWidth="md">
         <AlternativeAccord
           sectionHeading={"Conviction-friendly industries"}
           faqs={friendlyIndustries}
@@ -164,7 +164,8 @@ const WhyVacateEmployment = () => {
           className={classes.lightBlueSectionBackground}
           item
           xs={12}
-          sm={6}
+          sm={12}
+          md={6}
         >
           <Box className={classes.containerStyles}>
             <Typography className={classes.title} variant="h3">
@@ -201,7 +202,7 @@ const WhyVacateEmployment = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid className={classes.darkBlueSectionBackground} item xs={12} sm={6}>
+        <Grid className={classes.darkBlueSectionBackground} item xs={12} sm={12} md={6}>
           <Box className={classes.containerStylesAlt}>
             <Typography variant="body1" align="center">
               To find out whether your offense will or may disqualify you from a
