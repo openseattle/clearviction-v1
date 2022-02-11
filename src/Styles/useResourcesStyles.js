@@ -26,6 +26,11 @@ export const useResourcesStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(2),
     color: theme.palette.primary.light,
   },
+  highlightHeadingStyle:{
+    marginTop: theme.spacing(2),
+    marginBottom: theme.spacing(2),
+    color: theme.palette.highlight.main,
+  },
   contentTextStyle: {
     marginTop: theme.spacing(5),
     marginBottom: theme.spacing(5),

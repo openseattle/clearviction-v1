@@ -31,8 +31,8 @@ const AssistanceEmployment = () => {
           <Grid container>
             <Grid item xs={12} sm={12} md={4}>
               <Typography
-                className={classes.headingStyle}
-                variant="h4"
+                className={classes.highlightHeadingStyle}
+                variant="h3"
                 align="center"
               >
                 Adverse Impact
@@ -44,7 +44,7 @@ const AssistanceEmployment = () => {
             <Grid item xs={12} sm={12} md={4}>
               <Typography
                 className={classes.headingStyle}
-                variant="h3"
+                variant="h2"
                 align="center"
               >
                 OR
@@ -52,8 +52,8 @@ const AssistanceEmployment = () => {
             </Grid>
             <Grid item xs={12} sm={12} md={4}>
               <Typography
-                className={classes.headingStyle}
-                variant="h4"
+                className={classes.highlightHeadingStyle}
+                variant="h3"
                 align="center"
               >
                 Adverse Treatment
@@ -91,7 +91,7 @@ const AssistanceEmployment = () => {
         />
       </Container>
       <Box className={classes.lightBlueBackGround}>
-        <Container>
+        <Container maxWidth="lg">
           <Typography className={classes.headingStyle} variant="h2">
             Find work!
           </Typography>

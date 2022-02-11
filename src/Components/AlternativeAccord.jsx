@@ -35,9 +35,9 @@ const useStyles = makeStyles((theme) => ({
   faqSumText: {
     fontFamily: ["roboto", "sans-serif"],
     fontSize: 18,
-    [theme.breakpoints.down("xs")]: {
-      fontSize: 14,
-    },
+    [theme.breakpoints.down("xs")]:{
+      fontSize: 16,
+    }
   },
   expand: {
     color: "white",

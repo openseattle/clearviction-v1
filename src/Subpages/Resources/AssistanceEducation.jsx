@@ -19,8 +19,8 @@ const AssistanceEducation = () => {
   const classes = useResourcesStyles();
   return (
     <>
-      <Container className={classes.regularContainer} maxWidth="lg">
-        <Typography className={classes.headingStyle} variant="h2">
+      <Container className={classes.regularContainer} maxWidth="md">
+        <Typography className={classes.headingStyle} variant="h2" >
           Education available post-incarceration
         </Typography>
         <Typography className={classes.contentTextStyle} variant="body1">
@@ -29,22 +29,15 @@ const AssistanceEducation = () => {
           background information and have full discretion over the admissions
           process.
         </Typography>
-        <Grid className={classes.regularContainer} container>
-          <Grid item xs={12} sm={6}>
-            <Typography>
-              Writing a letter of explanation, gathering refrences, and
-              providing any further aditional information may help in the
-              application process.
-            </Typography>
-          </Grid>
-          <Grid item xs={12} sm={6}>
-            <Typography>
-              You should never lie on you application. It could result in
-              voiding your application or expulsion if admitted prior to the
-              school finding out.
-            </Typography>
-          </Grid>
-        </Grid>
+        <Typography className={classes.contentTextStyle} variant="body1">
+          Writing a letter of explanation, gathering refrences, and providing
+          any further aditional information may help in the application process.
+        </Typography>
+        <Typography className={classes.contentTextStyle} variant="body1">
+          You should never lie on you application. It could result in voiding
+          your application or expulsion if admitted prior to the school finding
+          out.
+        </Typography>
       </Container>
       <Box className={classes.lightBlueBackGround}>
         <Container maxWidth="lg">
@@ -68,7 +61,7 @@ const AssistanceEducation = () => {
           />
         </Container>
       </Box>
-      <Container>
+      <Container className={classes.regularContainer} maxWidth="md">
         <Typography className={classes.headingStyle} variant="h2">
           Federal Student Aid
         </Typography>
@@ -85,7 +78,7 @@ const AssistanceEducation = () => {
             Aid.
           </ExternalLink>
         </Typography>
-        <Box className={classes.regularContainer}>
+        <Box >
           <IconWithHeaderAndText
             icon={LocalAtmOutlined}
             header={
@@ -127,7 +120,7 @@ const AssistanceEducation = () => {
       </Container>
       <FedAidRestrictions />
       <Box className={classes.lightBlueBackGround}>
-        <Container>
+        <Container maxWidth="md">
           <Typography className={classes.headingStyle} variant="h2">
             Student Loans
           </Typography>

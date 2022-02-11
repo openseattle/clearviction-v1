@@ -62,8 +62,8 @@ const AssistanceHousing = () => {
           </Typography>
           <TabPanelGroup tabs={emergencySheltersTabs} />
         </Container>
-        <Container>
-          <Typography className={classes.contentTextStyle} variant="subtitle1">
+        <Container className={classes.regularContainer} maxWidth="md">
+          <Typography className={classes.contentTextStyle} variant="body1">
             We are not affiliated with any shelters, including the ones listed
             above. Under Washington state law,{" "}
             <ExternalLink href="http://transgenderlawcenter.org/wp-content/uploads/2016/02/03.09.2016-Model-Homeless-Shelter-TG-Policy-single-pages.pdf">
@@ -72,7 +72,7 @@ const AssistanceHousing = () => {
             to transgender and gender non-conforming people on the basis of
             their gender identity or expression.
           </Typography>
-          <Typography className={classes.contentTextStyle} variant="subtitle1">
+          <Typography className={classes.contentTextStyle} variant="body1">
             You can find a full list of shelters in Washington{" "}
             <ExternalLink
               href="https://www.shelterlist.com/state/washington"
@@ -85,7 +85,7 @@ const AssistanceHousing = () => {
           </Typography>
         </Container>
       </Box>
-      <Container className={classes.regularContainer}>
+      <Container className={classes.regularContainer} maxWidth="md">
         <AlternativeAccord
           faqs={housingAssistanceAccord}
           sectionHeading={"Other housing assistance"}
