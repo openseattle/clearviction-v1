@@ -5,7 +5,6 @@ import {
   Box,
   makeStyles,
   List,
-  ListItemIcon,
 } from "@material-ui/core";
 import HeroPanel from "../Components/HeroPanel";
 import TeamCard from "../Components/TeamCard";
@@ -39,6 +38,9 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(3),
     },
   },
+  rootsImage: {
+    maxWidth: 300,
+  },
   problemRoot: {
     marginTop: theme.spacing(6),
     marginBottom: theme.spacing(6),
@@ -70,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(5),
   },
   problemRightListText: {
-    padding: theme.spacing(3),
+    padding: theme.spacing(2),
   },
   theProblemIcon: {
     color: theme.palette.highlight.main,
@@ -126,7 +128,7 @@ const AboutPage = () => {
       </Container>
 
       <Box className={classes.roots}>
-        <Container maxWidth="lg" className={classes.rootsContainer}>
+        <Container maxWidth="md" className={classes.rootsContainer}>
           <Typography variant="h2">The roots of our project</Typography>
 
           <List>
@@ -139,7 +141,7 @@ const AboutPage = () => {
                 />
               }
               text={
-                <Typography className={classes.rootsBodyText} variant="body1">
+                <Typography  variant="body1">
                   One in four Washingtonians have been involved in the criminal
                   justice system. Those with a criminal record face significant
                   barriers to daily life after completing their prison terms.
@@ -155,7 +157,7 @@ const AboutPage = () => {
                 />
               }
               text={
-                <Typography className={classes.rootsBodyText} variant="body1">
+                <Typography variant="body1">
                   Washington State’s New Hope Act makes it easier for people
                   with past criminal records to have their convictions vacated.
                   Yet the system is slow and inefficient.
@@ -173,7 +175,7 @@ const AboutPage = () => {
                 />
               }
               text={
-                <Typography className={classes.rootsBodyText} variant="body1">
+                <Typography  variant="body1">
                   We have identified opportunities to use technology to
                   streamline this process and want to use our resources to
                   appropriately meet user needs, creating an easier way to
@@ -185,7 +187,7 @@ const AboutPage = () => {
         </Container>
       </Box>
       <Box className={classes.problemRoot}>
-        <Container maxWidth="lg">
+        <Container maxWidth="md">
           <Grid container>
             <Grid className={classes.theProblemRootleft} item sm={12} md={6}>
               <Typography className={classes.problemLeftTitle} variant="h2">

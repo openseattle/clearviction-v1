@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardStyle: {
     width: "100%",
-    minHeight: 164,
+    minHeight: 172,
     [theme.breakpoints.down("sm")]: {
       minHeight: 48,
     },
@@ -23,7 +23,14 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.primary.main,
     color: "white",
   },
+  cardTitleStyle:{
+    padding: theme.spacing(2),
+    [theme.breakpoints.down("sm")]:{
+      padding: theme.spacing(1),
+    }
+  },
   cardTextStyle: {
+    fontSize: 14,
     padding: theme.spacing(2),
     [theme.breakpoints.down("sm")]:{
       padding: theme.spacing(1),
@@ -56,11 +63,11 @@ const NavCardGroup = (props) => {
               to={pageCard.link}
             >
               <div>
-                <Typography className={classes.cardTextStyle} variant="h4">
+                <Typography className={classes.cardTitleStyle} variant="h4">
                   {pageCard.name}
                 </Typography>
                 <Box display={{ xs: "none", sm: "none", md: "block" }}>
-                  {pageCard.desc && <Typography className={classes.cardTextStyle} variant="body2">{pageCard.desc}</Typography>}
+                  {pageCard.desc && <Typography className={classes.cardTextStyle} variant="subtitle2">{pageCard.desc}</Typography>}
                 </Box>
               </div>
             </Button>
