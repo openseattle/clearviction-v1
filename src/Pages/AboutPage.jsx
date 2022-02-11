@@ -120,10 +120,8 @@ const AboutPage = () => {
       <Container maxWidth="lg">
         <HeroPanel
           title={"About Us"}
-          subtitle={
-            `We are a civic-tech open-source project working to make the conviction vacation 
-            process easier and more straightforward, starting with an eligibility calculator.`
-          }
+          subtitle={`We are a civic-tech open-source project working to make the conviction vacation 
+            process easier and more straightforward, starting with an eligibility calculator.`}
         />
       </Container>
 
@@ -141,7 +139,7 @@ const AboutPage = () => {
                 />
               }
               text={
-                <Typography  variant="body1">
+                <Typography variant="body1">
                   One in four Washingtonians have been involved in the criminal
                   justice system. Those with a criminal record face significant
                   barriers to daily life after completing their prison terms.
@@ -175,7 +173,7 @@ const AboutPage = () => {
                 />
               }
               text={
-                <Typography  variant="body1">
+                <Typography variant="body1">
                   We have identified opportunities to use technology to
                   streamline this process and want to use our resources to
                   appropriately meet user needs, creating an easier way to
@@ -230,7 +228,7 @@ const AboutPage = () => {
                   </Typography>
                 </Grid>
                 <Grid item sm={3} md={3}>
-                    <LocalAtmOutlined className={classes.theProblemIcon} />
+                  <LocalAtmOutlined className={classes.theProblemIcon} />
                 </Grid>
                 <Grid item xs={12} sm={8} md={8}>
                   <Typography className={classes.problemRightListText}>
@@ -239,7 +237,7 @@ const AboutPage = () => {
                   </Typography>
                 </Grid>
                 <Grid item sm={3} md={3}>
-                    <PanToolOutlined className={classes.theProblemIcon} />
+                  <PanToolOutlined className={classes.theProblemIcon} />
                 </Grid>
                 <Grid item xs={12} sm={8} md={8}>
                   <Typography className={classes.problemRightListText}>
