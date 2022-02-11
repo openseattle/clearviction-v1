@@ -9,15 +9,15 @@ import WhyVacateHousing from "./WhyVacateHousing";
 
 const pages = [
   {
-    name: "Housing Access",
+    name: "Housing",
     link: "/why-vacate/housing",
   },
   {
-    name: "Employment Access",
+    name: "Employment",
     link: "/why-vacate/employment",
   },
   {
-    name: "Education Access",
+    name: "Education",
     link: "/why-vacate/education",
   },
   {
