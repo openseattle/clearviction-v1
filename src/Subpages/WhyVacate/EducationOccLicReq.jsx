@@ -14,7 +14,7 @@ export const EducationOccLicReq = () => {
             justifyContent: "center",
           }}
         >
-          <Grid container className={classes.containerStyles}>
+          <Grid className={classes.containerSpaceOnlyStyles} container >
             <Grid item xs={12}>
               <Typography
                 className={classes.blackHeaderText}
