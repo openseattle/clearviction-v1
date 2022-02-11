@@ -293,6 +293,7 @@ const VolunteerPage = () => {
             <SecondaryButton
               text={"Join Our Team"}
               linkTo={"https://www.democracylab.org/projects/226"}
+              externalLink
             />
           </Box>
         </Box>
