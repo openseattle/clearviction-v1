@@ -39,6 +39,7 @@ const WhyVacateHousing = () => {
           "The best way to get help finding affordable housing is to contact your local PHA. They will have affordable housing listings and information on public and subsidized housing programs."
         }
         buttonText={"Get Housing Resources"}
+        buttonLinkTo={"/resources/assistance/housing"}
       />
     </>
   );
