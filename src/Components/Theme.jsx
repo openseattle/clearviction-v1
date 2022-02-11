@@ -23,63 +23,7 @@ const Theme = createTheme({
       main: "#FFD200",
     },
   },
-  typography: {
-    fontSize: 16,
-    body1: {
-      fontFamily: "Lora",
-      fontSize: "1.5rem",
-    },
-    body2: {
-      fontFamily: "Lora",
-      fontSize: "1.25rem",
-    },
-    subtitle1: {
-      fontFamily: ["Roboto", "sans-serif"],
-      fontSize: "1.5rem",
-      fontWeight: "normal",
-      lineHeight: "24px",
-    },
-    subtitle2: {
-      fontFamily: "Roboto",
-      fontSize: ".875rem",
-    },
-    button: {
-      textAlign: "center",
-      fontSize: "1.125rem",
-      fontFamily: ["Roboto", "sans-serif"],
-      fontWeight: "bold",
-      lineHeight: "3rem",
-      textTransform: "none",
-    },
-  },
 });
-
-// Font will resize for these elements depending on screen size
-Theme.typography.h1 = {
-  fontSize: "4rem",
-  [Theme.breakpoints.up("sm")]: {
-    fontSize: "6rem",
-  },
-};
-Theme.typography.h2 = {
-  fontSize: "3rem",
-  [Theme.breakpoints.up("sm")]: {
-    fontSize: "4rem",
-  },
-};
-Theme.typography.h3 = {
-  fontSize: "2rem",
-  [Theme.breakpoints.up("sm")]: {
-    fontSize: "3rem",
-  },
-};
-Theme.typography.h4 = {
-  fontWeight: 500,
-  fontSize: "1.875rem",
-  [Theme.breakpoints.up("sm")]: {
-    fontSize: "2.25rem",
-  },
-};
 
 Theme.overrides = {
   MuiDrawer: {
