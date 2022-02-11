@@ -1,4 +1,4 @@
-import { Container, List, ListItem, Typography } from "@material-ui/core";
+import { Box, Container, List, ListItem, Typography } from "@material-ui/core";
 import AlternativeAccord from "../../Components/AlternativeAccord";
 import TabPanelGroup from "../../Components/TabPanelGroup";
 import { useResourcesStyles } from "../../Styles/useResourcesStyles";
@@ -6,30 +6,33 @@ import BulletedListMui from "../../ui-kit/BulletedListMui";
 import { ExternalLink } from "../../ui-kit/ExternalLink";
 
 const LFODetails = (
-  <div>
+  <Box>
     <Typography>
       You may be eligible for financial assistance of fees, fines, or
       restitution for a misdemeanor or felony:
     </Typography>
-    <BulletedListMui>
-      <li>
-        <ExternalLink href="https://nwjustice.org/clear-hotline">
-          CLEAR hotline
-        </ExternalLink>{" "}
-        - refer you to legal organizations
-      </li>
-      <li>
-        <ExternalLink href="https://columbialegal.org/wp-content/uploads/2019/10/CLS-Re-Entry-Clinic-Brochure.pdf">
-          Re-Entry Clinic
-        </ExternalLink>{" "}
-        - a joint project of Columbia Legal Services and FareStart, focusing on
-        legal issues related to LFO's
-      </li>
-      <li>
-        Contact us at contact@clearviction.org and we will get back to you
-        within 24 hours
-      </li>
-    </BulletedListMui>
+    <Box padding={3}>
+      <BulletedListMui>
+        <li>
+          <ExternalLink href="https://nwjustice.org/clear-hotline">
+            CLEAR hotline
+          </ExternalLink>{" "}
+          - refer you to legal organizations
+        </li>
+        <li>
+          <ExternalLink href="https://columbialegal.org/wp-content/uploads/2019/10/CLS-Re-Entry-Clinic-Brochure.pdf">
+            Re-Entry Clinic
+          </ExternalLink>{" "}
+          - a joint project of Columbia Legal Services and FareStart, focusing
+          on legal issues related to LFO's
+        </li>
+        <li>
+          Contact us at contact@clearviction.org and we will get back to you
+          within 24 hours
+        </li>
+      </BulletedListMui>
+    </Box>
+
     <Typography>
       If you want more info about your rights concerning LFOs, consult the
       website of{" "}
@@ -38,7 +41,7 @@ const LFODetails = (
       </ExternalLink>
       .
     </Typography>
-  </div>
+  </Box>
 );
 
 const CourtFeesDetails = (
@@ -58,10 +61,12 @@ const CourtFeesDetails = (
         supervisor and/or the court's accounting department.
       </li>
     </Typography>
+    <Box paddingTop={3}/>
     <Typography>
       If you do not have the financial ability to pay the fees, you might be
       eligible for relief:
     </Typography>
+    <Box padding={3}>
     <BulletedListMui>
       <li>
         Use this{" "}
@@ -82,6 +87,7 @@ const CourtFeesDetails = (
         assist you.
       </li>
     </BulletedListMui>
+    </Box>
   </div>
 );
 
@@ -98,19 +104,21 @@ const financialAidFAQ = [
 
 const legalHotlineDetails = (
   <div>
-    <Typography>
+    <Typography variant="body1">
       Many pro bono services are only available after being refered by{" "}
       <ExternalLink href="https://nwjustice.org/clear-hotline">
         CLEAR
       </ExternalLink>
       , a toll-free legal hotline:
     </Typography>
+    <Box padding={3}>
     <BulletedListMui>
       <li>
         Outside of King County: call 1-888-201-1014 (weekdays 9.15am - 12.15pm).
       </li>
       <li>In King County: call 2-1-1 (weekdays 8am - 6pm). </li>
     </BulletedListMui>
+    </Box>
     <Typography>
       You can also apply online at{" "}
       <ExternalLink href="https://nwjustice.org/apply-online">
@@ -239,7 +247,7 @@ const scheduleHearingTabPanelGroup = [
 export const ScheduleHearing = () => {
   const classes = useResourcesStyles();
   return (
-    <Container maxWidth={"sm"}>
+    <Container maxWidth={"md"}>
       <Typography className={classes.headingStyle} variant="h2">
         Step 4: Schedule a Hearing
       </Typography>

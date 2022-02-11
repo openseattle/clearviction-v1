@@ -18,8 +18,8 @@ export const useResourcesStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(8),
   },
   headingStyle: {
-    marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(2),
+    marginTop: theme.spacing(5),
+    marginBottom: theme.spacing(5),
   },
   colorfulHeadingStyle: {
     marginTop: theme.spacing(2),
@@ -27,8 +27,8 @@ export const useResourcesStyles = makeStyles((theme) => ({
     color: theme.palette.primary.light,
   },
   contentTextStyle: {
-    marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(2),
+    marginTop: theme.spacing(5),
+    marginBottom: theme.spacing(5),
   },
   listItemsStyle: {
     margin: theme.spacing(2),
