@@ -9,12 +9,12 @@ const WhyVacateHousing = () => {
   const classes = WhyVacateHousingStyles();
   return (
     <>
-      <Container maxWidth="lg">
+      <Container maxWidth="md">
         <Grid container alignItems="flex-start">
           <Typography className={classes.title} variant="h2">
             Housing barriers
           </Typography>
-          <Typography className={classes.contentText} variant="body1">
+          <Typography className={classes.contentText} variant="subtitle2">
             There are many different barriers that can prevent people with
             convictions from fair access to housing. Each different type of
             housing comes with its own set of obstacles that you should take

@@ -8,7 +8,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 22,
   },
   backgroundSecondary: {
-    height: 250,
+    minHeight: 250,
     backgroundColor: theme.palette.primary.dark,
     color: "white",
     align: "center",
@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
       padding: theme.spacing(2),
     },
     [theme.breakpoints.down("xs")]: {
-      height: 300,
+      minHeight: 300,
     },
   },
   buttonBoxStyles: {

@@ -21,6 +21,7 @@ export const HousingTips = () => {
           display: "flex",
           justifyContent: "center",
         }}
+        maxWidth="md"
       >
         <Box>
           <Typography className={classes.title} variant="h3">

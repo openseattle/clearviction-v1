@@ -22,7 +22,7 @@ export const WhyVacateHousingStyles = makeStyles((theme) => ({
   },
   roleImage: {
     height: 300,
-    width: 300,
+    maxWidth: 300,
   },
   headingRoles: {
     color: theme.palette.primary.light,

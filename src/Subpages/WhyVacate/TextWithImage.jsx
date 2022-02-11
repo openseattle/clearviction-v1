@@ -11,7 +11,7 @@ const useStyles = makeStyles((theme) => ({
   },
   roleImage: {
     height: 300,
-    width: 300,
+    maxWidth: 300,
   },
   textMinimumStyle: {
     minHeight: "4em",
