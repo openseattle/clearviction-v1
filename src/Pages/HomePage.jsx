@@ -1,11 +1,7 @@
 import { useEffect } from "react";
 import { trackPageview } from "../trackingUtils";
 import FAQAccordion from "../Components/Accordion";
-import PrimaryButton from "../ui-kit/Button";
-import Text from "../ui-kit/Text";
-import SecondaryButton from "../ui-kit/SecondaryButton";
 import cvpLogoWhite from "../Assets/cvp-logo-white.png";
-import cvpLogoLeftHalf from "../Assets/cvp-logo-white-left-half.png";
 import housing from "../Assets/housing.svg";
 import employment from "../Assets/employment.svg";
 import education from "../Assets/education.svg";
@@ -13,181 +9,196 @@ import lawyer from "../Assets/lawyer.svg";
 import teamwork from "../Assets/teamwork.svg";
 import phone from "../Assets/phone.svg";
 import "../CSS/HomePage.css";
+import { useHomeStyles } from "../Styles/useHomeStyles";
+import {
+  Box,
+  Button,
+  ButtonGroup,
+  Container,
+  Grid,
+  Paper,
+  Typography,
+} from "@material-ui/core";
 
 const HomePage = () => {
   useEffect(() => trackPageview("Home"), []);
 
+  const classes = useHomeStyles();
+
   return (
-    <div className="container-fluid">
-      <div className="row light-bg">
-        <div className="col-lg">
-          <div id="hero-parent">
-            <div id="left-content">
-              <Text
-                variant={"h2"}
-                text={"Vacation Eligibility Calculator"}
-              ></Text>
-              <Text
-                variant={"h3"}
-                text={
-                  "Check your eligibility to vacate your conviction for free in less than 10 minutes!"
-                }
-              ></Text>
-              <SecondaryButton
-                text={"Check My Eligibility"}
-                linkTo={"/calculator/landing-0"}
-              ></SecondaryButton>
-            </div>
-            <div id="right-content">
-              <img src={cvpLogoLeftHalf} id="hero-logo" alt={"CVP Logo"} />
-            </div>
-          </div>
+    <>
+      <Box className={classes.lightBlueBackGround}>
+        <Container maxWidth="lg">
+          <Box padding={3}>
+            <Typography className={classes.headingStyle} variant="h1">
+              Vacation Eligibility Calculator
+            </Typography>
+            <Typography
+              className={classes.contentTextStyle}
+              variant="subtitle1"
+            >
+              Check your eligibility to vacate your conviction for free in less
+              than 10 minutes!
+            </Typography>
+            <Button
+              href="/calculator/landing-0"
+              color="primary"
+              variant="contained"
+            >
+              Check My Eligibility
+            </Button>
+          </Box>
+        </Container>
+      </Box>
+
+      <Box display="flex" justifyContent={"center"} padding={4}>
+        <ButtonGroup
+          orientation={"horizontal"}
+          color="secondary"
+          variant="contained"
+        >
+          <Button href="#how-it-works">How It Works</Button>
+          <Button href="#faq">FAQs</Button>
+          <Button href="#why-vacate">Why Vacate</Button>
+        </ButtonGroup>
+      </Box>
+
+      <Container
+        className={classes.regularContainer}
+        id="how-it-works"
+        maxWidth="lg"
+      >
+        <Paper className={classes.regularContainer}>
+          <Typography
+            className={classes.headingStyle}
+            variant="h3"
+            align="center"
+          >
+            How It Works
+          </Typography>
+          <Grid container>
+            <Grid item xs={12} sm={4}>
+              <img className={classes.iconStyle} src={teamwork} alt={"Teamwork Icon"} />
+              <Typography
+                className={classes.contentTextStyle}
+                variant="body2"
+                align="center"
+              >
+                We break down the laws into understandable language.
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <img className={classes.iconStyle} src={phone} alt={"Mobile Phone Icon"} />
+              <Typography
+                className={classes.contentTextStyle}
+                variant="body2"
+                align="center"
+              >
+                You answer a few simple yes/no questions.
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <img className={classes.iconStyle} src={employment} alt={"Employment Icon"} />
+              <Typography
+                className={classes.contentTextStyle}
+                variant="body2"
+                align="center"
+              >
+                This helps determine your vacation eligibility.
+              </Typography>
+            </Grid>
+          </Grid>
+        </Paper>
+      </Container>
+
+      <Container className={classes.regularContainer} maxWidth="lg" id="faq">
+        <Typography
+          className={classes.headingStyle}
+          variant="h3"
+          align="center"
+        >
+          FAQs
+        </Typography>
+        <div id="accordion">
+          <FAQAccordion />
         </div>
-      </div>
+      </Container>
+      <Container maxWidth="lg" id="why-vacate">
+        <Typography className={classes.headingStyle} variant="h3">
+          Why Vacate?
+        </Typography>
+        <Typography className={classes.headingStyle} variant="subtitle1">
+          A conviction vacation seals the offense from your record, and will
+          give you more chance to access:
+        </Typography>
+        <Grid container>
+          <Grid item xs={12} sm={6} lg={3}>
+            <img className={classes.iconStyle} src={housing} alt={"Housing Icon"} />
+            <Typography className={classes.headingStyle} variant="h5" align="center">
+              Housing
+            </Typography>
+            <Typography className={classes.contentTextStyle} variant="body1" align="center">
+              Make it easier to find and be approved for rent or purchasing a
+              home.
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={6} lg={3}>
+            <img className={classes.iconStyle} src={employment} alt={"Employment Icon"} />
+            <Typography className={classes.headingStyle} variant="h5" align="center">
+              Employment
+            </Typography>
+            <Typography className={classes.contentTextStyle} variant="body1" align="center">
+              Reduce barriers to finding and obtaining employment.
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={6} lg={3}>
+            <img className={classes.iconStyle} src={education} alt={"Education Icon"} />
+            <Typography
+              className={classes.headingStyle}
+              variant="h5"
+              align="center"
+            >
+              Education
+            </Typography>
+            <Typography variant="body1" align="center">
+              Apply for scholarships, programs, degrees or certificates.
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={6} lg={3}>
+            <img className={classes.iconStyle} src={lawyer} alt={"Lawyer Icon"} />
+            <Typography className={classes.headingStyle} variant="h5" align="center">
+              Government Assistance
+            </Typography>
+            <Typography className={classes.contentTextStyle} variant="body1" align="center">
+              Receive government help.
+            </Typography>
+          </Grid>
+        </Grid>
 
-      <div className="row">
-        <div className="col-lg">
-          <PrimaryButton text={"How It Works"} href={"#how-it-works"} />
-          <PrimaryButton text={"FAQs"} href={"#faq"} />
-          <PrimaryButton text={"Why Vacate"} href={"#why-vacate"} />
-        </div>
-      </div>
+        <Button href="/why-vacate" color="primary" variant="contained">
+          Learn More
+        </Button>
+      </Container>
 
-      <div className="row dark-bg" id="how-it-works">
-        <Text variant={"h3"} text={"How It Works"}></Text>
-
-        <div className="col-sm">
-          <img className="icons" src={teamwork} alt={"Teamwork Icon"} />
+      <Box className={classes.darkBlueBackground}>
+        <Container maxWidth="lg">
+          <Box display="flex" justifyContent={"center"}>
+            <img src={cvpLogoWhite} id="cvp-logo" alt={"CVP Logo"} />
+          </Box>
+          <Typography className={classes.contentTextStyle} variant="h5" align="center">
+            Clearviction connects volunteers passionate about reducing barriers
+            and making it easier for those with convictions in Washington State.
+          </Typography>
           <br />
-          <Text
-            variant={"h5"}
-            text={"We break down the laws into understandable language."}
-            fontFamily={"Lora"}
-          ></Text>
-        </div>
-
-        <div className="col-sm">
-          <img className="icons" src={phone} alt={"Mobile Phone Icon"} />
-          <br />
-          <Text
-            variant={"h5"}
-            text={"You answer a few simple yes/no questions."}
-            fontFamily={"Lora"}
-          ></Text>
-        </div>
-        <div className="col-sm">
-          <img className="icons" src={employment} alt={"Employment Icon"} />
-          <br />
-          <Text
-            variant={"h5"}
-            text={"This helps determine your vacation eligibility."}
-            fontFamily={"Lora"}
-          ></Text>
-        </div>
-        <div>
-          <SecondaryButton
-            text={"Check My Eligibility"}
-            linkTo={"/calculator/landing-0"}
-          ></SecondaryButton>
-        </div>
-      </div>
-
-      <div className="row light-bg" id="faq">
-        <div className="col-sm">
-          <Text variant="h3" text={"FAQs"}></Text>
-          <div id="accordion">
-            <FAQAccordion />
-          </div>
-        </div>
-      </div>
-
-      <div className="row" id="why-vacate">
-        <Text variant={"h3"} text={"Why Vacate?"}></Text>
-        <Text
-          variant={"h4"}
-          text={
-            "A conviction vacation seals the offense from your record, and will give you more chance to access:"
-          }
-        ></Text>
-
-        <div className="col-sm">
-          <img className="icons" src={housing} alt={"Housing Icon"} />
-          <Text variant={"h6"} text={"Housing"} fontWeight={"600"}></Text>
-          <Text
-            variant={"h5"}
-            text={
-              "Make it easier to find and be approved for rent or purchasing a home."
-            }
-            fontFamily={"Lora"}
-          ></Text>
-        </div>
-
-        <div className="col-sm">
-          <img className="icons" src={employment} alt={"Employment Icon"} />
-          <Text variant={"h6"} text={"Employment"} fontWeight={"600"}></Text>
-          <Text
-            variant={"h5"}
-            text={"Reduce barriers to finding and obtaining employment."}
-            fontFamily={"Lora"}
-          ></Text>
-        </div>
-
-        <div className="col-sm">
-          <img className="icons" src={education} alt={"Education Icon"} />
-          <Text variant={"h6"} text={"Education"} fontWeight={"600"}></Text>
-          <Text
-            variant={"h5"}
-            text={"Apply for scholarships, programs, degrees or certificates."}
-            fontFamily={"Lora"}
-          ></Text>
-        </div>
-
-        <div className="col-sm">
-          <img className="icons" src={lawyer} alt={"Lawyer Icon"} />
-          <Text
-            variant={"h6"}
-            text={"Government Assistance"}
-            fontWeight={"600"}
-          ></Text>
-          <Text
-            variant={"h5"}
-            text={"Receive government help."}
-            fontFamily={"Lora"}
-          ></Text>
-        </div>
-        <div className="row">
-          <div className="col-lg">
-            <SecondaryButton text={"Learn More"} linkTo={"/why-vacate"} />
-          </div>
-        </div>
-      </div>
-
-      <div className="row dark-bg">
-        <div className="col-lg">
-          <br />
-          <img src={cvpLogoWhite} id="cvp-logo" alt={"CVP Logo"} />
-          <br />
-          <Text
-            variant={"h5"}
-            fontFamily={"Lora"}
-            text={
-              "Clearviction connects volunteers passionate about reducing barriers and making it easier for those with convictions in Washington State."
-            }
-          ></Text>
-          <br />
-          <br />
-          <Text
-            variant={"h5"}
-            fontFamily={"Lora"}
-            text={
-              "We’re working together to create a tool to make navigating the conviction vacation process easier. Currently we are designing and building an eligibility calculator to help people determine if their conviction is eligible for vacation."
-            }
-          ></Text>
-          <br />
-          {/* <SecondaryButton text={"Join the Team"} /> */}
-        </div>
-      </div>
-    </div>
+          <Typography className={classes.contentTextStyle} variant="h5" align="center">
+            We’re working together to create a tool to make navigating the
+            conviction vacation process easier. Currently we are designing and
+            building an eligibility calculator to help people determine if their
+            conviction is eligible for vacation.
+          </Typography>
+        </Container>
+      </Box>
+    </>
   );
 };
 

@@ -23,6 +23,14 @@ const Theme = createTheme({
       main: "#FFD200",
     },
   },
+  typography: {
+    h1: {
+      fontSize: 72,
+    },
+    subtitle1: {
+      fontSize: 24,
+    }
+  }
 });
 
 Theme.overrides = {

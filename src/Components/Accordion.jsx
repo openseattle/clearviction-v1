@@ -5,20 +5,13 @@ import {
   AccordionDetails,
   makeStyles,
   Grid,
+  Typography,
 } from "@material-ui/core";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import Text from "../ui-kit/Text";
 import data from "../data/FAQdata";
 
 const useStyles = makeStyles((theme) => ({
-  accordionSummary: {
-    backgroundColor: theme.palette.primary.light,
-    color: "white",
-    minHeight: "8rem",
-  },
-  iconStyle: {
-    color: "white",
-  },
+
 }));
 
 export default function FAQAccordion() {
@@ -35,50 +28,31 @@ export default function FAQAccordion() {
               aria-controls="panel1a-content"
               id="panel1a-header"
             >
-              <Text
-                fontFamily={"Lora"}
-                variant={"h5"}
-                textAlign={"left"}
-                text={header}
-              ></Text>
+              <Typography variant="h5">{header}</Typography>
             </AccordionSummary>
             <AccordionDetails>
               <Grid>
-                <Text
-                  fontFamily={"Lora"}
-                  variant={"h5"}
-                  textAlign={"left"}
-                  text={body1}
-                ></Text>
-                <Text
-                  fontFamily={"Lora"}
-                  variant={"h5"}
-                  textAlign={"left"}
-                  text={body2}
-                ></Text>
+                <Typography variant="body1" align="left">
+                  {body1}
+                </Typography>
+                <Typography variant="body1" align="left">
+                  {body2}
+                </Typography>
+
                 {body3 && (
-                  <Text
-                    fontFamily={"Lora"}
-                    variant={"h5"}
-                    textAlign={"left"}
-                    text={body3}
-                  ></Text>
+                  <Typography variant="body1" align="left">
+                    {body3}
+                  </Typography>
                 )}
                 {body4 && (
-                  <Text
-                    fontFamily={"Lora"}
-                    variant={"h5"}
-                    textAlign={"left"}
-                    text={body4}
-                  ></Text>
+                  <Typography variant="body1" align="left">
+                    {body4}
+                  </Typography>
                 )}
                 {body5 && (
-                  <Text
-                    fontFamily={"Lora"}
-                    variant={"h5"}
-                    textAlign={"left"}
-                    text={body5}
-                  ></Text>
+                  <Typography variant="body1" align="left">
+                    {body5}
+                  </Typography>
                 )}
               </Grid>
             </AccordionDetails>
