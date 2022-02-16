@@ -4,11 +4,9 @@ import pha from "../../Assets/Citybuildings_TwoColor1.svg";
 import supportiveHousing from "../../Assets/Diversity_TwoColor1.svg";
 import privateHousing from "../../Assets/Processbuilding_TwoColor1.svg";
 import transitionalHousing from "../../Assets/Dream_TwoColor1.svg";
-import { WhyVacateHousingStyles } from "../../Styles/WhyVacateHousingStyles";
 import { TextWithImage } from "./TextWithImage";
 
 export const HousingBarriers = () => {
-  const classes = WhyVacateHousingStyles();
   return (
     <>
       <Box>
