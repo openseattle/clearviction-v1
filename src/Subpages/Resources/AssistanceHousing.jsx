@@ -52,7 +52,7 @@ const AssistanceHousing = () => {
   return (
     <>
       <Box className={classes.darkBlueBackground}>
-        <Container maxWidth={"sm"}>
+        <Container maxWidth={"md"}>
           <Typography
             className={classes.headingStyle}
             variant="h2"
