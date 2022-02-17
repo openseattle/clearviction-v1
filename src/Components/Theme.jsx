@@ -30,7 +30,7 @@ const Theme = createTheme({
       fontSize: "16px",
     },
     body2: {
-      fontFamily: ["Lora", "serif"],
+      fontFamily: ["Roboto", "sans-serif"],
       fontSize: "12px",
     },
     subtitle1: {
