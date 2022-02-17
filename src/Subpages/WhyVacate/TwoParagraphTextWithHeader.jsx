@@ -35,8 +35,12 @@ export const TwoParagraphTextWithHeader = (props) => {
   const { header, text } = props;
   const textItems = text.map((t, idx) => (
     <>
-      <Grid key={idx} item xs={12} sm={6} md={6}>
-        <Typography className={classes.text} align="left">
+      <Grid key={idx} item xs={12}>
+        <Typography
+          className={classes.text}
+          align="left"
+          style={{ wordBreak: "break-word" }}
+        >
           {t}
         </Typography>
       </Grid>
@@ -52,6 +56,7 @@ export const TwoParagraphTextWithHeader = (props) => {
             display: "flex",
             justifyContent: "center",
           }}
+          maxWidth="md"
         >
           <Grid container className={classes.containerStyles}>
             <Grid item xs={12}>

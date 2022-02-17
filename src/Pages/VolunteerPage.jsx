@@ -19,6 +19,7 @@ import laptop from "../Assets/laptop.svg";
 const useStyles = makeStyles((theme) => ({
   volunteer: {
     marginTop: theme.spacing(5),
+    marginBottom: theme.spacing(5),
   },
   icon: {
     fontSize: "4rem",
@@ -44,18 +45,20 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
   },
   backgroundSecondary: {
-    minHeight: 357,
+    height: 400,
     backgroundColor: theme.palette.primary.dark,
     padding: theme.spacing(5),
     [theme.breakpoints.down("sm")]: {
+      height: 300,
       padding: theme.spacing(2),
     },
   },
   backgroundLightSecondary: {
-    minHeight: 350,
+    height: 400,
     backgroundColor: theme.palette.primary.light,
     padding: theme.spacing(5),
     [theme.breakpoints.down("sm")]: {
+      height: 300,
       padding: theme.spacing(1),
     },
   },
@@ -107,7 +110,7 @@ const VolunteerPage = () => {
           </Grid>
           <Grid item xs={12} sm={6} md={6}>
             <Box justifyContent="center" display="flex">
-              <Box>
+              <Box paddingBottom={5}>
                 <Typography className={classes.title} variant="h2">
                   Why volunteer?
                 </Typography>
@@ -207,7 +210,7 @@ const VolunteerPage = () => {
           </Grid>
         </Grid>
 
-        <Box>
+        <Box paddingTop={5}>
           <Typography
             className={classes.titleRoles}
             variant="h2"
@@ -290,6 +293,7 @@ const VolunteerPage = () => {
             <SecondaryButton
               text={"Join Our Team"}
               linkTo={"https://www.democracylab.org/projects/226"}
+              externalLink
             />
           </Box>
         </Box>

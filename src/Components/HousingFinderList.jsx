@@ -13,7 +13,7 @@ import { ListItemLink } from "../ui-kit/ListItemLink";
 const HousingFinderList = ({ resources }) => {
   const classes = useResourcesStyles();
   return (
-    <List dense style={{ width: "100%" }}>
+    <List style={{ width: "100%" }}>
       {resources.map((contact, idx) => (
         <ListItem key={idx} divider>
           <Grid container>
@@ -24,7 +24,7 @@ const HousingFinderList = ({ resources }) => {
               <br />
             </Grid>
             <Grid item xs={12} sm={6}>
-              <List dense>
+              <List>
                 {contact.address && (
                   <ListItemLink
                     target="_blank"
@@ -32,16 +32,14 @@ const HousingFinderList = ({ resources }) => {
                     href={`https://www.google.com/maps/search/?api=1&query=${contact.name}+${contact.address}+${contact.city}`}
                   >
                     <HomeWorkOutlined className={classes.shelterIcon} />
-                    <ListItemText
-                      primary={contact.address + " " + contact.city}
-                    />
+                    <ListItemText primary={contact.address} />
                   </ListItemLink>
                 )}
                 {contact.phone && (
                   <ListItemLink href={`tel:+${contact.phone}`}>
                     <Call className={classes.shelterIcon} />
                     {contact.tags2Phones && (
-                      <Typography variant="body2">
+                      <Typography variant="body1">
                         {contact.tags2Phones[0]}
                       </Typography>
                     )}
@@ -52,7 +50,7 @@ const HousingFinderList = ({ resources }) => {
                   <ListItemLink href={`tel:+${contact.phone2}`}>
                     <Call className={classes.shelterIcon} />
                     {contact.tags2Phones && (
-                      <Typography variant="body2">
+                      <Typography variant="body1">
                         {contact.tags2Phones[1]}
                       </Typography>
                     )}

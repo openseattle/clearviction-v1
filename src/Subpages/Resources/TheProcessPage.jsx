@@ -1,5 +1,6 @@
 import { Box, Container, Typography } from "@material-ui/core";
 import teamBuilding from "../../Assets/team_building.svg";
+import dataArranging from "../../Assets/data_arranging.svg";
 import HeroPanel from "../../Components/HeroPanel";
 import { useResourcesStyles } from "../../Styles/useResourcesStyles";
 import ListItemMobileSnap from "../../ui-kit/ListItemMobileSnap";
@@ -43,7 +44,7 @@ const TheProcessPage = () => {
         </Container>
         <Container className={classes.regularContainer} maxWidth="md">
           <ListItemMobileSnap
-            image={<Box height={175} component="img" src={teamBuilding} />}
+            image={<Box height={175} component="img" src={dataArranging} />}
             text={
               <div>
                 <Typography className={classes.headingStyle} variant="h2">
@@ -58,7 +59,7 @@ const TheProcessPage = () => {
                 <Typography
                   className={classes.listItemsStyle}
                   component="ol"
-                  variant="body2"
+                  variant="body1"
                 >
                   <li>
                     The court does not believe that vacating your conviction

@@ -23,7 +23,7 @@ const WhyVacateEducation = () => {
           </Typography>
         </Grid>
       </Container>
-      <Container maxWidth="md">
+      <Container className={classes.containerSpaceOnlyStyles} maxWidth="md">
         <EducationBarriers />
       </Container>
       <TextWithCTAButton
@@ -46,12 +46,16 @@ const WhyVacateEducation = () => {
                   catalogs over 15,000 provisions of law in both statute and regulatory codes that limit occupational licensing opportunities for individuals with criminal records.`,
         ]}
       />
-      <EducationOccLicReq />
+      <Container maxWidth="md">
+        <EducationOccLicReq />
+      </Container>
+
       <TextWithCTAButton
         text={
           "If you’re not yet eligible to vacate or want to know more, make sure to check out our resorces with tips for student loans, finding post-incarceration education and more."
         }
         buttonText={"Get Education Resources"}
+        buttonLinkTo={"/resources/assistance/education"}
       />
     </>
   );

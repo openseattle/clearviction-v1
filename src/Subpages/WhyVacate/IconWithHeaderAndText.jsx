@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(2),
   },
   gridItemStyle: {
-    paddingBottom: theme.spacing(3),
+    paddingBottom: theme.spacing(5),
   },
 }));
 

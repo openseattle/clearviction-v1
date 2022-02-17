@@ -7,13 +7,13 @@ import tanf from "../../Assets/Family_TwoColor1.svg";
 export const GovBarriers = () => {
   const classes = WhyVacateHousingStyles();
   return (
-    <Box className={classes.roots}>
+    <Box className={classes.containerSpaceOnlyStyles}>
       <Container maxWidth="lg" className={classes.rootsContainer}>
         <List>
           <ListItemMobileSnap
             edu
             image={
-              <Box component="img" src={tanf} className={classes.rootsImage} />
+              <Box component="img" src={tanf} className={classes.roleImage} />
             }
             header={"Temporary Assistance for Needy Families"}
             text={
@@ -28,7 +28,7 @@ export const GovBarriers = () => {
           <ListItemMobileSnap
             edu
             image={
-              <Box component="img" src={snap} className={classes.rootsImage} />
+              <Box component="img" src={snap} className={classes.roleImage} />
             }
             header={"Supplemental Nutrition Assistance Program"}
             text={

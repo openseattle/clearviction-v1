@@ -26,29 +26,31 @@ const Theme = createTheme({
   typography: {
     fontSize: 16,
     body1: {
-      fontFamily: "Lora",
-      fontSize: "1.5rem",
+      fontFamily: ["Roboto", "sans-serif"],
+      fontSize: "16px",
     },
     body2: {
-      fontFamily: "Lora",
-      fontSize: "1.25rem",
+      fontFamily: ["Roboto", "sans-serif"],
+      fontSize: "14px",
     },
     subtitle1: {
       fontFamily: ["Roboto", "sans-serif"],
-      fontSize: "1.5rem",
+      fontSize: "24px",
+      fontWeight: "normal",
+      lineHeight: "32px",
+    },
+    subtitle2: {
+      fontFamily: ["Roboto", "sans-serif"],
+      fontSize: "16px",
       fontWeight: "normal",
       lineHeight: "24px",
     },
-    subtitle2: {
-      fontFamily: "Roboto",
-      fontSize: ".875rem",
-    },
     button: {
       textAlign: "center",
-      fontSize: "1.125rem",
+      fontSize: "16px",
       fontFamily: ["Roboto", "sans-serif"],
       fontWeight: "bold",
-      lineHeight: "3rem",
+      lineHeight: "24px",
       textTransform: "none",
     },
   },

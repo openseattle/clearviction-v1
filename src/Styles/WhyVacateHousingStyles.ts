@@ -9,6 +9,10 @@ export const WhyVacateHousingStyles = makeStyles((theme) => ({
       padding: theme.spacing(3),
     },
   },
+  containerSpaceOnlyStyles: {
+    marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(8),
+  },
   contentText: {
     margin: theme.spacing(2),
   },
@@ -22,7 +26,7 @@ export const WhyVacateHousingStyles = makeStyles((theme) => ({
   },
   roleImage: {
     height: 300,
-    width: 300,
+    maxWidth: 300,
   },
   headingRoles: {
     color: theme.palette.primary.light,

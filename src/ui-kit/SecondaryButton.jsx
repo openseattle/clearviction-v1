@@ -13,8 +13,8 @@ const useStyles = makeStyles({
     textTransform: "none",
     fontSize: "16px",
     "&:hover": {
-      backgroundColor: "var(--gray)",
-      color: "#000000",
+      backgroundColor: "#3b5173",
+      color: "#ffffff",
     },
   },
 });
