@@ -14,7 +14,7 @@ export const EducationOccLicReq = () => {
             justifyContent: "center",
           }}
         >
-          <Grid className={classes.containerSpaceOnlyStyles} container >
+          <Grid className={classes.containerSpaceOnlyStyles} container>
             <Grid item xs={12}>
               <Typography
                 className={classes.blackHeaderText}
@@ -29,7 +29,7 @@ export const EducationOccLicReq = () => {
                 className={classes.blackHeaderText}
                 variant="h4"
                 align="left"
-                style={{paddingBottom: "64px"}}
+                style={{ paddingBottom: "64px" }}
               >
                 The following factors will be considered in determining whether
                 a criminal conviction should be grounds to deny a license:

@@ -26,7 +26,7 @@ export const useResourcesStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(2),
     color: theme.palette.primary.light,
   },
-  highlightHeadingStyle:{
+  highlightHeadingStyle: {
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
     color: theme.palette.highlight.main,

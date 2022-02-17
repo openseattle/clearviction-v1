@@ -20,7 +20,7 @@ const AssistanceEducation = () => {
   return (
     <>
       <Container className={classes.regularContainer} maxWidth="md">
-        <Typography className={classes.headingStyle} variant="h2" >
+        <Typography className={classes.headingStyle} variant="h2">
           Education available post-incarceration
         </Typography>
         <Typography className={classes.contentTextStyle} variant="body1">
@@ -78,7 +78,7 @@ const AssistanceEducation = () => {
             Aid.
           </ExternalLink>
         </Typography>
-        <Box >
+        <Box>
           <IconWithHeaderAndText
             icon={LocalAtmOutlined}
             header={

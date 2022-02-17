@@ -13,9 +13,9 @@ const useStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(2),
     fontSize: 24,
-    [theme.breakpoints.down("xs")]:{
+    [theme.breakpoints.down("xs")]: {
       fontSize: 18,
-    }
+    },
   },
 }));
 const HeroPanel = (props) => {

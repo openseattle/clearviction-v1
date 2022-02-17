@@ -41,10 +41,10 @@ const TeamCard = (props) => {
       </CardMedia>
       <List>
         <ListItem>
-          <ListItemText 
-          primary={firstName + " " + lastName} 
-          secondary={role}
-          secondaryTypographyProps={{variant:"body2"}} 
+          <ListItemText
+            primary={firstName + " " + lastName}
+            secondary={role}
+            secondaryTypographyProps={{ variant: "body2" }}
           />
           <IconButton
             href={linkedIn}

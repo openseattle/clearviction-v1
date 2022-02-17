@@ -104,7 +104,7 @@ const WhyVacateEmployment = () => {
         buttonLinkTo={"/calculator"}
       />
       <Box className={classes.lightBlueSectionBackground}>
-        <Container className={classes.sectionSpaceStyle} maxWidth="lg" >
+        <Container className={classes.sectionSpaceStyle} maxWidth="lg">
           <Grid container>
             <Grid item xs={12} sm={6}>
               <Box className={classes.spacer}>
@@ -198,7 +198,13 @@ const WhyVacateEmployment = () => {
             </Typography>
           </Box>
         </Grid>
-        <Grid className={classes.darkBlueSectionBackground} item xs={12} sm={12} md={6}>
+        <Grid
+          className={classes.darkBlueSectionBackground}
+          item
+          xs={12}
+          sm={12}
+          md={6}
+        >
           <Box className={classes.containerStylesAlt}>
             <Typography variant="body1" align="center">
               To find out whether your offense will or may disqualify you from a
