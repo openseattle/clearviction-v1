@@ -31,7 +31,7 @@ const Theme = createTheme({
     },
     body2: {
       fontFamily: ["Roboto", "sans-serif"],
-      fontSize: "12px",
+      fontSize: "14px",
     },
     subtitle1: {
       fontFamily: ["Roboto", "sans-serif"],
