@@ -1,21 +1,29 @@
 import { makeStyles } from "@material-ui/core";
 
 export const WhyVacateEmploymentStyles = makeStyles((theme) => ({
+  sectionSpaceStyle: {
+    marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(8),
+  },
   containerStyles: {
-    margin: theme.spacing(2),
-    marginTop: theme.spacing(5),
-    marginBottom: theme.spacing(5),
-    [theme.breakpoints.down("sm")]: {
-      padding: theme.spacing(3),
+    margin: theme.spacing(15),
+    [theme.breakpoints.down("md")]: {
+      margin: theme.spacing(8),
     },
+    [theme.breakpoints.down("sm")]: {
+      margin: theme.spacing(5),
+    },
+
   },
   containerStylesAlt: {
-    margin: theme.spacing(2),
-    marginTop: theme.spacing(15),
-    marginBottom: theme.spacing(10),
-    [theme.breakpoints.down("sm")]: {
-      padding: theme.spacing(3),
+    margin: theme.spacing(15),
+    [theme.breakpoints.down("md")]: {
+      margin: theme.spacing(8),
     },
+    [theme.breakpoints.down("sm")]: {
+      margin: theme.spacing(5),
+    },
+
   },
   title: {
     margin: theme.spacing(2),

@@ -5,7 +5,6 @@ import {
   Box,
   makeStyles,
   List,
-  ListItemIcon,
 } from "@material-ui/core";
 import HeroPanel from "../Components/HeroPanel";
 import TeamCard from "../Components/TeamCard";
@@ -40,13 +39,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   rootsImage: {
-    width: 300,
-    height: 180,
-  },
-  rootsBodyText: {
-    minWidth: 150,
-    fontFamily: ["Roboto", "sans-serif"],
-    fontSize: 18,
+    maxWidth: 300,
   },
   problemRoot: {
     marginTop: theme.spacing(6),
@@ -65,10 +58,12 @@ const useStyles = makeStyles((theme) => ({
     paddingLeft: theme.spacing(4),
   },
   problemLeftTitle: {
-    marginBottom: theme.spacing(4),
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
   },
   problemLeftBody: {
-    marginTop: theme.spacing(4),
+    paddingTop: theme.spacing(2),
+    paddingBottom: theme.spacing(2),
   },
   problemRootRight: {
     backgroundColor: theme.palette.primary.dark,
@@ -76,8 +71,8 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(4),
     paddingBottom: theme.spacing(5),
   },
-  problemRightListItem: {
-    padding: theme.spacing(3),
+  problemRightListText: {
+    padding: theme.spacing(2),
   },
   theProblemIcon: {
     color: theme.palette.highlight.main,
@@ -111,7 +106,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardGrid: {
     padding: theme.spacing(3),
-    [theme.breakpoints.down("")]: {
+    [theme.breakpoints.down("xs")]: {
       paddingLeft: theme.spacing(5),
       paddingRight: theme.spacing(5),
     },
@@ -120,18 +115,18 @@ const useStyles = makeStyles((theme) => ({
 
 const AboutPage = () => {
   const classes = useStyles();
-  const pageTitle = "About Us";
-  const pageSubtitle = `We are a civic-tech open-source project working to make the 
-  conviction vacation process easier and more straightforward, starting with an 
-  eligibility calculator.`;
   return (
     <>
       <Container maxWidth="lg">
-        <HeroPanel title={pageTitle} subtitle={pageSubtitle} />
+        <HeroPanel
+          title={"About Us"}
+          subtitle={`We are a civic-tech open-source project working to make the conviction vacation 
+            process easier and more straightforward, starting with an eligibility calculator.`}
+        />
       </Container>
 
       <Box className={classes.roots}>
-        <Container maxWidth="lg" className={classes.rootsContainer}>
+        <Container maxWidth="md" className={classes.rootsContainer}>
           <Typography variant="h2">The roots of our project</Typography>
 
           <List>
@@ -144,7 +139,7 @@ const AboutPage = () => {
                 />
               }
               text={
-                <Typography className={classes.rootsBodyText} variant="body1">
+                <Typography variant="body1">
                   One in four Washingtonians have been involved in the criminal
                   justice system. Those with a criminal record face significant
                   barriers to daily life after completing their prison terms.
@@ -160,7 +155,7 @@ const AboutPage = () => {
                 />
               }
               text={
-                <Typography className={classes.rootsBodyText} variant="body1">
+                <Typography variant="body1">
                   Washington State’s New Hope Act makes it easier for people
                   with past criminal records to have their convictions vacated.
                   Yet the system is slow and inefficient.
@@ -178,7 +173,7 @@ const AboutPage = () => {
                 />
               }
               text={
-                <Typography className={classes.rootsBodyText} variant="body1">
+                <Typography variant="body1">
                   We have identified opportunities to use technology to
                   streamline this process and want to use our resources to
                   appropriately meet user needs, creating an easier way to
@@ -190,7 +185,7 @@ const AboutPage = () => {
         </Container>
       </Box>
       <Box className={classes.problemRoot}>
-        <Container maxWidth="lg">
+        <Container maxWidth="md">
           <Grid container>
             <Grid className={classes.theProblemRootleft} item sm={12} md={6}>
               <Typography className={classes.problemLeftTitle} variant="h2">
@@ -215,35 +210,37 @@ const AboutPage = () => {
                 <li>Scheduling hearings with a judge</li>
               </Typography>
             </Grid>
-            <Grid className={classes.problemRootRight} item sm={12} md={6}>
+            <Grid
+              className={classes.problemRootRight}
+              item
+              xs={12}
+              sm={12}
+              md={6}
+            >
               <Grid container justifyContent="center">
-                <Grid item md={3}>
+                <Grid item sm={3} md={3}>
                   <HourglassEmpty className={classes.theProblemIcon} />
                 </Grid>
-                <Grid item sm={12} md={8}>
-                  <Typography>
+                <Grid item xs={12} sm={8} md={8}>
+                  <Typography className={classes.problemRightListText}>
                     Each step requires time and know-how, increasing the barrier
                     to entry for applicants
                   </Typography>
                 </Grid>
-                <Grid item md={3}>
-                  <ListItemIcon>
-                    <LocalAtmOutlined className={classes.theProblemIcon} />
-                  </ListItemIcon>
+                <Grid item sm={3} md={3}>
+                  <LocalAtmOutlined className={classes.theProblemIcon} />
                 </Grid>
-                <Grid item sm={12} md={8}>
-                  <Typography>
+                <Grid item xs={12} sm={8} md={8}>
+                  <Typography className={classes.problemRightListText}>
                     While hiring an attorney can help simplify the process, it’s
                     unaffordable for most
                   </Typography>
                 </Grid>
-                <Grid item md={3}>
-                  <ListItemIcon>
-                    <PanToolOutlined className={classes.theProblemIcon} />
-                  </ListItemIcon>
+                <Grid item sm={3} md={3}>
+                  <PanToolOutlined className={classes.theProblemIcon} />
                 </Grid>
-                <Grid item sm={12} md={8}>
-                  <Typography>
+                <Grid item xs={12} sm={8} md={8}>
+                  <Typography className={classes.problemRightListText}>
                     Free volunteer services are available but they are often
                     inaccessible and don’t cover all steps of the process
                   </Typography>
@@ -269,7 +266,7 @@ const AboutPage = () => {
               and decrease lifelong collateral consequences.
             </Typography>
             <Typography className={classes.ourMissionText} variant="h3">
-              To support this mission, we first focused on creating a <br />
+              To support this mission, we first focused on creating a{" "}
               <span className={classes.highlightText}>
                 Conviction Eligibility Calculator
               </span>{" "}
@@ -296,7 +293,9 @@ const AboutPage = () => {
                 md={4}
                 lg={3}
               >
-                <TeamCard member={member} />
+                <Box display="flex" justifyContent="center">
+                  <TeamCard member={member} />
+                </Box>
               </Grid>
             ))}
           </Grid>

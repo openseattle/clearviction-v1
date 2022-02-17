@@ -174,7 +174,7 @@ const gatherDocumentsTabGroup = [
 export const GatherDocuments = () => {
   const classes = useResourcesStyles();
   return (
-    <Container maxWidth={"sm"}>
+    <Container maxWidth={"md"}>
       <Typography className={classes.headingStyle} variant={"h2"}>
         Step 1: Gather Documents
       </Typography>

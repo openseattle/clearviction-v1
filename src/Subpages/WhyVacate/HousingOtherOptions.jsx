@@ -13,6 +13,7 @@ export const HousingOtherOptions = () => {
             display: "flex",
             justifyContent: "center",
           }}
+          maxWidth="md"
         >
           <Grid container className={classes.containerStyles}>
             <Grid item xs={12}>
