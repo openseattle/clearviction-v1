@@ -22,7 +22,7 @@ const WhyVacateHousing = () => {
           </Typography>
         </Grid>
       </Container>
-      <Container maxWidth="md">
+      <Container className={classes.containerSpaceOnlyStyles} maxWidth="md">
         <HousingBarriers />
       </Container>
       <TextWithCTAButton

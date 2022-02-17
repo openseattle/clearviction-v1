@@ -29,6 +29,7 @@ export const EducationOccLicReq = () => {
                 className={classes.blackHeaderText}
                 variant="h4"
                 align="left"
+                style={{paddingBottom: "64px"}}
               >
                 The following factors will be considered in determining whether
                 a criminal conviction should be grounds to deny a license:

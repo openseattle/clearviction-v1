@@ -23,7 +23,7 @@ const WhyVacateEducation = () => {
           </Typography>
         </Grid>
       </Container>
-      <Container maxWidth="md">
+      <Container className={classes.containerSpaceOnlyStyles} maxWidth="md">
         <EducationBarriers />
       </Container>
       <TextWithCTAButton
