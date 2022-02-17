@@ -76,10 +76,6 @@ const friendlyIndustries = [
     details:
       "People with felonies can find job opportunities in the transport industry as drivers, carriers, and delivery guys.",
   },
-  {
-    summary: "Food services and grocery stores",
-    details: "Missing in Figma",
-  },
 ];
 
 const WhyVacateEmployment = () => {
