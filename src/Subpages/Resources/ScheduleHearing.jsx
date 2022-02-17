@@ -61,32 +61,32 @@ const CourtFeesDetails = (
         supervisor and/or the court's accounting department.
       </li>
     </Typography>
-    <Box paddingTop={3}/>
+    <Box paddingTop={3} />
     <Typography>
       If you do not have the financial ability to pay the fees, you might be
       eligible for relief:
     </Typography>
     <Box padding={3}>
-    <BulletedListMui>
-      <li>
-        Use this{" "}
-        <ExternalLink href="https://www.washingtonlawhelp.org/files/C9D2EA3F-0350-D9AF-ACAE-BF37E9BC9FFA/attachments/3928A184-D6E5-9324-4FB9-495A060A017B/3204en_filing-motion-for-fee-waiver.pdf">
-          packet from WashingtonLawHelp
-        </ExternalLink>{" "}
-        to find out if you are eligible to waive your fees (p. 1-2). It also
-        includes the instructions to ask for a fee waiver (p. 4-9) and all
-        necessary forms (p. 10-14). If you have trouble filling out the
-        documents, use this website created by Northwest Justice{" "}
-        <ExternalLink href="https://lawhelpinteractive.org/Interview/GenerateInterview/7063/engine">
-          to help fill out the documents for free
-        </ExternalLink>
-        .
-      </li>
-      <li>
-        You can also contact us at contact@cvp.com because we might be able to
-        assist you.
-      </li>
-    </BulletedListMui>
+      <BulletedListMui>
+        <li>
+          Use this{" "}
+          <ExternalLink href="https://www.washingtonlawhelp.org/files/C9D2EA3F-0350-D9AF-ACAE-BF37E9BC9FFA/attachments/3928A184-D6E5-9324-4FB9-495A060A017B/3204en_filing-motion-for-fee-waiver.pdf">
+            packet from WashingtonLawHelp
+          </ExternalLink>{" "}
+          to find out if you are eligible to waive your fees (p. 1-2). It also
+          includes the instructions to ask for a fee waiver (p. 4-9) and all
+          necessary forms (p. 10-14). If you have trouble filling out the
+          documents, use this website created by Northwest Justice{" "}
+          <ExternalLink href="https://lawhelpinteractive.org/Interview/GenerateInterview/7063/engine">
+            to help fill out the documents for free
+          </ExternalLink>
+          .
+        </li>
+        <li>
+          You can also contact us at contact@cvp.com because we might be able to
+          assist you.
+        </li>
+      </BulletedListMui>
     </Box>
   </div>
 );
@@ -112,12 +112,13 @@ const legalHotlineDetails = (
       , a toll-free legal hotline:
     </Typography>
     <Box padding={3}>
-    <BulletedListMui>
-      <li>
-        Outside of King County: call 1-888-201-1014 (weekdays 9.15am - 12.15pm).
-      </li>
-      <li>In King County: call 2-1-1 (weekdays 8am - 6pm). </li>
-    </BulletedListMui>
+      <BulletedListMui>
+        <li>
+          Outside of King County: call 1-888-201-1014 (weekdays 9.15am -
+          12.15pm).
+        </li>
+        <li>In King County: call 2-1-1 (weekdays 8am - 6pm). </li>
+      </BulletedListMui>
     </Box>
     <Typography>
       You can also apply online at{" "}

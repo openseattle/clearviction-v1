@@ -1,6 +1,6 @@
 import { Box, Container, Typography } from "@material-ui/core";
 import teamBuilding from "../../Assets/team_building.svg";
-import dataArranging from "../../Assets/data_arranging.svg"
+import dataArranging from "../../Assets/data_arranging.svg";
 import HeroPanel from "../../Components/HeroPanel";
 import { useResourcesStyles } from "../../Styles/useResourcesStyles";
 import ListItemMobileSnap from "../../ui-kit/ListItemMobileSnap";

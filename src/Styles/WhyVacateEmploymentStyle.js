@@ -13,7 +13,6 @@ export const WhyVacateEmploymentStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       margin: theme.spacing(5),
     },
-
   },
   containerStylesAlt: {
     margin: theme.spacing(15),
@@ -23,7 +22,6 @@ export const WhyVacateEmploymentStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       margin: theme.spacing(5),
     },
-
   },
   title: {
     margin: theme.spacing(2),

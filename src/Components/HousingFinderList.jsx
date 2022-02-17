@@ -24,7 +24,7 @@ const HousingFinderList = ({ resources }) => {
               <br />
             </Grid>
             <Grid item xs={12} sm={6}>
-              <List >
+              <List>
                 {contact.address && (
                   <ListItemLink
                     target="_blank"
@@ -32,9 +32,7 @@ const HousingFinderList = ({ resources }) => {
                     href={`https://www.google.com/maps/search/?api=1&query=${contact.name}+${contact.address}+${contact.city}`}
                   >
                     <HomeWorkOutlined className={classes.shelterIcon} />
-                    <ListItemText
-                      primary={contact.address}
-                    />
+                    <ListItemText primary={contact.address} />
                   </ListItemLink>
                 )}
                 {contact.phone && (

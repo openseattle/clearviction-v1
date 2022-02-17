@@ -10,7 +10,7 @@ export const HousingBarriers = () => {
   return (
     <>
       <Box>
-        <Grid container spacing={1} >
+        <Grid container spacing={1}>
           <TextWithImage
             img={pha}
             header={"Public Housing Authorities"}
