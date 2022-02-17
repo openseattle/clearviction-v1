@@ -27,9 +27,8 @@ const useStyles = makeStyles((theme) => ({
   navigationLogoText: {
     color: "white",
     fontFamily: "helvetica",
-    fontSize: "1.75rem",
+    fontSize: "32px",
     textAlign: "left",
-    maxWidth: "25rem",
   },
   disclaimer: {
     fontSize: "10px",
@@ -74,12 +73,6 @@ const NavigationAlt = () => {
       <Container>
         <Toolbar>
           <Box component={Button} href="/">
-            <Box
-              className={classes.navigationLogo}
-              component="img"
-              src={navLogo}
-              alt="clearviction logo broken chains"
-            />
             <Typography className={classes.navigationLogoText}>
               Clearviction
             </Typography>

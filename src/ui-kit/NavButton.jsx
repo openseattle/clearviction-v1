@@ -15,8 +15,6 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": { color: "white", textDecoration: "underline" },
   },
   navText: {
-    fontFamily: ["Helvetica Neue", "sans-serif"],
-    fontSize: "14px",
   },
 }));
 const NavButton = ({ page, theme }) => {

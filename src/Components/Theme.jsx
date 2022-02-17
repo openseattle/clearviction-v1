@@ -10,6 +10,7 @@ const Theme = createTheme({
       dark: "#2F3554",
       main: "#2d3047",
       light: "#4e6c99",
+      contrastText: "#ffffff"
     },
     success: {
       main: "#419d77",
@@ -24,12 +25,7 @@ const Theme = createTheme({
     },
   },
   typography: {
-    h1: {
-      fontSize: 72,
-    },
-    subtitle1: {
-      fontSize: 24,
-    }
+    fontFamily: ["Sintony", "sans-serif"]
   }
 });
 
@@ -58,6 +54,21 @@ Theme.overrides = {
       color: Theme.palette.primary.dark,
       backgroundColor: "white",
     },
+  },
+  MuiButton: {
+    root: {
+      borderRadius: 50,
+    },
+    label: {
+      fontFamily: ["Inter", "sans-serif"],
+      textDecoration: "none",
+    }
+  },
+  MuiButtonGroup: {
+    root: {
+      borderRadius: 50,
+    },
+
   },
 };
 

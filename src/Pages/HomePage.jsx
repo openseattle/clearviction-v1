@@ -29,45 +29,50 @@ const HomePage = () => {
     <>
       <Box className={classes.lightBlueBackGround}>
         <Container maxWidth="lg">
-          <Box padding={3}>
-            <Typography className={classes.headingStyle} variant="h1">
-              Vacation Eligibility Calculator
-            </Typography>
-            <Typography
-              className={classes.contentTextStyle}
-              variant="subtitle1"
-            >
-              Check your eligibility to vacate your conviction for free in less
-              than 10 minutes!
-            </Typography>
-            <Button
-              href="/calculator/landing-0"
-              color="primary"
-              variant="contained"
-            >
-              Check My Eligibility
-            </Button>
-          </Box>
+          <Typography className={classes.headingStyle} variant="h1">
+            Vacation Eligibility Calculator
+          </Typography>
+          <Grid container>
+            <Grid item xs={12} sm={6}>
+              <Typography
+                className={classes.contentTextStyle}
+                variant="subtitle1"
+              >
+                Check your eligibility to vacate your conviction for free in
+                less than 10 minutes!
+              </Typography>
+              <Box paddingTop={12}>
+              <Button
+                href="/calculator/landing-0"
+                color="primary"
+                variant="contained"
+              >
+                Check My Eligibility
+              </Button>
+              </Box>
+
+            </Grid >
+            <Grid item xs={12} sm={6}>
+              <img src={phone} className={classes.iconStyle}></img>
+            </Grid>
+          </Grid>
         </Container>
       </Box>
 
-      <Box display="flex" justifyContent={"center"} padding={4}>
+      <Container className={classes.regularContainer} maxwidth="sm">
         <ButtonGroup
           orientation={"horizontal"}
-          color="secondary"
-          variant="contained"
+          color="primary"
+          variant="text"
+          fullWidth
         >
           <Button href="#how-it-works">How It Works</Button>
           <Button href="#faq">FAQs</Button>
           <Button href="#why-vacate">Why Vacate</Button>
         </ButtonGroup>
-      </Box>
+      </Container>
 
-      <Container
-        className={classes.regularContainer}
-        id="how-it-works"
-        maxWidth="lg"
-      >
+      <Container id="how-it-works" maxWidth="lg">
         <Paper className={classes.regularContainer}>
           <Typography
             className={classes.headingStyle}
@@ -78,7 +83,11 @@ const HomePage = () => {
           </Typography>
           <Grid container>
             <Grid item xs={12} sm={4}>
-              <img className={classes.iconStyle} src={teamwork} alt={"Teamwork Icon"} />
+              <img
+                className={classes.iconStyle}
+                src={teamwork}
+                alt={"Teamwork Icon"}
+              />
               <Typography
                 className={classes.contentTextStyle}
                 variant="body2"
@@ -88,7 +97,11 @@ const HomePage = () => {
               </Typography>
             </Grid>
             <Grid item xs={12} sm={4}>
-              <img className={classes.iconStyle} src={phone} alt={"Mobile Phone Icon"} />
+              <img
+                className={classes.iconStyle}
+                src={phone}
+                alt={"Mobile Phone Icon"}
+              />
               <Typography
                 className={classes.contentTextStyle}
                 variant="body2"
@@ -98,7 +111,11 @@ const HomePage = () => {
               </Typography>
             </Grid>
             <Grid item xs={12} sm={4}>
-              <img className={classes.iconStyle} src={employment} alt={"Employment Icon"} />
+              <img
+                className={classes.iconStyle}
+                src={employment}
+                alt={"Employment Icon"}
+              />
               <Typography
                 className={classes.contentTextStyle}
                 variant="body2"
@@ -133,26 +150,54 @@ const HomePage = () => {
         </Typography>
         <Grid container>
           <Grid item xs={12} sm={6} lg={3}>
-            <img className={classes.iconStyle} src={housing} alt={"Housing Icon"} />
-            <Typography className={classes.headingStyle} variant="h5" align="center">
+            <img
+              className={classes.iconStyle}
+              src={housing}
+              alt={"Housing Icon"}
+            />
+            <Typography
+              className={classes.headingStyle}
+              variant="h5"
+              align="center"
+            >
               Housing
             </Typography>
-            <Typography className={classes.contentTextStyle} variant="body1" align="center">
+            <Typography
+              className={classes.contentTextStyle}
+              variant="body1"
+              align="center"
+            >
               Make it easier to find and be approved for rent or purchasing a
               home.
             </Typography>
           </Grid>
           <Grid item xs={12} sm={6} lg={3}>
-            <img className={classes.iconStyle} src={employment} alt={"Employment Icon"} />
-            <Typography className={classes.headingStyle} variant="h5" align="center">
+            <img
+              className={classes.iconStyle}
+              src={employment}
+              alt={"Employment Icon"}
+            />
+            <Typography
+              className={classes.headingStyle}
+              variant="h5"
+              align="center"
+            >
               Employment
             </Typography>
-            <Typography className={classes.contentTextStyle} variant="body1" align="center">
+            <Typography
+              className={classes.contentTextStyle}
+              variant="body1"
+              align="center"
+            >
               Reduce barriers to finding and obtaining employment.
             </Typography>
           </Grid>
           <Grid item xs={12} sm={6} lg={3}>
-            <img className={classes.iconStyle} src={education} alt={"Education Icon"} />
+            <img
+              className={classes.iconStyle}
+              src={education}
+              alt={"Education Icon"}
+            />
             <Typography
               className={classes.headingStyle}
               variant="h5"
@@ -165,11 +210,23 @@ const HomePage = () => {
             </Typography>
           </Grid>
           <Grid item xs={12} sm={6} lg={3}>
-            <img className={classes.iconStyle} src={lawyer} alt={"Lawyer Icon"} />
-            <Typography className={classes.headingStyle} variant="h5" align="center">
+            <img
+              className={classes.iconStyle}
+              src={lawyer}
+              alt={"Lawyer Icon"}
+            />
+            <Typography
+              className={classes.headingStyle}
+              variant="h5"
+              align="center"
+            >
               Government Assistance
             </Typography>
-            <Typography className={classes.contentTextStyle} variant="body1" align="center">
+            <Typography
+              className={classes.contentTextStyle}
+              variant="body1"
+              align="center"
+            >
               Receive government help.
             </Typography>
           </Grid>
@@ -185,12 +242,20 @@ const HomePage = () => {
           <Box display="flex" justifyContent={"center"}>
             <img src={cvpLogoWhite} id="cvp-logo" alt={"CVP Logo"} />
           </Box>
-          <Typography className={classes.contentTextStyle} variant="h5" align="center">
+          <Typography
+            className={classes.contentTextStyle}
+            variant="h5"
+            align="center"
+          >
             Clearviction connects volunteers passionate about reducing barriers
             and making it easier for those with convictions in Washington State.
           </Typography>
           <br />
-          <Typography className={classes.contentTextStyle} variant="h5" align="center">
+          <Typography
+            className={classes.contentTextStyle}
+            variant="h5"
+            align="center"
+          >
             We’re working together to create a tool to make navigating the
             conviction vacation process easier. Currently we are designing and
             building an eligibility calculator to help people determine if their
