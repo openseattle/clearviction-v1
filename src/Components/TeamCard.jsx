@@ -13,6 +13,7 @@ import { LinkedIn } from "@material-ui/icons";
 const useStyles = makeStyles({
   card: {
     borderRadius: 0,
+    width: 275,
   },
   name: {
     fontWeight: "bold",
@@ -40,7 +41,11 @@ const TeamCard = (props) => {
       </CardMedia>
       <List>
         <ListItem>
-          <ListItemText primary={firstName + " " + lastName} secondary={role} />
+          <ListItemText 
+          primary={firstName + " " + lastName} 
+          secondary={role}
+          secondaryTypographyProps={{variant:"body2"}} 
+          />
           <IconButton
             href={linkedIn}
             target="_blank"

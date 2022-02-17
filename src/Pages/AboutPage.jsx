@@ -293,7 +293,9 @@ const AboutPage = () => {
                 md={4}
                 lg={3}
               >
-                <TeamCard member={member} />
+                <Box display="flex" justifyContent="center">
+                  <TeamCard member={member} />
+                </Box>
               </Grid>
             ))}
           </Grid>
