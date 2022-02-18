@@ -53,7 +53,7 @@ const HomePage = () => {
 
             </Grid >
             <Grid item xs={12} sm={6}>
-              <img src={phone} className={classes.iconStyle}></img>
+              <img src={phone} className={classes.iconStyle} alt="person using a calculator      "></img>
             </Grid>
           </Grid>
         </Container>
