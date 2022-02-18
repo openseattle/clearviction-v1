@@ -11,7 +11,13 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import data from "../data/FAQdata";
 
 const useStyles = makeStyles((theme) => ({
-
+  accordionSummary: {
+    backgroundColor: theme.palette.primary.light,
+    color: theme.palette.primary.contrastText,
+  },
+  iconStyle: {
+    color: theme.palette.primary.contrastText,
+  }
 }));
 
 export default function FAQAccordion() {
@@ -21,7 +27,7 @@ export default function FAQAccordion() {
     <>
       <Container maxWidth="md">
         {content.map(({ header, body1, body2, body3, body4, body5 }, idx) => (
-          <Accordion key={idx}>
+          <Accordion key={idx} style={{boxShadow: "none"}}>
             <AccordionSummary
               className={classes.accordionSummary}
               expandIcon={<ExpandMoreIcon className={classes.iconStyle} />}

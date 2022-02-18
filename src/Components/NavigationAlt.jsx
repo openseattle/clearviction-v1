@@ -14,7 +14,6 @@ import {
 } from "@material-ui/core";
 import { MenuSharp as MenuIcon, CloseSharp } from "@material-ui/icons";
 import pages from "../data/siteMap";
-import navLogo from "../Assets/cvp-logo-white.png";
 import { useState } from "react";
 import NavButton from "../ui-kit/NavButton";
 import NavButtonMobile from "../ui-kit/NavButtonMobile";
@@ -26,9 +25,8 @@ const useStyles = makeStyles((theme) => ({
   },
   navigationLogoText: {
     color: "white",
-    fontFamily: "helvetica",
     fontSize: "32px",
-    textAlign: "left",
+    textAlign: "center",
   },
   disclaimer: {
     fontSize: "10px",

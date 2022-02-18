@@ -25,7 +25,7 @@ const Theme = createTheme({
     },
   },
   typography: {
-    fontFamily: ["Sintony", "sans-serif"]
+    fontFamily: ["Roboto", "sans-serif"]
   }
 });
 
@@ -59,10 +59,6 @@ Theme.overrides = {
     root: {
       borderRadius: 50,
     },
-    label: {
-      fontFamily: ["Inter", "sans-serif"],
-      textDecoration: "none",
-    }
   },
   MuiButtonGroup: {
     root: {

@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { trackPageview } from "../trackingUtils";
 import FAQAccordion from "../Components/Accordion";
-import cvpLogoWhite from "../Assets/cvp-logo-white.png";
 import housing from "../Assets/housing.svg";
 import employment from "../Assets/employment.svg";
 import education from "../Assets/education.svg";
@@ -42,18 +41,21 @@ const HomePage = () => {
                 less than 10 minutes!
               </Typography>
               <Box paddingTop={12}>
-              <Button
-                href="/calculator/landing-0"
-                color="primary"
-                variant="contained"
-              >
-                Check My Eligibility
-              </Button>
+                <Button
+                  href="/calculator/landing-0"
+                  color="primary"
+                  variant="contained"
+                >
+                  Check My Eligibility
+                </Button>
               </Box>
-
-            </Grid >
+            </Grid>
             <Grid item xs={12} sm={6}>
-              <img src={phone} className={classes.iconStyle} alt="person using a calculator      "></img>
+              <img
+                src={phone}
+                className={classes.iconStyle}
+                alt="person using a calculator      "
+              ></img>
             </Grid>
           </Grid>
         </Container>
@@ -128,23 +130,26 @@ const HomePage = () => {
         </Paper>
       </Container>
 
-      <Container className={classes.regularContainer} maxWidth="lg" id="faq">
-        <Typography
-          className={classes.headingStyle}
-          variant="h3"
-          align="center"
-        >
-          FAQs
-        </Typography>
-        <div id="accordion">
-          <FAQAccordion />
-        </div>
+      <Container className={classes.regularContainer} maxWidth="md" id="faq">
+        <Paper>
+          <Typography
+            className={classes.headingStyle}
+            variant="h3"
+            align="center"
+          >
+            FAQs
+          </Typography>
+          <div id="accordion">
+            <FAQAccordion />
+          </div>
+        </Paper>
       </Container>
-      <Container maxWidth="lg" id="why-vacate">
-        <Typography className={classes.headingStyle} variant="h3">
+      <Container maxWidth="lg" id="why-vacate" className={classes.regularContainer}>
+        <Paper className={classes.regularContainer}>
+        <Typography className={classes.headingStyle} variant="h3" align="center">
           Why Vacate?
         </Typography>
-        <Typography className={classes.headingStyle} variant="subtitle1">
+        <Typography className={classes.headingStyle} variant="subtitle1" align="center">
           A conviction vacation seals the offense from your record, and will
           give you more chance to access:
         </Typography>
@@ -231,17 +236,16 @@ const HomePage = () => {
             </Typography>
           </Grid>
         </Grid>
-
-        <Button href="/why-vacate" color="primary" variant="contained">
-          Learn More
-        </Button>
+        <Box display={"flex"} justifyContent={"center"}>
+          <Button href="/why-vacate" color="primary" variant="contained">
+            learn more
+          </Button>
+        </Box>
+        </Paper>
       </Container>
 
-      <Box className={classes.darkBlueBackground}>
+      <Box className={classes.lightBlueBackGround}>
         <Container maxWidth="lg">
-          <Box display="flex" justifyContent={"center"}>
-            <img src={cvpLogoWhite} id="cvp-logo" alt={"CVP Logo"} />
-          </Box>
           <Typography
             className={classes.contentTextStyle}
             variant="h5"
@@ -261,6 +265,15 @@ const HomePage = () => {
             building an eligibility calculator to help people determine if their
             conviction is eligible for vacation.
           </Typography>
+          <Box display={"flex"} justifyContent={"center"}>
+            <Button
+              href="/get-involved/volunteer"
+              color="primary"
+              variant="contained"
+            >
+              join the team
+            </Button>
+          </Box>
         </Container>
       </Box>
     </>
