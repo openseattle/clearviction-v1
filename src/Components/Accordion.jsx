@@ -27,7 +27,7 @@ export default function FAQAccordion() {
     <>
       <Container maxWidth="md">
         {content.map(({ header, body1, body2, body3, body4, body5 }, idx) => (
-          <Accordion key={idx} style={{boxShadow: "none"}}>
+          <Accordion key={idx} >
             <AccordionSummary
               className={classes.accordionSummary}
               expandIcon={<ExpandMoreIcon className={classes.iconStyle} />}

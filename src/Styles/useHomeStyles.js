@@ -17,6 +17,12 @@ export const useHomeStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
   },
+  paperStyle: {
+    padding: theme.spacing(4),
+    [theme.breakpoints.down("xs")]: {
+      padding: theme.spacing(1)
+    }
+  },
   headingStyle: {
     margin: theme.spacing(2)
   },
@@ -34,7 +40,9 @@ export const useHomeStyles = makeStyles((theme) => ({
   buttonBoxStyle: {
     display: "flex",
     justifyContent: "center",
-    margin: theme.spacing(5),
+    marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(8),
+
   },
   shelterIcon: {
     color: theme.palette.success.main,

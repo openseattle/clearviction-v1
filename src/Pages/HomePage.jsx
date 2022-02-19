@@ -15,9 +15,9 @@ import {
   ButtonGroup,
   Container,
   Grid,
-  Paper,
   Typography,
 } from "@material-ui/core";
+import ContentSection from "../Components/ContentSection";
 
 const HomePage = () => {
   useEffect(() => trackPageview("Home"), []);
@@ -74,82 +74,73 @@ const HomePage = () => {
         </ButtonGroup>
       </Container>
 
-      <Container id="how-it-works" maxWidth="lg">
-        <Paper className={classes.regularContainer}>
-          <Typography
-            className={classes.headingStyle}
-            variant="h3"
-            align="center"
-          >
-            How It Works
-          </Typography>
-          <Grid container>
-            <Grid item xs={12} sm={4}>
-              <img
-                className={classes.iconStyle}
-                src={teamwork}
-                alt={"Teamwork Icon"}
-              />
-              <Typography
-                className={classes.contentTextStyle}
-                variant="body2"
-                align="center"
-              >
-                We break down the laws into understandable language.
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <img
-                className={classes.iconStyle}
-                src={phone}
-                alt={"Mobile Phone Icon"}
-              />
-              <Typography
-                className={classes.contentTextStyle}
-                variant="body2"
-                align="center"
-              >
-                You answer a few simple yes/no questions.
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={4}>
-              <img
-                className={classes.iconStyle}
-                src={employment}
-                alt={"Employment Icon"}
-              />
-              <Typography
-                className={classes.contentTextStyle}
-                variant="body2"
-                align="center"
-              >
-                This helps determine your vacation eligibility.
-              </Typography>
-            </Grid>
+      <ContentSection
+        sectionId="how-it-works"
+        sectionSize="lg"
+        sectionTitle={"How It Works"}
+      >
+        <Grid container>
+          <Grid item xs={12} sm={4}>
+            <img
+              className={classes.iconStyle}
+              src={teamwork}
+              alt={"Teamwork Icon"}
+            />
+            <Typography
+              className={classes.contentTextStyle}
+              variant="body2"
+              align="center"
+            >
+              We break down the laws into understandable language.
+            </Typography>
           </Grid>
-        </Paper>
-      </Container>
+          <Grid item xs={12} sm={4}>
+            <img
+              className={classes.iconStyle}
+              src={phone}
+              alt={"Mobile Phone Icon"}
+            />
+            <Typography
+              className={classes.contentTextStyle}
+              variant="body2"
+              align="center"
+            >
+              You answer a few simple yes/no questions.
+            </Typography>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <img
+              className={classes.iconStyle}
+              src={employment}
+              alt={"Employment Icon"}
+            />
+            <Typography
+              className={classes.contentTextStyle}
+              variant="body2"
+              align="center"
+            >
+              This helps determine your vacation eligibility.
+            </Typography>
+          </Grid>
+        </Grid>
+      </ContentSection>
 
-      <Container className={classes.regularContainer} maxWidth="md" id="faq">
-        <Paper>
-          <Typography
-            className={classes.headingStyle}
-            variant="h3"
-            align="center"
-          >
-            FAQs
-          </Typography>
-          <div id="accordion">
-            <FAQAccordion />
-          </div>
-        </Paper>
-      </Container>
-      <Container maxWidth="lg" id="why-vacate" className={classes.regularContainer}>
-        <Paper className={classes.regularContainer}>
-        <Typography className={classes.headingStyle} variant="h3" align="center">
-          Why Vacate?
-        </Typography>
-        <Typography className={classes.headingStyle} variant="subtitle1" align="center">
+      <ContentSection sectionId="faq" sectionSize="lg" sectionTitle="FAQs">
+        <div id="accordion">
+          <FAQAccordion />
+        </div>
+      </ContentSection>
+
+      <ContentSection
+        sectionId={"why-vacate"}
+        sectionSize={"lg"}
+        sectionTitle={"Why Vacate?"}
+      >
+        <Typography
+          className={classes.headingStyle}
+          variant="subtitle1"
+          align="center"
+        >
           A conviction vacation seals the offense from your record, and will
           give you more chance to access:
         </Typography>
@@ -236,13 +227,12 @@ const HomePage = () => {
             </Typography>
           </Grid>
         </Grid>
-        <Box display={"flex"} justifyContent={"center"}>
+        <Box className={classes.buttonBoxStyle}>
           <Button href="/why-vacate" color="primary" variant="contained">
             learn more
           </Button>
         </Box>
-        </Paper>
-      </Container>
+      </ContentSection>
 
       <Box className={classes.lightBlueBackGround}>
         <Container maxWidth="lg">
@@ -265,7 +255,7 @@ const HomePage = () => {
             building an eligibility calculator to help people determine if their
             conviction is eligible for vacation.
           </Typography>
-          <Box display={"flex"} justifyContent={"center"}>
+          <Box className={classes.buttonBoxStyle}>
             <Button
               href="/get-involved/volunteer"
               color="primary"
