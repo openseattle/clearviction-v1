@@ -36,6 +36,7 @@ function App() {
             </Route>
             <Route exact path="/">
               <HomePage />
+              <Footer />
             </Route>
             <Route path="/calculator/:pageId">
               <CalculatorPage />
@@ -45,27 +46,33 @@ function App() {
             </Route>
             <Route exact path="/about">
               <AboutPage />
+              <Footer />
             </Route>
             <Route exact path="/contact">
               <ContactPage />
+              <Footer />
             </Route>
             <Route path="/get-involved">
               <GetInvolvedPage />
+              <Footer />
             </Route>
             <Route path="/why-vacate">
               <WhyVacatePage />
+              <Footer />
             </Route>
             <Route exact path="/resources">
               <ResourcesPage />
+              <Footer />
             </Route>
             <Route exact path="/resources/the-process">
               <TheProcessPage />
+              <Footer />
             </Route>
             <Route path="/resources/assistance">
               <AssistancePage />
+              <Footer />
             </Route>
           </Switch>
-          <Footer />
         </Box>
       </ThemeProvider>
     </div>
