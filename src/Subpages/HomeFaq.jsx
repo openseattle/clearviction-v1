@@ -3,10 +3,10 @@ import AlternativeAccord from "../Components/AlternativeAccord";
 
 const data = [
   {
-    header: (
+    summary: (
       <Typography>What does it mean to vacate a conviction?</Typography>
     ),
-    body1: `Vacating a conviction is the process of clearing a conviction from your record
+    details: `Vacating a conviction is the process of clearing a conviction from your record
                     so it is not visible to the public any more. Vacating your conviction can remove that crime from some background checks, and you can say
                     legally that you were never convicted of that crime.`,
     body2:
