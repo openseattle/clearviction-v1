@@ -8,7 +8,7 @@ const useStyles = makeStyles({
   },
 });
 
-export const BackButton = () => {
+export const BackButton = (props) => {
   const classes = useStyles();
   let history = useHistory();
   return (
@@ -16,8 +16,9 @@ export const BackButton = () => {
       <Button
         className={classes.backButtonStyle}
         onClick={() => history.goBack()}
+        {...props}
       >
-        <ArrowBackIos /> Back{" "}
+        <ArrowBackIos /> Previous Question{" "}
       </Button>
     </>
   );

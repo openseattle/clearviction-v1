@@ -114,8 +114,8 @@ const CalculatorPage = () => {
           {!["/calculator/landing-0", "/calculator/landing-1"].includes(
             pathname
           ) && (
-            <Grid item>
-              <BackButton />
+            <Grid item >
+              <BackButton variant="text"/>
             </Grid>
           )}
 
