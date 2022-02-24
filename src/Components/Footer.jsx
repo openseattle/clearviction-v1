@@ -37,12 +37,10 @@ const useStyles = makeStyles((theme) => ({
   },
   disclaimer: {
     margin: theme.spacing(2),
-    fontSize: 16,
-    fontFamily: ["Roboto", "sans-serif"],
+    fontSize: 11,
   },
   subHeader: {
-    fontSize: 16,
-    fontFamily: ["Roboto", "sans-serif"],
+    fontSize: 11,
   },
   openSeattle: {
     width: 100,
@@ -89,7 +87,7 @@ const Footer = () => {
               <ListItem>
                 <Typography
                   className={classes.subHeader}
-                  variant="subtitle2"
+                  variant="body1"
                   style={{ maxWidth: 250 }}
                 >
                   ClearViction is reducing barriers faced by formerly
