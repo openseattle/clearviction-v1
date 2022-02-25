@@ -17,6 +17,9 @@ import {
 const CALC_PREFIX = "/calculator";
 const disclaimer =
   "The information provided by the Conviction Vacation Project is not intended to replace legal advice and does not in any way constitute an attorney-client relationship. If you need legal advice or assistance, we strongly recommend that you reach out to a licensed professional.";
+const FEEDBACK_BUTTON_TEXT = "Give us your feedback";
+const ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSfzyLZsbS7K_yWS9leCMBU7UXgiww2PQqOdfh_V_4AcnZnKbw/viewform?usp=sf_link";
+const CANT_DETERMINE_FEEDBACK_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSfW38-q4SDs0TzFolDrHr15dY9W8sYUYmkvPiYR30SeXk_Ieg/viewform?usp=sf_link";
 
 const data: Pages = {
   "landing-0": {
@@ -84,6 +87,12 @@ const data: Pages = {
         type: BodyType.PARAGRAPH,
         text: "It looks like your conviction may not be a misdemeanor. Our calculator is unable to assist you with your conviction at this point. We would like to hear your input and learn about your experience as we continue building our calculator.",
       },
+    ],
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: CANT_DETERMINE_FEEDBACK_FORM_LINK
+      }
     ]
   },
   "landing-2": {
@@ -228,7 +237,13 @@ const data: Pages = {
   "mar-ineligible-0": {
     header:
       "As of now, it seems that you may NOT be eligible to vacate your marijuana misdemeanor conviction because you have not completed the terms of your offense.",
-    disclaimer,
+      buttons: [
+        {
+          text: FEEDBACK_BUTTON_TEXT,
+          href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+        }
+      ],
+      disclaimer,
   },
   "mar-eligible-0": {
     header:
@@ -293,14 +308,25 @@ const data: Pages = {
         href: "https://www.washingtonlawhelp.org/resource/get-misdemeanor-convictions-off-your-criminal-record",
       },
     ],
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
+    ],
     disclaimer,
   },
   "mar-ineligible-1": {
     header:
       "As of now, it seems that you may NOT be eligible to vacate your marijuana misdemeanor conviction because you have not completed the terms of your offense.",
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
+    ],
     disclaimer,
   },
-  "mar-ineligible-2": {},
   "mar-to-main": {
     header:
       "Based on your response, it looks like you don't qualify for the marijuana misdemeanor exception.",
@@ -367,6 +393,12 @@ const data: Pages = {
         href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.94A.030",
       },
     ],
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
+    ],
     disclaimer,
   },
   "main-2": {
@@ -423,6 +455,12 @@ const data: Pages = {
         text: "RCW 9.91.020 - operating a railroad, etc. while intoxicated",
         href: "https://app.leg.wa.gov/rcw/default.aspx?cite=9.91.020",
       },
+    ],
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
     ],
     disclaimer,
   },
@@ -531,11 +569,23 @@ const data: Pages = {
         href: "https://app.leg.wa.gov/rcw/default.aspx?cite=9a.44",
       },
     ],
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
+    ],
     disclaimer,
   },
   "main-ineligible-3": {
     header:
       "Unfortunately, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because you have had an additional alcohol or drug violation within 10 years of your prior offense.",
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
+    ],
     disclaimer,
   },
   "main-7": {
@@ -565,6 +615,12 @@ const data: Pages = {
         type: BodyType.PARAGRAPH,
         text: "You might be eligible when 10 years have passed since your prior offense.",
       },
+    ],
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
     ],
     disclaimer,
   },
@@ -616,6 +672,12 @@ const data: Pages = {
   "main-ineligible-5": {
     header:
       "Unfortunately, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because you have had 2 or more domestic violence incidents.",
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
+    ],
     disclaimer,
   },
   "main-10": {
@@ -645,6 +707,12 @@ const data: Pages = {
         type: BodyType.PARAGRAPH,
         text: "You might be eligible when 5 years have passed since your conviction.",
       },
+    ],
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
     ],
     disclaimer,
   },
@@ -800,6 +868,12 @@ const data: Pages = {
         text: "Click here.",
         href: "https://www.washingtonlawhelp.org/resource/get-misdemeanor-convictions-off-your-criminal-record",
       },
+    ],
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
     ],
     disclaimer,
   },
@@ -1065,20 +1139,44 @@ const data: Pages = {
         href: "https://www.washingtonlawhelp.org/resource/get-misdemeanor-convictions-off-your-criminal-record",
       },
     ],
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
+    ],
     disclaimer,
   },
   "pro-ineligible-0": {
     header:
       "In order to qualify for vacation, you cannot have any charges for crimes pending in the last 3 years prior to your application.",
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
+    ],
     disclaimer,
   },
   "pro-ineligible-1": {
     header: "Unfortunately, you are not eligible for vacation",
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
+    ],
     disclaimer,
   },
   "pro-ineligible-2": {
     header:
       "In order to qualify for vacation, you cannot have any charges for crimes pending in this state or any other state besides for prostitution.",
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
+    ],
     disclaimer,
   },
   "pro-ineligible-3": {
@@ -1229,6 +1327,12 @@ const data: Pages = {
         text: "You might become eligible in the future if all pending criminal charges in any court in Washington, another state, or a federal court are resolved and if your application meets all other eligibility criteria.",
       },
     ],
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
+    ],
     disclaimer,
   },
   "qac-ineligible-1": {
@@ -1246,6 +1350,12 @@ const data: Pages = {
         text: "You might become eligible in the future if you apply to vacate a conviction 3 years or more after your convictions for any new crimes, and if your application meets all other eligibility criteria.",
       },
     ],
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
+    ],
     disclaimer,
   },
   "qac-ineligible-2": {
@@ -1262,6 +1372,12 @@ const data: Pages = {
         type: BodyType.PARAGRAPH,
         text: "You might become eligible in the future if you apply to vacate a conviction 3 years or more after your convictions for any new crimes, and if your application meets all other eligibility criteria.",
       },
+    ],
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
     ],
     disclaimer,
   },
@@ -1283,6 +1399,12 @@ const data: Pages = {
         text: "You might become eligible in the future if the above orders are removed, and if your application meets all other eligibility criteria.",
       },
     ],
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
+    ],
     disclaimer,
   },
   "qac-ineligible-4": {
@@ -1300,6 +1422,12 @@ const data: Pages = {
         text: `You might become eligible in the future if at least 5 years pass from your prior restraining order violation and when you apply 
             for vacation, and if your application meets all other eligibility criteria.`,
       },
+    ],
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
     ],
     disclaimer,
   },
@@ -1400,18 +1528,36 @@ const data: Pages = {
         href: "https://www.washingtonlawhelp.org/resource/get-misdemeanor-convictions-off-your-criminal-record",
       },
     ],
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
+    ],
     disclaimer,
   },
   "too-ineligible-0": {
     header: `As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because you have not completed the terms of the conviction for this offense.  
                 You might be eligible when you've completed the terms of your conviction and 3 years have passed since the completion of your sentence, 
                 including any financial obligations.`,
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
+    ],
     disclaimer,
   },
   "too-ineligible-1": {
     header: `As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because it has been less than 3 years since your 
                 conviction was completed including your financial obligations.
                 You might be eligible when 3 years have passed since completing the terms of your conviction including any financial obligations.`,
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
+    ],
     disclaimer,
   },
 };
