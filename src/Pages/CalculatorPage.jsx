@@ -110,14 +110,14 @@ const CalculatorPage = () => {
           {buttons && renderButtons(buttons)}
           {tooltip && <ToolTipModal text={tooltip} />}
           {footerLink && (
-            <Link
+            <a
               target="_blank"
               rel="noreferrer"
               href={footerLink.href}
               onClick={() => trackClick(footerLink.text)}
             >
               {footerLink.text}
-            </Link>
+            </a>
           )}
           {disclaimer && (
             <Container className="disclaimer">
