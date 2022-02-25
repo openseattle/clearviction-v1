@@ -143,7 +143,7 @@ const DonatePage = () => {
         </Typography>
         <Grid container spacing={3}>
           {donationLevels.map((level, idx) => (
-            <Grid item key={idx} xs={12} sm={6} md={6} lg={3}>
+            <Grid item key={idx} xs={12} sm={6} md={3} lg={3}>
               <Card className={classes.donation}>
                 <Box display="flex" justifyContent="center">
                   <Box

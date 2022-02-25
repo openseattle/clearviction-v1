@@ -15,13 +15,13 @@ import meeting from "../Assets/team_meeting.svg";
 import team from "../Assets/team_building.svg";
 import brainstorm from "../Assets/brainstorming_session.svg";
 import laptop from "../Assets/laptop.svg";
+import HeroPanel from "../Components/HeroPanel";
 
 const useStyles = makeStyles((theme) => ({
   volunteer: {
     marginTop: theme.spacing(5),
   },
   icon: {
-    fontSize: "4rem",
     color: theme.palette.highlight.main,
   },
   contentText: {
@@ -44,20 +44,12 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
   },
   backgroundSecondary: {
-    minHeight: 357,
     backgroundColor: theme.palette.primary.dark,
-    padding: theme.spacing(5),
-    [theme.breakpoints.down("sm")]: {
-      padding: theme.spacing(2),
-    },
+
   },
   backgroundLightSecondary: {
-    minHeight: 350,
     backgroundColor: theme.palette.primary.light,
-    padding: theme.spacing(5),
-    [theme.breakpoints.down("sm")]: {
-      padding: theme.spacing(1),
-    },
+
   },
   teamMeeting: {
     width: "100%",
@@ -95,6 +87,7 @@ const VolunteerPage = () => {
   return (
     <>
       <Container className={classes.volunteer} maxWidth="lg">
+        <HeroPanel title="Volunteer" />
         <Grid container justifyContent="center" alignItems="center">
           <Grid item xs={12} sm={6} md={6}>
             <Box justifyContent="center" display="flex">
@@ -131,7 +124,7 @@ const VolunteerPage = () => {
             sm={12}
             md={6}
           >
-            <Typography className={classes.titleAlt} variant="h2">
+            <Typography className={classes.titleAlt} variant="h3">
               Who can apply?
             </Typography>
             <List>
@@ -172,7 +165,7 @@ const VolunteerPage = () => {
             <Box>
               <Typography
                 className={classes.titleAlt}
-                variant="h2"
+                variant="h3"
                 align="left"
               >
                 How can you apply?

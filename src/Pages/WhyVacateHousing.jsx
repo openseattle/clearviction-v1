@@ -25,13 +25,6 @@ const WhyVacateHousing = () => {
       <Container maxWidth="md">
         <HousingBarriers />
       </Container>
-      <TextWithCTAButton
-        text={
-          "The best way to avoid these obstacles is to expunge your record by vacating your conviction. Learn if you’re eligible with our Misdemeanor Eligibility Calculator."
-        }
-        buttonText={"Check Eligibility"}
-        buttonLinkTo={"/calculator/landing-0"}
-      />
       <HousingTips />
       <HousingOtherOptions />
       <TextWithCTAButton
