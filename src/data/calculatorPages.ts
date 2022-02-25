@@ -84,11 +84,7 @@ const data: Pages = {
         type: BodyType.PARAGRAPH,
         text: "It looks like your conviction may not be a misdemeanor. Our calculator is unable to assist you with your conviction at this point. We would like to hear your input and learn about your experience as we continue building our calculator.",
       },
-    ],
-    footerLink: {
-      text: "Take Survey",
-      href: "https://docs.google.com/forms/d/e/1FAIpQLSeuT2oIBnxFAMv6p8tsujNlSugWxFS5la4DUC4rTFekInrcqQ/viewform?usp=sf_link",
-    },
+    ]
   },
   "landing-2": {
     header: "Was this offense a misdemeanor?",

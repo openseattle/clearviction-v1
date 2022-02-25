@@ -36,7 +36,6 @@ const CalculatorPage = () => {
     header,
     body,
     buttons,
-    footerLink,
     disclaimer,
     tooltip,
     progressBar,
@@ -109,16 +108,6 @@ const CalculatorPage = () => {
           {body && <Container maxWidth="sm">{body.map(renderBody)}</Container>}
           {buttons && renderButtons(buttons)}
           {tooltip && <ToolTipModal text={tooltip} />}
-          {footerLink && (
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href={footerLink.href}
-              onClick={() => trackClick(footerLink.text)}
-            >
-              {footerLink.text}
-            </a>
-          )}
           {disclaimer && (
             <Container className="disclaimer">
               <Typography variant="h6">{disclaimer}</Typography>
