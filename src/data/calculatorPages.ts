@@ -93,7 +93,8 @@ const data: Pages = {
         text: FEEDBACK_BUTTON_TEXT,
         href: CANT_DETERMINE_FEEDBACK_FORM_LINK
       }
-    ]
+    ],
+    showRestartButton: true
   },
   "landing-2": {
     header: "Was this offense a misdemeanor?",
@@ -243,6 +244,7 @@ const data: Pages = {
           href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
         }
       ],
+      showRestartButton: true,
       disclaimer,
   },
   "mar-eligible-0": {
@@ -314,6 +316,7 @@ const data: Pages = {
         href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
       }
     ],
+    showRestartButton: true,
     disclaimer,
   },
   "mar-ineligible-1": {
@@ -325,6 +328,7 @@ const data: Pages = {
         href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
       }
     ],
+    showRestartButton: true,
     disclaimer,
   },
   "mar-to-main": {
@@ -399,6 +403,7 @@ const data: Pages = {
         href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
       }
     ],
+    showRestartButton: true,
     disclaimer,
   },
   "main-2": {
@@ -462,6 +467,7 @@ const data: Pages = {
         href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
       }
     ],
+    showRestartButton: true,
     disclaimer,
   },
   "main-3": {
@@ -575,6 +581,7 @@ const data: Pages = {
         href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
       }
     ],
+    showRestartButton: true,
     disclaimer,
   },
   "main-ineligible-3": {
@@ -586,6 +593,7 @@ const data: Pages = {
         href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
       }
     ],
+    showRestartButton: true,
     disclaimer,
   },
   "main-7": {
@@ -622,6 +630,7 @@ const data: Pages = {
         href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
       }
     ],
+    showRestartButton: true,
     disclaimer,
   },
   "main-8": {
@@ -678,6 +687,7 @@ const data: Pages = {
         href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
       }
     ],
+    showRestartButton: true,
     disclaimer,
   },
   "main-10": {
@@ -714,6 +724,7 @@ const data: Pages = {
         href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
       }
     ],
+    showRestartButton: true,
     disclaimer,
   },
   "fsh-0": {
@@ -875,6 +886,7 @@ const data: Pages = {
         href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
       }
     ],
+    showRestartButton: true,
     disclaimer,
   },
   "fsh-to-main": {
@@ -1145,6 +1157,7 @@ const data: Pages = {
         href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
       }
     ],
+    showRestartButton: true,
     disclaimer,
   },
   "pro-ineligible-0": {
@@ -1156,6 +1169,7 @@ const data: Pages = {
         href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
       }
     ],
+    showRestartButton: true,
     disclaimer,
   },
   "pro-ineligible-1": {
@@ -1166,6 +1180,7 @@ const data: Pages = {
         href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
       }
     ],
+    showRestartButton: true,
     disclaimer,
   },
   "pro-ineligible-2": {
@@ -1177,6 +1192,7 @@ const data: Pages = {
         href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
       }
     ],
+    showRestartButton: true,
     disclaimer,
   },
   "pro-ineligible-3": {
@@ -1333,6 +1349,7 @@ const data: Pages = {
         href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
       }
     ],
+    showRestartButton: true,
     disclaimer,
   },
   "qac-ineligible-1": {
@@ -1356,6 +1373,7 @@ const data: Pages = {
         href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
       }
     ],
+    showRestartButton: true,
     disclaimer,
   },
   "qac-ineligible-2": {
@@ -1379,6 +1397,7 @@ const data: Pages = {
         href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
       }
     ],
+    showRestartButton: true,
     disclaimer,
   },
   "qac-ineligible-3": {
@@ -1405,6 +1424,7 @@ const data: Pages = {
         href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
       }
     ],
+    showRestartButton: true,
     disclaimer,
   },
   "qac-ineligible-4": {
@@ -1429,6 +1449,7 @@ const data: Pages = {
         href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
       }
     ],
+    showRestartButton: true,
     disclaimer,
   },
   "too-0": {
@@ -1534,6 +1555,7 @@ const data: Pages = {
         href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
       }
     ],
+    showRestartButton: true,
     disclaimer,
   },
   "too-ineligible-0": {
@@ -1546,6 +1568,7 @@ const data: Pages = {
         href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
       }
     ],
+    showRestartButton: true,
     disclaimer,
   },
   "too-ineligible-1": {
@@ -1558,6 +1581,7 @@ const data: Pages = {
         href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
       }
     ],
+    showRestartButton: true,
     disclaimer,
   },
 };
