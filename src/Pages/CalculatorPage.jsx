@@ -5,6 +5,7 @@ import calculatorPages from "../data/calculatorPages";
 import ToolTipModal from "../Components/ToolTipModal";
 import Text from "../ui-kit/Text";
 import ProgressBar from "../Components/ProgressBar";
+import RestartButton from "../Components/RestartButton";
 import "../CSS/Calculator.css";
 
 /** MATERIAL UI IMPORTS */
@@ -39,6 +40,7 @@ const CalculatorPage = () => {
     disclaimer,
     tooltip,
     progressBar,
+    showRestartButton,
   } = content;
 
   const renderButtons = (buttons) =>
@@ -107,6 +109,7 @@ const CalculatorPage = () => {
           {header && <Text text={header} variant={"h3"}></Text>}
           {body && <Container maxWidth="sm">{body.map(renderBody)}</Container>}
           {buttons && renderButtons(buttons)}
+          {showRestartButton && <RestartButton />}
           {tooltip && <ToolTipModal text={tooltip} />}
           {disclaimer && (
             <Container className="disclaimer">

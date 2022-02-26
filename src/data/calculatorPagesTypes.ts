@@ -9,6 +9,7 @@ interface PageData {
   tooltip?: TooltipType;
   disclaimer?: string;
   progressBar?: ProgressBar;
+  showRestartButton?: boolean;
 }
 
 export enum SectionName {
