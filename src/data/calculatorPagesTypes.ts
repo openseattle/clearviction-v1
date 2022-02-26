@@ -7,9 +7,9 @@ interface PageData {
   body?: NonEmptyList<Body>;
   buttons?: NonEmptyList<Button>;
   tooltip?: TooltipType;
-  footerLink?: FooterLink;
   disclaimer?: string;
   progressBar?: ProgressBar;
+  showRestartButton?: boolean;
 }
 
 export enum SectionName {
@@ -62,11 +62,6 @@ interface Button {
 export enum TooltipType {
   NOT_SURE = "I'm not sure.",
   NOT_A_MISDEMEANOR = "My conviction is not a misdemeanor or I'm not sure.",
-}
-
-interface FooterLink {
-  text: string;
-  href: string;
 }
 
 export const BUTTON_TEXT = {
