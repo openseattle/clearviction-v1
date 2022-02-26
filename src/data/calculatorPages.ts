@@ -142,7 +142,7 @@ const data: Pages = {
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "This clause applies to certain marijuana misdemeanors for possession of 40g or less.",
+        text: "This clause applies to certain marijuana misdemeanors for possession of 40 grams or less.",
       },
       {
         type: BodyType.PARAGRAPH,
@@ -957,7 +957,7 @@ const data: Pages = {
     ],
     tooltip: TooltipType.NOT_SURE,
   },
-  "pro-6": {
+  "pro-6": { // here
     header:
       "Has the crime victim penalty assessment, RCW 7.68.035, been paid in full?",
     progressBar: {
@@ -977,7 +977,7 @@ const data: Pages = {
       },
       {
         text: BUTTON_TEXT.NO,
-        href: CALC_PREFIX + "/pro-ineligible-1",
+        href: CALC_PREFIX + "/pro-to-main",
       },
     ],
     tooltip: TooltipType.NOT_SURE,

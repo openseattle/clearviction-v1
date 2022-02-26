@@ -64,7 +64,11 @@ const CalculatorPage = () => {
   const renderBody = ({ type, text, href, items }) => {
     switch (type) {
       case "paragraph":
-        return <Text key={text} text={text} variant={"h4"}></Text>;
+        return (
+          <Typography variant={"h4"} class="calcBodyText">
+            {text}
+          </Typography>
+        );
       case "link":
         return (
           <List>
@@ -105,8 +109,12 @@ const CalculatorPage = () => {
               totalSections={progressBar.totalSections}
             />
           )}
-          {header && <Text text={header} variant={"h3"}></Text>}
-          {body && <Container maxWidth="sm">{body.map(renderBody)}</Container>}
+          {header && (
+            <Typography variant={"h3"} class="calcHeaderText">
+              {header}
+            </Typography>
+          )}
+          {body && <>{body.map(renderBody)}</>}
           {buttons && renderButtons(buttons)}
           {tooltip && <ToolTipModal text={tooltip} />}
           {footerLink && (
