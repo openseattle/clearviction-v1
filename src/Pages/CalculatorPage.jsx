@@ -18,6 +18,7 @@ import {
   Typography,
 } from "@material-ui/core";
 import { CVPListItem } from "../ui-kit/ListItem";
+import { BackButton } from "../ui-kit/BackButton";
 
 const BUTTON_COLORS = {
   blue: "#4e6c99",
@@ -106,6 +107,19 @@ const CalculatorPage = () => {
               totalSections={progressBar.totalSections}
             />
           )}
+
+          {/* back button now on all pages but the landing and quick start pages - 
+          we can probably do this cleaner by creating a more formal standalone 
+          quick start page that can launch the calculator rather than having it 
+          share interface with the calculator.*/}
+          {!["/calculator/landing-0", "/calculator/landing-1"].includes(
+            pathname
+          ) && (
+            <Grid item >
+              <BackButton variant="text"/>
+            </Grid>
+          )}
+
           {header && <Text text={header} variant={"h3"}></Text>}
           {body && <Container maxWidth="sm">{body.map(renderBody)}</Container>}
           {buttons && renderButtons(buttons)}
