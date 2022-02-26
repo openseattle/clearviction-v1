@@ -67,7 +67,7 @@ const data: Pages = {
         items: [
           "A domestic violence protection order",
           "A no-contact order",
-          "An antiharassment order",
+          "An anti-harassment order",
           "A civil restraining order",
         ],
       },
@@ -148,7 +148,7 @@ const data: Pages = {
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "This clause applies to certain marijuana misdemeanors for possession of 40g or less.",
+        text: "This clause applies to certain marijuana misdemeanors for possession of 40 grams or less.",
       },
       {
         type: BodyType.PARAGRAPH,
@@ -936,7 +936,7 @@ const data: Pages = {
   },
   "pro-1": {
     header:
-      "Were you convicted of a crime involving prostitution? OR are you a family member of a homicide victim seeking to vacate the deceased's victim of prostitution conviction?",
+      "Were you convicted of a crime involving prostitution? OR are you a family member of a homicide victim seeking to vacate the deceased victim's prostitution conviction?",
     progressBar: {
       currentSectionName: SectionName.CONV,
       totalSections: 3,
@@ -1039,7 +1039,7 @@ const data: Pages = {
     ],
     tooltip: TooltipType.NOT_SURE,
   },
-  "pro-6": {
+  "pro-6": { // here
     header:
       "Has the crime victim penalty assessment, RCW 7.68.035, been paid in full?",
     progressBar: {
@@ -1049,7 +1049,7 @@ const data: Pages = {
     body: [
       {
         type: BodyType.PARAGRAPH,
-        text: "You will need to provide proof except where the conviction to be vacated is for the crime of prostitution, prostitution loitering, or staying out of area of prostitution",
+        text: "You will need to provide proof except where the conviction to be vacated is for the crime of prostitution, prostitution loitering, or violation of an order to stay out of areas of prostitution.",
       },
     ],
     buttons: [
@@ -1059,7 +1059,7 @@ const data: Pages = {
       },
       {
         text: BUTTON_TEXT.NO,
-        href: CALC_PREFIX + "/pro-ineligible-1",
+        href: CALC_PREFIX + "/pro-to-main",
       },
     ],
     tooltip: TooltipType.NOT_SURE,
@@ -1292,7 +1292,7 @@ const data: Pages = {
         items: [
           "a domestic violence protection order",
           "a no-contact order",
-          "an antiharassment order ",
+          "an anti-harassment order",
           "a civil restraining order which restrains one party from contacting the other party",
         ],
       },
@@ -1409,7 +1409,7 @@ const data: Pages = {
         items: [
           "a domestic violence protection order",
           "a no-contact order",
-          "an antiharassment order ",
+          "an anti-harassment order",
           "a civil restraining order which restrains one party from contacting the other party",
         ],
       },

@@ -13,6 +13,7 @@ import {
   LocalAtmOutlined,
   PanToolOutlined,
 } from "@material-ui/icons";
+import { ExternalLink } from "../ui-kit/ExternalLink";
 
 import lawyer from "../Assets/lawyer.svg";
 import seattle from "../Assets/seattle.svg";
@@ -267,9 +268,12 @@ const AboutPage = () => {
             </Typography>
             <Typography className={classes.ourMissionText} variant="h3">
               To support this mission, we first focused on creating a{" "}
-              <span className={classes.highlightText}>
+              <ExternalLink
+                href="https://www.clearviction.org/calculator/landing-0"
+                className={classes.highlightText}
+              >
                 Conviction Eligibility Calculator
-              </span>{" "}
+              </ExternalLink>{" "}
               to help people determine if they are eligible to vacate their
               conviction.
             </Typography>
