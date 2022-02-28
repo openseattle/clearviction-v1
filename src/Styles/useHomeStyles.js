@@ -8,7 +8,7 @@ export const useHomeStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(8),
   },
   lightBlueBackGround: {
-    backgroundColor: theme.palette.primary.light,
+    backgroundColor: theme.palette.primary.main,
     color: "white",
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
