@@ -67,7 +67,7 @@ const NavigationAlt = () => {
   const classes = useStyles();
 
   return (
-    <AppBar position="static" color="primary">
+    <AppBar position="static" color="primary.dark">
       <Container>
         <Toolbar>
           <Box component={Button} href="/">

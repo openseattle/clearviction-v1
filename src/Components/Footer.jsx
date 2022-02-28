@@ -16,7 +16,7 @@ import pages from "../data/siteMap";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: theme.palette.primary.dark,
     color: "white",
     paddingTop: theme.spacing(6),
     marginTop: "auto",

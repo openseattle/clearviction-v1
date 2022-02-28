@@ -1,29 +1,29 @@
 import { createTheme } from "@material-ui/core";
 
-const headingFontFamily = ["Sintony", "sans-serif"]
+const headingFontFamily = ["Sintony", "sans-serif"];
 const Theme = createTheme({
   spacing: 8,
   palette: {
-    secondary: {
-      main: "#c4c4c4",
-      light: "#dcdcdc",
-    },
     primary: {
+      light: "#A7B5CC",
+      main: "#4E6C99",
       dark: "#2F3554",
-      main: "#2d3047",
-      light: "#4e6c99",
-      contrastText: "#ffffff"
     },
-    success: {
-      main: "#419d77",
-      light: "#9ed6be",
-      dark: "#396452",
+    secondary: {
+      light: "#FFEEA3",
+      main: "#FFD200",
     },
     error: {
       main: "#DF1F1F",
     },
+    info: {
+      main: "#007CFF",
+    },
+    success: {
+      main: "#2A8613",
+    },
     highlight: {
-      main: "#FFD200",
+      main: "#9ED6BE",
     },
   },
   typography: {
@@ -62,15 +62,65 @@ const Theme = createTheme({
       fontSize: "22px",
       letterSpacing: "0px",
       lineHeight: "25px",
-      
-    }
-  }
+    },
+    h6: {
+      fontFamily: headingFontFamily,
+      fontWeight: "bold",
+      fontSize: "19px",
+      letterSpacing: "0.15px",
+      lineHeight: "23px",
+    },
+    subtitle1: {
+      fontFamily: headingFontFamily,
+      fontWeight: "normal",
+      fontSize: "22px",
+      letterSpacing: "0.15px",
+      lineHeight: "30px",
+    },
+    subtitile2: {
+      fontFamily: headingFontFamily,
+      fontWeight: "normal",
+      fontSize: "20px",
+      letterSpacing: "0.1px",
+      lineHeight: "28px",
+    },
+    body1: {
+      fontWeight: "normal",
+      fontSize: "20px",
+      letterSpacing: "0.5px",
+      lineHeight: "28px",
+    },
+    body2: {
+      fontWeight: "normal",
+      fontSize: "18px",
+      letterSpacing: "0.25px",
+      lineHeight: "26px",
+    },
+    button: {
+      fontWeight: "medium",
+      fontSize: "18",
+      letterSpacing: "1px",
+      lineHeight: "22px",
+    },
+    caption: {
+      fontWeight: "lighter",
+      fontSize: "14px",
+      letterSpacing: "0.4px",
+      lineHeight: "17px",
+    },
+    overline: {
+      fontWeight: "lighter",
+      fontSize: "12px",
+      letterSpacing: "1.5px",
+      lineHeight: "15px",
+    },
+  },
 });
 
 Theme.overrides = {
   MuiDrawer: {
     paper: {
-      backgroundColor: Theme.palette.primary.main,
+      backgroundColor: Theme.palette.primary.dark,
       width: "250px",
     },
   },
@@ -102,7 +152,6 @@ Theme.overrides = {
     root: {
       borderRadius: 50,
     },
-
   },
 };
 
