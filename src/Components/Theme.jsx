@@ -4,14 +4,17 @@ const headingFontFamily = ["Sintony", "sans-serif"];
 const Theme = createTheme({
   spacing: 8,
   palette: {
+    type: "light",
     primary: {
       light: "#A7B5CC",
       main: "#4E6C99",
       dark: "#2F3554",
+      contrastText: "#ffffff",
     },
     secondary: {
       light: "#FFEEA3",
       main: "#FFD200",
+      contrastText: "#000000",
     },
     error: {
       main: "#DF1F1F",
@@ -24,6 +27,10 @@ const Theme = createTheme({
     },
     highlight: {
       main: "#9ED6BE",
+    },
+    text: {
+      primary: "#000000",
+      secondary: "#4E6C99",
     },
   },
   typography: {
