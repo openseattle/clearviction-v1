@@ -104,10 +104,9 @@ const Theme = createTheme({
       lineHeight: "26px",
     },
     button: {
-      fontWeight: "medium",
-      fontSize: "18",
+      fontWeight: 700,
+      fontSize: "18px",
       letterSpacing: "1px",
-      lineHeight: "22px",
     },
     caption: {
       fontWeight: "lighter",
@@ -148,16 +147,6 @@ Theme.overrides = {
     selected: {
       color: Theme.palette.primary.dark,
       backgroundColor: "white",
-    },
-  },
-  MuiButton: {
-    root: {
-      borderRadius: 50,
-    },
-  },
-  MuiButtonGroup: {
-    root: {
-      borderRadius: 50,
     },
   },
 };
