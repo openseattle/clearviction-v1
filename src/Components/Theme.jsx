@@ -1,4 +1,6 @@
 import { createTheme } from "@material-ui/core";
+
+const headingFontFamily = ["Sintony", "sans-serif"]
 const Theme = createTheme({
   spacing: 8,
   palette: {
@@ -25,7 +27,43 @@ const Theme = createTheme({
     },
   },
   typography: {
-    fontFamily: ["Roboto", "sans-serif"]
+    fontFamily: ["Inter", "sans-serif"],
+    h1: {
+      fontFamily: headingFontFamily,
+      fontWeight: "normal",
+      fontSize: "86px",
+      letterSpacing: "-1.5px",
+      lineHeight: "95px",
+    },
+    h2: {
+      fontFamily: headingFontFamily,
+      fontWeight: "normal",
+      fontSize: "56px",
+      letterSpacing: "-0.5px",
+      lineHeight: "72px",
+    },
+    h3: {
+      fontFamily: headingFontFamily,
+      fontWeight: "normal",
+      fontSize: "45px",
+      letterSpacing: "0px",
+      lineHeight: "57px",
+    },
+    h4: {
+      fontFamily: headingFontFamily,
+      fontWeight: "bold",
+      fontSize: "32px",
+      letterSpacing: "0.25px",
+      lineHeight: "40px",
+    },
+    h5: {
+      fontFamily: headingFontFamily,
+      fontWeight: "bold",
+      fontSize: "22px",
+      letterSpacing: "0px",
+      lineHeight: "25px",
+      
+    }
   }
 });
 
