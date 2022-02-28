@@ -1,6 +1,8 @@
 import { createTheme } from "@material-ui/core";
 
 const headingFontFamily = ["Sintony", "sans-serif"];
+const bodyFontFamily = ["Inter", "sans-serif"];
+
 const Theme = createTheme({
   spacing: 8,
   palette: {
@@ -34,7 +36,7 @@ const Theme = createTheme({
     },
   },
   typography: {
-    fontFamily: ["Inter", "sans-serif"],
+    fontFamily: bodyFontFamily,
     h1: {
       fontFamily: headingFontFamily,
       fontWeight: "normal",
@@ -123,7 +125,19 @@ const Theme = createTheme({
   },
 });
 
+// Add font size breakpoints to support smaller devices
+Theme.typography.h1 = {
+  [Theme.breakpoints.down("sm")]: {
+    fontSize: "64px",
+  },
+};
+
 Theme.overrides = {
+  MuiAppBar: {
+    colorPrimary: {
+      backgroundColor: Theme.palette.primary.dark,
+    },
+  },
   MuiDrawer: {
     paper: {
       backgroundColor: Theme.palette.primary.dark,
