@@ -29,6 +29,7 @@ const Theme = createTheme({
     },
     highlight: {
       main: "#9ED6BE",
+      contrastText: "#000000"
     },
     text: {
       primary: "#000000",
@@ -37,13 +38,6 @@ const Theme = createTheme({
   },
   typography: {
     fontFamily: bodyFontFamily,
-    h1: {
-      fontFamily: headingFontFamily,
-      fontWeight: "normal",
-      fontSize: "86px",
-      letterSpacing: "-1.5px",
-      lineHeight: "95px",
-    },
     h2: {
       fontFamily: headingFontFamily,
       fontWeight: "normal",
@@ -127,8 +121,14 @@ const Theme = createTheme({
 
 // Add font size breakpoints to support smaller devices
 Theme.typography.h1 = {
-  [Theme.breakpoints.down("sm")]: {
+  fontFamily: headingFontFamily,
+  fontWeight: "normal",
+  fontSize: "86px",
+  letterSpacing: "-1.5px",
+  lineHeight: "95px",
+  [Theme.breakpoints.down("xs")]: {
     fontSize: "64px",
+    lineHeight: "72px"
   },
 };
 

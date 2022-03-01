@@ -18,6 +18,8 @@ import {
   Typography,
 } from "@material-ui/core";
 import ContentSection from "../Components/ContentSection";
+import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
+import { RedesignButtonSecondary } from "../ui-kit/RedesignButtonSecondary";
 
 const HomePage = () => {
   useEffect(() => trackPageview("Home"), []);
@@ -41,13 +43,11 @@ const HomePage = () => {
                 less than 10 minutes!
               </Typography>
               <Box paddingTop={12}>
-                <Button
+                <RedesignButtonPrimary
                   href="/calculator/landing-0"
-                  color="primary"
-                  variant="contained"
                 >
                   Check My Eligibility
-                </Button>
+                </RedesignButtonPrimary>
               </Box>
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -228,9 +228,9 @@ const HomePage = () => {
           </Grid>
         </Grid>
         <Box className={classes.buttonBoxStyle}>
-          <Button href="/why-vacate" color="primary" variant="contained">
+          <RedesignButtonSecondary href="/why-vacate">
             learn more
-          </Button>
+          </RedesignButtonSecondary>
         </Box>
       </ContentSection>
 
@@ -256,13 +256,12 @@ const HomePage = () => {
             conviction is eligible for vacation.
           </Typography>
           <Box className={classes.buttonBoxStyle}>
-            <Button
+            <RedesignButtonPrimary
               href="/get-involved/volunteer"
-              color="primary"
-              variant="contained"
+
             >
               join the team
-            </Button>
+            </RedesignButtonPrimary>
           </Box>
         </Container>
       </Box>
