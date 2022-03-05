@@ -142,6 +142,7 @@ Theme.overrides = {
     paper: {
       backgroundColor: Theme.palette.primary.dark,
       width: "250px",
+      color: "white",
     },
   },
   MuiTabs: {

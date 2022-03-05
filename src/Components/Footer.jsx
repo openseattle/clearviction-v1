@@ -13,6 +13,7 @@ import { ArrowRight } from "@material-ui/icons";
 import democracylabLogo from "../Assets/democracylab-logo.png";
 import openseattleLogo from "../Assets/openseattle-logo.png";
 import pages from "../data/siteMap";
+import LegalDisclaimer from "./LegalDisclaimer";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -35,10 +36,7 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     "&:hover": { color: "white" },
   },
-  disclaimer: {
-    margin: theme.spacing(2),
-    fontSize: 11,
-  },
+
   subHeader: {
     fontSize: 11,
   },
@@ -146,17 +144,7 @@ const Footer = () => {
             </List>
           </Grid>
         </Grid>
-        <Box justifyContent="center">
-          <Typography
-            className={classes.disclaimer}
-            align="center"
-            variant="subtitle2"
-          >
-            {" "}
-            The information on this site is not, nor should it be, considered
-            legal advice.
-          </Typography>
-        </Box>
+        <LegalDisclaimer />
       </Container>
     </Box>
   );

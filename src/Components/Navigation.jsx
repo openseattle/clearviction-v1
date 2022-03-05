@@ -17,32 +17,17 @@ import pages from "../data/siteMap";
 import { useState } from "react";
 import NavButton from "../ui-kit/NavButton";
 import NavButtonMobile from "../ui-kit/NavButtonMobile";
+import LegalDisclaimer from "./LegalDisclaimer";
 
 const useStyles = makeStyles((theme) => ({
-  navigationLogo: {
-    height: "4rem",
-    paddingRight: "2rem",
-  },
-  navigationLogoText: {
-    color: "white",
-    fontSize: "32px",
-    textAlign: "center",
-  },
-  disclaimer: {
-    fontSize: "10px",
-    textAlign: "center",
-  },
   closeIcon: {
     color: "white",
-    fontSize: "3rem",
   },
   menuButton: {
     color: "white",
-    fontFamily: ["Roboto", "sans-serif"],
   },
   subMenuButton: {
     color: "white",
-    fontFamily: ["Roboto", "sans-serif"],
     marginLeft: theme.spacing(2),
   },
   menuStyle: {
@@ -70,15 +55,13 @@ const Navigation = () => {
     <AppBar position="static" color="primary">
       <Container>
         <Toolbar>
-          <Box component={Button} href="/">
-            <Typography className={classes.navigationLogoText}>
-              Clearviction
+            <Typography variant="h4" className={classes.navigationLogoText}>
+              CV LOGO
             </Typography>
-          </Box>
           <Box style={{ flexGrow: 1 }} />
 
           {/* desktop menu */}
-          <Box display={{ xs: "none", md: "flex" }}>
+          <Box display={{xs: "none", sm: "none", md: "flex" }}>
             <ButtonGroup>
               {pages.map((page, idx) => (
                 <NavButton key={idx} page={page} />
@@ -87,7 +70,7 @@ const Navigation = () => {
           </Box>
           {/* mobile menu */}
 
-          <Box display={{ xs: "flex", md: "none" }}>
+          <Box display={{ xs: "flex", sm: "flex", md: "none" }}>
             <IconButton
               size="medium"
               edge="start"
@@ -95,7 +78,7 @@ const Navigation = () => {
               aria-label="menu"
               onClick={handleOpenMenu}
             >
-              <MenuIcon style={{ fontSize: "3rem" }} />
+              <MenuIcon fontSize="large" />
             </IconButton>
           </Box>
           <Drawer
@@ -106,20 +89,14 @@ const Navigation = () => {
             <List className={classes.menuStyle}>
               <ListItem style={{ justifyContent: "center" }}>
                 <IconButton onClick={handleCloseMenu}>
-                  <CloseSharp className={classes.closeIcon} />
+                  <CloseSharp fontSize="large" className={classes.closeIcon} />
                 </IconButton>
               </ListItem>
               {pages.map((page, idx) => (
                 <NavButtonMobile key={idx} page={page} classes={classes} />
               ))}
               <ListItem>
-                <Box justifyContent="center">
-                  <Typography className={classes.disclaimer} color="secondary">
-                    {" "}
-                    The information on this site is not, nor should it be,
-                    considered legal advice.
-                  </Typography>
-                </Box>
+                <LegalDisclaimer />
               </ListItem>
             </List>
           </Drawer>
