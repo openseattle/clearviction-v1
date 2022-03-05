@@ -92,7 +92,7 @@ const Footer = () => {
                   variant="subtitle2"
                   style={{ maxWidth: 250 }}
                 >
-                  ClearViction is reducing barriers faced by formerly
+                  Clearviction is reducing barriers faced by formerly
                   incarcerated individuals by streamlining the process of
                   vacating eligible convictions in Washington state.
                 </Typography>

@@ -115,7 +115,6 @@ const CalculatorPage = () => {
               totalSections={progressBar.totalSections}
             />
           )}
-
           {/* back button now on all pages but the landing and quick start pages - 
           we can probably do this cleaner by creating a more formal standalone 
           quick start page that can launch the calculator rather than having it 

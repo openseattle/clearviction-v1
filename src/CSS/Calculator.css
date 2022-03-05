@@ -12,6 +12,15 @@
   flex-direction: column;
 }
 
+.calcBodyText {
+  margin-top: 20px;
+  padding-left: 2px;
+}
+
+.calcHeaderText {
+  margin-bottom: 20px;
+}
+
 .calculator-subheader {
   font-weight: bold;
   font-size: 1.2rem;

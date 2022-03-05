@@ -101,7 +101,7 @@ const AssistanceEmployment = () => {
                 <div>
                   <Typography className={classes.headingStyle}>
                     <ExternalLink
-                      href="http://www.lni.wa.gov/tradeslicensing/apprenticeship/programs/"
+                      href="https://lni.wa.gov/licensing-permits/apprenticeship/apprenticeship-preparation"
                       className={classes.titleLinkStyle}
                     >
                       Washington State Department of Labor & Industries
