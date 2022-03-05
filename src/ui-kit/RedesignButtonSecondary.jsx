@@ -4,18 +4,14 @@ const useStyles = makeStyles((theme) => ({
   RedesignButtonSecondaryStyle: {
     width: "248px",
     height: "48px",
-    border: "3px solid",
     borderRadius: "50px",
-    backgroundColor: theme.palette.primary.dark,
-    color: theme.palette.primary.contrastText,
-    borderColor: theme.palette.primary.dark,
     [theme.breakpoints.down("xs")]: {
       width: "50vw",
     },
-    padding: "10px",
-    margin: "10px",
+    padding: "16px",
     "&:hover": {
-      color: theme.palette.primary.dark,
+      backgroundColor: theme.palette.primary.dark,
+      color: theme.palette.primary.contrastText,
     },
   },
 }));
@@ -27,6 +23,7 @@ export const RedesignButtonSecondary = (props) => {
     <Button
       className={classes.RedesignButtonSecondaryStyle}
       variant="outlined"
+      color="primary"
       {...props}
     >
       {props.children}

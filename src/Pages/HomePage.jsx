@@ -29,7 +29,7 @@ const HomePage = () => {
 
   return (
     <>
-      <Box className={classes.lightBlueBackGround}>
+      <Box className={classes.darkBlueBackground}>
         <Container maxWidth="lg">
           <Typography className={classes.headingStyle} variant="h1">
             Vacation Eligibility Calculator
@@ -47,7 +47,7 @@ const HomePage = () => {
                 <RedesignButtonPrimary
                   href="/calculator/landing-0"
                 >
-                  Check My Eligibility
+                  Check Eligibility
                 </RedesignButtonPrimary>
               </Box>
             </Grid>

@@ -8,8 +8,6 @@ import {
 import AlternativeAccord from "../../Components/AlternativeAccord";
 import { useHomeStyles } from "../../Styles/useHomeStyles";
 
-const space = { paddingBottom: "28px" };
-
 const questions = [
   {
     summary: "What does it mean to vacate a conviction?",
