@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const NavigationAlt = () => {
+const Navigation = () => {
   const [menuState, setMenuState] = useState(null);
   const handleOpenMenu = (event) => {
     setMenuState(event.currentTarget);
@@ -129,4 +129,4 @@ const NavigationAlt = () => {
   );
 };
 
-export default NavigationAlt;
+export default Navigation;

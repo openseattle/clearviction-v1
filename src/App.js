@@ -3,7 +3,7 @@ import { CssBaseline, ThemeProvider, Box } from "@material-ui/core";
 import Theme from "./Components/Theme";
 import { Switch, Route, Redirect } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
-import NavigationAlt from "./Components/NavigationAlt";
+import Navigation from "./Components/Navigation";
 import CalculatorPage from "./Pages/CalculatorPage";
 import ErrorPage from "./Pages/ErrorPage";
 import AboutPage from "./Pages/AboutPage";
@@ -28,7 +28,7 @@ function App() {
           }}
         >
           <CssBaseline />
-          <NavigationAlt />
+          <Navigation />
           {/* <Navigation /> */}
           <Switch>
             <Route path="/404">
