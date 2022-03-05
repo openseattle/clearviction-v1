@@ -3,10 +3,8 @@ import {
   List,
   ListItem,
   ListItemText,
-  Typography,
 } from "@material-ui/core";
 import AlternativeAccord from "../../Components/AlternativeAccord";
-import { useHomeStyles } from "../../Styles/useHomeStyles";
 
 const questions = [
   {
@@ -103,7 +101,6 @@ const questions = [
 ];
 
 const HomeFaq = () => {
-  const classes = useHomeStyles();
   return (
     <Container>
       <AlternativeAccord faqs={questions} />
