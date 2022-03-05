@@ -16,7 +16,7 @@ import pages from "../data/siteMap";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: theme.palette.primary.main,
+    backgroundColor: theme.palette.primary.dark,
     color: "white",
     paddingTop: theme.spacing(6),
     marginTop: "auto",
@@ -37,12 +37,10 @@ const useStyles = makeStyles((theme) => ({
   },
   disclaimer: {
     margin: theme.spacing(2),
-    fontSize: 16,
-    fontFamily: ["Roboto", "sans-serif"],
+    fontSize: 11,
   },
   subHeader: {
-    fontSize: 16,
-    fontFamily: ["Roboto", "sans-serif"],
+    fontSize: 11,
   },
   openSeattle: {
     width: 100,
@@ -89,7 +87,7 @@ const Footer = () => {
               <ListItem>
                 <Typography
                   className={classes.subHeader}
-                  variant="subtitle2"
+                  variant="body1"
                   style={{ maxWidth: 250 }}
                 >
                   Clearviction is reducing barriers faced by formerly

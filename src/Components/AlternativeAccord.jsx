@@ -44,8 +44,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 24,
   },
 }));
-const AlternativeAccord = (props) => {
-  const { faqs, sectionHeading } = props;
+const AlternativeAccord = ({faqs, sectionHeading}) => {
   const classes = useStyles();
   return (
     <Box className={classes.faq}>

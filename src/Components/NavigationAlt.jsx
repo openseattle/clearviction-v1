@@ -14,7 +14,6 @@ import {
 } from "@material-ui/core";
 import { MenuSharp as MenuIcon, CloseSharp } from "@material-ui/icons";
 import pages from "../data/siteMap";
-import navLogo from "../Assets/cvp-logo-white.png";
 import { useState } from "react";
 import NavButton from "../ui-kit/NavButton";
 import NavButtonMobile from "../ui-kit/NavButtonMobile";
@@ -26,10 +25,8 @@ const useStyles = makeStyles((theme) => ({
   },
   navigationLogoText: {
     color: "white",
-    fontFamily: "helvetica",
-    fontSize: "1.75rem",
-    textAlign: "left",
-    maxWidth: "25rem",
+    fontSize: "32px",
+    textAlign: "center",
   },
   disclaimer: {
     fontSize: "10px",
@@ -74,12 +71,6 @@ const NavigationAlt = () => {
       <Container>
         <Toolbar>
           <Box component={Button} href="/">
-            <Box
-              className={classes.navigationLogo}
-              component="img"
-              src={navLogo}
-              alt="clearviction logo broken chains"
-            />
             <Typography className={classes.navigationLogoText}>
               Clearviction
             </Typography>
