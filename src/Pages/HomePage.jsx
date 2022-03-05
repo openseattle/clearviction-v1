@@ -1,6 +1,5 @@
 import { useEffect } from "react";
 import { trackPageview } from "../trackingUtils";
-import FAQAccordion from "../Components/Accordion";
 import housing from "../Assets/housing.svg";
 import employment from "../Assets/employment.svg";
 import education from "../Assets/education.svg";
