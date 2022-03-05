@@ -55,13 +55,13 @@ const Navigation = () => {
     <AppBar position="static" color="primary">
       <Container>
         <Toolbar>
-            <Typography variant="h4" className={classes.navigationLogoText}>
-              CV LOGO
-            </Typography>
+          <Typography variant="h4" className={classes.navigationLogoText}>
+            CV LOGO
+          </Typography>
           <Box style={{ flexGrow: 1 }} />
 
           {/* desktop menu */}
-          <Box display={{xs: "none", sm: "none", md: "flex" }}>
+          <Box display={{ xs: "none", sm: "none", md: "flex" }}>
             <ButtonGroup>
               {pages.map((page, idx) => (
                 <NavButton key={idx} page={page} />
