@@ -5,9 +5,6 @@ const useStyles = makeStyles((theme) => ({
     width: "248px",
     height: "48px",
     borderRadius: "50px",
-    [theme.breakpoints.down("xs")]: {
-      width: "50vw",
-    },
     padding: "16px",
     "&:hover": {
       backgroundColor: theme.palette.primary.dark,

@@ -234,7 +234,7 @@ const HomePage = () => {
         </Box>
       </ContentSection>
 
-      <Box className={classes.lightBlueBackGround}>
+      <Box className={classes.darkBlueBackground}>
         <Container maxWidth="lg">
           <Typography
             className={classes.contentTextStyle}
