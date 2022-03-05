@@ -60,7 +60,7 @@ const data: Pages = {
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "*Court orders include:",
+        text: "* Court orders include:",
       },
       {
         type: BodyType.LIST,
