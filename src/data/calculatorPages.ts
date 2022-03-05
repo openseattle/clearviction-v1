@@ -279,8 +279,8 @@ const data: Pages = {
         text: "(Possession of 40 grams or less of marijuana)",
       },
       {
-        type: BodyType.PARAGRAPH,
-        text: "Next steps",
+        type: BodyType.HEADING,
+        text: "Next steps:",
       },
       {
         type: BodyType.PARAGRAPH,
@@ -849,7 +849,7 @@ const data: Pages = {
         href: "https://app.leg.wa.gov/RCW/default.aspx?cite=9.96.060",
       },
       {
-        type: BodyType.PARAGRAPH,
+        type: BodyType.HEADING,
         text: "Next steps:",
       },
       {
@@ -1117,7 +1117,7 @@ const data: Pages = {
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "Next steps:",
+        text: ":::::",
       },
       {
         type: BodyType.PARAGRAPH,
@@ -1518,7 +1518,7 @@ const data: Pages = {
     },
     body: [
       {
-        type: BodyType.PARAGRAPH,
+        type: BodyType.HEADING,
         text: "Next steps:",
       },
       {

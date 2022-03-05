@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { trackPageview, trackClick } from "../trackingUtils";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import calculatorPages from "../data/calculatorPages";
 import ToolTipModal from "../Components/ToolTipModal";
 import Text from "../ui-kit/Text";
@@ -64,9 +64,10 @@ const CalculatorPage = () => {
     });
 
   const renderBody = ({ type, text, href, items }) => {
+    console.log(items);
     switch (type) {
       case "paragraph":
-        return <Text key={text} text={text} variant={"h4"}></Text>;
+        return <Text key={text} text={text} variant={"h4"} />;
       case "link":
         return (
           <List>
@@ -81,12 +82,19 @@ const CalculatorPage = () => {
         );
       case "list":
         return (
+          // <ul>
+          //   {items.map((idx, item) => {
+          //     <li key={idx}>{item}</li>;
+          //   })}
+          // </ul>
           <List>
             {items.map((item) => (
               <CVPListItem isLink={false} useBulletPoint={true} text={item} />
             ))}
           </List>
         );
+      case "heading":
+        return <Text text={text} variant={"h3"} />;
       default:
         break;
     }
@@ -115,13 +123,13 @@ const CalculatorPage = () => {
           {!["/calculator/landing-0", "/calculator/landing-1"].includes(
             pathname
           ) && (
-            <Grid item >
-              <BackButton variant="text"/>
+            <Grid item>
+              <BackButton variant="text" />
             </Grid>
           )}
 
           {header && <Text text={header} variant={"h3"}></Text>}
-          {body && <Container maxWidth="sm">{body.map(renderBody)}</Container>}
+          {body && <>{body.map(renderBody)}</>}
           {buttons && renderButtons(buttons)}
           {showRestartButton && <RestartButton />}
           {tooltip && <ToolTipModal text={tooltip} />}
