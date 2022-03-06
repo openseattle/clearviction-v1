@@ -1,9 +1,9 @@
 import { Box, Grid } from "@material-ui/core";
 
-import pha from "../../Assets/Citybuildings_TwoColor1.svg";
-import supportiveHousing from "../../Assets/Diversity_TwoColor1.svg";
-import privateHousing from "../../Assets/Processbuilding_TwoColor1.svg";
-import transitionalHousing from "../../Assets/Dream_TwoColor1.svg";
+import pha from "../../Assets/city.svg";
+import supportiveHousing from "../../Assets/diversity.svg";
+import privateHousing from "../../Assets/process.svg";
+import transitionalHousing from "../../Assets/dream.svg";
 import { TextWithImage } from "./TextWithImage";
 
 export const HousingBarriers = () => {

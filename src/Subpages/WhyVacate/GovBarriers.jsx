@@ -1,8 +1,8 @@
 import { Container, Typography, Box, List } from "@material-ui/core";
 import { WhyVacateHousingStyles } from "../../Styles/WhyVacateHousingStyles";
 import ListItemMobileSnap from "../../ui-kit/ListItemMobileSnap";
-import snap from "../../Assets/Chicken_TwoColor1.svg";
-import tanf from "../../Assets/Family_TwoColor1.svg";
+import snap from "../../Assets/chicken.svg";
+import tanf from "../../Assets/family.svg";
 
 export const GovBarriers = () => {
   const classes = WhyVacateHousingStyles();

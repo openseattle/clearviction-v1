@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { trackPageview } from "../trackingUtils";
-import housing from "../Assets/housing.svg";
-import employment from "../Assets/employment.svg";
+import city from "../Assets/city.svg";
+import checklist from "../Assets/checklist.svg";
 import education from "../Assets/education.svg";
 import lawyer from "../Assets/lawyer.svg";
 import teamwork from "../Assets/teamwork.svg";
@@ -109,7 +109,7 @@ const HomePage = () => {
           <Grid item xs={12} sm={4}>
             <img
               className={classes.iconStyle}
-              src={employment}
+              src={checklist}
               alt={"Employment Icon"}
             />
             <Typography
@@ -140,15 +140,15 @@ const HomePage = () => {
           <Grid item xs={12} sm={6} lg={3}>
             <img
               className={classes.iconStyle}
-              src={housing}
-              alt={"Housing Icon"}
+              src={city}
+              alt={"city Icon"}
             />
             <Typography
               className={classes.headingStyle}
               variant="h5"
               align="center"
             >
-              Housing
+              city
             </Typography>
             <Typography
               className={classes.contentTextStyle}
@@ -162,7 +162,7 @@ const HomePage = () => {
           <Grid item xs={12} sm={6} lg={3}>
             <img
               className={classes.iconStyle}
-              src={employment}
+              src={checklist}
               alt={"Employment Icon"}
             />
             <Typography
@@ -177,7 +177,7 @@ const HomePage = () => {
               variant="body1"
               align="center"
             >
-              Reduce barriers to finding and obtaining employment.
+              Reduce barriers to finding and obtaining checklist.
             </Typography>
           </Grid>
           <Grid item xs={12} sm={6} lg={3}>

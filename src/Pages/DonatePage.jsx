@@ -12,7 +12,7 @@ import {
 } from "@material-ui/core";
 import { ArrowDropDownOutlined } from "@material-ui/icons";
 import laptop from "../Assets/laptop.svg";
-import progress from "../Assets/progress.svg";
+import idea from "../Assets/idea.svg";
 import note from "../Assets/note_taking.svg";
 import discovery from "../Assets/science_discovery.svg";
 import code from "../Assets/qr_code.svg";
@@ -107,7 +107,7 @@ const donationLevels = [
   {
     name: "level 1",
     amount: "$10",
-    donationImage: progress,
+    donationImage: idea,
     desc: "Contribute toward the monthly cost of the tools required to provide this service",
   },
   {
