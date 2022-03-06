@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   rootsImage: {
-    maxWidth: 300,
+    maxWidth: "100%",
   },
   problemRoot: {
     marginTop: theme.spacing(6),
@@ -76,18 +76,17 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
   },
   theProblemIcon: {
-    color: theme.palette.highlight.main,
-    fontSize: "5rem",
-    margin: theme.spacing(3),
+    color: theme.palette.secondary.main,
+    fontSize: "40px",
+    margin: theme.spacing(4),
   },
   ourMission: {
     backgroundColor: theme.palette.primary.light,
     color: "white",
   },
   ourMissionText: {
-    margin: theme.spacing(6),
-    maxWidth: 775,
     textAlign: "center",
+    marginBottom: theme.spacing(8),
   },
   ourJourneyTitle: {
     margin: theme.spacing(4),
@@ -103,7 +102,7 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
   },
   highlightText: {
-    color: theme.palette.highlight.main,
+    color: theme.palette.secondary.main,
   },
   cardGrid: {
     padding: theme.spacing(3),

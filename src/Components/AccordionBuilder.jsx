@@ -9,6 +9,14 @@ import {
 import { ExpandMore } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({}));
+
+function a11yProps(index) {
+  return {
+    id: `panel${index}a-header`,
+    "aria-controls": `panel${index}a-content`,
+  };
+}
+
 const AccordionBuilder = ({ faqs }) => {
   const classes = useStyles();
   return (
@@ -20,7 +28,9 @@ const AccordionBuilder = ({ faqs }) => {
           variant="outlined"
         >
           <AccordionSummary expandIcon={<ExpandMore />}>
-            <Typography variant="subtitle1">{faq.summary}</Typography>
+            <Typography variant="subtitle1" {...a11yProps(idx)}>
+              {faq.summary}
+            </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Box display="block">{faq.details}</Box>

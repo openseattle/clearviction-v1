@@ -53,7 +53,7 @@ const Navigation = () => {
   return (
     <AppBar color="primary" elevation={0}>
       <Container maxwidth="lg">
-        <Toolbar disableGutters>
+        <Toolbar>
           <Typography variant="h4">
             CV LOGO
           </Typography>
