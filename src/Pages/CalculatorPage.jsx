@@ -64,7 +64,6 @@ const CalculatorPage = () => {
     });
 
   const renderBody = ({ type, text, href, items }) => {
-    console.log(items);
     switch (type) {
       case "paragraph":
         return <Text key={text} text={text} variant={"h4"} />;
@@ -82,11 +81,6 @@ const CalculatorPage = () => {
         );
       case "list":
         return (
-          // <ul>
-          //   {items.map((idx, item) => {
-          //     <li key={idx}>{item}</li>;
-          //   })}
-          // </ul>
           <List>
             {items.map((item) => (
               <CVPListItem isLink={false} useBulletPoint={true} text={item} />

@@ -2,6 +2,7 @@ import {
   Grid,
   ListItem,
   ListItemIcon,
+  ListItemText,
   Link,
   makeStyles,
 } from "@material-ui/core";
@@ -26,11 +27,7 @@ export const CVPListItem = (props) => {
           </Link>
         );
       case "text":
-        return (
-          <Link href={href} onClick={onClick} target="_blank" rel="noreferrer">
-            {text}
-          </Link>
-        );
+        return <ListItemText>{text}</ListItemText>;
     }
   };
 
