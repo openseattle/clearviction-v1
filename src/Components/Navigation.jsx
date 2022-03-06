@@ -51,7 +51,7 @@ const Navigation = () => {
   const classes = useStyles();
 
   return (
-    <AppBar position="static" color="primary" elevation={0}>
+    <AppBar color="primary" elevation={0}>
       <Container maxwidth="lg">
         <Toolbar disableGutters>
           <Typography variant="h4">
