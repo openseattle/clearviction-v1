@@ -19,7 +19,7 @@ import {
 import ContentSection from "../Components/ContentSection";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import { RedesignButtonSecondary } from "../ui-kit/RedesignButtonSecondary";
-import HomeFaq from "../Subpages/Home/HomeFaq";
+import HomeFAQAccordion from "../Subpages/Home/HomeFAQAccordion";
 
 const HomePage = () => {
   useEffect(() => trackPageview("Home"), []);
@@ -127,7 +127,7 @@ const HomePage = () => {
 
       <ContentSection sectionId="faq" sectionSize="lg" sectionTitle="FAQs">
         <div id="accordion">
-          <HomeFaq />
+          <HomeFAQAccordion />
         </div>
       </ContentSection>
 

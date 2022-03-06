@@ -12,19 +12,15 @@ const questions = [
     details: (
       <List>
         <ListItem>
-          <ListItemText>
             Vacating a conviction is the process of clearing a conviction from
             your record so it is not visible to the public any more. Vacating
             your conviction can remove that crime from some background checks,
             and you can say legally that you were never convicted of that crime.
-          </ListItemText>
         </ListItem>
         <ListItem>
-          <ListItemText>
             The courts can still reference a vacated conviction in a future
             criminal proceeding, and not all convictions are eligible for
             vacation.
-          </ListItemText>
         </ListItem>
       </List>
     ),
@@ -100,12 +96,10 @@ const questions = [
   // },
 ];
 
-const HomeFaq = () => {
+const HomeFAQAccordion = () => {
   return (
-    <Container>
       <AccordionBuilder faqs={questions} />
-    </Container>
   );
 };
 
-export default HomeFaq;
+export default HomeFAQAccordion;
