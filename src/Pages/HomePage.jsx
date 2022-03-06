@@ -43,9 +43,7 @@ const HomePage = () => {
                 less than 10 minutes!
               </Typography>
               <Box paddingTop={12}>
-                <RedesignButtonPrimary
-                  href="/calculator/landing-0"
-                >
+                <RedesignButtonPrimary href="/calculator/landing-0">
                   Check Eligibility
                 </RedesignButtonPrimary>
               </Box>
@@ -69,8 +67,8 @@ const HomePage = () => {
           fullWidth
         >
           <Button href="#how-it-works">How It Works</Button>
-          <Button href="#faq">FAQs</Button>
           <Button href="#why-vacate">Why Vacate</Button>
+          <Button href="#faq">FAQ</Button>
         </ButtonGroup>
       </Container>
 
@@ -123,12 +121,6 @@ const HomePage = () => {
             </Typography>
           </Grid>
         </Grid>
-      </ContentSection>
-
-      <ContentSection sectionId="faq" sectionSize="lg" sectionTitle="FAQs">
-        <div id="accordion">
-          <HomeFAQAccordion />
-        </div>
       </ContentSection>
 
       <ContentSection
@@ -234,37 +226,16 @@ const HomePage = () => {
         </Box>
       </ContentSection>
 
-      <Box className={classes.darkBlueBackground}>
-        <Container maxWidth="lg">
-          <Typography
-            className={classes.contentTextStyle}
-            variant="h5"
-            align="center"
-          >
-            Clearviction connects volunteers passionate about reducing barriers
-            and making it easier for those with convictions in Washington State.
-          </Typography>
-          <br />
-          <Typography
-            className={classes.contentTextStyle}
-            variant="h5"
-            align="center"
-          >
-            We’re working together to create a tool to make navigating the
-            conviction vacation process easier. Currently we are designing and
-            building an eligibility calculator to help people determine if their
-            conviction is eligible for vacation.
-          </Typography>
-          <Box className={classes.buttonBoxStyle}>
-            <RedesignButtonPrimary
-              href="/get-involved/volunteer"
-
-            >
-              join the team
-            </RedesignButtonPrimary>
-          </Box>
-        </Container>
-      </Box>
+      <Container id="faq" maxWidth="lg" className={classes.regularContainer}>
+        <Typography
+          variant="h3"
+          align="center"
+          className={classes.headingStyle}
+        >
+          FAQ
+        </Typography>
+        <HomeFAQAccordion />
+      </Container>
     </>
   );
 };

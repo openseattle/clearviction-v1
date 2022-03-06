@@ -4,6 +4,7 @@ import {
   AccordionSummary,
   makeStyles,
   Typography,
+  Box,
 } from "@material-ui/core";
 import { ExpandMore } from "@material-ui/icons";
 
@@ -21,7 +22,9 @@ const AccordionBuilder = ({ faqs }) => {
           <AccordionSummary expandIcon={<ExpandMore />}>
             <Typography variant="subtitle1">{faq.summary}</Typography>
           </AccordionSummary>
-          <AccordionDetails>{faq.details}</AccordionDetails>
+          <AccordionDetails>
+            <Box display="block">{faq.details}</Box>
+          </AccordionDetails>
         </Accordion>
       ))}
     </>

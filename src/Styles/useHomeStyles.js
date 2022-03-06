@@ -24,7 +24,7 @@ export const useHomeStyles = makeStyles((theme) => ({
     }
   },
   headingStyle: {
-    margin: theme.spacing(2)
+    margin: theme.spacing(4)
   },
   colorfulHeadingStyle: {
     marginTop: theme.spacing(2),
