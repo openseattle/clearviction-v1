@@ -51,57 +51,61 @@ const Navigation = () => {
   const classes = useStyles();
 
   return (
-    <AppBar color="primary" elevation={0}>
-      <Container maxwidth="lg">
-        <Toolbar>
-          <Typography variant="h4">
-            CV LOGO
-          </Typography>
-          <Box style={{ flexGrow: 1 }} />
+    <>
+      <AppBar color="primary" elevation={0}>
+        <Container maxwidth="lg">
+          <Toolbar>
+            <Typography variant="h4">CV LOGO</Typography>
+            <Box style={{ flexGrow: 1 }} />
 
-          {/* desktop menu */}
-          <Box display={{ xs: "none", sm: "none", md: "flex" }}>
-            <ButtonGroup>
-              {pages.map((page, idx) => (
-                <NavButton key={idx} page={page} />
-              ))}
-            </ButtonGroup>
-          </Box>
-          {/* mobile menu */}
+            {/* desktop menu */}
+            <Box display={{ xs: "none", sm: "none", md: "flex" }}>
+              <ButtonGroup>
+                {pages.map((page, idx) => (
+                  <NavButton key={idx} page={page} />
+                ))}
+              </ButtonGroup>
+            </Box>
+            {/* mobile menu */}
 
-          <Box display={{ xs: "flex", sm: "flex", md: "none" }}>
-            <IconButton
-              size="medium"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              onClick={handleOpenMenu}
+            <Box display={{ xs: "flex", sm: "flex", md: "none" }}>
+              <IconButton
+                size="medium"
+                edge="start"
+                color="inherit"
+                aria-label="menu"
+                onClick={handleOpenMenu}
+              >
+                <MenuIcon fontSize="large" />
+              </IconButton>
+            </Box>
+            <Drawer
+              anchor="right"
+              open={Boolean(menuState)}
+              onClose={handleCloseMenu}
             >
-              <MenuIcon fontSize="large" />
-            </IconButton>
-          </Box>
-          <Drawer
-            anchor="right"
-            open={Boolean(menuState)}
-            onClose={handleCloseMenu}
-          >
-            <List className={classes.menuStyle}>
-              <ListItem style={{ justifyContent: "center" }}>
-                <IconButton onClick={handleCloseMenu}>
-                  <CloseSharp fontSize="large" className={classes.closeIcon} />
-                </IconButton>
-              </ListItem>
-              {pages.map((page, idx) => (
-                <NavButtonMobile key={idx} page={page} classes={classes} />
-              ))}
-              <ListItem>
-                <LegalDisclaimer />
-              </ListItem>
-            </List>
-          </Drawer>
-        </Toolbar>
-      </Container>
-    </AppBar>
+              <List className={classes.menuStyle}>
+                <ListItem style={{ justifyContent: "center" }}>
+                  <IconButton onClick={handleCloseMenu}>
+                    <CloseSharp
+                      fontSize="large"
+                      className={classes.closeIcon}
+                    />
+                  </IconButton>
+                </ListItem>
+                {pages.map((page, idx) => (
+                  <NavButtonMobile key={idx} page={page} classes={classes} />
+                ))}
+                <ListItem>
+                  <LegalDisclaimer />
+                </ListItem>
+              </List>
+            </Drawer>
+          </Toolbar>
+        </Container>
+      </AppBar>
+      <Box height={64} />
+    </>
   );
 };
 
