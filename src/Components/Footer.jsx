@@ -8,7 +8,6 @@ import {
   Link,
   Typography,
 } from "@material-ui/core";
-import { ArrowRight } from "@material-ui/icons";
 
 import democracylabLogo from "../Assets/democracylab-logo.png";
 import openseattleLogo from "../Assets/openseattle-logo.png";
@@ -78,7 +77,7 @@ const Footer = () => {
       <Container maxWidth="lg">
         <Grid container>
           <Grid className={classes.mobileHidden} item xs={12} sm={4} md={4}>
-            <Typography className={classes.title} variant="h4">
+            <Typography className={classes.title} variant="h5">
               Welcome!
             </Typography>
             <List>
@@ -96,7 +95,7 @@ const Footer = () => {
             </List>
           </Grid>
           <Grid item xs={12} sm={4} md={4}>
-            <Typography className={classes.title} variant="h4">
+            <Typography className={classes.title} variant="h5">
               Explore
             </Typography>
             <List>
@@ -108,12 +107,11 @@ const Footer = () => {
                     key={page.name}
                     xs={12}
                     sm={12}
-                    md={4}
+                    md={6}
                   >
                     <Link className={classes.linkStyles} href={page.url}>
                       {page.name}
                     </Link>
-                    <ArrowRight color="secondary" fontSize="small" />
                   </Grid>
                 ))}
               </Grid>
@@ -123,7 +121,7 @@ const Footer = () => {
           <Grid item xs={12} sm={4} md={4}>
             <Typography
               className={classes.title}
-              variant="h4"
+              variant="h5"
               style={{ borderRadius: "solid" }}
             >
               Partnerships
