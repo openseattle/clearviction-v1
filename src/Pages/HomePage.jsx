@@ -5,7 +5,7 @@ import employment from "../Assets/employment.svg";
 import education from "../Assets/education.svg";
 import lawyer from "../Assets/lawyer.svg";
 import teamwork from "../Assets/teamwork.svg";
-import phone from "../Assets/phone.svg";
+import calculator from "../Assets/calculator.svg";
 import "../CSS/HomePage.css";
 import { useHomeStyles } from "../Styles/useHomeStyles";
 import {
@@ -50,7 +50,7 @@ const HomePage = () => {
             </Grid>
             <Grid item xs={12} sm={6}>
               <img
-                src={phone}
+                src={calculator}
                 className={classes.iconStyle}
                 alt="person using a calculator      "
               ></img>
@@ -95,7 +95,7 @@ const HomePage = () => {
           <Grid item xs={12} sm={4}>
             <img
               className={classes.iconStyle}
-              src={phone}
+              src={calculator}
               alt={"Mobile Phone Icon"}
             />
             <Typography
