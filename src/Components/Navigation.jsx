@@ -4,7 +4,6 @@ import {
   Toolbar,
   Typography,
   Box,
-  Button,
   Drawer,
   List,
   ListItem,
@@ -52,10 +51,10 @@ const Navigation = () => {
   const classes = useStyles();
 
   return (
-    <AppBar position="static" color="primary">
-      <Container>
-        <Toolbar>
-          <Typography variant="h4" className={classes.navigationLogoText}>
+    <AppBar position="static" color="primary" elevation={0}>
+      <Container maxwidth="lg">
+        <Toolbar disableGutters>
+          <Typography variant="h4">
             CV LOGO
           </Typography>
           <Box style={{ flexGrow: 1 }} />

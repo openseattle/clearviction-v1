@@ -44,7 +44,7 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 24,
   },
 }));
-const AlternativeAccord = ({faqs, sectionHeading}) => {
+const AccordionBuilder = ({faqs, sectionHeading}) => {
   const classes = useStyles();
   return (
     <Box className={classes.faq}>
@@ -68,4 +68,4 @@ const AlternativeAccord = ({faqs, sectionHeading}) => {
     </Box>
   );
 };
-export default AlternativeAccord;
+export default AccordionBuilder;

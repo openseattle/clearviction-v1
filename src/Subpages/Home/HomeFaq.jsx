@@ -4,7 +4,7 @@ import {
   ListItem,
   ListItemText,
 } from "@material-ui/core";
-import AlternativeAccord from "../../Components/AlternativeAccord";
+import AccordionBuilder from "../../Components/AccordionBuilder";
 
 const questions = [
   {
@@ -103,7 +103,7 @@ const questions = [
 const HomeFaq = () => {
   return (
     <Container>
-      <AlternativeAccord faqs={questions} />
+      <AccordionBuilder faqs={questions} />
     </Container>
   );
 };

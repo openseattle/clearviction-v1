@@ -1,5 +1,5 @@
 import { Box, Container, List, ListItem, Typography } from "@material-ui/core";
-import AlternativeAccord from "../../Components/AlternativeAccord";
+import AccordionBuilder from "../../Components/AccordionBuilder";
 import TabPanelGroup from "../../Components/TabPanelGroup";
 import { useResourcesStyles } from "../../Styles/useResourcesStyles";
 import BulletedListMui from "../../ui-kit/BulletedListMui";
@@ -228,7 +228,7 @@ const scheduleHearingTabPanelGroup = [
     index: 0,
     label: "Financial Aid",
     content: (
-      <AlternativeAccord
+      <AccordionBuilder
         sectionHeading={"LFOs & Court Fees"}
         faqs={financialAidFAQ}
       />
@@ -238,7 +238,7 @@ const scheduleHearingTabPanelGroup = [
     index: 1,
     label: "Legal Aid",
     content: (
-      <AlternativeAccord
+      <AccordionBuilder
         sectionHeading={"For low-income applicants:"}
         faqs={legalAidFAQ}
       />

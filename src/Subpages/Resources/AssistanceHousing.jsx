@@ -9,7 +9,7 @@ import {
   additionalLinks,
 } from "../../data/sheltersData";
 import associations from "../../data/publicHousingData";
-import AlternativeAccord from "../../Components/AlternativeAccord";
+import AccordionBuilder from "../../Components/AccordionBuilder";
 import HousingFinderList from "../../Components/HousingFinderList";
 import PublicHousingList from "../../Components/PublicHousingList";
 import { ExternalLink } from "../../ui-kit/ExternalLink";
@@ -86,7 +86,7 @@ const AssistanceHousing = () => {
         </Container>
       </Box>
       <Container className={classes.regularContainer} maxWidth="md">
-        <AlternativeAccord
+        <AccordionBuilder
           faqs={housingAssistanceAccord}
           sectionHeading={"Other housing assistance"}
         />

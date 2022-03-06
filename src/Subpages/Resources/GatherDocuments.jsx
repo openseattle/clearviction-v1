@@ -1,6 +1,6 @@
 import { Container, Typography } from "@material-ui/core";
 import TabPanelGroup from "../../Components/TabPanelGroup";
-import AlternativeAccord from "../../Components/AlternativeAccord";
+import AccordionBuilder from "../../Components/AccordionBuilder";
 import BackgroundReportHelp from "./BackgroundReportHelp";
 import { useResourcesStyles } from "../../Styles/useResourcesStyles";
 import BulletedListMui from "../../ui-kit/BulletedListMui";
@@ -163,7 +163,7 @@ const gatherDocumentsTabGroup = [
     index: 0,
     label: "Court Forms",
     content: (
-      <AlternativeAccord
+      <AccordionBuilder
         sectionHeading={"Resources to Vacate: "}
         faqs={courtFormsFaqs}
       />

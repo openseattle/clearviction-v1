@@ -4,7 +4,7 @@ import timeGraphic from "../Assets/time.svg";
 import emails from "../Assets/sending_emails.svg";
 import question from "../Assets/question.svg";
 import { TextWithCTAButton } from "../Subpages/WhyVacate/TextWithCTAButton";
-import AlternativeAccord from "../Components/AlternativeAccord";
+import AccordionBuilder from "../Components/AccordionBuilder";
 import { WhyVacateEmploymentStyles } from "../Styles/WhyVacateEmploymentStyle";
 import BulletedListMui from "../ui-kit/BulletedListMui";
 
@@ -150,7 +150,7 @@ const WhyVacateEmployment = () => {
         </Container>
       </Box>
       <Container className={classes.sectionSpaceStyle} maxWidth="md">
-        <AlternativeAccord
+        <AccordionBuilder
           sectionHeading={"Conviction-friendly industries"}
           faqs={friendlyIndustries}
         />
