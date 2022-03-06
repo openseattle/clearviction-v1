@@ -2,7 +2,6 @@ import {
   AppBar,
   IconButton,
   Toolbar,
-  Typography,
   Box,
   Drawer,
   List,
@@ -17,6 +16,8 @@ import { useState } from "react";
 import NavButton from "../ui-kit/NavButton";
 import NavButtonMobile from "../ui-kit/NavButtonMobile";
 import LegalDisclaimer from "./LegalDisclaimer";
+import { NavigationLogo } from "./NavigationLogo";
+
 
 const useStyles = makeStyles((theme) => ({
   closeIcon: {
@@ -55,7 +56,7 @@ const Navigation = () => {
       <AppBar color="primary" elevation={0}>
         <Container maxwidth="lg">
           <Toolbar>
-            <Typography variant="h4">CV LOGO</Typography>
+            <NavigationLogo />
             <Box style={{ flexGrow: 1 }} />
 
             {/* desktop menu */}
