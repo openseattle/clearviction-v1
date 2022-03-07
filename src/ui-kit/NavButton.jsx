@@ -10,9 +10,11 @@ import { useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
   navButtonStyle: {
+    marginLeft: theme.spacing(1),
+    marginRight: theme.spacing(1),
     color: "white",
     textTransform: "none",
-    "&:hover": { color: "white", textDecoration: "underline" },
+    "&:hover": { color: theme.palette.secondary.light },
   },
   navText: {},
 }));
