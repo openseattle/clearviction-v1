@@ -6,7 +6,6 @@ import education from "../Assets/education.svg";
 import lawyer from "../Assets/lawyer.svg";
 import teamwork from "../Assets/teamwork.svg";
 import calculator from "../Assets/calculator.svg";
-import "../CSS/HomePage.css";
 import {
   Box,
   Button,
