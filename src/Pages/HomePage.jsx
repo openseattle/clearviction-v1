@@ -7,7 +7,6 @@ import lawyer from "../Assets/lawyer.svg";
 import teamwork from "../Assets/teamwork.svg";
 import calculator from "../Assets/calculator.svg";
 import "../CSS/HomePage.css";
-import { useHomeStyles } from "../Styles/useHomeStyles";
 import {
   Box,
   Button,
@@ -20,6 +19,7 @@ import ContentSection from "../Components/ContentSection";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import { RedesignButtonSecondary } from "../ui-kit/RedesignButtonSecondary";
 import HomeFAQAccordion from "../Subpages/Home/HomeFAQAccordion";
+import { useHomeStyles } from "../Styles/useHomeStyles";
 
 const HomePage = () => {
   useEffect(() => trackPageview("Home"), []);
@@ -138,11 +138,7 @@ const HomePage = () => {
         </Typography>
         <Grid container>
           <Grid item xs={12} sm={6} lg={3}>
-            <img
-              className={classes.iconStyle}
-              src={city}
-              alt={"city Icon"}
-            />
+            <img className={classes.iconStyle} src={city} alt={"city Icon"} />
             <Typography
               className={classes.headingStyle}
               variant="h5"

@@ -47,7 +47,6 @@ export const WhyVacateEmploymentStyles = makeStyles((theme) => ({
     textAlign: "center",
   },
   regularText: {
-    fontFamily: ["roboto", "sans-serif"],
     margin: theme.spacing(2),
     textAlign: "center",
     fontSize: 18,

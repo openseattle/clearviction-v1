@@ -42,7 +42,7 @@ export const TextWithImage = (props) => {
       </Box>
       <Typography
         className={altStyle ? classes.altHeadingRoles : classes.headingRoles}
-        variant="h3"
+        variant="h4"
         align="center"
       >
         {header}
