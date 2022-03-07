@@ -148,7 +148,7 @@ const HomePage = () => {
               variant="h5"
               align="center"
             >
-              city
+              Housing
             </Typography>
             <Typography
               className={classes.contentTextStyle}
