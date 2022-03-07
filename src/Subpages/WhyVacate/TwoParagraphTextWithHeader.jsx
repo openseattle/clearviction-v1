@@ -8,7 +8,7 @@ import {
 
 const useStyles = makeStyles((theme) => ({
   lightBlueSectionBackground: {
-    backgroundColor: theme.palette.primary.light,
+    backgroundColor: theme.palette.primary.main,
     color: "white",
   },
   containerStyles: {
@@ -24,9 +24,6 @@ const useStyles = makeStyles((theme) => ({
   },
   text: {
     margin: theme.spacing(2),
-    lineHeight: 2,
-    fontSize: "1.75rem",
-    fontFamily: ["Roboto", "sans-serif"],
   },
 }));
 

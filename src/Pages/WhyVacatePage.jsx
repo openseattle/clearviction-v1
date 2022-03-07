@@ -18,9 +18,9 @@ const WhyVacatePage = () => {
       </Container>
 
       <WhyVacateHousing />
-      {/* <WhyVacateEmployment />
-        <WhyVacateEducation />
-        <WhyVacateAssistance /> */}
+      <WhyVacateEmployment />
+      <WhyVacateEducation />
+      <WhyVacateAssistance />
     </>
   );
 };

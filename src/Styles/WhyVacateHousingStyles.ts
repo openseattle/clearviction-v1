@@ -29,7 +29,7 @@ export const WhyVacateHousingStyles = makeStyles((theme) => ({
     maxWidth: 300,
   },
   headingRoles: {
-    color: theme.palette.primary.light,
+    color: theme.palette.primary.main,
     paddingBottom: theme.spacing(2),
   },
   blackHeaderText: {
@@ -37,7 +37,7 @@ export const WhyVacateHousingStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
   },
   lightBlueSectionBackground: {
-    backgroundColor: theme.palette.primary.light,
+    backgroundColor: theme.palette.primary.main,
     color: "white",
   },
 }));

@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
   },
   headingRoles: {
-    color: theme.palette.primary.light,
+    color: theme.palette.primary.main,
     paddingBottom: theme.spacing(2),
   },
   altHeadingRoles: {

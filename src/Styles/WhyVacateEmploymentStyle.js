@@ -30,7 +30,7 @@ export const WhyVacateEmploymentStyles = makeStyles((theme) => ({
     margin: theme.spacing(2),
   },
   lightBlueSectionBackground: {
-    backgroundColor: theme.palette.primary.light,
+    backgroundColor: theme.palette.primary.main,
     color: "white",
   },
   darkBlueSectionBackground: {
@@ -41,7 +41,7 @@ export const WhyVacateEmploymentStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
   },
   emphasizedText: {
-    color: theme.palette.highlight.main,
+    color: theme.palette.secondary.main,
     fontFamily: "lora",
     margin: theme.spacing(4),
     textAlign: "center",

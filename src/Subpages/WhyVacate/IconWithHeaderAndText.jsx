@@ -4,13 +4,12 @@ import { Grid, Typography, makeStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   mainText: {
     minWidth: 150,
-    fontFamily: ["Roboto", "sans-serif"],
     fontSize: 16,
     paddingTop: 5,
   },
   icons: {
-    color: theme.palette.highlight.main,
-    fontSize: "5rem",
+    color: theme.palette.secondary.main,
+    fontSize: "64px",
     margin: theme.spacing(2),
   },
   gridItemStyle: {
