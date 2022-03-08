@@ -2,7 +2,7 @@ import { Typography, ListItem, Button, Collapse } from "@material-ui/core";
 import { ExpandMore } from "@material-ui/icons";
 import { useState } from "react";
 
-const NavButtonMobile = ({ theme, page, classes }) => {
+const NavButtonMobile = ({ page, classes }) => {
   const [expandSubMenu, setExpandSubMenu] = useState(false);
 
   const handleExpandClick = () => {
@@ -11,9 +11,11 @@ const NavButtonMobile = ({ theme, page, classes }) => {
   return (
     <div>
       {!page.subpages && (
-        <ListItem component={Button} href={page.url}>
-          <Typography className={classes.menuButton}>{page.name}</Typography>
-        </ListItem>
+        <Button component={Button} href={page.url} fullWidth>
+          <Typography className={classes.menuButton} align="center">
+            {page.name}
+          </Typography>
+        </Button>
       )}
       {page.subpages && (
         <div>
@@ -28,11 +30,11 @@ const NavButtonMobile = ({ theme, page, classes }) => {
           </ListItem>
           <Collapse in={expandSubMenu} timeout="auto" unmountOnExit>
             {page.subpages.map((subpage, idx) => (
-              <ListItem key={idx} component={Button} href={subpage.url}>
+              <Button key={idx}  href={subpage.url} fullwidth>
                 <Typography className={classes.subMenuButton}>
                   {subpage.name}
                 </Typography>
-              </ListItem>
+              </Button>
             ))}
           </Collapse>
         </div>
