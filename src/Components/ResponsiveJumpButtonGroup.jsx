@@ -10,7 +10,7 @@ const ResponsiveJumpButtonGroup = ({links}) => {
         variant="text"
         fullWidth
       >
-        {links.map((link) => <Button href={`#${link.url}`}>{link.linkName}</Button>)}
+        {links.map((link, idx) => <Button key={idx} href={`#${link.url}`}>{link.linkName}</Button>)}
       </ButtonGroup>
     </>
   );
