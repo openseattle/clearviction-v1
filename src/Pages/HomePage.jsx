@@ -17,7 +17,6 @@ import {
 import ContentSection from "../Components/ContentSection";
 import HomeFAQAccordion from "../Subpages/Home/HomeFAQAccordion";
 import { useHomeStyles } from "../Styles/useHomeStyles";
-import { EligibilityCalculatorButton } from "../Components/EligibilityCalculatorButton";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 
 const HomePage = () => {
