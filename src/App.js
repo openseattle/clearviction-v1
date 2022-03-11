@@ -40,7 +40,7 @@ function App() {
             <Route path="/calculator/:pageId">
               <CalculatorPage />
             </Route>
-            <Route exact path="/calculator">
+            <Route exact path="/calculator-beta">
               <Redirect to="/calculator/landing-0" />
             </Route>
             <Route exact path="/about">
