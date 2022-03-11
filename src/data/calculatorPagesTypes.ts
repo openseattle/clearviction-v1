@@ -34,6 +34,7 @@ export enum BodyType {
   PARAGRAPH = "paragraph",
   LINK = "link",
   LIST = "list",
+  HEADING = "heading"
 }
 
 interface BaseBody {
