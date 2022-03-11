@@ -76,7 +76,7 @@ const Navigation = () => {
                 size="medium"
                 edge="start"
                 color="inherit"
-                aria-label="menu"
+                aria-label="Show/hide navigation menu"
                 onClick={handleOpenMenu}
               >
                 <MenuIcon fontSize="large" />

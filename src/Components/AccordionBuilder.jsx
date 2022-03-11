@@ -23,7 +23,7 @@ const AccordionBuilder = ({ faqs }) => {
             <Typography variant="subtitle1">{faq.summary}</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Box display="block" padding={2}>{faq.details}</Box>
+            <Box display="block">{faq.details}</Box>
           </AccordionDetails>
         </Accordion>
       ))}
