@@ -15,10 +15,10 @@ import {
   Typography,
 } from "@material-ui/core";
 import ContentSection from "../Components/ContentSection";
-import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
-import { RedesignButtonSecondary } from "../ui-kit/RedesignButtonSecondary";
 import HomeFAQAccordion from "../Subpages/Home/HomeFAQAccordion";
 import { useHomeStyles } from "../Styles/useHomeStyles";
+import { EligibilityCalculatorButton } from "../Components/EligibilityCalculatorButton";
+import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 
 const HomePage = () => {
   useEffect(() => trackPageview("Home"), []);
@@ -38,13 +38,13 @@ const HomePage = () => {
                 className={classes.contentTextStyle}
                 variant="subtitle1"
               >
-                Check your eligibility to vacate your conviction for free in
-                less than 10 minutes!
+                If you have convictions in Washington you can check your
+                eligibility to vacate your conviction for free in less than 10
+                minutes!
               </Typography>
               <Box paddingTop={12}>
-                <RedesignButtonPrimary href="/calculator/landing-0">
-                  Check Eligibility
-                </RedesignButtonPrimary>
+                <Typography variant="h4">COMING SOON!</Typography>
+                {/* <EligibilityCalculatorButton /> */}
               </Box>
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -95,7 +95,7 @@ const HomePage = () => {
             <img
               className={classes.iconStyle}
               src={calculator}
-              alt={"Mobile Phone Icon"}
+              alt={"Calculator Icon"}
             />
             <Typography
               className={classes.contentTextStyle}
@@ -120,6 +120,11 @@ const HomePage = () => {
             </Typography>
           </Grid>
         </Grid>
+        <Box className={classes.buttonBoxStyle}>
+          <RedesignButtonPrimary href={"/get-started"}>
+            Get Started
+          </RedesignButtonPrimary>
+        </Box>
       </ContentSection>
 
       <ContentSection
@@ -136,7 +141,7 @@ const HomePage = () => {
           give you more chance to access:
         </Typography>
         <Grid container>
-          <Grid item xs={12} sm={6} lg={3}>
+          <Grid item xs={12} sm={3} lg={3}>
             <img className={classes.iconStyle} src={city} alt={"city Icon"} />
             <Typography
               className={classes.headingStyle}
@@ -154,7 +159,7 @@ const HomePage = () => {
               home.
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={6} lg={3}>
+          <Grid item xs={12} sm={3} lg={3}>
             <img
               className={classes.iconStyle}
               src={checklist}
@@ -172,10 +177,10 @@ const HomePage = () => {
               variant="body1"
               align="center"
             >
-              Reduce barriers to finding and obtaining checklist.
+              Reduce barriers to finding and obtaining employment.
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={6} lg={3}>
+          <Grid item xs={12} sm={3} lg={3}>
             <img
               className={classes.iconStyle}
               src={education}
@@ -192,7 +197,7 @@ const HomePage = () => {
               Apply for scholarships, programs, degrees or certificates.
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={6} lg={3}>
+          <Grid item xs={12} sm={3} lg={3}>
             <img
               className={classes.iconStyle}
               src={lawyer}
@@ -210,15 +215,10 @@ const HomePage = () => {
               variant="body1"
               align="center"
             >
-              Receive government help.
+              Receive government help and support.
             </Typography>
           </Grid>
         </Grid>
-        <Box className={classes.buttonBoxStyle}>
-          <RedesignButtonSecondary href="/why-vacate">
-            learn more
-          </RedesignButtonSecondary>
-        </Box>
       </ContentSection>
 
       <Container id="faq" maxWidth="lg" className={classes.regularContainer}>
