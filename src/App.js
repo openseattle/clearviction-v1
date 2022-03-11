@@ -10,11 +10,11 @@ import AboutPage from "./Pages/AboutPage";
 import ContactPage from "./Pages/ContactPage";
 import Footer from "./Components/Footer";
 import GetInvolvedPage from "./Pages/GetInvolvedPage";
-import WhyVacatePage from "./Pages/WhyVacatePage";
-import ResourcesPage from "./Pages/ResourcesPage";
-import TheProcessPage from "./Subpages/Resources/TheProcessPage";
-import AssistancePage from "./Subpages/Resources/AssistancePage";
-// import Navigation from "./Components/Navigation";
+import GetStartedPage from "./Pages/GetStartedPage";
+// import WhyVacatePage from "./Pages/WhyVacatePage";
+// import ResourcesPage from "./Pages/ResourcesPage";
+// import TheProcessPage from "./Subpages/Resources/TheProcessPage";
+// import AssistancePage from "./Subpages/Resources/AssistancePage";
 
 function App() {
   return (
@@ -52,7 +52,10 @@ function App() {
             <Route path="/get-involved">
               <GetInvolvedPage />
             </Route>
-            <Route path="/why-vacate">
+            <Route path="/get-started">
+              <GetStartedPage />
+            </Route>
+            {/* <Route path="/why-vacate">
               <WhyVacatePage />
             </Route>
             <Route exact path="/resources">
@@ -63,7 +66,7 @@ function App() {
             </Route>
             <Route path="/resources/assistance">
               <AssistancePage />
-            </Route>
+            </Route> */}
           </Switch>
           <Footer />
         </Box>

@@ -9,7 +9,6 @@ import {
   Container,
   makeStyles,
   ButtonGroup,
-  Collapse,
 } from "@material-ui/core";
 import { MenuSharp as MenuIcon, CloseSharp } from "@material-ui/icons";
 import pages from "../data/siteMap";
