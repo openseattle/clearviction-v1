@@ -2,13 +2,10 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
-  makeStyles,
   Typography,
   Box,
 } from "@material-ui/core";
 import { ExpandMore } from "@material-ui/icons";
-
-const useStyles = makeStyles((theme) => ({}));
 
 function a11yProps(index) {
   return {
@@ -18,20 +15,19 @@ function a11yProps(index) {
 }
 
 const AccordionBuilder = ({ faqs }) => {
-  const classes = useStyles();
   return (
-    <>
+    <div aria-label="info-accordion">
       {faqs.map((faq, idx) => (
-        <Accordion key={idx} variant="outlined">
+        <Accordion key={idx} elevation={0}>
           <AccordionSummary expandIcon={<ExpandMore />} {...a11yProps}>
             <Typography variant="subtitle1">{faq.summary}</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Box display="block">{faq.details}</Box>
+            <Box display="block" padding={2}>{faq.details}</Box>
           </AccordionDetails>
         </Accordion>
       ))}
-    </>
+    </div>
   );
 };
 export default AccordionBuilder;

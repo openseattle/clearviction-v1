@@ -73,34 +73,34 @@ const useStyles = makeStyles((theme) => ({
     fontSize: 16,
     margin: theme.spacing(3),
   },
-  faq: {
-    marginTop: theme.spacing(8),
-    marginBottom: theme.spacing(8),
-  },
-  faqAccordionStyle: {
-    borderRadius: 4,
-    marginBottom: theme.spacing(2),
-  },
-  faqSummary: {
-    backgroundColor: theme.palette.primary.light,
-    color: "white",
-    borderRadius: 4,
-  },
-  faqSumText: {
-    fontFamily: ["roboto", "sans-serif"],
-    fontSize: 20,
-    [theme.breakpoints.down("sm")]: {
-      fontSize: 16,
-    },
-  },
-  faqDetailsText: {
-    overflowWrap: "break-word",
-    width: "100%",
-  },
-  expand: {
-    color: "white",
-    fontSize: 24,
-  },
+  // faq: {
+  //   marginTop: theme.spacing(8),
+  //   marginBottom: theme.spacing(8),
+  // },
+  // faqAccordionStyle: {
+  //   borderRadius: 4,
+  //   marginBottom: theme.spacing(2),
+  // },
+  // faqSummary: {
+  //   backgroundColor: theme.palette.primary.light,
+  //   color: "white",
+  //   borderRadius: 4,
+  // },
+  // faqSumText: {
+  //   fontFamily: ["roboto", "sans-serif"],
+  //   fontSize: 20,
+  //   [theme.breakpoints.down("sm")]: {
+  //     fontSize: 16,
+  //   },
+  // },
+  // faqDetailsText: {
+  //   overflowWrap: "break-word",
+  //   width: "100%",
+  // },
+  // expand: {
+  //   color: "white",
+  //   fontSize: 24,
+  // },
 }));
 
 const donationLevels = [
@@ -204,7 +204,7 @@ const DonatePage = () => {
             FAQs
           </Typography>
 
-          <Accordion className={classes.faqAccordionStyle}>
+          <Accordion className={classes.faqAccordionStyle} elevation={0}>
             <AccordionSummary
               className={classes.faqSummary}
               id="panel1a-header"

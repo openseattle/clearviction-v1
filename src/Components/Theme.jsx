@@ -29,7 +29,7 @@ const Theme = createTheme({
     },
     highlight: {
       main: "#9ED6BE",
-      contrastText: "#000000"
+      contrastText: "#000000",
     },
     text: {
       primary: "#000000",
@@ -128,7 +128,7 @@ Theme.typography.h1 = {
   lineHeight: "95px",
   [Theme.breakpoints.down("xs")]: {
     fontSize: "64px",
-    lineHeight: "72px"
+    lineHeight: "72px",
   },
 };
 
@@ -164,6 +164,26 @@ Theme.overrides = {
       backgroundColor: "white",
     },
   },
+  MuiAccordion: {
+    root: {
+      border: `1px solid ${Theme.palette.primary.light}`,
+      "&$expanded": {
+        margin: 0,
+      }
+    },
+    rounded: {
+      borderRadius: 0,
+      '&:first-child': {
+        borderTopLeftRadius: 6,
+        borderTopRightRadius: 6,
+      },
+      '&:last-child': {
+        borderBottomLeftRadius: 6,
+        borderBottomRightRadius: 6,
+      },
+    },
+  },
+
 };
 
 export default Theme;
