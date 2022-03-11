@@ -28,7 +28,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
   },
   roots: {
-    backgroundColor: theme.palette.primary.light,
+    backgroundColor: theme.palette.primary.main,
     color: "white",
     borderRadius: 0,
   },
@@ -81,7 +81,7 @@ const useStyles = makeStyles((theme) => ({
     margin: theme.spacing(4),
   },
   ourMission: {
-    backgroundColor: theme.palette.primary.light,
+    backgroundColor: theme.palette.primary.main,
     color: "white",
   },
   ourMissionText: {
