@@ -22,11 +22,7 @@ const AccordionBuilder = ({ faqs }) => {
   return (
     <>
       {faqs.map((faq, idx) => (
-        <Accordion
-          key={idx}
-          className={classes.faqAccordionStyle}
-          variant="outlined"
-        >
+        <Accordion key={idx} variant="outlined">
           <AccordionSummary expandIcon={<ExpandMore />} {...a11yProps}>
             <Typography variant="subtitle1">{faq.summary}</Typography>
           </AccordionSummary>

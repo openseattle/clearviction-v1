@@ -71,27 +71,8 @@ const Navigation = () => {
             </Box>
             {/* mobile menu */}
 
-            {/* Collapse based nav */}
-            <Box display={{ xs: "flex", sm: "flex", md: "none" }}>
-              {menuState ? (
-                <IconButton onClick={handleCloseMenu}>
-                  <CloseSharp fontSize="large" className={classes.closeIcon} />
-                </IconButton>
-              ) : (
-                <IconButton
-                  size="medium"
-                  edge="start"
-                  color="inherit"
-                  aria-label="menu"
-                  onClick={handleOpenMenu}
-                >
-                  <MenuIcon fontSize="large" />
-                </IconButton>
-              )}
-            </Box>
-
             {/* Drawer based nav */}
-            {/* <Box display={{ xs: "flex", sm: "flex", md: "none" }}>
+            <Box display={{ xs: "flex", sm: "flex", md: "none" }}>
               <IconButton
                 size="medium"
                 edge="start"
@@ -123,10 +104,28 @@ const Navigation = () => {
                   <LegalDisclaimer />
                 </ListItem>
               </List>
-            </Drawer> */}
+            </Drawer>
+            {/* Collapse based nav */}
+            {/* <Box display={{ xs: "flex", sm: "flex", md: "none" }}>
+              {menuState ? (
+                <IconButton onClick={handleCloseMenu}>
+                  <CloseSharp fontSize="large" className={classes.closeIcon} />
+                </IconButton>
+              ) : (
+                <IconButton
+                  size="medium"
+                  edge="start"
+                  color="inherit"
+                  aria-label="menu"
+                  onClick={handleOpenMenu}
+                >
+                  <MenuIcon fontSize="large" />
+                </IconButton>
+              )}
+            </Box> */}
           </Toolbar>
         </Container>
-        <Collapse in={Boolean(menuState)} timeout="auto" unmountOnExit>
+        {/* <Collapse in={Boolean(menuState)} timeout="auto" unmountOnExit>
           <List className={classes.menuStyle}>
             {pages.map((page, idx) => (
               <NavButtonMobile key={idx} page={page} classes={classes} />
@@ -135,7 +134,7 @@ const Navigation = () => {
               <LegalDisclaimer />
             </ListItem>
           </List>
-        </Collapse>
+        </Collapse> */}
       </AppBar>
       <Box height={56} />
     </>
