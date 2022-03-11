@@ -6,18 +6,12 @@ import education from "../Assets/education.svg";
 import lawyer from "../Assets/lawyer.svg";
 import teamwork from "../Assets/teamwork.svg";
 import calculator from "../Assets/calculator.svg";
-import {
-  Box,
-  Button,
-  ButtonGroup,
-  Container,
-  Grid,
-  Typography,
-} from "@material-ui/core";
+import { Box, Container, Grid, Typography } from "@material-ui/core";
 import ContentSection from "../Components/ContentSection";
 import HomeFAQAccordion from "../Subpages/Home/HomeFAQAccordion";
 import { useHomeStyles } from "../Styles/useHomeStyles";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
+import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
 
 const HomePage = () => {
   useEffect(() => trackPageview("Home"), []);
@@ -58,16 +52,13 @@ const HomePage = () => {
       </Box>
 
       <Container className={classes.regularContainer} maxwidth="sm">
-        <ButtonGroup
-          orientation={"horizontal"}
-          color="primary"
-          variant="text"
-          fullWidth
-        >
-          <Button href="#how-it-works">How It Works</Button>
-          <Button href="#why-vacate">Why Vacate</Button>
-          <Button href="#faq">FAQ</Button>
-        </ButtonGroup>
+        <ResponsiveJumpButtonGroup
+          links={[
+            { url: "how-it-works", linkName: "How It Works" },
+            { url: "why-vacate", linkName: "why vacate" },
+            { url: "faq", linkName: "FAQ" },
+          ]}
+        />
       </Container>
 
       <ContentSection
