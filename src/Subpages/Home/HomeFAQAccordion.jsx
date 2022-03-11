@@ -1,10 +1,7 @@
-import {
-  Typography,
-} from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 import AccordionBuilder from "../../Components/AccordionBuilder";
 import { ExternalLink } from "../../ui-kit/ExternalLink";
-import {useHomeStyles} from "../../Styles/useHomeStyles"
-
+import { useHomeStyles } from "../../Styles/useHomeStyles";
 
 const HomeFAQAccordion = () => {
   const classes = useHomeStyles();
@@ -16,9 +13,9 @@ const HomeFAQAccordion = () => {
         <>
           <Typography className={classes.contentTextStyle}>
             Vacating a conviction is the process of clearing a conviction from
-            your record so it is not visible to the public any more. Vacating your
-            conviction can remove that crime from some background checks, and you
-            can say legally that you were never convicted of that crime.
+            your record so it is not visible to the public any more. Vacating
+            your conviction can remove that crime from some background checks,
+            and you can say legally that you were never convicted of that crime.
           </Typography>
           <Typography className={classes.contentTextStyle}>
             The courts can still reference a vacated conviction in a future
@@ -33,17 +30,18 @@ const HomeFAQAccordion = () => {
       details: (
         <>
           <Typography className={classes.contentTextStyle}>
-            If you are convicted of a crime, your criminal record will continue to
-            show that conviction in background checks. Having a criminal record
-            might negatively affect your housing, employment, and educational
-            opportunities.
+            If you are convicted of a crime, your criminal record will continue
+            to show that conviction in background checks. Having a criminal
+            record might negatively affect your housing, employment, and
+            educational opportunities.
           </Typography>
-  
+
           <Typography className={classes.contentTextStyle}>
             If you are experiencing this, vacating your conviction removes that
             crime from background checks, and you can say legally that you were
             never convicted of that crime. This can help you get access to
-            housing, education, employment, volunteering opportunities, and more.
+            housing, education, employment, volunteering opportunities, and
+            more.
           </Typography>
         </>
       ),
@@ -61,8 +59,20 @@ const HomeFAQAccordion = () => {
             you are eligible.
           </Typography>
           <Typography className={classes.contentTextStyle}>
-            For Felonies, please refer to RCW 9.94A.640. An easy to read resource
-            to understand your eligibility is available at Washington Law Help.
+            For Felonies, please refer to{" "}
+            <ExternalLink
+              href={"https://apps.leg.wa.gov/RCW/default.aspx?cite=9.94a.640"}
+            >
+              RCW 9.94A.640
+            </ExternalLink>
+            . An easy to read resource to understand your eligibility is
+            available at{" "}
+            <ExternalLink
+              href={"https://www.washingtonlawhelp.org/search?q=vacation"}
+            >
+              Washington Law Help
+            </ExternalLink>
+            .
           </Typography>
         </>
       ),
@@ -73,9 +83,9 @@ const HomeFAQAccordion = () => {
       details: (
         <>
           <Typography className={classes.contentTextStyle}>
-            A request to vacate may be denied for other reasons, and is up to the
-            discretion of the judge. The most common reasons that a request can be
-            denied is if:
+            A request to vacate may be denied for other reasons, and is up to
+            the discretion of the judge. The most common reasons that a request
+            can be denied is if:
           </Typography>
           <Typography className={classes.contentTextStyle}>
             (1) the court does not believe that vacating your conviction will be
@@ -101,9 +111,9 @@ const HomeFAQAccordion = () => {
         <>
           <Typography className={classes.contentTextStyle}>
             To vacate your Washington conviction, the process takes on average
-            three to four months, depending on your individual circumstances, the
-            court’s caseload at the time, and whether there are any objections to
-            vacating your conviction.
+            three to four months, depending on your individual circumstances,
+            the court’s caseload at the time, and whether there are any
+            objections to vacating your conviction.
           </Typography>
         </>
       ),
@@ -115,8 +125,8 @@ const HomeFAQAccordion = () => {
           <Typography className={classes.contentTextStyle}>
             You will receive a court order vacating the conviction—which has the
             effect of withdrawing the guilty judgment and dismissing the charges
-            against you. You can then legally state that you were not convicted of
-            the offense.
+            against you. You can then legally state that you were not convicted
+            of the offense.
           </Typography>
         </>
       ),
@@ -127,9 +137,10 @@ const HomeFAQAccordion = () => {
         <>
           <Typography className={classes.contentTextStyle}>No.</Typography>
           <Typography className={classes.contentTextStyle}>
-            Your conviction will still be in court records and computerized court
-            indexes to court records. If a conviction was a domestic violence
-            case, these records and indexes will still show the case type.
+            Your conviction will still be in court records and computerized
+            court indexes to court records. If a conviction was a domestic
+            violence case, these records and indexes will still show the case
+            type.
           </Typography>
           <Typography className={classes.contentTextStyle}>
             Information about the court records from the cases that led to the
