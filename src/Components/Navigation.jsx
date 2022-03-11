@@ -55,7 +55,7 @@ const Navigation = () => {
   return (
     <>
       <AppBar color="primary" elevation={0}>
-        <Container maxwidth="lg">
+        <Container maxWidth="xl">
           <Toolbar>
             <NavigationLogo />
             <Box style={{ flexGrow: 1 }} />
