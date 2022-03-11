@@ -1,7 +1,6 @@
 import {
   Box,
   Grid,
-  makeStyles,
   Typography,
   Container,
   List,
@@ -16,85 +15,10 @@ import team from "../Assets/team_building.svg";
 import brainstorm from "../Assets/brainstorming_session.svg";
 import laptop from "../Assets/laptop.svg";
 import HeroPanel from "../Components/HeroPanel";
-
-const useStyles = makeStyles((theme) => ({
-  volunteer: {
-    marginTop: theme.spacing(5),
-    marginBottom: theme.spacing(5),
-  },
-  icon: {
-    color: theme.palette.highlight.main,
-  },
-  contentText: {
-    margin: theme.spacing(2),
-  },
-  contentTextAlt: {
-    color: "white",
-    margin: theme.spacing(2),
-    paddingBottom: theme.spacing(2),
-  },
-  listTextAlt: {
-    color: "white",
-  },
-  title: {
-    margin: theme.spacing(2),
-  },
-  titleAlt: {
-    margin: theme.spacing(2),
-    paddingBottom: theme.spacing(1),
-    color: "white",
-  },
-  backgroundSecondary: {
-    height: 400,
-    backgroundColor: theme.palette.primary.dark,
-    padding: theme.spacing(5),
-    [theme.breakpoints.down("sm")]: {
-      height: 300,
-      padding: theme.spacing(2),
-    },
-  },
-  backgroundLightSecondary: {
-    height: 400,
-    backgroundColor: theme.palette.primary.light,
-    padding: theme.spacing(5),
-    [theme.breakpoints.down("sm")]: {
-      height: 300,
-      padding: theme.spacing(1),
-    },
-  },
-  teamMeeting: {
-    width: "100%",
-  },
-  roleImage: {
-    width: "100%",
-  },
-  titleRoles: {
-    padding: theme.spacing(5),
-  },
-  headingRoles: {
-    color: theme.palette.primary.light,
-    paddingBottom: theme.spacing(2),
-  },
-  roleAdjust: {
-    [theme.breakpoints.up("sm")]: {
-      paddingTop: theme.spacing(5),
-    },
-  },
-  buttonPad: {
-    marginTop: theme.spacing(10),
-    marginBottom: theme.spacing(10),
-  },
-  emailLink: {
-    overflowWrap: "break-word",
-    color: theme.palette.highlight.main,
-    "&:hover": {
-      color: theme.palette.highlight.main,
-    },
-  },
-}));
+import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
 
 const VolunteerPage = () => {
-  const classes = useStyles();
+  const classes = useGetInvolvedStyles();
   return (
     <>
       <Container className={classes.volunteer} maxWidth="lg">

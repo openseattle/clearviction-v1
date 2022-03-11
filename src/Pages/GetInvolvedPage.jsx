@@ -33,17 +33,9 @@ const GetInvolvedPage = () => {
           "There are many ways to participate with the CVP team, and we appreciate all of them!"
         }
       />
-      <NavCardGroup subPages={subPages} xs={12} sm={12} md={4} />
-
-      <Route exact path="/get-involved/volunteer">
-        <VolunteerPage />
-      </Route>
-      <Route exact path="/get-involved/donate">
-        <DonatePage />
-      </Route>
-      <Route exact path="/get-involved/partner-with-us">
-        <PartnerPage />
-      </Route>
+      <VolunteerPage />
+      <DonatePage />
+      <PartnerPage />
     </Container>
   );
 };

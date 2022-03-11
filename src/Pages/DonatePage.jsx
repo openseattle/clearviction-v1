@@ -7,7 +7,6 @@ import {
   CardContent,
   Container,
   Grid,
-  makeStyles,
   Typography,
 } from "@material-ui/core";
 import { ArrowDropDownOutlined } from "@material-ui/icons";
@@ -16,92 +15,7 @@ import idea from "../Assets/idea.svg";
 import note from "../Assets/note_taking.svg";
 import discovery from "../Assets/science_discovery.svg";
 import code from "../Assets/qr_code.svg";
-
-const useStyles = makeStyles((theme) => ({
-  donationRoot: {
-    marginTop: theme.spacing(8),
-    marginBottom: theme.spacing(8),
-  },
-  donation: {
-    height: "100%",
-  },
-  donationImageStyle: {
-    width: "100%",
-  },
-  donationAmountStyle: {
-    textAlign: "center",
-    fontFamily: ["roboto", "sans-serif"],
-    fontWeight: "Bold",
-    fontSize: 50,
-  },
-  donationDescStyle: {
-    padding: theme.spacing(3),
-    textAlign: "center",
-    fontFamily: ["roboto", "sans-serif"],
-    fontSize: 20,
-    [theme.breakpoints.down("sm")]: {
-      fontSize: 16,
-    },
-  },
-  title: {
-    marginTop: theme.spacing(3),
-    marginBottom: theme.spacing(3),
-  },
-  qrCode: {
-    marginTop: theme.spacing(5),
-    width: "100%",
-  },
-  donate: {
-    backgroundColor: theme.palette.primary.dark,
-    paddingTop: theme.spacing(5),
-    paddingBottom: theme.spacing(5),
-  },
-  donateRight: {
-    paddingTop: theme.spacing(3),
-  },
-  donateHeading: {
-    color: "white",
-    margin: theme.spacing(3),
-  },
-  donateBody: {
-    color: "white",
-    fontSize: 20,
-    margin: theme.spacing(3),
-  },
-  donateBody2: {
-    color: "white",
-    fontSize: 16,
-    margin: theme.spacing(3),
-  },
-  // faq: {
-  //   marginTop: theme.spacing(8),
-  //   marginBottom: theme.spacing(8),
-  // },
-  // faqAccordionStyle: {
-  //   borderRadius: 4,
-  //   marginBottom: theme.spacing(2),
-  // },
-  // faqSummary: {
-  //   backgroundColor: theme.palette.primary.light,
-  //   color: "white",
-  //   borderRadius: 4,
-  // },
-  // faqSumText: {
-  //   fontFamily: ["roboto", "sans-serif"],
-  //   fontSize: 20,
-  //   [theme.breakpoints.down("sm")]: {
-  //     fontSize: 16,
-  //   },
-  // },
-  // faqDetailsText: {
-  //   overflowWrap: "break-word",
-  //   width: "100%",
-  // },
-  // expand: {
-  //   color: "white",
-  //   fontSize: 24,
-  // },
-}));
+import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
 
 const donationLevels = [
   {
@@ -131,7 +45,7 @@ const donationLevels = [
 ];
 
 const DonatePage = () => {
-  const classes = useStyles();
+  const classes = useGetInvolvedStyles();
   return (
     <>
       <Container className={classes.donationRoot} maxWidth="lg">

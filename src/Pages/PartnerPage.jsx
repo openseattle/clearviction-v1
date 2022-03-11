@@ -2,54 +2,16 @@ import {
   Box,
   Container,
   Grid,
-  makeStyles,
   Typography,
 } from "@material-ui/core";
 import SecondaryButton from "../ui-kit/SecondaryButton";
 import pr from "../Assets/pr.svg";
 import HeroPanel from "../Components/HeroPanel";
+import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
 
-const useStyles = makeStyles((theme) => ({
-  partner: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
-  },
-  partnerHeading: {
-    margin: theme.spacing(4),
-    textAlign: "center",
-  },
-
-  share: {
-    backgroundColor: theme.palette.primary.light,
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(8),
-    marginBottom: theme.spacing(8),
-  },
-  sharePR: {
-    maxHeight: 400,
-    maxWidth: 400,
-  },
-  shareRight: {
-    paddingTop: theme.spacing(8),
-    paddingBottom: theme.spacing(4),
-    paddingLeft: theme.spacing(4),
-    paddingRight: theme.spacing(4),
-    [theme.breakpoints.down("xs")]: {
-      paddingTop: theme.spacing(1),
-    },
-  },
-  shareHeading: {
-    paddingTop: theme.spacing(2),
-    color: "white",
-  },
-  shareBody: {
-    paddingTop: theme.spacing(2),
-    color: "white",
-  },
-}));
 
 const PartnerPage = () => {
-  const classes = useStyles();
+  const classes = useGetInvolvedStyles();
 
   return (
     <>
