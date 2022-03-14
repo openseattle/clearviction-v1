@@ -1,6 +1,6 @@
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 
-export const EligibilityCalculatorButton = () => {
+export const CheckEligibilityButton = () => {
   return (
     <RedesignButtonPrimary href="/calculator/landing-0">
       Check Eligibility
