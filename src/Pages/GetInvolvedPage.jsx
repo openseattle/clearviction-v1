@@ -1,10 +1,12 @@
-import { Container } from "@material-ui/core";
+import { Container, Grid } from "@material-ui/core";
 import { Route } from "react-router-dom";
 import HeroPanel from "../Components/HeroPanel";
+import ImageContentCard from "../Components/ImageContentCard";
 import NavCardGroup from "../Components/NavCardGroup";
 import DonatePage from "./DonatePage";
 import PartnerPage from "./PartnerPage";
 import VolunteerPage from "./VolunteerPage";
+import diversity from "../Assets/diversity2.svg";
 
 const subPages = [
   {
@@ -33,6 +35,24 @@ const GetInvolvedPage = () => {
           "There are many ways to participate with the CVP team, and we appreciate all of them!"
         }
       />
+      <Grid container spacing={4}>
+        <Grid item xs={12} sm={4}>
+          <ImageContentCard
+            content="hi"
+            image={diversity}
+            buttonHref="#"
+            buttonText={"button"}
+          />
+        </Grid>
+        <Grid item xs={12} sm={4}>
+          <ImageContentCard />
+        </Grid>
+
+        <Grid item xs={12} sm={4}>
+          <ImageContentCard />
+        </Grid>
+      </Grid>
+
       <VolunteerPage />
       <DonatePage />
       <PartnerPage />
