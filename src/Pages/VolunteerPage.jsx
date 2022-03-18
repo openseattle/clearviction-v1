@@ -108,7 +108,7 @@ const VolunteerPage = () => {
         </Grid>
       </Container>
       <Container className={classes.CTAButtonContainerStyle}>
-        <RedesignButtonPrimary href="">apply now</RedesignButtonPrimary>
+        <RedesignButtonPrimary target="_blank" href="https://www.democracylab.org/projects/226">apply now</RedesignButtonPrimary>
       </Container>
     </>
   );
