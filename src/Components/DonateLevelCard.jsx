@@ -2,7 +2,8 @@ import { Box, Card, CardContent, makeStyles, Typography } from "@material-ui/cor
 
 const useStyles = makeStyles( (theme) => ({
   rootCardStyle: {
-    height: 384,
+    height: 396,
+    width: 300,
   },
   amountStyle: {
     padding: theme.spacing(3),
@@ -14,7 +15,7 @@ const useStyles = makeStyles( (theme) => ({
 
 }))
 
-const DonateLevelCard = ({amount, image, text}) => {
+const DonateLevelCard = ({amount, image, text, alt}) => {
   const classes = useStyles();
   return (
     <>
@@ -26,6 +27,7 @@ const DonateLevelCard = ({amount, image, text}) => {
                   <Box
                     className={classes.donationImageStyle}
                     component="img"
+                    alt={alt}
                     src={image}
                   />
                 </Box>
