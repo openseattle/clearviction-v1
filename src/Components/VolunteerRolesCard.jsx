@@ -16,13 +16,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const VolunteerRolesCard = ({ image, discipline, roles }) => {
+const VolunteerRolesCard = ({ image, discipline, roles, alt }) => {
   const classes = useStyles();
   return (
     <>
       <Card className={classes.roleRootStyle}>
         <Box display="flex" justifyContent="center">
-          <Box className={classes.roleImageStyle} component="img" src={image} />
+          <Box className={classes.roleImageStyle} component="img" src={image} alt={alt}/>
         </Box>
         <Typography
           className={classes.roleHeadingStyle}
