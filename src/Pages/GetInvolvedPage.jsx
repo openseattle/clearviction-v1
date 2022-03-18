@@ -1,30 +1,19 @@
-import { Container, Grid } from "@material-ui/core";
-import { Route } from "react-router-dom";
+import {
+  Box,
+  Container,
+  Grid,
+  Icon,
+  SvgIcon,
+  Typography,
+} from "@material-ui/core";
 import HeroPanel from "../Components/HeroPanel";
 import ImageContentCard from "../Components/ImageContentCard";
-import NavCardGroup from "../Components/NavCardGroup";
 import DonatePage from "./DonatePage";
 import PartnerPage from "./PartnerPage";
 import VolunteerPage from "./VolunteerPage";
 import diversity from "../Assets/diversity2.svg";
-
-const subPages = [
-  {
-    name: "Volunteer",
-    link: "/get-involved/volunteer",
-    desc: "Join our dedicated volunteer team and help us bring the resources to those who need them.",
-  },
-  {
-    name: "Donate",
-    link: "/get-involved/donate",
-    desc: "Your gift makes it possible to continue helping our community. ",
-  },
-  {
-    name: "Partner with us",
-    link: "/get-involved/partner-with-us",
-    desc: "Create change by sharing our story and reaching out to your peers.",
-  },
-];
+import { Alarm, CloudDone, Sync } from "@material-ui/icons";
+import Fact from "../Components/Fact";
 
 const GetInvolvedPage = () => {
   return (
@@ -35,7 +24,7 @@ const GetInvolvedPage = () => {
           "There are many ways to participate with the CVP team, and we appreciate all of them!"
         }
       />
-      <Grid container spacing={4}>
+      <Grid container>
         <Grid item xs={12} sm={4}>
           <ImageContentCard
             content="hi"
@@ -54,8 +43,6 @@ const GetInvolvedPage = () => {
       </Grid>
 
       <VolunteerPage />
-      <DonatePage />
-      <PartnerPage />
     </Container>
   );
 };
