@@ -1,4 +1,4 @@
-import { Typography } from "@material-ui/core";
+import { Link, Typography } from "@material-ui/core";
 import AccordionBuilder from "../../Components/AccordionBuilder";
 import { ExternalLink } from "../../ui-kit/ExternalLink";
 import { useHomeStyles } from "../../Styles/useHomeStyles";
@@ -93,7 +93,7 @@ const DonateFAQAccordion = () => {
       details: (
         <>
           <Typography className={classes.contentTextStyle}>
-            You can send us an email at <a href="mailto:contact@clearviction.org">contact@clearviction.org</a> and we will get
+            You can send us an email at <Link href="mailto:contact@clearviction.org">contact@clearviction.org</Link> and we will get
             back to you within 24 hours.
           </Typography>
         </>
