@@ -1,12 +1,15 @@
 import { Box, Container, Divider, Grid } from "@material-ui/core";
-import ImageContentCard from "../Components/ImageContentCard";
+
 import DonatePage from "./DonatePage";
 import PartnerPage from "./PartnerPage";
 import VolunteerPage from "./VolunteerPage";
+import RedesignHeroPanel from "../Components/RedesignHeroPanel";
+import ImageContentCard from "../Components/ImageContentCard";
+
 import diversity from "../Assets/diversity2.svg";
 import moneyJar from "../Assets/money_jar.svg";
 import marketing from "../Assets/marketing.svg";
-import RedesignHeroPanel from "../Components/RedesignHeroPanel";
+
 import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
 
 const GetInvolvedPage = () => {
