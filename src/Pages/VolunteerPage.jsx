@@ -11,16 +11,18 @@ import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 
 const factsProps = {
-  fontSize: "large",
+  style: { fontSize: 54 },
   color: "secondary",
 };
 
 const facts = [
-  { id: "fact0",
+  {
+    id: "fact0",
     icon: <Alarm {...factsProps} />,
     text: "Can commit to 4 hours a week for at least 6 months",
   },
-  { id: "fact1",
+  {
+    id: "fact1",
     icon: <Sync {...factsProps} />,
     text: "Want to share your expertise to help us make a better product",
   },
@@ -31,12 +33,14 @@ const facts = [
   },
 ];
 const openVolunteerRoles = [
-  { id: "role0",
+  {
+    id: "role0",
     image: team,
     discipline: "User Experience",
     roles: ["Designers", "Researchers"],
   },
-  { id: "role1",
+  {
+    id: "role1",
     image: brainstorm,
     discipline: "Development",
     roles: ["Front-end Devs", "Back-end Devs"],
@@ -53,8 +57,13 @@ const VolunteerPage = () => {
   const classes = useGetInvolvedStyles();
   return (
     <>
-      <Container component="section" id="volunteer" className={classes.regularContainerStyle} maxWidth="md">
-        <Typography  className={classes.headingStyle} variant="h2">
+      <Container
+        component="section"
+        id="volunteer"
+        className={classes.regularContainerStyle}
+        maxWidth="md"
+      >
+        <Typography className={classes.headingStyle} variant="h2">
           Help us break down barriers by joining the team.
         </Typography>
         <Typography className={classes.volunteerTextStyle} variant="body1">

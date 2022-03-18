@@ -6,7 +6,7 @@ const Fact = ({icon, text}) => {
       <Box display={"flex"} justifyContent={"center"} padding={3}>
         {icon}
       </Box>
-      <Typography variant="body1" align="center">
+      <Typography style={{padding: 3}} variant="body1" align="center">
         {text}
       </Typography>
     </>
