@@ -53,11 +53,11 @@ const GetInvolvedPage = () => {
         </Grid>
       </RedesignHeroPanel>
       <VolunteerPage id="volunteer" />
-      <Container maxWidth="lg">
+      <Container maxWidth="md">
         <Divider className={classes.dividerStyle} />
       </Container>
       <DonatePage />
-      <Container maxWidth="lg">
+      <Container maxWidth="md">
         <Divider className={classes.dividerStyle} />
       </Container>
       <PartnerPage />

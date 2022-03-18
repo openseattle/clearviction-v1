@@ -24,6 +24,9 @@ export const useGetInvolvedStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(8),
   },
   donationImageStyle: {
-    width: "100%"
-  }
+    width: "100%",
+  },
+  partnerImageStyle: {
+    width: "100%",
+  },
 }));
