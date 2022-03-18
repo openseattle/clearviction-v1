@@ -16,31 +16,33 @@ const factsProps = {
 };
 
 const facts = [
-  {
+  { id: "fact0",
     icon: <Alarm {...factsProps} />,
     text: "Can commit to 4 hours a week for at least 6 months",
   },
-  {
+  { id: "fact1",
     icon: <Sync {...factsProps} />,
     text: "Want to share your expertise to help us make a better product",
   },
   {
+    id: "fact2",
     icon: <CloudDone {...factsProps} />,
     text: "Are a self-motivated individual comfortable with remote work",
   },
 ];
 const openVolunteerRoles = [
-  {
+  { id: "role0",
     image: team,
     discipline: "User Experience",
     roles: ["Designers", "Researchers"],
   },
-  {
+  { id: "role1",
     image: brainstorm,
     discipline: "Development",
     roles: ["Front-end Devs", "Back-end Devs"],
   },
   {
+    id: "role2",
     image: laptop,
     discipline: "Content & Outreach",
     roles: ["Copywriters", "Marketing Directors"],
@@ -51,8 +53,8 @@ const VolunteerPage = () => {
   const classes = useGetInvolvedStyles();
   return (
     <>
-      <Container className={classes.regularContainerStyle} maxWidth="lg">
-        <Typography className={classes.headingStyle} variant="h2">
+      <Container component="section" id="volunteer" className={classes.regularContainerStyle} maxWidth="md">
+        <Typography  className={classes.headingStyle} variant="h2">
           Help us break down barriers by joining the team.
         </Typography>
         <Typography className={classes.volunteerTextStyle} variant="body1">
@@ -67,20 +69,20 @@ const VolunteerPage = () => {
         </Typography>
         <Typography>You'll be a perfect fit if you:</Typography>
         <Grid container>
-          {facts.map((fact, idx) => (
-            <Grid item key={idx} xs={12} sm={4} md={4} lg={4}>
+          {facts.map((fact) => (
+            <Grid item key={fact.id} xs={12} sm={4} md={4} lg={4}>
               <Fact icon={fact.icon} text={fact.text} />
             </Grid>
           ))}
         </Grid>
       </Container>
-      <Container className={classes.regularContainerStyle} maxWidth="xl">
+      <Container className={classes.regularContainerStyle} maxWidth="md">
         <Typography className={classes.headingStyle} variant="h2">
           Open roles
         </Typography>
         <Grid container>
-          {openVolunteerRoles.map((volunteerRole, idx) => (
-            <Grid key={idx} item xs={12} sm={12} md={4}>
+          {openVolunteerRoles.map((volunteerRole) => (
+            <Grid key={volunteerRole.id} item xs={12} sm={12} md={4}>
               <Box display={"flex"} justifyContent={"center"}>
                 <VolunteerRolesCard
                   image={volunteerRole.image}

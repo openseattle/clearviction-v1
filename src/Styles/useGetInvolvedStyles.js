@@ -22,5 +22,8 @@ export const useGetInvolvedStyles = makeStyles((theme) => ({
   dividerStyle: {
     marginTop: theme.spacing(8),
     marginBottom: theme.spacing(8),
+  },
+  donationImageStyle: {
+    width: "100%"
   }
 }));

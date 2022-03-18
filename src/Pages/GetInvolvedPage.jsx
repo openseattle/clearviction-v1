@@ -1,7 +1,7 @@
 import { Box, Container, Divider, Grid } from "@material-ui/core";
 import ImageContentCard from "../Components/ImageContentCard";
-// import DonatePage from "./DonatePage";
-// import PartnerPage from "./PartnerPage";
+import DonatePage from "./DonatePage";
+import PartnerPage from "./PartnerPage";
 import VolunteerPage from "./VolunteerPage";
 import diversity from "../Assets/diversity2.svg";
 import moneyJar from "../Assets/money_jar.svg";
@@ -40,23 +40,27 @@ const GetInvolvedPage = () => {
               />
             </Box>
           </Grid>
-
           <Grid item xs={12} sm={12} md={4}>
             <Box display="flex" justifyContent="center">
               <ImageContentCard
                 content="Create change by sharing our project with others and reaching out to your peers."
                 image={marketing}
+                buttonHref="#partner-with-us"
                 buttonText="Partner with us"
               />
             </Box>
           </Grid>
         </Grid>
       </RedesignHeroPanel>
-
-      <VolunteerPage />
+      <VolunteerPage id="volunteer" />
       <Container maxWidth="lg">
         <Divider className={classes.dividerStyle} />
       </Container>
+      <DonatePage />
+      <Container maxWidth="lg">
+        <Divider className={classes.dividerStyle} />
+      </Container>
+      <PartnerPage />
     </>
   );
 };

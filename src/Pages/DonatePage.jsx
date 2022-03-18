@@ -1,238 +1,100 @@
+import { useState } from "react";
+
 import {
-  Accordion,
-  AccordionDetails,
-  AccordionSummary,
   Box,
-  Card,
-  CardContent,
   Container,
   Grid,
   Typography,
 } from "@material-ui/core";
-import { ArrowDropDownOutlined } from "@material-ui/icons";
+
 import laptop from "../Assets/laptop.svg";
 import idea from "../Assets/idea.svg";
 import note from "../Assets/note_taking.svg";
 import discovery from "../Assets/science_discovery.svg";
-import code from "../Assets/qr_code.svg";
+import DonateFAQAccordion from "../Subpages/GetInvolved/DonateFAQAccordion";
+
 import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
+import DonateLevelCard from "../Components/DonateLevelCard";
+import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
+import DonateDialog from "../Components/DonateDialog";
 
 const donationLevels = [
   {
     name: "level 1",
     amount: "$10",
     donationImage: idea,
-    desc: "Contribute toward the monthly cost of the tools required to provide this service",
+    desc: "pay for a monthly fee for one of our technological tools",
   },
   {
     name: "level 2",
     amount: "$15",
     donationImage: discovery,
-    desc: "Buy groceries for one of our research subjects",
+    desc: "fund a research participant’s time ",
   },
   {
     name: "level 3",
     amount: "$30",
     donationImage: laptop,
-    desc: "Pay the filing fee for a low-income individual",
+    desc: "pay the filing fee for a low-income individual ",
   },
   {
     name: "level 4",
     amount: "Any $",
     donationImage: note,
-    desc: "Directly help support those with convictions start fresh",
+    desc: "help support those with convictions start fresh",
   },
 ];
 
 const DonatePage = () => {
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  }
+
+  const handleClose = () => {
+    setOpen(false);
+  }
   const classes = useGetInvolvedStyles();
   return (
     <>
-      <Container className={classes.donationRoot} maxWidth="lg">
-        <Typography className={classes.title} variant="h2" align="center">
-          Why donate?
+      <Container
+        component="section"
+        id="donate"
+        className={classes.regularContainerStyle}
+        maxWidth="md"
+      >
+        <Typography className={classes.headingStyle} variant="h2">
+          Your donations can go a long way to make the project grow.
         </Typography>
-        <Typography className={classes.title} variant="body1" align="center">
-          We depend on your generosity to let this project grow!
+        <Typography className={classes.volunteerTextStyle} variant="body1">
+          Here’s how your generosity can help us achieve our milestones and make
+          it possible to connect our project with more and more people who need
+          it:
         </Typography>
         <Grid container spacing={3}>
-          {donationLevels.map((level, idx) => (
-            <Grid item key={idx} xs={12} sm={6} md={3} lg={3}>
-              <Card className={classes.donation}>
-                <Box display="flex" justifyContent="center">
-                  <Box
-                    className={classes.donationImageStyle}
-                    component="img"
-                    src={level.donationImage}
-                  />
-                </Box>
-                <CardContent>
-                  <Typography className={classes.donationAmountStyle}>
-                    {level.amount}
-                  </Typography>
-                  <Typography className={classes.donationDescStyle}>
-                    {level.desc}
-                  </Typography>
-                </CardContent>
-              </Card>
+          {donationLevels.map((level) => (
+            <Grid item key={level.name} xs={12} sm={6} md={3} lg={3}>
+              <DonateLevelCard
+                amount={level.amount}
+                text={level.desc}
+                image={level.donationImage}
+              />
             </Grid>
           ))}
         </Grid>
       </Container>
 
-      <Box className={classes.donate}>
-        <Container maxWidth="lg">
-          <Grid container>
-            <Grid item xs={12} sm={6}>
-              <Box display={"flex"} justifyContent={"center"}>
-                <Box className={classes.qrCode} component={"img"} src={code} />
-              </Box>
-            </Grid>
-            <Grid className={classes.donateRight} item xs={12} sm={6}>
-              <Typography className={classes.donateHeading} variant="h2">
-                How to donate:
-              </Typography>
-              <Typography className={classes.donateBody}>
-                Venmo @Seamus-Brugh by
-              </Typography>
-              <Typography component="ol" className={classes.donateBody}>
-                <li>Searching the username (@Seamus-Brugh)</li>
-                OR
-                <li>Scanning the QR code in-app</li>
-              </Typography>
-              <Typography className={classes.donateBody2}>
-                Note:
-                <li>Do not mark as goods or service!</li>
-                <li>
-                  Be sure to include "Helping people get a fresh start!" in the
-                  Venmo description section.
-                </li>
-              </Typography>
-            </Grid>
-          </Grid>
-        </Container>
-      </Box>
-      <Container maxWidth="md">
-        <Box className={classes.faq}>
-          <Typography className={classes.title} variant="h2">
-            FAQs
-          </Typography>
+      <Container className={classes.CTAButtonContainerStyle}>
+        <RedesignButtonPrimary onClick={handleClickOpen}>donate</RedesignButtonPrimary>
+        <DonateDialog open={open} onClose={handleClose} />
+      </Container>
 
-          <Accordion className={classes.faqAccordionStyle} elevation={0}>
-            <AccordionSummary
-              className={classes.faqSummary}
-              id="panel1a-header"
-              aria-controls="panel1a-content"
-              expandIcon={<ArrowDropDownOutlined className={classes.expand} />}
-            >
-              <Typography className={classes.faqSumText}>
-                How will my donation be used?
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                As we're all volunteers, any of our donations will go directly
-                to helping those convicted and give them a fresh start.
-                <br />
-                <br />
-                Your support will help pay for the technological tools needed by
-                our team to let this project grow. To develop needed resources
-                for those with convictions, supermarket vouchers will be
-                provided for participants in our research. Your aid will also
-                help support low-income individuals overcome the financial
-                barriers to vacate their record.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion className={classes.faqAccordionStyle}>
-            <AccordionSummary
-              className={classes.faqSummary}
-              id="panel2a-header"
-              aria-controls="panel2a-content"
-              expandIcon={<ArrowDropDownOutlined className={classes.expand} />}
-            >
-              <Typography className={classes.faqSumText}>
-                Is it safe and secure for me to donate online?
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                Yes! We use Venmo for all our online donations. Venmo is
-                PayPal’s subsidiary and uses bank-level encryption to keep your
-                data safe. The app's security features include data encryption,
-                purchase verification, multifactor authentication, and fraud
-                protection.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion className={classes.faqAccordionStyle}>
-            <AccordionSummary
-              className={classes.faqSummary}
-              id="panel3a-header"
-              aria-controls="panel3a-content"
-              expandIcon={<ArrowDropDownOutlined className={classes.expand} />}
-            >
-              <Typography className={classes.faqSumText}>
-                I do not have a Venmo account, can I still donate online?
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography style={{ overflowWrap: "break-word", width: "100%" }}>
-                You will need a Venmo account to donate online. This can easily
-                be set up using only a mobile phone or email address. You can
-                then choose to either add funds to your Venmo account or link an
-                external payment method like a bank account or credit card.
-                <br />
-                <br />
-                You can sign up for a Venmo account here:{" "}
-                <a href="https://account.venmo.com/signup">
-                  https://get.venmo.com
-                </a>
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion className={classes.faqAccordionStyle}>
-            <AccordionSummary
-              className={classes.faqSummary}
-              id="panel4a-header"
-              aria-controls="panel4a-content"
-              expandIcon={<ArrowDropDownOutlined className={classes.expand} />}
-            >
-              <Typography className={classes.faqSumText}>
-                Can I make a donation by check?
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography>
-                Yes, please make the check out to Seamus Brugh and mail it to:
-                <br />
-                <br />
-                Seamus Brugh <br />
-                802 5th Ave N, unit 213
-                <br />
-                Seattle, WA 98109
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-          <Accordion className={classes.faqAccordionStyle}>
-            <AccordionSummary
-              className={classes.faqSummary}
-              id="panel5a-header"
-              aria-controls="panel5a-content"
-              expandIcon={<ArrowDropDownOutlined className={classes.expand} />}
-            >
-              <Typography className={classes.faqSumText}>
-                Who should I contact if I have more questions?
-              </Typography>
-            </AccordionSummary>
-            <AccordionDetails>
-              <Typography className={classes.faqDetailsText}>
-                You can send us an email at contact@clearviction.org and we will
-                get back to you within 24 hours.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-        </Box>
+      <Container className={classes.regularContainerStyle} maxWidth="md">
+          <Typography className={classes.headingStyle} variant="h3">
+            Frequently Asked Questions
+          </Typography>
+          <DonateFAQAccordion />
       </Container>
     </>
   );
