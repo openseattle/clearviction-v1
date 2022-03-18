@@ -1,4 +1,5 @@
 import { makeStyles } from "@material-ui/core";
+
 export const useGetInvolvedStyles = makeStyles((theme) => ({
   //donation page styles
   donationRoot: {
@@ -189,4 +190,20 @@ export const useGetInvolvedStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(2),
     color: "white",
   },
+
+
+  //new Styles
+
+  regularContainerStyle: {
+    marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(8),
+  },
+  headingStyle: {
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(3),
+  },
+  volunteerTextStyle: {
+    marginTop: theme.spacing(3),
+    marginBottom: theme.spacing(3),
+  }
 }));
