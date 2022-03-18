@@ -9,7 +9,7 @@ import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 const useStyles = makeStyles((theme) => ({
   rootStyle: {
     height: 460,
-    width: 324,
+    minWidth: 280,
   },
   cardTextSTyle: {
     padding: 34,
