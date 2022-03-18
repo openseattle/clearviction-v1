@@ -11,7 +11,7 @@ const PartnerPage = () => {
 
   return (
     <>
-      <Container className={classes.regularContainerStyle} maxWidth="md">
+      <Container id="partner-with-us" className={classes.regularContainerStyle} maxWidth="md">
         <Typography className={classes.headingStyle} variant="h2">
           Help us bring a message of hope into your community.
         </Typography>
