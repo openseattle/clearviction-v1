@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
   heroSubtitle: {
     maxWidth: 502,
     paddingTop: theme.spacing(2),
-    paddingBottom: theme.spacing(2),
+    paddingBottom: theme.spacing(5),
   },
 }));
 const RedesignHeroPanel = (props) => {
