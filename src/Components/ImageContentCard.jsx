@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
   rootStyle: {
     height: 460,
     minWidth: 280,
+    maxWidth: 324,
   },
   cardTextSTyle: {
     padding: 34,
