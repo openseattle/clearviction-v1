@@ -190,6 +190,7 @@ const ContactForm = () => {
               onChange={handleChange}
               variant="standard"
               fullWidth
+              color="#d8d8d8"
             />
             
             <Typography variant="body2" className={classes.labelTextStyle}>
@@ -200,7 +201,7 @@ const ContactForm = () => {
               className={classes.inputStyle}
               label="Enter Your Email Address"
               type="email"
-              color='#bbb'
+              color='#d8d8d8'
               fullWidth
               error={emailError.errorStatus}
               helperText={emailError.errorMessage}
@@ -224,6 +225,7 @@ const ContactForm = () => {
               value={toSend.contact_type}
               onChange={handleChange}
               variant="standard"
+              color="#d8d8d8"
             >
               {contactTypes.map((option) => (
                 <MenuItem key={option.value} value={option.value}>
@@ -247,6 +249,7 @@ const ContactForm = () => {
               name="message"
               onChange={handleChange}
               variant="standard"
+              color="#d8d8d8"
             />
             {/* <SecondaryButton type={"submit"} text={"Send Message"} /> */}
             <Box className={classes.buttonBoxStyle}>
