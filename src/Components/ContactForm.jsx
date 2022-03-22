@@ -251,7 +251,6 @@ const ContactForm = () => {
               variant="standard"
               color="#d8d8d8"
             />
-            {/* <SecondaryButton type={"submit"} text={"Send Message"} /> */}
             <Box className={classes.buttonBoxStyle}>
               <RedesignButtonPrimary type={"submit"}>
                 Send message
@@ -261,8 +260,6 @@ const ContactForm = () => {
           </FormGroup>
         </FormControl>
       </form>
-      {/* </Grid>
-    </Grid> */}
     </Box>
   );
 };
