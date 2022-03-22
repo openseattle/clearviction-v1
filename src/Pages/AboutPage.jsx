@@ -14,7 +14,7 @@ import {
 import map from "../Assets/map.svg";
 import checklist1 from "../Assets/checklist1.svg";
 
-import { useAboutStyles } from '../Styles/useAboutStyles';
+import { useAboutStyles } from "../Styles/useAboutStyles";
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
 
 import team from "../data/teamData";
@@ -46,7 +46,7 @@ const AboutPage = () => {
               <img
                 src={map}
                 className={classes.iconStyle}
-                alt="person using a calculator      "
+                alt="person using a calculator"
               ></img>
             </Grid>
           </Grid>
@@ -62,7 +62,7 @@ const AboutPage = () => {
         />
       </Container>
 
-      <Box className={'roots'}>
+      <Box>
         <Container maxWidth="md" className={classes.regularContainer} id="our-story">
           <Typography variant="h2" className={classes.headingStyle} >
             Our Story
@@ -77,7 +77,7 @@ const AboutPage = () => {
             <Typography variant="subtitle1" className={classes.contentTextStyle}>
               <a
                 href="https://app.leg.wa.gov/billsummary?BillNumber=2890&Year=2017"
-                target='_blank'
+                target="_blank"
                 rel="noreferrer"
                 aria-label="New Hope Act"
                 className={classes.linkTextStyle}
@@ -125,13 +125,13 @@ const AboutPage = () => {
       </Box>
 
       <Container>
-        <Box style={{ width:'90%', margin: '0 auto', }}>
+        <Box style={{ width:"90%", margin:"0 auto", }}>
           <Grid container className={classes.gridStyle} >
             <Grid item sm={12} md={6} className={classes.gridItemStyle}>
               <img
                 src={checklist1}
                 className={classes.iconStyle}
-                alt="person using a calculator      "
+                alt="person using a calculator"
               ></img>
             </Grid>
             <Grid item sm={12} md={6} className={classes.gridItemStyle} >
@@ -148,7 +148,7 @@ const AboutPage = () => {
                 focused on creating a 
                 <a
                 href="https://www.clearviction.org/calculator/"
-                target='_blank'
+                target="_blank"
                 rel="noreferrer"
                 aria-label="Conviction Eligibility Calculator"
                 className={classes.linkTextStyle}
@@ -164,7 +164,7 @@ const AboutPage = () => {
       </Container>
       <hr className={classes.divider} />
 
-      <Box className={classes.regularContainer + ' ' + classes.teamContainer} id="our-team">
+      <Box className={classes.regularContainer +" " + classes.teamContainer} id="our-team">
         <Container maxWidth="lg" >
           <Typography className={classes.headingStyle} variant="h2">
             Our Team
