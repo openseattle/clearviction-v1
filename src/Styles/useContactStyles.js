@@ -27,10 +27,11 @@ export const useContactStyles = makeStyles((theme) => ({
   },
   labelStyle: {
     // width: '100%',
-    
+    marginTop: theme.spacing(4),
     
   },
   labelTextStyle: {
+    display: "inline",
     paddingTop: '35px', 
     fontSize: '16px',
     textTransform: "uppercase",

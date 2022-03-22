@@ -177,85 +177,93 @@ const ContactForm = () => {
           className={classes.formStyle}
         >
           <FormGroup>
+          <FormLabel className={classes.labelStyle} component="legend">
             <Typography variant="body2" className={classes.labelTextStyle}>
               Name
-            </Typography >
-            <TextField
-              id="name"
-              className={classes.inputStyle}
-              label="Enter Your Full Name"
-              required
-              name="from_name"
-              value={toSend.from_name}
-              onChange={handleChange}
-              variant="standard"
-              fullWidth
-              color="#d8d8d8"
-            />
-            
+            </Typography>
+          </FormLabel>
+          <TextField
+            id="name"
+            className={classes.inputStyle}
+            placeholder="Enter Your Full Name"
+            required
+            name="from_name"
+            value={toSend.from_name}
+            onChange={handleChange}
+            variant="standard"
+            fullWidth
+            color="#d8d8d8"
+          />
+          <FormLabel className={classes.labelStyle} component="legend">
             <Typography variant="body2" className={classes.labelTextStyle}>
               Email
             </Typography >
-            <TextField
-              id="email"
-              className={classes.inputStyle}
-              label="Enter Your Email Address"
-              type="email"
-              color='#d8d8d8'
-              fullWidth
-              error={emailError.errorStatus}
-              helperText={emailError.errorMessage}
-              required
-              name="reply_to"
-              value={toSend.reply_to}
-              onChange={handleChange}
-              variant="standard"
-            />
+          </FormLabel>
+    
+          <TextField
+            id="email"
+            className={classes.inputStyle}
+            placeholder="Enter Your Email Address"
+            type="email"
+            color='#d8d8d8'
+            fullWidth
+            error={emailError.errorStatus}
+            helperText={emailError.errorMessage}
+            required
+            name="reply_to"
+            value={toSend.reply_to}
+            onChange={handleChange}
+            variant="standard"
+          />
+          <FormLabel className={classes.labelStyle} component="legend">
             <Typography variant="body2" className={classes.labelTextStyle}>
               I am a(n)
             </Typography >
-            <TextField
-              id="who"
-              className={classes.inputStyle}
-              select
-              label="Please Select An Option"
-              required
-              fullWidth
-              name="contact_type"
-              value={toSend.contact_type}
-              onChange={handleChange}
-              variant="standard"
-              color="#d8d8d8"
-            >
-              {contactTypes.map((option) => (
-                <MenuItem key={option.value} value={option.value}>
-                  {option.label}
-                </MenuItem>
-              ))}
-            </TextField>
-              <Typography variant="body2" className={classes.labelTextStyle}>
-                Your Message
-              </Typography >
-            <TextField
-              id="message"
-              label="Type Your Message Here"
-              className={classes.inputStyle}
-              multiline
-              minRows={4}
-              maxRows={10}
-              value={toSend.message}
-              required
-              fullWidth
-              name="message"
-              onChange={handleChange}
-              variant="standard"
-              color="#d8d8d8"
-            />
-            <Box className={classes.buttonBoxStyle}>
-              <RedesignButtonPrimary type={"submit"}>
-                Send message
-              </RedesignButtonPrimary>
-            </Box>
+          </FormLabel>
+          <TextField
+            id="who"
+            className={classes.inputStyle}
+            select
+            placeholder="Please Select An Option"
+            required
+            fullWidth
+            name="contact_type"
+            value={toSend.contact_type}
+            onChange={handleChange}
+            variant="standard"
+            color="#d8d8d8"
+          >
+            {contactTypes.map((option) => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
+          </TextField>
+          <FormLabel className={classes.labelStyle} component="legend">
+            <Typography variant="body2" className={classes.labelTextStyle}>
+              Your Message
+            </Typography >
+          </FormLabel>
+          <TextField
+            id="message"
+            placeholder="Type Your Message Here"
+            className={classes.inputStyle}
+            multiline
+            minRows={4}
+            maxRows={10}
+            value={toSend.message}
+            required
+            fullWidth
+            name="message"
+            onChange={handleChange}
+            variant="standard"
+            color="#d8d8d8"
+          />
+          <Box className={classes.buttonBoxStyle}>
+            <RedesignButtonPrimary type={"submit"}>
+              Send message
+            </RedesignButtonPrimary>
+          </Box>
             
           </FormGroup>
         </FormControl>
