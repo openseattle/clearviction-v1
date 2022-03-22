@@ -30,7 +30,6 @@ const ContactPage = () => {
                 ></img>
               </Grid>
             </Grid>
-            
           </Box>
         </Container> 
       </Box>
