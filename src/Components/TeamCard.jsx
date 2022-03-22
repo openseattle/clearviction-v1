@@ -9,24 +9,10 @@ import {
   ListItemText,
 } from "@material-ui/core";
 import { LinkedIn } from "@material-ui/icons";
-
-const useStyles = makeStyles({
-  card: {
-    width: 288,
-    height: 368,
-    borderRadius: "6px",
-  },
-  name: {
-    fontWeight: "bold",
-  },
-  avatar: {
-    width: "100%",
-    height: 250,
-  },
-});
+import { useAboutStyles } from '../Styles/useAboutStyles';
 
 const TeamCard = (props) => {
-  const classes = useStyles();
+  const classes = useAboutStyles();
   const { firstName, lastName, role, linkedIn } = props.member;
 
   return (
@@ -40,19 +26,21 @@ const TeamCard = (props) => {
           }.jpg`}
         />
       </CardMedia>
-      <List>
+      <List style= {{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
         <ListItem>
           <ListItemText
             primary={firstName + " " + lastName}
             secondary={role}
-            primaryTypographyProps={{variant: "body1", className: classes.name, noWrap: true }}
-            secondaryTypographyProps={{ variant: "body2", color: "textPrimary" }}
+            primaryTypographyProps={{variant: "h6", className: classes.name, noWrap: true }}
+            secondaryTypographyProps={{ variant: "body2", color: "textPrimary", className: classes.role }}
           />
+        
           <IconButton
             href={linkedIn}
             target="_blank"
             rel="noopener noreferrer"
             size="small"
+            // className={classes.liIcon}
           >
             {linkedIn && <LinkedIn fontSize="large" color="primary" />}
           </IconButton>
