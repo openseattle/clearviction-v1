@@ -1,5 +1,6 @@
 import {
   Card,
+  CardActionArea,
   CardActions,
   CardContent,
   Collapse,
@@ -17,25 +18,24 @@ const FactExpandMoreCard = ({ summary, content }) => {
   };
   return (
     <Card style={{ margin: 8 }}>
-      <CardActions>
-        <CardContent>
-          <Typography variant="subtitle2" align="left">
-            {summary}
-          </Typography>
-        </CardContent>
+      <CardActionArea
+        onClick={handleExpandClick}
+        aria-expanded={expanded}
+        aria-label="show more"
+      >
+        <CardActions>
+          <CardContent>
+            <Typography variant="subtitle2" align="left">
+              {summary}
+            </Typography>
+          </CardContent>
 
-        <IconButton
-          style={{ marginLeft: "auto" }}
-          onClick={handleExpandClick}
-          aria-expanded={expanded}
-          aria-label="show more"
-        >
-          <ExpandMore />
-        </IconButton>
-      </CardActions>
-      <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <CardContent>{content}</CardContent>
-      </Collapse>
+          <ExpandMore style={{ marginLeft: "auto", marginRight: "0.5em" }} />
+        </CardActions>
+        <Collapse in={expanded} timeout="auto" unmountOnExit>
+          <CardContent>{content}</CardContent>
+        </Collapse>
+      </CardActionArea>
     </Card>
   );
 };

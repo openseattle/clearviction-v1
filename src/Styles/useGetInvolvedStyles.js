@@ -29,4 +29,13 @@ export const useGetInvolvedStyles = makeStyles((theme) => ({
   partnerImageStyle: {
     width: "100%",
   },
+  basicListStyle: {
+    listStyleType: "disc",
+    paddingLeft: theme.spacing(3),
+  },
+  paperStyle: {
+    padding: "3em",
+    marginTop: theme.spacing(5),
+    marginBottom: theme.spacing(5),
+  }
 }));

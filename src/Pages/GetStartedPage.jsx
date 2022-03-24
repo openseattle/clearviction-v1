@@ -1,15 +1,22 @@
 import {
   Box,
+  Card,
+  CardContent,
   Container,
   Divider,
   Grid,
   Link,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
   Paper,
   Typography,
 } from "@material-ui/core";
 import { AccountBalance, DateRange, History } from "@material-ui/icons";
 
 import teamBuilding from "../Assets/team_building.svg";
+import humanProfile from "../Assets/human.svg";
 import FactExpandMoreCard from "../Components/FactExpandMoreCard";
 import FactIconGroup from "../Components/FactIconGroup";
 import RedesignHeroPanel from "../Components/RedesignHeroPanel";
@@ -45,7 +52,7 @@ const eligibilityFacts = [
     icon: <AccountBalance {...factsProps} />,
     text: "Pending or new criminal charges & any court orders against you",
   },
-]
+];
 
 // const courtFormsFacts = [{}];
 const GetStartedPage = () => {
@@ -75,25 +82,29 @@ const GetStartedPage = () => {
           </Grid>
         </Grid>
       </RedesignHeroPanel>
-      <Container className={classes.regularContainer} maxwidth="sm">
+      <Container className={classes.regularContainerStyle} maxwidth="sm">
         <ResponsiveJumpButtonGroup
           links={[
             { url: "documents", linkName: "documents" },
             { url: "eilgibility", linkName: "eligibility" },
-            { url: "fourt-filing", linkName: "court filing" },
+            { url: "court-filing", linkName: "court filing" },
             { url: "hearing", linkName: "hearing" },
           ]}
         />
       </Container>
       <Container id="documents" component="section" maxWidth="md">
-        <Typography variant="h2">Step 1: Documents</Typography>
+        <Typography className={classes.headingStyle} variant="h2">
+          Step 1: Documents
+        </Typography>
         <Typography variant="body1">
           Gathering documents is the first step in the process. This includes
           any forms or records that pertain to your conviction. Please gather
           all relevant court forms and get a copy of your Criminal History
           Record Information (CHRI).{" "}
         </Typography>
-        <Typography variant="h3">Court Forms</Typography>
+        <Typography className={classes.headingStyle} variant="h3">
+          Court Forms
+        </Typography>
         <Grid container>
           <Grid item xs={4}>
             <FactExpandMoreCard
@@ -110,74 +121,195 @@ const GetStartedPage = () => {
             />
           </Grid>
         </Grid>
-        <Typography variant="h3">
+        <Typography className={classes.headingStyle} variant="h3">
           Criminal History Record Information (CHRI)
         </Typography>
-        <Typography variant="body1">
+        <Typography className={classes.volunteerTextStyle} variant="body1">
           You might need a copy of your Criminal History Record Information
           (CHRI) to vacate your record. There are two options:
         </Typography>
-        <Paper>
+        <Paper className={classes.paperStyle}>
           <Grid container>
-            <Grid item>
-              <img src="#" alt="" height="100px" />
+            <Grid item xs={12} sm={6}>
+              <img src={humanProfile} alt="" width="100%" />
             </Grid>
-            <Grid item>
+            <Grid item xs={12} sm={6}>
+              <Box display="flex">
+                <Typography className={classes.volunteerTextStyle}>
+                  Get an <Link href="#">“unofficial” copy through WATCH</Link>{" "}
+                  for a $11.00 fee. This report is not always accurate so you
+                  should ask the prosecutor.
+                </Typography>
+              </Box>
+            </Grid>
+          </Grid>
+        </Paper>
+        <Paper className={classes.paperStyle}>
+          <Grid container>
+            <Grid item xs={12} sm={8}>
               <Typography>
-                Get an <Link href="#">“unofficial” copy through WATCH</Link> for
-                a $11.00 fee. This report is not always accurate so you should
-                ask the prosecutor.
+                If the WATCH printout is not good enough, go to your local
+                police or sheriff’s office for an official “record
+                review/challenge” fingerprint card.
+              </Typography>
+              <Typography className={classes.volunteerTextStyle}>
+                Next, write WSP a letter asking them to send an official copy of
+                your complete CHRI. Include the fingerprint card and a $12 money
+                order. A copy of your CHRI will be returned to the address on
+                the fingerprint card. Send everything to:
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <Typography className={classes.volunteerTextStyle} align="right">
+                <Link align="center">
+                  Washington State Patrol <br />
+                  Identification and <br />
+                  Background Section <br />
+                  PO Box 42633 <br />
+                  Olympia WA 98504-2633 <br />
+                </Link>
               </Typography>
             </Grid>
           </Grid>
         </Paper>
-        <Paper>
-          <Typography>
-            If the WATCH printout is not good enough, go to your local police or
-            sheriff’s office for an official “record review/challenge”
-            fingerprint card.
-          </Typography>
-          <Typography>
-            Next, write WSP a letter asking them to send an official copy of
-            your complete CHRI. Include the fingerprint card and a $12 money
-            order. A copy of your CHRI will be returned to the address on the
-            fingerprint card. Send everything to:
-          </Typography>
-          <Link>
-            Washington State Patrol <br />
-            Identification and Background Section <br />
-            PO Box 42633 <br />
-            Olympia WA 98504-2633 <br />
-          </Link>
-        </Paper>
       </Container>
-      <Container maxWidth="md">
-        <Divider className={classes.dividerStyle} />
-      </Container>
+      <Divider className={classes.dividerStyle} />
+
       <Container
         id="eligibility"
         component="section"
         className={classes.regularContainerStyle}
         maxWidth="md"
       >
-        <Typography variant="h2">Step 2: Eligibility</Typography>
-        <Typography>
+        <Typography className={classes.headingStyle} variant="h2">
+          Step 2: Eligibility
+        </Typography>
+        <Typography className={classes.volunteerTextStyle}>
           Once you have your records and forms gathered, use our eligibilty
           calculator to determine whether you are eligible to vacate your
           misdemeanor conviction. It is expected to take 10-30 minutes.
         </Typography>
-        <Typography>
-        You’ll need to know to answer our questions:
+        <Typography className={classes.volunteerTextStyle}>
+          <b>You’ll need to know to answer our questions:</b>
         </Typography>
-        <FactIconGroup facts={eligibilityFacts}/>
+        <FactIconGroup facts={eligibilityFacts} />
       </Container>
       <Container maxWidth="md">
         <Divider className={classes.dividerStyle} />
       </Container>
-      <Container>
-<Typography variant="h2">
-  Step 3: 
-</Typography>
+      <Container id="court-filing" maxWidth="md">
+        <Typography className={classes.headingStyle} variant="h2">
+          Step 3: File with Court
+        </Typography>
+        <Typography className={classes.volunteerTextStyle}>
+          Next, submit a request to have your conviction vacated (refer to court
+          directory). Please note that the request to vacate is up to the
+          discretion of the judge and may be denied for a variety of reasons.
+        </Typography>
+        <Typography className={classes.volunteerTextStyle}>
+          Your request to vacate may be denied if:
+        </Typography>
+        <Grid container>
+          <Grid item xs={12} sm={4}>
+            <Card>
+              <CardContent>
+                <Typography variant="body1" align="center">
+                  The court does not believe that vacating your conviction will
+                  be in the interest of society
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Card>
+              <CardContent>
+                <Typography variant="body1" align="center">
+                  There are inaccuracies in your court records and/or the
+                  application
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Card>
+              <CardContent>
+                <Typography variant="body1" align="center">
+                  You violated probation, have not paid off your fines or are
+                  otherwise not eligible to vacate that conviction
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+        </Grid>
+      </Container>
+      <Container maxWidth="md">
+        <Divider className={classes.dividerStyle} />
+      </Container>
+      <Container
+        id="hearing"
+        className={classes.regularContainerStyle}
+        maxWidth="md"
+      >
+        <Typography className={classes.headingStyle} variant="h2">
+          Step 4: Court Hearing
+        </Typography>
+        <Typography className={classes.volunteerTextStyle}>
+          Last but not least, schedule a hearing with a judge! Below are
+          resources for financial & legal aid.
+        </Typography>
+        <Typography className={classes.headingStyle} variant="h3">
+          Legal aid
+        </Typography>
+        <Typography variant="body1">
+          Many pro bono services are only available after being refered by
+          CLEAR, a toll-free legal hotline:
+        </Typography>
+        <Typography
+          component="ul"
+          variant="body1"
+          className={classes.basicListStyle}
+        >
+          <li>
+            Outside of King County: call 1-888-201-1014 (weekdays 9.15am -
+            12.15pm)
+          </li>
+          <li>In King County: call 2-1-1 (weekdays 8am - 6pm)</li>
+          <li>You can also apply online at CLEAR*Online</li>
+        </Typography>
+
+        <Grid container>
+          <Grid item xs={4}>
+            <FactExpandMoreCard
+              summary="Assistance for Pro Se Patrons"
+              content={
+                <Typography variant="caption">
+                  Public Law Library of King County Legal Clinics (KCLL) (King
+                  County) Walk-In Clinic (WIC) (King County) King County Bar
+                  (King County) Open Door Legal Services (Seattle, Bellevue &
+                  Everett)
+                </Typography>
+              }
+            />
+          </Grid>
+        </Grid>
+        <Typography className={classes.headingStyle} variant="h3">
+          Financial aid
+        </Typography>
+        <Grid container>
+          <Grid item xs={4}>
+            <FactExpandMoreCard
+              summary="Assistance for Pro Se Patrons"
+              content={
+                <Typography variant="caption">
+                  Public Law Library of King County Legal Clinics (KCLL) (King
+                  County) Walk-In Clinic (WIC) (King County) King County Bar
+                  (King County) Open Door Legal Services (Seattle, Bellevue &
+                  Everett)
+                </Typography>
+              }
+            />
+          </Grid>
+        </Grid>
       </Container>
     </>
   );
