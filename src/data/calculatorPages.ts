@@ -956,26 +956,36 @@ const data: Pages = {
     buttons: [
       {
         text: BUTTON_TEXT.YES,
-        href: CALC_PREFIX + "/pro-4",
+        href: CALC_PREFIX + "/pro-3",
       },
       {
         text: BUTTON_TEXT.NO,
-        href: CALC_PREFIX + "/pro-3",
+        href: CALC_PREFIX + "/pro-2",
       },
     ],
     tooltip: TooltipType.NOT_SURE,
   },
-  "pro-3": {
+  "pro-2": {
     header:
-      "Is the prosecutor of your crime applying for conviction vacation on behalf of the state?",
+      "Was the conviction for any of the following offense(s): ",
     progressBar: {
       currentSectionName: SectionName.CONV,
       totalSections: 3,
     },
+    body: [
+      {
+        type: BodyType.LIST,
+        items: [
+          "any misdemeanor or gross misdemeanor violation, including attempt, of: (i) gross obscenity & pornography; (ii) sexual exploitation of children; or (iii) sex offenses, except for failure to register as a sex offender",
+          "alcohol & drug violations under RCW 46.61.5055",
+          "patronizing a prostitute",
+        ],
+      },
+    ],
     buttons: [
       {
         text: BUTTON_TEXT.YES,
-        href: CALC_PREFIX + "/pro-4",
+        href: CALC_PREFIX + "/pro-3",
       },
       {
         text: BUTTON_TEXT.NO,
