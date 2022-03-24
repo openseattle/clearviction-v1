@@ -1033,7 +1033,7 @@ const data: Pages = {
     ],
     tooltip: TooltipType.NOT_SURE,
   },
-  "pro-6": {
+  "pro-5": {
     // here
     header:
       "Has the crime victim penalty assessment, RCW 7.68.035, been paid in full?",
@@ -1044,13 +1044,13 @@ const data: Pages = {
     body: [
       {
         type: BodyType.PARAGRAPH,
-        text: "You will need to provide proof except where the conviction to be vacated is for the crime of prostitution, prostitution loitering, or violation of an order to stay out of areas of prostitution.",
+        text: "You will need to provide proof except where the conviction to be vacated is for the crime of prostitution, prostitution loitering, or staying out of area of prostitution. The 3 mentioned do not require the victim penalty assessment to be paid in full.",
       },
     ],
     buttons: [
       {
         text: BUTTON_TEXT.YES,
-        href: CALC_PREFIX + "/pro-7",
+        href: CALC_PREFIX + "/pro-6",
       },
       {
         text: BUTTON_TEXT.NO,
