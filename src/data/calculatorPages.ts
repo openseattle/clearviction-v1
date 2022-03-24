@@ -1014,9 +1014,9 @@ const data: Pages = {
     ],
     tooltip: TooltipType.NOT_SURE,
   },
-  "pro-5": {
+  "pro-4": {
     header:
-      "Have you been convicted of another crime in the last 3 years/prior to when you will be applying for vacation?",
+      "Have you been convicted of a new crime in this state, another state or federal or tribal court in the last 3 years/prior to when you will be applying for vacation?",
     progressBar: {
       currentSectionName: SectionName.CONV,
       totalSections: 3,
@@ -1028,7 +1028,7 @@ const data: Pages = {
       },
       {
         text: BUTTON_TEXT.NO,
-        href: CALC_PREFIX + "/pro-6",
+        href: CALC_PREFIX + "/pro-5",
       },
     ],
     tooltip: TooltipType.NOT_SURE,
