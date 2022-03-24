@@ -10,6 +10,7 @@ const useStyles = makeStyles({
     width: "flex",
     padding: "10px",
     margin: "10px",
+    borderRadius: "30px",
     textTransform: "none",
     fontSize: "16px",
     "&:hover": {

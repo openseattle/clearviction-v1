@@ -19,6 +19,10 @@ import {
 } from "@material-ui/core";
 import { CVPListItem } from "../ui-kit/ListItem";
 import { BackButton } from "../ui-kit/BackButton";
+import PrimaryButton from "../ui-kit/PrimaryButton";
+import MainBranchTitle from "./Calculator/MainBranchTitle";
+import SpecialCaseTitle from "./Calculator/SpecialCaseTitle";
+import { PageType } from "../data/calculatorPagesTypes";
 
 const BUTTON_COLORS = {
   blue: "#4e6c99",
@@ -37,6 +41,7 @@ const CalculatorPage = () => {
   const {
     header,
     body,
+    type,
     buttons,
     disclaimer,
     tooltip,
@@ -48,52 +53,38 @@ const CalculatorPage = () => {
     buttons.map(({ text, href, color }) => {
       return (
         <Grid container key={text} direction="column" style={{ padding: 10 }}>
-          <Button
+          <PrimaryButton
             onClick={() => trackClick(text)}
-            variant="contained"
             href={href}
-            style={{
-              backgroundColor: BUTTON_COLORS[color || "blue"],
-              color: "var(--white)",
-            }}
-          >
-            <Text text={text} variant={"h6"}></Text>
-          </Button>
+            text={text}
+          />
         </Grid>
       );
     });
 
-  const renderBody = ({ type, text, href, items }) => {
+  const renderBody = (type) => {
+    console.log(type);
     switch (type) {
-      case "paragraph":
-        return <Text key={text} text={text} variant={"h4"} />;
-      case "link":
+      case PageType.MAIN:
         return (
-          <List>
-            <CVPListItem
-              isLink={true}
-              useBulletPoint={true}
-              text={text}
-              href={href}
-              onClick={() => trackClick(text)}
-            />
-          </List>
+          <MainBranchTitle
+            header={header}
+            body={body[0].text}
+            buttonText={buttons[0].text}
+            buttonHref={buttons[0].href}
+          />
         );
-      case "list":
+      case PageType.SPECIAL:
         return (
-          <List>
-            {items.map((item) => (
-              <CVPListItem isLink={false} useBulletPoint={true} text={item} />
-            ))}
-          </List>
+          <SpecialCaseTitle
+            header={header}
+            body={body}
+            buttonText={buttons[0].text}
+            buttonHref={buttons[0].href}
+          />
         );
-      case "heading":
-        return <Text text={text} variant={"h3"} />;
-      default:
-        break;
     }
   };
-
   return (
     <Box
       sx={{
@@ -113,24 +104,23 @@ const CalculatorPage = () => {
           we can probably do this cleaner by creating a more formal standalone 
           quick start page that can launch the calculator rather than having it 
           share interface with the calculator.*/}
-          {!["/calculator/landing-0", "/calculator/landing-1"].includes(
+          {/* {!["/calculator/landing-0", "/calculator/landing-1"].includes(
             pathname
           ) && (
             <Grid item>
               <BackButton variant="text" />
             </Grid>
-          )}
+          )} */}
 
-          {header && <Text text={header} variant={"h3"}></Text>}
-          {body && <>{body.map(renderBody)}</>}
-          {buttons && renderButtons(buttons)}
-          {showRestartButton && <RestartButton />}
-          {tooltip && <ToolTipModal text={tooltip} />}
-          {disclaimer && (
+          {body && renderBody(type)}
+          {/* {buttons && renderButtons(buttons)} */}
+          {/* {showRestartButton && <RestartButton />} */}
+          {/* {tooltip && <ToolTipModal text={tooltip} />} */}
+          {/* {disclaimer && (
             <Container className="disclaimer">
               <Typography variant="h6">{disclaimer}</Typography>
             </Container>
-          )}
+          )} */}
         </Grid>
       </Container>
     </Box>

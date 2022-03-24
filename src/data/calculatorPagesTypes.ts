@@ -10,6 +10,12 @@ interface PageData {
   disclaimer?: string;
   progressBar?: ProgressBar;
   showRestartButton?: boolean;
+  type?: PageType;
+}
+
+export enum PageType {
+  MAIN = "main",
+  SPECIAL = "special"
 }
 
 export enum SectionName {

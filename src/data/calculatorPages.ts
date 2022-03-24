@@ -12,6 +12,7 @@ import {
   TooltipType,
   BUTTON_TEXT,
   SectionName,
+  PageType,
 } from "./calculatorPagesTypes";
 
 const CALC_PREFIX = "/calculator";
@@ -23,6 +24,7 @@ const CANT_DETERMINE_FEEDBACK_FORM_LINK = "https://docs.google.com/forms/d/e/1FA
 
 const data: Pages = {
   "landing-0": {
+    type: PageType.MAIN,
     header: "Misdemeanor Calculator",
     body: [
       {
@@ -134,13 +136,13 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "mar-0": {
-    header:
-      "You may be eligible for conviction vacation based on a special clause in conviction vacation eligibility law.",
-    progressBar: {
-      currentSectionName: SectionName.CONV,
-      totalSections: 3,
-    },
+    type: PageType.SPECIAL,
+    header: "Possession of Marijuana",
     body: [
+      {
+        type: BodyType.PARAGRAPH,
+        text: "You may be eligible for conviction vacation based on a special clause in conviction vacation eligibility law.",
+      },
       {
         type: BodyType.LINK,
         text: "RCW 9.96.060(5)",
