@@ -930,13 +930,13 @@ const data: Pages = {
     buttons: [
       {
         text: BUTTON_TEXT.CONTINUE,
-        href: CALC_PREFIX + "/pro-2",
+        href: CALC_PREFIX + "/pro-1",
       },
     ],
   },
-  "pro-2": {
+  "pro-1": {
     header:
-      "Was the conviction a result of being a victim of one of the following:",
+      "Was the conviction a result of being a victim of one of the following?:",
     progressBar: {
       currentSectionName: SectionName.CONV,
       totalSections: 3,
@@ -945,9 +945,11 @@ const data: Pages = {
       {
         type: BodyType.LIST,
         items: [
-          "Human trafficking",
-          "First-degree promotion of prostitution",
-          "Promotion of commercial sexual abuse of a minor",
+          "Sex trafficking",
+          "Prostitution",
+          "Commercial sexual abuse of a minor",
+          "Sexual Assault",
+          "Domestic Violence",
         ],
       },
     ],
