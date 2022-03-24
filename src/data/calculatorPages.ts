@@ -930,28 +930,9 @@ const data: Pages = {
     buttons: [
       {
         text: BUTTON_TEXT.CONTINUE,
-        href: CALC_PREFIX + "/pro-1",
-      },
-    ],
-  },
-  "pro-1": {
-    header:
-      "Were you convicted of a crime involving prostitution? OR are you a family member of a homicide victim seeking to vacate the deceased victim's prostitution conviction?",
-    progressBar: {
-      currentSectionName: SectionName.CONV,
-      totalSections: 3,
-    },
-    buttons: [
-      {
-        text: BUTTON_TEXT.YES,
         href: CALC_PREFIX + "/pro-2",
       },
-      {
-        text: BUTTON_TEXT.NO,
-        href: CALC_PREFIX + "/pro-ineligible-3",
-      },
     ],
-    tooltip: TooltipType.NOT_SURE,
   },
   "pro-2": {
     header:
