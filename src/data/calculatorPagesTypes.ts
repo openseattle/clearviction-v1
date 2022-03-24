@@ -15,7 +15,9 @@ interface PageData {
 
 export enum PageType {
   MAIN = "main",
-  SPECIAL = "special"
+  SPECIAL = "special",
+  QUESTION = "question",
+  END = "end"
 }
 
 export enum SectionName {

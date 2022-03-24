@@ -17,14 +17,13 @@ import {
 
 const CALC_PREFIX = "/calculator";
 const disclaimer =
-  "The information provided by the Conviction Vacation Project is not intended to replace legal advice and does not in any way constitute an attorney-client relationship. If you need legal advice or assistance, we strongly recommend that you reach out to a licensed professional.";
+  "The information provided by the Clearviction is not intended to replace legal advice and does not in any way constitute an attorney-client relationship. If you need legal advice or assistance, we strongly recommend that you reach out to a licensed professional.";
 const FEEDBACK_BUTTON_TEXT = "Give us your feedback";
 const ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSfzyLZsbS7K_yWS9leCMBU7UXgiww2PQqOdfh_V_4AcnZnKbw/viewform?usp=sf_link";
 const CANT_DETERMINE_FEEDBACK_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSfW38-q4SDs0TzFolDrHr15dY9W8sYUYmkvPiYR30SeXk_Ieg/viewform?usp=sf_link";
 
 const data: Pages = {
   "landing-0": {
-    type: PageType.MAIN,
     header: "Misdemeanor Calculator",
     body: [
       {
@@ -136,7 +135,6 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "mar-0": {
-    type: PageType.SPECIAL,
     header: "Possession of Marijuana",
     body: [
       {
@@ -166,6 +164,12 @@ const data: Pages = {
   },
   "mar-1": {
     header: "Did this offense involve possession of marijuana?",
+    body: [
+      {
+        type: BodyType.PARAGRAPH,
+        text: "Did this offense involve possession of marijuana?",
+      }
+    ],
     progressBar: {
       currentSectionName: SectionName.CONV,
       totalSections: 3,
@@ -1041,7 +1045,7 @@ const data: Pages = {
     ],
     tooltip: TooltipType.NOT_SURE,
   },
-  "pro-6": { // here
+  "pro-6": { 
     header:
       "Has the crime victim penalty assessment, RCW 7.68.035, been paid in full?",
     progressBar: {
@@ -1585,6 +1589,175 @@ const data: Pages = {
     ],
     showRestartButton: true,
     disclaimer,
+  },
+  // these are not actual screens but used for testing the visual UI of the calc redesign
+  "end-1": {
+    type: PageType.END,
+    header: "Our calculator can't determine your conviction's eligibility",
+    body: [
+      {
+        type: BodyType.PARAGRAPH,
+        text: "Right now, our calculator is only able to help with misdemeanor convictions.",
+      },
+      {
+        type: BodyType.PARAGRAPH,
+        text: "We would love to get your feedback as we continue building our calculator, so we can learn more on how to improve it.",
+      }
+    ],
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
+    ],
+    showRestartButton: true,
+    disclaimer,
+  },
+  "end-2": {
+    type: PageType.END,
+    header: "Your Conviction: Not Eligible to Vacate",
+    body: [
+      {
+        type: BodyType.PARAGRAPH,
+        text: "Based on your answers, it appears that your conviction is not eligible to vacate.",
+      },
+      {
+        type: BodyType.PARAGRAPH,
+        text: "This is because your conviction is classified as a violent offense, defined in RCW 9.94A.030.",
+      }
+    ],
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
+    ],
+    showRestartButton: true,
+    disclaimer,
+  },
+  "end-3": {
+    type: PageType.END,
+    header: "Your Conviction: Not Eligible to Vacate Right Now",
+    body: [
+      {
+        type: BodyType.PARAGRAPH,
+        text: "Based on your answers, it appears that your conviction is not eligible to vacate right now.",
+      },
+      {
+        type: BodyType.PARAGRAPH,
+        text: "Your conviction might be eligible to vacate when 10 years have passed since your prior offense. It also must meet all other requirements.",
+      }
+    ],
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
+    ],
+    showRestartButton: true,
+    disclaimer,
+  },
+  "end-4": {
+    type: PageType.END,
+    header: "Your Conviction May Be Eligible to Vacate!",
+    body: [
+      {
+        type: BodyType.PARAGRAPH,
+        text: "Based on your answers, it appears that your conviction may be eligible to vacate!",
+      },
+      {
+        type: BodyType.PARAGRAPH,
+        text: "Next steps:",
+      },
+      {
+        type: BodyType.LIST,
+        items: [
+          "Fill out a “Petition and Declaration for Order Vacating Conviction” (CrRLJ 09.0100).",
+          "See instructions for vacating a conviction in form CrRLJ 09.0300.",
+          "Read more about misdemeanor conviction vacation here."
+        ]
+      }
+    ],
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+      }
+    ],
+    showRestartButton: true,
+    disclaimer,
+  },
+  "sc-1": {
+    type: PageType.SPECIAL,
+    header: "Possession of Marijuana",
+    body: [
+      {
+        type: BodyType.PARAGRAPH,
+        text: "Your conviction may be eligible to vacate based on a special clause in RCW 9.96.060(5).",
+      },
+      {
+        type: BodyType.PARAGRAPH,
+        text: "This clause applies to certain marijuana misdemeanors for possession of 40 grams or less.",
+      },
+      {
+        type: BodyType.PARAGRAPH,
+        text: "We will ask you 1-4 questions to determine whether your conviction is eligible under this special clause."
+      }
+    ],
+    buttons: [
+      {
+        text: BUTTON_TEXT.CONTINUE,
+        href: "/"
+      }
+    ],
+  },
+  "sc-2": {
+    type: PageType.SPECIAL,
+    header: "Violation of Fishing Regulation",
+    body: [
+      {
+        type: BodyType.PARAGRAPH,
+        text: "Your conviction may be eligible to vacate based on a special clause in RCW 9.96.060(4).",
+      },
+      {
+        type: BodyType.PARAGRAPH,
+        text: "This clause applies to people who claimed to be exercising a treaty Indian fishing right.",
+      },
+      {
+        type: BodyType.PARAGRAPH,
+        text: "We will ask you a few questions to determine whether your conviction is eligible under this special clause."
+      }
+    ],
+    buttons: [
+      {
+        text: BUTTON_TEXT.CONTINUE,
+        href: "/"
+      }
+    ],
+  },
+  "sc-3": {
+    type: PageType.SPECIAL,
+    header: "Prostitution",
+    body: [
+      {
+        type: BodyType.PARAGRAPH,
+        text: "Your conviction may be eligible to vacate based on a special clause in RCW 9.96.060(3).",
+      },
+      {
+        type: BodyType.PARAGRAPH,
+        text: "This clause applies to victims of prostitution, sex trafficking, and similar crimes.",
+      },
+      {
+        type: BodyType.PARAGRAPH,
+        text: "We will ask you a few questions to determine whether your conviction is eligible under this special clause."
+      }
+    ],
+    buttons: [
+      {
+        text: BUTTON_TEXT.CONTINUE,
+        href: "/"
+      }
+    ],
   },
 };
 

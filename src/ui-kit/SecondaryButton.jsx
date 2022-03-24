@@ -5,13 +5,14 @@ const useStyles = makeStyles({
     flex: "1",
   },
   button: {
-    backgroundColor: "var(--light-blue)",
-    color: "#ffffff",
-    width: "flex",
+    backgroundColor: "#ffffff",
+    color: "var(--light-blue)",
     padding: "10px",
+    textTransform: "uppercase",
     margin: "10px",
+    border: "var(--light-blue) solid",
+    width: "30vw",
     borderRadius: "30px",
-    textTransform: "none",
     fontSize: "16px",
     "&:hover": {
       backgroundColor: "#3b5173",
@@ -20,7 +21,13 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SecondaryButton({ text, type, linkTo, externalLink }) {
+export default function SecondaryButton({
+  text,
+  type,
+  linkTo,
+  externalLink,
+  onClick,
+}) {
   const classes = useStyles();
   return externalLink ? (
     <Button
@@ -33,7 +40,12 @@ export default function SecondaryButton({ text, type, linkTo, externalLink }) {
       {text}
     </Button>
   ) : (
-    <Button href={linkTo} type={type} className={classes.button}>
+    <Button
+      href={linkTo}
+      onClick={onClick}
+      type={type}
+      className={classes.button}
+    >
       {text}
     </Button>
   );
