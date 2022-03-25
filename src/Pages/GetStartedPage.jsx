@@ -1,15 +1,11 @@
 import {
   Box,
-  Card,
-  CardContent,
+
   Container,
   Divider,
   Grid,
   Link,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
+
   Paper,
   Typography,
 } from "@material-ui/core";
@@ -25,6 +21,7 @@ import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import FactSimpleCard from "../Components/FactSimpleCard";
 import CourtFormsFactGroup from "../Subpages/GetStarted/CourtFormsFactGroup";
+import LegalAidServices from "../Subpages/GetStarted/LegalAidServices";
 
 const factsProps = {
   style: { fontSize: 54 },
@@ -244,21 +241,7 @@ const GetStartedPage = () => {
           <li>You can also apply online at CLEAR*Online</li>
         </Typography>
 
-        <Grid container>
-          <Grid item xs={4}>
-            <FactExpandMoreCard
-              summary="Assistance for Pro Se Patrons"
-              content={
-                <Typography variant="caption">
-                  Public Law Library of King County Legal Clinics (KCLL) (King
-                  County) Walk-In Clinic (WIC) (King County) King County Bar
-                  (King County) Open Door Legal Services (Seattle, Bellevue &
-                  Everett)
-                </Typography>
-              }
-            />
-          </Grid>
-        </Grid>
+        <LegalAidServices />
         <Typography className={classes.headingStyle} variant="h3">
           Financial aid
         </Typography>

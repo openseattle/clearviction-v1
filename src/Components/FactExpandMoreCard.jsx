@@ -43,10 +43,10 @@ const FactExpandMoreCard = ({ summary, content }) => {
 
           <ExpandMore style={{ marginLeft: "auto", marginRight: "1em" }} />
         </CardActions>
-        <Collapse in={expanded} timeout="auto" unmountOnExit>
-          <CardContent>{content}</CardContent>
-        </Collapse>
       </CardActionArea>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <CardContent>{content}</CardContent>
+      </Collapse>
     </Card>
   );
 };
