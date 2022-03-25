@@ -22,15 +22,9 @@ import FactIconGroup from "../Components/FactIconGroup";
 import RedesignHeroPanel from "../Components/RedesignHeroPanel";
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
 import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
-import { ExternalLink } from "../ui-kit/ExternalLink";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import FactSimpleCard from "../Components/FactSimpleCard";
-
-const vacationPacket = (text) => (
-  <ExternalLink href="https://www.washingtonlawhelp.org/files/C9D2EA3F-0350-D9AF-ACAE-BF37E9BC9FFA/attachments/21968678-A4F9-42E5-BA32-58826390C62D/8705en_get-misdemeanor-convictions-off-criminal-record.pdf">
-    {text}
-  </ExternalLink>
-);
+import CourtFormsFactGroup from "../Subpages/GetStarted/CourtFormsFactGroup";
 
 const factsProps = {
   style: { fontSize: 54 },
@@ -55,7 +49,6 @@ const eligibilityFacts = [
   },
 ];
 
-// const courtFormsFacts = [{}];
 const GetStartedPage = () => {
   const classes = useGetInvolvedStyles();
   return (
@@ -106,22 +99,7 @@ const GetStartedPage = () => {
         <Typography className={classes.headingStyle} variant="h3">
           Court Forms
         </Typography>
-        <Grid container>
-          <Grid item xs={4}>
-            <FactExpandMoreCard
-              summary="(Gross) Misdemeanor Convictions"
-              content={
-                <Typography variant="caption">
-                  {vacationPacket(
-                    "Vacation packet from Northwest Justice Project"
-                  )}{" "}
-                  with details about the eligibility to vacate (p. 2-4) and the
-                  needed court forms (p. 5-13).
-                </Typography>
-              }
-            />
-          </Grid>
-        </Grid>
+        <CourtFormsFactGroup />
         <Typography className={classes.headingStyle} variant="h3">
           Criminal History Record Information (CHRI)
         </Typography>
