@@ -12,7 +12,7 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(3),
   },
   heroSubtitle: {
-    maxWidth: 502,
+    maxWidth: "27em",
     paddingTop: theme.spacing(2),
     paddingBottom: theme.spacing(5),
   },
