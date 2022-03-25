@@ -18,8 +18,10 @@ const CALC_PREFIX = "/calculator";
 const disclaimer =
   "The information provided by the Conviction Vacation Project is not intended to replace legal advice and does not in any way constitute an attorney-client relationship. If you need legal advice or assistance, we strongly recommend that you reach out to a licensed professional.";
 const FEEDBACK_BUTTON_TEXT = "Give us your feedback";
-const ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSfzyLZsbS7K_yWS9leCMBU7UXgiww2PQqOdfh_V_4AcnZnKbw/viewform?usp=sf_link";
-const CANT_DETERMINE_FEEDBACK_FORM_LINK = "https://docs.google.com/forms/d/e/1FAIpQLSfW38-q4SDs0TzFolDrHr15dY9W8sYUYmkvPiYR30SeXk_Ieg/viewform?usp=sf_link";
+const ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK =
+  "https://docs.google.com/forms/d/e/1FAIpQLSfzyLZsbS7K_yWS9leCMBU7UXgiww2PQqOdfh_V_4AcnZnKbw/viewform?usp=sf_link";
+const CANT_DETERMINE_FEEDBACK_FORM_LINK =
+  "https://docs.google.com/forms/d/e/1FAIpQLSfW38-q4SDs0TzFolDrHr15dY9W8sYUYmkvPiYR30SeXk_Ieg/viewform?usp=sf_link";
 
 const data: Pages = {
   "landing-0": {
@@ -91,10 +93,10 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: CANT_DETERMINE_FEEDBACK_FORM_LINK
-      }
+        href: CANT_DETERMINE_FEEDBACK_FORM_LINK,
+      },
     ],
-    showRestartButton: true
+    showRestartButton: true,
   },
   "landing-2": {
     header: "Was this offense a misdemeanor?",
@@ -238,14 +240,14 @@ const data: Pages = {
   "mar-ineligible-0": {
     header:
       "As of now, it seems that you may NOT be eligible to vacate your marijuana misdemeanor conviction because you have not completed the terms of your offense.",
-      buttons: [
-        {
-          text: FEEDBACK_BUTTON_TEXT,
-          href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
-        }
-      ],
-      showRestartButton: true,
-      disclaimer,
+    buttons: [
+      {
+        text: FEEDBACK_BUTTON_TEXT,
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+      },
+    ],
+    showRestartButton: true,
+    disclaimer,
   },
   "mar-eligible-0": {
     header:
@@ -313,8 +315,8 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
-      }
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+      },
     ],
     showRestartButton: true,
     disclaimer,
@@ -325,8 +327,8 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
-      }
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+      },
     ],
     showRestartButton: true,
     disclaimer,
@@ -400,8 +402,8 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
-      }
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+      },
     ],
     showRestartButton: true,
     disclaimer,
@@ -464,8 +466,8 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
-      }
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+      },
     ],
     showRestartButton: true,
     disclaimer,
@@ -578,8 +580,8 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
-      }
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+      },
     ],
     showRestartButton: true,
     disclaimer,
@@ -590,8 +592,8 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
-      }
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+      },
     ],
     showRestartButton: true,
     disclaimer,
@@ -627,8 +629,8 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
-      }
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+      },
     ],
     showRestartButton: true,
     disclaimer,
@@ -684,8 +686,8 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
-      }
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+      },
     ],
     showRestartButton: true,
     disclaimer,
@@ -721,8 +723,8 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
-      }
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+      },
     ],
     showRestartButton: true,
     disclaimer,
@@ -883,8 +885,8 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
-      }
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+      },
     ],
     showRestartButton: true,
     disclaimer,
@@ -930,13 +932,13 @@ const data: Pages = {
     buttons: [
       {
         text: BUTTON_TEXT.CONTINUE,
-        href: CALC_PREFIX + "/pro-2",
+        href: CALC_PREFIX + "/pro-1",
       },
     ],
   },
-  "pro-2": {
+  "pro-1": {
     header:
-      "Was the conviction a result of being a victim of one of the following:",
+      "Was the conviction a result of being a victim of one of the following?:",
     progressBar: {
       currentSectionName: SectionName.CONV,
       totalSections: 3,
@@ -945,35 +947,46 @@ const data: Pages = {
       {
         type: BodyType.LIST,
         items: [
-          "Human trafficking",
-          "First-degree promotion of prostitution",
-          "Promotion of commercial sexual abuse of a minor",
+          "Sex trafficking",
+          "Prostitution",
+          "Commercial sexual abuse of a minor",
+          "Sexual Assault",
+          "Domestic Violence",
         ],
       },
     ],
     buttons: [
       {
         text: BUTTON_TEXT.YES,
-        href: CALC_PREFIX + "/pro-4",
+        href: CALC_PREFIX + "/pro-3",
       },
       {
         text: BUTTON_TEXT.NO,
-        href: CALC_PREFIX + "/pro-3",
+        href: CALC_PREFIX + "/pro-2",
       },
     ],
     tooltip: TooltipType.NOT_SURE,
   },
-  "pro-3": {
-    header:
-      "Is the prosecutor of your crime applying for conviction vacation on behalf of the state?",
+  "pro-2": {
+    header: "Was the conviction for any of the following offense(s): ",
     progressBar: {
       currentSectionName: SectionName.CONV,
       totalSections: 3,
     },
+    body: [
+      {
+        type: BodyType.LIST,
+        items: [
+          "any misdemeanor or gross misdemeanor violation, including attempt, of: (i) gross obscenity & pornography; (ii) sexual exploitation of children; or (iii) sex offenses, except for failure to register as a sex offender",
+          "alcohol & drug violations under RCW 46.61.5055",
+          "patronizing a prostitute",
+        ],
+      },
+    ],
     buttons: [
       {
         text: BUTTON_TEXT.YES,
-        href: CALC_PREFIX + "/pro-4",
+        href: CALC_PREFIX + "/pro-3",
       },
       {
         text: BUTTON_TEXT.NO,
@@ -982,9 +995,9 @@ const data: Pages = {
     ],
     tooltip: TooltipType.NOT_SURE,
   },
-  "pro-4": {
+  "pro-3": {
     header:
-      "Do you have charges pending in this state or any other state other than for prostitution?",
+      "Do you have charges pending in this state or any other state, or in any federal court for any crime other than prostitution?",
     progressBar: {
       currentSectionName: SectionName.CONV,
       totalSections: 3,
@@ -996,14 +1009,14 @@ const data: Pages = {
       },
       {
         text: BUTTON_TEXT.NO,
-        href: CALC_PREFIX + "/pro-5",
+        href: CALC_PREFIX + "/pro-4",
       },
     ],
     tooltip: TooltipType.NOT_SURE,
   },
-  "pro-5": {
+  "pro-4": {
     header:
-      "Have you been convicted of another crime in the last 3 years/prior to when you will be applying for vacation?",
+      "Have you been convicted of a new crime in this state, another state or federal or tribal court in the last 3 years/prior to when you will be applying for vacation?",
     progressBar: {
       currentSectionName: SectionName.CONV,
       totalSections: 3,
@@ -1015,12 +1028,13 @@ const data: Pages = {
       },
       {
         text: BUTTON_TEXT.NO,
-        href: CALC_PREFIX + "/pro-6",
+        href: CALC_PREFIX + "/pro-5",
       },
     ],
     tooltip: TooltipType.NOT_SURE,
   },
-  "pro-6": { // here
+  "pro-5": {
+    // here
     header:
       "Has the crime victim penalty assessment, RCW 7.68.035, been paid in full?",
     progressBar: {
@@ -1030,13 +1044,13 @@ const data: Pages = {
     body: [
       {
         type: BodyType.PARAGRAPH,
-        text: "You will need to provide proof except where the conviction to be vacated is for the crime of prostitution, prostitution loitering, or violation of an order to stay out of areas of prostitution.",
+        text: "You will need to provide proof except where the conviction to be vacated is for the crime of prostitution, prostitution loitering, or staying out of area of prostitution. The 3 mentioned do not require the victim penalty assessment to be paid in full.",
       },
     ],
     buttons: [
       {
         text: BUTTON_TEXT.YES,
-        href: CALC_PREFIX + "/pro-7",
+        href: CALC_PREFIX + "/pro-6",
       },
       {
         text: BUTTON_TEXT.NO,
@@ -1045,7 +1059,7 @@ const data: Pages = {
     ],
     tooltip: TooltipType.NOT_SURE,
   },
-  "pro-7": {
+  "pro-6": {
     header:
       "If applicable, has restitution owed to any victim, excluding restitution owed to any insurance provider under Title 48 RCW, been paid in full?",
     progressBar: {
@@ -1093,7 +1107,7 @@ const data: Pages = {
       },
       {
         type: BodyType.LINK,
-        text: "RCW 9.96.070",
+        text: " RCW 9.96.080",
         href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.96.060",
       },
       {
@@ -1135,8 +1149,8 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
-      }
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+      },
     ],
     showRestartButton: true,
     disclaimer,
@@ -1147,8 +1161,8 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
-      }
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+      },
     ],
     showRestartButton: true,
     disclaimer,
@@ -1158,8 +1172,8 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
-      }
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+      },
     ],
     showRestartButton: true,
     disclaimer,
@@ -1170,8 +1184,8 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
-      }
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+      },
     ],
     showRestartButton: true,
     disclaimer,
@@ -1327,8 +1341,8 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
-      }
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+      },
     ],
     showRestartButton: true,
     disclaimer,
@@ -1351,8 +1365,8 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
-      }
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+      },
     ],
     showRestartButton: true,
     disclaimer,
@@ -1375,8 +1389,8 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
-      }
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+      },
     ],
     showRestartButton: true,
     disclaimer,
@@ -1402,8 +1416,8 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
-      }
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+      },
     ],
     showRestartButton: true,
     disclaimer,
@@ -1427,8 +1441,8 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
-      }
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+      },
     ],
     showRestartButton: true,
     disclaimer,
@@ -1533,8 +1547,8 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
-      }
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+      },
     ],
     showRestartButton: true,
     disclaimer,
@@ -1546,8 +1560,8 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
-      }
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+      },
     ],
     showRestartButton: true,
     disclaimer,
@@ -1559,8 +1573,8 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
-      }
+        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+      },
     ],
     showRestartButton: true,
     disclaimer,
