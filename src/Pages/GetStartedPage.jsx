@@ -24,6 +24,7 @@ import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
 import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
 import { ExternalLink } from "../ui-kit/ExternalLink";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
+import FactSimpleCard from "../Components/FactSimpleCard";
 
 const vacationPacket = (text) => (
   <ExternalLink href="https://www.washingtonlawhelp.org/files/C9D2EA3F-0350-D9AF-ACAE-BF37E9BC9FFA/attachments/21968678-A4F9-42E5-BA32-58826390C62D/8705en_get-misdemeanor-convictions-off-criminal-record.pdf">
@@ -210,35 +211,23 @@ const GetStartedPage = () => {
           Your request to vacate may be denied if:
         </Typography>
         <Grid container>
-          <Grid item xs={12} sm={4}>
-            <Card>
-              <CardContent>
-                <Typography variant="body1" align="center">
-                  The court does not believe that vacating your conviction will
-                  be in the interest of society
-                </Typography>
-              </CardContent>
-            </Card>
+          <Grid item xs={12} sm={12} md={4}>
+            <FactSimpleCard>
+              The court does not believe that vacating your conviction will be
+              in the interest of society
+            </FactSimpleCard>
           </Grid>
-          <Grid item xs={12} sm={4}>
-            <Card>
-              <CardContent>
-                <Typography variant="body1" align="center">
-                  There are inaccuracies in your court records and/or the
-                  application
-                </Typography>
-              </CardContent>
-            </Card>
+          <Grid item xs={12} sm={12} md={4}>
+            <FactSimpleCard>
+              There are inaccuracies in your court records and/or the
+              application
+            </FactSimpleCard>
           </Grid>
-          <Grid item xs={12} sm={4}>
-            <Card>
-              <CardContent>
-                <Typography variant="body1" align="center">
-                  You violated probation, have not paid off your fines or are
-                  otherwise not eligible to vacate that conviction
-                </Typography>
-              </CardContent>
-            </Card>
+          <Grid item xs={12} sm={12} md={4}>
+            <FactSimpleCard>
+              You violated probation, have not paid off your fines or are
+              otherwise not eligible to vacate that conviction
+            </FactSimpleCard>
           </Grid>
         </Grid>
       </Container>
