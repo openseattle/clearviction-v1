@@ -11,7 +11,7 @@ import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 
 const factsProps = {
-  style: { fontSize: 54 },
+  style: { fontSize: "3em" },
   color: "secondary",
 };
 

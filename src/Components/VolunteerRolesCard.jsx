@@ -2,7 +2,7 @@ import { Box, Card, makeStyles, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   roleRootStyle: {
-    maxWidth: 360,
+    maxWidth: "16em",
     margin: theme.spacing(2),
     paddingTop: theme.spacing(5),
     paddingBottom: theme.spacing(8),
