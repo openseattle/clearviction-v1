@@ -1,7 +1,6 @@
 import {
   Avatar,
   Card,
-  makeStyles,
   IconButton,
   CardMedia,
   List,
@@ -24,9 +23,10 @@ const TeamCard = (props) => {
           src={`https://cvp-team-photos.s3.us-west-2.amazonaws.com/${
             firstName + lastName
           }.jpg`}
+          alt={firstName + " " + lastName + " headshot"}
         />
       </CardMedia>
-      <List style= {{ display: 'flex', flexDirection: 'row', justifyContent: 'space-between' }}>
+      <List className={classes.listStyle} >
         <ListItem>
           <ListItemText
             primary={firstName + " " + lastName}

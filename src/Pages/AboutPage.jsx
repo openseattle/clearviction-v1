@@ -45,7 +45,7 @@ const AboutPage = () => {
             <Grid item xs={12} sm={6} md={6} >
               <img
                 src={map}
-                className={classes.iconStyle}
+                className={classes.iconStyle + " " + classes.centerText}
                 alt="person using a calculator"
               ></img>
             </Grid>
@@ -89,7 +89,7 @@ const AboutPage = () => {
               vacating a conviction is very convoluted, making it difficult for most people to navigate:
             </Typography>
 
-            <Grid container className={classes.gridStyle}>
+            <Grid container className={classes.gridStyle + " " + classes.centerText}>
               <Grid item md={4} className={classes.gridItemStyle}>
                 <HourglassEmpty className={classes.theProblemIcon} />
                 <Typography variant="subtitle1">
@@ -135,17 +135,17 @@ const AboutPage = () => {
               ></img>
             </Grid>
             <Grid item sm={12} md={6} className={classes.gridItemStyle} >
-              <Typography variant="h4">
+              <Typography variant="h4" className={classes.headingSpacing}>
                 Our mission is to benefit individuals 
                 with criminal convictions and decrease life-long 
                 collateral consequences.
               </Typography>
               <Typography
-                
                 variant="subtitle1"
+                className={classes.spaceAfter}
               >
                 To support this mission, we first 
-                focused on creating a 
+                focused on creating a&nbsp;
                 <a
                 href="https://www.clearviction.org/calculator/"
                 target="_blank"
