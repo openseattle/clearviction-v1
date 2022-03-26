@@ -1,52 +1,16 @@
 import { useState } from "react";
 import {
   TextField,
-  Grid,
   MenuItem,
-  makeStyles,
   FormControl,
   FormGroup,
   FormLabel,
   Box
 } from "@material-ui/core";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary"
-// import SecondaryButton from "../ui-kit/SecondaryButton";
 import { send } from "@emailjs/browser";
 import { useContactStyles } from "../Styles/useContactStyles";
 import { Typography } from "@material-ui/core";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  inputStyle: {
-    width: "100%",
-    color: "#000000",
-    padding: "10px",
-  },
-  labelStyle: {
-    width: "100%",
-    padding: "10px",
-    fontSize: "1em",
-    color: "var(--black)",
-  },
-  multilineInputStyle: {
-    backgroundColor: "var(--dark-blue)",
-    color: "var(--white)",
-  },
-  formStyle: {
-    width: "800px",
-    padding: "10px",
-  },
-  [theme.breakpoints.down("sm")]: {
-    formStyle: {
-      width: "100%",
-      padding: "10px",
-    },
-  },
-}));
 
 const ContactForm = () => {
   const classes = useContactStyles();
