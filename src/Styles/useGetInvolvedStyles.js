@@ -32,6 +32,7 @@ export const useGetInvolvedStyles = makeStyles((theme) => ({
   basicListStyle: {
     listStyleType: "disc",
     paddingLeft: theme.spacing(3),
+    marginBottom: theme.spacing(3),
   },
   paperStyle: {
     padding: "3em",

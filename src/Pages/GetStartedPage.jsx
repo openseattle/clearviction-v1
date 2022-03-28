@@ -22,6 +22,7 @@ import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import FactSimpleCard from "../Components/FactSimpleCard";
 import CourtFormsFactGroup from "../Subpages/GetStarted/CourtFormsFactGroup";
 import LegalAidServices from "../Subpages/GetStarted/LegalAidServices";
+import FinancialAidServices from "../Subpages/GetStarted/FinancialAidServices";
 
 const factsProps = {
   style: { fontSize: 54 },
@@ -245,21 +246,7 @@ const GetStartedPage = () => {
         <Typography className={classes.headingStyle} variant="h3">
           Financial aid
         </Typography>
-        <Grid container>
-          <Grid item xs={4}>
-            <FactExpandMoreCard
-              summary="Assistance for Pro Se Patrons"
-              content={
-                <Typography variant="caption">
-                  Public Law Library of King County Legal Clinics (KCLL) (King
-                  County) Walk-In Clinic (WIC) (King County) King County Bar
-                  (King County) Open Door Legal Services (Seattle, Bellevue &
-                  Everett)
-                </Typography>
-              }
-            />
-          </Grid>
-        </Grid>
+       <FinancialAidServices />
       </Container>
     </>
   );
