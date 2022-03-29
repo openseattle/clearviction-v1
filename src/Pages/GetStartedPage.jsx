@@ -1,9 +1,18 @@
 import teamBuilding from "../Assets/team_building.svg";
-import { Box, Container, Grid, Typography } from "@material-ui/core";
+import {
+  Box,
+  Container,
+  Grid,
+  Typography,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
+} from "@material-ui/core";
 import { useGetStartedStyles } from "../Styles/useGetStartedStyles";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
 import ContentSection from "../Components/ContentSection";
+import Icon from "@material-ui/icons";
 
 const GetStartedPage = () => {
   const classes = useGetStartedStyles();
@@ -46,15 +55,19 @@ const GetStartedPage = () => {
         <ResponsiveJumpButtonGroup
           links={[
             { url: "documents", linkName: "Documents" },
-            { url: "Eligibility", linkName: "Eligibility" },
-            { url: "Court-Filing", linkName: "Court Filing" },
-            { url: "Hearing", linkName: "Hearing" },
+            { url: "eligibility", linkName: "Eligibility" },
+            { url: "court-filing", linkName: "Court Filing" },
+            { url: "hearing", linkName: "Hearing" },
           ]}
         />
       </Container>
 
-      <Box className={classes.regularContainer}>
-        <Container maxWidth="md" className={classes.regularContainer}>
+      <Container
+        maxWidth="lg"
+        className={classes.regularContainer}
+        id="documents"
+      >
+        <Box className={classes.regularContainer}>
           <Typography
             className={classes.colorfulHeadingStyle}
             variant="h2"
@@ -73,8 +86,8 @@ const GetStartedPage = () => {
             all relevant court forms and get a copy of your Criminal History
             Record Information (CHRI).
           </Typography>
-        </Container>
-        <Container className={classes.regularContainer}>
+        </Box>
+        <Box>
           <Typography
             className={classes.headingStyle}
             variant="h3"
@@ -82,8 +95,131 @@ const GetStartedPage = () => {
           >
             Court forms
           </Typography>
-        </Container>
-        <Container className={classes.regularContainer}>
+          <Grid container spacing={4} columns={{ xs: 4 }}>
+            <Grid item xs={2} sm={4} md={4}>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={"˅"}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography>(Gross) Misdemeanor Convictions</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    Vacation packet from Northwest Justice Project with details
+                    about the eligibility to vacate (p. 2-4) and the needed
+                    court forms (p. 5-13).
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            </Grid>
+            <Grid item xs={2} sm={4} md={4}>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={"˅"}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography>Marijuana Misdemeanors</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    Vacation packet from Northwest Justice Project with the
+                    steps to vacate (p. 2-6), all necessary court documents (p.
+                    8-13) and a sample letter for WSP to seal your record (p.
+                    7).
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            </Grid>
+            <Grid item xs={2} sm={4} md={4}>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={"˅"}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography>Prostitution Convictions</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    If you were a victim of trafficking, you can use this
+                    vacation packet from Northwest Justice Project with info on
+                    the eligibility to vacate (p. 1-3), steps to take (p. 4-8),
+                    court forms (p. 10-18) and a sample letter for WSP (p. 9).
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            </Grid>
+            <Grid item xs={2} sm={4} md={4}>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={"˅"}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography>Non-Violent Class B or C Felony</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    Vacation packet from Northwest Justice Project including an
+                    overview of the eligibility to vacate (p. 3-5), steps to
+                    vacate (p. 7-12), all necessary court documents (p. 13-23)
+                    and a sample letter to WSP (p.24). To vacate a felony
+                    conviction, you will also need a Certificate of Discharge.
+                    If the court has not issued the Certificate of Discharge
+                    yet, you must file for a certificate before you can vacate
+                    the felony. This packet will assist you to obtain a
+                    Certificate of Discharge in Washington State
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            </Grid>
+            <Grid item xs={2} sm={4} md={4}>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={"˅"}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography>Treaty to Indian Fishing Convictions</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    Vacation packet from Northwest Justice Project including an
+                    overview of the eligibility to vacate (p.1-2), steps to take
+                    (p. 3-7), all court forms (p. 8-16), and a sample letter for
+                    WSP (p. 17).
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            </Grid>
+            <Grid item xs={2} sm={4} md={4}>
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={"˅"}
+                  aria-controls="panel1a-content"
+                  id="panel1a-header"
+                >
+                  <Typography>Juvenile Conviction Records</Typography>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <Typography>
+                    Detailed packet from TeamChild containing all court
+                    documents (p. 30-40), sample letters to WSP and JRA (p.
+                    41-42), and the specific practices per county (p. 19-27).
+                    The packet from King County Superior Court briefly describes
+                    the procedure to vacate and contains all necessary court
+                    documents (p. 11-17) and a sample of how to fill in the
+                    court documents (p. 4-9).
+                  </Typography>
+                </AccordionDetails>
+              </Accordion>
+            </Grid>
+          </Grid>
+        </Box>
+        <Box>
           <Typography
             className={classes.headingStyle}
             variant="h3"
@@ -91,11 +227,15 @@ const GetStartedPage = () => {
           >
             Criminal History Record Information (CHRI)
           </Typography>
-        </Container>
-      </Box>
+        </Box>
+      </Container>
 
-      <Box className={classes.regularContainer}>
-        <Container maxWidth="md" className={classes.regularContainer}>
+      <Container
+        maxWidth="lg"
+        className={classes.regularContainer}
+        id="eligibility"
+      >
+        <Box className={classes.regularContainer}>
           <Typography
             className={classes.colorfulHeadingStyle}
             variant="h2"
@@ -113,11 +253,15 @@ const GetStartedPage = () => {
             calculator to determine whether you are eligible to vacate your
             misdemeanor conviction. It is expected to take 10-30 minutes.
           </Typography>
-        </Container>
-      </Box>
+        </Box>
+      </Container>
 
-      <Box className={classes.regularContainer}>
-        <Container maxWidth="md" className={classes.regularContainer}>
+      <Container
+        maxWidth="lg"
+        className={classes.regularContainer}
+        id="court-filing"
+      >
+        <Box className={classes.regularContainer}>
           <Typography
             className={classes.colorfulHeadingStyle}
             variant="h2"
@@ -136,11 +280,15 @@ const GetStartedPage = () => {
             the discretion of the judge and may be denied for a variety of
             reasons.
           </Typography>
-        </Container>
-      </Box>
+        </Box>
+      </Container>
 
-      <Box className={classes.regularContainer}>
-        <Container maxWidth="md" className={classes.regularContainer}>
+      <Container
+        maxWidth="lg"
+        className={classes.regularContainer}
+        id="hearing"
+      >
+        <Box className={classes.regularContainer}>
           <Typography
             className={classes.colorfulHeadingStyle}
             variant="h2"
@@ -157,8 +305,8 @@ const GetStartedPage = () => {
             Last but not least, schedule a hearing with a judge! Below are
             resources for financial & legal aid.
           </Typography>
-        </Container>
-        <Container className={classes.regularContainer}>
+        </Box>
+        <Box className={classes.regularContainer}>
           <Typography
             className={classes.headingStyle}
             variant="h3"
@@ -166,8 +314,8 @@ const GetStartedPage = () => {
           >
             Legal aid
           </Typography>
-        </Container>
-        <Container className={classes.regularContainer}>
+        </Box>
+        <Box>
           <Typography
             className={classes.headingStyle}
             variant="h3"
@@ -175,8 +323,8 @@ const GetStartedPage = () => {
           >
             Financial aid
           </Typography>
-        </Container>
-      </Box>
+        </Box>
+      </Container>
     </>
   );
 };

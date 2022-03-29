@@ -23,6 +23,9 @@ export const useGetStartedStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
   },
+  pageContainer: {
+    borderStyle: "solid",
+  },
   buttonBoxStyle: {
     display: "flex",
     justifyContent: "center",
