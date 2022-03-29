@@ -4,7 +4,6 @@ import SecondaryButton from "../../ui-kit/SecondaryButton";
 const useStyles = makeStyles((theme) => ({
   mainText: {
     minWidth: 150,
-
   },
   backgroundSecondary: {
     minHeight: 250,

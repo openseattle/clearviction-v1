@@ -23,7 +23,7 @@ const HomePage = () => {
       <Box className={classes.darkBlueBackground}>
         <Container maxWidth="lg">
           <Typography className={classes.headingStyle} variant="h1">
-            Vacation Eligibility Calculator
+            Get Started
           </Typography>
           <Grid container>
             <Grid item xs={12} sm={6}>
@@ -31,13 +31,12 @@ const HomePage = () => {
                 className={classes.contentTextStyle}
                 variant="subtitle1"
               >
-                If you have convictions in Washington you can check your
-                eligibility to vacate your conviction for free in less than 10
-                minutes!
+                Vacate your conviction in the state of Washington by following
+                these 4 steps!
               </Typography>
               <Box paddingTop={12}>
-                <Typography variant="h4">COMING SOON!</Typography>
-                {/* <EligibilityCalculatorButton /> */}
+                {/* <Typography variant="h4">COMING SOON!</Typography> */}
+                {/* READ MORE BUTTON */}
               </Box>
             </Grid>
             <Grid item xs={12} sm={6}>

@@ -169,21 +169,20 @@ Theme.overrides = {
       border: `1px solid ${Theme.palette.primary.light}`,
       "&$expanded": {
         margin: 0,
-      }
+      },
     },
     rounded: {
       borderRadius: 0,
-      '&:first-child': {
+      "&:first-child": {
         borderTopLeftRadius: 6,
         borderTopRightRadius: 6,
       },
-      '&:last-child': {
+      "&:last-child": {
         borderBottomLeftRadius: 6,
         borderBottomRightRadius: 6,
       },
     },
   },
-
 };
 
 export default Theme;

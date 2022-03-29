@@ -1,21 +1,15 @@
-import {
-  Box,
-  Container,
-  Grid,
-  Typography,
-} from "@material-ui/core";
+import { Box, Container, Grid, Typography } from "@material-ui/core";
 import SecondaryButton from "../ui-kit/SecondaryButton";
 import pr from "../Assets/pr.svg";
 import HeroPanel from "../Components/HeroPanel";
 import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
-
 
 const PartnerPage = () => {
   const classes = useGetInvolvedStyles();
 
   return (
     <>
-    <HeroPanel title={"Partner With Us"} />
+      <HeroPanel title={"Partner With Us"} />
       <Container className={classes.partner} maxWidth="lg">
         <Typography className={classes.partnerHeading} variant="h2">
           Help us bring a message of hope into your community.

@@ -22,7 +22,7 @@ const useStyles = makeStyles({
   },
 });
 
-const ImageContentCard = ({content, image, buttonText, buttonHref}) => {
+const ImageContentCard = ({ content, image, buttonText, buttonHref }) => {
   const classes = useStyles();
 
   const retrieveImage = (bgImage) => {
@@ -49,7 +49,9 @@ const ImageContentCard = ({content, image, buttonText, buttonHref}) => {
         </Typography>
 
         <Box className={classes.cardButtonBoxStyle}>
-          <RedesignButtonPrimary href={buttonHref}>{buttonText}</RedesignButtonPrimary>
+          <RedesignButtonPrimary href={buttonHref}>
+            {buttonText}
+          </RedesignButtonPrimary>
         </Box>
       </Paper>
     </>

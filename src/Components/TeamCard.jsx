@@ -45,8 +45,15 @@ const TeamCard = (props) => {
           <ListItemText
             primary={firstName + " " + lastName}
             secondary={role}
-            primaryTypographyProps={{variant: "body1", className: classes.name, noWrap: true }}
-            secondaryTypographyProps={{ variant: "body2", color: "textPrimary" }}
+            primaryTypographyProps={{
+              variant: "body1",
+              className: classes.name,
+              noWrap: true,
+            }}
+            secondaryTypographyProps={{
+              variant: "body2",
+              color: "textPrimary",
+            }}
           />
           <IconButton
             href={linkedIn}

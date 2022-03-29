@@ -7,7 +7,11 @@ const ContentSection = (props) => {
 
   return (
     <>
-      <Container id={sectionId} className={classes.regularContainer} maxWidth={sectionSize}>
+      <Container
+        id={sectionId}
+        className={classes.regularContainer}
+        maxWidth={sectionSize}
+      >
         <Paper className={classes.paperStyle}>
           <Typography
             className={classes.headingStyle}

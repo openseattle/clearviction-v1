@@ -20,8 +20,8 @@ export const useHomeStyles = makeStyles((theme) => ({
   paperStyle: {
     padding: theme.spacing(4),
     [theme.breakpoints.down("xs")]: {
-      padding: theme.spacing(1)
-    }
+      padding: theme.spacing(1),
+    },
   },
   headingStyle: {
     marginTop: theme.spacing(5),
@@ -46,7 +46,6 @@ export const useHomeStyles = makeStyles((theme) => ({
     justifyContent: "center",
     marginTop: theme.spacing(8),
     marginBottom: theme.spacing(8),
-
   },
   shelterIcon: {
     color: theme.palette.success.main,
@@ -78,6 +77,6 @@ export const useHomeStyles = makeStyles((theme) => ({
   },
   iconStyle: {
     width: "100%",
-    padding: theme.spacing(2)
-  }
+    padding: theme.spacing(2),
+  },
 }));
