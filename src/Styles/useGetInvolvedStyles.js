@@ -4,6 +4,7 @@ export const useGetInvolvedStyles = makeStyles((theme) => ({
   regularContainerStyle: {
     marginTop: theme.spacing(8),
     marginBottom: theme.spacing(8),
+    scrollMarginTop: "4em",
   },
   CTAButtonContainerStyle: {
     marginTop: theme.spacing(8),

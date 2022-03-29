@@ -1,11 +1,9 @@
 import {
   Box,
-
   Container,
   Divider,
   Grid,
   Link,
-
   Paper,
   Typography,
 } from "@material-ui/core";
@@ -13,7 +11,6 @@ import { AccountBalance, DateRange, History } from "@material-ui/icons";
 
 import teamBuilding from "../Assets/team_building.svg";
 import humanProfile from "../Assets/human.svg";
-import FactExpandMoreCard from "../Components/FactExpandMoreCard";
 import FactIconGroup from "../Components/FactIconGroup";
 import RedesignHeroPanel from "../Components/RedesignHeroPanel";
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
@@ -62,7 +59,9 @@ const GetStartedPage = () => {
               these 4 steps!
             </Typography>
 
-            <RedesignButtonPrimary>read more</RedesignButtonPrimary>
+            <RedesignButtonPrimary href="#read-more">
+              read more
+            </RedesignButtonPrimary>
           </Grid>
           <Grid item xs={12} sm={12} md={6}>
             <Box
@@ -74,17 +73,26 @@ const GetStartedPage = () => {
           </Grid>
         </Grid>
       </RedesignHeroPanel>
-      <Container className={classes.regularContainerStyle} maxwidth="sm">
+      <Container
+        id="read-more"
+        className={classes.regularContainerStyle}
+        maxwidth="sm"
+      >
         <ResponsiveJumpButtonGroup
           links={[
             { url: "documents", linkName: "documents" },
-            { url: "eilgibility", linkName: "eligibility" },
+            { url: "eligibility", linkName: "eligibility" },
             { url: "court-filing", linkName: "court filing" },
             { url: "hearing", linkName: "hearing" },
           ]}
         />
       </Container>
-      <Container id="documents" component="section" maxWidth="md">
+      <Container
+        id="documents"
+        component="section"
+        className={classes.regularContainerStyle}
+        maxWidth="md"
+      >
         <Typography className={classes.headingStyle} variant="h2">
           Step 1: Documents
         </Typography>
@@ -113,7 +121,13 @@ const GetStartedPage = () => {
             <Grid item xs={12} sm={6}>
               <Box display="flex">
                 <Typography className={classes.volunteerTextStyle}>
-                  Get an <Link href="#">“unofficial” copy through WATCH</Link>{" "}
+                  Get an{" "}
+                  <Link
+                    rel=""
+                    href="https://watch.wsp.wa.gov/WATCH/Home/Notice?ReturnPage=%2FHome%2FIndex"
+                  >
+                    “unofficial” copy through WATCH
+                  </Link>{" "}
                   for a $11.00 fee. This report is not always accurate so you
                   should ask the prosecutor.
                 </Typography>
@@ -174,7 +188,12 @@ const GetStartedPage = () => {
       <Container maxWidth="md">
         <Divider className={classes.dividerStyle} />
       </Container>
-      <Container id="court-filing" maxWidth="md">
+      <Container
+        id="court-filing"
+        component="section"
+        className={classes.regularContainerStyle}
+        maxWidth="md"
+      >
         <Typography className={classes.headingStyle} variant="h2">
           Step 3: File with Court
         </Typography>
@@ -212,6 +231,7 @@ const GetStartedPage = () => {
       </Container>
       <Container
         id="hearing"
+        component="section"
         className={classes.regularContainerStyle}
         maxWidth="md"
       >
@@ -246,7 +266,7 @@ const GetStartedPage = () => {
         <Typography className={classes.headingStyle} variant="h3">
           Financial aid
         </Typography>
-       <FinancialAidServices />
+        <FinancialAidServices />
       </Container>
     </>
   );
