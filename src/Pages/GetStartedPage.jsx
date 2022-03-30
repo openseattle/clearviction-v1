@@ -59,10 +59,11 @@ const GetStartedPage = () => {
               Vacate your conviction in the state of Washington by following
               these 4 steps!
             </Typography>
-
-            <RedesignButtonPrimary href="#read-more">
-              read more
-            </RedesignButtonPrimary>
+            <Box marginTop="8em" marginBottom="8em">
+              <RedesignButtonPrimary href="#read-more">
+                read more
+              </RedesignButtonPrimary>
+            </Box>
           </Grid>
           <Grid item xs={12} sm={12} md={6}>
             <Box
@@ -97,7 +98,7 @@ const GetStartedPage = () => {
         <Typography className={classes.headingStyle} variant="h2">
           Step 1: Documents
         </Typography>
-        <Typography variant="body1">
+        <Typography className={classes.volunteerTextStyle} variant="body1">
           Gathering documents is the first step in the process. This includes
           any forms or records that pertain to your conviction. Please gather
           all relevant court forms and get a copy of your Criminal History

@@ -12,9 +12,13 @@ export const useGetInvolvedStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "center",
   },
+  CTAButtonSpaceStyle:{
+    marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(8),
+  },
   headingStyle: {
-    marginTop: theme.spacing(3),
-    marginBottom: theme.spacing(3),
+    marginTop: theme.spacing(8),
+    marginBottom: theme.spacing(8),
   },
   volunteerTextStyle: {
     marginTop: theme.spacing(3),
