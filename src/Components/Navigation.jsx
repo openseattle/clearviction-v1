@@ -96,8 +96,8 @@ const Navigation = () => {
                     />
                   </IconButton>
                 </ListItem>
-                {pages.map((page, idx) => (
-                  <NavButtonMobile key={idx} page={page} classes={classes} />
+                {pages.map((page) => (
+                  <NavButtonMobile key={page.name} page={page} classes={classes} />
                 ))}
                 <ListItem>
                   <LegalDisclaimer />

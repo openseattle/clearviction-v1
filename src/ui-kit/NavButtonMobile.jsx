@@ -11,11 +11,13 @@ const NavButtonMobile = ({ page, classes }) => {
   return (
     <>
       {!page.subpages && (
-        <Button component={Button} href={page.url} fullWidth>
-          <Typography className={classes.menuButton} align="center">
-            {page.name}
-          </Typography>
-        </Button>
+        <ListItem>
+          <Button href={page.url} fullWidth aria-label={page.name}>
+            <Typography className={classes.menuButton} align="center">
+              {page.name}
+            </Typography>
+          </Button>
+        </ListItem>
       )}
       {page.subpages && (
         <>
@@ -30,7 +32,7 @@ const NavButtonMobile = ({ page, classes }) => {
           </ListItem>
           <Collapse in={expandSubMenu} timeout="auto" unmountOnExit>
             {page.subpages.map((subpage, idx) => (
-              <Button key={idx}  href={subpage.url} fullwidth>
+              <Button key={idx} href={subpage.url} fullwidth>
                 <Typography className={classes.subMenuButton}>
                   {subpage.name}
                 </Typography>
