@@ -17,9 +17,13 @@ function a11yProps(index) {
 const DropdownCard = ({ cardData }) => {
   return (
     <div aria-label="info-accordion">
-      <Accordion key={cardData.summary} elevation={0}>
+      <Accordion
+        key={cardData.summary}
+        elevation={0}
+        className={cardData.class}
+      >
         <AccordionSummary expandIcon={<ExpandMore />} {...a11yProps}>
-          <Typography variant="subtitle1">{cardData.summary}</Typography>
+          <Typography variant="subtitle2">{cardData.summary}</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Box display="block">{cardData.details}</Box>

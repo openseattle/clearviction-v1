@@ -2,12 +2,13 @@ import teamBuilding from "../Assets/team_building.svg";
 import human from "../Assets/human.svg";
 import { AccountBalance, DateRange, History } from "@material-ui/icons";
 
-import { Box, Container, Grid, Typography } from "@material-ui/core";
+import { Box, Container, Grid, Typography, Paper } from "@material-ui/core";
 import { useGetStartedStyles } from "../Styles/useGetStartedStyles";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
 import ContentSection from "../Components/ContentSection";
 import DropdownCard from "../Components/DropdownCard";
+import Theme from "../Components/Theme";
 
 const GetStartedPage = () => {
   const classes = useGetStartedStyles();
@@ -15,90 +16,101 @@ const GetStartedPage = () => {
     courtForms1: {
       summary: "(Gross) Misdemeanor Convictions",
       details: (
-        <Typography className={classes.contentTextStyle}>
+        <Typography className={classes.colorfulContentTextStyle}>
           comming soon
         </Typography>
       ),
+      class: classes.dropDown,
     },
     courtForms2: {
       summary: "Marijuana Misdemeanors",
       details: (
-        <Typography className={classes.contentTextStyle}>
+        <Typography className={classes.colorfulContentTextStyle}>
           comming soon
         </Typography>
       ),
+      class: classes.dropDown,
     },
     courtForms3: {
       summary: "Prostitution Convictions",
       details: (
-        <Typography className={classes.contentTextStyle}>
+        <Typography className={classes.colorfulContentTextStyle}>
           comming soon
         </Typography>
       ),
+      class: classes.dropDown,
     },
     courtForms4: {
       summary: "Non-Violent Class B or C Felony",
       details: (
-        <Typography className={classes.contentTextStyle}>
+        <Typography className={classes.colorfulContentTextStyle}>
           comming soon
         </Typography>
       ),
+      class: classes.dropDown,
     },
     courtForms5: {
       summary: "Treaty to Indian Fishing Convictions",
       details: (
-        <Typography className={classes.contentTextStyle}>
+        <Typography className={classes.colorfulContentTextStyle}>
           comming soon
         </Typography>
       ),
+      class: classes.dropDown,
     },
     courtForms6: {
       summary: "Juvenile Conviction Records",
       details: (
-        <Typography className={classes.contentTextStyle}>
+        <Typography className={classes.colorfulContentTextStyle}>
           comming soon
         </Typography>
       ),
+      class: classes.dropDown,
     },
     legalAid1: {
       summary: "Assistance for Pro Se Patrons",
       details: (
-        <Typography className={classes.contentTextStyle}>
+        <Typography className={classes.colorfulContentTextStyle}>
           comming soon
         </Typography>
       ),
+      class: classes.dropDown,
     },
     legalAid2: {
       summary: "Assistance for Adults",
       details: (
-        <Typography className={classes.contentTextStyle}>
+        <Typography className={classes.colorfulContentTextStyle}>
           comming soon
         </Typography>
       ),
+      class: classes.dropDown,
     },
     legalAid3: {
       summary: "Assistance for Juveniles",
       details: (
-        <Typography className={classes.contentTextStyle}>
+        <Typography className={classes.colorfulContentTextStyle}>
           comming soon
         </Typography>
       ),
+      class: classes.dropDown,
     },
     financialAid1: {
       summary: "Legal Financial Obligations (LFOs)",
       details: (
-        <Typography className={classes.contentTextStyle}>
+        <Typography className={classes.colorfulContentTextStyle}>
           comming soon
         </Typography>
       ),
+      class: classes.dropDown,
     },
     financialAid2: {
       summary: "Court Fees",
       details: (
-        <Typography className={classes.contentTextStyle}>
+        <Typography className={classes.colorfulContentTextStyle}>
           comming soon
         </Typography>
       ),
+      class: classes.dropDown,
     },
   };
 
@@ -115,9 +127,8 @@ const GetStartedPage = () => {
                 className={classes.contentTextStyle}
                 variant="subtitle1"
               >
-                If you have convictions in Washington you can check your
-                eligibility to vacate your conviction for free in less than 10
-                minutes!
+                Vacate your conviction in the state of Washington by following
+                these 4 steps!
               </Typography>
               <Box paddingTop={12} className={classes.buttonBoxStyle}>
                 <RedesignButtonPrimary href={"#"}>
@@ -128,7 +139,7 @@ const GetStartedPage = () => {
             <Grid item xs={12} sm={6}>
               <img
                 src={teamBuilding}
-                className={classes.iconStyle}
+                className={classes.imageStyle}
                 alt="two people working together on a puzzle"
               ></img>
             </Grid>
@@ -163,7 +174,7 @@ const GetStartedPage = () => {
 
           <Typography
             className={classes.contentTextStyle}
-            variant="body2"
+            variant="body1"
             align="left"
           >
             Gathering documents is the first step in the process. This includes
@@ -172,7 +183,7 @@ const GetStartedPage = () => {
             Record Information (CHRI).
           </Typography>
         </Box>
-        <Box>
+        <Box className={classes.regularContainer}>
           <Typography
             className={classes.headingStyle}
             variant="h3"
@@ -181,39 +192,40 @@ const GetStartedPage = () => {
             Court forms
           </Typography>
           <Grid container spacing={4} columns={{ xs: 4 }}>
-            <Grid item xs={2} sm={4} md={4}>
+            <Grid item xs={12} sm={4}>
               <DropdownCard
+                className={classes.regularContainer}
                 cardData={dropdownCardData.courtForms1}
               ></DropdownCard>
             </Grid>
-            <Grid item xs={2} sm={4} md={4}>
+            <Grid item xs={12} sm={4}>
               <DropdownCard
                 cardData={dropdownCardData.courtForms2}
               ></DropdownCard>
             </Grid>
-            <Grid item xs={2} sm={4} md={4}>
+            <Grid item xs={12} sm={4}>
               <DropdownCard
                 cardData={dropdownCardData.courtForms3}
               ></DropdownCard>
             </Grid>
-            <Grid item xs={2} sm={4} md={4}>
+            <Grid item xs={12} sm={4}>
               <DropdownCard
                 cardData={dropdownCardData.courtForms4}
               ></DropdownCard>
             </Grid>
-            <Grid item xs={2} sm={4} md={4}>
+            <Grid item xs={12} sm={4}>
               <DropdownCard
                 cardData={dropdownCardData.courtForms5}
               ></DropdownCard>
             </Grid>
-            <Grid item xs={2} sm={4} md={4}>
+            <Grid item xs={12} sm={4}>
               <DropdownCard
                 cardData={dropdownCardData.courtForms6}
               ></DropdownCard>
             </Grid>
           </Grid>
         </Box>
-        <Box>
+        <Box className={classes.regularContainer}>
           <Typography
             className={classes.headingStyle}
             variant="h3"
@@ -223,25 +235,30 @@ const GetStartedPage = () => {
           </Typography>
           <Typography
             className={classes.contentTextStyle}
-            variant="body2"
+            variant="body1"
             align="left"
           >
             You might need a copy of your Criminal History Record Information
             (CHRI) to vacate your record. There are two options:
           </Typography>
           <ContentSection>
-            <Grid container>
-              <Grid item xs={2} sm={4} md={4}>
+            <Grid
+              container
+              spacing={8}
+              alignItems="center"
+              className={classes.paperContiainer}
+            >
+              <Grid item xs={12} sm={4}>
                 <img
                   src={human}
-                  className={classes.iconStyle}
-                  alt="two people working together on a puzzle"
+                  className={classes.imageStyle}
+                  alt="profile of two human heads"
                 ></img>
               </Grid>
-              <Grid item xs={2} sm={4} md={4}>
+              <Grid item xs={12} sm={8}>
                 <Typography
                   className={classes.contentTextStyle}
-                  variant="body2"
+                  variant="subtitle2"
                   align="left"
                 >
                   Get an “unofficial” copy through WATCH for a $11.00 fee. This
@@ -252,22 +269,39 @@ const GetStartedPage = () => {
             </Grid>
           </ContentSection>
           <ContentSection>
-            <Grid container>
-              <Grid item xs={2} sm={4} md={4}>
-                <Typography>
+            <Grid
+              container
+              spacing={8}
+              alignItems="center"
+              className={classes.paperContiainer}
+            >
+              <Grid item xs={12} sm={8}>
+                <Typography
+                  className={classes.contentTextStyle}
+                  variant="subtitle2"
+                  align="left"
+                >
                   If the WATCH printout is not good enough, go to your local
                   police or sheriff’s office for an official “record
                   review/challenge” fingerprint card.
                 </Typography>
-                <Typography>
+                <Typography
+                  className={classes.contentTextStyle}
+                  variant="subtitle2"
+                  align="left"
+                >
                   Next, write WSP a letter asking them to send an official copy
                   of your complete CHRI. Include the fingerprint card and a $12
                   money order. A copy of your CHRI will be returned to the
                   address on the fingerprint card. Send everything to:
                 </Typography>
               </Grid>
-              <Grid item xs={2} sm={4} md={4}>
-                <Typography>
+              <Grid item xs={12} sm={4}>
+                <Typography
+                  className={classes.lightContentTextStyle}
+                  variant="subtitle2"
+                  align="right"
+                >
                   Washington State Patrol Identification and Background Section
                   PO Box 42633 Olympia WA 98504-2633
                 </Typography>
@@ -293,20 +327,26 @@ const GetStartedPage = () => {
 
           <Typography
             className={classes.contentTextStyle}
-            variant="body2"
+            variant="body1"
             align="left"
           >
             Once you have your records and forms gathered, use our eligibilty
             calculator to determine whether you are eligible to vacate your
             misdemeanor conviction. It is expected to take 10-30 minutes.
           </Typography>
-          <Typography>You’ll need to know to answer our questions:</Typography>
-          <Grid container>
+          <Typography
+            className={classes.colorfulContentTextStyle}
+            variant="h5"
+            align="left"
+          >
+            You’ll need to know to answer our questions:
+          </Typography>
+          <Grid container className={classes.regularContainer} spacing={8}>
             <Grid item xs={12} sm={4}>
               <DateRange className={classes.iconStyle} />
               <Typography
                 className={classes.contentTextStyle}
-                variant="body2"
+                variant="body1"
                 align="center"
               >
                 We break down the laws into understandable language.
@@ -317,7 +357,7 @@ const GetStartedPage = () => {
 
               <Typography
                 className={classes.contentTextStyle}
-                variant="body2"
+                variant="body1"
                 align="center"
               >
                 You answer a few simple yes/no questions.
@@ -327,7 +367,7 @@ const GetStartedPage = () => {
               <AccountBalance className={classes.iconStyle} />
               <Typography
                 className={classes.contentTextStyle}
-                variant="body2"
+                variant="body1"
                 align="center"
               >
                 This helps determine your vacation eligibility.
@@ -358,7 +398,7 @@ const GetStartedPage = () => {
 
           <Typography
             className={classes.contentTextStyle}
-            variant="body2"
+            variant="body1"
             align="left"
           >
             Next, submit a request to have your conviction vacated (refer to
@@ -367,48 +407,59 @@ const GetStartedPage = () => {
             reasons.
           </Typography>
           <Typography
-            className={classes.contentTextStyle}
-            variant="body2"
+            className={classes.colorfulContentTextStyle}
+            variant="h5"
             align="left"
           >
             Your request to vacate may be denied if:
           </Typography>
-          <Grid container>
-            <Grid item xs={3}>
-              <ContentSection>
-                <Typography
-                  className={classes.contentTextStyle}
-                  variant="body2"
-                  align="left"
-                >
-                  The court does not believe that vacating your conviction will
-                  be in the interest of society
-                </Typography>
-              </ContentSection>
+          <Grid
+            container
+            maxWidth="lg"
+            spacing={4}
+            className={classes.regularContainer}
+          >
+            <Grid item xs={12} sm={4}>
+              <Container>
+                <Paper className={classes.cardContainer}>
+                  <Typography
+                    className={classes.contentTextStyle}
+                    variant="subtitle2"
+                    align="left"
+                  >
+                    The court does not believe that vacating your conviction
+                    will be in the interest of society
+                  </Typography>
+                </Paper>
+              </Container>
             </Grid>
-            <Grid item xs={3}>
-              <ContentSection>
-                <Typography
-                  className={classes.contentTextStyle}
-                  variant="body2"
-                  align="left"
-                >
-                  There are inaccuracies in your court records and/or the
-                  application
-                </Typography>
-              </ContentSection>
+            <Grid item xs={12} sm={4}>
+              <Container>
+                <Paper className={classes.cardContainer}>
+                  <Typography
+                    className={classes.contentTextStyle}
+                    variant="subtitle2"
+                    align="left"
+                  >
+                    There are inaccuracies in your court records and/or the
+                    application
+                  </Typography>
+                </Paper>
+              </Container>
             </Grid>
-            <Grid item xs={3}>
-              <ContentSection>
-                <Typography
-                  className={classes.contentTextStyle}
-                  variant="body2"
-                  align="left"
-                >
-                  You violated probation, have not paid off your fines or are
-                  otherwise not eligible to vacate that conviction{" "}
-                </Typography>
-              </ContentSection>
+            <Grid item xs={12} sm={4}>
+              <Container>
+                <Paper className={classes.cardContainer}>
+                  <Typography
+                    className={classes.contentTextStyle}
+                    variant="subtitle2"
+                    align="left"
+                  >
+                    You violated probation, have not paid off your fines or are
+                    otherwise not eligible to vacate that conviction{" "}
+                  </Typography>
+                </Paper>
+              </Container>
             </Grid>
           </Grid>
         </Box>
@@ -430,7 +481,7 @@ const GetStartedPage = () => {
 
           <Typography
             className={classes.contentTextStyle}
-            variant="body2"
+            variant="body1"
             align="left"
           >
             Last but not least, schedule a hearing with a judge! Below are
@@ -445,7 +496,11 @@ const GetStartedPage = () => {
           >
             Legal aid
           </Typography>
-          <Typography className={classes.donateBody2}>
+          <Typography
+            className={classes.contentTextStyle}
+            variant="body1"
+            align="left"
+          >
             Many pro bono services are only available after being refered by
             CLEAR, a toll-free legal hotline:
             <li>
@@ -455,18 +510,18 @@ const GetStartedPage = () => {
             <li>In King County: call 2-1-1 (weekdays 8am - 6pm)</li>
             <li>You can also apply online at CLEAR*Online</li>
           </Typography>
-          <Grid container>
-            <Grid item>
+          <Grid container spacing={4} className={classes.regularContainer}>
+            <Grid item xs={12} sm={4}>
               <DropdownCard
                 cardData={dropdownCardData.legalAid1}
               ></DropdownCard>
             </Grid>
-            <Grid item>
+            <Grid item xs={12} sm={4}>
               <DropdownCard
                 cardData={dropdownCardData.legalAid2}
               ></DropdownCard>
             </Grid>
-            <Grid item>
+            <Grid item xs={12} sm={4}>
               <DropdownCard
                 cardData={dropdownCardData.legalAid3}
               ></DropdownCard>
@@ -481,13 +536,13 @@ const GetStartedPage = () => {
           >
             Financial aid
           </Typography>
-          <Grid container>
-            <Grid item xs={2}>
+          <Grid container spacing={4} className={classes.regularContainer}>
+            <Grid item xs={12} sm={4}>
               <DropdownCard
                 cardData={dropdownCardData.financialAid1}
               ></DropdownCard>
             </Grid>
-            <Grid item xs={2}>
+            <Grid item xs={12} sm={4}>
               <DropdownCard
                 cardData={dropdownCardData.financialAid2}
               ></DropdownCard>

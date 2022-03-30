@@ -11,7 +11,7 @@ const Theme = createTheme({
       light: "#A7B5CC",
       main: "#4E6C99",
       dark: "#2F3554",
-      contrastText: "#ffffff",
+      contrastText: "#FAFAFA",
     },
     secondary: {
       light: "#FFEEA3",
@@ -40,7 +40,7 @@ const Theme = createTheme({
     fontFamily: bodyFontFamily,
     h2: {
       fontFamily: headingFontFamily,
-      fontWeight: "normal",
+      fontWeight: "700",
       fontSize: "56px",
       letterSpacing: "-0.5px",
       lineHeight: "72px",
@@ -80,7 +80,7 @@ const Theme = createTheme({
       letterSpacing: "0.15px",
       lineHeight: "30px",
     },
-    subtitile2: {
+    subtitle2: {
       fontFamily: headingFontFamily,
       fontWeight: "normal",
       fontSize: "20px",
