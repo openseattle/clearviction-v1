@@ -1,21 +1,106 @@
 import teamBuilding from "../Assets/team_building.svg";
-import {
-  Box,
-  Container,
-  Grid,
-  Typography,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-} from "@material-ui/core";
+import human from "../Assets/human.svg";
+import { AccountBalance, DateRange, History } from "@material-ui/icons";
+
+import { Box, Container, Grid, Typography } from "@material-ui/core";
 import { useGetStartedStyles } from "../Styles/useGetStartedStyles";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
 import ContentSection from "../Components/ContentSection";
-import Icon from "@material-ui/icons";
+import DropdownCard from "../Components/DropdownCard";
 
 const GetStartedPage = () => {
   const classes = useGetStartedStyles();
+  const dropdownCardData = {
+    courtForms1: {
+      summary: "(Gross) Misdemeanor Convictions",
+      details: (
+        <Typography className={classes.contentTextStyle}>
+          comming soon
+        </Typography>
+      ),
+    },
+    courtForms2: {
+      summary: "Marijuana Misdemeanors",
+      details: (
+        <Typography className={classes.contentTextStyle}>
+          comming soon
+        </Typography>
+      ),
+    },
+    courtForms3: {
+      summary: "Prostitution Convictions",
+      details: (
+        <Typography className={classes.contentTextStyle}>
+          comming soon
+        </Typography>
+      ),
+    },
+    courtForms4: {
+      summary: "Non-Violent Class B or C Felony",
+      details: (
+        <Typography className={classes.contentTextStyle}>
+          comming soon
+        </Typography>
+      ),
+    },
+    courtForms5: {
+      summary: "Treaty to Indian Fishing Convictions",
+      details: (
+        <Typography className={classes.contentTextStyle}>
+          comming soon
+        </Typography>
+      ),
+    },
+    courtForms6: {
+      summary: "Juvenile Conviction Records",
+      details: (
+        <Typography className={classes.contentTextStyle}>
+          comming soon
+        </Typography>
+      ),
+    },
+    legalAid1: {
+      summary: "Assistance for Pro Se Patrons",
+      details: (
+        <Typography className={classes.contentTextStyle}>
+          comming soon
+        </Typography>
+      ),
+    },
+    legalAid2: {
+      summary: "Assistance for Adults",
+      details: (
+        <Typography className={classes.contentTextStyle}>
+          comming soon
+        </Typography>
+      ),
+    },
+    legalAid3: {
+      summary: "Assistance for Juveniles",
+      details: (
+        <Typography className={classes.contentTextStyle}>
+          comming soon
+        </Typography>
+      ),
+    },
+    financialAid1: {
+      summary: "Legal Financial Obligations (LFOs)",
+      details: (
+        <Typography className={classes.contentTextStyle}>
+          comming soon
+        </Typography>
+      ),
+    },
+    financialAid2: {
+      summary: "Court Fees",
+      details: (
+        <Typography className={classes.contentTextStyle}>
+          comming soon
+        </Typography>
+      ),
+    },
+  };
 
   return (
     <>
@@ -97,125 +182,34 @@ const GetStartedPage = () => {
           </Typography>
           <Grid container spacing={4} columns={{ xs: 4 }}>
             <Grid item xs={2} sm={4} md={4}>
-              <Accordion>
-                <AccordionSummary
-                  expandIcon={"˅"}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
-                >
-                  <Typography>(Gross) Misdemeanor Convictions</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>
-                    Vacation packet from Northwest Justice Project with details
-                    about the eligibility to vacate (p. 2-4) and the needed
-                    court forms (p. 5-13).
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
+              <DropdownCard
+                cardData={dropdownCardData.courtForms1}
+              ></DropdownCard>
             </Grid>
             <Grid item xs={2} sm={4} md={4}>
-              <Accordion>
-                <AccordionSummary
-                  expandIcon={"˅"}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
-                >
-                  <Typography>Marijuana Misdemeanors</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>
-                    Vacation packet from Northwest Justice Project with the
-                    steps to vacate (p. 2-6), all necessary court documents (p.
-                    8-13) and a sample letter for WSP to seal your record (p.
-                    7).
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
+              <DropdownCard
+                cardData={dropdownCardData.courtForms2}
+              ></DropdownCard>
             </Grid>
             <Grid item xs={2} sm={4} md={4}>
-              <Accordion>
-                <AccordionSummary
-                  expandIcon={"˅"}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
-                >
-                  <Typography>Prostitution Convictions</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>
-                    If you were a victim of trafficking, you can use this
-                    vacation packet from Northwest Justice Project with info on
-                    the eligibility to vacate (p. 1-3), steps to take (p. 4-8),
-                    court forms (p. 10-18) and a sample letter for WSP (p. 9).
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
+              <DropdownCard
+                cardData={dropdownCardData.courtForms3}
+              ></DropdownCard>
             </Grid>
             <Grid item xs={2} sm={4} md={4}>
-              <Accordion>
-                <AccordionSummary
-                  expandIcon={"˅"}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
-                >
-                  <Typography>Non-Violent Class B or C Felony</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>
-                    Vacation packet from Northwest Justice Project including an
-                    overview of the eligibility to vacate (p. 3-5), steps to
-                    vacate (p. 7-12), all necessary court documents (p. 13-23)
-                    and a sample letter to WSP (p.24). To vacate a felony
-                    conviction, you will also need a Certificate of Discharge.
-                    If the court has not issued the Certificate of Discharge
-                    yet, you must file for a certificate before you can vacate
-                    the felony. This packet will assist you to obtain a
-                    Certificate of Discharge in Washington State
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
+              <DropdownCard
+                cardData={dropdownCardData.courtForms4}
+              ></DropdownCard>
             </Grid>
             <Grid item xs={2} sm={4} md={4}>
-              <Accordion>
-                <AccordionSummary
-                  expandIcon={"˅"}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
-                >
-                  <Typography>Treaty to Indian Fishing Convictions</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>
-                    Vacation packet from Northwest Justice Project including an
-                    overview of the eligibility to vacate (p.1-2), steps to take
-                    (p. 3-7), all court forms (p. 8-16), and a sample letter for
-                    WSP (p. 17).
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
+              <DropdownCard
+                cardData={dropdownCardData.courtForms5}
+              ></DropdownCard>
             </Grid>
             <Grid item xs={2} sm={4} md={4}>
-              <Accordion>
-                <AccordionSummary
-                  expandIcon={"˅"}
-                  aria-controls="panel1a-content"
-                  id="panel1a-header"
-                >
-                  <Typography>Juvenile Conviction Records</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                  <Typography>
-                    Detailed packet from TeamChild containing all court
-                    documents (p. 30-40), sample letters to WSP and JRA (p.
-                    41-42), and the specific practices per county (p. 19-27).
-                    The packet from King County Superior Court briefly describes
-                    the procedure to vacate and contains all necessary court
-                    documents (p. 11-17) and a sample of how to fill in the
-                    court documents (p. 4-9).
-                  </Typography>
-                </AccordionDetails>
-              </Accordion>
+              <DropdownCard
+                cardData={dropdownCardData.courtForms6}
+              ></DropdownCard>
             </Grid>
           </Grid>
         </Box>
@@ -227,6 +221,59 @@ const GetStartedPage = () => {
           >
             Criminal History Record Information (CHRI)
           </Typography>
+          <Typography
+            className={classes.contentTextStyle}
+            variant="body2"
+            align="left"
+          >
+            You might need a copy of your Criminal History Record Information
+            (CHRI) to vacate your record. There are two options:
+          </Typography>
+          <ContentSection>
+            <Grid container>
+              <Grid item xs={2} sm={4} md={4}>
+                <img
+                  src={human}
+                  className={classes.iconStyle}
+                  alt="two people working together on a puzzle"
+                ></img>
+              </Grid>
+              <Grid item xs={2} sm={4} md={4}>
+                <Typography
+                  className={classes.contentTextStyle}
+                  variant="body2"
+                  align="left"
+                >
+                  Get an “unofficial” copy through WATCH for a $11.00 fee. This
+                  report is not always accurate so you should ask the
+                  prosecutor.
+                </Typography>
+              </Grid>
+            </Grid>
+          </ContentSection>
+          <ContentSection>
+            <Grid container>
+              <Grid item xs={2} sm={4} md={4}>
+                <Typography>
+                  If the WATCH printout is not good enough, go to your local
+                  police or sheriff’s office for an official “record
+                  review/challenge” fingerprint card.
+                </Typography>
+                <Typography>
+                  Next, write WSP a letter asking them to send an official copy
+                  of your complete CHRI. Include the fingerprint card and a $12
+                  money order. A copy of your CHRI will be returned to the
+                  address on the fingerprint card. Send everything to:
+                </Typography>
+              </Grid>
+              <Grid item xs={2} sm={4} md={4}>
+                <Typography>
+                  Washington State Patrol Identification and Background Section
+                  PO Box 42633 Olympia WA 98504-2633
+                </Typography>
+              </Grid>
+            </Grid>
+          </ContentSection>
         </Box>
       </Container>
 
@@ -253,6 +300,45 @@ const GetStartedPage = () => {
             calculator to determine whether you are eligible to vacate your
             misdemeanor conviction. It is expected to take 10-30 minutes.
           </Typography>
+          <Typography>You’ll need to know to answer our questions:</Typography>
+          <Grid container>
+            <Grid item xs={12} sm={4}>
+              <DateRange className={classes.iconStyle} />
+              <Typography
+                className={classes.contentTextStyle}
+                variant="body2"
+                align="center"
+              >
+                We break down the laws into understandable language.
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <History className={classes.iconStyle} />
+
+              <Typography
+                className={classes.contentTextStyle}
+                variant="body2"
+                align="center"
+              >
+                You answer a few simple yes/no questions.
+              </Typography>
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <AccountBalance className={classes.iconStyle} />
+              <Typography
+                className={classes.contentTextStyle}
+                variant="body2"
+                align="center"
+              >
+                This helps determine your vacation eligibility.
+              </Typography>
+            </Grid>
+          </Grid>
+          <Box paddingTop={12} className={classes.buttonBoxStyle}>
+            <RedesignButtonPrimary href={"#"}>
+              Comming soon!
+            </RedesignButtonPrimary>
+          </Box>
         </Box>
       </Container>
 
@@ -280,6 +366,51 @@ const GetStartedPage = () => {
             the discretion of the judge and may be denied for a variety of
             reasons.
           </Typography>
+          <Typography
+            className={classes.contentTextStyle}
+            variant="body2"
+            align="left"
+          >
+            Your request to vacate may be denied if:
+          </Typography>
+          <Grid container>
+            <Grid item xs={3}>
+              <ContentSection>
+                <Typography
+                  className={classes.contentTextStyle}
+                  variant="body2"
+                  align="left"
+                >
+                  The court does not believe that vacating your conviction will
+                  be in the interest of society
+                </Typography>
+              </ContentSection>
+            </Grid>
+            <Grid item xs={3}>
+              <ContentSection>
+                <Typography
+                  className={classes.contentTextStyle}
+                  variant="body2"
+                  align="left"
+                >
+                  There are inaccuracies in your court records and/or the
+                  application
+                </Typography>
+              </ContentSection>
+            </Grid>
+            <Grid item xs={3}>
+              <ContentSection>
+                <Typography
+                  className={classes.contentTextStyle}
+                  variant="body2"
+                  align="left"
+                >
+                  You violated probation, have not paid off your fines or are
+                  otherwise not eligible to vacate that conviction{" "}
+                </Typography>
+              </ContentSection>
+            </Grid>
+          </Grid>
         </Box>
       </Container>
 
@@ -314,6 +445,33 @@ const GetStartedPage = () => {
           >
             Legal aid
           </Typography>
+          <Typography className={classes.donateBody2}>
+            Many pro bono services are only available after being refered by
+            CLEAR, a toll-free legal hotline:
+            <li>
+              Outside of King County: call 1-888-201-1014 (weekdays 9.15am -
+              12.15pm)
+            </li>
+            <li>In King County: call 2-1-1 (weekdays 8am - 6pm)</li>
+            <li>You can also apply online at CLEAR*Online</li>
+          </Typography>
+          <Grid container>
+            <Grid item>
+              <DropdownCard
+                cardData={dropdownCardData.legalAid1}
+              ></DropdownCard>
+            </Grid>
+            <Grid item>
+              <DropdownCard
+                cardData={dropdownCardData.legalAid2}
+              ></DropdownCard>
+            </Grid>
+            <Grid item>
+              <DropdownCard
+                cardData={dropdownCardData.legalAid3}
+              ></DropdownCard>
+            </Grid>
+          </Grid>
         </Box>
         <Box>
           <Typography
@@ -323,6 +481,18 @@ const GetStartedPage = () => {
           >
             Financial aid
           </Typography>
+          <Grid container>
+            <Grid item xs={2}>
+              <DropdownCard
+                cardData={dropdownCardData.financialAid1}
+              ></DropdownCard>
+            </Grid>
+            <Grid item xs={2}>
+              <DropdownCard
+                cardData={dropdownCardData.financialAid2}
+              ></DropdownCard>
+            </Grid>
+          </Grid>
         </Box>
       </Container>
     </>

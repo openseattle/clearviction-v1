@@ -13,7 +13,7 @@ export const useGetStartedStyles = makeStyles((theme) => ({
   colorfulHeadingStyle: {
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
-    color: theme.palette.primary.main,
+    color: theme.palette.primary.dark,
   },
   contentTextStyle: {
     marginTop: theme.spacing(5),
@@ -34,6 +34,7 @@ export const useGetStartedStyles = makeStyles((theme) => ({
   },
   iconStyle: {
     width: "100%",
-    padding: theme.spacing(2),
+    fontSize: "70px",
+    color: theme.palette.secondary.main,
   },
 }));
