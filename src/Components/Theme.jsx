@@ -80,7 +80,7 @@ const Theme = createTheme({
       letterSpacing: "0.15px",
       lineHeight: "30px",
     },
-    subtitile2: {
+    subtitle2: {
       fontFamily: headingFontFamily,
       fontWeight: "normal",
       fontSize: "20px",
