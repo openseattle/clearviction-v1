@@ -34,16 +34,19 @@ const TeamCard = (props) => {
             primaryTypographyProps={{variant: "h6", className: classes.name, noWrap: true }}
             secondaryTypographyProps={{ variant: "body2", color: "textPrimary", className: classes.role }}
           />
-        
+        {linkedIn &&
           <IconButton
             href={linkedIn}
             target="_blank"
             rel="noopener noreferrer"
             size="small"
+            component="button"
+            aria-label={`view ${firstName}'s LinkedIn profile`}
             // className={classes.liIcon}
           >
-            {linkedIn && <LinkedIn fontSize="large" color="primary" />}
+             <LinkedIn fontSize="large" color="primary" />
           </IconButton>
+          }
         </ListItem>
       </List>
     </Card>
