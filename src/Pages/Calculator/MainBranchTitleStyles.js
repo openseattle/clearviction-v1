@@ -3,16 +3,15 @@ import { makeStyles } from "@material-ui/core";
 export const MainBranchTitleStyles = makeStyles((theme) => ({
     grid: {
         display: "inline-block",
-        marginTop: "40px",
+        marginTop: "72px",
         justifyContent: "center",
         textAlign: "center",
     },
     header: {
-        
+        marginBottom: "24px"
     },
     body: {
-        marginTop: "16px",
-        marginBottom: "40px"
+        marginBottom: "72px"
     },
     button: {
         marginBottom: "40px"

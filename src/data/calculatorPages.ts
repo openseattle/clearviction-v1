@@ -1591,6 +1591,74 @@ const data: Pages = {
     disclaimer,
   },
   // these are not actual screens but used for testing the visual UI of the calc redesign
+  "mb-1": {
+    type: PageType.MAIN,
+    header: "Eligibility Calculator",
+    body: [
+      {
+        type: BodyType.PARAGRAPH,
+        text: "Find out if you are eligible to vacate your misdemeanor conviction."
+      }
+    ],
+    buttons: [
+      {
+        text: BUTTON_TEXT.CONTINUE,
+        href: "/"
+      }
+    ],
+  },
+  "mb-2": {
+    type: PageType.MAIN,
+    header: "Your Offense",
+    body: [
+      {
+        type: BodyType.PARAGRAPH,
+        text: "The first section will ask you about your offense."
+      }
+    ],
+    buttons: [
+      {
+        text: BUTTON_TEXT.CONTINUE,
+        href: "/"
+      }
+    ],
+    progressBar: {
+      currentSectionName: SectionName.TER,
+      totalSections: 3,
+    },
+  },
+  "mb-3": {
+    type: PageType.MAIN,
+    header: "Surrounding Circumstances",
+    body: [
+      {
+        type: BodyType.PARAGRAPH,
+        text: "This next section will ask you about conviction-related circumstances."
+      }
+    ],
+    buttons: [
+      {
+        text: BUTTON_TEXT.CONTINUE,
+        href: "/"
+      }
+    ],
+  },
+  "mb-4": {
+    type: PageType.MAIN,
+    header: "Terms of Offense",
+    body: [
+      {
+        type: BodyType.PARAGRAPH,
+        text: "The final section will ask you about the terms of the sentence for your offense."
+      }
+    ],
+    buttons: [
+      {
+        text: BUTTON_TEXT.CONTINUE,
+        href: "/"
+      }
+    ],
+  },
   "end-1": {
     type: PageType.END,
     header: "Our calculator can't determine your conviction's eligibility",
@@ -1607,7 +1675,7 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+        href: CALC_PREFIX + "/end-2",
       }
     ],
     showRestartButton: true,
@@ -1629,7 +1697,7 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+        href: CALC_PREFIX + "/end-3",
       }
     ],
     showRestartButton: true,
@@ -1651,7 +1719,7 @@ const data: Pages = {
     buttons: [
       {
         text: FEEDBACK_BUTTON_TEXT,
-        href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK
+        href: CALC_PREFIX + "/end-4",
       }
     ],
     showRestartButton: true,
@@ -1707,7 +1775,7 @@ const data: Pages = {
     buttons: [
       {
         text: BUTTON_TEXT.CONTINUE,
-        href: "/"
+        href: CALC_PREFIX + "/sc-2",
       }
     ],
   },
@@ -1731,7 +1799,7 @@ const data: Pages = {
     buttons: [
       {
         text: BUTTON_TEXT.CONTINUE,
-        href: "/"
+        href: CALC_PREFIX + "/sc-3",
       }
     ],
   },
@@ -1759,6 +1827,32 @@ const data: Pages = {
       }
     ],
   },
+  "q-1": {
+    type: PageType.QUESTION,
+    header: "Was your conviction a violent offense or an attempt to commit a violent offense?",
+    body: [
+      {
+        type: BodyType.PARAGRAPH,
+        text: "Violent offense is defined in RCW 9.94.030."
+      },
+    ],
+    buttons: [
+      {
+        text: BUTTON_TEXT.YES,
+        href: CALC_PREFIX + "/qac-ineligible-1",
+      },
+      {
+        text: BUTTON_TEXT.NO,
+        href: CALC_PREFIX + "/qac-3",
+      },
+    ],
+    progressBar: {
+      currentSectionName: SectionName.CONV,
+      totalSections: 3,
+    },
+    tooltip: TooltipType.NOT_SURE,
+  },
+
 };
 
 export default data;

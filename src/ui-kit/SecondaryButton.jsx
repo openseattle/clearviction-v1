@@ -1,25 +1,30 @@
 import { Button, makeStyles } from "@material-ui/core";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   flexGrow: {
     flex: "1",
   },
   button: {
     backgroundColor: "#ffffff",
     color: "var(--light-blue)",
-    padding: "10px",
     textTransform: "uppercase",
-    margin: "10px",
-    border: "var(--light-blue) solid",
     width: "30vw",
+    [theme.breakpoints.down("xs")]: {
+      width: "50vw",
+    },
+    display: "inline-block",
+    border: "var(--light-blue) solid",
+
     borderRadius: "30px",
+    padding: "10px",
+    margin: "10px",
     fontSize: "16px",
     "&:hover": {
-      backgroundColor: "#3b5173",
+      backgroundColor: "var(--gray)",
       color: "#ffffff",
     },
   },
-});
+}));
 
 export default function SecondaryButton({
   text,

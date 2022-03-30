@@ -3,12 +3,12 @@ import { makeStyles } from "@material-ui/core";
 export const SpecialCaseTitleStyles = makeStyles((theme) => ({
     grid: {
         display: "inline-block",
-        marginTop: "24px",
+        marginTop: "32px",
         justifyContent: "center",
         textAlign: "center",
     },
     header: {
-        marginBottom: "16px",
+        marginBottom: "24px",
         fontWeight: 600,
     },
     body: {
@@ -17,14 +17,13 @@ export const SpecialCaseTitleStyles = makeStyles((theme) => ({
     },
     bodyGrid: {
         display: "inline-block",
-        width: "60%",
-        marginBottom: "40px"
+        marginBottom: "72px"
     },
     button: {
         marginBottom: "40px"
     },
     backButton: {
-        marginTop: "24px",
+        marginBlock: "32px",
         justifyContent: "flex-start"
     }
 }))

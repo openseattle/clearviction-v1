@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { trackPageview } from "../trackingUtils";
 import FAQAccordion from "../Components/Accordion";
-import PrimaryButton from "../ui-kit/Button";
+import PrimaryButton from "../ui-kit/PrimaryButton";
 import Text from "../ui-kit/Text";
 import SecondaryButton from "../ui-kit/SecondaryButton";
 import cvpLogoWhite from "../Assets/cvp-logo-white.png";

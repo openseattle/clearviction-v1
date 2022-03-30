@@ -10,13 +10,13 @@ const SpecialCaseTitle = (props) => {
       <Grid container className={classes.backButton}>
         <BackButton />
       </Grid>
-      <Typography variant="h6" className={classes.header}>
+      <Typography variant="h5" className={classes.header}>
         {props.header}
       </Typography>
       <Grid item className={classes.bodyGrid}>
         {props.body.map((b, idx) => {
           return (
-            <Typography key={idx} variant="body1" className={classes.body}>
+            <Typography key={idx} variant="body2" className={classes.body}>
               {b.text}
             </Typography>
           );

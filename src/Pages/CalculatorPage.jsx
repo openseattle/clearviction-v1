@@ -41,6 +41,9 @@ const CalculatorPage = () => {
             body={body[0].text}
             buttonText={buttons[0].text}
             buttonHref={buttons[0].href}
+            // progressBar={progressBar}
+            // currentSectionName={progressBar.currentSectionName}
+            // totalSections={progressBar.totalSections}
           />
         );
       case PageType.SPECIAL:
@@ -58,6 +61,7 @@ const CalculatorPage = () => {
             header={header}
             body={body}
             buttons={buttons}
+            progressBar={progressBar}
             currentSectionName={progressBar.currentSectionName}
             totalSections={progressBar.totalSections}
             tooltip={tooltip}
@@ -72,6 +76,9 @@ const CalculatorPage = () => {
             tooltip={tooltip}
             showRestartButton={showRestartButton}
             disclaimer={disclaimer}
+            progressBar={progressBar && progressBar}
+            currentSectionName={progressBar && progressBar.currentSectionName}
+            totalSections={progressBar && progressBar.totalSections}
           />
         );
       default:
