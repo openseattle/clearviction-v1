@@ -55,6 +55,7 @@ const GetStartedPage = () => {
             <Typography
               className={classes.volunteerTextStyle}
               variant="subtitle1"
+              component="p"
             >
               Vacate your conviction in the state of Washington by following
               these 4 steps!

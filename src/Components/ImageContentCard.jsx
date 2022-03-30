@@ -46,6 +46,7 @@ const ImageContentCard = ({ content, image, buttonText, buttonHref }) => {
             className={classes.cardTextSTyle}
             variant="subtitle1"
             align="center"
+            component="h2"
           >
             {content}
           </Typography>

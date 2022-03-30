@@ -27,7 +27,7 @@ const RedesignHeroPanel = (props) => {
           {title}
         </Typography>
         {subtitle && (
-          <Typography className={classes.heroSubtitle} variant="subtitle1">
+          <Typography className={classes.heroSubtitle} variant="subtitle1" component="p">
             {subtitle}
           </Typography>
         )}

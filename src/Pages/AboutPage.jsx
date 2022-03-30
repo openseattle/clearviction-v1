@@ -35,6 +35,7 @@ const AboutPage = () => {
               <Typography
                 className={classes.contentTextStyle}
                 variant="subtitle1"
+                component="p"
               >
                 We are a civic-tech open-source project
                 working to make the conviction vacation
@@ -143,6 +144,7 @@ const AboutPage = () => {
               <Typography
                 variant="subtitle1"
                 className={classes.spaceAfter}
+                component="p"
               >
                 To support this mission, we first 
                 focused on creating a&nbsp;
