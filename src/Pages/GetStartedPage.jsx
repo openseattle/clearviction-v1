@@ -20,6 +20,7 @@ import FactSimpleCard from "../Components/FactSimpleCard";
 import CourtFormsFactGroup from "../Subpages/GetStarted/CourtFormsFactGroup";
 import LegalAidServices from "../Subpages/GetStarted/LegalAidServices";
 import FinancialAidServices from "../Subpages/GetStarted/FinancialAidServices";
+import { ExternalLink } from "../ui-kit/ExternalLink";
 
 const factsProps = {
   style: { fontSize: 54 },
@@ -198,9 +199,12 @@ const GetStartedPage = () => {
           Step 3: File with Court
         </Typography>
         <Typography className={classes.volunteerTextStyle}>
-          Next, submit a request to have your conviction vacated (refer to court
-          directory). Please note that the request to vacate is up to the
-          discretion of the judge and may be denied for a variety of reasons.
+          Next, submit a request to have your conviction vacated (refer to{" "}
+          <ExternalLink href="https://www.courts.wa.gov/court_dir/?fa=court_dir.county">
+            court directory
+          </ExternalLink>{" "}
+          ). Please note that the request to vacate is up to the discretion of
+          the judge and may be denied for a variety of reasons.
         </Typography>
         <Typography className={classes.volunteerTextStyle}>
           Your request to vacate may be denied if:
