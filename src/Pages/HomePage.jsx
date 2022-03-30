@@ -30,13 +30,14 @@ const HomePage = () => {
               <Typography
                 className={classes.contentTextStyle}
                 variant="subtitle1"
+                component="h2"
               >
                 If you have convictions in Washington you can check your
                 eligibility to vacate your conviction for free in less than 10
                 minutes!
               </Typography>
               <Box paddingTop={12}>
-                <Typography variant="h4">COMING SOON!</Typography>
+                <Typography variant="h4" component="h3">COMING SOON!</Typography>
                 {/* <EligibilityCalculatorButton /> */}
               </Box>
             </Grid>
@@ -126,6 +127,7 @@ const HomePage = () => {
           className={classes.headingStyle}
           variant="subtitle1"
           align="center"
+          component="h3"
         >
           A conviction vacation seals the offense from your record, and will
           give you more chance to access:

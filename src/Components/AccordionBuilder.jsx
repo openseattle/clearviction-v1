@@ -20,7 +20,7 @@ const AccordionBuilder = ({ faqs }) => {
       {faqs.map((faq, idx) => (
         <Accordion key={idx} elevation={0}>
           <AccordionSummary expandIcon={<ExpandMore />} {...a11yProps}>
-            <Typography variant="subtitle1">{faq.summary}</Typography>
+            <Typography variant="subtitle1" component="p">{faq.summary}</Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Box display="block">{faq.details}</Box>

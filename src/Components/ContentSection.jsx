@@ -18,6 +18,7 @@ const ContentSection = (props) => {
               className={classes.headingStyle}
               variant="h3"
               align="center"
+              component="h2"
             >
               {sectionTitle}
             </Typography>
