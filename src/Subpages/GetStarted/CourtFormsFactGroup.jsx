@@ -27,7 +27,7 @@ const courtFormsFacts = [
     id: "cf0",
     summary: "(Gross) Misdemeanor Convictions",
     content: (
-      <Typography variant="caption">
+      <Typography variant="body2" >
         {northwestJusticeCenterPacket(
           "Vacation packet from Northwest Justice Project"
         )}{" "}
@@ -40,7 +40,7 @@ const courtFormsFacts = [
     id: "cf1",
     summary: "Marijuana Misdemeanors",
     content: (
-      <Typography variant="caption">
+      <Typography variant="body2">
         {northwestJusticeCenterPacket(
           "Vacation packet from Northwest Justice Project"
         )}{" "}
@@ -53,7 +53,7 @@ const courtFormsFacts = [
     id: "cf2",
     summary: "Prostitution Convictions",
     content: (
-      <Typography variant="caption">
+      <Typography variant="body2">
         If you were a victim of trafficking, you can use this{" "}
         {northwestJusticeCenterPacket(
           "vacation packet from Northwest Justice Project"
@@ -67,7 +67,7 @@ const courtFormsFacts = [
     id: "cf3",
     summary: "Non-Violent Class B or C Felony",
     content: (
-      <Typography variant="caption">
+      <Typography variant="body2">
         {northwestJusticeCenterPacket(
           "Vacation packet from Northwest Justice Project"
         )}{" "}
@@ -88,7 +88,7 @@ const courtFormsFacts = [
     id: "cf4",
     summary: "Treaty to Indian Fishing Convictions",
     content: (
-      <Typography variant="caption">
+      <Typography variant="body2">
         {northwestJusticeCenterPacket(
           "Vacation packet from Northwest Justice Project"
         )}{" "}
@@ -102,14 +102,13 @@ const courtFormsFacts = [
     id: "cf5",
     summary: "Juvenile Conviction Records",
     content: (
-      <Typography component="ul" variant="caption">
-        <li>
+      <>
+      <Typography  variant="body2">
           Detailed {teamChildPacket("packet from TeamChild")} containing all
           court documents (p. 30-40), sample letters to WSP and JRA (p. 41-42),
           and the specific practices per county (p. 19-27).
-        </li>
-        <br/>
-        <li>
+          </Typography>
+          <Typography variant="body2">
           The{" "}
           {kingCountySealJuvenileRecords(
             "packet from King County Superior Court"
@@ -117,8 +116,8 @@ const courtFormsFacts = [
           briefly describes the procedure to vacate and contains all necessary
           court documents (p. 11-17) and a sample of how to fill in the court
           documents (p. 4-9).
-        </li>
       </Typography>
+      </>
     ),
   },
 ];
