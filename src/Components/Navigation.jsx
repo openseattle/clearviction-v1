@@ -89,7 +89,7 @@ const Navigation = () => {
             >
               <List className={classes.menuStyle}>
                 <ListItem style={{ justifyContent: "center" }}>
-                  <IconButton onClick={handleCloseMenu}>
+                  <IconButton onClick={handleCloseMenu} aria-label="close menu">
                     <CloseSharp
                       fontSize="large"
                       className={classes.closeIcon}
