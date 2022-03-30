@@ -9,7 +9,7 @@ const NavButtonMobile = ({ page, classes }) => {
     setExpandSubMenu(!expandSubMenu);
   };
   return (
-    <div>
+    <>
       {!page.subpages && (
         <Button component={Button} href={page.url} fullWidth>
           <Typography className={classes.menuButton} align="center">
@@ -18,7 +18,7 @@ const NavButtonMobile = ({ page, classes }) => {
         </Button>
       )}
       {page.subpages && (
-        <div>
+        <>
           <ListItem
             component={Button}
             onClick={handleExpandClick}
@@ -37,9 +37,9 @@ const NavButtonMobile = ({ page, classes }) => {
               </Button>
             ))}
           </Collapse>
-        </div>
+        </>
       )}
-    </div>
+    </>
   );
 };
 
