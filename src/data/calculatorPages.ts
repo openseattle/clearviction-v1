@@ -99,7 +99,7 @@ const data: Pages = {
     showRestartButton: true,
   },
   "landing-2": {
-    header: "Was this offense a misdemeanor?",
+    header: "Was this offense a misdemeanor or gross misdemeanor?",
     buttons: [
       {
         text: BUTTON_TEXT.YES,
