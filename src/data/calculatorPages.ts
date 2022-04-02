@@ -365,12 +365,19 @@ const data: Pages = {
   },
   "main-1": {
     header:
-      "Was your conviction a violent offense as defined in RCW 9.94A.030 or an attempt to commit a violence offense?",
+      "Was the offense one of the following?",
     progressBar: {
       currentSectionName: SectionName.CONV,
       totalSections: 3,
     },
     body: [
+      {
+        type: BodyType.LIST,
+        items: [
+          "A violent offense, as defined in RCW 9.94.030",
+          "An attempt to commit a violent offense"
+        ],
+      },
       {
         type: BodyType.LINK,
         text: "RCW 9.94A.030",
