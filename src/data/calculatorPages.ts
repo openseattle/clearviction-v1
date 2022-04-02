@@ -49,7 +49,11 @@ const data: Pages = {
     body: [
       {
         type: BodyType.PARAGRAPH,
-        text: "Going through this calculator is expected to take 10-30 minutes.",
+        text: "Time expectation: 10 minutes",
+      },
+      {
+        type: BodyType.PARAGRAPH,
+        text: "If you have multiple convictions, you will need to go through the calculator separately for each one.",
       },
       {
         type: BodyType.PARAGRAPH,
@@ -58,23 +62,23 @@ const data: Pages = {
       {
         type: BodyType.LIST,
         items: [
-          "The date and violation of your misdemeanor conviction",
-          "If and when you completed the terms of your sentence",
-          "Pending charges and/or new convictions",
+          "The date and violation of your misdemeanor or gross misdemeanor conviction.",
+          "If and when you completed the terms of your sentence.",
+          "Pending charges and/or new convictions.",
           "Any court orders against you*",
         ],
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "* Court orders include:",
+        text: "Any court orders against you:",
       },
       {
         type: BodyType.LIST,
         items: [
-          "A domestic violence protection order",
-          "A no-contact order",
-          "An anti-harassment order",
-          "A civil restraining order",
+          "Domestic violence protection order",
+          "No-contact order",
+          "Anti-harassment order",
+          "Civil restraining order",
         ],
       },
     ],
