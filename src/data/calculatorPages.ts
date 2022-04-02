@@ -25,12 +25,17 @@ const CANT_DETERMINE_FEEDBACK_FORM_LINK =
 
 const data: Pages = {
   "landing-0": {
-    header: "Misdemeanor Calculator",
+    header: "Eligibility Calulator",
     body: [
       {
         type: BodyType.PARAGRAPH,
-        text: "You can use our eligibility calculator to determine whether you are eligible to vacate your misdemeanor conviction.",
+        text: "Find out if your misdemeanor or gross misdemeanor conviction is eligible to vacate.",
       },
+      {
+        type: BodyType.LINK,
+        text: "If you are not sure whether your conviction is a misdemeanor, request your record here",
+        href: "https://www.wsp.wa.gov/crime/criminal-history",
+      }
     ],
     buttons: [
       {
@@ -38,7 +43,6 @@ const data: Pages = {
         href: CALC_PREFIX + "/landing-1",
       },
     ],
-    tooltip: TooltipType.NOT_A_MISDEMEANOR,
   },
   "landing-1": {
     header: "Quick Start Guide",
