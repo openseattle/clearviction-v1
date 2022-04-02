@@ -775,7 +775,6 @@ const data: Pages = {
         href: CALC_PREFIX + "/fsh-to-main",
       },
     ],
-    tooltip: TooltipType.NOT_SURE,
   },
   "fsh-2": {
     header:
