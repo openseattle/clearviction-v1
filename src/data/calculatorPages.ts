@@ -65,12 +65,12 @@ const data: Pages = {
           "The date and violation of your misdemeanor or gross misdemeanor conviction.",
           "If and when you completed the terms of your sentence.",
           "Pending charges and/or new convictions.",
-          "Any court orders against you*",
+          "Any court orders against you.",
         ],
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "Any court orders against you:",
+        text: "Court orders include:",
       },
       {
         type: BodyType.LIST,
