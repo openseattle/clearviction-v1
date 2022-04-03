@@ -380,16 +380,15 @@ const data: Pages = {
     },
     body: [
       {
-        type: BodyType.LIST,
-        items: [
-          "A violent offense, as defined in RCW 9.94.030",
-          "An attempt to commit a violent offense"
-        ],
+        type: BodyType.LINK,
+        text: "A violent offense, as defined in RCW 9.94A.030",
+        href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.94A.030",
       },
       {
-        type: BodyType.LINK,
-        text: "RCW 9.94A.030",
-        href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.94A.030",
+        type: BodyType.LIST,
+        items: [
+          "An attempt to commit a violent offense"
+        ],
       },
     ],
     buttons: [
