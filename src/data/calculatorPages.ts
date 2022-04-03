@@ -25,12 +25,17 @@ const CANT_DETERMINE_FEEDBACK_FORM_LINK =
 
 const data: Pages = {
   "landing-0": {
-    header: "Misdemeanor Calculator",
+    header: "Eligibility Calulator",
     body: [
       {
         type: BodyType.PARAGRAPH,
-        text: "You can use our eligibility calculator to determine whether you are eligible to vacate your misdemeanor conviction.",
+        text: "Find out if your misdemeanor or gross misdemeanor conviction is eligible to vacate.",
       },
+      {
+        type: BodyType.LINK,
+        text: "If you are not sure whether your conviction is a misdemeanor, request your record here",
+        href: "https://www.wsp.wa.gov/crime/criminal-history",
+      }
     ],
     buttons: [
       {
@@ -38,14 +43,17 @@ const data: Pages = {
         href: CALC_PREFIX + "/landing-1",
       },
     ],
-    tooltip: TooltipType.NOT_A_MISDEMEANOR,
   },
   "landing-1": {
     header: "Quick Start Guide",
     body: [
       {
         type: BodyType.PARAGRAPH,
-        text: "Going through this calculator is expected to take 10-30 minutes.",
+        text: "Time expectation: 10 minutes",
+      },
+      {
+        type: BodyType.PARAGRAPH,
+        text: "If you have multiple convictions, you will need to go through the calculator separately for each one.",
       },
       {
         type: BodyType.PARAGRAPH,
@@ -54,23 +62,23 @@ const data: Pages = {
       {
         type: BodyType.LIST,
         items: [
-          "The date and violation of your misdemeanor conviction",
-          "If and when you completed the terms of your sentence",
-          "Pending charges and/or new convictions",
-          "Any court orders against you*",
+          "The date and violation of your misdemeanor or gross misdemeanor conviction.",
+          "If and when you completed the terms of your sentence.",
+          "Pending charges and/or new convictions.",
+          "Any court orders against you.",
         ],
       },
       {
         type: BodyType.PARAGRAPH,
-        text: "* Court orders include:",
+        text: "Court orders include:",
       },
       {
         type: BodyType.LIST,
         items: [
-          "A domestic violence protection order",
-          "A no-contact order",
-          "An anti-harassment order",
-          "A civil restraining order",
+          "Domestic violence protection order",
+          "No-contact order",
+          "Anti-harassment order",
+          "Civil restraining order",
         ],
       },
     ],
@@ -99,7 +107,7 @@ const data: Pages = {
     showRestartButton: true,
   },
   "landing-2": {
-    header: "Was this offense a misdemeanor?",
+    header: "Was this offense a misdemeanor or gross misdemeanor?",
     buttons: [
       {
         text: BUTTON_TEXT.YES,
@@ -365,7 +373,7 @@ const data: Pages = {
   },
   "main-1": {
     header:
-      "Was your conviction a violent offense as defined in RCW 9.94A.030 or an attempt to commit a violence offense?",
+      "Was the offense one of the following?",
     progressBar: {
       currentSectionName: SectionName.CONV,
       totalSections: 3,
@@ -373,8 +381,14 @@ const data: Pages = {
     body: [
       {
         type: BodyType.LINK,
-        text: "RCW 9.94A.030",
+        text: "A violent offense, as defined in RCW 9.94A.030",
         href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.94A.030",
+      },
+      {
+        type: BodyType.LIST,
+        items: [
+          "An attempt to commit a violent offense"
+        ],
       },
     ],
     buttons: [
@@ -775,7 +789,6 @@ const data: Pages = {
         href: CALC_PREFIX + "/fsh-to-main",
       },
     ],
-    tooltip: TooltipType.NOT_SURE,
   },
   "fsh-2": {
     header:

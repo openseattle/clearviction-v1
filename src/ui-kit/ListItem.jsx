@@ -22,7 +22,7 @@ export const CVPListItem = (props) => {
     switch (listType) {
       case "link":
         return (
-          <Link href={href} onClick={onClick} target="_blank" rel="noreferrer">
+          <Link style={{textDecoration: "underline"}} href={href} onClick={onClick} target="_blank" rel="noreferrer">
             {text}
           </Link>
         );
