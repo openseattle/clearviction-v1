@@ -23,7 +23,10 @@ export const BackButton = (props) => {
     try {
       if (document.referrer.includes("calculator")) {
         history.goBack();
-      } else throw Error("nonCalcReferrer: unable to verify referral by a calculator question. Restarting Calculator...");
+      } else
+        throw Error(
+          "nonCalcReferrer: unable to verify referral by a calculator question. Restarting Calculator..."
+        );
     } catch (error) {
       console.log(error);
       setOpen(true);
@@ -45,7 +48,7 @@ export const BackButton = (props) => {
         onClick={handleClick}
         {...props}
       >
-        <ArrowBackIos /> Previous Question{" "}
+        <ArrowBackIos /> Previous{" "}
       </Button>
       <Snackbar
         open={open}

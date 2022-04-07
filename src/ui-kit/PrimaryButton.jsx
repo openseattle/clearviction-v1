@@ -5,12 +5,15 @@ const useStyles = makeStyles((theme) => ({
     flex: "1",
   },
   button: {
-    backgroundColor: "var(--light-gray)",
-    color: "#000000",
-    width: "327px",
+    backgroundColor: "var(--light-blue)",
+    color: "#ffffff",
+    textTransform: "uppercase",
+    width: "30vw",
     [theme.breakpoints.down("xs")]: {
       width: "50vw",
     },
+    display: "inline-block",
+    borderRadius: "30px",
     padding: "10px",
     margin: "10px",
     fontSize: "16px",
@@ -21,12 +24,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function PrimaryButton({ text, href }) {
+const PrimaryButton = (props) => {
   const classes = useStyles();
 
   return (
-    <Button className={classes.button} href={href}>
-      {text}
+    <Button className={classes.button} href={props.href}>
+      {props.text}
     </Button>
   );
-}
+};
+
+export default PrimaryButton;

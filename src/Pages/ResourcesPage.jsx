@@ -3,7 +3,7 @@ import HeroPanel from "../Components/HeroPanel";
 import { TextWithImage } from "../Subpages/WhyVacate/TextWithImage";
 import arranging from "../Assets/data_arranging.svg";
 import growth from "../Assets/growth.svg";
-import PrimaryButton from "../ui-kit/Button";
+import PrimaryButton from "../ui-kit/PrimaryButton";
 
 const ResourcesPage = () => {
   return (

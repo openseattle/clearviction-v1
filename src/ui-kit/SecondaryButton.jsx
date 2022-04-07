@@ -1,25 +1,38 @@
 import { Button, makeStyles } from "@material-ui/core";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   flexGrow: {
     flex: "1",
   },
   button: {
-    backgroundColor: "var(--light-blue)",
-    color: "#ffffff",
-    width: "flex",
+    backgroundColor: "#ffffff",
+    color: "var(--light-blue)",
+    textTransform: "uppercase",
+    width: "30vw",
+    [theme.breakpoints.down("xs")]: {
+      width: "50vw",
+    },
+    display: "inline-block",
+    border: "var(--light-blue) solid",
+
+    borderRadius: "30px",
     padding: "10px",
     margin: "10px",
-    textTransform: "none",
     fontSize: "16px",
     "&:hover": {
-      backgroundColor: "#3b5173",
+      backgroundColor: "var(--gray)",
       color: "#ffffff",
     },
   },
-});
+}));
 
-export default function SecondaryButton({ text, type, linkTo, externalLink }) {
+export default function SecondaryButton({
+  text,
+  type,
+  linkTo,
+  externalLink,
+  onClick,
+}) {
   const classes = useStyles();
   return externalLink ? (
     <Button
@@ -32,7 +45,12 @@ export default function SecondaryButton({ text, type, linkTo, externalLink }) {
       {text}
     </Button>
   ) : (
-    <Button href={linkTo} type={type} className={classes.button}>
+    <Button
+      href={linkTo}
+      onClick={onClick}
+      type={type}
+      className={classes.button}
+    >
       {text}
     </Button>
   );
