@@ -29,10 +29,10 @@ const EndScreen = (props) => {
         {props.header}
       </Typography>
       <Grid item className={classes.bodyGrid}>
-        {props.body.map((b, idx) => {
-          switch (b.type) {
-            case BodyType.LIST: {
-              {
+        {props.body &&
+          props.body.map((b, idx) => {
+            switch (b.type) {
+              case BodyType.LIST: {
                 return b.items.map((item, index) => {
                   return (
                     <CVPListItem
@@ -44,15 +44,30 @@ const EndScreen = (props) => {
                   );
                 });
               }
+              case BodyType.PARAGRAPH:
+                return (
+                  <Typography
+                    key={idx}
+                    variant="body2"
+                    className={classes.body}
+                  >
+                    {b.text}
+                  </Typography>
+                );
+                case BodyType.HEADING:
+                return (
+                  <Typography
+                    key={idx}
+                    variant="h5"
+                    className={classes.body}
+                  >
+                    {b.text}
+                  </Typography>
+                );
+              default:
+                break;
             }
-            case BodyType.PARAGRAPH:
-              return (
-                <Typography key={idx} variant="body2" className={classes.body}>
-                  {b.text}
-                </Typography>
-              );
-          }
-        })}
+          })}
       </Grid>
       <Grid item className={classes.buttonGrid}>
         {props.buttons.map((b, idx) => {
@@ -73,7 +88,7 @@ const EndScreen = (props) => {
       </Grid>
       <Grid item className={classes.restartButton}>
         {props.disclaimer && (
-          <Typography variant="body1" className={classes.body}>
+          <Typography variant="caption" className={classes.body}>
             {props.disclaimer}
           </Typography>
         )}

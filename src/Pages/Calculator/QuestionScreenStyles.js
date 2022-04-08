@@ -7,7 +7,8 @@ export const QuestionScreenStyles = makeStyles((theme) => ({
         justifyContent: "center"
     },
     header: {
-        marginBottom: "16px"
+        marginBottom: "16px",
+        textAlign: "center",
     },
     body: {
         textAlign: "left"
@@ -16,7 +17,7 @@ export const QuestionScreenStyles = makeStyles((theme) => ({
         marginBottom: "72px",
     },
     buttonGrid: {
-        padding: "32px",
+        paddingBottom: "32px",
     },
     button: {
         marginBottom: "16px",

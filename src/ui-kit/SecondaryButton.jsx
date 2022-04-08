@@ -8,10 +8,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#ffffff",
     color: "var(--light-blue)",
     textTransform: "uppercase",
-    width: "248px",
+    minWidth: "248px",
+    maxWidth: "30vw",
     height: "48px",
     [theme.breakpoints.down("xs")]: {
-      width: "50vw",
+      fontSize: "12px",
     },
     border: "var(--light-blue) solid",
 

@@ -14,7 +14,7 @@ const SpecialCaseTitle = (props) => {
         {props.header}
       </Typography>
       <Grid item className={classes.bodyGrid}>
-        {props.body.map((b, idx) => {
+        { props.body && props.body.map((b, idx) => {
           return (
             <Typography key={idx} variant="body2" className={classes.body}>
               {b.text}

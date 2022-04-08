@@ -15,6 +15,7 @@ import { QuestionScreenStyles } from "./QuestionScreenStyles";
 import ProgressBar from "../../Components/ProgressBar";
 import SecondaryButton from "../../ui-kit/SecondaryButton";
 import { trackClick } from "../../trackingUtils";
+import { BodyType } from "../../data/calculatorPagesTypes";
 
 const QuestionScreen = (props) => {
   const classes = QuestionScreenStyles();
@@ -25,34 +26,36 @@ const QuestionScreen = (props) => {
     setOpen(true);
     trackClick(props.text);
   };
-  const [activeStep, setActiveStep] = useState(0);
-  const [progress, setProgress] = useState(0);
-  const steps = ["Label 1", "Label 2", "Label 3"];
+  // const [activeStep, setActiveStep] = useState(0);
+  // const [progress, setProgress] = useState(0);
+  // const steps = ["Label 1", "Label 2", "Label 3"];
 
-  const handleNext = () => {
-    progress < 90 ? setProgress((prev) => prev + 10) : nextStep();
-  };
+  // const handleNext = () => {
+  //   progress < 90 ? setProgress((prev) => prev + 10) : nextStep();
+  // };
 
-  const nextStep = () => {
-    setProgress(0);
-    setActiveStep((prev) => prev + 1);
-  };
+  // const nextStep = () => {
+  //   setProgress(0);
+  //   setActiveStep((prev) => prev + 1);
+  // };
+
+  console.log(props);
   return (
     <Grid container className={classes.grid}>
-      {props.progressBar && (
+      {/* {props.progressBar && (
         <Grid container className={classes.progressBar}>
-          {/* <ProgressBar /> */}
+          <ProgressBar />
           <ProgressBar steps={steps} current={activeStep} progress={progress} />
           <Button variant="contained" color="primary" onClick={handleNext}>
             {activeStep === steps.length - 1 ? "Finish" : "Next"}
           </Button>
-          {/* <ProgressBar
+           <ProgressBar
             currentSectionName={props.currentSectionName}
             currentSection={props.currentSection}
             totalSections={props.totalSections}
-          /> */}
+          />
         </Grid>
-      )}
+      )} */}
 
       <Grid container className={classes.backButton}>
         <BackButton />
@@ -61,23 +64,46 @@ const QuestionScreen = (props) => {
         {props.header}
       </Typography>
       <Grid item className={classes.bodyGrid}>
-        {props.body.map((b, idx) => {
-          
-          return (
-            <Typography key={idx} variant="body1" className={classes.body}>
-              {b.text}
-            </Typography>
-          );
-        })}
+        {props.body &&
+          props.body.map((b, idx) => {
+            switch (b.type) {
+              default:
+                return (
+                  <Typography
+                    key={idx}
+                    variant="body2"
+                    className={classes.body}
+                  >
+                    {b.text}
+                  </Typography>
+                );
+              case BodyType.LIST:
+                return (
+                  <ul>
+                    {b.items.map((item, idx) => (
+                      <li key={idx}>{item}</li>
+                    ))}
+                  </ul>
+                );
+              case BodyType.LINK:
+                return (
+                  <ul>
+                    <li key={idx}>
+                      <a href={b.href}>{b.text}</a>
+                    </li>
+                  </ul>
+                );
+            }
+          })}
       </Grid>
       <Grid container justify="center" className={classes.buttonGrid}>
         {props.buttons.map((b, idx) => {
           return (
             <PrimaryButton
-              key={idx}
-              className={classes.button}
-              text={b.text}
               href={b.href}
+              key={idx}
+              text={b.text}
+              className={classes.button}
             />
           );
         })}

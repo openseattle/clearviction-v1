@@ -14,6 +14,7 @@ import EndScreen from "./Calculator/EndScreen";
 import QuickStartGuide from "./Calculator/QuickStartGuide";
 
 const CalculatorPage = () => {
+  console.log("enter calculator")
   const { pathname } = useLocation();
   const indexOfPageId = pathname.split("/").length - 1;
   const pageId = pathname.split("/")[indexOfPageId];
@@ -22,6 +23,7 @@ const CalculatorPage = () => {
   if (!content) window.location = "/404";
   useEffect(() => trackPageview("Calculator"), []);
 
+  console.log(content);
   const {
     header,
     body,
@@ -33,7 +35,7 @@ const CalculatorPage = () => {
     showRestartButton,
   } = content;
 
-  const renderBody = (type) => {
+  const renderPage = (type) => {
     switch (type) {
       case PageType.GUIDE:
         return (
@@ -52,7 +54,7 @@ const CalculatorPage = () => {
         return (
           <MainBranchTitle
             header={header}
-            body={body[0].text}
+            body={body}
             buttonText={buttons[0].text}
             buttonHref={buttons[0].href}
             // progressBar={progressBar}
@@ -75,10 +77,10 @@ const CalculatorPage = () => {
             header={header}
             body={body}
             buttons={buttons}
-            progressBar={progressBar}
+            // progressBar={progressBar}
             // currentSectionName={progressBar.currentSectionName}
             // totalSections={progressBar.totalSections}
-            // tooltip={tooltip}
+            tooltip={tooltip}
           />
         );
       case PageType.END:
@@ -101,17 +103,10 @@ const CalculatorPage = () => {
   };
 
   return (
-    <Box
-      sx={{
-        padding: 20,
-      }}
-    >
-      <Container maxWidth="sm" padding={10}>
-        <Grid container direction="column" spacing={2}>
-          {body && renderBody(type)}
-        </Grid>
+      <Container maxWidth="md">
+           {renderPage(type)}
       </Container>
-    </Box>
+
   );
 };
 

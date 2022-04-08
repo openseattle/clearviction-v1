@@ -38,12 +38,37 @@ const Theme = createTheme({
   },
   typography: {
     fontFamily: bodyFontFamily,
+    button: {
+      fontWeight: 700,
+      fontSize: "18px",
+      letterSpacing: "1px",
+    },
+  },
+});
+
+Theme.overrides = {
+  MuiTypography: {
+    h1: {
+      fontFamily: headingFontFamily,
+      fontWeight: "normal",
+      fontSize: "86px",
+      letterSpacing: "-1.5px",
+      lineHeight: "95px",
+      [Theme.breakpoints.down("xs")]: {
+        fontSize: "64px",
+        lineHeight: "72px",
+      },
+    },
     h2: {
       fontFamily: headingFontFamily,
       fontWeight: "normal",
       fontSize: "56px",
       letterSpacing: "-0.5px",
       lineHeight: "72px",
+      [Theme.breakpoints.down("xs")]: {
+        fontSize: "48px",
+        lineHeight: "64px",
+      },
     },
     h3: {
       fontFamily: headingFontFamily,
@@ -92,18 +117,22 @@ const Theme = createTheme({
       fontSize: "20px",
       letterSpacing: "0.5px",
       lineHeight: "28px",
+      [Theme.breakpoints.down("xs")]: {
+        fontSize: "16px",
+        lineHeight: "22px",
+      },
     },
     body2: {
       fontWeight: "normal",
       fontSize: "18px",
       letterSpacing: "0.25px",
       lineHeight: "26px",
+      [Theme.breakpoints.down("xs")]: {
+        fontSize: "14px",
+        lineHeight: "20px",
+      },
     },
-    button: {
-      fontWeight: 700,
-      fontSize: "18px",
-      letterSpacing: "1px",
-    },
+
     caption: {
       fontWeight: "lighter",
       fontSize: "14px",
@@ -117,22 +146,6 @@ const Theme = createTheme({
       lineHeight: "15px",
     },
   },
-});
-
-// Add font size breakpoints to support smaller devices
-Theme.typography.h1 = {
-  fontFamily: headingFontFamily,
-  fontWeight: "normal",
-  fontSize: "86px",
-  letterSpacing: "-1.5px",
-  lineHeight: "95px",
-  [Theme.breakpoints.down("xs")]: {
-    fontSize: "64px",
-    lineHeight: "72px",
-  },
-};
-
-Theme.overrides = {
   MuiAppBar: {
     colorPrimary: {
       backgroundColor: Theme.palette.primary.dark,
@@ -169,21 +182,20 @@ Theme.overrides = {
       border: `1px solid ${Theme.palette.primary.light}`,
       "&$expanded": {
         margin: 0,
-      }
+      },
     },
     rounded: {
       borderRadius: 0,
-      '&:first-child': {
+      "&:first-child": {
         borderTopLeftRadius: 6,
         borderTopRightRadius: 6,
       },
-      '&:last-child': {
+      "&:last-child": {
         borderBottomLeftRadius: 6,
         borderBottomRightRadius: 6,
       },
     },
   },
-
 };
 
 export default Theme;

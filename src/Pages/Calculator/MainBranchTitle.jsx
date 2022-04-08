@@ -5,6 +5,7 @@ import ProgressBar from "../../Components/ProgressBar";
 import { BackButton } from "../../ui-kit/BackButton";
 
 const MainBranchTitle = (props) => {
+  console.log(props)
   const classes = MainBranchTitleStyles();
   return (
     <Grid container className={classes.grid}>
@@ -26,9 +27,9 @@ const MainBranchTitle = (props) => {
       <Typography variant="h4" className={classes.header}>
         {props.header}
       </Typography>
-      <Typography variant="body1" className={classes.body}>
-        {props.body}
-      </Typography>
+     {props.body && <Typography variant="body1" className={classes.body}>
+        {props.body[0].text}
+      </Typography>}
       <PrimaryButton
         className={classes.button}
         text={props.buttonText}

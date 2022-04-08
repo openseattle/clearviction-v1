@@ -94,6 +94,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_A_MISDEMEANOR,
   },
   "landing-ineligible-0": {
+    type: PageType.END,
     header: "Our calculator can't determine your eligibility",
     body: [
       {
@@ -110,6 +111,7 @@ const data: Pages = {
     showRestartButton: true,
   },
   "landing-2": {
+    type: PageType.QUESTION,
     header: "Was this offense a misdemeanor or gross misdemeanor?",
     buttons: [
       {
@@ -124,14 +126,15 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "landing-3": {
+    type: PageType.QUESTION,
     header: "Does your conviction fall into any of these special cases?",
     buttons: [
       {
-        text: "Possession of marijuana misdemeanor",
+        text: "Possession of marijuana",
         href: CALC_PREFIX + "/mar-0",
       },
       {
-        text: "Prostitution misdemeanor",
+        text: "Prostitution",
         href: CALC_PREFIX + "/pro-0",
       },
       {
@@ -139,7 +142,7 @@ const data: Pages = {
         href: CALC_PREFIX + "/fsh-0",
       },
       {
-        text: "My conviction doesn't fall into any of the special cases (most convictions fall in this category)",
+        text: "None of the above",
         href: CALC_PREFIX + "/main-0",
         color: "green",
       },
@@ -147,6 +150,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "mar-0": {
+    type: PageType.SPECIAL,
     header:
       "You may be eligible for conviction vacation based on a special clause in conviction vacation eligibility law.",
     progressBar: {
@@ -176,6 +180,7 @@ const data: Pages = {
     ],
   },
   "mar-1": {
+    type: PageType.QUESTION,
     header: "Did this offense involve possession of marijuana?",
     progressBar: {
       currentSectionName: SectionName.CONV,
@@ -194,6 +199,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "mar-2": {
+    type: PageType.QUESTION,
     header: "Were you 21 years or older at the time of offense?",
     progressBar: {
       currentSectionName: SectionName.CONV,
@@ -212,6 +218,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "mar-3": {
+    type: PageType.QUESTION,
     header:
       "Was your conviction for possession of 40 grams or less of marijuana?",
     progressBar: {
@@ -231,6 +238,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "mar-4": {
+    type: PageType.QUESTION,
     header: "Have you completed the terms of your sentence for this offense?",
     progressBar: {
       currentSectionName: SectionName.CONV,
@@ -249,6 +257,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "mar-ineligible-0": {
+    type: PageType.END,
     header:
       "As of now, it seems that you may NOT be eligible to vacate your marijuana misdemeanor conviction because you have not completed the terms of your offense.",
     buttons: [
@@ -261,6 +270,7 @@ const data: Pages = {
     disclaimer,
   },
   "mar-eligible-0": {
+    type: PageType.END,
     header:
       "From your answers, it seems that you may be eligible to vacate your marijuana misdemeanor conviction!",
     progressBar: {
@@ -333,6 +343,7 @@ const data: Pages = {
     disclaimer,
   },
   "mar-ineligible-1": {
+    type: PageType.END,
     header:
       "As of now, it seems that you may NOT be eligible to vacate your marijuana misdemeanor conviction because you have not completed the terms of your offense.",
     buttons: [
@@ -345,6 +356,7 @@ const data: Pages = {
     disclaimer,
   },
   "mar-to-main": {
+    type: PageType.MAIN,
     header:
       "Based on your response, it looks like you don't qualify for the marijuana misdemeanor exception.",
     body: [
@@ -361,6 +373,7 @@ const data: Pages = {
     ],
   },
   "main-0": {
+    type: PageType.MAIN,
     header:
       "We will now ask a few questions about what your conviction was for, to assess your eligibility to vacate the conviction.",
     progressBar: {
@@ -375,6 +388,7 @@ const data: Pages = {
     ],
   },
   "main-1": {
+    type: PageType.QUESTION,
     header:
       "Was the offense one of the following?",
     progressBar: {
@@ -407,6 +421,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "main-ineligible-0": {
+    type: PageType.END,
     header:
       "As of now, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because your conviction is classified as a violent offense as defined in RCW 9.94A.030.",
     body: [
@@ -426,6 +441,7 @@ const data: Pages = {
     disclaimer,
   },
   "main-2": {
+    type: PageType.QUESTION,
     header: "Was the offense was a violation of any of the following?",
     progressBar: {
       currentSectionName: SectionName.CONV,
@@ -461,6 +477,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "main-ineligible-1": {
+    type: PageType.END,
     header:
       "As of now, it seems that you may NOT be eligible to vacate your misdemeanor conviction because your offense was one of the following:",
     body: [
@@ -490,6 +507,7 @@ const data: Pages = {
     disclaimer,
   },
   "main-3": {
+    type: PageType.QUESTION,
     header:
       'Was the offense considered a "prior offense" under RCW 46.61.5055?',
     progressBar: {
@@ -516,6 +534,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "main-4": {
+    type: PageType.QUESTION,
     header:
       "Did you have an additional alcohol or drug violation within 10 years of the date of arrest for the prior offense?",
     progressBar: {
@@ -535,6 +554,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "main-5": {
+    type: PageType.QUESTION,
     header:
       "Was the offense a misdemeanor or gross misdemeanor violation, including attempt of any of the following:",
     progressBar: {
@@ -571,6 +591,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "main-ineligible-2": {
+    type: PageType.QUESTION,
     header:
       "As of now, it seems that you may NOT be eligible to vacate your  misdemeanor conviction.",
     body: [
@@ -604,6 +625,7 @@ const data: Pages = {
     disclaimer,
   },
   "main-ineligible-3": {
+    type: PageType.END,
     header:
       "Unfortunately, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because you have had an additional alcohol or drug violation within 10 years of your prior offense.",
     buttons: [
@@ -616,6 +638,7 @@ const data: Pages = {
     disclaimer,
   },
   "main-7": {
+    type: PageType.QUESTION,
     header:
       "Has it been 10 years or more since the date of the arrest for the prior offense?",
     progressBar: {
@@ -635,6 +658,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "main-ineligible-4": {
+    type: PageType.END,
     header:
       "As of now, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because it has been less than 10 years since your arrest for the prior offense.",
     body: [
@@ -653,6 +677,7 @@ const data: Pages = {
     disclaimer,
   },
   "main-8": {
+    type: PageType.QUESTION,
     header:
       "Was the offense considered domestic violence against family / household member or spouse / partner?",
     body: [
@@ -679,6 +704,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "main-9": {
+    type: PageType.QUESTION,
     header:
       "Have you had 2 or more domestic violence convictions each stemming from different incidents?",
     progressBar: {
@@ -698,6 +724,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "main-ineligible-5": {
+    type: PageType.END,
     header:
       "Unfortunately, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because you have had 2 or more domestic violence incidents.",
     buttons: [
@@ -710,6 +737,7 @@ const data: Pages = {
     disclaimer,
   },
   "main-10": {
+    type: PageType.QUESTION,
     header:
       "Have 5 or more years passed since fulfillment of all sentencing requirements for this conviction?",
     progressBar: {
@@ -729,6 +757,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "main-ineligible-6": {
+    type: PageType.END,
     header:
       "As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because it has been less than 5 years since the conviction for this offense.",
     body: [
@@ -747,6 +776,7 @@ const data: Pages = {
     disclaimer,
   },
   "fsh-0": {
+    type: PageType.SPECIAL,
     header:
       "You may be eligible for conviction vacation based on a special clause in conviction vacation eligibility law.",
     progressBar: {
@@ -776,6 +806,7 @@ const data: Pages = {
     ],
   },
   "fsh-1": {
+    type: PageType.QUESTION,
     header:
       "Are you a member of a tribe? You can also apply on behalf of a deceased family member in the tribe who meets the criteria.",
     progressBar: {
@@ -794,6 +825,7 @@ const data: Pages = {
     ],
   },
   "fsh-2": {
+    type: PageType.QUESTION,
     header:
       "Did you (or your family member) receive a fishing related conviction while exercising a treaty right?",
     progressBar: {
@@ -813,6 +845,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "fsh-3": {
+    type: PageType.QUESTION,
     header: "Was it before January 1st, 1975?",
     progressBar: {
       currentSectionName: SectionName.CONV,
@@ -831,6 +864,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "fsh-4": {
+    type: PageType.QUESTION,
     header:
       "Did your tribe (or your family member's tribe) exercise fishing rights at the location where it occurred?",
     progressBar: {
@@ -850,6 +884,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "fsh-eligible": {
+    type: PageType.END,
     header:
       "It seems that you may be eligible to vacate your fishing misdemeanor conviction!",
     progressBar: {
@@ -908,6 +943,7 @@ const data: Pages = {
     disclaimer,
   },
   "fsh-to-main": {
+    type: PageType.MAIN,
     header:
       "Based on your answers, it looks like you don't fall into the fishing regulation exception.",
     body: [
@@ -924,6 +960,7 @@ const data: Pages = {
     ],
   },
   "pro-0": {
+    type: PageType.SPECIAL,
     header:
       "You may be eligible for conviction vacation based on a special clause in conviction vacation eligibility law",
     progressBar: {
@@ -953,6 +990,7 @@ const data: Pages = {
     ],
   },
   "pro-1": {
+    type: PageType.QUESTION,
     header:
       "Was the conviction a result of being a victim of one of the following?:",
     progressBar: {
@@ -984,6 +1022,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "pro-2": {
+    type: PageType.QUESTION,
     header: "Was the conviction for any of the following offense(s): ",
     progressBar: {
       currentSectionName: SectionName.CONV,
@@ -1012,6 +1051,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "pro-3": {
+    type: PageType.QUESTION,
     header:
       "Do you have charges pending in this state or any other state, or in any federal court for any crime other than prostitution?",
     progressBar: {
@@ -1031,6 +1071,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "pro-4": {
+    type: PageType.QUESTION,
     header:
       "Have you been convicted of a new crime in this state, another state or federal or tribal court in the last 3 years/prior to when you will be applying for vacation?",
     progressBar: {
@@ -1050,6 +1091,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "pro-5": {
+    type: PageType.QUESTION,
     // here
     header:
       "Has the crime victim penalty assessment, RCW 7.68.035, been paid in full?",
@@ -1076,6 +1118,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "pro-6": {
+    type: PageType.QUESTION,
     header:
       "If applicable, has restitution owed to any victim, excluding restitution owed to any insurance provider under Title 48 RCW, been paid in full?",
     progressBar: {
@@ -1105,6 +1148,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "pro-eligible": {
+    type: PageType.END,
     header:
       "It seems that you may be eligible to vacate your prostitution misdemeanor conviction!",
     progressBar: {
@@ -1172,6 +1216,7 @@ const data: Pages = {
     disclaimer,
   },
   "pro-ineligible-0": {
+    type: PageType.END,
     header:
       "In order to qualify for vacation, you cannot have any charges for crimes pending in the last 3 years prior to your application.",
     buttons: [
@@ -1184,6 +1229,7 @@ const data: Pages = {
     disclaimer,
   },
   "pro-ineligible-1": {
+    type: PageType.END,
     header: "Unfortunately, you are not eligible for vacation",
     buttons: [
       {
@@ -1195,6 +1241,7 @@ const data: Pages = {
     disclaimer,
   },
   "pro-ineligible-2": {
+    type: PageType.END,
     header:
       "In order to qualify for vacation, you cannot have any charges for crimes pending in this state or any other state besides for prostitution.",
     buttons: [
@@ -1207,6 +1254,7 @@ const data: Pages = {
     disclaimer,
   },
   "pro-ineligible-3": {
+    type: PageType.END,
     header:
       "Based on your answers, it looks like you don't qualify for the victim of prostitution exception.",
     body: [
@@ -1224,6 +1272,7 @@ const data: Pages = {
     disclaimer,
   },
   "pro-to-main": {
+    type: PageType.MAIN,
     header:
       "Based on your response, you are not eligible for this exception. However, your conviction may be eligible under other laws.",
     body: [
@@ -1240,6 +1289,7 @@ const data: Pages = {
     ],
   },
   "qac-0": {
+    type: PageType.SPECIAL,
     header:
       "This set of questions covers other conviction-related circumstances that will affect conviction eligibility.",
     progressBar: {
@@ -1254,6 +1304,7 @@ const data: Pages = {
     ],
   },
   "qac-1": {
+    type: PageType.QUESTION,
     header:
       "Do you have any pending criminal charges in any court in Washington or another state, or in any federal court?",
     progressBar: {
@@ -1273,6 +1324,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "qac-2": {
+    type: PageType.QUESTION,
     header:
       "Have you been convicted of a new crime in Washington or any other state in the 3 years prior to the application for vacation?",
     progressBar: {
@@ -1292,6 +1344,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "qac-3": {
+    type: PageType.QUESTION,
     header: "Are you currently restrained by any of the following: ",
     progressBar: {
       currentSectionName: SectionName.CIRC,
@@ -1321,6 +1374,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "qac-4": {
+    type: PageType.QUESTION,
     header:
       "Have you violated a prior restraining order in the 5 years preceding the application for vacation?",
     progressBar: {
@@ -1340,6 +1394,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "qac-ineligible-0": {
+    type: PageType.END,
     body: [
       {
         type: BodyType.PARAGRAPH,
@@ -1364,6 +1419,7 @@ const data: Pages = {
     disclaimer,
   },
   "qac-ineligible-1": {
+    type: PageType.END,
     body: [
       {
         type: BodyType.PARAGRAPH,
@@ -1388,6 +1444,7 @@ const data: Pages = {
     disclaimer,
   },
   "qac-ineligible-2": {
+    type: PageType.END,
     body: [
       {
         type: BodyType.PARAGRAPH,
@@ -1412,6 +1469,7 @@ const data: Pages = {
     disclaimer,
   },
   "qac-ineligible-3": {
+    type: PageType.END,
     header: `As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because you answered YES to the below question: 
                  Are you currently restrained by any of the following:`,
     body: [
@@ -1439,6 +1497,7 @@ const data: Pages = {
     disclaimer,
   },
   "qac-ineligible-4": {
+    type: PageType.END,
     body: [
       {
         type: BodyType.PARAGRAPH,
@@ -1464,6 +1523,7 @@ const data: Pages = {
     disclaimer,
   },
   "too-0": {
+    type: PageType.MAIN,
     header: "This final set of questions covers the terms of your offense.",
     progressBar: {
       currentSectionName: SectionName.TER,
@@ -1477,6 +1537,7 @@ const data: Pages = {
     ],
   },
   "too-1": {
+    type: PageType.QUESTION,
     header: "Have you completed the terms of the sentence for your offense?",
     progressBar: {
       currentSectionName: SectionName.TER,
@@ -1495,6 +1556,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "too-2": {
+    type: PageType.QUESTION,
     header:
       "Have 3 years passed since completing the terms of your sentence including financial obligations?",
     progressBar: {
@@ -1521,6 +1583,7 @@ const data: Pages = {
     tooltip: TooltipType.NOT_SURE,
   },
   "too-eligible-0": {
+    type: PageType.END,
     header:
       "It seems that you may be eligible to vacate your misdemeanor conviction!",
     progressBar: {
@@ -1570,6 +1633,7 @@ const data: Pages = {
     disclaimer,
   },
   "too-ineligible-0": {
+    type: PageType.END,
     header: `As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because you have not completed the terms of the conviction for this offense.  
                 You might be eligible when you've completed the terms of your conviction and 3 years have passed since the completion of your sentence, 
                 including any financial obligations.`,
@@ -1583,6 +1647,7 @@ const data: Pages = {
     disclaimer,
   },
   "too-ineligible-1": {
+    type: PageType.END,
     header: `As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because it has been less than 3 years since your 
                 conviction was completed including your financial obligations.
                 You might be eligible when 3 years have passed since completing the terms of your conviction including any financial obligations.`,
