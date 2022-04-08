@@ -12,6 +12,7 @@ import {
   TooltipType,
   BUTTON_TEXT,
   SectionName,
+  PageType,
 } from "./calculatorPagesTypes";
 
 const CALC_PREFIX = "/calculator";
@@ -25,6 +26,7 @@ const CANT_DETERMINE_FEEDBACK_FORM_LINK =
 
 const data: Pages = {
   "landing-0": {
+    type: PageType.MAIN,
     header: "Eligibility Calulator",
     body: [
       {
@@ -45,6 +47,7 @@ const data: Pages = {
     ],
   },
   "landing-1": {
+    type: PageType.GUIDE,
     header: "Quick Start Guide",
     body: [
       {

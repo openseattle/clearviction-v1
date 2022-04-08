@@ -1,6 +1,5 @@
 import "../CSS/Calculator.css";
 import { useState } from "react";
-import classNames from "classnames";
 
 // const ProgressBar = ({ currentSectionName, totalSections }) => {
 //   let currentSection;
@@ -78,6 +77,9 @@ import PropTypes from "prop-types";
 // @material-ui/core components
 import LinearProgress from "@material-ui/core/LinearProgress";
 import withStyles from "@material-ui/core/styles/withStyles";
+
+const classNames = () => null;
+
 
 const customStepperStyle = {
   stepper: {

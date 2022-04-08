@@ -14,6 +14,7 @@ interface PageData {
 }
 
 export enum PageType {
+  GUIDE = "guide",
   MAIN = "main",
   SPECIAL = "special",
   QUESTION = "question",

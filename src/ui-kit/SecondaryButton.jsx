@@ -8,11 +8,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "#ffffff",
     color: "var(--light-blue)",
     textTransform: "uppercase",
-    width: "30vw",
+    width: "248px",
+    height: "48px",
     [theme.breakpoints.down("xs")]: {
       width: "50vw",
     },
-    display: "inline-block",
     border: "var(--light-blue) solid",
 
     borderRadius: "30px",

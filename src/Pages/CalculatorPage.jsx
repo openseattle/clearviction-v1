@@ -11,6 +11,7 @@ import SpecialCaseTitle from "./Calculator/SpecialCaseTitle";
 import { PageType } from "../data/calculatorPagesTypes";
 import QuestionScreen from "./Calculator/QuestionScreen";
 import EndScreen from "./Calculator/EndScreen";
+import QuickStartGuide from "./Calculator/QuickStartGuide";
 
 const CalculatorPage = () => {
   const { pathname } = useLocation();
@@ -34,6 +35,19 @@ const CalculatorPage = () => {
 
   const renderBody = (type) => {
     switch (type) {
+      case PageType.GUIDE:
+        return (
+          <QuickStartGuide
+            header={header}
+            body={body}
+            buttonText={buttons[0].text}
+            buttonHref={buttons[0].href}
+            tooltip={tooltip}
+            // progressBar={progressBar}
+            // currentSectionName={progressBar.currentSectionName}
+            // totalSections={progressBar.totalSections}
+          />
+        );
       case PageType.MAIN:
         return (
           <MainBranchTitle
@@ -62,9 +76,9 @@ const CalculatorPage = () => {
             body={body}
             buttons={buttons}
             progressBar={progressBar}
-            currentSectionName={progressBar.currentSectionName}
-            totalSections={progressBar.totalSections}
-            tooltip={tooltip}
+            // currentSectionName={progressBar.currentSectionName}
+            // totalSections={progressBar.totalSections}
+            // tooltip={tooltip}
           />
         );
       case PageType.END:
@@ -76,9 +90,9 @@ const CalculatorPage = () => {
             tooltip={tooltip}
             showRestartButton={showRestartButton}
             disclaimer={disclaimer}
-            progressBar={progressBar && progressBar}
-            currentSectionName={progressBar && progressBar.currentSectionName}
-            totalSections={progressBar && progressBar.totalSections}
+            // progressBar={progressBar && progressBar}
+            // currentSectionName={progressBar && progressBar.currentSectionName}
+            // totalSections={progressBar && progressBar.totalSections}
           />
         );
       default:

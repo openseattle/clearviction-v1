@@ -62,6 +62,7 @@ const QuestionScreen = (props) => {
       </Typography>
       <Grid item className={classes.bodyGrid}>
         {props.body.map((b, idx) => {
+          
           return (
             <Typography key={idx} variant="body1" className={classes.body}>
               {b.text}
