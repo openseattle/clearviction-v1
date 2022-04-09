@@ -107,7 +107,6 @@ const QuestionScreen = (props) => {
             />
           );
         })}
-
         {props.tooltip && (
           <SecondaryButton
             className={classes.button}

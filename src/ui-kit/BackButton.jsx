@@ -4,11 +4,18 @@ import { Alert } from "@material-ui/lab";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   backButtonStyle: {
     fontWeight: "lighter",
+    fontSize: "18px",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "14px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "12px",
+    },
   },
-});
+}));
 
 export const BackButton = (props) => {
   const classes = useStyles();

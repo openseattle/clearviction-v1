@@ -65,6 +65,7 @@ const data: Pages = {
       {
         type: BodyType.LIST,
         items: [
+          
           "The date and violation of your misdemeanor or gross misdemeanor conviction.",
           "If and when you completed the terms of your sentence.",
           "Pending charges and/or new convictions.",

@@ -5,24 +5,26 @@ const useStyles = makeStyles((theme) => ({
     flex: "1",
   },
   button: {
-    backgroundColor: "#ffffff",
-    color: "var(--light-blue)",
+    backgroundColor: theme.palette.common.white,
+    color: theme.palette.primary.main,
     textTransform: "uppercase",
-    minWidth: "248px",
-    maxWidth: "30vw",
+    width: "248px",
     height: "48px",
+    fontSize: "18px",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "14px",
+    },
     [theme.breakpoints.down("xs")]: {
       fontSize: "12px",
     },
-    border: "var(--light-blue) solid",
-
+    border: `${theme.palette.primary.main} solid`,
     borderRadius: "30px",
     padding: "10px",
     margin: "10px",
-    fontSize: "16px",
     "&:hover": {
-      backgroundColor: "var(--gray)",
-      color: "#ffffff",
+      border: `${theme.palette.primary.dark} solid`,
+      backgroundColor: theme.palette.primary.dark,
+      color: theme.palette.common.white,
     },
   },
 }));

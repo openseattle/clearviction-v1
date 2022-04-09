@@ -18,10 +18,9 @@ export const RedesignButtonSecondary = (props) => {
 
   return (
     <Button
-      className={classes.RedesignButtonSecondaryStyle}
+      className={`${classes.RedesignButtonSecondaryStyle} ${props.classes}`}
       variant="outlined"
       color="primary"
-      {...props}
     >
       {props.children}
     </Button>

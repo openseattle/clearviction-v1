@@ -5,13 +5,13 @@ const useStyles = makeStyles((theme) => ({
     flex: "1",
   },
   button: {
-    backgroundColor: "var(--light-blue)",
-    color: "#ffffff",
-    textTransform: "none",
+    backgroundColor: theme.palette.primary.main,
+    color: theme.palette.primary.contrastText,
+    textTransform: "uppercase",
     minHeight: "48px",
     minWidth: "248px",
     maxWidth: "30vw",
-    fontSize: "16px",
+    fontSize: "18px",
     [theme.breakpoints.down("md")]: {
       width: "100%",
       fontSize: "14px",
@@ -25,8 +25,8 @@ const useStyles = makeStyles((theme) => ({
     margin: "10px",
 
     "&:hover": {
-      backgroundColor: "var(--gray)",
-      color: "#000000",
+      backgroundColor: theme.palette.secondary.main,
+      color: theme.palette.secondary.contrastText,
     },
   },
 }));
@@ -35,7 +35,7 @@ const PrimaryButton = (props) => {
   const classes = useStyles();
 
   return (
-    <Button className={classes.button} href={props.href} tabIndex={0}>
+    <Button className={classes.button} href={props.href} variant="contained">
       {props.text}
     </Button>
   );
