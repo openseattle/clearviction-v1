@@ -15,14 +15,13 @@ const faFacts = [
         <Typography component="ul" variant="body2">
           <li>
             {" "}
-            •{" "}
             <ExternalLink href="https://nwjustice.org/clear-hotline">
               CLEAR hotline
             </ExternalLink>{" "}
             - refer you to legal organizations
           </li>
           <li>
-            •{" "}
+            {" "}
             <ExternalLink href="https://columbialegal.org/wp-content/uploads/2019/10/CLS-Re-Entry-Clinic-Brochure.pdf">
               Re-Entry Clinic
             </ExternalLink>{" "}
@@ -30,8 +29,8 @@ const faFacts = [
             on legal issues related to LFO’s
           </li>
           <li>
-            • Contact us at contact@cvp.com and we will get back to you within
-            24 hours.
+            Contact us at contact@cvp.com and we will get back to you within 24
+            hours.
           </li>
         </Typography>
         <Typography variant="body2">
@@ -52,7 +51,7 @@ const faFacts = [
       <>
         <Typography variant="body2" component="ul">
           <li>
-            • Use this{" "}
+            Use this{" "}
             <ExternalLink href="https://www.washingtonlawhelp.org/files/C9D2EA3F-0350-D9AF-ACAE-BF37E9BC9FFA/attachments/3928A184-D6E5-9324-4FB9-495A060A017B/3204en_filing-motion-for-fee-waiver.pdf">
               {" "}
               packet from Washington Law Help
@@ -60,11 +59,11 @@ const faFacts = [
             to find out if you are eligible to waive your fees (p. 1-2).
           </li>
           <li>
-            • It also includes the instructions to ask for a fee waiver (p. 4-9)
+            It also includes the instructions to ask for a fee waiver (p. 4-9)
             and all necessary forms (p. 10-14).
           </li>
           <li>
-            • If you have trouble filling out the documents, use this website
+            If you have trouble filling out the documents, use this website
             created by Northwest Justice{" "}
             <ExternalLink href="https://lawhelpinteractive.org/Interview/GenerateInterview/7063/engine">
               to help fill out the documents for free
