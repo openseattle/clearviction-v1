@@ -2,7 +2,7 @@ import { Box, Card, CardContent, makeStyles, Typography } from "@material-ui/cor
 
 const useStyles = makeStyles( (theme) => ({
   rootCardStyle: {
-    height: 396,
+    height: 448,
     width: 300,
   },
   amountStyle: {

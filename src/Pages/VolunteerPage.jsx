@@ -94,7 +94,7 @@ const VolunteerPage = () => {
         </Typography>
         <Grid container>
           {openVolunteerRoles.map((volunteerRole) => (
-            <Grid key={volunteerRole.id} item xs={12} sm={12} md={4}>
+            <Grid key={volunteerRole.id} item xs={12} sm={6} md={4}>
               <Box display={"flex"} justifyContent={"center"}>
                 <VolunteerRolesCard
                   image={volunteerRole.image}
