@@ -15,7 +15,7 @@ const TeamCard = (props) => {
   const { firstName, lastName, role, linkedIn } = props.member;
 
   return (
-    <Card className={classes.card}>
+    <Card className={classes.card} tabIndex={0}>
       <CardMedia>
         <Avatar
           className={classes.avatar}
