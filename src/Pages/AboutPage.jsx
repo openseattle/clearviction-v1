@@ -3,6 +3,7 @@ import {
   Grid,
   Typography,
   Box,
+  Divider,
 } from "@material-ui/core";
 import TeamCard from "../Components/TeamCard";
 import {
@@ -164,7 +165,7 @@ const AboutPage = () => {
           </Grid>
         </Box>
       </Container>
-      <hr className={classes.divider} />
+      <Divider className={classes.divider} />
 
       <Box className={classes.regularContainer +" " + classes.teamContainer} id="our-team">
         <Container maxWidth="lg" >
