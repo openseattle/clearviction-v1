@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     margin: "0 auto",
     textDecoration: "underline",
-    color: theme.palette.primary.light,
+    color: theme.palette.primary.main,
     fontWeight: theme.typography.h4.fontWeight,
     "&:before": {
       content: "'↺'",

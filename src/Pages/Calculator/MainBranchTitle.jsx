@@ -5,18 +5,15 @@ import ProgressBar from "../../Components/ProgressBar";
 import { BackButton } from "../../ui-kit/BackButton";
 
 const MainBranchTitle = (props) => {
-  console.log(props)
   const classes = MainBranchTitleStyles();
   return (
     <Grid container className={classes.grid}>
       {props.progressBar && (
-        <Grid container>
           <ProgressBar
             currentSectionName={props.progressBar.currentSectionName}
             currentSection={props.progressBar.currentSection}
-            totalSections={3}
+            totalSections={props.progressBar.totalSections}
           />
-        </Grid>
       )}
       {props.backButton && (
         <Grid container className={classes.backButton}>

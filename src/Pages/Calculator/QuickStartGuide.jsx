@@ -54,7 +54,7 @@ const QuickStartGuide = (props) => {
           }
         })}
       </Grid>
-      <Grid container justify="center" className={classes.buttonGrid}>
+      <Grid container justifyContent="center" className={classes.buttonGrid}>
         <PrimaryButton
           className={classes.button}
           text={props.buttonText}

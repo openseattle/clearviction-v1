@@ -5,13 +5,14 @@ import calculatorPages from "../data/calculatorPages";
 import "../CSS/Calculator.css";
 
 /** MATERIAL UI IMPORTS */
-import { Box, Container, Grid } from "@material-ui/core";
+import { Container, Grid } from "@material-ui/core";
 import MainBranchTitle from "./Calculator/MainBranchTitle";
 import SpecialCaseTitle from "./Calculator/SpecialCaseTitle";
 import { PageType } from "../data/calculatorPagesTypes";
 import QuestionScreen from "./Calculator/QuestionScreen";
 import EndScreen from "./Calculator/EndScreen";
 import QuickStartGuide from "./Calculator/QuickStartGuide";
+import ProgressBar from "../Components/ProgressBar";
 
 const CalculatorPage = () => {
   console.log("enter calculator")
@@ -23,7 +24,6 @@ const CalculatorPage = () => {
   if (!content) window.location = "/404";
   useEffect(() => trackPageview("Calculator"), []);
 
-  console.log(content);
   const {
     header,
     body,
@@ -45,7 +45,7 @@ const CalculatorPage = () => {
             buttonText={buttons[0].text}
             buttonHref={buttons[0].href}
             tooltip={tooltip}
-            // progressBar={progressBar}
+            progressBar={progressBar}
             // currentSectionName={progressBar.currentSectionName}
             // totalSections={progressBar.totalSections}
           />
@@ -57,7 +57,7 @@ const CalculatorPage = () => {
             body={body}
             buttonText={buttons[0].text}
             buttonHref={buttons[0].href}
-            // progressBar={progressBar}
+            progressBar={progressBar}
             // currentSectionName={progressBar.currentSectionName}
             // totalSections={progressBar.totalSections}
           />
@@ -77,7 +77,7 @@ const CalculatorPage = () => {
             header={header}
             body={body}
             buttons={buttons}
-            // progressBar={progressBar}
+            progressBar={progressBar}
             // currentSectionName={progressBar.currentSectionName}
             // totalSections={progressBar.totalSections}
             tooltip={tooltip}
@@ -92,7 +92,7 @@ const CalculatorPage = () => {
             tooltip={tooltip}
             showRestartButton={showRestartButton}
             disclaimer={disclaimer}
-            // progressBar={progressBar && progressBar}
+            progressBar={progressBar}
             // currentSectionName={progressBar && progressBar.currentSectionName}
             // totalSections={progressBar && progressBar.totalSections}
           />
@@ -104,7 +104,9 @@ const CalculatorPage = () => {
 
   return (
       <Container maxWidth="md">
+        <Grid container direction="column" spacing={2}>
            {renderPage(type)}
+           </Grid>
       </Container>
 
   );

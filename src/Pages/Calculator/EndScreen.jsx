@@ -1,4 +1,4 @@
-import { Grid, Typography, ListItem } from "@material-ui/core";
+import { Grid, Typography, } from "@material-ui/core";
 import { BackButton } from "../../ui-kit/BackButton";
 import PrimaryButton from "../../ui-kit/PrimaryButton";
 import { EndScreenStyles } from "./EndScreenStyles";
@@ -81,7 +81,7 @@ const EndScreen = (props) => {
           );
         })}
       </Grid>
-      <Grid item className={classes.restartButton}>
+      <Grid item className={classes.restartButton} >
         {props.showRestartButton && (
           <RestartButton className={classes.button} />
         )}

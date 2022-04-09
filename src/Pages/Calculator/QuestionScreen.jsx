@@ -56,6 +56,13 @@ const QuestionScreen = (props) => {
           />
         </Grid>
       )} */}
+       {props.progressBar && (
+          <ProgressBar
+            currentSectionName={props.progressBar.currentSectionName}
+            currentSection={props.progressBar.currentSection}
+            totalSections={props.progressBar.totalSections}
+          />
+      )}
 
       <Grid container className={classes.backButton}>
         <BackButton />
@@ -96,7 +103,7 @@ const QuestionScreen = (props) => {
             }
           })}
       </Grid>
-      <Grid container justify="center" className={classes.buttonGrid}>
+      <Grid container justifyContent="center" className={classes.buttonGrid}>
         {props.buttons.map((b, idx) => {
           return (
             <PrimaryButton
