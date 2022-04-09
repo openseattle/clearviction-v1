@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { trackClick } from "../trackingUtils";
 import { Modal, Box, Button, Typography } from "@material-ui/core";
-import Text from "../ui-kit/Text";
 
 const boxStyle = {
   position: "absolute",
@@ -31,7 +30,7 @@ const ToolTipModal = (props) => {
         onClick={handleOpen}
         style={{ color: "black", textDecoration: "underline" }}
       >
-        <Text text={props.text} variant={"h5"}></Text>
+        <Typography variant="h5">{props.text}</Typography>
       </Button>
       <Modal
         open={open}
