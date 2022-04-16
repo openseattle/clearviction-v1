@@ -126,7 +126,8 @@ const GetStartedPage = () => {
                 <Typography className={classes.volunteerTextStyle}>
                   Get an{" "}
                   <Link
-                    rel=""
+                    rel="noopener noreferrer"
+                    target="_blank"
                     href="https://watch.wsp.wa.gov/WATCH/Home/Notice?ReturnPage=%2FHome%2FIndex"
                   >
                     “unofficial” copy through WATCH
