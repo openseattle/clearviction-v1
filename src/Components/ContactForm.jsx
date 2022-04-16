@@ -156,7 +156,7 @@ const ContactForm = () => {
             onChange={handleChange}
             variant="standard"
             fullWidth
-            color="#d8d8d8"
+            color="primary"
           />
           <FormLabel className={classes.labelStyle} component="legend">
             <Typography variant="body2" className={classes.labelTextStyle}>
@@ -169,7 +169,7 @@ const ContactForm = () => {
             className={classes.inputStyle}
             placeholder="Enter Your Email Address"
             type="email"
-            color='#d8d8d8'
+            color='primary'
             fullWidth
             error={emailError.errorStatus}
             helperText={emailError.errorMessage}
@@ -195,7 +195,7 @@ const ContactForm = () => {
             value={toSend.contact_type}
             onChange={handleChange}
             variant="standard"
-            color="#d8d8d8"
+            color="primary"
           >
             {contactTypes.map((option) => (
               <MenuItem key={option.value} value={option.value}>
@@ -221,7 +221,7 @@ const ContactForm = () => {
             name="message"
             onChange={handleChange}
             variant="standard"
-            color="#d8d8d8"
+            color="primary"
           />
           <Box className={classes.buttonBoxStyle}>
             <RedesignButtonPrimary type={"submit"}>
