@@ -25,7 +25,6 @@ function App() {
         >
           <CssBaseline />
           <Navigation />
-
           <Switch>
             <Route path="/404">
               <ErrorPage />
