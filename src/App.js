@@ -11,10 +11,6 @@ import ContactPage from "./Pages/ContactPage";
 import Footer from "./Components/Footer";
 import GetInvolvedPage from "./Pages/GetInvolvedPage";
 import GetStartedPage from "./Pages/GetStartedPage";
-// import WhyVacatePage from "./Pages/WhyVacatePage";
-// import ResourcesPage from "./Pages/ResourcesPage";
-// import TheProcessPage from "./Subpages/Resources/TheProcessPage";
-// import AssistancePage from "./Subpages/Resources/AssistancePage";
 
 function App() {
   return (
@@ -40,7 +36,7 @@ function App() {
             <Route path="/calculator/:pageId">
               <CalculatorPage />
             </Route>
-            <Route exact path="/calculator-beta">
+            <Route exact path="/calculator">
               <Redirect to="/calculator/landing-0" />
             </Route>
             <Route exact path="/about">
@@ -55,18 +51,6 @@ function App() {
             <Route path="/get-started">
               <GetStartedPage />
             </Route>
-            {/* <Route path="/why-vacate">
-              <WhyVacatePage />
-            </Route>
-            <Route exact path="/resources">
-              <ResourcesPage />
-            </Route>
-            <Route exact path="/resources/the-process">
-              <TheProcessPage />
-            </Route>
-            <Route path="/resources/assistance">
-              <AssistancePage />
-            </Route> */}
           </Switch>
           <Footer />
         </Box>
