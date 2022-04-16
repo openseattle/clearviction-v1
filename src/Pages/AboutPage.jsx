@@ -116,9 +116,8 @@ const AboutPage = () => {
                 </Typography>
               </Grid>
             </Grid>
-
             <Box className={classes.buttonBoxStyle}>
-              <RedesignButtonPrimary>
+              <RedesignButtonPrimary href="/get-started">
                 Learn More
               </RedesignButtonPrimary>
             </Box>
