@@ -156,13 +156,11 @@ const GetStartedPage = () => {
             </Grid>
             <Grid item xs={12} sm={4}>
               <Typography className={classes.volunteerTextStyle} align="right">
-                <Link align="center">
                   Washington State Patrol <br />
                   Identification and <br />
                   Background Section <br />
                   PO Box 42633 <br />
                   Olympia WA 98504-2633 <br />
-                </Link>
               </Typography>
             </Grid>
           </Grid>
