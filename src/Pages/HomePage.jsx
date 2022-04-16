@@ -132,8 +132,8 @@ const HomePage = () => {
           A conviction vacation seals the offense from your record, and will
           give you more chance to access:
         </Typography>
-        <Grid container>
-          <Grid item xs={12} sm={6} lg={3}>
+        <Grid container spacing={1}>
+          <Grid item xs={12} sm={6} md={3} lg={3}>
             <img className={classes.iconStyle} src={city} alt={"city Icon"} />
             <Typography
               className={classes.headingStyle}
@@ -151,7 +151,7 @@ const HomePage = () => {
               home.
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={6} lg={3}>
+          <Grid item xs={12} sm={6} md={3} lg={3}>
             <img
               className={classes.iconStyle}
               src={checklist}
@@ -172,7 +172,7 @@ const HomePage = () => {
               Reduce barriers to finding and obtaining employment.
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={6} lg={3}>
+          <Grid item xs={12} sm={6} md={3} lg={3}>
             <img
               className={classes.iconStyle}
               src={education}
@@ -189,7 +189,7 @@ const HomePage = () => {
               Apply for scholarships, programs, degrees or certificates.
             </Typography>
           </Grid>
-          <Grid item xs={12} sm={6} lg={3}>
+          <Grid item xs={12} sm={6} md={3} lg={3}>
             <img
               className={classes.iconStyle}
               src={lawyer}
