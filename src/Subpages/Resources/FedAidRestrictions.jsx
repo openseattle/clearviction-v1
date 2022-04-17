@@ -1,5 +1,5 @@
 import { Box, Container, Typography } from "@material-ui/core";
-import AlternativeAccord from "../../Components/AlternativeAccord";
+import AccordionBuilder from "../../Components/AccordionBuilder";
 import { useResourcesStyles } from "../../Styles/useResourcesStyles";
 
 const restrictions = [
@@ -64,7 +64,7 @@ const FedAidRestrictions = () => {
         >
           Restrictions on recieving federal aid
         </Typography>
-        <AlternativeAccord faqs={restrictions} />
+        <AccordionBuilder faqs={restrictions} />
       </Container>
     </Box>
   );

@@ -1,50 +1,70 @@
-import { Container } from "@material-ui/core";
-import { Route } from "react-router-dom";
-import HeroPanel from "../Components/HeroPanel";
-import NavCardGroup from "../Components/NavCardGroup";
+import { Box, Container, Divider, Grid } from "@material-ui/core";
+
 import DonatePage from "./DonatePage";
 import PartnerPage from "./PartnerPage";
 import VolunteerPage from "./VolunteerPage";
+import RedesignHeroPanel from "../Components/RedesignHeroPanel";
+import ImageContentCard from "../Components/ImageContentCard";
 
-const subPages = [
-  {
-    name: "Volunteer",
-    link: "/get-involved/volunteer",
-    desc: "Join our dedicated volunteer team and help us bring the resources to those who need them.",
-  },
-  {
-    name: "Donate",
-    link: "/get-involved/donate",
-    desc: "Your gift makes it possible to continue helping our community. ",
-  },
-  {
-    name: "Partner with us",
-    link: "/get-involved/partner-with-us",
-    desc: "Create change by sharing our story and reaching out to your peers.",
-  },
-];
+import diversity from "../Assets/diversity2.svg";
+import moneyJar from "../Assets/money_jar.svg";
+import marketing from "../Assets/marketing.svg";
+
+import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
 
 const GetInvolvedPage = () => {
+  const classes = useGetInvolvedStyles();
   return (
-    <Container>
-      <HeroPanel
-        title={"Get involved"}
+    <>
+      <RedesignHeroPanel
+        title="Get involved"
         subtitle={
-          "There are many ways to participate with the CVP team, and we appreciate all of them!"
+          "There are many ways to participate with the Clearviction team, and we appreciate all of them!"
         }
-      />
-      <NavCardGroup subPages={subPages} xs={12} sm={12} md={4} />
-
-      <Route exact path="/get-involved/volunteer">
-        <VolunteerPage />
-      </Route>
-      <Route exact path="/get-involved/donate">
-        <DonatePage />
-      </Route>
-      <Route exact path="/get-involved/partner-with-us">
-        <PartnerPage />
-      </Route>
-    </Container>
+      >
+        <Grid container>
+          <Grid item xs={12} sm={12} md={4}>
+            <Box display="flex" justifyContent="center">
+              <ImageContentCard
+                content="Join our dedicated volunteer team and help us bring the resources to those who need them. "
+                image={diversity}
+                buttonHref="#volunteer"
+                buttonText="volunteer"
+              />
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={12} md={4}>
+            <Box display="flex" justifyContent="center">
+              <ImageContentCard
+                content="Your gift makes a difference. Make it possible to continue helping our community."
+                image={moneyJar}
+                buttonHref="#donate"
+                buttonText="Donate"
+              />
+            </Box>
+          </Grid>
+          <Grid item xs={12} sm={12} md={4}>
+            <Box display="flex" justifyContent="center">
+              <ImageContentCard
+                content="Create change by sharing our project with others and reaching out to your peers."
+                image={marketing}
+                buttonHref="#partner-with-us"
+                buttonText="Partner with us"
+              />
+            </Box>
+          </Grid>
+        </Grid>
+      </RedesignHeroPanel>
+      <VolunteerPage id="volunteer" />
+      <Container maxWidth="md">
+        <Divider className={classes.dividerStyle} />
+      </Container>
+      <DonatePage />
+      <Container maxWidth="md">
+        <Divider className={classes.dividerStyle} />
+      </Container>
+      <PartnerPage />
+    </>
   );
 };
 

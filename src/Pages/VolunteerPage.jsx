@@ -1,302 +1,114 @@
-import {
-  Box,
-  Grid,
-  makeStyles,
-  Typography,
-  Container,
-  List,
-  ListItem,
-  ListItemIcon,
-} from "@material-ui/core";
-import SecondaryButton from "../ui-kit/SecondaryButton";
-import { Alarm, CloudDoneOutlined, SchoolOutlined } from "@material-ui/icons";
+import { Box, Grid, Typography, Container } from "@material-ui/core";
+import { Alarm, CloudDone, Sync } from "@material-ui/icons";
 
-import meeting from "../Assets/team_meeting.svg";
 import team from "../Assets/team_building.svg";
 import brainstorm from "../Assets/brainstorming_session.svg";
 import laptop from "../Assets/laptop.svg";
+import Fact from "../Components/Fact";
+import VolunteerRolesCard from "../Components/VolunteerRolesCard";
 
-const useStyles = makeStyles((theme) => ({
-  volunteer: {
-    marginTop: theme.spacing(5),
-    marginBottom: theme.spacing(5),
+import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
+import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
+
+const factsProps = {
+  style: { fontSize: "3em" },
+  color: "secondary",
+};
+
+const facts = [
+  {
+    id: "fact0",
+    icon: <Alarm {...factsProps} />,
+    text: "Can commit to 4 hours a week for at least 6 months",
   },
-  icon: {
-    fontSize: "4rem",
-    color: theme.palette.highlight.main,
+  {
+    id: "fact1",
+    icon: <Sync {...factsProps} />,
+    text: "Want to share your expertise to help us make a better product",
   },
-  contentText: {
-    margin: theme.spacing(2),
+  {
+    id: "fact2",
+    icon: <CloudDone {...factsProps} />,
+    text: "Are a self-motivated individual comfortable with remote work",
   },
-  contentTextAlt: {
-    color: "white",
-    margin: theme.spacing(2),
-    paddingBottom: theme.spacing(2),
+];
+const openVolunteerRoles = [
+  {
+    id: "role0",
+    image: team,
+    alt: "Two people who belong to the same team putting a puzzle together.",
+    discipline: "User Experience",
+    roles: ["Designers", "Researchers"],
   },
-  listTextAlt: {
-    color: "white",
+  {
+    id: "role1",
+    image: brainstorm,
+    alt: "A lightbulb representing an idea surrounded by a network.",
+    discipline: "Development",
+    roles: ["Front-end Devs", "Back-end Devs"],
   },
-  title: {
-    margin: theme.spacing(2),
+  {
+    id: "role2",
+    image: laptop,
+    alt: "Someone using a laptop to communicate.",
+    discipline: "Content & Outreach",
+    roles: ["Copywriters", "Marketing Directors"],
   },
-  titleAlt: {
-    margin: theme.spacing(2),
-    paddingBottom: theme.spacing(1),
-    color: "white",
-  },
-  backgroundSecondary: {
-    height: 400,
-    backgroundColor: theme.palette.primary.dark,
-    padding: theme.spacing(5),
-    [theme.breakpoints.down("sm")]: {
-      height: 300,
-      padding: theme.spacing(2),
-    },
-  },
-  backgroundLightSecondary: {
-    height: 400,
-    backgroundColor: theme.palette.primary.light,
-    padding: theme.spacing(5),
-    [theme.breakpoints.down("sm")]: {
-      height: 300,
-      padding: theme.spacing(1),
-    },
-  },
-  teamMeeting: {
-    width: "100%",
-  },
-  roleImage: {
-    width: "100%",
-  },
-  titleRoles: {
-    padding: theme.spacing(5),
-  },
-  headingRoles: {
-    color: theme.palette.primary.light,
-    paddingBottom: theme.spacing(2),
-  },
-  roleAdjust: {
-    [theme.breakpoints.up("sm")]: {
-      paddingTop: theme.spacing(5),
-    },
-  },
-  buttonPad: {
-    marginTop: theme.spacing(10),
-    marginBottom: theme.spacing(10),
-  },
-  emailLink: {
-    overflowWrap: "break-word",
-    color: theme.palette.highlight.main,
-    "&:hover": {
-      color: theme.palette.highlight.main,
-    },
-  },
-}));
+];
 
 const VolunteerPage = () => {
-  const classes = useStyles();
+  const classes = useGetInvolvedStyles();
   return (
     <>
-      <Container className={classes.volunteer} maxWidth="lg">
-        <Grid container justifyContent="center" alignItems="center">
-          <Grid item xs={12} sm={6} md={6}>
-            <Box justifyContent="center" display="flex">
-              <Box
-                component="img"
-                src={meeting}
-                className={classes.teamMeeting}
-              />
-            </Box>
-          </Grid>
-          <Grid item xs={12} sm={6} md={6}>
-            <Box justifyContent="center" display="flex">
-              <Box paddingBottom={5}>
-                <Typography className={classes.title} variant="h2">
-                  Why volunteer?
-                </Typography>
-                <Typography className={classes.contentText} variant="body1">
-                  Conviction vacation makes it easier for formerly incarcerated
-                  individuals to access housing and employment. The two things
-                  that are crucial for reducing the odds of re-incarceration.
-                </Typography>
-                <Typography className={classes.contentText} variant="body1">
-                  By volunteering, you will help us reduce barriers and
-                  streamline the process of vacating eligible convictions in
-                  Washington state to make it easier for people to move forward.
-                </Typography>
-              </Box>
-            </Box>
-          </Grid>
-          <Grid
-            className={classes.backgroundLightSecondary}
-            item
-            xs={12}
-            sm={12}
-            md={6}
-          >
-            <Typography className={classes.titleAlt} variant="h2">
-              Who can apply?
-            </Typography>
-            <List>
-              <ListItem>
-                <ListItemIcon>
-                  <Alarm className={classes.icon} />
-                </ListItemIcon>
-                <Typography className={classes.listTextAlt}>
-                  You can commit to 4 hours a week for at least 6 months
-                </Typography>
-              </ListItem>
-              <ListItem>
-                <ListItemIcon>
-                  <SchoolOutlined className={classes.icon} />
-                </ListItemIcon>
-                <Typography className={classes.listTextAlt}>
-                  You want to share your expertise in a field to help us make a
-                  better product
-                </Typography>
-              </ListItem>
-              <ListItem>
-                <ListItemIcon>
-                  <CloudDoneOutlined className={classes.icon} />
-                </ListItemIcon>
-                <Typography className={classes.listTextAlt}>
-                  You are self-motivated and are comfortable with remote work
-                </Typography>
-              </ListItem>
-            </List>
-          </Grid>
-          <Grid
-            className={classes.backgroundSecondary}
-            item
-            xs={12}
-            sm={12}
-            md={6}
-          >
-            <Box>
-              <Typography
-                className={classes.titleAlt}
-                variant="h2"
-                align="left"
-              >
-                How can you apply?
-              </Typography>
-              <Typography
-                className={classes.contentTextAlt}
-                variant="body1"
-                align="left"
-              >
-                We are currently using{" "}
-                <a
-                  className={classes.emailLink}
-                  href="https://www.democracylab.org/projects/226"
-                >
-                  DemocracyLab
-                </a>{" "}
-                to streamline the volunteering process.
-              </Typography>
-              <Typography
-                className={classes.contentTextAlt}
-                variant="body1"
-                align="left"
-              >
-                If you want further information and want to have a chat, don’t
-                hesitate to contact us by email at{" "}
-                <a className={classes.emailLink} href="/contact">
-                  convictionvacation@gmail.com
-                </a>{" "}
-                and we’ll get back to you within 24 hours.
-              </Typography>
-            </Box>
-          </Grid>
+      <Container
+        component="section"
+        id="volunteer"
+        className={classes.regularContainerStyle}
+        maxWidth="md"
+      >
+        <Typography className={classes.headingStyle} variant="h2">
+          Help us break down barriers by joining the team.
+        </Typography>
+        <Typography className={classes.volunteerTextStyle} variant="body1">
+          Conviction vacation makes it easier for formerly incarcerated
+          individuals to access housing and employment, two things that are
+          crucial for reducing the odds of re-incarceration.
+        </Typography>
+        <Typography className={classes.volunteerTextStyle} variant="body1">
+          By volunteering, you will help us reduce barriers and streamline the
+          process of vacating eligible convictions in Washington state to make
+          it easier for people to move forward.
+        </Typography>
+        <Typography>You'll be a perfect fit if you:</Typography>
+        <Grid container>
+          {facts.map((fact) => (
+            <Grid item key={fact.id} xs={12} sm={4} md={4} lg={4}>
+              <Fact icon={fact.icon} text={fact.text} />
+            </Grid>
+          ))}
         </Grid>
-
-        <Box paddingTop={5}>
-          <Typography
-            className={classes.titleRoles}
-            variant="h2"
-            align="center"
-          >
-            Open roles
-          </Typography>
-          <Grid container>
-            <Grid item xs={12} sm={4} md={4}>
-              <Box display="flex" justifyContent="center">
-                <Box component="img" src={team} className={classes.roleImage} />
-              </Box>
-              <Typography
-                className={classes.headingRoles}
-                variant="h3"
-                align="center"
-              >
-                User Experience
-              </Typography>
-              <Typography variant="body1" align="center">
-                Designers
-              </Typography>
-              <Typography variant="body1" align="center">
-                Researchers
-              </Typography>
-            </Grid>
-            <Grid item xs={12} sm={4} md={4}>
-              <Box
-                className={classes.roleAdjust}
-                display="flex"
-                justifyContent="center"
-              >
-                <Box
-                  component="img"
-                  src={brainstorm}
-                  className={classes.roleImage}
+      </Container>
+      <Container className={classes.regularContainerStyle} maxWidth="md">
+        <Typography className={classes.headingStyle} variant="h2">
+          Open roles
+        </Typography>
+        <Grid container>
+          {openVolunteerRoles.map((volunteerRole) => (
+            <Grid key={volunteerRole.id} item xs={12} sm={6} md={4}>
+              <Box display={"flex"} justifyContent={"center"}>
+                <VolunteerRolesCard
+                  image={volunteerRole.image}
+                  discipline={volunteerRole.discipline}
+                  roles={volunteerRole.roles}
+                  alt={volunteerRole.alt}
                 />
               </Box>
-              <Typography
-                className={classes.headingRoles}
-                variant="h3"
-                align="center"
-              >
-                Development
-              </Typography>
-              <Typography variant="body1" align="center">
-                Front-End Developers
-              </Typography>
-              <Typography variant="body1" align="center">
-                Back-End Developers
-              </Typography>
             </Grid>
-            <Grid item xs={12} sm={4} md={4}>
-              <Box display="flex" justifyContent="center">
-                <Box
-                  component="img"
-                  src={laptop}
-                  className={classes.roleImage}
-                />
-              </Box>
-              <Typography
-                className={classes.headingRoles}
-                variant="h3"
-                align="center"
-              >{`Content & Outreach`}</Typography>
-              <Typography variant="body1" align="center">
-                Copy Writers
-              </Typography>
-              <Typography variant="body1" align="center">
-                Marketing Directors
-              </Typography>
-            </Grid>
-          </Grid>
-
-          <Box
-            justifyContent="center"
-            display="flex"
-            className={classes.buttonPad}
-          >
-            <SecondaryButton
-              text={"Join Our Team"}
-              linkTo={"https://www.democracylab.org/projects/226"}
-              externalLink
-            />
-          </Box>
-        </Box>
+          ))}
+        </Grid>
+      </Container>
+      <Container className={classes.CTAButtonContainerStyle}>
+        <RedesignButtonPrimary target="_blank" href="https://www.democracylab.org/projects/226">apply now</RedesignButtonPrimary>
       </Container>
     </>
   );

@@ -4,13 +4,12 @@ import SecondaryButton from "../../ui-kit/SecondaryButton";
 const useStyles = makeStyles((theme) => ({
   mainText: {
     minWidth: 150,
-    fontFamily: ["Roboto", "sans-serif"],
-    fontSize: 22,
+
   },
   backgroundSecondary: {
     minHeight: 250,
     backgroundColor: theme.palette.primary.dark,
-    color: "white",
+    color: theme.palette.primary.contrastText,
     align: "center",
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),

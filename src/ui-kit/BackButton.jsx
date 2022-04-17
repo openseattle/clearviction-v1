@@ -4,11 +4,18 @@ import { Alert } from "@material-ui/lab";
 import { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-const useStyles = makeStyles({
+const useStyles = makeStyles((theme) => ({
   backButtonStyle: {
     fontWeight: "lighter",
+    fontSize: "18px",
+    [theme.breakpoints.down("md")]: {
+      fontSize: "14px",
+    },
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "12px",
+    },
   },
-});
+}));
 
 export const BackButton = (props) => {
   const classes = useStyles();
@@ -23,7 +30,10 @@ export const BackButton = (props) => {
     try {
       if (document.referrer.includes("calculator")) {
         history.goBack();
-      } else throw Error("nonCalcReferrer: unable to verify referral by a calculator question. Restarting Calculator...");
+      } else
+        throw Error(
+          "nonCalcReferrer: unable to verify referral by a calculator question. Restarting Calculator..."
+        );
     } catch (error) {
       console.log(error);
       setOpen(true);
@@ -45,7 +55,7 @@ export const BackButton = (props) => {
         onClick={handleClick}
         {...props}
       >
-        <ArrowBackIos /> Previous Question{" "}
+        <ArrowBackIos /> Previous{" "}
       </Button>
       <Snackbar
         open={open}

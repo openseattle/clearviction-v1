@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
   },
   headingRoles: {
-    color: theme.palette.primary.light,
+    color: theme.palette.primary.main,
     paddingBottom: theme.spacing(2),
   },
   altHeadingRoles: {
@@ -42,7 +42,7 @@ export const TextWithImage = (props) => {
       </Box>
       <Typography
         className={altStyle ? classes.altHeadingRoles : classes.headingRoles}
-        variant="h3"
+        variant="h4"
         align="center"
       >
         {header}

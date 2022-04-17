@@ -1,51 +1,19 @@
 import { useState } from "react";
 import {
   TextField,
-  Grid,
   MenuItem,
-  makeStyles,
   FormControl,
   FormGroup,
   FormLabel,
+  Box
 } from "@material-ui/core";
-import SecondaryButton from "../ui-kit/SecondaryButton";
+import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary"
 import { send } from "@emailjs/browser";
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  inputStyle: {
-    width: "100%",
-    color: "#000000",
-    padding: "10px",
-  },
-  labelStyle: {
-    width: "100%",
-    padding: "10px",
-    fontSize: "1em",
-    color: "var(--black)",
-  },
-  multilineInputStyle: {
-    backgroundColor: "var(--dark-blue)",
-    color: "var(--white)",
-  },
-  formStyle: {
-    width: "800px",
-    padding: "10px",
-  },
-  [theme.breakpoints.down("sm")]: {
-    formStyle: {
-      width: "100%",
-      padding: "10px",
-    },
-  },
-}));
+import { useContactStyles } from "../Styles/useContactStyles";
+import { Typography } from "@material-ui/core";
 
 const ContactForm = () => {
-  const classes = useStyles();
+  const classes = useContactStyles();
 
   const [toSend, setToSend] = useState({
     from_name: "",
@@ -165,84 +133,106 @@ const ContactForm = () => {
   ];
 
   return (
-    <Grid container spacing={1} direction="column">
+    <Box className={classes.formContainer} >
       <form onSubmit={handleFormSubmit}>
         <FormControl
           required
           component="fieldset"
           className={classes.formStyle}
         >
-          <FormLabel className={classes.labelStyle} component="legend">
-            Name
-          </FormLabel>
           <FormGroup>
-            <TextField
-              id="standard-basic"
-              className={classes.inputStyle}
-              label="Enter Your Full Name"
-              required
-              name="from_name"
-              value={toSend.from_name}
-              onChange={handleChange}
-              variant="outlined"
-            />
-            <FormLabel className={classes.labelStyle} component="legend">
+          <FormLabel className={classes.labelStyle} component="legend">
+            <Typography variant="body2" className={classes.labelTextStyle}>
+              Name
+            </Typography>
+          </FormLabel>
+          <TextField
+            id="name"
+            className={classes.inputStyle}
+            placeholder="Enter Your Full Name"
+            required
+            name="from_name"
+            value={toSend.from_name}
+            onChange={handleChange}
+            variant="standard"
+            fullWidth
+            color="primary"
+          />
+          <FormLabel className={classes.labelStyle} component="legend">
+            <Typography variant="body2" className={classes.labelTextStyle}>
               Email
-            </FormLabel>
-            <TextField
-              id="standard-basic"
-              className={classes.inputStyle}
-              label="Enter Your Email Address"
-              type="email"
-              error={emailError.errorStatus}
-              helperText={emailError.errorMessage}
-              required
-              name="reply_to"
-              value={toSend.reply_to}
-              onChange={handleChange}
-              variant="outlined"
-            />
-            <FormLabel className={classes.labelStyle} component="legend">
+            </Typography >
+          </FormLabel>
+    
+          <TextField
+            id="email"
+            className={classes.inputStyle}
+            placeholder="Enter Your Email Address"
+            type="email"
+            color='primary'
+            fullWidth
+            error={emailError.errorStatus}
+            helperText={emailError.errorMessage}
+            required
+            name="reply_to"
+            value={toSend.reply_to}
+            onChange={handleChange}
+            variant="standard"
+          />
+          <FormLabel className={classes.labelStyle} component="legend">
+            <Typography variant="body2" className={classes.labelTextStyle}>
               I am a(n)
-            </FormLabel>
-            <TextField
-              id="outlined-select-currency"
-              className={classes.inputStyle}
-              select
-              label="Please Select An Option"
-              required
-              name="contact_type"
-              value={toSend.contact_type}
-              onChange={handleChange}
-              variant="outlined"
-            >
-              {contactTypes.map((option) => (
-                <MenuItem key={option.value} value={option.value}>
-                  {option.label}
-                </MenuItem>
-              ))}
-            </TextField>
-            <FormLabel className={classes.labelStyle} component="legend">
+            </Typography >
+          </FormLabel>
+          <TextField
+            id="who"
+            className={classes.inputStyle}
+            select
+            placeholder="Please Select An Option"
+            required
+            fullWidth
+            name="contact_type"
+            value={toSend.contact_type}
+            onChange={handleChange}
+            variant="standard"
+            color="primary"
+          >
+            {contactTypes.map((option) => (
+              <MenuItem key={option.value} value={option.value}>
+                {option.label}
+              </MenuItem>
+            ))}
+          </TextField>
+          <FormLabel className={classes.labelStyle} component="legend">
+            <Typography variant="body2" className={classes.labelTextStyle}>
               Your Message
-            </FormLabel>
-            <TextField
-              id="outlined-multiline-flexible"
-              label="Type Your Message Here"
-              className={classes.inputStyle}
-              multiline
-              minRows={4}
-              maxRows={10}
-              value={toSend.message}
-              required
-              name="message"
-              onChange={handleChange}
-              variant="outlined"
-            />
-            <SecondaryButton type={"submit"} text={"Send Message"} />
+            </Typography >
+          </FormLabel>
+          <TextField
+            id="message"
+            placeholder="Type Your Message Here"
+            className={classes.inputStyle}
+            multiline
+            minRows={4}
+            maxRows={10}
+            value={toSend.message}
+            required
+            fullWidth
+            name="message"
+            onChange={handleChange}
+            variant="standard"
+            color="primary"
+          />
+          <Box className={classes.buttonBoxStyle}>
+            <RedesignButtonPrimary type={"submit"}>
+              Send message
+            </RedesignButtonPrimary>
+          </Box>
+            
           </FormGroup>
         </FormControl>
       </form>
-    </Grid>
+    </Box>
   );
 };
 

@@ -20,6 +20,13 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
+function a11yProps(index) {
+  return {
+    id: `tab-${index}`,
+    "aria-controls": `tabpanel-${index}`,
+  };
+}
+
 const TabPanelGroup = (props) => {
   const classes = useStyles();
   const [value, setValue] = useState(0);
@@ -32,7 +39,12 @@ const TabPanelGroup = (props) => {
     <Box>
       <Tabs value={value} onChange={handleChange} variant="fullWidth">
         {tabs.map((tab) => (
-          <Tab className={classes.tabStyle} key={tab.index} label={tab.label} />
+          <Tab
+            className={classes.tabStyle}
+            key={tab.index}
+            label={tab.label}
+            {...a11yProps(tab.index)}
+          />
         ))}
       </Tabs>
 

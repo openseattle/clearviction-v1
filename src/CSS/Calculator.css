@@ -102,9 +102,8 @@
 }
 
 ul {
-  list-style-type: none;
+  list-style-type: disc;
   text-align: left;
-  padding: 0;
 }
 
 a {

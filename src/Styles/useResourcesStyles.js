@@ -8,7 +8,7 @@ export const useResourcesStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(8),
   },
   lightBlueBackGround: {
-    backgroundColor: theme.palette.primary.light,
+    backgroundColor: theme.palette.primary.main,
     color: "white",
     paddingTop: theme.spacing(8),
     paddingBottom: theme.spacing(8),
@@ -24,12 +24,12 @@ export const useResourcesStyles = makeStyles((theme) => ({
   colorfulHeadingStyle: {
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
-    color: theme.palette.primary.light,
+    color: theme.palette.primary.main,
   },
   highlightHeadingStyle: {
     marginTop: theme.spacing(2),
     marginBottom: theme.spacing(2),
-    color: theme.palette.highlight.main,
+    color: theme.palette.secondary.main,
   },
   contentTextStyle: {
     marginTop: theme.spacing(5),

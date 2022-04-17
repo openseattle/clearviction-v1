@@ -1,8 +1,8 @@
 import { Container, Typography, Box, List } from "@material-ui/core";
 import { WhyVacateHousingStyles } from "../../Styles/WhyVacateHousingStyles";
 import ListItemMobileSnap from "../../ui-kit/ListItemMobileSnap";
-import edu from "../../Assets/Graduation_TwoColor1.svg";
-import lic from "../../Assets/Career_TwoColor4.svg";
+import edu from "../../Assets/education.svg";
+import lic from "../../Assets/career.svg";
 
 export const EducationBarriers = () => {
   const classes = WhyVacateHousingStyles();

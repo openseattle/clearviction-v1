@@ -1,31 +1,21 @@
 import { useEffect } from "react";
-import { trackPageview, trackClick } from "../trackingUtils";
+import { trackPageview } from "../trackingUtils";
 import { useLocation } from "react-router-dom";
 import calculatorPages from "../data/calculatorPages";
-import ToolTipModal from "../Components/ToolTipModal";
-import Text from "../ui-kit/Text";
-import ProgressBar from "../Components/ProgressBar";
-import RestartButton from "../Components/RestartButton";
 import "../CSS/Calculator.css";
 
 /** MATERIAL UI IMPORTS */
-import {
-  Box,
-  List,
-  Container,
-  Button,
-  Grid,
-  Typography,
-} from "@material-ui/core";
-import { CVPListItem } from "../ui-kit/ListItem";
-import { BackButton } from "../ui-kit/BackButton";
-
-const BUTTON_COLORS = {
-  blue: "#4e6c99",
-  green: "#419D77",
-};
+import { Container, Grid } from "@material-ui/core";
+import MainBranchTitle from "./Calculator/MainBranchTitle";
+import SpecialCaseTitle from "./Calculator/SpecialCaseTitle";
+import { PageType } from "../data/calculatorPagesTypes";
+import QuestionScreen from "./Calculator/QuestionScreen";
+import EndScreen from "./Calculator/EndScreen";
+import QuickStartGuide from "./Calculator/QuickStartGuide";
+import ProgressBar from "../Components/ProgressBar";
 
 const CalculatorPage = () => {
+  console.log("enter calculator")
   const { pathname } = useLocation();
   const indexOfPageId = pathname.split("/").length - 1;
   const pageId = pathname.split("/")[indexOfPageId];
@@ -37,6 +27,7 @@ const CalculatorPage = () => {
   const {
     header,
     body,
+    type,
     buttons,
     disclaimer,
     tooltip,
@@ -44,96 +35,80 @@ const CalculatorPage = () => {
     showRestartButton,
   } = content;
 
-  const renderButtons = (buttons) =>
-    buttons.map(({ text, href, color }) => {
-      return (
-        <Grid container key={text} direction="column" style={{ padding: 10 }}>
-          <Button
-            onClick={() => trackClick(text)}
-            variant="contained"
-            href={href}
-            style={{
-              backgroundColor: BUTTON_COLORS[color || "blue"],
-              color: "var(--white)",
-            }}
-          >
-            <Text text={text} variant={"h6"}></Text>
-          </Button>
-        </Grid>
-      );
-    });
-
-  const renderBody = ({ type, text, href, items }) => {
+  const renderPage = (type) => {
     switch (type) {
-      case "paragraph":
-        return <Text key={text} text={text} variant={"h4"} />;
-      case "link":
+      case PageType.GUIDE:
         return (
-          <List>
-            <CVPListItem
-              isLink={true}
-              useBulletPoint={true}
-              text={text}
-              href={href}
-              onClick={() => trackClick(text)}
-            />
-          </List>
+          <QuickStartGuide
+            header={header}
+            body={body}
+            buttonText={buttons[0].text}
+            buttonHref={buttons[0].href}
+            tooltip={tooltip}
+            progressBar={progressBar}
+            // currentSectionName={progressBar.currentSectionName}
+            // totalSections={progressBar.totalSections}
+          />
         );
-      case "list":
+      case PageType.MAIN:
         return (
-          <List>
-            {items.map((item) => (
-              <CVPListItem isLink={false} useBulletPoint={true} text={item} />
-            ))}
-          </List>
+          <MainBranchTitle
+            header={header}
+            body={body}
+            buttonText={buttons[0].text}
+            buttonHref={buttons[0].href}
+            progressBar={progressBar}
+            // currentSectionName={progressBar.currentSectionName}
+            // totalSections={progressBar.totalSections}
+          />
         );
-      case "heading":
-        return <Text text={text} variant={"h3"} />;
+      case PageType.SPECIAL:
+        return (
+          <SpecialCaseTitle
+            header={header}
+            body={body}
+            buttonText={buttons[0].text}
+            buttonHref={buttons[0].href}
+          />
+        );
+      case PageType.QUESTION:
+        return (
+          <QuestionScreen
+            header={header}
+            body={body}
+            buttons={buttons}
+            progressBar={progressBar}
+            // currentSectionName={progressBar.currentSectionName}
+            // totalSections={progressBar.totalSections}
+            tooltip={tooltip}
+          />
+        );
+      case PageType.END:
+        return (
+          <EndScreen
+            header={header}
+            body={body}
+            buttons={buttons}
+            tooltip={tooltip}
+            showRestartButton={showRestartButton}
+            disclaimer={disclaimer}
+            progressBar={progressBar}
+            // currentSectionName={progressBar && progressBar.currentSectionName}
+            // totalSections={progressBar && progressBar.totalSections}
+          />
+        );
       default:
         break;
     }
   };
 
   return (
-    <Box
-      sx={{
-        padding: 20,
-      }}
-    >
-      <Container maxWidth="sm" padding={10}>
+      <Container maxWidth="md">
         <Grid container direction="column" spacing={2}>
-          {progressBar && (
-            <ProgressBar
-              currentSectionName={progressBar.currentSectionName}
-              currentSection={progressBar.currentSection}
-              totalSections={progressBar.totalSections}
-            />
-          )}
-          {/* back button now on all pages but the landing and quick start pages - 
-          we can probably do this cleaner by creating a more formal standalone 
-          quick start page that can launch the calculator rather than having it 
-          share interface with the calculator.*/}
-          {!["/calculator/landing-0", "/calculator/landing-1"].includes(
-            pathname
-          ) && (
-            <Grid item>
-              <BackButton variant="text" />
-            </Grid>
-          )}
-
-          {header && <Text text={header} variant={"h3"}></Text>}
-          {body && <>{body.map(renderBody)}</>}
-          {buttons && renderButtons(buttons)}
-          {showRestartButton && <RestartButton />}
-          {tooltip && <ToolTipModal text={tooltip} />}
-          {disclaimer && (
-            <Container className="disclaimer">
-              <Typography variant="h6">{disclaimer}</Typography>
-            </Container>
-          )}
-        </Grid>
+           {renderPage(type)}
+           </Grid>
       </Container>
-    </Box>
+
   );
 };
 
