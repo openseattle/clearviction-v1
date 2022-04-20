@@ -1,5 +1,5 @@
 import { ButtonBase } from "@material-ui/core";
-import logo from "../Assets/clearviction_logo_small_light 2.svg";
+import logo from "../Assets/cv_small_logo_dark. 1.svg";
 
 export const NavigationLogo = () => (
   <ButtonBase
