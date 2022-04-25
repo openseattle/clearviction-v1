@@ -1013,36 +1013,7 @@ const data: Pages = {
     buttons: [
       {
         text: BUTTON_TEXT.YES,
-        href: CALC_PREFIX + "/pro-3",
-      },
-      {
-        text: BUTTON_TEXT.NO,
         href: CALC_PREFIX + "/pro-2",
-      },
-    ],
-    tooltip: TooltipType.NOT_SURE,
-  },
-  "pro-2": {
-    type: PageType.QUESTION,
-    header: "Was the conviction for any of the following offense(s): ",
-    progressBar: {
-      currentSectionName: SectionName.CONV,
-      totalSections: 3,
-    },
-    body: [
-      {
-        type: BodyType.LIST,
-        items: [
-          "any misdemeanor or gross misdemeanor violation, including attempt, of: (i) gross obscenity & pornography; (ii) sexual exploitation of children; or (iii) sex offenses, except for failure to register as a sex offender",
-          "alcohol & drug violations under RCW 46.61.5055",
-          "patronizing a prostitute",
-        ],
-      },
-    ],
-    buttons: [
-      {
-        text: BUTTON_TEXT.YES,
-        href: CALC_PREFIX + "/pro-3",
       },
       {
         text: BUTTON_TEXT.NO,
@@ -1051,7 +1022,7 @@ const data: Pages = {
     ],
     tooltip: TooltipType.NOT_SURE,
   },
-  "pro-3": {
+  "pro-2": {
     type: PageType.QUESTION,
     header:
       "Do you have charges pending in this state or any other state, or in any federal court for any crime other than prostitution?",
