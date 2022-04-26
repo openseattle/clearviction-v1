@@ -295,12 +295,8 @@ const data: Pages = {
       },
       {
         type: BodyType.LINK,
-        text: "RCW 69.50.401(d)",
+        text: "RCW 69.50.401(d) (Possession of 40 grams or less of marijuana)",
         href: "https://leg.wa.gov/CodeReviser/documents/sessionlaw/1971ex1c308.pdf?cite=1971%20ex.s.%20c%20308%20§%2069.50.406",
-      },
-      {
-        type: BodyType.PARAGRAPH,
-        text: "(Possession of 40 grams or less of marijuana)",
       },
       {
         type: BodyType.HEADING,
@@ -333,6 +329,15 @@ const data: Pages = {
         text: "Click here.",
         href: "https://www.washingtonlawhelp.org/resource/get-misdemeanor-convictions-off-your-criminal-record",
       },
+      {
+        type: BodyType.PARAGRAPH,
+        text: "4. Additionally, as of February 25, 2021, the Washington Supreme Court struck down the state's main drug possession crime in a case called State v. Blake. Read more about how it could affect your case below. We will be providing updates in the future as to how this impacts you."
+      },
+      {
+        type: BodyType.LINK,
+        text: "State v. Blake",
+        href: "https://www.aclu-wa.org/pages/q-blake-decision"
+      }
     ],
     buttons: [
       {

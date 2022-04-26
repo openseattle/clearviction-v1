@@ -64,6 +64,14 @@ const EndScreen = (props) => {
                     {b.text}
                   </Typography>
                 );
+                case BodyType.LINK:
+                return (
+                  <ul>
+                    <li key={idx}>
+                      <a href={b.href}>{b.text}</a>
+                    </li>
+                  </ul>
+                );
               default:
                 break;
             }
