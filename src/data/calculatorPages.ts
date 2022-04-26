@@ -1013,45 +1013,16 @@ const data: Pages = {
     buttons: [
       {
         text: BUTTON_TEXT.YES,
-        href: CALC_PREFIX + "/pro-3",
+        href: CALC_PREFIX + "/pro-2",
       },
       {
         text: BUTTON_TEXT.NO,
-        href: CALC_PREFIX + "/pro-2",
+        href: CALC_PREFIX + "/pro-to-main",
       },
     ],
     tooltip: TooltipType.NOT_SURE,
   },
   "pro-2": {
-    type: PageType.QUESTION,
-    header: "Was the conviction for any of the following offense(s): ",
-    progressBar: {
-      currentSectionName: SectionName.CONV,
-      totalSections: 3,
-    },
-    body: [
-      {
-        type: BodyType.LIST,
-        items: [
-          "any misdemeanor or gross misdemeanor violation, including attempt, of: (i) gross obscenity & pornography; (ii) sexual exploitation of children; or (iii) sex offenses, except for failure to register as a sex offender",
-          "alcohol & drug violations under RCW 46.61.5055",
-          "patronizing a prostitute",
-        ],
-      },
-    ],
-    buttons: [
-      {
-        text: BUTTON_TEXT.YES,
-        href: CALC_PREFIX + "/pro-3",
-      },
-      {
-        text: BUTTON_TEXT.NO,
-        href: CALC_PREFIX + "/pro-ineligible-3",
-      },
-    ],
-    tooltip: TooltipType.NOT_SURE,
-  },
-  "pro-3": {
     type: PageType.QUESTION,
     header:
       "Do you have charges pending in this state or any other state, or in any federal court for any crime other than prostitution?",
@@ -1252,24 +1223,6 @@ const data: Pages = {
       },
     ],
     showRestartButton: true,
-    disclaimer,
-  },
-  "pro-ineligible-3": {
-    type: PageType.END,
-    header:
-      "Based on your answers, it looks like you don't qualify for the victim of prostitution exception.",
-    body: [
-      {
-        type: BodyType.PARAGRAPH,
-        text: "However, your misdemeanor may still be eligible for conviction vacation through the general eligibility criteria that apply to most misdemeanors.",
-      },
-    ],
-    buttons: [
-      {
-        text: BUTTON_TEXT.CONTINUE,
-        href: CALC_PREFIX + "/main-0",
-      },
-    ],
     disclaimer,
   },
   "pro-to-main": {
