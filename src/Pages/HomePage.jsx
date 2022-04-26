@@ -12,6 +12,7 @@ import HomeFAQAccordion from "../Subpages/Home/HomeFAQAccordion";
 import { useHomeStyles } from "../Styles/useHomeStyles";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
+import CheckEligibilityButton from "../Components/CheckEligibilityButton";
 
 const HomePage = () => {
   useEffect(() => trackPageview("Home"), []);
@@ -37,8 +38,7 @@ const HomePage = () => {
                 minutes!
               </Typography>
               <Box paddingTop={12}>
-                <Typography variant="h4" component="h3">COMING SOON!</Typography>
-                {/* <EligibilityCalculatorButton /> */}
+                <CheckEligibilityButton />
               </Box>
             </Grid>
             <Grid item xs={12} sm={6}>
