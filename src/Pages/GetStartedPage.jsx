@@ -21,6 +21,7 @@ import CourtFormsFactGroup from "../Subpages/GetStarted/CourtFormsFactGroup";
 import LegalAidServices from "../Subpages/GetStarted/LegalAidServices";
 import FinancialAidServices from "../Subpages/GetStarted/FinancialAidServices";
 import { ExternalLink } from "../ui-kit/ExternalLink";
+import CheckEligibilityButton from "../Components/CheckEligibilityButton";
 
 const factsProps = {
   style: { fontSize: 54 },
@@ -156,11 +157,11 @@ const GetStartedPage = () => {
             </Grid>
             <Grid item xs={12} sm={4}>
               <Typography className={classes.volunteerTextStyle} align="right">
-                  Washington State Patrol <br />
-                  Identification and <br />
-                  Background Section <br />
-                  PO Box 42633 <br />
-                  Olympia WA 98504-2633 <br />
+                Washington State Patrol <br />
+                Identification and <br />
+                Background Section <br />
+                PO Box 42633 <br />
+                Olympia WA 98504-2633 <br />
               </Typography>
             </Grid>
           </Grid>
@@ -187,6 +188,9 @@ const GetStartedPage = () => {
         </Typography>
         <FactIconGroup facts={eligibilityFacts} />
       </Container>
+      <Box justifyContent="center" display="flex">
+        <CheckEligibilityButton />
+      </Box>
       <Container maxWidth="md">
         <Divider className={classes.dividerStyle} />
       </Container>
