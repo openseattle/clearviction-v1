@@ -1,17 +1,17 @@
 import { makeStyles } from "@material-ui/core";
 
-export const QuestionScreenStyles = makeStyles((theme) => ({
+export const QuestionScreenStyles = makeStyles(theme => ({
     grid: {
         display: "inline-block",
         marginTop: "32px",
-        justifyContent: "center"
+        justifyContent: "center",
     },
     header: {
         marginBottom: "16px",
         textAlign: "center",
     },
     body: {
-        textAlign: "left"
+        textAlign: "left",
     },
     bodyGrid: {
         marginBottom: "72px",
@@ -25,10 +25,10 @@ export const QuestionScreenStyles = makeStyles((theme) => ({
     backButton: {
         marginTop: "16px",
         marginBottom: "32px",
-        justifyContent: "flex-start"
+        justifyContent: "flex-start",
     },
     progressBar: {
         marginBottom: "16px",
-        marginLeft: "5vw"
-    }
-}))
+        marginLeft: "5vw",
+    },
+}));

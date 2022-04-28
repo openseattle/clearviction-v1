@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 
-export const MainBranchTitleStyles = makeStyles((theme) => ({
+export const MainBranchTitleStyles = makeStyles(theme => ({
     grid: {
         display: "inline-block",
         marginTop: "72px",
@@ -8,12 +8,12 @@ export const MainBranchTitleStyles = makeStyles((theme) => ({
         textAlign: "center",
     },
     header: {
-        marginBottom: "24px"
+        marginBottom: "24px",
     },
     body: {
-        marginBottom: "72px"
+        marginBottom: "72px",
     },
     button: {
-        marginBottom: "40px"
-    }
-}))
+        marginBottom: "40px",
+    },
+}));

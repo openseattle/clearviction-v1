@@ -5,19 +5,19 @@ import { trackPageview } from "../trackingUtils";
 import { Typography, Container, Grid } from "@material-ui/core";
 
 const ErrorPage = () => {
-  useEffect(() => trackPageview("Error"), []);
+    useEffect(() => trackPageview("Error"), []);
 
-  return (
-    <Container maxWidth="xs" padding={10}>
-      <Grid container direction="column" justifyContent="center">
-        <Grid item>
-          <Typography variant="h5" align="center">
-            Oops, page not found!
-          </Typography>
-        </Grid>
-      </Grid>
-    </Container>
-  );
+    return (
+        <Container maxWidth="xs" padding={10}>
+            <Grid container direction="column" justifyContent="center">
+                <Grid item>
+                    <Typography variant="h5" align="center">
+                        Oops, page not found!
+                    </Typography>
+                </Grid>
+            </Grid>
+        </Container>
+    );
 };
 
 export default ErrorPage;

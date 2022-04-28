@@ -6,23 +6,23 @@ import WhyVacateEmployment from "./WhyVacateEmployment";
 import WhyVacateHousing from "./WhyVacateHousing";
 
 const WhyVacatePage = () => {
-  return (
-    <>
-      <Container maxWidth="lg">
-        <HeroPanel
-          title={"Why vacate"}
-          subtitle={
-            "A conviction vacation seals the offense from your record and will give you more chance to access:"
-          }
-        />
-      </Container>
+    return (
+        <>
+            <Container maxWidth="lg">
+                <HeroPanel
+                    title={"Why vacate"}
+                    subtitle={
+                        "A conviction vacation seals the offense from your record and will give you more chance to access:"
+                    }
+                />
+            </Container>
 
-      <WhyVacateHousing />
-      <WhyVacateEmployment />
-      <WhyVacateEducation />
-      <WhyVacateAssistance />
-    </>
-  );
+            <WhyVacateHousing />
+            <WhyVacateEmployment />
+            <WhyVacateEducation />
+            <WhyVacateAssistance />
+        </>
+    );
 };
 
 export default WhyVacatePage;
