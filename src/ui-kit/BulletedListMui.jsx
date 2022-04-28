@@ -6,16 +6,13 @@ import { Typography } from "@material-ui/core";
  * @param {*} props
  * @returns ul element with Material Ui style applied to it
  */
-const BulletedListMui = (props) => {
-  const { children, textColor } = props;
-  return (
-    <Typography
-      component="ul"
-      style={{ listStyleType: "disc", color: textColor }}
-    >
-      {children}
-    </Typography>
-  );
+const BulletedListMui = props => {
+    const { children, textColor } = props;
+    return (
+        <Typography component="ul" style={{ listStyleType: "disc", color: textColor }}>
+            {children}
+        </Typography>
+    );
 };
 
 export default BulletedListMui;
