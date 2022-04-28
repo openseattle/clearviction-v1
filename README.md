@@ -2,13 +2,13 @@
 
 ## Table of Contents
 
-- [About the Project](#about-the-project)
-  - [Our Mission](#our-mission)
-- [Development Setup](#development-setup)
-  - [Installation](#installation)
-- [Contributing](#contributing)
-- [Get In Contact](#get-in-contact)
-- [License](#license)
+-   [About the Project](#about-the-project)
+    -   [Our Mission](#our-mission)
+-   [Development Setup](#development-setup)
+    -   [Installation](#installation)
+-   [Contributing](#contributing)
+-   [Get In Contact](#get-in-contact)
+-   [License](#license)
 
 ## About The Project
 
@@ -45,21 +45,21 @@ In the project directory, you can run:
 
 1. Ensure you have `nodejs` installed on your machine using whatever system package manager, on Mac using [homebrew](https://brew.sh) run:
 
-   ```
-   brew install nodejs
-   ```
+    ```
+    brew install nodejs
+    ```
 
 1. Install project dependecies
 
-   ```
-   npm install
-   ```
+    ```
+    npm install
+    ```
 
 1. Start the app in development mode
 
-   ```
-   npm start
-   ```
+    ```
+    npm start
+    ```
 
 1. Visit [http://localhost:3000](http://localhost:3000) to view it in the browser
 

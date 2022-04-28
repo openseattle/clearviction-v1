@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 
-export const EndScreenStyles = makeStyles((theme) => ({
+export const EndScreenStyles = makeStyles(theme => ({
     grid: {
         display: "inline-block",
         marginTop: "24px",
@@ -10,11 +10,11 @@ export const EndScreenStyles = makeStyles((theme) => ({
     header: {
         marginTop: "32px",
         marginBottom: "16px",
-        textAlign: "left"
+        textAlign: "left",
     },
     body: {
-        textAlign: "left", 
-        marginBottom: "16px"
+        textAlign: "left",
+        marginBottom: "16px",
     },
     bodyList: {
         textAlign: "left",
@@ -25,17 +25,17 @@ export const EndScreenStyles = makeStyles((theme) => ({
     },
     buttonGrid: {
         marginTop: "40px",
-        marginBottom: "32px"
+        marginBottom: "32px",
     },
     button: {
-        marginBottom: "16px"
+        marginBottom: "16px",
     },
     backButton: {
         marginTop: "16px",
         marginBottom: "40px",
-        justifyContent: "flex-start"
+        justifyContent: "flex-start",
     },
     restartButton: {
-        marginBottom: "72px"
-    }
-}))
+        marginBottom: "72px",
+    },
+}));

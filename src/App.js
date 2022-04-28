@@ -13,49 +13,49 @@ import GetInvolvedPage from "./Pages/GetInvolvedPage";
 import GetStartedPage from "./Pages/GetStartedPage";
 
 function App() {
-  return (
-    <div>
-      <ThemeProvider theme={Theme}>
-        <Box
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            minHeight: "100vh",
-          }}
-        >
-          <CssBaseline />
-          <Navigation />
-          <Switch>
-            <Route path="/404">
-              <ErrorPage />
-            </Route>
-            <Route exact path="/">
-              <HomePage />
-            </Route>
-            <Route path="/calculator/:pageId">
-              <CalculatorPage />
-            </Route>
-            <Route exact path="/calculator">
-              <Redirect to="/calculator/landing-0" />
-            </Route>
-            <Route exact path="/about">
-              <AboutPage />
-            </Route>
-            <Route exact path="/contact">
-              <ContactPage />
-            </Route>
-            <Route path="/get-involved">
-              <GetInvolvedPage />
-            </Route>
-            <Route path="/get-started">
-              <GetStartedPage />
-            </Route>
-          </Switch>
-          <Footer />
-        </Box>
-      </ThemeProvider>
-    </div>
-  );
+    return (
+        <div>
+            <ThemeProvider theme={Theme}>
+                <Box
+                    style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        minHeight: "100vh",
+                    }}
+                >
+                    <CssBaseline />
+                    <Navigation />
+                    <Switch>
+                        <Route path="/404">
+                            <ErrorPage />
+                        </Route>
+                        <Route exact path="/">
+                            <HomePage />
+                        </Route>
+                        <Route path="/calculator/:pageId">
+                            <CalculatorPage />
+                        </Route>
+                        <Route exact path="/calculator">
+                            <Redirect to="/calculator/landing-0" />
+                        </Route>
+                        <Route exact path="/about">
+                            <AboutPage />
+                        </Route>
+                        <Route exact path="/contact">
+                            <ContactPage />
+                        </Route>
+                        <Route path="/get-involved">
+                            <GetInvolvedPage />
+                        </Route>
+                        <Route path="/get-started">
+                            <GetStartedPage />
+                        </Route>
+                    </Switch>
+                    <Footer />
+                </Box>
+            </ThemeProvider>
+        </div>
+    );
 }
 
 export default App;

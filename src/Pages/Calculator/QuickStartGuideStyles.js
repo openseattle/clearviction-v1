@@ -1,10 +1,10 @@
 import { makeStyles } from "@material-ui/core";
 
-export const QuickStartGuideStyles = makeStyles((theme) => ({
+export const QuickStartGuideStyles = makeStyles(theme => ({
     grid: {
         display: "inline-block",
         marginTop: "32px",
-        justifyContent: "center"
+        justifyContent: "center",
     },
     header: {
         marginBottom: "16px",
@@ -18,18 +18,17 @@ export const QuickStartGuideStyles = makeStyles((theme) => ({
     bodyGrid: {
         marginBottom: "72px",
     },
-    buttonGrid: {
-    },
+    buttonGrid: {},
     button: {
         marginBottom: "16px",
     },
     backButton: {
         marginTop: "16px",
         marginBottom: "32px",
-        justifyContent: "flex-start"
+        justifyContent: "flex-start",
     },
     progressBar: {
         marginBottom: "16px",
-        marginLeft: "5vw"
-    }
-}))
+        marginLeft: "5vw",
+    },
+}));
