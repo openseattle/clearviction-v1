@@ -99,6 +99,7 @@ const data: Pages = {
             {
                 text: FEEDBACK_BUTTON_TEXT,
                 href: CANT_DETERMINE_FEEDBACK_FORM_LINK,
+                target: "_blank",
             },
         ],
         showRestartButton: true,
