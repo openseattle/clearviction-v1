@@ -69,7 +69,7 @@ const AboutPage = () => {
                             >
                                 Washington State's New Hope Act
                             </a>
-                            makes it easier to people with past criminal records to have their convictions vacated. Even
+                            makes it easier for people with past criminal records to have their convictions vacated. Even
                             then, the process of vacating a conviction is very convoluted, making it difficult for most
                             people to navigate:
                         </Typography>
