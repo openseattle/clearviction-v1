@@ -13,7 +13,7 @@ const HomeFAQAccordion = () => {
                 <>
                     <Typography className={classes.contentTextStyle}>
                         Vacating a conviction is the process of clearing a conviction from your record so it is not
-                        visible to the public any more. Vacating your conviction can remove that crime from some
+                        visible to the public anymore. Vacating your conviction can remove that crime from some
                         background checks, and you can say legally that you were never convicted of that crime.
                     </Typography>
                     <Typography className={classes.contentTextStyle}>
