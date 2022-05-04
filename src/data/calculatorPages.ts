@@ -1253,7 +1253,7 @@ const data: Pages = {
     },
     "qac-3": {
         type: PageType.QUESTION,
-        header: "Are you currently restrained by any of the following: ",
+        header: "Are you currently restrained by any of the following?: ",
         progressBar: {
             currentSectionName: SectionName.CIRC,
             totalSections: 3,
@@ -1378,7 +1378,7 @@ const data: Pages = {
     "qac-ineligible-3": {
         type: PageType.END,
         header: `As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because you answered YES to the below question: 
-                 Are you currently restrained by any of the following:`,
+                 Are you currently restrained by any of the following?:`,
         body: [
             {
                 type: BodyType.LIST,
