@@ -1100,7 +1100,7 @@ const data: Pages = {
             {
                 type: BodyType.LINK,
                 text: " RCW 9.96.080",
-                href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.96.060",
+                href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.96.080",
             },
             {
                 type: BodyType.PARAGRAPH,
