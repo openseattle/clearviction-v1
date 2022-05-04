@@ -63,7 +63,7 @@ const courtFormsFacts = [
             <Typography variant="body2">
                 {northwestJusticeCenterPacket("Vacation packet from Northwest Justice Project")} including an overview
                 of the eligibility to vacate (p. 3-5), steps to vacate (p. 7-12), all necessary court documents (p.
-                13-23) and a sample letter to WSP (p.24).
+                13-23) and a sample letter to WSP (p. 24).
                 <br />
                 <br />
                 To vacate a felony conviction, you will also need a Certificate of Discharge. If the court has not
@@ -79,7 +79,7 @@ const courtFormsFacts = [
         content: (
             <Typography variant="body2">
                 {northwestJusticeCenterPacket("Vacation packet from Northwest Justice Project")} including an overview
-                of the eligibility to vacate (p.1-2), steps to take (p. 3-7), all court forms (p. 8-16), and a sample
+                of the eligibility to vacate (p. 1-2), steps to take (p. 3-7), all court forms (p. 8-16), and a sample
                 letter for WSP (p. 17).
             </Typography>
         ),
