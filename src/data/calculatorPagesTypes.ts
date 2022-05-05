@@ -67,6 +67,7 @@ interface Button {
     text: string;
     href: string;
     color?: string;
+    target?: string;
 }
 
 export enum TooltipType {
