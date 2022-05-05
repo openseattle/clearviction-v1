@@ -46,7 +46,7 @@ const HomeFAQAccordion = () => {
             details: (
                 <>
                     <Typography className={classes.contentTextStyle}>
-                        There are specific criteria that your conviction must meet, to be eligible to vacate.
+                        To be eligible to vacate, there are specific criteria that your conviction must meet.
                     </Typography>
                     <Typography className={classes.contentTextStyle}>
                         For misdemeanors, you can use our eligibility calculator to know if you are eligible.
