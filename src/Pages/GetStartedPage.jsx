@@ -62,7 +62,7 @@ const GetStartedPage = () => {
                     </Grid>
                 </Grid>
             </RedesignHeroPanel>
-            <Container id="read-more" className={classes.regularContainerStyle} maxwidth="sm">
+            <Container id="read-more" className={classes.regularContainerStyle + " " +  classes.centerText} maxwidth="sm">
                 <ResponsiveJumpButtonGroup
                     links={[
                         { url: "documents", linkName: "documents" },

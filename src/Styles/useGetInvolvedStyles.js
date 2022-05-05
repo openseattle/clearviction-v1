@@ -6,6 +6,9 @@ export const useGetInvolvedStyles = makeStyles(theme => ({
         marginBottom: theme.spacing(8),
         scrollMarginTop: "4em",
     },
+    centerText: {
+        textAlign: "center",
+    },
     CTAButtonContainerStyle: {
         marginTop: theme.spacing(8),
         marginBottom: theme.spacing(8),
