@@ -430,7 +430,7 @@ const data: Pages = {
     },
     "main-2": {
         type: PageType.QUESTION,
-        header: "Was the offense was a violation of any of the following?",
+        header: "Was the offense a violation of any of the following?",
         progressBar: {
             currentSectionName: SectionName.CONV,
             totalSections: 3,
