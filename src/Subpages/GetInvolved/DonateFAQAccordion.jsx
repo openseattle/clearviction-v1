@@ -9,6 +9,7 @@ const DonateFAQAccordion = () => {
     const questions = [
         {
             summary: "How will my donation be used?",
+            summaryID: "donation-button",
             details: (
                 <>
                     <Typography className={classes.contentTextStyle}>
@@ -23,9 +24,11 @@ const DonateFAQAccordion = () => {
                     </Typography>
                 </>
             ),
+            detailsID: "donation-paragraph",
         },
         {
             summary: "Is it safe and secure for me to donate online?",
+            summaryID: "safe-button",
             details: (
                 <>
                     <Typography className={classes.contentTextStyle}>
@@ -35,9 +38,11 @@ const DonateFAQAccordion = () => {
                     </Typography>
                 </>
             ),
+            detailsID: "safe-paragraph",
         },
         {
             summary: "I do not have a Venmo account, can I still donate online?",
+            summaryID: "venmo-account-button",
             details: (
                 <>
                     <Typography className={classes.contentTextStyle}>
@@ -51,9 +56,11 @@ const DonateFAQAccordion = () => {
                     </Typography>
                 </>
             ),
+            detailsID: "venmo-account-paragraph",
         },
         {
             summary: "Can I make a donation by check?",
+            summaryID: "check-button",
             details: (
                 <>
                     <Typography className={classes.contentTextStyle}>
@@ -68,9 +75,11 @@ const DonateFAQAccordion = () => {
                     </Typography>
                 </>
             ),
+            detailsID: "check-paragraph",
         },
         {
             summary: "How long does the process take?",
+            summaryID: "how-long-button",
             details: (
                 <>
                     <Typography className={classes.contentTextStyle}>
@@ -80,9 +89,11 @@ const DonateFAQAccordion = () => {
                     </Typography>
                 </>
             ),
+            detailsID: "how-long-paragraph",
         },
         {
             summary: " Who should I contact if I have more questions?",
+            summaryID: "contact-button",
             details: (
                 <>
                     <Typography className={classes.contentTextStyle}>
@@ -92,6 +103,7 @@ const DonateFAQAccordion = () => {
                     </Typography>
                 </>
             ),
+            detailsID: "contact-paragraph",
         },
     ];
     return <AccordionBuilder faqs={questions} />;
