@@ -85,25 +85,20 @@ const VolunteerPage = () => {
                 <Typography className={classes.headingStyle} variant="h2">
                     Open roles
                 </Typography>
-                <Grid container>
-                    {openVolunteerRoles.map(volunteerRole => (
-                        <Grid key={volunteerRole.id} item xs={12} sm={6} md={4}>
-                            <Box display={"flex"} justifyContent={"center"}>
-                                <VolunteerRolesCard
-                                    image={volunteerRole.image}
-                                    discipline={volunteerRole.discipline}
-                                    roles={volunteerRole.roles}
-                                    alt={volunteerRole.alt}
-                                />
-                            </Box>
-                        </Grid>
-                    ))}
-                </Grid>
-            </Container>
-            <Container className={classes.CTAButtonContainerStyle}>
-                <RedesignButtonPrimary target="_blank" href="https://www.democracylab.org/projects/226">
-                    apply now
-                </RedesignButtonPrimary>
+                <iframe
+                    id="roles-airtable-embed"
+                    title="open-roles"
+                    className="airtable-embed"
+                    src="https://airtable.com/embed/shrw329SZsANpPuom"
+                    frameBorder="0"
+                    width="100%"
+                    height="548"
+                    style={{
+                        background: "transparent",
+                        border: "1px solid #ccc",
+                        borderRadius: "6px",
+                    }}
+                ></iframe>
             </Container>
         </>
     );
