@@ -13,12 +13,12 @@ const AccordionBuilder = ({ faqs }) => {
         <div aria-label="info-accordion">
             {faqs.map((faq, idx) => (
                 <Accordion key={idx} elevation={0}>
-                    <AccordionSummary expandIcon={<ExpandMore />} {...a11yProps}>
-                        <Typography variant="subtitle1" component="p">
+                    <AccordionSummary expandIcon={<ExpandMore />} aria-controls={faq.detailsID} {...a11yProps}>
+                        <Typography variant="subtitle1" component="p" >
                             {faq.summary}
                         </Typography>
                     </AccordionSummary>
-                    <AccordionDetails>
+                    <AccordionDetails aria-labelledby={faq.summaryID}>
                         <Box display="block">{faq.details}</Box>
                     </AccordionDetails>
                 </Accordion>
