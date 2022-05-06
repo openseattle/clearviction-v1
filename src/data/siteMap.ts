@@ -8,23 +8,10 @@ type Page = {
 const pages: Page[] = [
     { name: "Home", url: "/" },
     // { name: "Calculator", url: "/calculator" },
-    // {
-    //   name: "Why Vacate",
-    //   url: "/why-vacate",
-    // },
-    // {
-    //   name: "Resources",
-    //   url: "/resources",
-    //   subpages: [
-    //     { name: "The Process", url: "/resources/the-process" },
-    //     { name: "Housing Assistance", url: "/resources/assistance/housing" },
-    //     {
-    //       name: "Employment Assistance",
-    //       url: "/resources/assistance/employment",
-    //     },
-    //     { name: "Education Assistance", url: "/resources/assistance/education" },
-    //   ],
-    // },
+    {
+        name: "Resources",
+        url: "/resources",
+    },
     {
         name: "Get Started",
         url: "/get-started",
