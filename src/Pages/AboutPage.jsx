@@ -1,5 +1,4 @@
 import { Container, Grid, Typography, Box, Divider } from "@material-ui/core";
-import TeamCard from "../Components/TeamCard";
 import { HourglassEmpty, LocalAtmOutlined, PanToolOutlined } from "@material-ui/icons";
 
 import map from "../Assets/map.svg";
@@ -8,7 +7,6 @@ import checklist1 from "../Assets/checklist1.svg";
 import { useAboutStyles } from "../Styles/useAboutStyles";
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
 
-import team from "../data/teamData";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 
 const AboutPage = () => {
@@ -69,9 +67,9 @@ const AboutPage = () => {
                             >
                                 Washington State's New Hope Act
                             </a>
-                            makes it easier for people with past criminal records to have their convictions vacated. Even
-                            then, the process of vacating a conviction is very convoluted, making it difficult for most
-                            people to navigate:
+                            makes it easier for people with past criminal records to have their convictions vacated.
+                            Even then, the process of vacating a conviction is very convoluted, making it difficult for
+                            most people to navigate:
                         </Typography>
 
                         <Grid container className={classes.gridStyle + " " + classes.centerText}>
@@ -133,19 +131,22 @@ const AboutPage = () => {
             </Container>
             <Divider className={classes.divider} />
 
-            <Box className={classes.regularContainer + " " + classes.teamContainer} id="our-team">
+            <Box className={classes.embedContainer} id="our-team">
                 <Container maxWidth="lg">
                     <Typography className={classes.headingStyle} variant="h2">
                         Our Team
                     </Typography>
                     <Grid container>
-                        {team.map((member, idx) => (
-                            <Grid className={classes.cardGridStyle} key={idx} item xs={12} sm={6} md={4} lg={3}>
-                                <Box display="flex" justifyContent="center">
-                                    <TeamCard member={member} />
-                                </Box>
-                            </Grid>
-                        ))}
+                        <iframe
+                            id="our-team-embed-airtable"
+                            title="our-team"
+                            className="airtable-embed"
+                            src="https://airtable.com/embed/shrUcTsNW8KLw3hyp"
+                            frameBorder="0"
+                            width="100%"
+                            height="1048"
+                            style={{ background: "transparent", border: "1px solid #ccc", borderRadius: "6px" }}
+                        ></iframe>
                     </Grid>
                 </Container>
             </Box>
