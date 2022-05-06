@@ -16,6 +16,10 @@ export const useAboutStyles = makeStyles(theme => ({
             padding: theme.spacing(3),
         },
     },
+    embedContainer: {
+        paddingTop: theme.spacing(8),
+        paddingBottom: theme.spacing(8),
+    },
     headingStyle: {
         marginBottom: theme.spacing(6),
     },
@@ -77,46 +81,10 @@ export const useAboutStyles = makeStyles(theme => ({
             padding: theme.spacing(1, 0),
         },
     },
-    teamContainer: {
-        width: "80%",
-        minWidth: "90vw",
-        margin: "0 auto",
-    },
     theProblemIcon: {
         color: theme.palette.secondary.main,
         fontSize: "40px",
         margin: theme.spacing(4),
-    },
-    avatar: {
-        width: "100%",
-        height: "200px",
-    },
-    card: {
-        width: "100%",
-        maxWidth: "250px",
-        height: "284px",
-        borderRadius: "6px",
-        [theme.breakpoints.down("sm")]: {
-            width: "80%",
-        },
-    },
-    name: {
-        marginTop: "-10px",
-        fontSize: "20px",
-        [theme.breakpoints.down("md")]: {
-            fontSize: "16px",
-        },
-        [theme.breakpoints.down("sm")]: {
-            fontSize: "16px",
-        },
-    },
-    role: {
-        fontSize: "14px",
-        lineHeight: "15px",
-        marginTop: theme.spacing(0.5),
-        [theme.breakpoints.down("md")]: {
-            fontSize: "12px",
-        },
     },
     listStyle: {
         display: "flex",
