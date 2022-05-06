@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const FactExpandMoreCard = ({ summary, content }) => {
+const FactExpandMoreCard = ({ summary, content, ariaLabel }) => {
     const [expanded, setExpanded] = useState();
 
     const handleExpandClick = () => {
@@ -21,7 +21,7 @@ const FactExpandMoreCard = ({ summary, content }) => {
     const classes = useStyles();
     return (
         <Card className={classes.rootStyle}>
-            <CardActionArea onClick={handleExpandClick} aria-expanded={expanded} aria-label="show more">
+            <CardActionArea onClick={handleExpandClick} aria-expanded={expanded} aria-label={ariaLabel}>
                 <CardActions>
                     <CardContent className={classes.contentStyle}>
                         <Typography variant="subtitle2" align="left">

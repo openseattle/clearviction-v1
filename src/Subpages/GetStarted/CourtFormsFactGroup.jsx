@@ -26,6 +26,7 @@ const courtFormsFacts = [
     {
         id: "cf0",
         summary: "(Gross) Misdemeanor Convictions",
+        ariaLabel: "Read More Gross Misdemeanor Convictions",
         content: (
             <Typography variant="body2">
                 {northwestJusticeCenterPacket("Vacation packet from Northwest Justice Project")} with details about the
@@ -36,6 +37,7 @@ const courtFormsFacts = [
     {
         id: "cf1",
         summary: "Marijuana Misdemeanors",
+        ariaLabel: "Read More Marijuana Misdemeanors",
         content: (
             <Typography variant="body2">
                 {northwestJusticeCenterPacket("Vacation packet from Northwest Justice Project")} with the steps to
@@ -47,6 +49,7 @@ const courtFormsFacts = [
     {
         id: "cf2",
         summary: "Prostitution Convictions",
+        ariaLabel: "Read More Prostitution Convictions",
         content: (
             <Typography variant="body2">
                 If you were a victim of trafficking, you can use this{" "}
@@ -59,6 +62,7 @@ const courtFormsFacts = [
     {
         id: "cf3",
         summary: "Non-Violent Class B or C Felony",
+        ariaLabel: "Read More Non-Violent Class B or C Felony",
         content: (
             <Typography variant="body2">
                 {northwestJusticeCenterPacket("Vacation packet from Northwest Justice Project")} including an overview
@@ -76,6 +80,7 @@ const courtFormsFacts = [
     {
         id: "cf4",
         summary: "Treaty to Indian Fishing Convictions",
+        ariaLabel: "Read More Treaty to Indian Fishing Convictions",
         content: (
             <Typography variant="body2">
                 {northwestJusticeCenterPacket("Vacation packet from Northwest Justice Project")} including an overview
@@ -87,6 +92,7 @@ const courtFormsFacts = [
     {
         id: "cf5",
         summary: "Juvenile Conviction Records",
+        ariaLabel: "Read More Juvenile Conviction Records",
         content: (
             <>
                 <Typography variant="body2">
@@ -108,7 +114,7 @@ const CourtFormsFactGroup = () => {
             <Grid container>
                 {courtFormsFacts.map(fact => (
                     <Grid key={fact.id} item xs={12} sm={6} md={4}>
-                        <FactExpandMoreCard summary={fact.summary} content={fact.content} />
+                        <FactExpandMoreCard summary={fact.summary} content={fact.content} id={fact.id} ariaLabel={fact.ariaLabel} />
                     </Grid>
                 ))}
             </Grid>
