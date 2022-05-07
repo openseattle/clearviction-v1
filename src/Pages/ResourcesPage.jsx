@@ -3,7 +3,6 @@ import RedesignHeroPanel from "../Components/RedesignHeroPanel";
 
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
 import FactImageCard from "../Components/FactImageCard";
-import EmploymentResources from "../Subpages/Resources/EmploymentResources";
 
 import { useResourcesStyles } from "../Styles/useResourcesStyles";
 
@@ -18,7 +17,17 @@ import processBuilding from "./../Assets/process.svg";
 import career from "./../Assets/career.svg";
 import graduation from "./../Assets/graduation.svg";
 import FactSubList from "../Components/FactSubList";
-import { jobPortals, professionalTraining } from "../data/resourcesData";
+import {
+    jobPortals,
+    professionalTraining,
+    housingAdvisory,
+    shelterListings,
+    studentAid,
+    postIncarEduPrograms,
+    otherEduAssistance,
+} from "../data/resourcesData";
+import FactGroup from "../Components/FactGroup";
+import FactTextPlaceholder from "../Components/FactTextPlaceholder";
 
 const employmentFacts = [
     {
@@ -162,7 +171,7 @@ const ResourcesPage = () => {
                 <Typography variant="h3" className={classes.headingStyle}>
                     Resources
                 </Typography>
-                <EmploymentResources
+                <FactGroup
                     facts={[
                         {
                             id: "erf0",
@@ -202,7 +211,20 @@ const ResourcesPage = () => {
                 <Typography variant="h3" className={classes.headingStyle}>
                     Resources
                 </Typography>
-                <EmploymentResources />
+                <FactGroup
+                    facts={[
+                        {
+                            id: "hrf0",
+                            summary: "Shelter Listings",
+                            content: <FactSubList resources={shelterListings} />,
+                        },
+                        {
+                            id: "hrf1",
+                            summary: "Housing Advisory",
+                            content: <FactSubList resources={housingAdvisory} />,
+                        },
+                    ]}
+                />
             </Container>
 
             <Container id="education" component="section" className={classes.regularContainerStyle} maxWidth="md">
@@ -229,7 +251,25 @@ const ResourcesPage = () => {
                 <Typography variant="h3" className={classes.headingStyle}>
                     Resources
                 </Typography>
-                <EmploymentResources />
+                <FactGroup
+                    facts={[
+                        {
+                            id: "edurf0",
+                            summary: "Federal Financial Student Aid",
+                            content: <FactSubList resources={studentAid} />,
+                        },
+                        {
+                            id: "edurf1",
+                            summary: "Post-incarceration educational programs",
+                            content: <FactSubList resources={postIncarEduPrograms} />,
+                        },
+                        {
+                            id: "edurf2",
+                            summary: "Other Educational Assistance",
+                            content: <FactSubList resources={otherEduAssistance} />,
+                        },
+                    ]}
+                />
             </Container>
 
             <Container id="other" component="section" className={classes.regularContainerStyle} maxWidth="md">
@@ -239,24 +279,30 @@ const ResourcesPage = () => {
                 <Typography className={classes.headingStyle} variant="h3">
                     Why Vacate?
                 </Typography>
-                <Typography className={classes.headingStyle} variant="body1">
-                    With a conviction in your record, you might face some barriers when it comes to getting
-                    opportunities where a background check is performed. Here are the main educational challenges faced
-                    by those with convicitons:
-                </Typography>
-                <Grid container spacing={3}>
-                    {housingFacts.map(fact => (
-                        <Grid key={fact.id} item xs={12} sm={6} md={6}>
-                            <FactImageCard fact={fact} key={fact.id} id={fact.id} />
-                        </Grid>
-                    ))}
-                </Grid>
             </Container>
             <Container className={classes.regularContainerStyle} maxWidth="md">
                 <Typography variant="h3" className={classes.headingStyle}>
                     Resources
                 </Typography>
-                <EmploymentResources />
+                <FactGroup
+                    facts={[
+                        {
+                            id: "orf0",
+                            summary: "Financial Aid",
+                            content: <FactTextPlaceholder />,
+                        },
+                        {
+                            id: "orf1",
+                            summary: "Legal Aid",
+                            content: <FactTextPlaceholder />,
+                        },
+                        {
+                            id: "orf2",
+                            summary: "Miscellaneous",
+                            content: <FactTextPlaceholder />,
+                        },
+                    ]}
+                />
             </Container>
         </>
     );

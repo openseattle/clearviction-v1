@@ -9,6 +9,116 @@ type LegalAidService = {
     url: string;
     serviceArea?: string;
 };
+type resourceLink = {
+    name: string;
+    url: string;
+};
+const otherEduAssistance: resourceLink[] = [
+    {
+        name: "Adams State University Prison College Program",
+        url: "http://www.adams.edu/extended_studies/undergrad/prisoncollegeprogram.php",
+    },
+    {
+        name: "College Board Scholarship Search",
+        url: "https://bigfuture.collegeboard.org/pay-for-college/scholarship-search",
+    },
+    {
+        name: "University Beyond Bars",
+        url: "http://www.universitybeyondbars.org/",
+    },
+];
+
+const postIncarEduPrograms: resourceLink[] = [
+    {
+        name: "Freedom Education Project",
+        url: "http://www.fepps.org/",
+    },
+    {
+        name: "People for People",
+        url: "http://www.pfp.org/pfp/index.aspx",
+    },
+    {
+        name: "Pioneer Human Services",
+        url: "http://pioneerhumanservices.com",
+    },
+    {
+        name: "Post-Prison Education Program",
+        url: "http://postprisonedu.org/",
+    },
+    {
+        name: "The Star Project",
+        url: "http://thestarproject.us/",
+    },
+];
+
+const studentAid: resourceLink[] = [
+    {
+        name: "FAQ on Incarcerated Individuals and Eligibility for Federal Student Aid",
+        url: "https://studentaid.ed.gov/sites/default/files/aid-info-for-incarcerated-individuals.pdf",
+    },
+    {
+        name: "Free Application for Federal Student Aid (FAFSA)",
+        url: "http://www.fafsa.gov",
+    },
+    {
+        name: "Federal Pell Grants",
+        url: "https://studentaid.ed.gov/sa/types/grants-scholarships/pell",
+    },
+    {
+        name: "Federal Work-Study Programs",
+        url: "https://studentaid.ed.gov/types/work-study",
+    },
+];
+
+const shelterListings: resourceLink[] = [
+    {
+        name: "Washington Shelter List",
+        url: "https://www.shelterlist.com/state/washington",
+    },
+    {
+        name: "Catholic Community Services and Catholic Housing Services of Western Washington",
+        url: "https://ccsww.org",
+    },
+    {
+        name: "Pioneer Human Services",
+        url: "https://pioneerhumanservices.org/housing",
+    },
+    {
+        name: "HUD Resource",
+        url: "https://resources.hud.gov/#",
+    },
+    {
+        name: "Social Serve",
+        url: "https://www.socialserve.com/tenant/WA/index.html?ch=KCHA",
+    },
+    {
+        name: "Aptfinder",
+        url: "http://aptfinder.org",
+    },
+    {
+        name: "Affordable Housing",
+        url: "https://affordablehousingonline.com/housing-search/Washington",
+    },
+];
+
+const housingAdvisory: resourceLink[] = [
+    {
+        name: "HUD Exchange",
+        url: "https://www.hudexchange.info/housing-and-homeless-assistance/homeless-help/?csrf_token=A027E19F-A4E2-45C1-863E37BCF1E8E003&params=%7B%22limit%22%3A20%2C%22newSearch%22%3Atrue%2C%22homelessPOCsOnly%22%3Atrue%2C%22state%22%3A%22WA%22%7D##granteeSearch",
+    },
+    {
+        name: "Compass Housing Alliance",
+        url: "https://www.compasshousingalliance.org",
+    },
+    {
+        name: "The STAR Project",
+        url: "https://www.compasshousingalliance.org",
+    },
+    {
+        name: "Transgender Law Center (2016)",
+        url: "hhttp://transgenderlawcenter.org/wp-content/uploads/2016/02/03.09.2016-Model-Homeless-Shelter-TG-Policy-single-pages.pdf",
+    },
+];
 
 const jobPortals: JobHelpResource[] = [
     {
@@ -115,4 +225,15 @@ const proSePatronsLegalAid: LegalAidService[] = [
         serviceArea: "Statewide",
     },
 ];
-export { jobPortals, professionalTraining, adultLegalAid, juvenileLegalAid, proSePatronsLegalAid };
+export {
+    jobPortals,
+    professionalTraining,
+    adultLegalAid,
+    juvenileLegalAid,
+    proSePatronsLegalAid,
+    housingAdvisory,
+    shelterListings,
+    studentAid,
+    postIncarEduPrograms,
+    otherEduAssistance,
+};
