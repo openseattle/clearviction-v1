@@ -18,28 +18,24 @@ const donationLevels = [
         name: "level 1",
         amount: "$10",
         donationImage: startup,
-        alt: "Sitting on a rocket ship.",
         desc: "pay for a monthly fee for one of our technological tools",
     },
     {
         name: "level 2",
         amount: "$15",
         donationImage: discovery,
-        alt: "Doing research.",
         desc: "fund a research participant’s time ",
     },
     {
         name: "level 3",
         amount: "$30",
         donationImage: laptop,
-        alt: "Using a laptop.",
         desc: "pay the filing fee for a low-income individual ",
     },
     {
         name: "level 4",
         amount: "Any $",
         donationImage: note,
-        alt: "Taking notes with a pencil.",
         desc: "help support those with convictions start fresh",
     },
 ];
@@ -73,7 +69,7 @@ const DonatePage = () => {
                                     amount={level.amount}
                                     text={level.desc}
                                     image={level.donationImage}
-                                    alt={donationLevels.alt}
+                                    alt=""
                                 />
                             </Box>
                         </Grid>
