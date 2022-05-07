@@ -1,14 +1,9 @@
-import { Box, Grid, Typography, Container } from "@material-ui/core";
+import { Grid, Typography, Container } from "@material-ui/core";
 import { Alarm, CloudDone, Sync } from "@material-ui/icons";
 
-import team from "../Assets/team_building.svg";
-import brainstorm from "../Assets/brainstorming_session.svg";
-import laptop from "../Assets/laptop.svg";
 import Fact from "../Components/Fact";
-import VolunteerRolesCard from "../Components/VolunteerRolesCard";
 
 import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
-import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 
 const factsProps = {
     style: { fontSize: "3em" },
