@@ -99,7 +99,7 @@ const QuestionScreen = props => {
                         }
                     })}
             </Grid>
-            <Grid container justifyContent="center" className={classes.buttonGrid + " " + classes.center}>
+            <Grid container justifyContent="center" className={classes.buttonGrid}>
                 {props.buttons.map((b, idx) => {
                     return <PrimaryButton href={b.href} key={idx} text={b.text} className={classes.button} />;
                 })}
