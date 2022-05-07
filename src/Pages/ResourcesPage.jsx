@@ -172,12 +172,18 @@ const ResourcesPage = () => {
                         {
                             id: "erf0",
                             summary: "Job Portals",
+                            summaryID: "job-portals-button",
+                            ariaLabel: "Read More Job Portals",
                             content: <FactSubList resources={jobPortals} />,
+                            contentID: "job-portals-paragraph",
                         },
                         {
                             id: "erf1",
                             summary: "Professional Training",
+                            summaryID: "training-button",
+                            ariaLabel: "Read More Professional Training",
                             content: <FactSubList resources={professionalTraining} />,
+                            contentID: "training-paragraph",
                         },
                     ]}
                 />
@@ -216,12 +222,18 @@ const ResourcesPage = () => {
                         {
                             id: "hrf0",
                             summary: "Shelter Listings",
+                            summaryID: "shelter-button",
+                            ariaLabel: "Read More Shelter Listings",
                             content: <FactSubList resources={shelterListings} />,
+                            contentID: "shelter-paragraph",
                         },
                         {
                             id: "hrf1",
                             summary: "Housing Advisory",
+                            summaryID: "housing-button",
+                            ariaLabel: "Read More Housing Advisory",
                             content: <FactSubList resources={housingAdvisory} />,
+                            contentID: "housing-paragraph",
                         },
                     ]}
                 />
@@ -260,17 +272,26 @@ const ResourcesPage = () => {
                         {
                             id: "edurf0",
                             summary: "Federal Financial Student Aid",
+                            summaryID: "student-aid-button",
+                            ariaLabel: "Read More Federal Financial Student Aid",
                             content: <FactSubList resources={studentAid} />,
+                            contentID: "student-aid-paragraph",
                         },
                         {
                             id: "edurf1",
                             summary: "Post-incarceration educational programs",
+                            summaryID: "educational-programs-button",
+                            ariaLabel: "Read More Post-incarceration educational programs",
                             content: <FactSubList resources={postIncarEduPrograms} />,
+                            contentID: "educational-programs-paragraph",
                         },
                         {
                             id: "edurf2",
                             summary: "Other Educational Assistance",
+                            summaryID: "other-educational-button",
+                            ariaLabel: "Read More Other Educational Assistance",
                             content: <FactSubList resources={otherEduAssistance} />,
+                            contentID: "other-educational-paragraph",
                         },
                     ]}
                 />
@@ -291,17 +312,26 @@ const ResourcesPage = () => {
                         {
                             id: "orf0",
                             summary: "Financial Aid",
+                            summaryID: "financial-aid-button",
+                            ariaLabel: "Read More Financial Aid",
                             content: <FactTextPlaceholder />,
+                            contentID: "finanical-aid-paragraph",
                         },
                         {
                             id: "orf1",
                             summary: "Legal Aid",
+                            summaryID: "legal-aid-button",
+                            ariaLabel: "Read More Legal Aid",
                             content: <FactTextPlaceholder />,
+                            contentID: "legal-aid-paragraph",
                         },
                         {
                             id: "orf2",
                             summary: "Miscellaneous",
+                            summaryID: "misc-info-button",
+                            ariaLabel: "Read More Miscellaneous",
                             content: <FactTextPlaceholder />,
+                            contentID: "misc-info-paragraph",
                         },
                     ]}
                 />
