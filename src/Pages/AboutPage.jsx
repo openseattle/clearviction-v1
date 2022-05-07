@@ -23,7 +23,7 @@ const AboutPage = () => {
                             </Typography>
                             <Typography className={classes.contentTextStyle} variant="subtitle1" component="p">
                                 We are a civic-tech open-source project working to make the conviction vacation process
-                                easier and more staightforward, starting with an eligibility calculator.
+                                easier and more straightforward, starting with an eligibility calculator.
                             </Typography>
                         </Grid>
                         <Grid item xs={12} sm={6} md={6}>
