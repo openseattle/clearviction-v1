@@ -9,10 +9,6 @@ const pages: Page[] = [
     { name: "Home", url: "/" },
     // { name: "Calculator", url: "/calculator" },
     {
-        name: "Resources",
-        url: "/resources",
-    },
-    {
         name: "Get Started",
         url: "/get-started",
     },
@@ -24,6 +20,10 @@ const pages: Page[] = [
         //   { name: "Donate", url: "/get-involved/donate" },
         //   { name: "Partner with Us", url: "/get-involved/partner-with-us" },
         // ],
+    },
+    {
+        name: "Resources",
+        url: "/resources",
     },
     { name: "About", url: "/about" },
     { name: "Contact", url: "/contact" },
