@@ -9,6 +9,7 @@ const HomeFAQAccordion = () => {
     const questions = [
         {
             summary: "What does it mean to vacate a conviction?",
+            summaryID: "vacate-conviction-button",
             details: (
                 <>
                     <Typography className={classes.contentTextStyle}>
@@ -22,9 +23,11 @@ const HomeFAQAccordion = () => {
                     </Typography>
                 </>
             ),
+            detailsID: "vacate-conviction-paragraph",
         },
         {
             summary: "Why should I consider vacating my conviction?",
+            summaryID: "why-vacate-button",
             details: (
                 <>
                     <Typography className={classes.contentTextStyle}>
@@ -40,9 +43,11 @@ const HomeFAQAccordion = () => {
                     </Typography>
                 </>
             ),
+            detailsID: "why-vacate-paragraph",
         },
         {
             summary: "How do I know if my conviction is eligible to vacate?",
+            summaryID: "vacate-eligible-button",
             details: (
                 <>
                     <Typography className={classes.contentTextStyle}>
@@ -64,9 +69,11 @@ const HomeFAQAccordion = () => {
                     </Typography>
                 </>
             ),
+            detailsID: "vacate-eligible-paragraph",
         },
         {
             summary: "If my conviction meets the eligibility criteria, does that guarantee that I can vacate it?",
+            summaryID: "vacate-guarantee-button",
             details: (
                 <>
                     <Typography className={classes.contentTextStyle}>
@@ -87,9 +94,11 @@ const HomeFAQAccordion = () => {
                     </Typography>
                 </>
             ),
+            detailsID: "vacate-guarantee-paragraph",
         },
         {
             summary: "How long does the process take?",
+            summaryID: "how-long-button",
             details: (
                 <>
                     <Typography className={classes.contentTextStyle}>
@@ -99,9 +108,11 @@ const HomeFAQAccordion = () => {
                     </Typography>
                 </>
             ),
+            detailsID: "how-long-paragraph",
         },
         {
             summary: "What happens after my conviction is vacated?",
+            summaryID: "after-vacate-button",
             details: (
                 <>
                     <Typography className={classes.contentTextStyle}>
@@ -111,9 +122,11 @@ const HomeFAQAccordion = () => {
                     </Typography>
                 </>
             ),
+            detailsID: "after-vacate-paragraph",
         },
         {
             summary: "Does vacating a conviction make it disappear from my record?",
+            summaryID: "record-button",
             details: (
                 <>
                     <Typography className={classes.contentTextStyle}>No.</Typography>
@@ -137,6 +150,7 @@ const HomeFAQAccordion = () => {
                     </Typography>
                 </>
             ),
+            detailsID: "record-paragraph",
         },
     ];
     return <AccordionBuilder faqs={questions} />;

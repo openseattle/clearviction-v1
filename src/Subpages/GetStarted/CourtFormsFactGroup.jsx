@@ -26,16 +26,21 @@ const courtFormsFacts = [
     {
         id: "cf0",
         summary: "(Gross) Misdemeanor Convictions",
+        summaryID: "GMD-button",
+        ariaLabel: "Read More Gross Misdemeanor Convictions",
         content: (
             <Typography variant="body2">
                 {northwestJusticeCenterPacket("Vacation packet from Northwest Justice Project")} with details about the
                 eligibility to vacate (p. 2-4) and the needed court forms (p. 5-13).
             </Typography>
         ),
+        contentID: "GMC-paragraph",
     },
     {
         id: "cf1",
         summary: "Marijuana Misdemeanors",
+        summaryID: "MM-button",
+        ariaLabel: "Read More Marijuana Misdemeanors",
         content: (
             <Typography variant="body2">
                 {northwestJusticeCenterPacket("Vacation packet from Northwest Justice Project")} with the steps to
@@ -43,10 +48,13 @@ const courtFormsFacts = [
                 (p. 7).
             </Typography>
         ),
+        contentID: "MM-paragraph",
     },
     {
         id: "cf2",
         summary: "Prostitution Convictions",
+        summaryID: "PC-button",
+        ariaLabel: "Read More Prostitution Convictions",
         content: (
             <Typography variant="body2">
                 If you were a victim of trafficking, you can use this{" "}
@@ -55,10 +63,13 @@ const courtFormsFacts = [
                 WSP (p. 9).
             </Typography>
         ),
+        contentID: "PC-paragraph",
     },
     {
         id: "cf3",
         summary: "Non-Violent Class B or C Felony",
+        summaryID: "BCF-button",
+        ariaLabel: "Read More Non-Violent Class B or C Felony",
         content: (
             <Typography variant="body2">
                 {northwestJusticeCenterPacket("Vacation packet from Northwest Justice Project")} including an overview
@@ -72,10 +83,13 @@ const courtFormsFacts = [
                 in Washington State.
             </Typography>
         ),
+        contentID: "BCF-paragraph",
     },
     {
         id: "cf4",
         summary: "Treaty to Indian Fishing Convictions",
+        summaryID: "IFC-button",
+        ariaLabel: "Read More Treaty to Indian Fishing Convictions",
         content: (
             <Typography variant="body2">
                 {northwestJusticeCenterPacket("Vacation packet from Northwest Justice Project")} including an overview
@@ -83,10 +97,13 @@ const courtFormsFacts = [
                 letter for WSP (p. 17).
             </Typography>
         ),
+        contentID: "IFC-paragraph",
     },
     {
         id: "cf5",
         summary: "Juvenile Conviction Records",
+        summaryID: "JCR-button",
+        ariaLabel: "Read More Juvenile Conviction Records",
         content: (
             <>
                 <Typography variant="body2">
@@ -100,6 +117,7 @@ const courtFormsFacts = [
                 </Typography>
             </>
         ),
+        contentID: "JCR-paragraph",
     },
 ];
 const CourtFormsFactGroup = () => {
@@ -108,7 +126,7 @@ const CourtFormsFactGroup = () => {
             <Grid container>
                 {courtFormsFacts.map(fact => (
                     <Grid key={fact.id} item xs={12} sm={6} md={4}>
-                        <FactExpandMoreCard summary={fact.summary} content={fact.content} />
+                        <FactExpandMoreCard summary={fact.summary} summaryID={fact.summaryID} content={fact.content} contentID={fact.contentID} id={fact.id} ariaLabel={fact.ariaLabel} />
                     </Grid>
                 ))}
             </Grid>
