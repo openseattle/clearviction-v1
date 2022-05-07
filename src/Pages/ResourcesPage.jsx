@@ -110,8 +110,8 @@ const ResourcesPage = () => {
     return (
         <>
             <RedesignHeroPanel title="Resources">
-                <Grid container>
-                    <Grid item xs={12} sm={12} md={6}>
+                <Grid container spacing={4}>
+                    <Grid item xs={12} sm={6} md={6}>
                         <Typography className={classes.contentTextStyle} variant="subtitle1" component="p">
                             The process of vacating a conviction is convoluted, but it’s needed to avoid barriers in
                             employment, housing and education.
@@ -121,13 +121,8 @@ const ResourcesPage = () => {
                             you work your way to it.
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} sm={12} md={6}>
-                        <Box
-                            component="img"
-                            style={{ width: "100%", padding: 16 }}
-                            src={teamBuilding}
-                            alt="Teamwork solves a puzzle."
-                        />
+                    <Grid item xs={12} sm={6} md={6}>
+                        <Box component="img" width="100%" src={teamBuilding} alt="Teamwork solves a puzzle." />
                     </Grid>
                 </Grid>
             </RedesignHeroPanel>
