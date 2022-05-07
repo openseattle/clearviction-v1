@@ -162,9 +162,7 @@ const ResourcesPage = () => {
                     ))}
                 </Grid>
             </Container>
-            <Container maxWidth="md">
-                <Divider className={classes.dividerStyle} />
-            </Container>
+
             <Container className={classes.regularContainerStyle} maxWidth="md">
                 <Typography variant="h3" className={classes.headingStyle}>
                     Resources
@@ -183,6 +181,9 @@ const ResourcesPage = () => {
                         },
                     ]}
                 />
+            </Container>
+            <Container maxWidth="md">
+                <Divider className={classes.dividerStyle} />
             </Container>
 
             <Container id="housing" component="section" className={classes.regularContainerStyle} maxWidth="md">
@@ -205,9 +206,7 @@ const ResourcesPage = () => {
                     ))}
                 </Grid>
             </Container>
-            <Container maxWidth="md">
-                <Divider className={classes.dividerStyle} />
-            </Container>
+
             <Container className={classes.regularContainerStyle} maxWidth="md">
                 <Typography variant="h3" className={classes.headingStyle}>
                     Resources
@@ -226,6 +225,9 @@ const ResourcesPage = () => {
                         },
                     ]}
                 />
+            </Container>
+            <Container maxWidth="md">
+                <Divider className={classes.dividerStyle} />
             </Container>
 
             <Container id="education" component="section" className={classes.regularContainerStyle} maxWidth="md">
@@ -248,9 +250,7 @@ const ResourcesPage = () => {
                     ))}
                 </Grid>
             </Container>
-            <Container maxWidth="md">
-                <Divider className={classes.dividerStyle} />
-            </Container>
+
             <Container className={classes.regularContainerStyle} maxWidth="md">
                 <Typography variant="h3" className={classes.headingStyle}>
                     Resources
@@ -274,6 +274,9 @@ const ResourcesPage = () => {
                         },
                     ]}
                 />
+            </Container>
+            <Container maxWidth="md">
+                <Divider className={classes.dividerStyle} />
             </Container>
 
             <Container id="other" component="section" className={classes.regularContainerStyle} maxWidth="md">
