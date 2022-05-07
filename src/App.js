@@ -11,6 +11,7 @@ import ContactPage from "./Pages/ContactPage";
 import Footer from "./Components/Footer";
 import GetInvolvedPage from "./Pages/GetInvolvedPage";
 import GetStartedPage from "./Pages/GetStartedPage";
+import ResourcesPage from "./Pages/ResourcesPage";
 
 function App() {
     return (
@@ -49,6 +50,9 @@ function App() {
                         </Route>
                         <Route path="/get-started">
                             <GetStartedPage />
+                        </Route>
+                        <Route path="/resources">
+                            <ResourcesPage />
                         </Route>
                     </Switch>
                     <Footer />

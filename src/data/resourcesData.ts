@@ -1,7 +1,7 @@
 type JobHelpResource = {
     name: string;
     url: string;
-    body: string;
+    body?: string;
 };
 
 type LegalAidService = {
@@ -10,36 +10,45 @@ type LegalAidService = {
     serviceArea?: string;
 };
 
-const workResources: JobHelpResource[] = [
+const jobPortals: JobHelpResource[] = [
     {
-        name: "Washington State WorkSource",
-        url: "https://www.worksourcewa.com/",
-        body: "WorkSource offers self-help programs, group programs and activities, workshops, one on one consultations, and training programs for job seekers.",
-    },
-    {
-        name: "Employment Security Department",
-        url: "http://www.esd.wa.gov/jobs-and-training",
-        body: "The agency works with local WorkSource centers and other sites in addition to providing placement assistance.",
-    },
-    {
-        name: "People for People",
-        url: "http://www.pfp.org/",
-        body: "Provides several resources, including employment training",
-    },
-    {
-        name: "Goodwill",
-        url: "http://www.goodwill.org/find-jobs-and-services/find-a-job/",
-        body: "Offers those with criminal backgrounds pre-release services, basic skills development, employment readiness training, occupational skill training, and job placement assistance",
+        name: "Employment Security Department Washington State",
+        url: "https://www.esd.wa.gov/jobs-and-training",
     },
     {
         name: "Careeronestop",
-        url: "http://www.careeronestop.org/",
-        body: "Sponsored by the U.S. Department of Labor, and is a resource for finding jobs and job training",
+        url: "https://www.careeronestop.org",
+    },
+    {
+        name: "WorkforceWA",
+        url: "https://www.worksourcewa.com",
+    },
+    {
+        name: "Goodwill",
+        url: "https://www.goodwill.org/jobs-training/find-a-job/",
     },
     {
         name: "Craigslist",
         url: "http://seattle.craigslist.org/",
-        body: "Lists many jobs in a variety of occupations",
+    },
+];
+
+const professionalTraining: JobHelpResource[] = [
+    {
+        name: "Washington State Department of Labor and Industries Apprenticeship",
+        url: "https://www.lni.wa.gov/licensing-permits/apprenticeship/become-an-apprentice",
+    },
+    {
+        name: "People for People",
+        url: "https://mypfp.org/services/employment-training/",
+    },
+    {
+        name: "Pioneer Human Services",
+        url: "https://pioneerhumanservices.org/job-skills",
+    },
+    {
+        name: "Evergreen Goodwill",
+        url: "https://evergreengoodwill.org/job-training-and-education",
     },
 ];
 
@@ -106,4 +115,4 @@ const proSePatronsLegalAid: LegalAidService[] = [
         serviceArea: "Statewide",
     },
 ];
-export { workResources, adultLegalAid, juvenileLegalAid, proSePatronsLegalAid };
+export { jobPortals, professionalTraining, adultLegalAid, juvenileLegalAid, proSePatronsLegalAid };
