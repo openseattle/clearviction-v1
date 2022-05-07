@@ -296,46 +296,6 @@ const ResourcesPage = () => {
                     ]}
                 />
             </Container>
-            <Container maxWidth="md">
-                <Divider className={classes.dividerStyle} />
-            </Container>
-
-            <Container id="other" component="section" className={classes.regularContainerStyle} maxWidth="md">
-                <Typography className={classes.headingStyle} variant="h2">
-                    Other
-                </Typography>
-                <Typography className={classes.headingStyle} variant="h3">
-                    Resources
-                </Typography>
-                <FactGroup
-                    facts={[
-                        {
-                            id: "orf0",
-                            summary: "Financial Aid",
-                            summaryID: "financial-aid-button",
-                            ariaLabel: "Read More Financial Aid",
-                            content: <FactTextPlaceholder />,
-                            contentID: "finanical-aid-paragraph",
-                        },
-                        {
-                            id: "orf1",
-                            summary: "Legal Aid",
-                            summaryID: "legal-aid-button",
-                            ariaLabel: "Read More Legal Aid",
-                            content: <FactTextPlaceholder />,
-                            contentID: "legal-aid-paragraph",
-                        },
-                        {
-                            id: "orf2",
-                            summary: "Miscellaneous",
-                            summaryID: "misc-info-button",
-                            ariaLabel: "Read More Miscellaneous",
-                            content: <FactTextPlaceholder />,
-                            contentID: "misc-info-paragraph",
-                        },
-                    ]}
-                />
-            </Container>
         </>
     );
 };
