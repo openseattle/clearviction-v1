@@ -32,29 +32,6 @@ const facts = [
         text: "Are a self-motivated individual comfortable with remote work",
     },
 ];
-const openVolunteerRoles = [
-    {
-        id: "role0",
-        image: team,
-        alt: "Two people who belong to the same team putting a puzzle together.",
-        discipline: "User Experience",
-        roles: ["Designers", "Researchers"],
-    },
-    {
-        id: "role1",
-        image: brainstorm,
-        alt: "A lightbulb representing an idea surrounded by a network.",
-        discipline: "Development",
-        roles: ["Front-end Devs", "Back-end Devs"],
-    },
-    {
-        id: "role2",
-        image: laptop,
-        alt: "Someone using a laptop to communicate.",
-        discipline: "Content & Outreach",
-        roles: ["Copywriters", "Marketing Directors"],
-    },
-];
 
 const VolunteerPage = () => {
     const classes = useGetInvolvedStyles();
