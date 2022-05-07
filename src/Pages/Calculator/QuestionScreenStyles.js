@@ -22,6 +22,9 @@ export const QuestionScreenStyles = makeStyles(theme => ({
     button: {
         marginBottom: "16px",
     },
+    center: {
+        textAlign: "center",
+    },
     backButton: {
         marginTop: "16px",
         marginBottom: "32px",
