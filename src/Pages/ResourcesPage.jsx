@@ -12,25 +12,87 @@ import cityBuildings from "./../Assets/city.svg";
 import time from "./../Assets/time.svg";
 import emails from "./../Assets/sending_emails.svg";
 import question from "./../Assets/question.svg";
+import dream from "./../Assets/dream.svg";
+import diversity from "./../Assets/diversity.svg";
+import processBuilding from "./../Assets/process.svg";
+import career from "./../Assets/career.svg";
+import graduation from "./../Assets/graduation.svg";
+import FactSubList from "../Components/FactSubList";
+import { jobPortals, professionalTraining } from "../data/resourcesData";
 
 const employmentFacts = [
     {
         id: "emp-fact-1",
         src: time,
         title: "Long periods of unemployment",
-        text: "Getting back into society may take longer with a conviction on record.",
+        text: "Getting back into society may take longer with a conviction on record. ",
     },
     {
         id: "emp-fact-2",
         src: emails,
-        title: "Public Housing Authorities",
+        title: "Rejected applicaitons",
         text: "These are a common circumstance for people who have previously been convicted.",
     },
     {
         id: "emp-fact-3",
         src: question,
-        title: "Public Housing Authorities",
+        title: "Lack of experience",
         text: "Getting a job in a new field is complicated due lack of access to education opportunities.",
+    },
+];
+
+const housingFacts = [
+    {
+        id: "hou-fact-1",
+        src: cityBuildings,
+        title: "Public Housing Authorities",
+        textList: [
+            "Income capped",
+            "Can’t be a registered offender",
+            "PHAs have discretion on who they decide to house",
+        ],
+    },
+    {
+        id: "hou-fact-2",
+        src: dream,
+        title: "Private Housing",
+        textList: [
+            "Landlords have full disccretion, and often deny people with criminal records",
+            "Management companies usually have extensive background checks",
+        ],
+    },
+    {
+        id: "hou-fact-3",
+        src: diversity,
+        title: "Supportive Housing",
+        textList: [
+            "Funded by HUD homeless programs",
+            "Must have been residing in emergency shelter/housing in the previous 90 days",
+        ],
+    },
+    {
+        id: "hou-fact-4",
+        src: processBuilding,
+        title: "Transitional Housing",
+        textList: [
+            " Might require you have substance abuse, mental health or physical issues",
+            "Some require you attend special meetings or work",
+        ],
+    },
+];
+
+const educationFacts = [
+    {
+        id: "edu-fact-1",
+        src: career,
+        title: "Ocupational Licenses",
+        text: "Some states’ laws contain an automatic disqualification prohibiting a person with a felony conviction from obtaining an occupational license, regardless of the offense.",
+    },
+    {
+        id: "edu-fact-2",
+        src: graduation,
+        title: "College Acceptance",
+        text: "Colleges run background checks on applicants. Whether you will be accepted depends on the kind of check they do and the type and time of crime. ",
     },
 ];
 
@@ -60,7 +122,12 @@ const ResourcesPage = () => {
                     </Grid>
                 </Grid>
             </RedesignHeroPanel>
-            <Container id="read-more" className={classes.regularContainer + " " + classes.centerText} maxwidth="sm">
+
+            <Container
+                id="read-more"
+                className={classes.regularContainerStyle + " " + classes.centerText}
+                maxwidth="sm"
+            >
                 <ResponsiveJumpButtonGroup
                     links={[
                         { url: "employment", linkName: "employment" },
@@ -70,6 +137,7 @@ const ResourcesPage = () => {
                     ]}
                 />
             </Container>
+
             <Container id="employment" component="section" className={classes.regularContainerStyle} maxWidth="md">
                 <Typography className={classes.headingStyle} variant="h2">
                     Employment
@@ -82,9 +150,51 @@ const ResourcesPage = () => {
                     depending on the type of job and the employer. It is important to not lose hope while facing
                     challenges such as:
                 </Typography>
-                <Grid container spacing={1}>
+                <Grid container spacing={3}>
                     {employmentFacts.map(fact => (
-                        <FactImageCard fact={fact} key={fact.id} id={fact.id} />
+                        <Grid key={fact.id} item xs={12} sm={6} md={4}>
+                            <FactImageCard fact={fact} key={fact.id} id={fact.id} />
+                        </Grid>
+                    ))}
+                </Grid>
+            </Container>
+            <Container className={classes.regularContainerStyle} maxWidth="md">
+                <Typography variant="h3" className={classes.headingStyle}>
+                    Resources
+                </Typography>
+                <EmploymentResources
+                    facts={[
+                        {
+                            id: "erf0",
+                            summary: "Job Portals",
+                            content: <FactSubList resources={jobPortals} />,
+                        },
+                        {
+                            id: "erf1",
+                            summary: "Professional Training",
+                            content: <FactSubList resources={professionalTraining} />,
+                        },
+                    ]}
+                />
+            </Container>
+
+            <Container id="housing" component="section" className={classes.regularContainerStyle} maxWidth="md">
+                <Typography className={classes.headingStyle} variant="h2">
+                    Housing
+                </Typography>
+                <Typography className={classes.headingStyle} variant="h3">
+                    Why Vacate?
+                </Typography>
+                <Typography className={classes.headingStyle} variant="body1">
+                    There are many different barriers that can prevent people with convictions from fair access to
+                    housing. Each different type of housing comes with its own set of obstacles that you should take
+                    into consideration when looking for housing:
+                </Typography>
+                <Grid container spacing={3}>
+                    {housingFacts.map(fact => (
+                        <Grid key={fact.id} item xs={12} sm={6} md={6}>
+                            <FactImageCard fact={fact} key={fact.id} id={fact.id} height={"52em"} />
+                        </Grid>
                     ))}
                 </Grid>
             </Container>
@@ -94,7 +204,60 @@ const ResourcesPage = () => {
                 </Typography>
                 <EmploymentResources />
             </Container>
-            <Container className={classes.regularContainerStyle} maxWidth="md"></Container>
+
+            <Container id="education" component="section" className={classes.regularContainerStyle} maxWidth="md">
+                <Typography className={classes.headingStyle} variant="h2">
+                    Education
+                </Typography>
+                <Typography className={classes.headingStyle} variant="h3">
+                    Why Vacate?
+                </Typography>
+                <Typography className={classes.headingStyle} variant="body1">
+                    With a conviction in your record, you might face some barriers when it comes to getting
+                    opportunities where a background check is performed. Here are the main educational challenges faced
+                    by those with convicitons:
+                </Typography>
+                <Grid container spacing={4}>
+                    {educationFacts.map(fact => (
+                        <Grid key={fact.id} item xs={12} sm={6} md={6}>
+                            <FactImageCard fact={fact} key={fact.id} id={fact.id} />
+                        </Grid>
+                    ))}
+                </Grid>
+            </Container>
+            <Container className={classes.regularContainerStyle} maxWidth="md">
+                <Typography variant="h3" className={classes.headingStyle}>
+                    Resources
+                </Typography>
+                <EmploymentResources />
+            </Container>
+
+            <Container id="other" component="section" className={classes.regularContainerStyle} maxWidth="md">
+                <Typography className={classes.headingStyle} variant="h2">
+                    Other
+                </Typography>
+                <Typography className={classes.headingStyle} variant="h3">
+                    Why Vacate?
+                </Typography>
+                <Typography className={classes.headingStyle} variant="body1">
+                    With a conviction in your record, you might face some barriers when it comes to getting
+                    opportunities where a background check is performed. Here are the main educational challenges faced
+                    by those with convicitons:
+                </Typography>
+                <Grid container spacing={3}>
+                    {housingFacts.map(fact => (
+                        <Grid key={fact.id} item xs={12} sm={6} md={6}>
+                            <FactImageCard fact={fact} key={fact.id} id={fact.id} />
+                        </Grid>
+                    ))}
+                </Grid>
+            </Container>
+            <Container className={classes.regularContainerStyle} maxWidth="md">
+                <Typography variant="h3" className={classes.headingStyle}>
+                    Resources
+                </Typography>
+                <EmploymentResources />
+            </Container>
         </>
     );
 };
