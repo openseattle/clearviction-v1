@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography } from "@material-ui/core";
+import { Box, Container, Divider, Grid, Typography } from "@material-ui/core";
 import RedesignHeroPanel from "../Components/RedesignHeroPanel";
 
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
@@ -162,6 +162,9 @@ const ResourcesPage = () => {
                     ))}
                 </Grid>
             </Container>
+            <Container maxWidth="md">
+                <Divider className={classes.dividerStyle} />
+            </Container>
             <Container className={classes.regularContainerStyle} maxWidth="md">
                 <Typography variant="h3" className={classes.headingStyle}>
                     Resources
@@ -201,6 +204,9 @@ const ResourcesPage = () => {
                         </Grid>
                     ))}
                 </Grid>
+            </Container>
+            <Container maxWidth="md">
+                <Divider className={classes.dividerStyle} />
             </Container>
             <Container className={classes.regularContainerStyle} maxWidth="md">
                 <Typography variant="h3" className={classes.headingStyle}>
@@ -242,6 +248,9 @@ const ResourcesPage = () => {
                     ))}
                 </Grid>
             </Container>
+            <Container maxWidth="md">
+                <Divider className={classes.dividerStyle} />
+            </Container>
             <Container className={classes.regularContainerStyle} maxWidth="md">
                 <Typography variant="h3" className={classes.headingStyle}>
                     Resources
@@ -272,11 +281,6 @@ const ResourcesPage = () => {
                     Other
                 </Typography>
                 <Typography className={classes.headingStyle} variant="h3">
-                    Why Vacate?
-                </Typography>
-            </Container>
-            <Container className={classes.regularContainerStyle} maxWidth="md">
-                <Typography variant="h3" className={classes.headingStyle}>
                     Resources
                 </Typography>
                 <FactGroup

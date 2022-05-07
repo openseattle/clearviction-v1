@@ -1,6 +1,10 @@
 import { makeStyles } from "@material-ui/core";
 
 export const useResourcesStyles = makeStyles(theme => ({
+    dividerStyle: {
+        marginTop: theme.spacing(8),
+        marginBottom: theme.spacing(8),
+    },
     regularContainerStyle: {
         marginTop: theme.spacing(8),
         marginBottom: theme.spacing(8),
