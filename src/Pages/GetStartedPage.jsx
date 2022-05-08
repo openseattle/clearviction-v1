@@ -49,7 +49,9 @@ const GetStartedPage = () => {
                             Vacate your conviction in the state of Washington by following these 4 steps!
                         </Typography>
                         <Box marginTop="8em" marginBottom="8em">
-                            <RedesignButtonPrimary href="#read-more" aria-label="to Step 1: Documents">read more</RedesignButtonPrimary>
+                            <RedesignButtonPrimary href="#read-more" aria-label="to Step 1: Documents">
+                                read more
+                            </RedesignButtonPrimary>
                         </Box>
                     </Grid>
                     <Grid item xs={12} sm={12} md={6}>
@@ -62,7 +64,11 @@ const GetStartedPage = () => {
                     </Grid>
                 </Grid>
             </RedesignHeroPanel>
-            <Container id="read-more" className={classes.regularContainerStyle + " " +  classes.centerText} maxwidth="sm">
+            <Container
+                id="read-more"
+                className={classes.regularContainerStyle + " " + classes.centerText}
+                maxwidth="sm"
+            >
                 <ResponsiveJumpButtonGroup
                     links={[
                         { url: "documents", linkName: "documents" },

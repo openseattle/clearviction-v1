@@ -126,7 +126,14 @@ const CourtFormsFactGroup = () => {
             <Grid container>
                 {courtFormsFacts.map(fact => (
                     <Grid key={fact.id} item xs={12} sm={6} md={4}>
-                        <FactExpandMoreCard summary={fact.summary} summaryID={fact.summaryID} content={fact.content} contentID={fact.contentID} id={fact.id} ariaLabel={fact.ariaLabel} />
+                        <FactExpandMoreCard
+                            summary={fact.summary}
+                            summaryID={fact.summaryID}
+                            content={fact.content}
+                            contentID={fact.contentID}
+                            id={fact.id}
+                            ariaLabel={fact.ariaLabel}
+                        />
                     </Grid>
                 ))}
             </Grid>
