@@ -95,7 +95,9 @@ const AboutPage = () => {
                             </Grid>
                         </Grid>
                         <Box className={classes.buttonBoxStyle}>
-                            <RedesignButtonPrimary href="/get-started" aria-label="to Get Started">Learn More</RedesignButtonPrimary>
+                            <RedesignButtonPrimary href="/get-started" aria-label="to Get Started">
+                                Learn More
+                            </RedesignButtonPrimary>
                         </Box>
                     </Box>
                 </Container>

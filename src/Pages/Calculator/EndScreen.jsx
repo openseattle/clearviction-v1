@@ -71,7 +71,15 @@ const EndScreen = props => {
             </Grid>
             <Grid item className={classes.buttonGrid}>
                 {props.buttons.map((b, idx) => {
-                    return <PrimaryButton key={idx} className={classes.button} text={b.text} href={b.href} target={b.target} />;
+                    return (
+                        <PrimaryButton
+                            key={idx}
+                            className={classes.button}
+                            text={b.text}
+                            href={b.href}
+                            target={b.target}
+                        />
+                    );
                 })}
             </Grid>
             <Grid item className={classes.restartButton}>

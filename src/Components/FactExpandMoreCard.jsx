@@ -21,9 +21,14 @@ const FactExpandMoreCard = ({ summary, content, ariaLabel, contentID, summaryID 
     const classes = useStyles();
     return (
         <Card className={classes.rootStyle}>
-            <CardActionArea onClick={handleExpandClick} aria-expanded={expanded} aria-label={ariaLabel} aria-controls={contentID}>
+            <CardActionArea
+                onClick={handleExpandClick}
+                aria-expanded={expanded}
+                aria-label={ariaLabel}
+                aria-controls={contentID}
+            >
                 <CardActions>
-                    <CardContent className={classes.contentStyle} >
+                    <CardContent className={classes.contentStyle}>
                         <Typography variant="subtitle2" align="left">
                             {summary}
                         </Typography>
@@ -33,7 +38,7 @@ const FactExpandMoreCard = ({ summary, content, ariaLabel, contentID, summaryID 
                 </CardActions>
             </CardActionArea>
             <Collapse in={expanded} timeout="auto" unmountOnExit>
-                <CardContent  aria-labelledby={summaryID}>{content}</CardContent>
+                <CardContent aria-labelledby={summaryID}>{content}</CardContent>
             </Collapse>
         </Card>
     );
