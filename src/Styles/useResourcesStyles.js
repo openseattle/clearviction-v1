@@ -1,21 +1,14 @@
 import { makeStyles } from "@material-ui/core";
 
 export const useResourcesStyles = makeStyles(theme => ({
-    darkBlueBackground: {
-        backgroundColor: theme.palette.primary.dark,
-        color: "white",
-        paddingTop: theme.spacing(8),
-        paddingBottom: theme.spacing(8),
+    dividerStyle: {
+        marginTop: theme.spacing(8),
+        marginBottom: theme.spacing(8),
     },
-    lightBlueBackGround: {
-        backgroundColor: theme.palette.primary.main,
-        color: "white",
-        paddingTop: theme.spacing(8),
-        paddingBottom: theme.spacing(8),
-    },
-    regularContainer: {
-        paddingTop: theme.spacing(8),
-        paddingBottom: theme.spacing(8),
+    regularContainerStyle: {
+        marginTop: theme.spacing(8),
+        marginBottom: theme.spacing(8),
+        scrollMarginTop: "4em",
     },
     headingStyle: {
         marginTop: theme.spacing(5),

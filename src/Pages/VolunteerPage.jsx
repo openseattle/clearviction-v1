@@ -1,14 +1,9 @@
-import { Box, Grid, Typography, Container } from "@material-ui/core";
+import { Grid, Typography, Container } from "@material-ui/core";
 import { Alarm, CloudDone, Sync } from "@material-ui/icons";
 
-import team from "../Assets/team_building.svg";
-import brainstorm from "../Assets/brainstorming_session.svg";
-import laptop from "../Assets/laptop.svg";
 import Fact from "../Components/Fact";
-import VolunteerRolesCard from "../Components/VolunteerRolesCard";
 
 import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
-import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 
 const factsProps = {
     style: { fontSize: "3em" },
@@ -30,29 +25,6 @@ const facts = [
         id: "fact2",
         icon: <CloudDone {...factsProps} />,
         text: "Are a self-motivated individual comfortable with remote work",
-    },
-];
-const openVolunteerRoles = [
-    {
-        id: "role0",
-        image: team,
-        alt: "Two people who belong to the same team putting a puzzle together.",
-        discipline: "User Experience",
-        roles: ["Designers", "Researchers"],
-    },
-    {
-        id: "role1",
-        image: brainstorm,
-        alt: "A lightbulb representing an idea surrounded by a network.",
-        discipline: "Development",
-        roles: ["Front-end Devs", "Back-end Devs"],
-    },
-    {
-        id: "role2",
-        image: laptop,
-        alt: "Someone using a laptop to communicate.",
-        discipline: "Content & Outreach",
-        roles: ["Copywriters", "Marketing Directors"],
     },
 ];
 

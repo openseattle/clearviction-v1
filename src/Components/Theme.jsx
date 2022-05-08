@@ -111,6 +111,10 @@ Theme.overrides = {
             fontSize: "20px",
             letterSpacing: "0.1px",
             lineHeight: "28px",
+            [Theme.breakpoints.down("sm")]: {
+                fontSize: "18px",
+                lineHeight: "22px",
+            },
         },
         body1: {
             fontWeight: "normal",
