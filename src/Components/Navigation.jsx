@@ -1,62 +1,136 @@
-import "../CSS/Navigation.css";
-import navLogo from "../Assets/cvp-logo-white.png";
+import {
+    AppBar,
+    IconButton,
+    Toolbar,
+    Box,
+    Drawer,
+    List,
+    ListItem,
+    Container,
+    makeStyles,
+    ButtonGroup,
+} from "@material-ui/core";
+import { MenuSharp as MenuIcon, CloseSharp } from "@material-ui/icons";
+import pages from "../data/siteMap";
+import { useState } from "react";
+import NavButton from "../ui-kit/NavButton";
+import NavButtonMobile from "../ui-kit/NavButtonMobile";
+import LegalDisclaimer from "./LegalDisclaimer";
+import { NavigationLogo } from "./NavigationLogo";
+
+const useStyles = makeStyles(theme => ({
+    closeIcon: {
+        color: "white",
+    },
+    menuButton: {
+        textTransform: "none",
+        color: "white",
+    },
+    subMenuButton: {
+        textTransform: "none",
+        color: "white",
+        marginLeft: theme.spacing(2),
+    },
+    menuStyle: {
+        padding: theme.spacing(3),
+    },
+    expandIconStyle: {
+        color: "white",
+        margin: theme.spacing(1),
+    },
+}));
 
 const Navigation = () => {
-  return (
-    <>
-      <nav className="navbar navbar-expand-lg navbar-dark" id="nav">
-        <a className="navbar-brand" href="/">
-          <img id="nav-logo" src={navLogo} alt="cvp logo" />
-          WA Conviction Vacation Project
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+    const [menuState, setMenuState] = useState(null);
+    const handleOpenMenu = event => {
+        setMenuState(event.currentTarget);
+    };
 
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav mr-auto">
-            <li className="nav-item active">
-              <a className="nav-link" href="/">
-                Home
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/calculator">
-                Calculator
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/volunteer">
-                Volunteer
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/about">
-                About
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="/contact">
-                Contact
-              </a>
-            </li>
-            <span id="navbar-text" className="navbar-text">
-              The information on this site is not, nor should it be, considered
-              legal advice.
-            </span>
-          </ul>
-        </div>
-      </nav>
-    </>
-  );
+    const handleCloseMenu = () => {
+        setMenuState(null);
+    };
+
+    const classes = useStyles();
+
+    return (
+        <>
+            <AppBar color="primary" elevation={0}>
+                <Container maxWidth="xl">
+                    <Toolbar>
+                        <NavigationLogo />
+                        <Box style={{ flexGrow: 1 }} />
+
+                        {/* desktop menu */}
+                        <Box display={{ xs: "none", sm: "none", md: "flex" }}>
+                            <ButtonGroup>
+                                {pages.map((page, idx) => (
+                                    <NavButton key={idx} page={page} />
+                                ))}
+                            </ButtonGroup>
+                        </Box>
+                        {/* mobile menu */}
+
+                        {/* Drawer based nav */}
+                        <Box display={{ xs: "flex", sm: "flex", md: "none" }}>
+                            <IconButton
+                                size="medium"
+                                edge="start"
+                                color="inherit"
+                                aria-label="Show/hide navigation menu"
+                                onClick={handleOpenMenu}
+                            >
+                                <MenuIcon fontSize="large" />
+                            </IconButton>
+                        </Box>
+                        <Drawer anchor="right" open={Boolean(menuState)} onClose={handleCloseMenu}>
+                            <List className={classes.menuStyle}>
+                                <ListItem style={{ justifyContent: "center" }}>
+                                    <IconButton onClick={handleCloseMenu} aria-label="close menu">
+                                        <CloseSharp fontSize="large" className={classes.closeIcon} />
+                                    </IconButton>
+                                </ListItem>
+                                {pages.map(page => (
+                                    <NavButtonMobile key={page.name} page={page} classes={classes} />
+                                ))}
+                                <ListItem>
+                                    <LegalDisclaimer />
+                                </ListItem>
+                            </List>
+                        </Drawer>
+                        {/* Collapse based nav */}
+                        {/* <Box display={{ xs: "flex", sm: "flex", md: "none" }}>
+              {menuState ? (
+                <IconButton onClick={handleCloseMenu}>
+                  <CloseSharp fontSize="large" className={classes.closeIcon} />
+                </IconButton>
+              ) : (
+                <IconButton
+                  size="medium"
+                  edge="start"
+                  color="inherit"
+                  aria-label="menu"
+                  onClick={handleOpenMenu}
+                >
+                  <MenuIcon fontSize="large" />
+                </IconButton>
+              )}
+            </Box> */}
+                    </Toolbar>
+                </Container>
+                {/* <Collapse in={Boolean(menuState)} timeout="auto" unmountOnExit>
+          <List className={classes.menuStyle}>
+            {pages.map((page, idx) => (
+              <NavButtonMobile key={idx} page={page} classes={classes} />
+            ))}
+            <ListItem>
+              <LegalDisclaimer />
+            </ListItem>
+          </List>
+        </Collapse> */}
+            </AppBar>
+            <Box height={56} />
+        </>
+    );
 };
 
 export default Navigation;
