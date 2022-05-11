@@ -18,6 +18,7 @@ export const QuestionScreenStyles = makeStyles(theme => ({
     },
     buttonGrid: {
         paddingBottom: "32px",
+        textAlign: "center",
     },
     button: {
         marginBottom: "16px",
