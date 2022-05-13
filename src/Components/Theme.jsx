@@ -162,6 +162,11 @@ Theme.overrides = {
             color: "white",
         },
     },
+    MuiLink: {
+        underlineHover: {
+            textDecoration: 'underline'
+        }
+    },
     MuiTabs: {
         root: {
             borderTopLeftRadius: 5,
