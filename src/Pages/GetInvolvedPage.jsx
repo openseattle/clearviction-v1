@@ -17,7 +17,7 @@ const GetInvolvedPage = () => {
     return (
         <>
             <RedesignHeroPanel
-                title="Get involved"
+                title="Get Involved!"
                 subtitle={
                     "There are many ways to participate with the Clearviction team, and we appreciate all of them!"
                 }
