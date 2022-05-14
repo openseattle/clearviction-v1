@@ -9,6 +9,7 @@ import {
     Container,
     makeStyles,
     ButtonGroup,
+    Button,
 } from "@material-ui/core";
 import { MenuSharp as MenuIcon, CloseSharp } from "@material-ui/icons";
 import pages from "../data/siteMap";
@@ -17,6 +18,7 @@ import NavButton from "../ui-kit/NavButton";
 import NavButtonMobile from "../ui-kit/NavButtonMobile";
 import LegalDisclaimer from "./LegalDisclaimer";
 import { NavigationLogo } from "./NavigationLogo";
+import SkipLink from "../ui-kit/SkipLink";
 
 const useStyles = makeStyles(theme => ({
     closeIcon: {
@@ -38,6 +40,16 @@ const useStyles = makeStyles(theme => ({
         color: "white",
         margin: theme.spacing(1),
     },
+    skipLink: {
+        marginRight: "1rem",
+        position: "absolute",
+        transform: "translateX(-200%)",
+        transition: "transform 0.3s",
+        "&:focus": {
+            position: "static",
+            transform: "translateX(0)",
+        },
+    },
 }));
 
 const Navigation = () => {
@@ -57,6 +69,9 @@ const Navigation = () => {
             <AppBar color="primary" elevation={0}>
                 <Container maxWidth="xl">
                     <Toolbar>
+                        <SkipLink className={classes.skipLink}>
+                            <Button style={{ color: "white" }}>Skip Navigation Links</Button>
+                        </SkipLink>
                         <NavigationLogo />
                         <Box style={{ flexGrow: 1 }} />
 
@@ -97,36 +112,8 @@ const Navigation = () => {
                                 </ListItem>
                             </List>
                         </Drawer>
-                        {/* Collapse based nav */}
-                        {/* <Box display={{ xs: "flex", sm: "flex", md: "none" }}>
-              {menuState ? (
-                <IconButton onClick={handleCloseMenu}>
-                  <CloseSharp fontSize="large" className={classes.closeIcon} />
-                </IconButton>
-              ) : (
-                <IconButton
-                  size="medium"
-                  edge="start"
-                  color="inherit"
-                  aria-label="menu"
-                  onClick={handleOpenMenu}
-                >
-                  <MenuIcon fontSize="large" />
-                </IconButton>
-              )}
-            </Box> */}
                     </Toolbar>
                 </Container>
-                {/* <Collapse in={Boolean(menuState)} timeout="auto" unmountOnExit>
-          <List className={classes.menuStyle}>
-            {pages.map((page, idx) => (
-              <NavButtonMobile key={idx} page={page} classes={classes} />
-            ))}
-            <ListItem>
-              <LegalDisclaimer />
-            </ListItem>
-          </List>
-        </Collapse> */}
             </AppBar>
             <Box height={56} />
         </>
