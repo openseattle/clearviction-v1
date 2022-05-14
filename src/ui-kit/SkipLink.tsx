@@ -1,9 +1,9 @@
-import React from 'react';
-import { Container } from '@material-ui/core';
+import React from "react";
+import { Container } from "@material-ui/core";
 
 interface SkipLinkProperties {
     className?: string;
-    
+
     children: React.ReactElement;
     /**
      * The css query aiding the selection of the
@@ -22,8 +22,8 @@ const SkipLink: React.FC<SkipLinkProperties> = props => {
         /**
          * Catch-all 'container' looking for HTML tags
          */
-        const container: (HTMLElement | null) = document.querySelector(props.skipTo);
-        
+        const container: HTMLElement | null = document.querySelector(props.skipTo);
+
         /**
          * tabIndex seems to work well with the general layout of the site
          * Sets outline focus for screen-readers and sigthed alike
@@ -36,7 +36,7 @@ const SkipLink: React.FC<SkipLinkProperties> = props => {
     };
 
     return React.cloneElement(props.children, { onClick, className: props.className });
-}
+};
 /**
  * skipTo set as h1 seems to work well with general layout of site
  * Most, if not all, Subpages begin with this hiearchy
