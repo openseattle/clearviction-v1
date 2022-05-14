@@ -164,8 +164,8 @@ Theme.overrides = {
     },
     MuiLink: {
         underlineHover: {
-            textDecoration: 'underline'
-        }
+            textDecoration: "underline",
+        },
     },
     MuiTabs: {
         root: {
