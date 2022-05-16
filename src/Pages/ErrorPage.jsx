@@ -8,10 +8,10 @@ const ErrorPage = () => {
     useEffect(() => trackPageview("Error"), []);
 
     return (
-        <Container maxWidth="xs" padding={10}>
+        <Container maxWidth="xs">
             <Grid container direction="column" justifyContent="center">
                 <Grid item>
-                    <Typography variant="h5" align="center">
+                    <Typography variant="h5" align="center" component="h1" style={{ marginTop: "4em" }}>
                         Oops, page not found!
                     </Typography>
                 </Grid>
