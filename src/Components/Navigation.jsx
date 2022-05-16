@@ -66,7 +66,7 @@ const Navigation = () => {
 
     return (
         <>
-            <AppBar color="primary" elevation={0}>
+            <AppBar color="primary" elevation={0} role="navigation">
                 <Container maxWidth="xl">
                     <Toolbar>
                         <SkipLink className={classes.skipLink}>
