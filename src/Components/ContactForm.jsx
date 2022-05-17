@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { TextField, MenuItem, FormControl, FormGroup, FormLabel, Box } from "@material-ui/core";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import { send } from "@emailjs/browser";
@@ -19,6 +19,15 @@ const ContactForm = () => {
         errorStatus: false,
         errorMessage: "",
     });
+
+    useEffect(() => {
+        const storedSender = JSON.parse(localStorage.getItem('toSend'));
+        if (storedSender) {
+            setToSend(storedSender);
+        }
+    }, []);
+
+
 
     // TODO
     // Create a proper email validation service with formik + yup
@@ -80,7 +89,8 @@ const ContactForm = () => {
         setToSend({ ...toSend, [e.target.name]: e.target.value });
         if (e.target.name === "reply_to") {
             validateEmail(e.target.value);
-        }
+        };
+        localStorage.setItem('toSend', JSON.stringify(toSend))
     };
 
     const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
@@ -92,13 +102,14 @@ const ContactForm = () => {
         send(SERVICE_ID, TEMPLATE_ID, toSend, USER_ID)
             .then(response => {
                 console.log("success", response.status, response.text);
-                alert("Email Sent Successfully");
                 // TODO: create custom pop up alert
+                alert("Email Sent Successfully");
+                localStorage.removeItem('toSend', toSend);
             })
             .catch(error => {
                 console.log("failed", error);
-                alert("ERROR. Please try again.");
                 // TODO: create custom pop up alert
+                alert("ERROR. Please try again.");
             });
     };
 
