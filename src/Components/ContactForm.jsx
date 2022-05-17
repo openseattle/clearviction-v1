@@ -21,13 +21,15 @@ const ContactForm = () => {
     });
 
     useEffect(() => {
-        const storedSender = JSON.parse(localStorage.getItem('toSend'));
+        const storedSender = JSON.parse(sessionStorage.getItem('toSend'));
         if (storedSender) {
             setToSend(storedSender);
         }
     }, []);
 
-
+    useEffect(() => {
+        sessionStorage.setItem('toSend', JSON.stringify(toSend))
+    }, [toSend])
 
     // TODO
     // Create a proper email validation service with formik + yup
@@ -85,12 +87,12 @@ const ContactForm = () => {
         }
     };
 
+
     const handleChange = e => {
         setToSend({ ...toSend, [e.target.name]: e.target.value });
         if (e.target.name === "reply_to") {
             validateEmail(e.target.value);
         };
-        localStorage.setItem('toSend', JSON.stringify(toSend))
     };
 
     const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
