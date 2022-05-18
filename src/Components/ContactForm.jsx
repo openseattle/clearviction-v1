@@ -106,7 +106,6 @@ const ContactForm = () => {
                 console.log("success", response.status, response.text);
                 // TODO: create custom pop up alert
                 alert("Email Sent Successfully");
-                localStorage.removeItem('toSend', toSend);
             })
             .catch(error => {
                 console.log("failed", error);
