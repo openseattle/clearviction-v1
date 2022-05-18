@@ -1,4 +1,5 @@
 import { Box, Container, Divider, Grid } from "@material-ui/core";
+import { useEffect } from 'react';
 
 import DonatePage from "./DonatePage";
 import PartnerPage from "./PartnerPage";
@@ -14,10 +15,15 @@ import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
 
 const GetInvolvedPage = () => {
     const classes = useGetInvolvedStyles();
+
+    useEffect(() => {
+        document.title = "Get Involved - Clearviction";
+    }, []);
+
     return (
         <>
             <RedesignHeroPanel
-                title="Get involved"
+                title="Get Involved"
                 subtitle={
                     "There are many ways to participate with the Clearviction team, and we appreciate all of them!"
                 }

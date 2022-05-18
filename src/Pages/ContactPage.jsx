@@ -2,9 +2,15 @@ import { Container, Typography, Box, Grid } from "@material-ui/core";
 import ContactForm from "../Components/ContactForm";
 import { useContactStyles } from "../Styles/useContactStyles";
 import new_message from "../Assets/new_message.svg";
+import { useEffect } from 'react';
 
 const ContactPage = () => {
     const classes = useContactStyles();
+
+    useEffect(() => {
+        document.title = "Contact Us - Clearviction";
+    }, []);
+
     return (
         <>
             <Box className={classes.regularContainer}>

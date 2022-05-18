@@ -28,6 +28,7 @@ import {
 } from "../data/resourcesData";
 import FactGroup from "../Components/FactGroup";
 import FactTextPlaceholder from "../Components/FactTextPlaceholder";
+import { useEffect } from 'react';
 
 const employmentFacts = [
     {
@@ -107,6 +108,11 @@ const educationFacts = [
 
 const ResourcesPage = () => {
     const classes = useResourcesStyles();
+
+    useEffect(() => {
+        document.title = "Resources - Clearviction";
+    }, []);
+
     return (
         <>
             <RedesignHeroPanel title="Resources">

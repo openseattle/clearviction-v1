@@ -8,9 +8,14 @@ import { useAboutStyles } from "../Styles/useAboutStyles";
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
 
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
+import { useEffect } from "react";
 
 const AboutPage = () => {
     const classes = useAboutStyles();
+
+    useEffect(() => {
+        document.title = "About Us - Clearviction";
+    }, []);
 
     return (
         <>
