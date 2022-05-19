@@ -8,14 +8,11 @@ import { useAboutStyles } from "../Styles/useAboutStyles";
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
 
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
-import { useEffect } from "react";
+import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
 const AboutPage = () => {
     const classes = useAboutStyles();
-
-    useEffect(() => {
-        document.title = "About Us - Clearviction";
-    }, []);
+    const [documentTitle, setDocumentTitle] = useDocumentTitle("About Us - ");
 
     return (
         <>

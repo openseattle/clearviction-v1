@@ -1,11 +1,11 @@
 import { Box, Container, Divider, Grid } from "@material-ui/core";
-import { useEffect } from 'react';
 
 import DonatePage from "./DonatePage";
 import PartnerPage from "./PartnerPage";
 import VolunteerPage from "./VolunteerPage";
 import RedesignHeroPanel from "../Components/RedesignHeroPanel";
 import ImageContentCard from "../Components/ImageContentCard";
+import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
 import diversity from "../Assets/diversity2.svg";
 import moneyJar from "../Assets/money_jar.svg";
@@ -15,10 +15,7 @@ import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
 
 const GetInvolvedPage = () => {
     const classes = useGetInvolvedStyles();
-
-    useEffect(() => {
-        document.title = "Get Involved - Clearviction";
-    }, []);
+    const [documentTitle, setDocumentTitle] = useDocumentTitle("Get Involved - ");
 
     return (
         <>

@@ -13,11 +13,13 @@ import { useHomeStyles } from "../Styles/useHomeStyles";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
 import CheckEligibilityButton from "../Components/CheckEligibilityButton";
+import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
 const HomePage = () => {
     useEffect(() => trackPageview("Home"), []);
 
     const classes = useHomeStyles();
+    const [documentTitle, setDocumentTitle] = useDocumentTitle("Home - ");
 
     return (
         <>

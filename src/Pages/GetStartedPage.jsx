@@ -1,6 +1,5 @@
 import { Box, Container, Divider, Grid, Link, Paper, Typography } from "@material-ui/core";
 import { AccountBalance, DateRange, History } from "@material-ui/icons";
-import { useEffect } from 'react';
 
 import teamBuilding from "../Assets/team_building.svg";
 import humanProfile from "../Assets/human.svg";
@@ -15,6 +14,7 @@ import LegalAidServices from "../Subpages/GetStarted/LegalAidServices";
 import FinancialAidServices from "../Subpages/GetStarted/FinancialAidServices";
 import { ExternalLink } from "../ui-kit/ExternalLink";
 import CheckEligibilityButton from "../Components/CheckEligibilityButton";
+import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
 const factsProps = {
     style: { fontSize: 54 },
@@ -41,10 +41,7 @@ const eligibilityFacts = [
 
 const GetStartedPage = () => {
     const classes = useGetInvolvedStyles();
-
-    useEffect(() => {
-        document.title = "Get Started - Clearviction";
-    }, []);
+    const [documentTitle, setDocumentTitle] = useDocumentTitle("Get Started - ");
 
     return (
         <>
