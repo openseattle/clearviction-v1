@@ -30,6 +30,7 @@ const GetInvolvedPage = () => {
                                 image={diversity}
                                 buttonHref="#volunteer"
                                 buttonText="volunteer"
+                                alt=""
                             />
                         </Box>
                     </Grid>
@@ -40,6 +41,7 @@ const GetInvolvedPage = () => {
                                 image={moneyJar}
                                 buttonHref="#donate"
                                 buttonText="Donate"
+                                alt=""
                             />
                         </Box>
                     </Grid>
@@ -50,6 +52,7 @@ const GetInvolvedPage = () => {
                                 image={marketing}
                                 buttonHref="#partner-with-us"
                                 buttonText="Partner with us"
+                                alt=""
                             />
                         </Box>
                     </Grid>

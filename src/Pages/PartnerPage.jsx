@@ -31,7 +31,7 @@ const PartnerPage = () => {
                                 className={classes.partnerImageStyle}
                                 component="img"
                                 src={pr}
-                                alt="A person sitting on a megaphone spreading their message"
+                                alt=""
                             />
                         </Box>
                     </Grid>

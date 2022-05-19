@@ -59,7 +59,7 @@ const GetStartedPage = () => {
                             component="img"
                             style={{ width: "100%", padding: 16 }}
                             src={teamBuilding}
-                            alt="Teamwork solves a puzzle."
+                            alt=""
                         />
                     </Grid>
                 </Grid>

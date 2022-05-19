@@ -122,7 +122,7 @@ const ResourcesPage = () => {
                         </Typography>
                     </Grid>
                     <Grid item xs={12} sm={6} md={6}>
-                        <Box component="img" width="100%" src={teamBuilding} alt="Teamwork solves a puzzle." />
+                        <Box component="img" width="100%" src={teamBuilding} alt="" />
                     </Grid>
                 </Grid>
             </RedesignHeroPanel>

@@ -30,7 +30,7 @@ const AboutPage = () => {
                             <img
                                 src={map}
                                 className={classes.iconStyle + " " + classes.centerText}
-                                alt="person using a calculator"
+                                alt=""
                             ></img>
                         </Grid>
                     </Grid>
@@ -107,7 +107,7 @@ const AboutPage = () => {
                 <Box style={{ width: "90%", margin: "0 auto" }}>
                     <Grid container className={classes.gridStyle}>
                         <Grid item sm={12} md={6} className={classes.gridItemStyle}>
-                            <img src={checklist1} className={classes.iconStyle} alt="person using a calculator"></img>
+                            <img src={checklist1} className={classes.iconStyle} alt=""></img>
                         </Grid>
                         <Grid item sm={12} md={6} className={classes.gridItemStyle}>
                             <Typography variant="h4" className={classes.headingSpacing}>
