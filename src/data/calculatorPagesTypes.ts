@@ -22,7 +22,7 @@ export enum PageType {
 }
 
 export enum SectionName {
-    CONV = "Your Conviction",
+    OFF = "Your Offense",
     CIRC = "Surrounding Circumstances",
     TER = "Terms of Offense",
     ELIGIBLE = "",
@@ -30,7 +30,6 @@ export enum SectionName {
 
 interface ProgressBar {
     currentSectionName: SectionName;
-    totalSections: number; // TODO: can this be calculated dynamically?
 }
 
 type NonEmptyList<T> = {

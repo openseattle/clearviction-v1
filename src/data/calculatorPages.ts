@@ -146,8 +146,7 @@ const data: Pages = {
         type: PageType.SPECIAL,
         header: "You may be eligible for conviction vacation based on a special clause in conviction vacation eligibility law.",
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         body: [
             {
@@ -175,8 +174,7 @@ const data: Pages = {
         type: PageType.QUESTION,
         header: "Did this offense involve possession of marijuana?",
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         buttons: [
             {
@@ -194,8 +192,7 @@ const data: Pages = {
         type: PageType.QUESTION,
         header: "Were you 21 years or older at the time of offense?",
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         buttons: [
             {
@@ -213,8 +210,7 @@ const data: Pages = {
         type: PageType.QUESTION,
         header: "Was your conviction for possession of 40 grams or less of marijuana?",
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         buttons: [
             {
@@ -232,8 +228,7 @@ const data: Pages = {
         type: PageType.QUESTION,
         header: "Have you completed the terms of your sentence for this offense?",
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         buttons: [
             {
@@ -264,7 +259,6 @@ const data: Pages = {
         header: "From your answers, it seems that you may be eligible to vacate your marijuana misdemeanor conviction!",
         progressBar: {
             currentSectionName: SectionName.ELIGIBLE,
-            totalSections: 3,
         },
         body: [
             {
@@ -368,8 +362,7 @@ const data: Pages = {
         type: PageType.MAIN,
         header: "We will now ask a few questions about what your conviction was for, to assess your eligibility to vacate the conviction.",
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         buttons: [
             {
@@ -382,8 +375,7 @@ const data: Pages = {
         type: PageType.QUESTION,
         header: "Was the offense one of the following?",
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         body: [
             {
@@ -431,8 +423,7 @@ const data: Pages = {
         type: PageType.QUESTION,
         header: "Was the offense a violation of any of the following?",
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         body: [
             {
@@ -496,8 +487,7 @@ const data: Pages = {
         type: PageType.QUESTION,
         header: 'Was the offense considered a "prior offense" under RCW 46.61.5055?',
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         body: [
             {
@@ -522,8 +512,7 @@ const data: Pages = {
         type: PageType.QUESTION,
         header: "Did you have an additional alcohol or drug violation within 10 years of the date of arrest for the prior offense?",
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         buttons: [
             {
@@ -541,8 +530,7 @@ const data: Pages = {
         type: PageType.QUESTION,
         header: "Was the offense a misdemeanor or gross misdemeanor violation, including attempt of any of the following:",
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         body: [
             {
@@ -622,8 +610,7 @@ const data: Pages = {
         type: PageType.QUESTION,
         header: "Has it been 10 years or more since the date of the arrest for the prior offense?",
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         buttons: [
             {
@@ -666,8 +653,7 @@ const data: Pages = {
             },
         ],
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         buttons: [
             {
@@ -685,8 +671,7 @@ const data: Pages = {
         type: PageType.QUESTION,
         header: "Have you had 2 or more domestic violence convictions each stemming from different incidents?",
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         buttons: [
             {
@@ -716,8 +701,7 @@ const data: Pages = {
         type: PageType.QUESTION,
         header: "Have 5 or more years passed since fulfillment of all sentencing requirements for this conviction?",
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         buttons: [
             {
@@ -753,8 +737,7 @@ const data: Pages = {
         type: PageType.SPECIAL,
         header: "You may be eligible for conviction vacation based on a special clause in conviction vacation eligibility law.",
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         body: [
             {
@@ -782,8 +765,7 @@ const data: Pages = {
         type: PageType.QUESTION,
         header: "Are you a member of a tribe? You can also apply on behalf of a deceased family member in the tribe who meets the criteria.",
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         buttons: [
             {
@@ -800,8 +782,7 @@ const data: Pages = {
         type: PageType.QUESTION,
         header: "Did you (or your family member) receive a fishing related conviction while exercising a treaty right?",
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         buttons: [
             {
@@ -819,8 +800,7 @@ const data: Pages = {
         type: PageType.QUESTION,
         header: "Was it before January 1st, 1975?",
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         buttons: [
             {
@@ -838,8 +818,7 @@ const data: Pages = {
         type: PageType.QUESTION,
         header: "Did your tribe (or your family member's tribe) exercise fishing rights at the location where it occurred?",
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         buttons: [
             {
@@ -858,7 +837,6 @@ const data: Pages = {
         header: "It seems that you may be eligible to vacate your fishing misdemeanor conviction!",
         progressBar: {
             currentSectionName: SectionName.ELIGIBLE,
-            totalSections: 3,
         },
         body: [
             {
@@ -931,8 +909,7 @@ const data: Pages = {
         type: PageType.SPECIAL,
         header: "You may be eligible for conviction vacation based on a special clause in conviction vacation eligibility law",
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         body: [
             {
@@ -960,8 +937,7 @@ const data: Pages = {
         type: PageType.QUESTION,
         header: "Was the conviction a result of being a victim of one of the following?:",
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         body: [
             {
@@ -991,8 +967,7 @@ const data: Pages = {
         type: PageType.QUESTION,
         header: "Do you have charges pending in this state or any other state, or in any federal court for any crime other than prostitution?",
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         buttons: [
             {
@@ -1010,8 +985,7 @@ const data: Pages = {
         type: PageType.QUESTION,
         header: "Have you been convicted of a new crime in this state, another state or federal or tribal court in the last 3 years/prior to when you will be applying for vacation?",
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         buttons: [
             {
@@ -1030,8 +1004,7 @@ const data: Pages = {
         // here
         header: "Has the crime victim penalty assessment, RCW 7.68.035, been paid in full?",
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         body: [
             {
@@ -1055,8 +1028,7 @@ const data: Pages = {
         type: PageType.QUESTION,
         header: "If applicable, has restitution owed to any victim, excluding restitution owed to any insurance provider under Title 48 RCW, been paid in full?",
         progressBar: {
-            currentSectionName: SectionName.CONV,
-            totalSections: 3,
+            currentSectionName: SectionName.OFF,
         },
         body: [
             {
@@ -1085,7 +1057,6 @@ const data: Pages = {
         header: "It seems that you may be eligible to vacate your prostitution misdemeanor conviction!",
         progressBar: {
             currentSectionName: SectionName.ELIGIBLE,
-            totalSections: 3,
         },
         body: [
             {
@@ -1204,7 +1175,6 @@ const data: Pages = {
         header: "This set of questions covers other conviction-related circumstances that will affect conviction eligibility.",
         progressBar: {
             currentSectionName: SectionName.CIRC,
-            totalSections: 3,
         },
         buttons: [
             {
@@ -1218,7 +1188,6 @@ const data: Pages = {
         header: "Do you have any pending criminal charges in any court in Washington or another state, or in any federal court?",
         progressBar: {
             currentSectionName: SectionName.CIRC,
-            totalSections: 3,
         },
         buttons: [
             {
@@ -1237,7 +1206,6 @@ const data: Pages = {
         header: "Have you been convicted of a new crime in Washington or any other state in the 3 years prior to the application for vacation?",
         progressBar: {
             currentSectionName: SectionName.CIRC,
-            totalSections: 3,
         },
         buttons: [
             {
@@ -1256,7 +1224,6 @@ const data: Pages = {
         header: "Are you currently restrained by any of the following?: ",
         progressBar: {
             currentSectionName: SectionName.CIRC,
-            totalSections: 3,
         },
         body: [
             {
@@ -1286,7 +1253,6 @@ const data: Pages = {
         header: "Have you violated a prior restraining order in the 5 years preceding the application for vacation?",
         progressBar: {
             currentSectionName: SectionName.CIRC,
-            totalSections: 3,
         },
         buttons: [
             {
@@ -1434,7 +1400,6 @@ const data: Pages = {
         header: "This final set of questions covers the terms of your offense.",
         progressBar: {
             currentSectionName: SectionName.TER,
-            totalSections: 3,
         },
         buttons: [
             {
@@ -1448,7 +1413,6 @@ const data: Pages = {
         header: "Have you completed the terms of the sentence for your offense?",
         progressBar: {
             currentSectionName: SectionName.TER,
-            totalSections: 3,
         },
         buttons: [
             {
@@ -1467,7 +1431,6 @@ const data: Pages = {
         header: "Have 3 years passed since completing the terms of your sentence including financial obligations?",
         progressBar: {
             currentSectionName: SectionName.TER,
-            totalSections: 3,
         },
         body: [
             {
@@ -1493,7 +1456,6 @@ const data: Pages = {
         header: "It seems that you may be eligible to vacate your misdemeanor conviction!",
         progressBar: {
             currentSectionName: SectionName.ELIGIBLE,
-            totalSections: 3,
         },
         body: [
             {
