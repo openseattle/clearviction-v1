@@ -12,10 +12,10 @@ import {
 import { BackButton } from "../../ui-kit/BackButton";
 import PrimaryButton from "../../ui-kit/PrimaryButton";
 import { QuestionScreenStyles } from "./QuestionScreenStyles";
-import ProgressBar from "../../Components/ProgressBar";
 import SecondaryButton from "../../ui-kit/SecondaryButton";
 import { trackClick } from "../../trackingUtils";
 import { BodyType } from "../../data/calculatorPagesTypes";
+import ProgressBar from "../../Components/ProgressBar";
 
 const QuestionScreen = props => {
     const classes = QuestionScreenStyles();
@@ -26,44 +26,10 @@ const QuestionScreen = props => {
         setOpen(true);
         trackClick(props.text);
     };
-    // const [activeStep, setActiveStep] = useState(0);
-    // const [progress, setProgress] = useState(0);
-    // const steps = ["Label 1", "Label 2", "Label 3"];
 
-    // const handleNext = () => {
-    //   progress < 90 ? setProgress((prev) => prev + 10) : nextStep();
-    // };
-
-    // const nextStep = () => {
-    //   setProgress(0);
-    //   setActiveStep((prev) => prev + 1);
-    // };
-
-    console.log(props);
     return (
         <Grid container className={classes.grid}>
-            {/* {props.progressBar && (
-        <Grid container className={classes.progressBar}>
-          <ProgressBar />
-          <ProgressBar steps={steps} current={activeStep} progress={progress} />
-          <Button variant="contained" color="primary" onClick={handleNext}>
-            {activeStep === steps.length - 1 ? "Finish" : "Next"}
-          </Button>
-           <ProgressBar
-            currentSectionName={props.currentSectionName}
-            currentSection={props.currentSection}
-            totalSections={props.totalSections}
-          />
-        </Grid>
-      )} */}
-            {props.progressBar && (
-                <ProgressBar
-                    currentSectionName={props.progressBar.currentSectionName}
-                    currentSection={props.progressBar.currentSection}
-                    totalSections={props.progressBar.totalSections}
-                />
-            )}
-
+            {props.progressBar && <ProgressBar currentSectionName={props.progressBar.currentSectionName} />}
             <Grid container className={classes.backButton}>
                 <BackButton />
             </Grid>

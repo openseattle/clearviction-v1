@@ -14,11 +14,7 @@ const EndScreen = props => {
         <Grid container className={classes.grid}>
             {props.progressBar && (
                 <Grid container>
-                    <ProgressBar
-                        currentSectionName={props.currentSectionName}
-                        currentSection={props.currentSection}
-                        totalSections={props.totalSections}
-                    />
+                    <ProgressBar currentSectionName={props.currentSectionName} />
                 </Grid>
             )}
 
