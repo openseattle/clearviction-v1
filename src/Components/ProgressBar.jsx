@@ -17,6 +17,9 @@ const useStyles = makeStyles(() => ({
         "& .MuiStepLabel-labelContainer": {
             textTransform: "uppercase",
         },
+        "& .MuiStepLabel-label.MuiStepLabel-active ": {
+            width: "min-content",
+        },
     },
 }));
 
