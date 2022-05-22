@@ -35,7 +35,7 @@ const PrimaryButton = props => {
     const classes = useStyles();
 
     return (
-        <Button className={classes.button} href={props.href} target={props.target} variant="contained">
+        <Button role="button" className={classes.button} href={props.href} target={props.target} variant="contained">
             {props.text}
         </Button>
     );

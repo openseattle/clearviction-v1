@@ -58,7 +58,7 @@ const QuestionScreen = props => {
                                 return (
                                     <ul>
                                         <li key={idx}>
-                                            <a href={b.href}>{b.text}</a>
+                                            <a role="button" href={b.href}>{b.text}</a>
                                         </li>
                                     </ul>
                                 );
