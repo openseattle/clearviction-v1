@@ -9,7 +9,12 @@ interface SkipLinkProperties {
      * The css query aiding the selection of the
      * container (main, section etc) we want to scroll to;
      */
-    skipTo: string;
+    skipToH1: string;
+    skipToH2: string;
+    skipToH3: string;
+    skipToH4: string;
+    skipToH5: string;
+    skipToH6: string;
 }
 
 const SkipLink: React.FC<SkipLinkProperties> = props => {
@@ -22,7 +27,7 @@ const SkipLink: React.FC<SkipLinkProperties> = props => {
         /**
          * Catch-all 'container' looking for HTML tags
          */
-        const container: HTMLElement | null = document.querySelector(props.skipTo);
+        const container: HTMLElement | null = document.querySelector(props.skipToH1);
 
         /**
          * tabIndex seems to work well with the general layout of the site
@@ -32,6 +37,46 @@ const SkipLink: React.FC<SkipLinkProperties> = props => {
             container.tabIndex = -1;
             container.focus();
             setTimeout(() => container.removeAttribute("tabindex"), 1000);
+        }
+        if (container === null) {
+            const container: HTMLElement | null = document.querySelector(props.skipToH2);
+            if(container) {
+                container.tabIndex = -1;
+                container.focus();
+                setTimeout(() => container.removeAttribute("tabindex"), 1000);
+            }
+        }
+        if (container === null) {
+            const container: HTMLElement | null = document.querySelector(props.skipToH3);
+            if(container) {
+                container.tabIndex = -1;
+                container.focus();
+                setTimeout(() => container.removeAttribute("tabindex"), 1000);
+            }
+        }
+        if (container === null) {
+            const container: HTMLElement | null = document.querySelector(props.skipToH4);
+            if(container) {
+                container.tabIndex = -1;
+                container.focus();
+                setTimeout(() => container.removeAttribute("tabindex"), 1000);
+            }
+        }
+        if (container === null) {
+            const container: HTMLElement | null = document.querySelector(props.skipToH5);
+            if(container) {
+                container.tabIndex = -1;
+                container.focus();
+                setTimeout(() => container.removeAttribute("tabindex"), 1000);
+            }
+        }
+        if (container === null) {
+            const container: HTMLElement | null = document.querySelector(props.skipToH6);
+            if(container) {
+                container.tabIndex = -1;
+                container.focus();
+                setTimeout(() => container.removeAttribute("tabindex"), 1000);
+            }
         }
     };
 
@@ -44,7 +89,12 @@ const SkipLink: React.FC<SkipLinkProperties> = props => {
 
 SkipLink.defaultProps = {
     className: "skipLink",
-    skipTo: "h1:first-of-type",
+    skipToH1: "h1:first-of-type",
+    skipToH2: "h4:first-of-type",
+    skipToH3: "h4:first-of-type",
+    skipToH4: "h4:first-of-type",
+    skipToH5: "h5:first-of-type",
+    skipToH6: "h6:first-of-type",
 };
 
 export default SkipLink;
