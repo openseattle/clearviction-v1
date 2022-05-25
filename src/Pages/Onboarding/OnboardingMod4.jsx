@@ -11,135 +11,39 @@ import Footer from '../../Components/Onboarding/Footer';
 
 const headerText =  {
     title: "Module 4",
-    description: "Clearviction's Progress To Date",
-    information: "We have identified opportunities to use technology to streamline this process and want to explore which of these technological possibilities would make the most sense to prototype, given user needs and volunteer resources."
+    description: "Now what?",
 };
 
-const about = {
+const nemo = {
     icon: "",
-    title: "About CV",
-    paragraph1: "One in four Washingtonians have been involved in the criminal justice system. Those with a criminal record face significant barriers to daily life after completing their prison terms, making it harder to find housing and employment, to gain professional credentials, and to be involved in the life of their community.",
-    paragraph2: "In 2019, Washington State passed the New Hope Act making it easier for people with past criminal records to have their convictions vacated. Despite the act, the system is slow and inefficient.",
-    paragraph3: "We are a civic-tech open-source project associated with the Democracy Lab organization and Open Seattle org.",
-}
-
-const problem = {
-    icon: "",
-    title: "The Problem",
-    paragraph1: "The process of vacating...",
-    paragraph2: "- Gathering documents",
-    paragraph3: "Each step requires....",
-}
-
-const conviction = {
-    icon: "",
-    title: "Conviction Vacation Laws/Process",
-    paragraph1: "States have different laws dictating how to vacate or expunge a conviction, complicating the issue.",
-    paragraph2: "Legal aid can be dependent on income - Washington’s process is more of a burden compared to other states - Requiring a motion and court appearance - And being left at the judge’s discretion ",
-}
-
-const background = {
-    icon: "",
-    title: "Background Research",
-    paragraph1: "We conducted a competitive...",
-    paragraph2: "Analyzed the...",
-    paragraph3: "- Legal Tune Up (Dane County, WI)"
-}
-
-const legal = {
-    icon: "",
-    title: "Legal Logic - To Date",
-    paragraph1: "We reviewed WA's...",
-    paragraph2: "Activities and Deliverables:",
-    paragraph3: "- Legal tree logic"
-}
-
-const user = {
-    icon: "",
-    paragraph1: "User Research...",
-    paragraph2: "States with..",
-    paragraph3: "- Oregon"
-}
-
-const user2 = {
-    icon: "",
-    title: "User Research - People with Convictions",
-    paragraph1: "We created a survey...",
-    paragraph2: "Next Steps:",
-    paragraph3: "- Broaden the reach",
-    linkTitle: "Key Findings",
-    linkIcon: "link",
+    title: "You are on team Nemo",
+    paragraph1: "Click below to see a little more what that is, and what that means:",
+    linkTitle: "Guidance",
+    linkIcon: "doc",
     linkLocation: "",
-    linkTitle2: "Affinity Maps",
-    linkIcon2: "link",
-    linkLocation2: "",
-    linkTitle3: "Interview Highlights",
-    linkIcon3: "link",
-    linkLocation3: "",
-}
-
-const survey = {
-    icon: "",
-    title: "Survey",
-    paragraph1: "The intent of...",
-    paragraph2: "Research was conducted...",
-    linkTitle: "Survey Plan",
-    linkIcon: "link",
-    linkLocation: "",
-    linkTitle2: "Published Survey",
-    linkIcon2: "link",
-    linkLocation2: "",
-}
-
-const product = {
-    icon: "",
-    title: "Product",
-    paragraph1: "Product has established...",
-    paragraph2: "Summary",
-    paragraph3: "- Product is prioritizing...",
-    linkTitle: "Product Miro Board",
-    linkIcon: "link",
-    linkLocation: "",
-    linkTitle2: "Google Drive",
-    linkIcon2: "link",
-    linkLocation2: "",
-}
-
-const ux = {
-    icon: "",
-    title: "UX Design",
-    paragraph1: "Our UX design...",
-    paragraph2: "Summary",
-    paragraph3: "- Design is currently...",
-    linkTitle: "Figma Files",
-    linkIcon: "link",
-    linkLocation: "",
-    linkTitle2: "Google Drive",
-    linkIcon2: "link",
-    linkLocation2: "",
-}
-
-const development = {
-    icon: "",
-    title: "Development",
-    paragraph1: "Our Dev Team is..",
-    paragraph2: "Summary",
-    paragraph3: "- Developemnt has...",
-    linkTitle: "Jira Board",
-    linkIcon: "link",
-    linkLocation: "",
-    linkTitle2: "Miro Board",
-    linkIcon2: "link",
-    linkLocation2: "",
-    linkTitle3: "Github Repo",
-    linkIcon3: "link",
-    linkLocation3: "",
 }
 
 const team = {
-    title: "Team Breakdown",
-    paragraph1: "When you first join CVP, you'll automatically be part of the Nemo--a team working outside the CVP value stream.",
-    paragraph2: "Make sure you join #team_nemo in slack, and you'll soon see the Nemo meeting on your calendar! Once you've joined an Action within the CVP product stream, it's up to you whether you'd like to continue helping out on Nemo",
+    icon: "",
+    title: "How to join other teams",
+    paragraph1: "Better to reliably and consistently show to one than dabble in more than one",
+    linkTitle: "Guidance",
+    linkIcon: "doc",
+    linkLocation: "",
+}
+
+const questions = {
+    icon: "",
+    title: "Any questions?",
+    paragraph1: "Ask your onboarding buddy. Need a buddy? Ping Seamus to get one.",
+}
+
+const doing = {
+    icon: "",
+    title: "See what the teams are doing",
+    linkTitle: "Airtable teams list",
+    linkIcon: "doc",
+    linkLocation: "",
 }
 
 const button1 = {
@@ -159,38 +63,15 @@ function OnboardingMod4() {
     return (
         <div>{console.log('mod4')}
             <Header text={headerText} />
-            <ResponsiveJumpButtonGroup
-                links={[
-                    { url: "user-research", linkName: "Research" },
-                    { url: "product", linkName: "Product" },
-                    { url: "ux-design", linkName: "UX Design" },
-                    { url: "development", linkName: "Development" },
-                    { url: "team", linkName: "CV Teams" }
-                ]}
-            />
 
-            <ModuleContent content={about} />
-            <ModuleContent content={problem} />
-            <ModuleContent content={conviction} />
-            <ModuleContent content={background} />
-            <ModuleContent content={legal} />
-            <div id='user-research'>
-                <ModuleContent content={user} />
-                <ModuleContent content={user2} />
-                <ModuleContent content={survey} />
-            </div>
-            <div id="product">
-                <ModuleContent content={product} />
-            </div>
-            <div id="ux-design">
-                <ModuleContent content={ux} />
-            </div>
-            <div id="development">
-                <ModuleContent content={development} />
-            </div>
+            <ModuleContent content={nemo} />
+            <ModuleContent content={team} />
+            <ModuleContent content={questions} />
+            <ModuleContent content={doing} />
+            
+
+            {/* Change to team pics */}
             <div id="team" style={{ marginBottom: Theme.spacing(5) }}>
-                <ModuleContent content={team} />
-
                 <Grid container spacing={2} style={{
                     display: "flex", 
                     flexDirection: "row", 
