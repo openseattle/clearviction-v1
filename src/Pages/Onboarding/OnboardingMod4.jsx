@@ -143,7 +143,7 @@ const team = {
 }
 
 const button1 = {
-    link: "/onboarding/mod3",
+    link: "/onboarding-mod3",
     text: "previous"
 }
 
@@ -204,31 +204,31 @@ function OnboardingMod4() {
                     }
                 }}>
                     <Grid item xs={8} sm={6} md={3} lg={2}>
-                        <img src={require('../Assets/group.svg').default} alt=""/>
+                        <img src={require('../../Assets/Onboarding/group.svg').default} alt=""/>
                         <Typography variant="body2">
                             Scrum Team
                         </Typography>
                     </Grid>
                     <Grid item xs={8} sm={6} md={4} lg={2}>
-                        <img src={require('../Assets/heart.svg').default} alt=""/>
+                        <img src={require('../../Assets/Onboarding/heart.svg').default} alt=""/>
                         <Typography variant="body2">
                             Marketing
                         </Typography>
                     </Grid>
                     <Grid item xs={8} sm={6} md={4} lg={2}>
-                        <img src={require('../Assets/person.svg').default} alt=""/>
+                        <img src={require('../../Assets/Onboarding/person.svg').default} alt=""/>
                         <Typography variant="body2">
                             Nemo
                         </Typography>
                     </Grid>
                     <Grid item xs={8} sm={6} md={4} lg={2}>
-                        <img src={require('../Assets/world.svg').default} alt=""/>
+                        <img src={require('../../Assets/Onboarding/world.svg').default} alt=""/>
                         <Typography variant="body2">
                             Product
                         </Typography>
                     </Grid>
                     <Grid item xs={8} sm={6} md={4} lg={2}>
-                        <img src={require('../Assets/symbols.svg').default} alt=""/>
+                        <img src={require('../../Assets/Onboarding/symbols.svg').default} alt=""/>
                         <Typography variant="body2">
                             User Research
                         </Typography>

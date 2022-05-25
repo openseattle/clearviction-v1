@@ -70,12 +70,12 @@ const truth = {
 }
 
 const button1 = {
-    link: "/onboarding/mod1",
+    link: "/onboarding-mod1",
     text: "previous"
 }
 
 const button2 = {
-    link: "/onboarding/mod3",
+    link: "/onboarding-mod3",
     text: "next module"
 }
 
@@ -125,7 +125,7 @@ function OnboardingMod2() {
                     }
                 }}>
                     <Grid item xs={8} sm={6} md={3} lg={2}>
-                        <img src={require('../Assets/group.svg').default} alt=""/>
+                        <img src={require('../../Assets/Onboarding/group.svg').default} alt=""/>
                         <Typography variant="body2">
                             We  believe we can increase <span style={{ fontWeight: "bold" }}>equity </span> 
                             and <span style={{ fontWeight: "bold" }}>justice</span> by using our 
@@ -133,35 +133,35 @@ function OnboardingMod2() {
                         </Typography>
                     </Grid>
                     <Grid item xs={8} sm={6} md={4} lg={2}>
-                        <img src={require('../Assets/heart.svg').default} alt=""/>
+                        <img src={require('../../Assets/Onboarding/heart.svg').default} alt=""/>
                         <Typography variant="body2">
                             <span style={{ fontWeight: "bold" }}>Integrity </span> 
                             - We are honest, ethical, and trustworth.
                         </Typography>
                     </Grid>
                     <Grid item xs={8} sm={6} md={4} lg={2}>
-                        <img src={require('../Assets/person.svg').default} alt=""/>
+                        <img src={require('../../Assets/Onboarding/person.svg').default} alt=""/>
                         <Typography variant="body2">
                             Being present, connecting with <span style={{ fontWeight: "bold" }}>transparency </span>
                             and <span style={{ fontWeight: "bold" }}>dignity.</span>
                         </Typography>
                     </Grid>
                     <Grid item xs={8} sm={6} md={4} lg={2}>
-                        <img src={require('../Assets/world.svg').default} alt=""/>
+                        <img src={require('../../Assets/Onboarding/world.svg').default} alt=""/>
                         <Typography variant="body2">
                             <span style={{ fontWeight: "bold" }}>Respect</span> - 
                             We recognize that the thoughts, feelings, and backgrounds of others are as important as our own.
                         </Typography>
                     </Grid>
                     <Grid item xs={8} sm={6} md={4} lg={2}>
-                        <img src={require('../Assets/symbols.svg').default} alt=""/>
+                        <img src={require('../../Assets/Onboarding/symbols.svg').default} alt=""/>
                         <Typography variant="body2">
                             Act with <span style={{ fontWeight: "bold" }}>Humility</span>/ 
                             <span style={{ fontWeight: "bold" }}> Empathy.</span>
                         </Typography>
                     </Grid>
                     <Grid item xs={8} sm={6} md={4} lg={2}>
-                        <img src={require('../Assets/head.svg').default} alt=""/>
+                        <img src={require('../../Assets/Onboarding/head.svg').default} alt=""/>
                         <Typography variant="body2">
                             <span style={{ fontWeight: "bold" }}>Focus on the user</span> and all else will follow.
                         </Typography>

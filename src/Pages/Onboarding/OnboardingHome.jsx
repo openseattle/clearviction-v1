@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 import { Typography } from "@material-ui/core";
 
-import { useWelcomeStyles } from '../Styles/useWelcomeStyles';
+import { useHomeStyles } from '../../Styles/Onboarding/useHomeStyles';
 
 import Header from '../../Components/Onboarding/Header';
 import ModuleCard from '../../Components/Onboarding/ModuleCard';
@@ -13,7 +13,7 @@ const headerText =  {
 };
 
 const module1 = {
-    link: "/onboarding/mod1",
+    link: "/onboarding-mod1",
     number: "module 1",
     icon: "tool",
     subheading: "Let's get your tools in order",
@@ -21,7 +21,7 @@ const module1 = {
 }
 
 const module2 = {
-    link: "/onboarding/mod2",
+    link: "/onboarding-mod2",
     number: "module 2",
     icon: "",
     subheading: "Learn about our philosophy and values",
@@ -29,7 +29,7 @@ const module2 = {
 }
 
 const module3 = {
-    link: "/onboarding/mod3",
+    link: "/onboarding-mod3",
     number: "module 3",
     icon: "",
     subheading: "Learn the best practices for remote work",
@@ -37,7 +37,7 @@ const module3 = {
 }
 
 const module4 = {
-    link: "/onboarding/mod4",
+    link: "/onboarding-mod4",
     number: "module 4",
     icon: "",
     subheading: "Read about Clearviction's progress",
@@ -48,7 +48,7 @@ function OnboardingHome() {
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
-    const classes = useWelcomeStyles();
+    const classes = useHomeStyles();
     return (
         <div>
             <Header text={headerText} />     

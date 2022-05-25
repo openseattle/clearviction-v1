@@ -102,12 +102,12 @@ const expectation = {
 }
 
 const button1 = {
-    link: "/onboarding/mod2",
+    link: "/onboarding-mod2",
     text: "previous"
 }
 
 const button2 = {
-    link: "/onboarding/mod4",
+    link: "/onboarding-mod4",
     text: "next module"
 }
 

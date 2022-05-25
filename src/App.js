@@ -64,16 +64,16 @@ function App() {
                         <Route path="/onboarding">
                             <OnboardingHome />
                         </Route>
-                        <Route path="/onboarding/mod1">
+                        <Route path="/onboarding-mod1">
                             <OnboardingMod1 />
                         </Route>
-                        <Route path="/onboarding/mod2">
+                        <Route path="/onboarding-mod2">
                             <OnboardingMod2 />
                         </Route>
-                        <Route path="/onboarding/mod3">
+                        <Route path="/onboarding-mod3">
                             <OnboardingMod3 />
                         </Route>
-                        <Route path="/onboarding/mod4">
+                        <Route path="/onboarding-mod4">
                             <OnboardingMod4 />
                         </Route>
                     </Switch>
