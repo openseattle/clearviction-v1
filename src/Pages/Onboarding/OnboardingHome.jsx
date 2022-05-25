@@ -9,7 +9,7 @@ import ModuleCard from '../../Components/Onboarding/ModuleCard';
 
 const headerText =  {
     title: "Welcome!",
-    information: "We're excited you're joining Clearviction."
+    information: "We're excited you're joining the Clearviction Project."
 };
 
 const module1 = {
