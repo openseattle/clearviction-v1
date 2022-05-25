@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
-import Header from '../Components/Header';
-import ModuleContent from '../Components/ModuleContent';
-import Footer from '../Components/Footer';
+import Header from '../../Components/Onboarding/Header';
+import ModuleContent from '../../Components/Onboarding/ModuleContent';
+import Footer from '../../Components/Onboarding/Footer';
 
 const headerText =  {
     title: "Module 3",

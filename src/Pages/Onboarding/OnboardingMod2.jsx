@@ -1,11 +1,11 @@
 import { useEffect } from 'react';
-import Header from '../Components/Header';
+import Header from '../../Components/Onboarding/Header';
 import { Container, Typography, Box, Grid } from '@material-ui/core';
-import  ResponsiveJumpButtonGroup from '../Components/ResponsiveJumpButtonGroup';
-import ModuleContent from '../Components/ModuleContent';
-import { useMod2Styles } from '../Styles/useMod2Styles';
-import Theme from '../Components/Theme';
-import Footer from '../Components/Footer';
+import  ResponsiveJumpButtonGroup from '../../Components/ResponsiveJumpButtonGroup';
+import ModuleContent from '../../Components/Onboarding/ModuleContent';
+import { useMod2Styles } from '../../Styles/Onboarding/useMod2Styles';
+import Theme from '../../Components/Theme';
+import Footer from '../../Components/Onboarding/Footer';
 
 const headerText =  {
     title: "Module 2",

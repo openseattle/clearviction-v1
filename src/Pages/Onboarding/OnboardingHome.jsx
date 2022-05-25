@@ -4,8 +4,8 @@ import { Typography } from "@material-ui/core";
 
 import { useWelcomeStyles } from '../Styles/useWelcomeStyles';
 
-import Header from '../../Components/Header';
-import ModuleCard from '../../Components/ModuleCard';
+import Header from '../../Components/Onboarding/Header';
+import ModuleCard from '../../Components/Onboarding/ModuleCard';
 
 const headerText =  {
     title: "Welcome!",

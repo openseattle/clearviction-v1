@@ -1,5 +1,5 @@
 import { useFooterStyles } from '../Styles/useFooterStyles';
-import Button from './Button';
+import Button from '../Button';
 
 function Footer(props) {
     const classes = useFooterStyles();
