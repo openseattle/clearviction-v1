@@ -1,9 +1,9 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
 import { Typography } from '@material-ui/core';
-import { useModuleContentStyles } from '../Styles/useModuleContentStyles';
-import link from '../Assets/link.svg';
-import Theme from './Theme';
+import { useModuleContentStyles } from '../../Styles/Onboarding/useModuleContentStyles';
+import link from '../../Assets/Onboarding/link.svg';
+// import Theme from './Theme';
 
 function ModuleContent(props) {
     const classes = useModuleContentStyles();

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import logo from '../Assets/logo.svg';
-import fb from '../Assets/fb.svg';
-import linkedIn from '../Assets/linkedIn.svg';
-import twitter from '../Assets/twitter.svg';
+import logo from '../../Assets/Onboarding/logo.svg';
+import fb from '../../Assets/Onboarding/fb.svg';
+import linkedIn from '../../Assets/Onboarding/linkedIn.svg';
+import twitter from '../../Assets/Onboarding/twitter.svg';
 
 import { Typography } from '@material-ui/core';
-import { useHeaderStyles } from '../Styles/useHeaderStyles';
+import { useHeaderStyles } from '../../Styles/Onboarding/useHeaderStyles';
 
 function Header(props) {
     const classes = useHeaderStyles();
@@ -15,7 +15,7 @@ function Header(props) {
 
     return (
         <div className={classes.darkBlueBackground}>
-            <Link to="/">
+            <Link to="/onboarding">
                 <img src={logo} className={classes.logoStyle} alt="CV logo" />
             </Link>
         
