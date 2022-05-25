@@ -12,6 +12,11 @@ import Footer from "./Components/Footer";
 import GetInvolvedPage from "./Pages/GetInvolvedPage";
 import GetStartedPage from "./Pages/GetStartedPage";
 import ResourcesPage from "./Pages/ResourcesPage";
+import OnboardingHome from "./Pages/Onboarding/OnboardingHome";
+import OnboardingMod1 from "./Pages/Onboarding/OnboardingMod1";
+import OnboardingMod2 from "./Pages/Onboarding/OnboardingMod2";
+import OnboardingMod3 from "./Pages/Onboarding/OnboardingMod3";
+import OnboardingMod4 from "./Pages/Onboarding/OnboardingMod4";
 
 function App() {
     return (
@@ -53,6 +58,23 @@ function App() {
                         </Route>
                         <Route path="/resources">
                             <ResourcesPage />
+                        </Route>
+
+                        {/* Volunteer onboarding pages */}
+                        <Route path="/onboarding">
+                            <OnboardingHome />
+                        </Route>
+                        <Route path="/onboarding/mod1">
+                            <OnboardingMod1 />
+                        </Route>
+                        <Route path="/onboarding/mod2">
+                            <OnboardingMod2 />
+                        </Route>
+                        <Route path="/onboarding/mod3">
+                            <OnboardingMod3 />
+                        </Route>
+                        <Route path="/onboarding/mod4">
+                            <OnboardingMod4 />
                         </Route>
                     </Switch>
                     <Footer />
