@@ -38,6 +38,7 @@ export const useHeaderStyles = makeStyles((theme) => ({
       padding: theme.spacing(3),
     }
   },
+
   headingStyle: {
     marginBottom: theme.spacing(6),
     lineHeight: "73px",
@@ -77,11 +78,13 @@ export const useHeaderStyles = makeStyles((theme) => ({
   infoPara: {
     marginTop: theme.spacing(3),
   },
+  modHeaderContainer: {
+    textAlign: "center",
+  },
   welcome: {
     textAlign: "center",
     fontSize: "61px",
     paddingTop: theme.spacing(8),
-    // width: "534px",
     margin: "auto",
     [theme.breakpoints.down("sm")]: {
       fontSize: "40px",
