@@ -15,33 +15,33 @@ const headerText =  {
 const module1 = {
     link: "/onboarding-mod1",
     number: "module 1",
-    icon: "tool",
-    subheading: "Let's get your tools in order",
-    text: "In this module you will learn how to set up your tools correctly and how to use them when communicating remotely with the team."
+    icon: "",
+    subheading: "About Clearviction",
+    text: "What is Clearviction and why does this project matter?"
 }
 
 const module2 = {
     link: "/onboarding-mod2",
     number: "module 2",
-    icon: "",
-    subheading: "Learn about our philosophy and values",
-    text: "In this module you will learn out team philosophy and values and how we place them at the center of the work that we do as a team."
+    icon: "tool",
+    subheading: "Lets get your tools in order",
+    text: "See what tools we use and how we use them to make the team run smooth and efficiently."
 }
 
 const module3 = {
     link: "/onboarding-mod3",
     number: "module 3",
     icon: "",
-    subheading: "Learn the best practices for remote work",
-    text: "In this module you will learn about our team meetings and the best practices we use when collaborating and attending team meetings."
+    subheading: "Our team expectations",
+    text: "We all want to be good teammembers. Learn how we can make that happen."
 }
 
 const module4 = {
     link: "/onboarding-mod4",
     number: "module 4",
     icon: "",
-    subheading: "Read about Clearviction's progress",
-    text: "In this module you will learn more about our progress as a team and you will learn more about the disciplines within Clearviction."
+    subheading: "Now what?",
+    text: "Now that you know our practices and expectations, lets see what is happening within our teams."
 }
 
 function OnboardingHome() {
@@ -55,9 +55,11 @@ function OnboardingHome() {
                 <div className={classes.body}>
                     
                     <Typography variant="body2" className={classes.bodyPara}>
-                        This onboarding guide will help you familiarize yourself with the tools and practices that we use, as well as get you acquainted with our disciplines and progress. The guide will help you see where you best fit in and how you can start contributing.                    </Typography>
+                        This onboarding guide will help you familiarize yourself with the tools and practices that we use, as well as get you acquainted with our disciplines and progress. The guide will help you see where you best fit in and how you can start contributing.
+                    </Typography>
                     <Typography variant="body2" className={classes.bodyPara}>
-                        To get started click on each module below to learn more about our team and how we work together. Please work on Modules 1 and 2 today or tomorow and complete the rest in the next couple of days (or in one sitting if your schedule allows for it.)                    </Typography>
+                        To get started click on each module below to learn more about our team and how we work together. Please work on Modules 1 and 2 today or tomorow and complete the rest in the next couple of days (or in one sitting if your schedule allows for it.)
+                    </Typography>
                     <Typography variant="body2" className={classes.bodyPara}>
                         <span style={{ fontWeight: "bold", fontStyle: "italic" }}>Note:</span> <span style={{ fontStyle: "italic" }}>this resource is an imperfect and incomplete MVP. We've authored the core 20% (which should provide 80% of the value) and continue to fill in the rest!</span>
                     </Typography>
