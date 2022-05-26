@@ -21,7 +21,7 @@ const EndScreen = props => {
             <Grid container className={classes.backButton}>
                 <BackButton />
             </Grid>
-            <Typography variant="h5" className={classes.header}>
+            <Typography variant="h5" component="h1" className={classes.header}>
                 {props.header}
             </Typography>
             <Grid item className={classes.bodyGrid}>

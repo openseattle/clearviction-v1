@@ -20,7 +20,7 @@ const CANT_DETERMINE_FEEDBACK_FORM_LINK =
 const data: Pages = {
     "landing-0": {
         type: PageType.MAIN,
-        header: "Eligibility Calulator",
+        header: "Eligibility Calculator",
         body: [
             {
                 type: BodyType.PARAGRAPH,
