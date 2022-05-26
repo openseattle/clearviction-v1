@@ -112,7 +112,7 @@ const housingAdvisory: resourceLink[] = [
     },
     {
         name: "The STAR Project",
-        url: "https://www.compasshousingalliance.org",
+        url: "https://www.thestarproject.us/",
     },
     {
         name: "Transgender Law Center (2016)",
