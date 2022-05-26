@@ -13,8 +13,10 @@ import QuestionScreen from "./Calculator/QuestionScreen";
 import EndScreen from "./Calculator/EndScreen";
 import QuickStartGuide from "./Calculator/QuickStartGuide";
 import ProgressBar from "../Components/ProgressBar";
+import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
 const CalculatorPage = () => {
+    const [documentTitle, setDocumentTitle] = useDocumentTitle("Eligibility Calculator - ");
     console.log("enter calculator");
     const { pathname } = useLocation();
     const indexOfPageId = pathname.split("/").length - 1;
@@ -37,8 +39,8 @@ const CalculatorPage = () => {
                         buttonHref={buttons[0].href}
                         tooltip={tooltip}
                         progressBar={progressBar}
-                        // currentSectionName={progressBar.currentSectionName}
-                        // totalSections={progressBar.totalSections}
+                    // currentSectionName={progressBar.currentSectionName}
+                    // totalSections={progressBar.totalSections}
                     />
                 );
             case PageType.MAIN:
@@ -49,8 +51,8 @@ const CalculatorPage = () => {
                         buttonText={buttons[0].text}
                         buttonHref={buttons[0].href}
                         progressBar={progressBar}
-                        // currentSectionName={progressBar.currentSectionName}
-                        // totalSections={progressBar.totalSections}
+                    // currentSectionName={progressBar.currentSectionName}
+                    // totalSections={progressBar.totalSections}
                     />
                 );
             case PageType.SPECIAL:
@@ -84,8 +86,8 @@ const CalculatorPage = () => {
                         showRestartButton={showRestartButton}
                         disclaimer={disclaimer}
                         progressBar={progressBar}
-                        // currentSectionName={progressBar && progressBar.currentSectionName}
-                        // totalSections={progressBar && progressBar.totalSections}
+                    // currentSectionName={progressBar && progressBar.currentSectionName}
+                    // totalSections={progressBar && progressBar.totalSections}
                     />
                 );
             default:

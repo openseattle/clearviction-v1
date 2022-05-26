@@ -28,6 +28,7 @@ import {
 } from "../data/resourcesData";
 import FactGroup from "../Components/FactGroup";
 import FactTextPlaceholder from "../Components/FactTextPlaceholder";
+import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
 const employmentFacts = [
     {
@@ -107,6 +108,8 @@ const educationFacts = [
 
 const ResourcesPage = () => {
     const classes = useResourcesStyles();
+    const [documentTitle, setDocumentTitle] = useDocumentTitle("Resources - ");
+
     return (
         <>
             <RedesignHeroPanel title="Resources">
