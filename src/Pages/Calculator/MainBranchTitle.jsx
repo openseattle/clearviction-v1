@@ -16,7 +16,7 @@ const MainBranchTitle = props => {
                 </Grid>
             )}
 
-            <Typography variant="h4" className={classes.header}>
+            <Typography variant="h4" component="h1" className={classes.header}>
                 {props.header}
             </Typography>
             {props.body && (

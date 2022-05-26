@@ -116,7 +116,7 @@ const housingAdvisory: resourceLink[] = [
     },
     {
         name: "Transgender Law Center (2016)",
-        url: "hhttp://transgenderlawcenter.org/wp-content/uploads/2016/02/03.09.2016-Model-Homeless-Shelter-TG-Policy-single-pages.pdf",
+        url: "http://transgenderlawcenter.org/wp-content/uploads/2016/02/03.09.2016-Model-Homeless-Shelter-TG-Policy-single-pages.pdf",
     },
 ];
 
