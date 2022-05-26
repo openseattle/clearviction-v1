@@ -12,7 +12,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const FactExpandMoreCard = ({ summary, content, ariaLabel, contentID, summaryID }) => {
-    const [expanded, setExpanded] = useState();
+    const [expanded, setExpanded] = useState(false);
 
     const handleExpandClick = () => {
         setExpanded(!expanded);
