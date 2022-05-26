@@ -54,6 +54,9 @@ function App() {
                         <Route path="/resources">
                             <ResourcesPage />
                         </Route>
+                        <Route>
+                            <Redirect to="/404" />
+                        </Route>
                     </Switch>
                     <Footer />
                 </Box>
