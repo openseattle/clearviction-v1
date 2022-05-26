@@ -46,7 +46,7 @@ const employmentFacts = [
         id: "emp-fact-3",
         src: question,
         title: "Lack of experience",
-        text: "Getting a job in a new field is complicated due lack of access to education opportunities.",
+        text: "Getting a job in a new field is complicated due to lack of access to education opportunities.",
     },
 ];
 
