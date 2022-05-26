@@ -56,7 +56,7 @@ const EndScreen = props => {
                                 return (
                                     <ul>
                                         <li key={idx}>
-                                            <a href={b.href}>{b.text}</a>
+                                            <a role="button" href={b.href}>{b.text}</a>
                                         </li>
                                     </ul>
                                 );
@@ -70,6 +70,7 @@ const EndScreen = props => {
                     return (
                         <PrimaryButton
                             key={idx}
+                            role="button"
                             className={classes.button}
                             text={b.text}
                             href={b.href}
