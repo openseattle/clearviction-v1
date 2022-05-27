@@ -46,6 +46,10 @@ export const useModuleContentStyles = makeStyles((theme) => ({
       margin: "10px auto",
     }
   },
+  cardIcon: {
+    marginTop: "47px",
+    textAlign: "right",
+  },
   moduleContentLink: {
     border: "2px solid #4e6c99",
     margin: "20px auto",

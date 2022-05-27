@@ -16,7 +16,6 @@ function ModuleContent(props) {
                 
                 <h1 className={classes.moduleCardHeading}>{title}</h1>
                 <h3 className={classes.moduleCardHeading2}>{subheading}</h3>
-                {/* <Typography variant="body2" className={classes.moduleCardBody2}>{centerParagraph1}</Typography> */}
                 {paragraph1 ? <Typography variant="body2" className={classes.moduleCardBody}>{paragraph1}</Typography> : null}
                 {paragraph2 ? <Typography variant="body2" className={classes.moduleCardBody}>{paragraph2}</Typography> : null}
                 {paragraph3 ? <Typography variant="body2" className={classes.moduleCardBody}>{paragraph3}</Typography> : null}
