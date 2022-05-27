@@ -59,31 +59,31 @@ function ModuleContent(props) {
 
                 { linkTitle ? (
                     <div className={classes.moduleContentLink}>
-                        
-                            { linkIcon === "link" &&
-                                <a href={linkLocation} target="_blank" rel="noreferrer"
-                                    style={{ textDecoration: "none", color: "#4e6c99", flex: 1 }}>
-                                    <div className={classes.linkContainer}>
-                                        <img src={link} alt="" className={classes.linkIcon} />
-                                        <p className={classes.linkText} >{linkTitle}</p>
-                                    </div>
-                                </a>    
-                            }
-                            { linkIcon === "doc" && 
-                                <Button onClick={handleOpen} style={{ textDecoration: "none", color: "#4e6c99"}} >
-                                    <div className={classes.linkContainer}>
-                                            <img src={doc} alt="" className={classes.linkIcon} />
-                                            <p className={classes.linkText} >{linkTitle}</p>
-                                        
-                                    </div>
-                                </Button>
-                            }
-                            { linkIcon === "video" && 
+                        { linkIcon === "link" &&
+                            <a href={linkLocation} target="_blank" rel="noreferrer"
+                                style={{ textDecoration: "none", color: "#4e6c99", flex: 1 }}>
+                                <div className={classes.linkContainer}>
+                                    <img src={link} alt="" className={classes.linkIcon} />
+                                    <p className={classes.linkText} >{linkTitle}</p>
+                                </div>
+                            </a>    
+                        }
+                        { linkIcon === "doc" && 
+                            <Button onClick={handleOpen} style={{ textDecoration: "none", color: "#4e6c99"}} >
+                                <div className={classes.linkContainer}>
+                                    <img src={doc} alt="" className={classes.linkIcon} />
+                                    <p className={classes.linkText} >{linkTitle}</p>
+                                </div>
+                            </Button>
+                        }
+                        { linkIcon === "video" && 
+                            <Button style={{ textDecoration: "none", color: "#4e6c99" }} >
                                 <div className={classes.linkContainer}>
                                     <img src={video} alt="" className={classes.linkIcon} />
                                     <p className={classes.linkText} >{linkTitle}</p>
                                 </div>
-                            }       
+                            </Button>
+                        }       
                     </div>
                 ) : (
                     null
@@ -91,27 +91,32 @@ function ModuleContent(props) {
 
                 { linkTitle2 ? (
                     <div className={classes.moduleContentLink}>
-                        <a href={linkLocation2} target="_blank" rel="noreferrer"
-                            style={{ textDecoration: "none", color: "#4e6c99", flex: 1 }}>
                             { linkIcon2 === "link" &&
-                                <div className={classes.linkContainer}>
-                                    <img src={link} alt="" className={classes.linkIcon} />
-                                    <p className={classes.linkText} >{linkTitle2}</p>
-                                </div>
+                                <a href={linkLocation2} target="_blank" rel="noreferrer" 
+                                    style={{ textDecoration: "none", color: "#4e6c99", flex: 1 }}
+                                >
+                                    <div className={classes.linkContainer}>
+                                        <img src={link} alt="" className={classes.linkIcon} />
+                                        <p className={classes.linkText} >{linkTitle2}</p>
+                                    </div>
+                                </a>
                             }
                             { linkIcon2 === "doc" && 
-                                <div className={classes.linkContainer}>
-                                    <img src={doc} alt="" className={classes.linkIcon} />
-                                    <p className={classes.linkText2} >{linkTitle2}</p>
-                                </div>
+                                <Button onClick={handleOpen} style={{ textDecoration: "none", color: "#4e6c99"}} >
+                                    <div className={classes.linkContainer}>
+                                        <img src={doc} alt="" className={classes.linkIcon} />
+                                        <p className={classes.linkText2} >{linkTitle2}</p>
+                                    </div>
+                                </Button>
                             }
                             { linkIcon2 === "video" && 
-                                <div className={classes.linkContainer}>
-                                    <img src={video} alt="" className={classes.linkIcon} />
-                                    <p className={classes.linkText2} >{linkTitle2}</p>
-                                </div>
+                                <Button style={{ textDecoration: "none", color: "#4e6c99" }} >
+                                    <div className={classes.linkContainer}>
+                                        <img src={video} alt="" className={classes.linkIcon} />
+                                        <p className={classes.linkText2} >{linkTitle2}</p>
+                                    </div>
+                                </Button>
                             }
-                        </a>
                     </div>
                 ) : (
                     null
@@ -119,27 +124,32 @@ function ModuleContent(props) {
 
                 { linkTitle3 ? (
                     <div className={classes.moduleContentLink}>
-                        <a href={linkLocation3} target="_blank" rel="noreferrer"
-                            style={{ textDecoration: "none", color: "#4e6c99", flex: 1 }}>
+                        
                         { linkIcon3 === "link" && 
-                            <div className={classes.linkContainer}>
-                                <img src={link} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText3} >{linkTitle3}</p>
-                            </div>
+                            <a href={linkLocation3} target="_blank" rel="noreferrer"
+                                style={{ textDecoration: "none", color: "#4e6c99", flex: 1 }}>
+                                <div className={classes.linkContainer}>
+                                    <img src={link} alt="" className={classes.linkIcon} />
+                                    <p className={classes.linkText3} >{linkTitle3}</p>
+                                </div>
+                            </a>
                          }
-                         { linkIcon3 === "doc" && 
-                            <div className={classes.linkContainer}>
-                                <img src={doc} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText3} >{linkTitle3}</p>
-                            </div>
+                         { linkIcon3 === "doc" &&
+                            <Button onClick={handleOpen} style={{ textDecoration: "none", color: "#4e6c99"}} >
+                                <div className={classes.linkContainer}>
+                                    <img src={doc} alt="" className={classes.linkIcon} />
+                                    <p className={classes.linkText3} >{linkTitle3}</p>
+                                </div>
+                            </Button>
                          }
                          { linkIcon3 === "video" && 
-                            <div className={classes.linkContainer}>
-                                <img src={video} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText3} >{linkTitle3}</p>
-                            </div>
-                         }
-                        </a>       
+                            <Button style={{ textDecoration: "none", color: "#4e6c99" }} >
+                                <div className={classes.linkContainer}>
+                                    <img src={video} alt="" className={classes.linkIcon} />
+                                    <p className={classes.linkText3} >{linkTitle3}</p>
+                                </div>
+                            </Button>
+                         }      
                     </div>
                     
                 ) : (
