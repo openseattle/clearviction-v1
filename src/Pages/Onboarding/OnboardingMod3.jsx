@@ -16,7 +16,6 @@ const headerText =  {
 };
 
 const remoteWork = {
-    icon: "",
     title: "Expectations for remote work",
     paragraph1: "In a remote context, individuals must be empowered to exercise their own discretion to make decisions that will impact the organization",
     paragraph2: "Progress over perfection",
@@ -25,7 +24,6 @@ const remoteWork = {
 }
 
 const trust = {
-    icon: "",
     title: "Trust practices",
     linkIcon: "doc",
     linkTitle: "Trust practices",
@@ -33,7 +31,6 @@ const trust = {
 }
 
 const truth = {
-    icon: "",
     title: "Source of Truth",
     paragraph1: "When we work asynchronously, divided by time zones and overloaded calendars, it's imperative that people be able to find answers to their own questions. This becomes a possibility only when information lives in a certain place, and conflicts are avoided.",
     linkIcon: "link",
