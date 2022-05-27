@@ -84,20 +84,46 @@ export const useModuleContentStyles = makeStyles((theme) => ({
       width: "30px",      
     }
   },
-  linkText: {
+  // linkText: {
     // margin: theme.spacing(0.9), 
     // marginLeft: theme.spacing(2), 
     // [theme.breakpoints.down("xs")]: {
     //   margin: theme.spacing(0.5),
     // }
-  },
+  // },
   linkContainer: {
     display: "flex", 
     flexDirection: "row",
     justifyContent: "flex-start", 
-    // width: "550px",
-    // alignItems: "flex-start",
-    // padding: theme.spacing(1.3),
-  }
+  },
+  modalTitleStyle: {
+    color: "#4E6C99",
+    marginBottom: theme.spacing(5),
+    fontWeight: 700,
+    fontSize: "30px",
+    lineHeight: "39px",
+  },
+  button: {
+    backgroundColor: theme.palette.primary.main,
+    color: "white",
+    textTransform: "capitalize",
+    minWidth: "248px",
+    maxWidth: "300px",
+    height: "48px",
+    textAlign: "center",
+    float: "right",
+    verticalAlign: "middle",
+    padding: "auto",
+    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+    borderRadius: "50px",
+    margin: "auto",
+    marginTop: theme.spacing(8),
+    fontSize: "18px",
+    fontWeight: "bold",
+    lineHeight: 2.7,
+    // [theme.breakpoints.down("sm")]: {
+    //     marginBottom: theme.spacing(4),
+    // }
+   },
   
 }));
