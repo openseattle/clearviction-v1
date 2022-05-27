@@ -50,7 +50,7 @@ export const useModuleContentStyles = makeStyles((theme) => ({
     border: "2px solid #4e6c99",
     margin: "20px auto",
     backgroundColor: "#fefeff",
-    width: "50%",
+    width: "90%",
     minWidth: "300px",
     maxWidth: "555px",
     height: "85px",
@@ -67,7 +67,7 @@ export const useModuleContentStyles = makeStyles((theme) => ({
     }
   },
   linkIcon: {
-    margin: theme.spacing(1),
+    margin: theme.spacing(1.5),
     [theme.breakpoints.down("sm")]: {
       width: "30px",      
     }
@@ -82,6 +82,7 @@ export const useModuleContentStyles = makeStyles((theme) => ({
   linkContainer: {
     display: "flex", 
     flexDirection: "row", 
+    // width: "550px",
     alignItems: "flex-start",
     padding: theme.spacing(1.3),
     [theme.breakpoints.down("sm")]: {
