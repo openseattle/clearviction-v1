@@ -567,7 +567,7 @@ const data: Pages = {
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: "Based on RCW 9.94A.640, a misdemeanor or gross misdemeanor violation, including attempt of any of the following are not eligible for vacation:",
+                text: "Based on RCW 9.96.060, a misdemeanor or gross misdemeanor violation, including attempt of any of the following are not eligible for vacation:",
             },
             {
                 type: BodyType.LINK,
