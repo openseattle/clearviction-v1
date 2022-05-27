@@ -16,13 +16,11 @@ const headerText =  {
 };
 
 const mission = {
-    icon: "",
     title: "Our Mission",
     paragraph1: "ClearViction aims to reduce barriers faced by formerly incarcerated individuals by streamlining the process of vacating eligible convictions in Washington state.",
 }
 
 const story = {
-    icon: "",
     title: "Our Story",
     linkIcon: "doc",
     linkTitle: "Clearviction Story",
@@ -31,7 +29,6 @@ const story = {
 }
 
 const problem = {
-    icon: "",
     title: "The Problem",
     linkIcon: "doc",
     linkTitle: "The Problem",
