@@ -29,7 +29,9 @@ const teamNemo = {
     paragraph1: "Click below to see a little more what that is, and what that means:",
     linkTitle: "Guidance",
     linkIcon: "doc",
-    linkLocation: "",
+    modalTitle: "You are on team Nemo",
+    modalParagraph1: "How long will you be a part of that group? You must always be a part of at least one group. If you join a different group you may leave Nemo. If your duties on the other team end, you must join Nemo again.",
+    modalParagraph2: "Take the first week or two to get your bearings, and then start contributing. You can join a project already in motion, or you can start your own. If you notice something that can be improved upon, take the initiative and start that project.",
 }
 
 const team = {
@@ -37,7 +39,10 @@ const team = {
     paragraph1: "Better to reliably and consistently show to one than dabble in more than one:",
     linkTitle: "Guidance",
     linkIcon: "doc",
-    linkLocation: "",
+    modalTitle: "How to join other teams",
+    modalParagraph1: "Message the correspondent slack channel of the team introducing yourself and stating that you want to join. ",
+    modalParagraph2: "Attend their weekly meetings and perform the tasks assigned.",
+    modalParagraph3: "Better to reliably and consistently show to one than dabble in more than one.",
 }
 
 const questions = {
@@ -48,7 +53,7 @@ const questions = {
 const doing = {
     title: "See what the teams are doing",
     linkTitle: "Airtable teams list",
-    linkIcon: "doc",
+    linkIcon: "link",
     linkLocation: "https://airtable.com/appfJZShN8K4tcWHU/tblln6jlsrsqfU0TO/viwrhv3vIo3LqHezH?blocks=hide",
 }
 

@@ -1,7 +1,6 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 
-import logo from '../../Assets/Onboarding/logo.svg';
+import smallLogo from '../../Assets/Onboarding/smallLogo.svg';
 import fb from '../../Assets/Onboarding/fb.svg';
 import linkedIn from '../../Assets/Onboarding/linkedIn.svg';
 import twitter from '../../Assets/Onboarding/twitter.svg';
@@ -16,7 +15,7 @@ function Header(props) {
     return (
         <div className={classes.darkBlueBackground}>
             <Link to="/onboarding">
-                <img src={logo} className={classes.logoStyle} alt="CV logo" />
+                <img src={smallLogo} className={classes.logoStyle} alt="CV logo" />
             </Link>
         
             <div className={classes.socialContainer}>
