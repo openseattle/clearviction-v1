@@ -29,12 +29,15 @@ export const useModuleContentStyles = makeStyles((theme) => ({
       width: "90%",
     }
   },
+  bold: {
+    fontWeight: "bold",
+  },
   moduleCardBody: {
     paddingBottom: theme.spacing(2),
     color: "#2b2929",
   },
   firstBtn: {
-    marginTop: "60px !important",
+    // marginTop: "60px !important",
   },
   moduleCardBody2: {
     color: "#2b2929",
@@ -46,11 +49,19 @@ export const useModuleContentStyles = makeStyles((theme) => ({
       margin: "10px auto",
     }
   },
+  cardIcon: {
+    marginTop: "47px",
+    textAlign: "right",
+    marginRight: "-25px"
+  },
+  icon: {
+    width: "70px",
+  },
   moduleContentLink: {
     border: "2px solid #4e6c99",
     margin: "20px auto",
     backgroundColor: "#fefeff",
-    width: "50%",
+    width: "90%",
     minWidth: "300px",
     maxWidth: "555px",
     height: "85px",
@@ -67,27 +78,52 @@ export const useModuleContentStyles = makeStyles((theme) => ({
     }
   },
   linkIcon: {
-    margin: theme.spacing(1),
+    margin: theme.spacing(1.5),
+    marginRight: theme.spacing(3),
     [theme.breakpoints.down("sm")]: {
       width: "30px",      
     }
   },
-  linkText: {
-    margin: theme.spacing(0.9), 
-    marginLeft: theme.spacing(2), 
-    [theme.breakpoints.down("xs")]: {
-      margin: theme.spacing(0.5),
-    }
-  },
+  // linkText: {
+    // margin: theme.spacing(0.9), 
+    // marginLeft: theme.spacing(2), 
+    // [theme.breakpoints.down("xs")]: {
+    //   margin: theme.spacing(0.5),
+    // }
+  // },
   linkContainer: {
     display: "flex", 
-    flexDirection: "row", 
-    alignItems: "flex-start",
-    padding: theme.spacing(1.3),
-    [theme.breakpoints.down("sm")]: {
-    },
-    [theme.breakpoints.down("xs")]: {
-    }
-  }
+    flexDirection: "row",
+    justifyContent: "flex-start", 
+  },
+  modalTitleStyle: {
+    color: "#4E6C99",
+    marginBottom: theme.spacing(5),
+    fontWeight: 700,
+    fontSize: "30px",
+    lineHeight: "39px",
+  },
+  button: {
+    backgroundColor: theme.palette.primary.main,
+    color: "white",
+    textTransform: "capitalize",
+    minWidth: "248px",
+    maxWidth: "300px",
+    height: "48px",
+    textAlign: "center",
+    float: "right",
+    verticalAlign: "middle",
+    padding: "auto",
+    boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+    borderRadius: "50px",
+    margin: "auto",
+    marginTop: theme.spacing(8),
+    fontSize: "18px",
+    fontWeight: "bold",
+    lineHeight: 2.7,
+    // [theme.breakpoints.down("sm")]: {
+    //     marginBottom: theme.spacing(4),
+    // }
+   },
   
 }));

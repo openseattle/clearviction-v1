@@ -2,9 +2,13 @@ import { useEffect } from 'react';
 import Header from '../../Components/Onboarding/Header';
 import { Container, Typography, Box, Grid } from '@material-ui/core';
 import ModuleContent from '../../Components/Onboarding/ModuleContent';
-import { useMod2Styles } from '../../Styles/Onboarding/useMod2Styles';
+import { useModuleContentStyles } from '../../Styles/Onboarding/useModuleContentStyles';
 import Theme from '../../Components/Theme';
 import Footer from '../../Components/Onboarding/Footer';
+
+import remote from '../../Assets/Onboarding/remote.svg';
+import checklist from '../../Assets/Onboarding/checklist.svg';
+import chat from '../../Assets/Onboarding/chat.svg';
 
 const headerText =  {
     title: "Module 2",
@@ -12,15 +16,20 @@ const headerText =  {
 };
 
 const zoom = {
-    icon: "",
     title: "Zoom",
+    subheading: "What is it?",
+    paragraph1: "Zoom is a cloud-based video communications app that allows you to set up virtual video and audio conferencing, webinars, live chats, screen-sharing, and other collaborative capabilities.",
     linkTitle: "Zoom Guidance",
     linkIcon: "doc",
     linkLocation: "",
+    modalTitle: "Zoom guidance",
+    modalParagraph1: "Mute unless you are speaking; give unmuted people space.",
+    modalParagraph2: "Turn your video on when possible.",
+    modalParagraph3: "If you have an unstable internet connection, call in from your phone.",
+    modalParagraph4: "Enable dual monitors option if you have two monitors. This will allow you to view the gallery/speaker on one monitor and the screen share on the other. In the top-right corner of Zoom, click on your profile picture then click on 'Settings.' Click on the 'General' tab. Select the 'Use dual monitors' check box.",
 }
 
 const airtable = {
-    icon: "",
     title: "Airtable",
     subheading: "What is it?",
     paragraph1: "Airtable is a database software with a user-friendly interface. We use it as a primary place to organize information, tasks, and keep track of each other’s work.",
@@ -38,7 +47,6 @@ const airtable = {
 }
 
 const slack = {
-    icon: "",
     title: "Airtable",
     subheading: "What is it?",
     paragraph1: "Slack is a collection of chat rooms equipped for threaded conversations, emoji reactions, and app integrations.",
@@ -65,20 +73,34 @@ const button2 = {
 }
 
 function OnboardingMod2() {
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
-    const classes = useMod2Styles();
+   
+    const classes = useModuleContentStyles();
 
     return (
         <div>
             <Header text={headerText} />
             <Box >
-                <ModuleContent content={zoom} />
-                <ModuleContent content={airtable} />
-                <ModuleContent content={slack} />
+                <Grid container justifyContent="center" >
+                    <Grid item xs={2} className={classes.cardIcon} >
+                        <img src={remote} alt="" className={classes.icon} />
+                    </Grid>
+                    <Grid item xs={9}>
+                        <ModuleContent content={zoom} />
+                    </Grid>
+                    <Grid item xs={2} className={classes.cardIcon} >
+                        <img src={checklist} alt="" className={classes.icon} />
+                    </Grid>
+                    <Grid item xs={9} >
+                        <ModuleContent content={airtable} />
+                    </Grid>
+                    <Grid item xs={2} className={classes.cardIcon} >
+                        <img src={chat} alt="" className={classes.icon} />
+                    </Grid>
+                    <Grid item xs={9} >
+                        <ModuleContent content={slack} />
+                    </Grid>
+                </Grid>
             </Box>
-            
             <Footer button1={button1} button2={button2} />
         </div>
     );
