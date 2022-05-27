@@ -45,10 +45,8 @@ const module4 = {
 }
 
 function OnboardingHome() {
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
     const classes = useHomeStyles();
+    
     return (
         <div>
             <Header text={headerText} />     

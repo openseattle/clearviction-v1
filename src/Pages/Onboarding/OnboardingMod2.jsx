@@ -65,9 +65,7 @@ const button2 = {
 }
 
 function OnboardingMod2() {
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+   
     const classes = useMod2Styles();
 
     return (

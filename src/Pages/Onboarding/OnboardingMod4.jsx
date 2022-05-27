@@ -57,9 +57,7 @@ const button2 = {
 }
 
 function OnboardingMod4() {
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+    
     return (
         <div>{console.log('mod4')}
             <Header text={headerText} />

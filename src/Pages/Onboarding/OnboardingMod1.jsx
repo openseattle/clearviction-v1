@@ -17,7 +17,7 @@ const mission = {
 const story = {
     icon: "",
     title: "Our Story",
-    link: true,
+    // link: true,
     linkIcon: "doc",
     linkTitle: "Clearviction Story",
     linkLocation: "",
@@ -26,7 +26,7 @@ const story = {
 const problem = {
     icon: "",
     title: "The Problem",
-    link: true,
+    // link: true,
     linkIcon: "doc",
     linkTitle: "The Problem",
     linkLocation: "",
@@ -45,9 +45,7 @@ const button2 = {
 
 
 function OnboardingMod1() {
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+    
     return (
         
         <div>
