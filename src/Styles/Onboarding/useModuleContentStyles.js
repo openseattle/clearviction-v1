@@ -29,12 +29,15 @@ export const useModuleContentStyles = makeStyles((theme) => ({
       width: "90%",
     }
   },
+  bold: {
+    fontWeight: "bold",
+  },
   moduleCardBody: {
     paddingBottom: theme.spacing(2),
     color: "#2b2929",
   },
   firstBtn: {
-    marginTop: "60px !important",
+    // marginTop: "60px !important",
   },
   moduleCardBody2: {
     color: "#2b2929",
@@ -49,6 +52,10 @@ export const useModuleContentStyles = makeStyles((theme) => ({
   cardIcon: {
     marginTop: "47px",
     textAlign: "right",
+    marginRight: "-25px"
+  },
+  icon: {
+    width: "70px",
   },
   moduleContentLink: {
     border: "2px solid #4e6c99",
@@ -72,27 +79,25 @@ export const useModuleContentStyles = makeStyles((theme) => ({
   },
   linkIcon: {
     margin: theme.spacing(1.5),
+    marginRight: theme.spacing(3),
     [theme.breakpoints.down("sm")]: {
       width: "30px",      
     }
   },
   linkText: {
-    margin: theme.spacing(0.9), 
-    marginLeft: theme.spacing(2), 
-    [theme.breakpoints.down("xs")]: {
-      margin: theme.spacing(0.5),
-    }
+    // margin: theme.spacing(0.9), 
+    // marginLeft: theme.spacing(2), 
+    // [theme.breakpoints.down("xs")]: {
+    //   margin: theme.spacing(0.5),
+    // }
   },
   linkContainer: {
     display: "flex", 
-    flexDirection: "row", 
+    flexDirection: "row",
+    justifyContent: "flex-start", 
     // width: "550px",
-    alignItems: "flex-start",
-    padding: theme.spacing(1.3),
-    [theme.breakpoints.down("sm")]: {
-    },
-    [theme.breakpoints.down("xs")]: {
-    }
+    // alignItems: "flex-start",
+    // padding: theme.spacing(1.3),
   }
   
 }));
