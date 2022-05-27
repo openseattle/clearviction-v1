@@ -26,7 +26,8 @@ const story = {
     title: "Our Story",
     linkIcon: "doc",
     linkTitle: "Clearviction Story",
-    linkLocation: "",
+    modalTitle: "Our Story",
+    modalParagraph1: "Committed to helping people with convictions to improve their quality of life, a group of volunteers decided to create a tool that could simplify the conviction vacation process. While the project started in Seattle, we now have volunteers all across the country (and the world!) contributing to building, maintaining, and improving this product.",
 }
 
 const problem = {
@@ -34,7 +35,10 @@ const problem = {
     title: "The Problem",
     linkIcon: "doc",
     linkTitle: "The Problem",
-    linkLocation: "",
+    modalTitle: "The problem",
+    modalParagraph1: "1 in 4 Washingtonians have been involved in the criminal justice system.",
+    modalParagraph2: "People with a criminal record face significant barriers to their day to day life after completing their prison terms. Some challenges include: Finding housing and employment. Earning professional credentials. Getting involved in their community.",
+    modalParagraph3: "In 2019, Washington State passed the New Hope Act making it easier for people with past criminal records to have their convictions vacated. Despite the act, the system is slow, inefficient, and difficult for non-legal experts to navigate. It requires multiple steps such as: Gathering documents. Determining eligibility. Filing motions with the court. Scheduling hearings with a judge.",
 }
 
 const button1 = {
