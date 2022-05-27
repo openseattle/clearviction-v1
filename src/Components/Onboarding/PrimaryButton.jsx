@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Typography } from '@material-ui/core';
 import { useButtonStyles } from '../../Styles/Onboarding/useButtonStyles';
 
-function Button(props) {
+function PrimaryButton(props) {
     const classes = useButtonStyles();
     const { text, link } = props.button;
     return (            
@@ -15,4 +15,4 @@ function Button(props) {
     );      
 };
 
-export default Button;
+export default PrimaryButton;
