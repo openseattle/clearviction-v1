@@ -41,6 +41,7 @@ function ModuleContent(props) {
         modalTitle,
         modalParagraph2,
         modalParagraph3,
+        modalParagraph4,
     } = props.content;
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
@@ -163,6 +164,9 @@ function ModuleContent(props) {
                     </Typography>
                     <Typography variant='body2' className={classes.moduleCardBody}>
                         {modalParagraph3}
+                    </Typography>
+                    <Typography variant='body2' className={classes.moduleCardBody}>
+                        {modalParagraph4}
                     </Typography>
                     <Button onClick={handleClose} className={classes.button}>
                         Close

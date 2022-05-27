@@ -16,17 +16,20 @@ const headerText =  {
 };
 
 const zoom = {
-    icon: "",
     title: "Zoom",
     subheading: "What is it?",
     paragraph1: "Zoom is a cloud-based video communications app that allows you to set up virtual video and audio conferencing, webinars, live chats, screen-sharing, and other collaborative capabilities.",
     linkTitle: "Zoom Guidance",
     linkIcon: "doc",
     linkLocation: "",
+    modalTitle: "Zoom guidance",
+    modalParagraph1: "Mute unless you are speaking; give unmuted people space.",
+    modalParagraph2: "Turn your video on when possible.",
+    modalParagraph3: "If you have an unstable internet connection, call in from your phone.",
+    modalParagraph4: "Enable dual monitors option if you have two monitors. This will allow you to view the gallery/speaker on one monitor and the screen share on the other. In the top-right corner of Zoom, click on your profile picture then click on 'Settings.' Click on the 'General' tab. Select the 'Use dual monitors' check box.",
 }
 
 const airtable = {
-    icon: "",
     title: "Airtable",
     subheading: "What is it?",
     paragraph1: "Airtable is a database software with a user-friendly interface. We use it as a primary place to organize information, tasks, and keep track of each other’s work.",
@@ -44,7 +47,6 @@ const airtable = {
 }
 
 const slack = {
-    icon: "",
     title: "Airtable",
     subheading: "What is it?",
     paragraph1: "Slack is a collection of chat rooms equipped for threaded conversations, emoji reactions, and app integrations.",
