@@ -10,7 +10,7 @@ import remote from '../../Assets/Onboarding/remote.svg';
 import checklist from '../../Assets/Onboarding/checklist.svg';
 import chat from '../../Assets/Onboarding/chat.svg';
 
-const headerText =  {
+const headerText = {
     title: "Module 2",
     description: "Let's get your tools in order",
 };
@@ -72,8 +72,13 @@ const button2 = {
     text: "next module"
 }
 
+const buttonComplete = {
+    link: "/onboarding-mod2",
+    text: "mark as done"
+}
+
 function OnboardingMod2() {
-   
+
     const classes = useModuleContentStyles();
 
     return (
@@ -101,7 +106,7 @@ function OnboardingMod2() {
                     </Grid>
                 </Grid>
             </Box>
-            <Footer button1={button1} button2={button2} />
+            <Footer button1={button1} button2={button2} buttonComplete={buttonComplete} />
         </div>
     );
 }

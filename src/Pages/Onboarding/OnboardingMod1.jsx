@@ -10,7 +10,7 @@ import arrowRight from '../../Assets/Onboarding/arrowRight.svg';
 import exclamation from '../../Assets/Onboarding/exclamation.svg';
 import circleArrow from '../../Assets/Onboarding/circleArrow.svg';
 
-const headerText =  {
+const headerText = {
     title: "Module 1",
     description: "About Clearviction",
 };
@@ -47,8 +47,6 @@ const button2 = {
     link: "/onboarding-mod2",
     text: "next module"
 }
-
-
 
 function OnboardingMod1() {
     const classes = useModuleContentStyles();

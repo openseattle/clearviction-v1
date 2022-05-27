@@ -19,7 +19,7 @@ import product from '../../Assets/Onboarding/product.svg';
 import research from '../../Assets/Onboarding/research.svg';
 
 
-const headerText =  {
+const headerText = {
     title: "Module 4",
     description: "Now what?",
 };
@@ -62,6 +62,11 @@ const button2 = {
     text: "back to homepage"
 }
 
+const buttonComplete = {
+    link: "/onboarding-mod4",
+    text: "mark as done"
+}
+
 function OnboardingMod4() {
     const classes = useModuleContentStyles();
     return (
@@ -99,36 +104,36 @@ function OnboardingMod4() {
             {/* Change to team pics */}
             <div id="team" style={{ marginBottom: Theme.spacing(5) }}>
                 <Grid container spacing={2} style={{
-                    display: "flex", 
-                    flexDirection: "row", 
-                    margin: "auto", 
-                    justifyContent: "space-around", 
-                    textAlign: "center", 
+                    display: "flex",
+                    flexDirection: "row",
+                    margin: "auto",
+                    justifyContent: "space-around",
+                    textAlign: "center",
                     padding: "0 50px",
                     maxWidth: "77vw",
                     [Theme.breakpoints.down("sm")]: {
-                       padding: "0 40px",
+                        padding: "0 40px",
                     }
                 }}>
                     <Grid item xs={8} sm={6} md={3} lg={2}>
-                        <img src={scrum} alt="Scrum Team Icon"/>
+                        <img src={scrum} alt="Scrum Team Icon" />
                     </Grid>
                     <Grid item xs={8} sm={6} md={4} lg={2}>
-                        <img src={marketing} alt="Marketing Team Icon"/>
+                        <img src={marketing} alt="Marketing Team Icon" />
                     </Grid>
                     <Grid item xs={8} sm={6} md={4} lg={2}>
-                        <img src={nemo} alt="Nemo Team Icon"/>
+                        <img src={nemo} alt="Nemo Team Icon" />
                     </Grid>
                     <Grid item xs={8} sm={6} md={4} lg={2}>
-                        <img src={product} alt="Product Team Icon"/>
+                        <img src={product} alt="Product Team Icon" />
                     </Grid>
                     <Grid item xs={8} sm={6} md={4} lg={2}>
-                        <img src={research} alt="User Reasearch Team Icon"/>
+                        <img src={research} alt="User Reasearch Team Icon" />
                     </Grid>
                 </Grid>
             </div>
 
-            <Footer button1={button1} button2={button2} />
+            <Footer button1={button1} button2={button2} buttonComplete={buttonComplete} />
 
         </div>
     );

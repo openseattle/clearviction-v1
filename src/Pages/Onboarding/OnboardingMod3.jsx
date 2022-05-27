@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Grid, Box }  from '@material-ui/core';
+import { Grid, Box } from '@material-ui/core';
 import { useModuleContentStyles } from '../../Styles/Onboarding/useModuleContentStyles';
 
 import Header from '../../Components/Onboarding/Header';
@@ -10,7 +10,7 @@ import file from '../../Assets/Onboarding/file.svg';
 import symbols from '../../Assets/Onboarding/symbols.svg';
 import remote from '../../Assets/Onboarding/remote.svg';
 
-const headerText =  {
+const headerText = {
     title: "Module 3",
     description: "Expectations of being a part of the team",
 };
@@ -51,6 +51,11 @@ const button2 = {
     text: "next module"
 }
 
+const buttonComplete = {
+    link: "/onboarding-mod3",
+    text: "mark as done"
+}
+
 function OnboardingMod3() {
     const classes = useModuleContentStyles();
     return (
@@ -78,8 +83,8 @@ function OnboardingMod3() {
                     </Grid>
                 </Grid>
             </Box>
-            
-            <Footer button1={button1} button2={button2} />
+
+            <Footer button1={button1} button2={button2} buttonComplete={buttonComplete} />
         </>
     );
 }
