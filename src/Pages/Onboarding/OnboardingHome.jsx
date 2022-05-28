@@ -86,22 +86,22 @@ function OnboardingHome() {
                 <Typography variant="body2" className={classes.bodyPara}>
                     <span style={{ fontWeight: "bold", fontStyle: "italic" }}>Note:</span> <span style={{ fontStyle: "italic" }}>this resource is an imperfect and incomplete MVP. We've authored the core 20% (which should provide 80% of the value) and continue to fill in the rest!</span>
                 </Typography>
-            </div>
-            <div style={styles.div}>
-                <img src={mod1Complete ? circleCheck : openCircle} alt="" style={styles.img} />
-                <ModuleCard module={module1} />
-            </div>
-            <div style={styles.div}>
-                <img src={mod2Complete ? circleCheck : openCircle} alt="" style={styles.img} />
-                <ModuleCard module={module2} />
-            </div>
-            <div style={styles.div}>
-                <img src={mod3Complete ? circleCheck : openCircle} alt="" style={styles.img} />
-                <ModuleCard module={module3} />
-            </div>
-            <div style={styles.div}>
-                <img src={mod4Complete ? circleCheck : openCircle} alt="" style={styles.img} />
-                <ModuleCard module={module4} />
+                <div style={styles.div}>
+                    <img src={mod1Complete ? circleCheck : openCircle} alt="" style={styles.img} />
+                    <ModuleCard module={module1} />
+                </div>
+                <div style={styles.div}>
+                    <img src={mod2Complete ? circleCheck : openCircle} alt="" style={styles.img} />
+                    <ModuleCard module={module2} />
+                </div>
+                <div style={styles.div}>
+                    <img src={mod3Complete ? circleCheck : openCircle} alt="" style={styles.img} />
+                    <ModuleCard module={module3} />
+                </div>
+                <div style={styles.div}>
+                    <img src={mod4Complete ? circleCheck : openCircle} alt="" style={styles.img} />
+                    <ModuleCard module={module4} />
+                </div>
             </div>
         </div>
     );
