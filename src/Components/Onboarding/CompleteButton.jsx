@@ -12,19 +12,19 @@ function CompleteButton(props) {
     const [isComplete, setIsComplete] = useState();
 
     useEffect(() => {
-        const completedMod = sessionStorage.getItem(`${location.pathname}`);
+        const completedMod = localStorage.getItem(`${location.pathname}`);
         if (completedMod) {
             setIsComplete(true);
         }
     }, [location.pathname])
 
     const handleComplete = () => {
-        const completedMod = sessionStorage.getItem(`${location.pathname}`);
+        const completedMod = localStorage.getItem(`${location.pathname}`);
         if (completedMod) {
-            sessionStorage.removeItem(`${location.pathname}`)
+            localStorage.removeItem(`${location.pathname}`)
         }
         else {
-            sessionStorage.setItem(`${location.pathname}`, !isComplete);
+            localStorage.setItem(`${location.pathname}`, !isComplete);
         }
         setIsComplete(!isComplete);
     }
