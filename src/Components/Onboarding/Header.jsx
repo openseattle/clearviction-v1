@@ -17,23 +17,32 @@ function Header(props) {
             <Link to="/onboarding">
                 <img src={smallLogo} className={classes.logoStyle} alt="CV logo" />
             </Link>
-        
+
             <div className={classes.socialContainer}>
-                <a href="" className={classes.socialIcons}>
-                    <img src={twitter} alt="facebook" />
+                <a href="https://twitter.com/Clearviction"
+                    className={classes.socialIcons}
+                    target="_blank"
+                    rel="noreferrer">
+                    <img src={twitter} alt="Twitter" />
                 </a>
-                <a href="" className={classes.socialIcons}>
-                    <img src={linkedIn} alt="facebook" />
+                <a href="https://www.linkedin.com/company/clearviction/"
+                    className={classes.socialIcons}
+                    target="_blank"
+                    rel="noreferrer">
+                    <img src={linkedIn} alt="LinkedIn" />
                 </a>
-                <a href="" className={classes.socialIcons}>
+                <a href="https://www.facebook.com/Clearviction-104011035539979/?ref=page_internal"
+                    className={classes.socialIcons}
+                    target="_blank"
+                    rel="noreferrer">
                     <img src={fb} alt="facebook" />
                 </a>
             </div>
-            
+
             <div className={classes.regularContainer}>
                 {title === "Welcome!" ? (
                     <div className={classes.welcome}>
-                        <h1 style={{fontWeight: 400}}>{title}</h1>
+                        <h1 style={{ fontWeight: 400 }}>{title}</h1>
                         <p className={classes.welcomePara}>{information}</p>
                     </div>
                 ) : (
@@ -43,8 +52,8 @@ function Header(props) {
                     </div>
                 )}
             </div>
-        </div>   
-    );      
+        </div>
+    );
 };
 
 export default Header;
