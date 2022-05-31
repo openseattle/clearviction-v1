@@ -32,11 +32,7 @@ function App() {
                     }}
                 >
                     <CssBaseline />
-                    {location.pathname === '/onboarding' ? null :
-                        location.pathname === '/onboarding-mod1' ? null :
-                            location.pathname === '/onboarding-mod2' ? null :
-                                location.pathname === '/onboarding-mod3' ? null :
-                                    location.pathname === '/onboarding-mod4' ? null : <Navigation />}
+                    {location.pathname.includes('/onboarding') ? null : <Navigation />}
                     <Switch>
                         <Route path="/404">
                             <ErrorPage />
