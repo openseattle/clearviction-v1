@@ -7,8 +7,8 @@ export const useModuleCardStyles = makeStyles((theme) => ({
     margin: theme.spacing(8, "auto"),
     width: "790px",
     [theme.breakpoints.down("sm")]: {
-          width: "80%",
-        }
+      width: "80%",
+    }
   },
   cardHeading: {
     backgroundColor: theme.palette.primary.main,

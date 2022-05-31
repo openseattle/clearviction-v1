@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 
 // styling
 import { Typography } from "@material-ui/core";
@@ -6,74 +5,43 @@ import { useHomeStyles } from '../../Styles/Onboarding/useHomeStyles';
 
 // components
 import Header from '../../Components/Onboarding/Header';
-import ModuleCard from '../../Components/Onboarding/ModuleCard';
-
-// icons
-import openCircle from '../../Assets/Onboarding/openCircle.png';
-import circleCheck from '../../Assets/Onboarding/circleCheck.png';
+import ModuleStepper from '../../Components/Onboarding/ModuleStepper';
 
 const headerText = {
     title: "Welcome!",
     information: "We're excited you're joining the Clearviction Project."
 };
 
-const module1 = {
-    link: "/onboarding-mod1",
-    number: "module 1",
-    subheading: "About Clearviction",
-    text: "What is Clearviction and why does this project matter?"
-}
+// const module1 = {
+//     link: "/onboarding-mod1",
+//     number: "module 1",
+//     subheading: "About Clearviction",
+//     text: "What is Clearviction and why does this project matter?"
+// }
 
-const module2 = {
-    link: "/onboarding-mod2",
-    number: "module 2",
-    subheading: "Lets get your tools in order",
-    text: "See what tools we use and how we use them to make the team run smooth and efficiently."
-}
+// const module2 = {
+//     link: "/onboarding-mod2",
+//     number: "module 2",
+//     subheading: "Lets get your tools in order",
+//     text: "See what tools we use and how we use them to make the team run smooth and efficiently."
+// }
 
-const module3 = {
-    link: "/onboarding-mod3",
-    number: "module 3",
-    subheading: "Our team expectations",
-    text: "We all want to be good teammembers. Learn how we can make that happen."
-}
+// const module3 = {
+//     link: "/onboarding-mod3",
+//     number: "module 3",
+//     subheading: "Our team expectations",
+//     text: "We all want to be good teammembers. Learn how we can make that happen."
+// }
 
-const module4 = {
-    link: "/onboarding-mod4",
-    number: "module 4",
-    subheading: "Now what?",
-    text: "Now that you know our practices and expectations, lets see what is happening within our teams."
-}
+// const module4 = {
+//     link: "/onboarding-mod4",
+//     number: "module 4",
+//     subheading: "Now what?",
+//     text: "Now that you know our practices and expectations, lets see what is happening within our teams."
+// }
 
 function OnboardingHome() {
     const classes = useHomeStyles();
-
-    // checkmarks
-    const [mod1Complete, setMod1Complete] = useState(false);
-    const [mod2Complete, setMod2Complete] = useState(false);
-    const [mod3Complete, setMod3Complete] = useState(false);
-    const [mod4Complete, setMod4Complete] = useState(false);
-
-    useEffect(() => {
-        // check local stoarge if modules have been checked already
-        const mod1 = localStorage.getItem("/onboarding-mod1");
-        const mod2 = localStorage.getItem("/onboarding-mod2");
-        const mod3 = localStorage.getItem("/onboarding-mod3");
-        const mod4 = localStorage.getItem("/onboarding-mod4");
-        // if LS modules have been checked, check homepage modules also
-        if (mod1) {
-            setMod1Complete(true);
-        }
-        if (mod2) {
-            setMod2Complete(true);
-        }
-        if (mod3) {
-            setMod3Complete(true);
-        }
-        if (mod4) {
-            setMod4Complete(true);
-        }
-    }, [])
 
     return (
         <div>
@@ -89,7 +57,7 @@ function OnboardingHome() {
                 <Typography variant="body2" className={classes.bodyPara}>
                     <span style={{ fontWeight: "bold", fontStyle: "italic" }}>Note:</span> <span style={{ fontStyle: "italic" }}>this resource is an imperfect and incomplete MVP. We've authored the core 20% (which should provide 80% of the value) and continue to fill in the rest!</span>
                 </Typography>
-                <div style={styles.div}>
+                {/* <div style={styles.div}>
                     <img src={mod1Complete ? circleCheck : openCircle} alt="" style={styles.img} />
                     <ModuleCard module={module1} />
                 </div>
@@ -104,20 +72,13 @@ function OnboardingHome() {
                 <div style={styles.div}>
                     <img src={mod4Complete ? circleCheck : openCircle} alt="" style={styles.img} />
                     <ModuleCard module={module4} />
-                </div>
+                </div> */}
+            </div>
+            <div className={classes.cardBody} >
+                <ModuleStepper />
             </div>
         </div>
     );
-}
-
-const styles = {
-    img: {
-        height: '50px',
-    },
-    div: {
-        display: "flex",
-        alignItems: "center",
-    }
 }
 
 export default OnboardingHome;
