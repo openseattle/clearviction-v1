@@ -1,12 +1,16 @@
-
+import { useState } from 'react';
 // components
 import ModuleCard from './ModuleCard';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
+import StepContent from '@material-ui/core/StepContent';
+import StepIcon from '@material-ui/core/StepIcon';
 
 // icons
 import circleCheck from '../../Assets/Onboarding/circleCheck.png';
 import openCircle from '../../Assets/Onboarding/openCircle.png';
+import { Collapse, StepLabel } from '@material-ui/core';
+import { ExpandMore } from '@material-ui/icons';
 
 const modules = [{
     link: "/onboarding-mod1",
@@ -36,21 +40,26 @@ const modules = [{
 const styles = {
     img: {
         height: '30px',
-        alignSelf: 'center'
+        alignSelf: 'center',
     }
 }
 
 export default function VerticalLinearStepper() {
+    const [activeStep, setActiveStep] = useState(0);
 
     return (
-        <Stepper orientation="vertical">
+        <Stepper orientation="vertical" activeStep={activeStep}>
             {modules.map((module, index) => (
-                <Step key={index} style={{ display: "flex" }}>
-                    {localStorage.getItem(module.link) ?
-                        <img src={circleCheck} style={styles.img} alt="" />
-                        : <img src={openCircle} style={styles.img} alt="" />
-                    }
-                    <ModuleCard module={module} />
+                <Step key={index} active={true} expanded={true}>
+                    <StepLabel icon=
+                        {localStorage.getItem(module.link) ?
+                            <img src={circleCheck} style={styles.img} alt="" />
+                            : <img src={openCircle} style={styles.img} alt="" />
+                        }
+                    >
+                        <ModuleCard module={module} />
+                        {/* <StepContent children={} TransitionProps={{ in: true }} /> */}
+                    </StepLabel>
                 </Step>
             ))}
         </Stepper>

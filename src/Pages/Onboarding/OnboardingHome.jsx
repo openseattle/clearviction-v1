@@ -74,7 +74,7 @@ function OnboardingHome() {
                     <ModuleCard module={module4} />
                 </div> */}
             </div>
-            <div className={classes.cardBody} >
+            <div className={classes.stepper} >
                 <ModuleStepper />
             </div>
         </div>
