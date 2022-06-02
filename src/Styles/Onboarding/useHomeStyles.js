@@ -29,7 +29,7 @@ export const useHomeStyles = makeStyles((theme) => ({
     margin: theme.spacing(3, "auto"),
     width: "70%",
     color: "#1d1c1c",
-    [theme.breakpoints.down("sm")]: {
+    [theme.breakpoints.down("lg")]: {
       width: "100%",
       padding: theme.spacing(0),
       margin: theme.spacing(3, "auto"),

@@ -15,7 +15,7 @@ export const useModuleContentStyles = makeStyles((theme) => ({
     marginBottom: theme.spacing(5),
     lineHeight: 1.2,
     [theme.breakpoints.down("sm")]: {
-
+      marginLeft: theme.spacing(1),
     }
   },
   moduleCardHeading2: {
@@ -89,11 +89,14 @@ export const useModuleContentStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(3),
     [theme.breakpoints.down("sm")]: {
       width: "30px",
+      margin: theme.spacing(1),
+      marginRight: theme.spacing(3),
     }
   },
   linkContainer: {
     display: "flex",
     flexDirection: "row",
+    width: "100%"
   },
   linkText: {
     color: "#4e6c99",

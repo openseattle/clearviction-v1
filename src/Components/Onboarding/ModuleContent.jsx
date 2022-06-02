@@ -59,16 +59,16 @@ function ModuleContent(props) {
             {linkTitle ? (
                 <div className={classes.moduleContentLink}>
                     {linkIcon === "link" &&
-                        <a href={linkLocation} target="_blank" rel="noreferrer"
-                            style={{ textDecoration: "none", color: "#4e6c99", flex: 1 }}>
+                        <Button href={linkLocation} target="_blank" rel="noreferrer"
+                            className={classes.linkContainer}>
                             <div className={classes.linkContainer}>
                                 <img src={link} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText} >{linkTitle}</p>
                             </div>
-                        </a>
+                        </Button>
                     }
                     {linkIcon === "doc" &&
-                        <Button onClick={handleOpen} style={{ textDecoration: "none", color: "#4e6c99" }} >
+                        <Button onClick={handleOpen} className={classes.linkContainer} >
                             <div className={classes.linkContainer}>
                                 <img src={doc} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText} >{linkTitle}</p>
@@ -99,17 +99,17 @@ function ModuleContent(props) {
             {linkTitle2 ? (
                 <div className={classes.moduleContentLink}>
                     {linkIcon2 === "link" &&
-                        <a href={linkLocation2} target="_blank" rel="noreferrer"
-                            style={{ textDecoration: "none", color: "#4e6c99", flex: 1 }}
+                        <Button href={linkLocation2} target="_blank" rel="noreferrer"
+                            className={classes.linkContainer}
                         >
                             <div className={classes.linkContainer}>
                                 <img src={link} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText} >{linkTitle2}</p>
                             </div>
-                        </a>
+                        </Button>
                     }
                     {linkIcon2 === "doc" &&
-                        <Button onClick={handleOpen} style={{ textDecoration: "none", color: "#4e6c99" }} >
+                        <Button onClick={handleOpen} className={classes.linkContainer}>
                             <div className={classes.linkContainer}>
                                 <img src={doc} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText2} >{linkTitle2}</p>
@@ -117,18 +117,18 @@ function ModuleContent(props) {
                         </Button>
                     }
                     {linkIcon2 === "docAirtable" &&
-                        <Button onClick={handleAirtableOpen} style={{ textDecoration: "none", color: "#4e6c99" }} >
+                        <Button onClick={handleAirtableOpen} className={classes.linkContainer} >
                             <div className={classes.linkContainer}>
                                 <img src={doc} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText2} >{linkTitle2}</p>
+                                <p className={classes.linkText} >{linkTitle2}</p>
                             </div>
                         </Button>
                     }
                     {linkIcon2 === "docSlack" &&
-                        <Button onClick={handleSlackOpen} style={{ textDecoration: "none", color: "#4e6c99" }} >
+                        <Button onClick={handleSlackOpen} className={classes.linkContainer} >
                             <div className={classes.linkContainer}>
                                 <img src={doc} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText2} >{linkTitle2}</p>
+                                <p className={classes.linkText} >{linkTitle2}</p>
                             </div>
                         </Button>
                     }
@@ -149,13 +149,13 @@ function ModuleContent(props) {
                 <div className={classes.moduleContentLink}>
 
                     {linkIcon3 === "link" &&
-                        <a href={linkLocation3} target="_blank" rel="noreferrer"
-                            style={{ textDecoration: "none", color: "#4e6c99", flex: 1 }}>
+                        <Button href={linkLocation3} target="_blank" rel="noreferrer"
+                            className={classes.linkContainer}>
                             <div className={classes.linkContainer}>
                                 <img src={link} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText} >{linkTitle3}</p>
                             </div>
-                        </a>
+                        </Button>
                     }
                     {linkIcon3 === "doc" &&
                         <Button onClick={handleOpen} style={{ textDecoration: "none", color: "#4e6c99" }} >

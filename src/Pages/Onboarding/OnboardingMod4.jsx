@@ -78,7 +78,7 @@ function OnboardingMod4() {
         <div>{console.log('mod4')}
             <Header text={headerText} />
             <Box >
-                <Grid container justifyContent="center" >
+                <Grid container justifyContent="center" className={classes.moduleContentCard}>
                     <Grid item xs={2} className={classes.cardIcon} >
                         <img src={boat} alt="" className={classes.icon} />
                     </Grid>

@@ -54,7 +54,7 @@ function OnboardingMod1() {
         <>
             <Header text={headerText} />
             <Box >
-                <Grid container justifyContent="center" >
+                <Grid container justifyContent="center" className={classes.moduleContentCard} >
                     <Grid item xs={2} className={classes.cardIcon} >
                         <img src={circleArrow} alt="" className={classes.icon} />
                     </Grid>
