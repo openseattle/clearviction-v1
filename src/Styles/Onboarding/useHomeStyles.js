@@ -35,4 +35,26 @@ export const useHomeStyles = makeStyles((theme) => ({
       margin: theme.spacing(3, "auto"),
     }
   },
+  connectorLine: {
+    // borderLeft: "1px",
+    borderLeftWidth: "2px",
+    borderLeftStyle: "solid",
+    borderLeftColor: "#4E6C99",
+    height: "12em",
+    marginLeft: "1em",
+    marginTop: "-3px",
+    [theme.breakpoints.down("sm")]: {
+      height: "15em",
+    }
+  },
+  spacerLine: {
+    borderLeftWidth: "2px",
+    borderLeftStyle: "solid",
+    borderLeftColor: "#fafafa",
+    height: "12em",
+    marginLeft: "1em",
+    [theme.breakpoints.down("sm")]: {
+      height: "15em",
+    }
+  }
 }));

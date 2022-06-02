@@ -1,16 +1,14 @@
-import { useState } from 'react';
+
 // components
 import ModuleCard from './ModuleCard';
-import Stepper from '@material-ui/core/Stepper';
-import Step from '@material-ui/core/Step';
-import StepContent from '@material-ui/core/StepContent';
-import StepIcon from '@material-ui/core/StepIcon';
+import { Grid } from '@material-ui/core';
 
 // icons
 import circleCheck from '../../Assets/Onboarding/circleCheck.png';
 import openCircle from '../../Assets/Onboarding/openCircle.png';
-import { Collapse, StepLabel } from '@material-ui/core';
-import { ExpandMore } from '@material-ui/icons';
+
+// styles
+import { useHomeStyles } from '../../Styles/Onboarding/useHomeStyles';
 
 const modules = [{
     link: "/onboarding-mod1",
@@ -45,23 +43,48 @@ const styles = {
 }
 
 export default function VerticalLinearStepper() {
-    const [activeStep, setActiveStep] = useState(0);
+    const classes = useHomeStyles();
 
     return (
-        <Stepper orientation="vertical" activeStep={activeStep}>
+        // <Stepper orientation="vertical" activeStep={activeStep}>
+        //     {modules.map((module, index) => (
+        //         <Step key={index} active={true} expanded={true}>
+        //             <StepLabel icon=
+        //                 {localStorage.getItem(module.link) ?
+        //                     <img src={circleCheck} style={styles.img} alt="" />
+        //                     : <img src={openCircle} style={styles.img} alt="" />
+        //                 }
+        //             >
+        //                 <ModuleCard module={module} />
+        //                 {/* <StepContent children={} TransitionProps={{ in: true }} /> */}
+        //             </StepLabel>
+        //         </Step>
+        //     ))}
+        // </Stepper>
+        <>
             {modules.map((module, index) => (
-                <Step key={index} active={true} expanded={true}>
-                    <StepLabel icon=
+                <Grid container
+                    key={index}
+                    justifyContent="center"
+                    direction="row"
+                    alignItems="center">
+                    <Grid>
+                        {index > 0 ?
+                            <div className={classes.connectorLine}></div>
+                            : <div className={classes.spacerLine}></div>}
                         {localStorage.getItem(module.link) ?
                             <img src={circleCheck} style={styles.img} alt="" />
                             : <img src={openCircle} style={styles.img} alt="" />
                         }
-                    >
+                        {index < modules.length - 1 ?
+                            <div className={classes.connectorLine}></div>
+                            : <div className={classes.spacerLine}></div>}
+                    </Grid>
+                    <Grid item={true} xs={11} md={10} sm={8} lg={6}>
                         <ModuleCard module={module} />
-                        {/* <StepContent children={} TransitionProps={{ in: true }} /> */}
-                    </StepLabel>
-                </Step>
+                    </Grid>
+                </Grid>
             ))}
-        </Stepper>
+        </>
     );
 }
