@@ -6,9 +6,11 @@ import { useModuleContentStyles } from '../../Styles/Onboarding/useModuleContent
 // import Theme from '../../Components/Theme';
 import Footer from '../../Components/Onboarding/Footer';
 
+// icons
 import remote from '../../Assets/Onboarding/remote.svg';
 import checklist from '../../Assets/Onboarding/checklist.svg';
 import chat from '../../Assets/Onboarding/chat.svg';
+import paper from '../../Assets/Onboarding/paper.svg';
 
 const headerText = {
     title: "Module 2",
@@ -33,8 +35,7 @@ const airtable = {
     title: "Airtable",
     subheading: "What is it?",
     paragraph1: "Airtable is a database software with a user-friendly interface. We use it as a primary place to organize information, tasks, and keep track of each other’s work.",
-    paragraph2: "Learn the basics with these how-to videos.",
-    paragraph3: "Check out our Airtable Glossary and keep it open in another tab as you go through this guide in case you want to reference terms you aren’t familiar with.",
+    paragraph2: "Check out our Airtable Glossary and keep it open in another tab as you go through this guide in case you want to reference terms you aren’t familiar with.",
     linkTitle: "Watch our Airtable onboarding guide",
     linkIcon: "video",
     linkLocation: "",
@@ -43,14 +44,13 @@ const airtable = {
     linkLocation2: "",
     linkTitle3: "Read our Glossary",
     linkIcon3: "link",
-    linkLocation3: "",
+    linkLocation3: "https://airtable.com/appfJZShN8K4tcWHU/tblYLt2L646QsTESQ/viwbST7tdt1d2hOiR?blocks=hide",
 }
 
 const slack = {
     title: "Slack",
     subheading: "What is it?",
     paragraph1: "Slack is a collection of chat rooms equipped for threaded conversations, emoji reactions, and app integrations.",
-    paragraph2: "Learn the basics with these how-to videos.",
     linkTitle: "Watch our Slack onboarding guide",
     linkIcon: "video",
     linkLocation: "",
@@ -59,7 +59,18 @@ const slack = {
     linkLocation2: "",
     linkTitle3: "In-house expert",
     linkIcon3: "link",
-    linkLocation3: "",
+    linkLocation3: "https://airtable.com/appfJZShN8K4tcWHU/tblFzjMFrsRIhEWGf/viwL5XUOaN5Siybl4/recQeDCMgkRt9RLlZ?blocks=hide",
+}
+
+const miro = {
+    title: "Miro",
+    subheading: "What is it?",
+    paragraph1: "Miro is the online collaborative whiteboard platform that enables distributed teams to work effectively together, from brainstorming with digital sticky notes to planning and managing agile workflows.",
+    paragraph2: "Our account is limited to three boards. Please don’t create another board or we’ll be locked out of one of our existing boards!",
+    linkTitle: "Watch our Miro guide",
+    linkIcon: "video",
+    linkLocation: "",
+
 }
 
 const button1 = {
@@ -84,25 +95,31 @@ function OnboardingMod2() {
     return (
         <>
             <Header text={headerText} />
-            <Box >
+            <Box className={classes.pageStyle}>
                 <Grid container justifyContent="center" className={classes.moduleContentCard} >
-                    <Grid item xs={2} className={classes.cardIcon} >
+                    <Grid item xs={6} sm={2} className={classes.cardIcon} >
                         <img src={remote} alt="" className={classes.icon} />
                     </Grid>
                     <Grid item xs={9}>
                         <ModuleContent content={zoom} />
                     </Grid>
-                    <Grid item xs={2} className={classes.cardIcon} >
+                    <Grid item xs={6} sm={2} className={classes.cardIcon} >
                         <img src={checklist} alt="" className={classes.icon} />
                     </Grid>
                     <Grid item xs={9} >
                         <ModuleContent content={airtable} />
                     </Grid>
-                    <Grid item xs={2} className={classes.cardIcon} >
+                    <Grid item xs={6} sm={2} className={classes.cardIcon} >
                         <img src={chat} alt="" className={classes.icon} />
                     </Grid>
                     <Grid item xs={9} >
                         <ModuleContent content={slack} />
+                    </Grid>
+                    <Grid item xs={6} sm={2} className={classes.cardIcon} >
+                        <img src={paper} alt="" className={classes.icon} />
+                    </Grid>
+                    <Grid item xs={9} >
+                        <ModuleContent content={miro} />
                     </Grid>
                 </Grid>
             </Box>
