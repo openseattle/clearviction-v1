@@ -5,7 +5,7 @@ export const useModuleCardStyles = makeStyles((theme) => ({
     boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
     borderRadius: "20px",
     margin: theme.spacing(4, "auto"),
-    width: "790px",
+    width: "75%",
     [theme.breakpoints.down("sm")]: {
       width: "80%",
     }

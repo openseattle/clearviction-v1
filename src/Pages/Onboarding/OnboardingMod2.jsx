@@ -82,7 +82,7 @@ function OnboardingMod2() {
     const classes = useModuleContentStyles();
 
     return (
-        <div>
+        <>
             <Header text={headerText} />
             <Box >
                 <Grid container justifyContent="center" className={classes.moduleContentCard} >
@@ -107,7 +107,7 @@ function OnboardingMod2() {
                 </Grid>
             </Box>
             <Footer button1={button1} button2={button2} buttonComplete={buttonComplete} />
-        </div>
+        </>
     );
 }
 

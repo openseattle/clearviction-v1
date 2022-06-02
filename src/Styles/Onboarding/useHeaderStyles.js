@@ -1,15 +1,15 @@
 import { makeStyles } from "@material-ui/core";
 
 export const useHeaderStyles = makeStyles((theme) => ({
-   darkBlueBackground: {
+  darkBlueBackground: {
     backgroundColor: theme.palette.primary.dark,
     color: "white",
     marginBottom: theme.spacing(4),
     [theme.breakpoints.down("sm")]: {
       // padding: theme.spacing(9, 0),
     }
-   },
-   logoStyle: {
+  },
+  logoStyle: {
     width: "100px",
     margin: theme.spacing(4),
     position: "absolute",
@@ -27,13 +27,13 @@ export const useHeaderStyles = makeStyles((theme) => ({
   },
   socialIcons: {
     float: "right",
-    padding: theme.spacing(4, 2),
+    padding: theme.spacing(2, 2),
     [theme.breakpoints.down("sm")]: {
       padding: theme.spacing(2, 1)
     }
   },
-   regularContainer: {
-    padding: theme.spacing(1, 8),
+  regularContainer: {
+    padding: theme.spacing(3),
     [theme.breakpoints.down("sm")]: {
       padding: theme.spacing(3),
     }
@@ -53,16 +53,17 @@ export const useHeaderStyles = makeStyles((theme) => ({
   },
   title: {
     fontSize: "50px",
-    lineHeight: "65px",
+    lineHeight: "50px",
     fontWeight: 400,
-    marginBottom: theme.spacing(1.7),
-    [theme.breakpoints.down("sm")]: {
+    marginBottom: theme.spacing(1),
+    textAlign: "center",
+    [theme.breakpoints.down("md")]: {
       fontSize: "40px",
     },
-    [theme.breakpoints.down("xs")]: {
+    [theme.breakpoints.down("sm")]: {
       fontSize: "30px",
     }
-  }, 
+  },
   subheading: {
     fontSize: "60px",
     marginTop: 0,
@@ -104,7 +105,7 @@ export const useHeaderStyles = makeStyles((theme) => ({
       fontSize: "20px",
     }
   }
- 
-  
-  
+
+
+
 }));
