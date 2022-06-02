@@ -44,10 +44,19 @@ const airtable = {
     linkTitle3: "Read our Glossary",
     linkIcon3: "link",
     linkLocation3: "",
+    // tabs: [{
+    //     tabLabel: "Find Your Dashboard",
+    //     tabContent: [
+    //         "Go to AirTable.",
+    //         "Click on the 'Tasks' tab.",
+    //         "Toggle the 'Views' sidebar by clicking the button in the top left corner.",
+    //         "Find and click on '[your name] kanban'. This was created specifically for you with the default filtering showing only tasks assigned to you explicitly. If you would like a Calendar view, let Seamus know."
+    //     ],
+    // }]
 }
 
 const slack = {
-    title: "Airtable",
+    title: "Slack",
     subheading: "What is it?",
     paragraph1: "Slack is a collection of chat rooms equipped for threaded conversations, emoji reactions, and app integrations.",
     paragraph2: "Learn the basics with these how-to videos.",

@@ -6,12 +6,12 @@ export const useModuleContentStyles = makeStyles((theme) => ({
     width: "80%",
     paddingBottom: theme.spacing(4),
     [theme.breakpoints.down("sm")]: {
-      margin: theme.spacing(6, "auto"),
+      margin: theme.spacing(1),
       paddingBottom: theme.spacing(2),
     }
   },
   moduleCardHeading: {
-    color: theme.palette.primary.main, 
+    color: theme.palette.primary.main,
     marginBottom: theme.spacing(5),
     lineHeight: 1.2,
     [theme.breakpoints.down("sm")]: {
@@ -52,7 +52,11 @@ export const useModuleContentStyles = makeStyles((theme) => ({
   cardIcon: {
     marginTop: "47px",
     textAlign: "right",
-    marginRight: "-25px"
+    marginRight: "-25px",
+    [theme.breakpoints.down("sm")]: {
+      marginRight: theme.spacing(1),
+      marginTop: "5px"
+    }
   },
   icon: {
     width: "70px",
@@ -61,9 +65,9 @@ export const useModuleContentStyles = makeStyles((theme) => ({
     border: "2px solid #4e6c99",
     margin: "20px auto",
     backgroundColor: "#fefeff",
-    width: "90%",
+    width: "80%",
     minWidth: "300px",
-    maxWidth: "555px",
+    // maxWidth: "555px",
     height: "85px",
     boxShadow: "0 4px 4px rgba(0, 0, 0, 0.25)",
     borderRadius: "15px",
@@ -71,30 +75,34 @@ export const useModuleContentStyles = makeStyles((theme) => ({
     fontWeight: "bold",
     display: "flex",
     padding: theme.spacing(1),
-    [theme.breakpoints.down("xs")]: {
-      width: "90%",
+    [theme.breakpoints.down("sm")]: {
+      // width: "90%",
       height: "70px",
-      fontSize: "16px",
+      // fontSize: "16px",
+      justifyContent: "space-between",
+      marginLeft: theme.spacing(-1),
     }
   },
   linkIcon: {
     margin: theme.spacing(1.5),
     marginRight: theme.spacing(3),
     [theme.breakpoints.down("sm")]: {
-      width: "30px",      
+      width: "30px",
     }
   },
-  // linkText: {
+  linkContainer: {
+    display: "flex",
+    flexDirection: "row",
+  },
+  linkText: {
+    color: "#4e6c99",
     // margin: theme.spacing(0.9), 
     // marginLeft: theme.spacing(2), 
-    // [theme.breakpoints.down("xs")]: {
-    //   margin: theme.spacing(0.5),
-    // }
-  // },
-  linkContainer: {
-    display: "flex", 
-    flexDirection: "row",
-    justifyContent: "flex-start", 
+    [theme.breakpoints.down("sm")]: {
+      margin: theme.spacing(0),
+      fontSize: 'calc(14px + 0.390625vw)',
+
+    }
   },
   modalTitleStyle: {
     color: "#4E6C99",
@@ -124,6 +132,6 @@ export const useModuleContentStyles = makeStyles((theme) => ({
     // [theme.breakpoints.down("sm")]: {
     //     marginBottom: theme.spacing(4),
     // }
-   },
-  
+  },
+
 }));

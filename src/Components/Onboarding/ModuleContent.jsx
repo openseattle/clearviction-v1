@@ -41,15 +41,8 @@ function ModuleContent(props) {
     const handleAirtableClose = () => setAirtableOpen(false);
 
     return (
-        <div className={classes.moduleContentCard + " " + classes.regularContainer }>
+        <div className={classes.moduleContentCard + " " + classes.regularContainer}>
             {/* <div className={classes.regularContainer}> */}
-                
-                <h1 className={classes.moduleCardHeading}>{title}</h1>
-                <Typography variant="body2" className={classes.bold}>{subheading}</Typography>
-                {paragraph1 ? <Typography variant="body2" className={classes.moduleCardBody}>{paragraph1}</Typography> : null}
-                {paragraph2 ? <Typography variant="body2" className={classes.moduleCardBody}>{paragraph2}</Typography> : null}
-                {paragraph3 ? <Typography variant="body2" className={classes.moduleCardBody}>{paragraph3}</Typography> : null}
-                {paragraph4 ? <Typography variant="body2" className={classes.moduleCardBody}>{paragraph4}</Typography> : null}
 
                 { linkTitle ? (
                     <div className={classes.moduleContentLink}>
@@ -132,41 +125,75 @@ function ModuleContent(props) {
                     null
                 )}
 
-                { linkTitle3 ? (
-                    <div className={classes.moduleContentLink}>
-                        
-                        { linkIcon3 === "link" && 
-                            <a href={linkLocation3} target="_blank" rel="noreferrer"
-                                style={{ textDecoration: "none", color: "#4e6c99", flex: 1 }}>
-                                <div className={classes.linkContainer}>
-                                    <img src={link} alt="" className={classes.linkIcon} />
-                                    <p className={classes.linkText3} >{linkTitle3}</p>
-                                </div>
-                            </a>
-                         }
-                         { linkIcon3 === "doc" &&
-                            <Button onClick={handleOpen} style={{ textDecoration: "none", color: "#4e6c99"}} >
-                                <div className={classes.linkContainer}>
-                                    <img src={doc} alt="" className={classes.linkIcon} />
-                                    <p className={classes.linkText3} >{linkTitle3}</p>
-                                </div>
-                            </Button>
-                         }
-                         { linkIcon3 === "video" && 
-                            <Button style={{ textDecoration: "none", color: "#4e6c99" }} >
-                                <div className={classes.linkContainer}>
-                                    <img src={video} alt="" className={classes.linkIcon} />
-                                    <p className={classes.linkText3} >{linkTitle3}</p>
-                                </div>
-                            </Button>
-                         }      
-                    </div>
-                    
-                ) : (
-                    null
-                )}
+            {linkTitle2 ? (
+                <div className={classes.moduleContentLink}>
+                    {linkIcon2 === "link" &&
+                        <a href={linkLocation2} target="_blank" rel="noreferrer"
+                            style={{ textDecoration: "none", color: "#4e6c99", flex: 1 }}
+                        >
+                            <div className={classes.linkContainer}>
+                                <img src={link} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText} >{linkTitle2}</p>
+                            </div>
+                        </a>
+                    }
+                    {linkIcon2 === "doc" &&
+                        <Button onClick={handleOpen} style={{ textDecoration: "none", color: "#4e6c99" }} >
+                            <div className={classes.linkContainer}>
+                                <img src={doc} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText2} >{linkTitle2}</p>
+                            </div>
+                        </Button>
+                    }
+                    {linkIcon2 === "video" &&
+                        <Button style={{ textDecoration: "none", color: "#4e6c99" }} >
+                            <div className={classes.linkContainer}>
+                                <img src={video} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText2} >{linkTitle2}</p>
+                            </div>
+                        </Button>
+                    }
+                </div>
+            ) : (
+                null
+            )}
+
+            {linkTitle3 ? (
+                <div className={classes.moduleContentLink}>
+
+                    {linkIcon3 === "link" &&
+                        <a href={linkLocation3} target="_blank" rel="noreferrer"
+                            style={{ textDecoration: "none", color: "#4e6c99", flex: 1 }}>
+                            <div className={classes.linkContainer}>
+                                <img src={link} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText3} >{linkTitle3}</p>
+                            </div>
+                        </a>
+                    }
+                    {linkIcon3 === "doc" &&
+                        <Button onClick={handleOpen} style={{ textDecoration: "none", color: "#4e6c99" }} >
+                            <div className={classes.linkContainer}>
+                                <img src={doc} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText3} >{linkTitle3}</p>
+                            </div>
+                        </Button>
+                    }
+                    {linkIcon3 === "video" &&
+                        <Button style={{ textDecoration: "none", color: "#4e6c99" }} >
+                            <div className={classes.linkContainer}>
+                                <img src={video} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText3} >{linkTitle3}</p>
+                            </div>
+                        </Button>
+                    }
+                </div>
+
+            ) : (
+                null
+            )}
             {/* </div> */}
-            <Modal 
+            {/* {modalTitle ? */}
+            <Modal
                 open={open}
                 onClose={handleClose}
                 aria-labelledby=''

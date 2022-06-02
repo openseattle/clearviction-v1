@@ -4,11 +4,11 @@ export const useModuleCardStyles = makeStyles((theme) => ({
   moduleCard: {
     boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
     borderRadius: "20px",
-    margin: theme.spacing(8, "auto"),
+    margin: theme.spacing(4, "auto"),
     width: "790px",
     [theme.breakpoints.down("sm")]: {
-          width: "80%",
-        }
+      width: "80%",
+    }
   },
   cardHeading: {
     backgroundColor: theme.palette.primary.main,
@@ -20,6 +20,11 @@ export const useModuleCardStyles = makeStyles((theme) => ({
   },
   cardSubheading: {
     marginBottom: theme.spacing(3),
+    [theme.breakpoints.down("sm")]: {
+      display: "flex",
+      justifyContent: "space-around",
+
+    }
   },
   cardBody: {
     display: "flex",
@@ -29,6 +34,11 @@ export const useModuleCardStyles = makeStyles((theme) => ({
     paddingRight: theme.spacing(3),
     paddingTop: theme.spacing(4),
     color: "#2b2929",
+    [theme.breakpoints.down("sm")]: {
+      display: "block",
+      paddingLeft: theme.spacing(1),
+      paddingRight: theme.spacing(3),
+    }
   },
   iconStyle: {
     marginRight: theme.spacing(4.5),

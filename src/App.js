@@ -1,7 +1,7 @@
 import "./App.css";
 import { CssBaseline, ThemeProvider, Box } from "@material-ui/core";
 import Theme from "./Components/Theme";
-import { Switch, Route, Redirect } from "react-router-dom";
+import { Switch, Route, Redirect, useLocation } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
 import Navigation from "./Components/Navigation";
 import CalculatorPage from "./Pages/CalculatorPage";
@@ -19,6 +19,8 @@ import OnboardingMod3 from "./Pages/Onboarding/OnboardingMod3";
 import OnboardingMod4 from "./Pages/Onboarding/OnboardingMod4";
 
 function App() {
+    const location = useLocation();
+
     return (
         <div>
             <ThemeProvider theme={Theme}>
@@ -30,7 +32,7 @@ function App() {
                     }}
                 >
                     <CssBaseline />
-                    <Navigation />
+                    {location.pathname.includes('/onboarding') ? null : <Navigation />}
                     <Switch>
                         <Route path="/404">
                             <ErrorPage />
@@ -61,7 +63,7 @@ function App() {
                         </Route>
 
                         {/* Volunteer onboarding pages */}
-                        <Route path="/onboarding">
+                        <Route exact path="/onboarding">
                             <OnboardingHome />
                         </Route>
                         <Route path="/onboarding-mod1">
