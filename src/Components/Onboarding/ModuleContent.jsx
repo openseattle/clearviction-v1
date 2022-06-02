@@ -7,6 +7,7 @@ import doc from '../../Assets/Onboarding/doc.svg';
 import video from '../../Assets/Onboarding/video.svg';
 
 import AirtableModal from './AirtableModal';
+import SlackModal from './SlackModal';
 
 const modalStyle = {
     position: 'absolute',
@@ -39,6 +40,10 @@ function ModuleContent(props) {
     const [airtableOpen, setAirtableOpen] = useState(false);
     const handleAirtableOpen = () => setAirtableOpen(true);
     const handleAirtableClose = () => setAirtableOpen(false);
+
+    const [slackOpen, setSlackOpen] = useState(false);
+    const handleSlackOpen = () => setSlackOpen(true);
+    const handleSlackClose = () => setSlackOpen(false);
 
     return (
         <div className={classes.moduleContentCard + " " + classes.regularContainer}>
@@ -107,7 +112,7 @@ function ModuleContent(props) {
                         <Button onClick={handleOpen} style={{ textDecoration: "none", color: "#4e6c99" }} >
                             <div className={classes.linkContainer}>
                                 <img src={doc} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText} >{linkTitle2}</p>
+                                <p className={classes.linkText2} >{linkTitle2}</p>
                             </div>
                         </Button>
                     }
@@ -115,7 +120,15 @@ function ModuleContent(props) {
                         <Button onClick={handleAirtableOpen} style={{ textDecoration: "none", color: "#4e6c99" }} >
                             <div className={classes.linkContainer}>
                                 <img src={doc} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText} >{linkTitle2}</p>
+                                <p className={classes.linkText2} >{linkTitle2}</p>
+                            </div>
+                        </Button>
+                    }
+                    {linkIcon2 === "docSlack" &&
+                        <Button onClick={handleSlackOpen} style={{ textDecoration: "none", color: "#4e6c99" }} >
+                            <div className={classes.linkContainer}>
+                                <img src={doc} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText2} >{linkTitle2}</p>
                             </div>
                         </Button>
                     }
@@ -123,7 +136,7 @@ function ModuleContent(props) {
                         <Button style={{ textDecoration: "none", color: "#4e6c99" }} >
                             <div className={classes.linkContainer}>
                                 <img src={video} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText} >{linkTitle2}</p>
+                                <p className={classes.linkText2} >{linkTitle2}</p>
                             </div>
                         </Button>
                     }
@@ -211,9 +224,23 @@ function ModuleContent(props) {
                     </Button>
                 </Box>
             </Modal>
-            {/* <Modal>
-                <SlackModal />
-            </Modal> */}
+
+            {/* complex slack modal */}
+            <Modal
+                open={slackOpen}
+                onClose={handleSlackClose}
+                aria-labelledby=''
+                aria-describedby=''
+                style={{ maxHeight: '100vh', overflowY: 'auto', position: 'absolute', top: 0 }}
+            >
+                <Box sx={modalStyle}>
+                    <SlackModal />
+                    <Button onClick={handleSlackClose} className={classes.button}>
+                        Close
+                    </Button>
+                </Box>
+            </Modal>
+
         </div>
     );
 };
