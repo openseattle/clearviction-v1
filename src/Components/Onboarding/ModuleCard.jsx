@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Typography } from "@material-ui/core";
+import { Typography, Grid } from "@material-ui/core";
 
 // icons
 import screens from '../../Assets/Onboarding/screens.svg';

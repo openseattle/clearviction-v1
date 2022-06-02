@@ -20,6 +20,11 @@ export const useModuleCardStyles = makeStyles((theme) => ({
   },
   cardSubheading: {
     marginBottom: theme.spacing(3),
+    [theme.breakpoints.down("sm")]: {
+      display: "flex",
+      justifyContent: "space-around",
+
+    }
   },
   cardBody: {
     display: "flex",
@@ -29,6 +34,11 @@ export const useModuleCardStyles = makeStyles((theme) => ({
     paddingRight: theme.spacing(3),
     paddingTop: theme.spacing(4),
     color: "#2b2929",
+    [theme.breakpoints.down("sm")]: {
+      display: "block",
+      paddingLeft: theme.spacing(1),
+      paddingRight: theme.spacing(3),
+    }
   },
   iconStyle: {
     marginRight: theme.spacing(4.5),

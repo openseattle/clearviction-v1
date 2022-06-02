@@ -30,8 +30,9 @@ export const useHomeStyles = makeStyles((theme) => ({
     width: "70%",
     color: "#1d1c1c",
     [theme.breakpoints.down("sm")]: {
-      width: "80%",
-      padding: theme.spacing(1),
+      width: "100%",
+      padding: theme.spacing(0),
+      margin: theme.spacing(3, "auto"),
     }
   },
 }));
