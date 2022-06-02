@@ -1,9 +1,9 @@
 import { useEffect } from 'react';
 import Header from '../../Components/Onboarding/Header';
-import { Container, Typography, Box, Grid } from '@material-ui/core';
+import { Box, Grid } from '@material-ui/core';
 import ModuleContent from '../../Components/Onboarding/ModuleContent';
 import { useModuleContentStyles } from '../../Styles/Onboarding/useModuleContentStyles';
-import Theme from '../../Components/Theme';
+// import Theme from '../../Components/Theme';
 import Footer from '../../Components/Onboarding/Footer';
 
 import remote from '../../Assets/Onboarding/remote.svg';
@@ -39,7 +39,7 @@ const airtable = {
     linkIcon: "video",
     linkLocation: "",
     linkTitle2: "Airtable guide",
-    linkIcon2: "doc",
+    linkIcon2: "docAirtable",
     linkLocation2: "",
     linkTitle3: "Read our Glossary",
     linkIcon3: "link",
