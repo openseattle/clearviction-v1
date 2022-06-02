@@ -80,6 +80,7 @@ export const useHeaderStyles = makeStyles((theme) => ({
   },
   modHeaderContainer: {
     textAlign: "center",
+    marginTop: "100px",
   },
   welcome: {
     textAlign: "center",
