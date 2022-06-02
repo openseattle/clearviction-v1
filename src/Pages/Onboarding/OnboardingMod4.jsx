@@ -118,21 +118,22 @@ function OnboardingMod4() {
                     maxWidth: "77vw",
                     [Theme.breakpoints.down("sm")]: {
                         padding: "0 40px",
+                        justifyContent: "center"
                     }
                 }}>
-                    <Grid item xs={8} sm={6} md={3} lg={2}>
+                    <Grid item sm={6} md={3} lg={2}>
                         <img src={scrum} alt="Scrum Team Icon" />
                     </Grid>
-                    <Grid item xs={8} sm={6} md={4} lg={2}>
+                    <Grid item sm={6} md={4} lg={2}>
                         <img src={marketing} alt="Marketing Team Icon" />
                     </Grid>
-                    <Grid item xs={8} sm={6} md={4} lg={2}>
+                    <Grid item sm={6} md={4} lg={2}>
                         <img src={nemo} alt="Nemo Team Icon" />
                     </Grid>
-                    <Grid item xs={8} sm={6} md={4} lg={2}>
+                    <Grid item sm={6} md={4} lg={2}>
                         <img src={product} alt="Product Team Icon" />
                     </Grid>
-                    <Grid item xs={8} sm={6} md={4} lg={2}>
+                    <Grid item sm={6} md={4} lg={2}>
                         <img src={research} alt="User Reasearch Team Icon" />
                     </Grid>
                 </Grid>

@@ -81,6 +81,7 @@ export const useModuleContentStyles = makeStyles((theme) => ({
       // fontSize: "16px",
       justifyContent: "space-between",
       marginLeft: theme.spacing(-1),
+      alignItems: "center"
     }
   },
   linkIcon: {
@@ -96,6 +97,7 @@ export const useModuleContentStyles = makeStyles((theme) => ({
   },
   linkText: {
     color: "#4e6c99",
+    alignSelf: "center",
     // margin: theme.spacing(0.9), 
     // marginLeft: theme.spacing(2), 
     [theme.breakpoints.down("sm")]: {

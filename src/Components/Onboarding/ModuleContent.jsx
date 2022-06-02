@@ -22,20 +22,20 @@ const modalStyle = {
 function ModuleContent(props) {
     const classes = useModuleContentStyles();
     const { title, subheading,
-        paragraph1, paragraph2, 
-        paragraph3, paragraph4, 
-        linkTitle, linkTitle2, 
-        linkTitle3, linkIcon, 
-        linkIcon2, linkIcon3, 
-        linkLocation, linkLocation2, 
-        linkLocation3, modalParagraph1, 
+        paragraph1, paragraph2,
+        paragraph3, paragraph4,
+        linkTitle, linkTitle2,
+        linkTitle3, linkIcon,
+        linkIcon2, linkIcon3,
+        linkLocation, linkLocation2,
+        linkLocation3, modalParagraph1,
         modalTitle, modalParagraph2,
-        modalParagraph3,modalParagraph4,
+        modalParagraph3, modalParagraph4,
     } = props.content;
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-    
+
     const [airtableOpen, setAirtableOpen] = useState(false);
     const handleAirtableOpen = () => setAirtableOpen(true);
     const handleAirtableClose = () => setAirtableOpen(false);
@@ -45,92 +45,92 @@ function ModuleContent(props) {
             {/* <div className={classes.regularContainer}> */}
 
             <h1 className={classes.moduleCardHeading}>{title}</h1>
-                <Typography variant="body2" className={classes.bold}>{subheading}</Typography>
-                {paragraph1 ? <Typography variant="body2" className={classes.moduleCardBody}>{paragraph1}</Typography> : null}
-                {paragraph2 ? <Typography variant="body2" className={classes.moduleCardBody}>{paragraph2}</Typography> : null}
-                {paragraph3 ? <Typography variant="body2" className={classes.moduleCardBody}>{paragraph3}</Typography> : null}
-                {paragraph4 ? <Typography variant="body2" className={classes.moduleCardBody}>{paragraph4}</Typography> : null}
+            <Typography variant="body2" className={classes.bold}>{subheading}</Typography>
+            {paragraph1 ? <Typography variant="body2" className={classes.moduleCardBody}>{paragraph1}</Typography> : null}
+            {paragraph2 ? <Typography variant="body2" className={classes.moduleCardBody}>{paragraph2}</Typography> : null}
+            {paragraph3 ? <Typography variant="body2" className={classes.moduleCardBody}>{paragraph3}</Typography> : null}
+            {paragraph4 ? <Typography variant="body2" className={classes.moduleCardBody}>{paragraph4}</Typography> : null}
 
-                { linkTitle ? (
-                    <div className={classes.moduleContentLink}>
-                        { linkIcon === "link" &&
-                            <a href={linkLocation} target="_blank" rel="noreferrer"
-                                style={{ textDecoration: "none", color: "#4e6c99", flex: 1 }}>
-                                <div className={classes.linkContainer}>
-                                    <img src={link} alt="" className={classes.linkIcon} />
-                                    <p className={classes.linkText} >{linkTitle}</p>
-                                </div>
-                            </a>    
-                        }
-                        { linkIcon === "doc" && 
-                            <Button onClick={handleOpen} style={{ textDecoration: "none", color: "#4e6c99"}} >
-                                <div className={classes.linkContainer}>
-                                    <img src={doc} alt="" className={classes.linkIcon} />
-                                    <p className={classes.linkText} >{linkTitle}</p>
-                                </div>
-                            </Button>
-                        }
-                        { linkIcon === "docAirtable" && 
-                            <Button onClick={handleAirtableOpen} style={{ textDecoration: "none", color: "#4e6c99"}} >
-                                <div className={classes.linkContainer}>
-                                    <img src={doc} alt="" className={classes.linkIcon} />
-                                    <p className={classes.linkText} >{linkTitle}</p>
-                                </div>
-                            </Button>
-                        }
-                        { linkIcon === "video" && 
-                            <Button style={{ textDecoration: "none", color: "#4e6c99" }} >
-                                <div className={classes.linkContainer}>
-                                    <img src={video} alt="" className={classes.linkIcon} />
-                                    <p className={classes.linkText} >{linkTitle}</p>
-                                </div>
-                            </Button>
-                        }       
-                    </div>
-                ) : (
-                    null
-                )}
+            {linkTitle ? (
+                <div className={classes.moduleContentLink}>
+                    {linkIcon === "link" &&
+                        <a href={linkLocation} target="_blank" rel="noreferrer"
+                            style={{ textDecoration: "none", color: "#4e6c99", flex: 1 }}>
+                            <div className={classes.linkContainer}>
+                                <img src={link} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText} >{linkTitle}</p>
+                            </div>
+                        </a>
+                    }
+                    {linkIcon === "doc" &&
+                        <Button onClick={handleOpen} style={{ textDecoration: "none", color: "#4e6c99" }} >
+                            <div className={classes.linkContainer}>
+                                <img src={doc} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText} >{linkTitle}</p>
+                            </div>
+                        </Button>
+                    }
+                    {linkIcon === "docAirtable" &&
+                        <Button onClick={handleAirtableOpen} style={{ textDecoration: "none", color: "#4e6c99" }} >
+                            <div className={classes.linkContainer}>
+                                <img src={doc} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText} >{linkTitle}</p>
+                            </div>
+                        </Button>
+                    }
+                    {linkIcon === "video" &&
+                        <Button style={{ textDecoration: "none", color: "#4e6c99" }} >
+                            <div className={classes.linkContainer}>
+                                <img src={video} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText} >{linkTitle}</p>
+                            </div>
+                        </Button>
+                    }
+                </div>
+            ) : (
+                null
+            )}
 
-                { linkTitle2 ? (
-                    <div className={classes.moduleContentLink}>
-                            { linkIcon2 === "link" &&
-                                <a href={linkLocation2} target="_blank" rel="noreferrer" 
-                                    style={{ textDecoration: "none", color: "#4e6c99", flex: 1 }}
-                                >
-                                    <div className={classes.linkContainer}>
-                                        <img src={link} alt="" className={classes.linkIcon} />
-                                        <p className={classes.linkText} >{linkTitle2}</p>
-                                    </div>
-                                </a>
-                            }
-                            { linkIcon2 === "doc" && 
-                                <Button onClick={handleOpen} style={{ textDecoration: "none", color: "#4e6c99"}} >
-                                    <div className={classes.linkContainer}>
-                                        <img src={doc} alt="" className={classes.linkIcon} />
-                                        <p className={classes.linkText2} >{linkTitle2}</p>
-                                    </div>
-                                </Button>
-                            }
-                            { linkIcon2 === "docAirtable" && 
-                                <Button onClick={handleAirtableOpen} style={{ textDecoration: "none", color: "#4e6c99"}} >
-                                    <div className={classes.linkContainer}>
-                                        <img src={doc} alt="" className={classes.linkIcon} />
-                                        <p className={classes.linkText2} >{linkTitle2}</p>
-                                    </div>
-                                </Button>
-                            }
-                            { linkIcon2 === "video" && 
-                                <Button style={{ textDecoration: "none", color: "#4e6c99" }} >
-                                    <div className={classes.linkContainer}>
-                                        <img src={video} alt="" className={classes.linkIcon} />
-                                        <p className={classes.linkText2} >{linkTitle2}</p>
-                                    </div>
-                                </Button>
-                            }
-                    </div>
-                ) : (
-                    null
-                )}
+            {linkTitle2 ? (
+                <div className={classes.moduleContentLink}>
+                    {linkIcon2 === "link" &&
+                        <a href={linkLocation2} target="_blank" rel="noreferrer"
+                            style={{ textDecoration: "none", color: "#4e6c99", flex: 1 }}
+                        >
+                            <div className={classes.linkContainer}>
+                                <img src={link} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText} >{linkTitle2}</p>
+                            </div>
+                        </a>
+                    }
+                    {linkIcon2 === "doc" &&
+                        <Button onClick={handleOpen} style={{ textDecoration: "none", color: "#4e6c99" }} >
+                            <div className={classes.linkContainer}>
+                                <img src={doc} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText} >{linkTitle2}</p>
+                            </div>
+                        </Button>
+                    }
+                    {linkIcon2 === "docAirtable" &&
+                        <Button onClick={handleAirtableOpen} style={{ textDecoration: "none", color: "#4e6c99" }} >
+                            <div className={classes.linkContainer}>
+                                <img src={doc} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText} >{linkTitle2}</p>
+                            </div>
+                        </Button>
+                    }
+                    {linkIcon2 === "video" &&
+                        <Button style={{ textDecoration: "none", color: "#4e6c99" }} >
+                            <div className={classes.linkContainer}>
+                                <img src={video} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText} >{linkTitle2}</p>
+                            </div>
+                        </Button>
+                    }
+                </div>
+            ) : (
+                null
+            )}
 
             {linkTitle3 ? (
                 <div className={classes.moduleContentLink}>
@@ -140,7 +140,7 @@ function ModuleContent(props) {
                             style={{ textDecoration: "none", color: "#4e6c99", flex: 1 }}>
                             <div className={classes.linkContainer}>
                                 <img src={link} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText3} >{linkTitle3}</p>
+                                <p className={classes.linkText} >{linkTitle3}</p>
                             </div>
                         </a>
                     }
@@ -148,7 +148,7 @@ function ModuleContent(props) {
                         <Button onClick={handleOpen} style={{ textDecoration: "none", color: "#4e6c99" }} >
                             <div className={classes.linkContainer}>
                                 <img src={doc} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText3} >{linkTitle3}</p>
+                                <p className={classes.linkText} >{linkTitle3}</p>
                             </div>
                         </Button>
                     }
@@ -156,7 +156,7 @@ function ModuleContent(props) {
                         <Button style={{ textDecoration: "none", color: "#4e6c99" }} >
                             <div className={classes.linkContainer}>
                                 <img src={video} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText3} >{linkTitle3}</p>
+                                <p className={classes.linkText} >{linkTitle3}</p>
                             </div>
                         </Button>
                     }
@@ -200,9 +200,9 @@ function ModuleContent(props) {
                 onClose={handleAirtableClose}
                 aria-labelledby=''
                 aria-describedby=''
-                style={{maxHeight: '100vh', overflowY: 'auto', position: 'absolute', top: 0 }}
-                // scroll={scroll}
-                // style={{ overflow: 'scroll' }}
+                style={{ maxHeight: '100vh', overflowY: 'auto', position: 'absolute', top: 0 }}
+            // scroll={scroll}
+            // style={{ overflow: 'scroll' }}
             >
                 <Box sx={modalStyle}>
                     <AirtableModal />
@@ -214,8 +214,8 @@ function ModuleContent(props) {
             {/* <Modal>
                 <SlackModal />
             </Modal> */}
-        </div>   
-    );      
+        </div>
+    );
 };
 
 export default ModuleContent;
