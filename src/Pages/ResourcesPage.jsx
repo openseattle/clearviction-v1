@@ -67,7 +67,7 @@ const housingFacts = [
         src: dream,
         title: "Private Housing",
         textList: [
-            "Landlords have full disccretion, and often deny people with criminal records",
+            "Landlords have full discretion, and often deny people with criminal records",
             "Management companies usually have extensive background checks",
         ],
     },
