@@ -97,25 +97,25 @@ function OnboardingMod2() {
             <Header text={headerText} />
             <Box className={classes.pageStyle}>
                 <Grid container justifyContent="center" className={classes.moduleContentCard} >
-                    <Grid item xs={6} sm={2} className={classes.cardIcon} >
+                    <Grid item sm={2} className={classes.cardIcon} >
                         <img src={remote} alt="" className={classes.icon} />
                     </Grid>
                     <Grid item xs={9}>
                         <ModuleContent content={zoom} />
                     </Grid>
-                    <Grid item xs={6} sm={2} className={classes.cardIcon} >
+                    <Grid item sm={2} className={classes.cardIcon} >
                         <img src={checklist} alt="" className={classes.icon} />
                     </Grid>
                     <Grid item xs={9} >
                         <ModuleContent content={airtable} />
                     </Grid>
-                    <Grid item xs={6} sm={2} className={classes.cardIcon} >
+                    <Grid item sm={2} className={classes.cardIcon} >
                         <img src={chat} alt="" className={classes.icon} />
                     </Grid>
                     <Grid item xs={9} >
                         <ModuleContent content={slack} />
                     </Grid>
-                    <Grid item xs={6} sm={2} className={classes.cardIcon} >
+                    <Grid item sm={2} className={classes.cardIcon} >
                         <img src={paper} alt="" className={classes.icon} />
                     </Grid>
                     <Grid item xs={9} >

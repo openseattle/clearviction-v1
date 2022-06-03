@@ -89,31 +89,31 @@ function OnboardingMod4() {
             <Header text={headerText} />
             <Box >
                 <Grid container justifyContent="center" className={classes.moduleContentCard}>
-                    <Grid item xs={2} className={classes.cardIcon} >
+                    <Grid item sm={2} className={classes.cardIcon} >
                         <img src={boat} alt="" className={classes.icon} />
                     </Grid>
                     <Grid item xs={9}>
                         <ModuleContent content={teamNemo} />
                     </Grid>
-                    <Grid item xs={2} className={classes.cardIcon} >
+                    <Grid item sm={2} className={classes.cardIcon} >
                         <img src={venn} alt="" className={classes.icon} />
                     </Grid>
                     <Grid item xs={9} >
                         <ModuleContent content={team} />
                     </Grid>
-                    <Grid item xs={2} className={classes.cardIcon} >
+                    <Grid item sm={2} className={classes.cardIcon} >
                         <img src={bug} alt="" className={classes.icon} />
                     </Grid>
                     <Grid item xs={9} >
                         <ModuleContent content={bugs} />
                     </Grid>
-                    <Grid item xs={2} className={classes.cardIcon} >
+                    <Grid item sm={2} className={classes.cardIcon} >
                         <img src={question} alt="" className={classes.icon} />
                     </Grid>
                     <Grid item xs={9} >
                         <ModuleContent content={questions} />
                     </Grid>
-                    <Grid item xs={2} className={classes.cardIcon} >
+                    <Grid item sm={2} className={classes.cardIcon} >
                         <img src={group} alt="" className={classes.icon} />
                     </Grid>
                     <Grid item xs={9} >

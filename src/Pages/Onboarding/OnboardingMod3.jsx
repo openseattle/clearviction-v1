@@ -63,19 +63,19 @@ function OnboardingMod3() {
             <Header text={headerText} />
             <Box >
                 <Grid container justifyContent="center" className={classes.moduleContentCard}>
-                    <Grid item xs={2} className={classes.cardIcon} >
+                    <Grid item sm={2} className={classes.cardIcon} >
                         <img className={classes.icon} src={remote} alt="" />
                     </Grid>
                     <Grid item xs={9}>
                         <ModuleContent content={remoteWork} />
                     </Grid>
-                    <Grid item xs={2} className={classes.cardIcon}>
+                    <Grid item sm={2} className={classes.cardIcon}>
                         <img className={classes.icon} src={symbols} alt="" />
                     </Grid>
                     <Grid item xs={9}>
                         <ModuleContent content={trust} />
                     </Grid>
-                    <Grid item xs={2} className={classes.cardIcon}>
+                    <Grid item sm={2} className={classes.cardIcon}>
                         <img className={classes.icon} src={file} alt="" />
                     </Grid>
                     <Grid item xs={9}>
