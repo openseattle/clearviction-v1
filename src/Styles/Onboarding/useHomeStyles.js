@@ -37,18 +37,18 @@ export const useHomeStyles = makeStyles((theme) => ({
   },
   connectorLine: {
     // borderLeft: "1px",
-    borderLeftWidth: "2px",
+    borderLeftWidth: "3px",
     borderLeftStyle: "solid",
     borderLeftColor: "#4E6C99",
     height: "12em",
-    marginLeft: "1em",
+    marginLeft: "0.95em",
     marginTop: "-3px",
     [theme.breakpoints.down("sm")]: {
       height: "15em",
     }
   },
   spacerLine: {
-    borderLeftWidth: "2px",
+    borderLeftWidth: "1px",
     borderLeftStyle: "solid",
     borderLeftColor: "#fafafa",
     height: "12em",
@@ -56,5 +56,13 @@ export const useHomeStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       height: "15em",
     }
+  },
+  openCircle: {
+    height: "30px",
+    width: "30px",
+    borderRadius: "50%",
+    borderWidth: "4px",
+    borderColor: "#4E6C99",
+    borderStyle: "solid"
   }
 }));

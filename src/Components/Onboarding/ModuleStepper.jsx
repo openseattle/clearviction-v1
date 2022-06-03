@@ -46,21 +46,6 @@ export default function VerticalLinearStepper() {
     const classes = useHomeStyles();
 
     return (
-        // <Stepper orientation="vertical" activeStep={activeStep}>
-        //     {modules.map((module, index) => (
-        //         <Step key={index} active={true} expanded={true}>
-        //             <StepLabel icon=
-        //                 {localStorage.getItem(module.link) ?
-        //                     <img src={circleCheck} style={styles.img} alt="" />
-        //                     : <img src={openCircle} style={styles.img} alt="" />
-        //                 }
-        //             >
-        //                 <ModuleCard module={module} />
-        //                 {/* <StepContent children={} TransitionProps={{ in: true }} /> */}
-        //             </StepLabel>
-        //         </Step>
-        //     ))}
-        // </Stepper>
         <>
             {modules.map((module, index) => (
                 <Grid container
@@ -74,7 +59,7 @@ export default function VerticalLinearStepper() {
                             : <div className={classes.spacerLine}></div>}
                         {localStorage.getItem(module.link) ?
                             <img src={circleCheck} style={styles.img} alt="" />
-                            : <img src={openCircle} style={styles.img} alt="" />
+                            : <div className={classes.openCircle}></div>
                         }
                         {index < modules.length - 1 ?
                             <div className={classes.connectorLine}></div>

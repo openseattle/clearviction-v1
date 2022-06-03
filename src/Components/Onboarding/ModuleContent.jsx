@@ -84,7 +84,7 @@ function ModuleContent(props) {
                         </Button>
                     }
                     {linkIcon === "video" &&
-                        <Button style={{ textDecoration: "none", color: "#4e6c99" }} >
+                        <Button className={classes.linkContainer} >
                             <div className={classes.linkContainer}>
                                 <img src={video} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText} >{linkTitle}</p>
