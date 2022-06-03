@@ -98,7 +98,7 @@ function ModuleContent(props) {
                         </Button>
                     }
                     {linkIcon === "videoAirtable" &&
-                        <Button onClick={handleAirtableVideoOpen} style={{ textDecoration: "none", color: "#4e6c99" }} >
+                        <Button onClick={handleAirtableVideoOpen} className={classes.linkContainer} >
                             <div className={classes.linkContainer}>
                                 <img src={video} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText} >{linkTitle}</p>
@@ -107,7 +107,7 @@ function ModuleContent(props) {
                     }
                     {linkIcon === "videoSlack" &&
                         <Button onClick={handleSlackVideoOpen}
-                            style={{ textDecoration: "none", color: "#4e6c99" }} >
+                            className={classes.linkContainer} >
                             <div className={classes.linkContainer}>
                                 <img src={video} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText} >{linkTitle}</p>
@@ -117,7 +117,7 @@ function ModuleContent(props) {
                     {linkIcon === "videoMiro" &&
                         <Button
                             // onClick={handleSlackVideoOpen} 
-                            style={{ textDecoration: "none", color: "#4e6c99" }} >
+                            className={classes.linkContainer} >
                             <div className={classes.linkContainer}>
                                 <img src={video} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText} >{linkTitle}</p>
