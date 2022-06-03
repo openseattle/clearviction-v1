@@ -37,7 +37,7 @@ const airtable = {
     paragraph1: "Airtable is a database software with a user-friendly interface. We use it as a primary place to organize information, tasks, and keep track of each other’s work.",
     paragraph2: "Check out our Airtable Glossary and keep it open in another tab as you go through this guide in case you want to reference terms you aren’t familiar with.",
     linkTitle: "Watch our Airtable onboarding guide",
-    linkIcon: "video",
+    linkIcon: "videoAirtable",
     linkLocation: "",
     linkTitle2: "Airtable guide",
     linkIcon2: "docAirtable",

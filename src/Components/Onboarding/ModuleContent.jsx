@@ -8,6 +8,7 @@ import video from '../../Assets/Onboarding/video.svg';
 
 import AirtableModal from './AirtableModal';
 import SlackModal from './SlackModal';
+import AirtableVideoModal from './AirtableVideoModal';
 
 const modalStyle = {
     position: 'absolute',
@@ -32,6 +33,10 @@ function ModuleContent(props) {
         linkLocation3, modalParagraph1,
         modalTitle, modalParagraph2,
         modalParagraph3, modalParagraph4,
+        p2bullet1, p2bullet2,
+        p2bullet3, p3bullet1,
+        p3bullet2, p3bullet3,
+        p3bullet4,
     } = props.content;
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
@@ -44,6 +49,10 @@ function ModuleContent(props) {
     const [slackOpen, setSlackOpen] = useState(false);
     const handleSlackOpen = () => setSlackOpen(true);
     const handleSlackClose = () => setSlackOpen(false);
+
+    const [airtableVideoOpen, setAirtableVideoOpen] = useState(false);
+    const handleAirtableVideoOpen = () => setAirtableVideoOpen(true);
+    const handleAirtableVideoClose = () => setAirtableVideoOpen(false);
 
     return (
         <div className={classes.moduleContentCard + " " + classes.regularContainer}>
@@ -83,8 +92,18 @@ function ModuleContent(props) {
                             </div>
                         </Button>
                     }
-                    {linkIcon === "video" &&
-                        <Button style={{ textDecoration: "none", color: "#4e6c99" }} >
+                    {linkIcon === "videoAirtable" &&
+                        <Button onClick={handleAirtableVideoOpen} style={{ textDecoration: "none", color: "#4e6c99" }} >
+                            <div className={classes.linkContainer}>
+                                <img src={video} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText} >{linkTitle}</p>
+                            </div>
+                        </Button>
+                    }
+                    {linkIcon === "videoSlack" &&
+                        <Button 
+                        // onClick={handleSlackVideoOpen} 
+                        style={{ textDecoration: "none", color: "#4e6c99" }} >
                             <div className={classes.linkContainer}>
                                 <img src={video} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText} >{linkTitle}</p>
@@ -195,9 +214,20 @@ function ModuleContent(props) {
                     </Typography>
                     <Typography variant='body2' className={classes.moduleCardBody}>
                         {modalParagraph2}
+                        <ul>
+                            {p2bullet1 ? <li>{p2bullet1}</li> : null }
+                            {p2bullet2 ? <li>{p2bullet2}</li> : null }
+                            {p2bullet3 ? <li>{p2bullet3}</li> : null }
+                        </ul>
                     </Typography>
                     <Typography variant='body2' className={classes.moduleCardBody}>
                         {modalParagraph3}
+                        <ul>
+                            {p3bullet1 ? <li>{p3bullet1}</li> : null }
+                            {p3bullet2 ? <li>{p3bullet2}</li> : null }
+                            {p3bullet3 ? <li>{p3bullet3}</li> : null }
+                            {p3bullet4 ? <li>{p3bullet4}</li> : null }
+                        </ul>
                     </Typography>
                     <Typography variant='body2' className={classes.moduleCardBody}>
                         {modalParagraph4}
@@ -220,6 +250,23 @@ function ModuleContent(props) {
                 <Box sx={modalStyle}>
                     <AirtableModal />
                     <Button onClick={handleAirtableClose} className={classes.button}>
+                        Close
+                    </Button>
+                </Box>
+            </Modal>
+            {/* video airtable modal */}
+            <Modal
+                open={airtableVideoOpen}
+                onClose={handleAirtableVideoClose}
+                aria-labelledby=''
+                aria-describedby=''
+                style={{ maxHeight: '100vh', overflowY: 'auto', position: 'absolute', top: 0 }}
+            // scroll={scroll}
+            // style={{ overflow: 'scroll' }}
+            >
+                <Box sx={modalStyle}>
+                    <AirtableVideoModal />
+                    <Button onClick={handleAirtableVideoClose} className={classes.button}>
                         Close
                     </Button>
                 </Box>
