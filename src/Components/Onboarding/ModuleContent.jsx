@@ -54,6 +54,11 @@ function ModuleContent(props) {
     const handleAirtableVideoOpen = () => setAirtableVideoOpen(true);
     const handleAirtableVideoClose = () => setAirtableVideoOpen(false);
 
+    const [slackVideoOpen, setSlackVideoOpen] = useState(false);
+    const handleSlackVideoOpen = () => setSlackVideoOpen(true);
+    const handleSlackVideoClose = () => setSlackVideoOpen(false);
+
+
     return (
         <div className={classes.moduleContentCard + " " + classes.regularContainer}>
             {/* <div className={classes.regularContainer}> */}
@@ -101,6 +106,15 @@ function ModuleContent(props) {
                         </Button>
                     }
                     {linkIcon === "videoSlack" &&
+                        <Button onClick={handleSlackVideoOpen} 
+                        style={{ textDecoration: "none", color: "#4e6c99" }} >
+                            <div className={classes.linkContainer}>
+                                <img src={video} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText} >{linkTitle}</p>
+                            </div>
+                        </Button>
+                    }
+                    {linkIcon === "videoMiro" &&
                         <Button 
                         // onClick={handleSlackVideoOpen} 
                         style={{ textDecoration: "none", color: "#4e6c99" }} >
@@ -197,8 +211,8 @@ function ModuleContent(props) {
             ) : (
                 null
             )}
-            {/* </div> */}
-            {/* {modalTitle ? */}
+           
+            {/* main modal */}
             <Modal
                 open={open}
                 onClose={handleClose}
@@ -237,6 +251,7 @@ function ModuleContent(props) {
                     </Button>
                 </Box>
             </Modal>
+
             {/* complex airtable modal */}
             <Modal
                 open={airtableOpen}
@@ -244,8 +259,6 @@ function ModuleContent(props) {
                 aria-labelledby=''
                 aria-describedby=''
                 style={{ maxHeight: '100vh', overflowY: 'auto', position: 'absolute', top: 0 }}
-            // scroll={scroll}
-            // style={{ overflow: 'scroll' }}
             >
                 <Box sx={modalStyle}>
                     <AirtableModal />
@@ -254,6 +267,7 @@ function ModuleContent(props) {
                     </Button>
                 </Box>
             </Modal>
+
             {/* video airtable modal */}
             <Modal
                 open={airtableVideoOpen}
@@ -261,8 +275,6 @@ function ModuleContent(props) {
                 aria-labelledby=''
                 aria-describedby=''
                 style={{ maxHeight: '100vh', overflowY: 'auto', position: 'absolute', top: 0 }}
-            // scroll={scroll}
-            // style={{ overflow: 'scroll' }}
             >
                 <Box sx={modalStyle}>
                     <AirtableVideoModal />
@@ -283,6 +295,22 @@ function ModuleContent(props) {
                 <Box sx={modalStyle}>
                     <SlackModal />
                     <Button onClick={handleSlackClose} className={classes.button}>
+                        Close
+                    </Button>
+                </Box>
+            </Modal>
+
+            {/* video slack modal */}
+            <Modal
+                open={slackVideoOpen}
+                onClose={handleSlackVideoClose}
+                aria-labelledby=''
+                aria-describedby=''
+                style={{ maxHeight: '100vh', overflowY: 'auto', position: 'absolute', top: 0 }}
+            >
+                <Box sx={modalStyle}>
+                    <AirtableVideoModal />
+                    <Button onClick={handleSlackVideoClose} className={classes.button}>
                         Close
                     </Button>
                 </Box>

@@ -52,11 +52,9 @@ const slack = {
     subheading: "What is it?",
     paragraph1: "Slack is a collection of chat rooms equipped for threaded conversations, emoji reactions, and app integrations.",
     linkTitle: "Watch our Slack onboarding guide",
-    linkIcon: "video",
-    linkLocation: "",
+    linkIcon: "videoSlack",
     linkTitle2: "Slack guide",
     linkIcon2: "docSlack",
-    linkLocation2: "",
     linkTitle3: "In-house expert",
     linkIcon3: "link",
     linkLocation3: "https://airtable.com/appfJZShN8K4tcWHU/tblFzjMFrsRIhEWGf/viwL5XUOaN5Siybl4/recQeDCMgkRt9RLlZ?blocks=hide",
@@ -68,9 +66,7 @@ const miro = {
     paragraph1: "Miro is the online collaborative whiteboard platform that enables distributed teams to work effectively together, from brainstorming with digital sticky notes to planning and managing agile workflows.",
     paragraph2: "Our account is limited to three boards. Please don’t create another board or we’ll be locked out of one of our existing boards!",
     linkTitle: "Watch our Miro guide",
-    linkIcon: "video",
-    linkLocation: "",
-
+    linkIcon: "videoMiro",
 }
 
 const button1 = {

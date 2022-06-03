@@ -13,24 +13,26 @@ const contentStyle = {
   lineHeight: '22px',
 }
 
-export default function AirtableVideoModal() {
+export default function SlackVideoModal() {
   const [ sectionId, setSectionId ] = useState(1);
   const [ activeTab, setActiveTab ] = useState(1);
   const sections = [
-    { id: 1, title: "Complete your profile" },
-    { id: 2, title: "Find your dashboard (kanban) and tasks" }, 
-    { id: 3, title: "Engage with tasks"}, 
-    { id: 4, title: "How to create a task for yourself and add a task to someone else's kanban"}, 
-    { id: 5, title: "Track task requests you make of others & Add Task you created to your view"},
-    { id: 6, title: "Evalute someone's performance of a task they have completed for you" }, 
+    { id: 1, title: "Set up your profile" },
+    { id: 2, title: "Where to find channels and how to join a channel?" }, 
+    { id: 3, title: "How to create a channel"}, 
+    { id: 4, title: "How to start a conversation with a teammate"}, 
+    { id: 5, title: "How does donut work?"},
+    { id: 6, title: "How to check threads/mentions?" }, 
+    { id: 7, title: "Active/inactice status"},
   ]
 
-  const profile = "https://drive.google.com/file/d/1fcGzJpDKHs44ocX0AWqsBNAK5b6ivBlv/preview";
-  const dashboard = "https://drive.google.com/file/d/1eLpoMObiwtTIbf5C4tG-a0sul2s2bSCF/preview";
-  const engageTasks = "https://drive.google.com/file/d/1JfIh5ytgqtCT2ixF22qp7Ar_XKWVKYZD/preview";
-  const createTasks = "https://drive.google.com/file/d/1zXSu7ADYY66PL6ggWg-ks7Hq1mDxN4r0/preview";
-  const requests = "https://drive.google.com/file/d/1ReQ7xLrlg_TxmrAE8cx-98dyjOOAZlGj/preview";
-  const evaluate = "https://drive.google.com/file/d/1W6QXg0U2EHgckjr8XmM9sA3a1X31N-pd/preview";
+  const profile = "https://drive.google.com/file/d/13ke5zaKAJbChEOB5Im1tC5pypQ3XiZM-/preview";
+  const channels = "https://drive.google.com/file/d/1N51-sShXuB3xcozLrTQAx9O6yebllgFx/preview";
+  const createChannel = "https://drive.google.com/file/d/1Hodm4l4JBhUe_h0RQCHVin73VFXAzohl/preview";
+  const convo = "https://drive.google.com/file/d/1Y-GN_bW03z4uyU91n695h7aaQDizULDP/preview";
+  const donut = "https://drive.google.com/file/d/1Ne1eBJ76itiCTQjYzjhVxxR0n74SVnoO/preview";
+  const threads = "";
+  const active = "";
 
   const tabStyle = {
     cursor: 'pointer',
@@ -79,27 +81,32 @@ export default function AirtableVideoModal() {
             )}
             { sectionId === 2 && (
               <div>
-                <iframe title={sections.title} src={dashboard} width="110%" height="auto" allow="autoplay"></iframe>
+                <iframe title={sections.title} src={channels} width="110%" height="auto" allow="autoplay"></iframe>
               </div>
             )}
             { sectionId === 3 && (
               <div>
-                <iframe title={sections.title} src={engageTasks} width="110%" height="auto" allow="autoplay"></iframe>
+                <iframe title={sections.title} src={createChannel} width="110%" height="auto" allow="autoplay"></iframe>
               </div>
             )}
             { sectionId === 4 && (
               <div>
-                <iframe title={sections.title} src={createTasks} width="110%" height="auto" allow="autoplay"></iframe>
+                <iframe title={sections.title} src={convo} width="110%" height="auto" allow="autoplay"></iframe>
               </div>
             )}
             { sectionId === 5 && (
               <div>
-                <iframe title={sections.title} src={requests} width="110%" height="auto" allow="autoplay"></iframe>
+                <iframe title={sections.title} src={donut} width="110%" height="auto" allow="autoplay"></iframe>
               </div>
             )}
             { sectionId === 6 && (
               <div>
-                <iframe title={sections.title} src={evaluate} width="110%" height="auto" allow="autoplay"></iframe>
+                <iframe title={sections.title} src={threads} width="110%" height="auto" allow="autoplay"></iframe>
+              </div>
+            )}
+            { sectionId === 7 && (
+              <div>
+                <iframe title={sections.title} src={active} width="110%" height="auto" allow="autoplay"></iframe>
               </div>
             )}
         </Grid>
