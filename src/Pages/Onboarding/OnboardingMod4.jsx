@@ -8,6 +8,7 @@ import Header from '../../Components/Onboarding/Header';
 import ModuleContent from '../../Components/Onboarding/ModuleContent';
 import Footer from '../../Components/Onboarding/Footer';
 
+// icons
 import boat from '../../Assets/Onboarding/boat.svg';
 import question from '../../Assets/Onboarding/question.svg';
 import venn from '../../Assets/Onboarding/venn.svg';
@@ -17,6 +18,7 @@ import marketing from '../../Assets/Onboarding/marketing.svg';
 import nemo from '../../Assets/Onboarding/nemo.svg';
 import product from '../../Assets/Onboarding/product.svg';
 import research from '../../Assets/Onboarding/research.svg';
+import bug from '../../Assets/Onboarding/bug.svg';
 
 
 const headerText = {
@@ -30,8 +32,8 @@ const teamNemo = {
     linkTitle: "Guidance",
     linkIcon: "doc",
     modalTitle: "You are on team Nemo",
-    modalParagraph1: "How long will you be a part of that group? You must always be a part of at least one group. If you join a different group you may leave Nemo. If your duties on the other team end, you must join Nemo again.",
-    modalParagraph2: "Take the first week or two to get your bearings, and then start contributing. You can join a project already in motion, or you can start your own. If you notice something that can be improved upon, take the initiative and start that project.",
+    modalParagraph1: "You must always be a part of at least one group. If you join a different group you may leave Nemo. If your duties on the other team end, you must join Nemo again.",
+    modalParagraph2: "Take the first week or two to get your bearings before you start contributing. You can join a project already in motion or you can start one of your own. If you notice something that can be improved upon, take the initiative and start that project.",
 }
 
 const team = {
@@ -43,6 +45,14 @@ const team = {
     modalParagraph1: "Message the correspondent slack channel of the team introducing yourself and stating that you want to join. ",
     modalParagraph2: "Attend their weekly meetings and perform the tasks assigned.",
     modalParagraph3: "Better to reliably and consistently show to one than dabble in more than one.",
+}
+
+const bugs = {
+    title: "Bug reports",
+    paragraph1: "Our website and tool are living creations requiring constant iteration and improvement. The ideas for this improvement come from bug reports created by you and the rest of the team! Here is the link you’ll use to create bug reports–please bookmark it!",
+    linkTitle: "Report bugs",
+    linkIcon: "link",
+    linkLocation: "https://airtable.com/shrzTUdyiDQsnqR3K",
 }
 
 const questions = {
@@ -90,6 +100,12 @@ function OnboardingMod4() {
                     </Grid>
                     <Grid item xs={9} >
                         <ModuleContent content={team} />
+                    </Grid>
+                    <Grid item xs={2} className={classes.cardIcon} >
+                        <img src={bug} alt="" className={classes.icon} />
+                    </Grid>
+                    <Grid item xs={9} >
+                        <ModuleContent content={bugs} />
                     </Grid>
                     <Grid item xs={2} className={classes.cardIcon} >
                         <img src={question} alt="" className={classes.icon} />
