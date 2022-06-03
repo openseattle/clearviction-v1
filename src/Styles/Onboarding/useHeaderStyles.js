@@ -52,11 +52,11 @@ export const useHeaderStyles = makeStyles((theme) => ({
     }
   },
   title: {
-    fontSize: "50px",
+    fontSize: "40px",
     lineHeight: "50px",
     fontWeight: 400,
-    marginBottom: theme.spacing(1),
     textAlign: "center",
+    marginBottom: theme.spacing(0),
     [theme.breakpoints.down("md")]: {
       fontSize: "40px",
     },
@@ -66,7 +66,8 @@ export const useHeaderStyles = makeStyles((theme) => ({
   },
   subheading: {
     fontSize: "60px",
-    marginTop: 0,
+    lineHeight: 1.2,
+    marginBottom: theme.spacing(8),
     [theme.breakpoints.down("sm")]: {
       fontSize: "50px",
       lineHeight: 1.2,
@@ -84,6 +85,7 @@ export const useHeaderStyles = makeStyles((theme) => ({
     marginTop: "100px",
   },
   welcome: {
+    width: "55%",
     textAlign: "center",
     fontSize: "61px",
     paddingTop: theme.spacing(8),
@@ -96,9 +98,10 @@ export const useHeaderStyles = makeStyles((theme) => ({
     }
   },
   welcomePara: {
-    fontSize: "35px",
-    lineHeight: 1.3,
+    fontSize: "45px",
+    lineHeight: 1.5,
     marginBottom: theme.spacing(9),
+    marginTop: theme.spacing(5),
     [theme.breakpoints.down("sm")]: {
       fontSize: "25px",
     },

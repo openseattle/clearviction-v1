@@ -2,7 +2,7 @@ import { makeStyles } from "@material-ui/core";
 
 export const useModuleContentStyles = makeStyles((theme) => ({
   moduleContentCard: {
-    margin: theme.spacing(9, "auto"),
+    margin: theme.spacing(6, "auto"),
     width: "80%",
     paddingBottom: theme.spacing(4),
     [theme.breakpoints.down("sm")]: {

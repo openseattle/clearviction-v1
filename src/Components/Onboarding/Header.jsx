@@ -42,13 +42,13 @@ function Header(props) {
             <div className={classes.regularContainer}>
                 {title === "Welcome!" ? (
                     <div className={classes.welcome}>
-                        <h1 style={{ fontWeight: 400 }}>{title}</h1>
-                        <p className={classes.welcomePara}>{information}</p>
+                        <Typography variant="h1" style={{ fontWeight: 400 }}>{title}</Typography>
+                        <Typography variant="h2" className={classes.welcomePara}>{information}</Typography>
                     </div>
                 ) : (
                     <div className={classes.modHeaderContainer}>
-                        <h1 className={classes.title}>{title}</h1>
-                        <h1 className={classes.subheading}>{description}</h1>
+                        <Typography variant='h2' className={classes.title}>{title}</Typography>
+                        <Typography variant='h1' className={classes.subheading}>{description}</Typography>
                     </div>
                 )}
             </div>

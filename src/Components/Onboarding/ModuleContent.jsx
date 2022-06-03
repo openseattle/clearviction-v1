@@ -63,7 +63,7 @@ function ModuleContent(props) {
         <div className={classes.moduleContentCard + " " + classes.regularContainer}>
             {/* <div className={classes.regularContainer}> */}
 
-            <h1 className={classes.moduleCardHeading}>{title}</h1>
+            <Typography variant="h4" className={classes.moduleCardHeading}>{title}</Typography>
             <Typography variant="body2" className={classes.bold}>{subheading}</Typography>
             {paragraph1 ? <Typography variant="body2" className={classes.moduleCardBody}>{paragraph1}</Typography> : null}
             {paragraph2 ? <Typography variant="body2" className={classes.moduleCardBody}>{paragraph2}</Typography> : null}
@@ -106,8 +106,8 @@ function ModuleContent(props) {
                         </Button>
                     }
                     {linkIcon === "videoSlack" &&
-                        <Button onClick={handleSlackVideoOpen} 
-                        style={{ textDecoration: "none", color: "#4e6c99" }} >
+                        <Button onClick={handleSlackVideoOpen}
+                            style={{ textDecoration: "none", color: "#4e6c99" }} >
                             <div className={classes.linkContainer}>
                                 <img src={video} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText} >{linkTitle}</p>
@@ -115,9 +115,9 @@ function ModuleContent(props) {
                         </Button>
                     }
                     {linkIcon === "videoMiro" &&
-                        <Button 
-                        // onClick={handleSlackVideoOpen} 
-                        style={{ textDecoration: "none", color: "#4e6c99" }} >
+                        <Button
+                            // onClick={handleSlackVideoOpen} 
+                            style={{ textDecoration: "none", color: "#4e6c99" }} >
                             <div className={classes.linkContainer}>
                                 <img src={video} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText} >{linkTitle}</p>
@@ -211,7 +211,7 @@ function ModuleContent(props) {
             ) : (
                 null
             )}
-           
+
             {/* main modal */}
             <Modal
                 open={open}
@@ -229,18 +229,18 @@ function ModuleContent(props) {
                     <Typography variant='body2' className={classes.moduleCardBody}>
                         {modalParagraph2}
                         <ul>
-                            {p2bullet1 ? <li>{p2bullet1}</li> : null }
-                            {p2bullet2 ? <li>{p2bullet2}</li> : null }
-                            {p2bullet3 ? <li>{p2bullet3}</li> : null }
+                            {p2bullet1 ? <li>{p2bullet1}</li> : null}
+                            {p2bullet2 ? <li>{p2bullet2}</li> : null}
+                            {p2bullet3 ? <li>{p2bullet3}</li> : null}
                         </ul>
                     </Typography>
                     <Typography variant='body2' className={classes.moduleCardBody}>
                         {modalParagraph3}
                         <ul>
-                            {p3bullet1 ? <li>{p3bullet1}</li> : null }
-                            {p3bullet2 ? <li>{p3bullet2}</li> : null }
-                            {p3bullet3 ? <li>{p3bullet3}</li> : null }
-                            {p3bullet4 ? <li>{p3bullet4}</li> : null }
+                            {p3bullet1 ? <li>{p3bullet1}</li> : null}
+                            {p3bullet2 ? <li>{p3bullet2}</li> : null}
+                            {p3bullet3 ? <li>{p3bullet3}</li> : null}
+                            {p3bullet4 ? <li>{p3bullet4}</li> : null}
                         </ul>
                     </Typography>
                     <Typography variant='body2' className={classes.moduleCardBody}>
