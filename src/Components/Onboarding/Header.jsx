@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import smallLogo from '../../Assets/Onboarding/smallLogo.svg';
@@ -11,6 +12,10 @@ import { useHeaderStyles } from '../../Styles/Onboarding/useHeaderStyles';
 function Header(props) {
     const classes = useHeaderStyles();
     const { title, description, information, information2, information3 } = props.text;
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     return (
         <div className={classes.darkBlueBackground}>
@@ -41,8 +46,8 @@ function Header(props) {
 
             <div className={classes.regularContainer}>
                 {title === "Welcome!" ? (
-                    <div className={classes.welcome}>
-                        <Typography variant="h1" style={{ fontWeight: 400 }}>{title}</Typography>
+                    <div className={classes.welcomeHeader}>
+                        <Typography variant="h1" className={classes.welcome} style={{ fontWeight: 400 }}>{title}</Typography>
                         <Typography variant="h2" className={classes.welcomePara}>{information}</Typography>
                     </div>
                 ) : (

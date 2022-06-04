@@ -62,7 +62,7 @@ export const useHeaderStyles = makeStyles((theme) => ({
     },
     [theme.breakpoints.down("sm")]: {
       fontSize: "30px",
-    }
+    },
   },
   subheading: {
     fontSize: "60px",
@@ -84,17 +84,20 @@ export const useHeaderStyles = makeStyles((theme) => ({
     textAlign: "center",
     marginTop: "100px",
   },
-  welcome: {
+  welcomeHeader: {
     width: "55%",
     textAlign: "center",
     fontSize: "61px",
     paddingTop: theme.spacing(8),
     margin: "auto",
+
+  },
+  welcome: {
     [theme.breakpoints.down("sm")]: {
-      fontSize: "40px",
+      fontSize: "60px",
     },
     [theme.breakpoints.down("xs")]: {
-      fontSize: "25px",
+      fontSize: "40px",
     }
   },
   welcomePara: {

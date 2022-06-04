@@ -65,7 +65,7 @@ export default function VerticalLinearStepper() {
                             <div className={classes.connectorLine}></div>
                             : <div className={classes.spacerLine}></div>}
                     </Grid>
-                    <Grid item={true} xs={11} md={10} sm={8} lg={6}>
+                    <Grid item={true} xs={10} md={8} sm={8} lg={8}>
                         <ModuleCard module={module} />
                     </Grid>
                 </Grid>

@@ -65,7 +65,7 @@ export const useModuleContentStyles = makeStyles((theme) => ({
     border: "2px solid #4e6c99",
     margin: "20px auto",
     backgroundColor: "#fefeff",
-    width: "80%",
+    width: "70%",
     minWidth: "300px",
     // maxWidth: "555px",
     height: "85px",

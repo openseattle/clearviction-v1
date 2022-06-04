@@ -4,7 +4,7 @@ export const useHomeStyles = makeStyles((theme) => ({
   body: {
     padding: theme.spacing(5),
     margin: theme.spacing(3, "auto"),
-    width: "791px",
+    width: "60%",
     color: "#1d1c1c",
     [theme.breakpoints.down("sm")]: {
       width: "80%",
@@ -25,15 +25,10 @@ export const useHomeStyles = makeStyles((theme) => ({
     color: "#2b2929",
   },
   stepper: {
-    padding: theme.spacing(5),
+    padding: theme.spacing(0),
     margin: theme.spacing(3, "auto"),
-    width: "70%",
+    width: "100%",
     color: "#1d1c1c",
-    [theme.breakpoints.down("lg")]: {
-      width: "100%",
-      padding: theme.spacing(0),
-      margin: theme.spacing(3, "auto"),
-    }
   },
   connectorLine: {
     // borderLeft: "1px",

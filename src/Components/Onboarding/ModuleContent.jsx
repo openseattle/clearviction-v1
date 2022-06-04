@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 // import { Link } from 'react-router-dom';
-import { Typography, Modal, Button, Box } from '@material-ui/core';
+import { Typography, Modal, Button, Box, ListItem, List, ListItemText, ListItemIcon, Grid } from '@material-ui/core';
 import { useModuleContentStyles } from '../../Styles/Onboarding/useModuleContentStyles';
+import { useModalStyles } from '../../Styles/Onboarding/useModalStyles';
 import link from '../../Assets/Onboarding/link.svg';
 import doc from '../../Assets/Onboarding/doc.svg';
 import video from '../../Assets/Onboarding/video.svg';
@@ -9,6 +10,7 @@ import video from '../../Assets/Onboarding/video.svg';
 import AirtableModal from './AirtableModal';
 import SlackModal from './SlackModal';
 import AirtableVideoModal from './AirtableVideoModal';
+import BulletedListMui from '../../ui-kit/BulletedListMui';
 
 const modalStyle = {
     position: 'absolute',
@@ -23,6 +25,7 @@ const modalStyle = {
 
 function ModuleContent(props) {
     const classes = useModuleContentStyles();
+    const modalClasses = useModalStyles();
     const { title, subheading,
         paragraph1, paragraph2,
         paragraph3, paragraph4,
@@ -36,11 +39,15 @@ function ModuleContent(props) {
         p2bullet1, p2bullet2,
         p2bullet3, p3bullet1,
         p3bullet2, p3bullet3,
-        p3bullet4,
+        p3bullet4, bullets
     } = props.content;
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+
+    const [trustDocOpen, setTrustDocOpen] = useState(false);
+    const handleTrustDocOpen = () => setTrustDocOpen(true);
+    const handleTrustDocClose = () => setTrustDocOpen(false);
 
     const [airtableOpen, setAirtableOpen] = useState(false);
     const handleAirtableOpen = () => setAirtableOpen(true);
@@ -83,6 +90,14 @@ function ModuleContent(props) {
                     }
                     {linkIcon === "doc" &&
                         <Button onClick={handleOpen} className={classes.linkContainer} >
+                            <div className={classes.linkContainer}>
+                                <img src={doc} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText} >{linkTitle}</p>
+                            </div>
+                        </Button>
+                    }
+                    {linkIcon === "trustDoc" &&
+                        <Button onClick={handleTrustDocOpen} className={classes.linkContainer} >
                             <div className={classes.linkContainer}>
                                 <img src={doc} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText} >{linkTitle}</p>
@@ -316,6 +331,33 @@ function ModuleContent(props) {
                 </Box>
             </Modal>
 
+            {/* trust doc modal */}
+            <Modal
+                open={trustDocOpen}
+                onClose={handleTrustDocClose}
+                aria-labelledby=''
+                aria-describedby=''
+                className={modalClasses.mainModal}
+            >
+                <Box className={modalClasses.modalContainer}>
+                    <Grid item={true} lg={10} md={12}>
+                        <Typography className={classes.modalTitleStyle} >
+                            {title}
+                        </Typography>
+                        <List >
+                            {bullets ? bullets.map((bullet, idx) =>
+                                <ListItem key={idx} >
+                                    <ListItemIcon>•</ListItemIcon>
+                                    <ListItemText >{bullet}</ListItemText>
+                                </ListItem>
+                            ) : null}
+                        </List>
+                        <Button onClick={handleTrustDocClose} className={classes.button}>
+                            Close
+                        </Button>
+                    </Grid>
+                </Box>
+            </Modal>
         </div>
     );
 };
