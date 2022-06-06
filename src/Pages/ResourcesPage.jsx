@@ -40,7 +40,7 @@ const employmentFacts = [
     {
         id: "emp-fact-2",
         src: emails,
-        title: "Rejected applicaitons",
+        title: "Rejected applications",
         text: "These are a common circumstance for people who have previously been convicted.",
     },
     {
@@ -85,7 +85,7 @@ const housingFacts = [
         src: processBuilding,
         title: "Transitional Housing",
         textList: [
-            " Might require you have substance abuse, mental health or physical issues",
+            "Might require you have substance abuse, mental health or physical issues",
             "Some require you attend special meetings or work",
         ],
     },
