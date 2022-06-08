@@ -6,7 +6,6 @@ export const useModuleContentStyles = makeStyles((theme) => ({
     width: "80%",
     paddingBottom: theme.spacing(4),
     [theme.breakpoints.down("sm")]: {
-      margin: theme.spacing(1),
       paddingBottom: theme.spacing(2),
     }
   },
