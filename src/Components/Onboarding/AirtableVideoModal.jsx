@@ -5,24 +5,26 @@ import { useState } from 'react';
 import video from '../../Assets/Onboarding/video.svg';
 
 const contentStyle = {
-  position: 'relative',
-  marginLeft: '110px',
-  marginTop: '50px',
+  // position: 'relative',
+  width: "100%",
+  heigth: "100%",
+  marginLeft: '50px',
+  marginTop: '25px',
   fontWeight: 400,
   fontSize: '16px',
   lineHeight: '22px',
 }
 
 export default function AirtableVideoModal() {
-  const [ sectionId, setSectionId ] = useState(1);
-  const [ activeTab, setActiveTab ] = useState(1);
+  const [sectionId, setSectionId] = useState(1);
+  const [activeTab, setActiveTab] = useState(1);
   const sections = [
     { id: 1, title: "Complete your profile" },
-    { id: 2, title: "Find your dashboard (kanban) and tasks" }, 
-    { id: 3, title: "Engaging with tasks"}, 
-    { id: 4, title: "How to create a task for yourself and add a task to someone else's kanban"}, 
-    { id: 5, title: "Track task requests & Add Tasks you created to your view"},
-    { id: 6, title: "Evalute someone's performance of a task they have completed for you" }, 
+    { id: 2, title: "Find your dashboard (kanban) and tasks" },
+    { id: 3, title: "Engaging with tasks" },
+    { id: 4, title: "How to create a task for yourself and add a task to someone else's kanban" },
+    { id: 5, title: "Track task requests & Add Tasks you created to your view" },
+    { id: 6, title: "Evalute someone's performance of a task they have completed for you" },
   ]
 
   const profile = "https://drive.google.com/file/d/1fcGzJpDKHs44ocX0AWqsBNAK5b6ivBlv/preview";
@@ -34,8 +36,8 @@ export default function AirtableVideoModal() {
 
   const tabStyle = {
     cursor: 'pointer',
-    width: '200px', 
-    height: '75px',
+    width: '200px',
+    height: '100px',
     color: '#fff',
     fontWeight: 700,
     fontSize: '17px',
@@ -46,8 +48,8 @@ export default function AirtableVideoModal() {
 
   const activeTabStyle = {
     cursor: 'pointer',
-    width: '200px', 
-    height: '75px',
+    width: '200px',
+    height: '100px',
     color: '#fff',
     fontWeight: 700,
     fontSize: '17px',
@@ -62,47 +64,47 @@ export default function AirtableVideoModal() {
   }
 
   return (
-    <Grid container style={{ background: '#A2B5D5' }} >
-        <Grid item xs={2} >
-          { sections.map((section) => (
-            <button  key={section.id}  onClick={() => showSection(section.id)} style={activeTab === section.id ? activeTabStyle : tabStyle } >
-              <img src={video} alt="" style={{ width: '20px', float: 'left' }} />
-              {section.title}
-            </button>
-          ))}
-        </Grid>
-        <Grid item xs={7} style={contentStyle}>
-            { sectionId === 1 && (
-              <div>
-                <iframe title={sections.title} src={profile} width="110%" height='auto' allow="autoplay"></iframe>
-              </div>
-            )}
-            { sectionId === 2 && (
-              <div>
-                <iframe title={sections.title} src={dashboard} width="110%" height="auto" allow="autoplay"></iframe>
-              </div>
-            )}
-            { sectionId === 3 && (
-              <div>
-                <iframe title={sections.title} src={engageTasks} width="110%" height="auto" allow="autoplay"></iframe>
-              </div>
-            )}
-            { sectionId === 4 && (
-              <div>
-                <iframe title={sections.title} src={createTasks} width="110%" height="auto" allow="autoplay"></iframe>
-              </div>
-            )}
-            { sectionId === 5 && (
-              <div>
-                <iframe title={sections.title} src={requests} width="110%" height="auto" allow="autoplay"></iframe>
-              </div>
-            )}
-            { sectionId === 6 && (
-              <div>
-                <iframe title={sections.title} src={evaluate} width="110%" height="auto" allow="autoplay"></iframe>
-              </div>
-            )}
-        </Grid>
+    <Grid container style={{ background: '#A2B5D5', height: "83.5%" }} >
+      <Grid item xs={2} >
+        {sections.map((section) => (
+          <button key={section.id} onClick={() => showSection(section.id)} style={activeTab === section.id ? activeTabStyle : tabStyle} >
+            <img src={video} alt="" style={{ width: '20px', float: 'left' }} />
+            {section.title}
+          </button>
+        ))}
+      </Grid>
+      <Grid item xs={7} md={8} lg={9} style={contentStyle}>
+        {sectionId === 1 && (
+          <div style={{ height: "100%" }}>
+            <iframe title={sections.title} src={profile} width="100%" height="90%" allow="autoplay"></iframe>
+          </div>
+        )}
+        {sectionId === 2 && (
+          <div style={{ height: "100%" }}>
+            <iframe title={sections.title} src={dashboard} width="100%" height="90%" allow="autoplay"></iframe>
+          </div>
+        )}
+        {sectionId === 3 && (
+          <div style={{ height: "100%" }}>
+            <iframe title={sections.title} src={engageTasks} width="100%" height="90%" allow="autoplay"></iframe>
+          </div>
+        )}
+        {sectionId === 4 && (
+          <div style={{ height: "100%" }}>
+            <iframe title={sections.title} src={createTasks} width="100%" height="90%" allow="autoplay"></iframe>
+          </div>
+        )}
+        {sectionId === 5 && (
+          <div style={{ height: "100%" }}>
+            <iframe title={sections.title} src={requests} width="100%" height="90%" allow="autoplay"></iframe>
+          </div>
+        )}
+        {sectionId === 6 && (
+          <div style={{ height: "100%" }}>
+            <iframe title={sections.title} src={evaluate} width="100%" height="90%" allow="autoplay"></iframe>
+          </div>
+        )}
+      </Grid>
     </Grid>
   )
 }

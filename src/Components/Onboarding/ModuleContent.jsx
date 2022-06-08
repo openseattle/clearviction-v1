@@ -321,9 +321,9 @@ function ModuleContent(props) {
                 onClose={handleSlackVideoClose}
                 aria-labelledby=''
                 aria-describedby=''
-                style={{ maxHeight: '100vh', overflowY: 'auto', position: 'absolute', top: 0 }}
+                className={modalClasses.mainModal}
             >
-                <Box sx={modalStyle}>
+                <Box className={modalClasses.videoContainer}>
                     <AirtableVideoModal />
                     <Button onClick={handleSlackVideoClose} className={classes.button}>
                         Close
