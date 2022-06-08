@@ -67,6 +67,9 @@ const miro = {
     paragraph2: "Our account is limited to three boards. Please don’t create another board or we’ll be locked out of one of our existing boards!",
     linkTitle: "Watch our Miro guide",
     linkIcon: "videoMiro",
+    linkTitle2: "Miro team profile",
+    linkIcon2: "link",
+    linkLocation2: "https://miro.com/app/settings/team/3074457348441321142/profile",
 }
 
 const button1 = {
