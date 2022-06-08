@@ -10,6 +10,7 @@ import video from '../../Assets/Onboarding/video.svg';
 import AirtableModal from './AirtableModal';
 import SlackModal from './SlackModal';
 import AirtableVideoModal from './AirtableVideoModal';
+import SlackVideoModal from './SlackVideoModal';
 import BulletedListMui from '../../ui-kit/BulletedListMui';
 
 const modalStyle = {
@@ -273,7 +274,7 @@ function ModuleContent(props) {
                 onClose={handleAirtableClose}
                 aria-labelledby=''
                 aria-describedby=''
-                style={{ maxHeight: '100vh', overflowY: 'auto', position: 'absolute', top: 0 }}
+                className={modalClasses.mainModal}
             >
                 <Box sx={modalStyle}>
                     <AirtableModal />
@@ -289,9 +290,9 @@ function ModuleContent(props) {
                 onClose={handleAirtableVideoClose}
                 aria-labelledby=''
                 aria-describedby=''
-                style={{ maxHeight: '100vh', overflowY: 'auto', position: 'absolute', top: 0 }}
+                className={modalClasses.mainModal}
             >
-                <Box sx={modalStyle}>
+                <Box className={modalClasses.videoContainer}>
                     <AirtableVideoModal />
                     <Button onClick={handleAirtableVideoClose} className={classes.button}>
                         Close
@@ -305,7 +306,7 @@ function ModuleContent(props) {
                 onClose={handleSlackClose}
                 aria-labelledby=''
                 aria-describedby=''
-                style={{ maxHeight: '100vh', overflowY: 'auto', position: 'absolute', top: 0 }}
+                className={modalClasses.mainModal}
             >
                 <Box sx={modalStyle}>
                     <SlackModal />
@@ -324,7 +325,7 @@ function ModuleContent(props) {
                 className={modalClasses.mainModal}
             >
                 <Box className={modalClasses.videoContainer}>
-                    <AirtableVideoModal />
+                    <SlackVideoModal />
                     <Button onClick={handleSlackVideoClose} className={classes.button}>
                         Close
                     </Button>
