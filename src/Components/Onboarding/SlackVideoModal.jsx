@@ -24,7 +24,6 @@ export default function SlackVideoModal() {
     { id: 5, title: "How does donut work?"},
     { id: 6, title: "How to check threads/mentions?" }, 
     { id: 7, title: "Active/inactice status"},
-    { id: 8, title: "Set up your notification preferences" },
   ]
 
   const profile = "https://drive.google.com/file/d/13ke5zaKAJbChEOB5Im1tC5pypQ3XiZM-/preview";
@@ -34,7 +33,6 @@ export default function SlackVideoModal() {
   const donut = "https://drive.google.com/file/d/1Ne1eBJ76itiCTQjYzjhVxxR0n74SVnoO/preview";
   const threads = "https://drive.google.com/file/d/1Y-GN_bW03z4uyU91n695h7aaQDizULDP/preview";
   const active = "https://drive.google.com/file/d/1qNlcKF7Nik3PaifSJvKr_E6IvxewM5BX/preview";
-  const notifications = "https://drive.google.com/file/d/1b6b6Wz90LSllf4dC2Ja-6r-47Yr2mUDv/preview";
 
   const tabStyle = {
     cursor: 'pointer',
@@ -109,11 +107,6 @@ export default function SlackVideoModal() {
             { sectionId === 7 && (
               <div>
                 <iframe title={sections.title} src={active} width="110%" height="auto" allow="autoplay"></iframe>
-              </div>
-            )}
-            { sectionId === 8 && (
-              <div>
-                <iframe title={sections.title} src={notifications} width="110%" height="auto" allow="autoplay"></iframe>
               </div>
             )}
         </Grid>
