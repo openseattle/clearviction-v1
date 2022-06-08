@@ -19,9 +19,9 @@ export default function AirtableVideoModal() {
   const sections = [
     { id: 1, title: "Complete your profile" },
     { id: 2, title: "Find your dashboard (kanban) and tasks" }, 
-    { id: 3, title: "Engage with tasks"}, 
+    { id: 3, title: "Engaging with tasks"}, 
     { id: 4, title: "How to create a task for yourself and add a task to someone else's kanban"}, 
-    { id: 5, title: "Track task requests you make of others & Add Task you created to your view"},
+    { id: 5, title: "Track task requests & Add Tasks you created to your view"},
     { id: 6, title: "Evalute someone's performance of a task they have completed for you" }, 
   ]
 
