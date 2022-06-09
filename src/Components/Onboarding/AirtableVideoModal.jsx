@@ -4,27 +4,21 @@ import { useState } from 'react';
 // icons
 import video from '../../Assets/Onboarding/video.svg';
 
-const contentStyle = {
-  // position: 'relative',
-  width: "100%",
-  heigth: "100%",
-  marginLeft: '50px',
-  marginTop: '25px',
-  fontWeight: 400,
-  fontSize: '16px',
-  lineHeight: '22px',
-}
+// styles
+import { useModalStyles } from '../../Styles/Onboarding/useModalStyles';
 
 export default function AirtableVideoModal() {
   const [sectionId, setSectionId] = useState(1);
   const [activeTab, setActiveTab] = useState(1);
+  const classes = useModalStyles();
+
   const sections = [
     { id: 1, title: "Complete your profile" },
     { id: 2, title: "Find your dashboard (kanban) and tasks" },
     { id: 3, title: "Engaging with tasks" },
-    { id: 4, title: "How to create a task for yourself and add a task to someone else's kanban" },
+    { id: 4, title: "Creating a task for yourself & add a task to someone else's kanban" },
     { id: 5, title: "Track task requests & Add Tasks you created to your view" },
-    { id: 6, title: "Evalute someone's performance of a task they have completed for you" },
+    { id: 6, title: "Evaluting performance of a task someone completed for you" },
   ]
 
   const profile = "https://drive.google.com/file/d/1fcGzJpDKHs44ocX0AWqsBNAK5b6ivBlv/preview";
@@ -39,7 +33,7 @@ export default function AirtableVideoModal() {
     width: '200px',
     height: '100px',
     color: '#fff',
-    fontWeight: 700,
+    fontWeight: 600,
     fontSize: '17px',
     lineHeight: '23px',
     background: '#A2B5D5',
@@ -51,7 +45,7 @@ export default function AirtableVideoModal() {
     width: '200px',
     height: '100px',
     color: '#fff',
-    fontWeight: 700,
+    fontWeight: 600,
     fontSize: '17px',
     lineHeight: '23px',
     background: '#4E6C99',
@@ -64,7 +58,7 @@ export default function AirtableVideoModal() {
   }
 
   return (
-    <Grid container style={{ background: '#A2B5D5', height: "83.5%" }} >
+    <Grid container style={{ background: '#A2B5D5', height: "84%" }} >
       <Grid item xs={2} >
         {sections.map((section) => (
           <button key={section.id} onClick={() => showSection(section.id)} style={activeTab === section.id ? activeTabStyle : tabStyle} >
@@ -73,7 +67,7 @@ export default function AirtableVideoModal() {
           </button>
         ))}
       </Grid>
-      <Grid item xs={7} md={8} lg={9} style={contentStyle}>
+      <Grid item xs={7} md={8} lg={9} className={classes.contentStyle}>
         {sectionId === 1 && (
           <div style={{ height: "100%" }}>
             <iframe title={sections.title} src={profile} width="100%" height="90%" allow="autoplay"></iframe>

@@ -61,4 +61,25 @@ export const useModalStyles = makeStyles((theme) => ({
             // padding: "15px"
         }
     },
+    contentStyle: {
+        // position: 'relative',
+        width: "100%",
+        heigth: "100%",
+        marginLeft: '50px',
+        marginTop: '25px',
+        fontWeight: 400,
+        fontSize: '16px',
+        lineHeight: '22px',
+        [theme.breakpoints.down("md")]: {
+            // paddingLeft: "75px",
+            // top: "100%"
+            // width: '85%',
+            // height: '85%',
+            marginLeft: '75px',
+        },
+        [theme.breakpoints.down("sm")]: {
+            marginLeft: '125px',
+        },
+    }
+
 }))

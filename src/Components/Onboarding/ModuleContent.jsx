@@ -15,7 +15,7 @@ import BulletedListMui from '../../ui-kit/BulletedListMui';
 
 const modalStyle = {
     position: 'absolute',
-    top: '70%',
+    top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: '80%',
@@ -234,6 +234,7 @@ function ModuleContent(props) {
                 onClose={handleClose}
                 aria-labelledby=''
                 aria-describedby=''
+                className={modalClasses.mainModal}
             >
                 <Box sx={modalStyle}>
                     <Typography className={classes.modalTitleStyle} >

@@ -4,20 +4,14 @@ import { useState } from 'react';
 // icons
 import video from '../../Assets/Onboarding/video.svg';
 
-const contentStyle = {
-  // position: 'relative',
-  width: "100%",
-  heigth: "100%",
-  marginLeft: '50px',
-  marginTop: '25px',
-  fontWeight: 400,
-  fontSize: '16px',
-  lineHeight: '22px',
-}
+// styles
+import { useModalStyles } from '../../Styles/Onboarding/useModalStyles';
 
 export default function SlackVideoModal() {
   const [sectionId, setSectionId] = useState(1);
   const [activeTab, setActiveTab] = useState(1);
+  const classes = useModalStyles();
+
   const sections = [
     { id: 1, title: "Set up your profile" },
     { id: 2, title: "Where to find channels and how to join a channel?" },
@@ -75,7 +69,7 @@ export default function SlackVideoModal() {
           </button>
         ))}
       </Grid>
-      <Grid item xs={7} md={8} lg={9} style={contentStyle}>
+      <Grid item xs={7} md={8} lg={9} className={classes.contentStyle}>
         {sectionId === 1 && (
           <div style={{ height: "100%" }}>
             <iframe title={sections.title} src={profile} width="100%" height="90%" allow="autoplay"></iframe>
