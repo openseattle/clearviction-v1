@@ -19,7 +19,7 @@ function OnboardingHome() {
         <div>
             <Header text={headerText} />
             <div className={classes.body}>
-
+                <Typography variant='h4' className={classes.mobileHeader}>Welcome</Typography>
                 <Typography variant="body2" className={classes.bodyPara}>
                     This onboarding guide will help you familiarize yourself with the tools and practices that we use, as well as get you acquainted with our disciplines and progress. The guide will help you see where you best fit in and how you can start contributing.
                 </Typography>

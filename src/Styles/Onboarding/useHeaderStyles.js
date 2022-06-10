@@ -5,8 +5,10 @@ export const useHeaderStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.primary.dark,
     color: "white",
     marginBottom: theme.spacing(4),
-    [theme.breakpoints.down("sm")]: {
-      // padding: theme.spacing(9, 0),
+    [theme.breakpoints.down("xs")]: {
+      padding: theme.spacing(2),
+      display: "flex",
+      justifyContent: "space-between"
     }
   },
   logoStyle: {
@@ -19,11 +21,14 @@ export const useHeaderStyles = makeStyles((theme) => ({
       width: "70px",
     },
     [theme.breakpoints.down("xs")]: {
-      width: "50px",
+      width: "35px",
     }
   },
   socialContainer: {
     padding: theme.spacing(4),
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
+    }
   },
   socialIcons: {
     float: "right",
@@ -36,6 +41,12 @@ export const useHeaderStyles = makeStyles((theme) => ({
     padding: theme.spacing(3),
     [theme.breakpoints.down("sm")]: {
       padding: theme.spacing(3),
+    }
+  },
+  headingContainer: {
+    padding: theme.spacing(3),
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
     }
   },
 
@@ -111,8 +122,17 @@ export const useHeaderStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       fontSize: "20px",
     }
-  }
-
-
+  },
+  menuStyle: {
+    padding: theme.spacing(3),
+    [theme.breakpoints.down("xs")]: {
+      margin: theme.spacing(2.5),
+      display: "flex",
+      flexDirection: "column"
+    }
+  },
+  closeIcon: {
+    color: "white",
+  },
 
 }));

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import Header from '../../Components/Onboarding/Header';
-import { Box, Grid } from '@material-ui/core';
+import { Box, Grid, Typography } from '@material-ui/core';
 import ModuleContent from '../../Components/Onboarding/ModuleContent';
 import { useModuleContentStyles } from '../../Styles/Onboarding/useModuleContentStyles';
 // import Theme from '../../Components/Theme';
@@ -94,6 +94,7 @@ function OnboardingMod2() {
     return (
         <>
             <Header text={headerText} />
+            <Typography variant='h4' className={classes.mobileHeader}>Module 2</Typography>
             <Box className={classes.pageStyle}>
                 <Grid container justifyContent="center" className={classes.moduleContentCard} >
                     <Grid item sm={2} className={classes.cardIcon} >

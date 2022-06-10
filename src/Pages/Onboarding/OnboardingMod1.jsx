@@ -1,9 +1,8 @@
-import { useEffect } from 'react';
 import Header from '../../Components/Onboarding/Header';
 import ModuleContent from '../../Components/Onboarding/ModuleContent';
 import Footer from '../../Components/Onboarding/Footer';
 
-import { Box, Grid } from '@material-ui/core';
+import { Box, Grid, Typography } from '@material-ui/core';
 import { useModuleContentStyles } from '../../Styles/Onboarding/useModuleContentStyles';
 
 import arrowRight from '../../Assets/Onboarding/arrowRight.svg';
@@ -60,6 +59,7 @@ function OnboardingMod1() {
     return (
         <>
             <Header text={headerText} />
+            <Typography variant='h4' className={classes.mobileHeader}>Module 1</Typography>
             <Box >
                 <Grid container justifyContent="center" className={classes.moduleContentCard} >
                     <Grid item xs={2} className={classes.cardIcon} >

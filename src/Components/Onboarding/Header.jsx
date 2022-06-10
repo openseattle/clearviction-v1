@@ -1,13 +1,13 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import smallLogo from '../../Assets/Onboarding/smallLogo.svg';
-import fb from '../../Assets/Onboarding/fb.svg';
-import linkedIn from '../../Assets/Onboarding/linkedIn.svg';
-import twitter from '../../Assets/Onboarding/twitter.svg';
 
-import { Typography } from '@material-ui/core';
+
+import { Typography, Box, IconButton, List, ListItem, Drawer, ListItemText } from '@material-ui/core';
+import { MenuSharp as MenuIcon, CloseSharp } from "@material-ui/icons";
 import { useHeaderStyles } from '../../Styles/Onboarding/useHeaderStyles';
+import SocialContainer from './SocialContainer';
 
 function Header(props) {
     const classes = useHeaderStyles();
@@ -15,7 +15,16 @@ function Header(props) {
 
     useEffect(() => {
         window.scrollTo(0, 0)
-    }, [])
+    }, []);
+
+    const [menuState, setMenuState] = useState(null);
+    const handleOpenMenu = event => {
+        setMenuState(event.currentTarget);
+    };
+
+    const handleCloseMenu = () => {
+        setMenuState(null);
+    };
 
     return (
         <div className={classes.darkBlueBackground}>
@@ -24,27 +33,10 @@ function Header(props) {
             </Link>
 
             <div className={classes.socialContainer}>
-                <a href="https://twitter.com/Clearviction"
-                    className={classes.socialIcons}
-                    target="_blank"
-                    rel="noreferrer">
-                    <img src={twitter} alt="Twitter" />
-                </a>
-                <a href="https://www.linkedin.com/company/clearviction/"
-                    className={classes.socialIcons}
-                    target="_blank"
-                    rel="noreferrer">
-                    <img src={linkedIn} alt="LinkedIn" />
-                </a>
-                <a href="https://www.facebook.com/Clearviction-104011035539979/?ref=page_internal"
-                    className={classes.socialIcons}
-                    target="_blank"
-                    rel="noreferrer">
-                    <img src={fb} alt="facebook" />
-                </a>
+                <SocialContainer />
             </div>
 
-            <div className={classes.regularContainer}>
+            <div className={classes.headingContainer}>
                 {title === "Welcome!" ? (
                     <div className={classes.welcomeHeader}>
                         <Typography variant="h1" className={classes.welcome} style={{ fontWeight: 400 }}>{title}</Typography>
@@ -57,6 +49,35 @@ function Header(props) {
                     </div>
                 )}
             </div>
+            {/* mobile menu */}
+
+            {/* Drawer based nav */}
+            <Box display={{ xs: "flex", sm: "none" }}>
+                <IconButton
+                    size="medium"
+                    edge="start"
+                    color="inherit"
+                    aria-label="Show/hide navigation menu"
+                    onClick={handleOpenMenu}
+                >
+                    <MenuIcon fontSize="large" />
+                </IconButton>
+            </Box>
+            <Drawer anchor="right" open={Boolean(menuState)} onClose={handleCloseMenu}>
+                <List className={classes.menuStyle}>
+                    <ListItem style={{ justifyContent: "center" }}>
+                        <IconButton onClick={handleCloseMenu} aria-label="close menu">
+                            <CloseSharp fontSize="large" className={classes.closeIcon} />
+                        </IconButton>
+                    </ListItem>
+                    <ListItem>
+                        <ListItemText style={{ textAlign: "center" }}>{title}</ListItemText>
+                    </ListItem>
+                    <ListItem >
+                        <SocialContainer />
+                    </ListItem>
+                </List>
+            </Drawer>
         </div>
     );
 };

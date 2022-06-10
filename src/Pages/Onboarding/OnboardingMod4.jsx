@@ -87,6 +87,7 @@ function OnboardingMod4() {
     return (
         <div>{console.log('mod4')}
             <Header text={headerText} />
+            <Typography variant='h4' className={classes.mobileHeader}>Module 4</Typography>
             <Box >
                 <Grid container justifyContent="center" className={classes.moduleContentCard}>
                     <Grid item sm={2} className={classes.cardIcon} >

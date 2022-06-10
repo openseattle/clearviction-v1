@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Grid, Box } from '@material-ui/core';
+import { Grid, Box, Typography } from '@material-ui/core';
 import { useModuleContentStyles } from '../../Styles/Onboarding/useModuleContentStyles';
 
 import Header from '../../Components/Onboarding/Header';
@@ -69,9 +69,11 @@ const button2 = {
 
 function OnboardingMod3() {
     const classes = useModuleContentStyles();
+
     return (
         <>
             <Header text={headerText} />
+            <Typography variant='h4' className={classes.mobileHeader}>Module 3</Typography>
             <Box >
                 <Grid container justifyContent="center" className={classes.moduleContentCard}>
                     <Grid item sm={2} className={classes.cardIcon} >

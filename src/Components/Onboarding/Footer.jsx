@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import { useFooterStyles } from '../../Styles/Onboarding/useFooterStyles';
 import PrimaryButton from './PrimaryButton';
 import CompleteButton from './CompleteButton';

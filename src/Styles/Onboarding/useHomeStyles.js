@@ -59,5 +59,13 @@ export const useHomeStyles = makeStyles((theme) => ({
     borderWidth: "4px",
     borderColor: "#4E6C99",
     borderStyle: "solid"
+  },
+  mobileHeader: {
+    fontSize: "20px",
+    textAlign: "center",
+    color: "#4E6C99",
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    }
   }
 }));

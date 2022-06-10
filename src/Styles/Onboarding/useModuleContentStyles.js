@@ -137,5 +137,15 @@ export const useModuleContentStyles = makeStyles((theme) => ({
     //     marginBottom: theme.spacing(4),
     // }
   },
+  mobileHeader: {
+    fontSize: "20px",
+    textAlign: "center",
+    color: "#4E6C99",
+    textAlign: "left",
+    marginLeft: "32px",
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    }
+  }
 
 }));
