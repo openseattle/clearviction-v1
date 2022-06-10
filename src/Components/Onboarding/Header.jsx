@@ -49,8 +49,8 @@ function Header(props) {
                     </div>
                 )}
             </div>
-            {/* mobile menu */}
 
+            {/* mobile header */}
             {/* Drawer based nav */}
             <Box display={{ xs: "flex", sm: "none" }}>
                 <IconButton

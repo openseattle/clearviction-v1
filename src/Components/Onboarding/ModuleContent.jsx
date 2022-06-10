@@ -73,10 +73,10 @@ function ModuleContent(props) {
 
             <Typography variant="h4" className={classes.moduleCardHeading}>{title}</Typography>
             <Typography variant="body2" className={classes.bold}>{subheading}</Typography>
-            {paragraph1 ? <Typography variant="body2" className={classes.moduleCardBody}>{paragraph1}</Typography> : null}
-            {paragraph2 ? <Typography variant="body2" className={classes.moduleCardBody}>{paragraph2}</Typography> : null}
-            {paragraph3 ? <Typography variant="body2" className={classes.moduleCardBody}>{paragraph3}</Typography> : null}
-            {paragraph4 ? <Typography variant="body2" className={classes.moduleCardBody}>{paragraph4}</Typography> : null}
+            {paragraph1 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph1}</Typography> : null}
+            {paragraph2 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph2}</Typography> : null}
+            {paragraph3 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph3}</Typography> : null}
+            {paragraph4 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph4}</Typography> : null}
 
             {linkTitle ? (
                 <div className={classes.moduleContentLink}>

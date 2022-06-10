@@ -19,6 +19,12 @@ export const useButtonStyles = makeStyles((theme) => ({
       lineHeight: 2.7,
       [theme.breakpoints.down("sm")]: {
          marginBottom: theme.spacing(4),
+      },
+      [theme.breakpoints.down("xs")]: {
+         marginBottom: theme.spacing(2),
+         minWidth: "175px",
+         maxWidth: "175px",
+
       }
    },
    buttonSecondary: {

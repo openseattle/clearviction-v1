@@ -6,6 +6,7 @@ export const useModuleContentStyles = makeStyles((theme) => ({
     width: "80%",
     paddingBottom: theme.spacing(4),
     [theme.breakpoints.down("sm")]: {
+      // width: "85%",
       paddingBottom: theme.spacing(2),
     }
   },
@@ -53,12 +54,14 @@ export const useModuleContentStyles = makeStyles((theme) => ({
     textAlign: "right",
     marginRight: "-25px",
     [theme.breakpoints.down("sm")]: {
-      marginRight: theme.spacing(1),
-      marginTop: "5px"
+
     }
   },
   icon: {
     width: "70px",
+    [theme.breakpoints.down("sm")]: {
+      width: "50px"
+    }
   },
   moduleContentLink: {
     border: "2px solid #4e6c99",
@@ -74,12 +77,13 @@ export const useModuleContentStyles = makeStyles((theme) => ({
     fontWeight: "bold",
     display: "flex",
     padding: theme.spacing(1),
-    [theme.breakpoints.down("sm")]: {
-      // width: "90%",
-      height: "70px",
+    [theme.breakpoints.down("xs")]: {
+      borderRadius: "25px",
+      width: "50%",
+      height: "60px",
       // fontSize: "16px",
       justifyContent: "space-between",
-      marginLeft: theme.spacing(-1),
+      marginLeft: theme.spacing(-7),
       alignItems: "center"
     }
   },

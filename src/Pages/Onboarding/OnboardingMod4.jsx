@@ -77,11 +77,6 @@ const button2 = {
     text: "back to homepage"
 }
 
-const buttonComplete = {
-    link: "/onboarding-mod4",
-    text: "mark as done"
-}
-
 function OnboardingMod4() {
     const classes = useModuleContentStyles();
     return (
@@ -90,34 +85,34 @@ function OnboardingMod4() {
             <Typography variant='h4' className={classes.mobileHeader}>Module 4</Typography>
             <Box >
                 <Grid container justifyContent="center" className={classes.moduleContentCard}>
-                    <Grid item sm={2} className={classes.cardIcon} >
+                    <Grid item xs={2} className={classes.cardIcon} >
                         <img src={boat} alt="" className={classes.icon} />
                     </Grid>
-                    <Grid item xs={9}>
+                    <Grid item xs={10}>
                         <ModuleContent content={teamNemo} />
                     </Grid>
-                    <Grid item sm={2} className={classes.cardIcon} >
+                    <Grid item xs={2} className={classes.cardIcon} >
                         <img src={venn} alt="" className={classes.icon} />
                     </Grid>
-                    <Grid item xs={9} >
+                    <Grid item xs={10} >
                         <ModuleContent content={team} />
                     </Grid>
-                    <Grid item sm={2} className={classes.cardIcon} >
+                    <Grid item xs={2} className={classes.cardIcon} >
                         <img src={bug} alt="" className={classes.icon} />
                     </Grid>
-                    <Grid item xs={9} >
+                    <Grid item xs={10} >
                         <ModuleContent content={bugs} />
                     </Grid>
-                    <Grid item sm={2} className={classes.cardIcon} >
+                    <Grid item xs={2} className={classes.cardIcon} >
                         <img src={question} alt="" className={classes.icon} />
                     </Grid>
-                    <Grid item xs={9} >
+                    <Grid item xs={10} >
                         <ModuleContent content={questions} />
                     </Grid>
-                    <Grid item sm={2} className={classes.cardIcon} >
+                    <Grid item xs={2} className={classes.cardIcon} >
                         <img src={group} alt="" className={classes.icon} />
                     </Grid>
-                    <Grid item xs={9} >
+                    <Grid item xs={10} >
                         <ModuleContent content={doing} />
                     </Grid>
                 </Grid>
@@ -156,7 +151,7 @@ function OnboardingMod4() {
                 </Grid>
             </div>
 
-            <Footer button1={button1} button2={button2} buttonComplete={buttonComplete} />
+            <Footer button1={button1} button2={button2} />
 
         </div>
     );

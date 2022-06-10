@@ -8,6 +8,9 @@ export const useModuleCardStyles = makeStyles((theme) => ({
     width: "75%",
     [theme.breakpoints.down("sm")]: {
       width: "80%",
+    },
+    [theme.breakpoints.down("xs")]: {
+      boxShadow: "none",
     }
   },
   cardHeading: {
@@ -16,6 +19,9 @@ export const useModuleCardStyles = makeStyles((theme) => ({
     color: "#f6f6f6",
     borderRadius: "20px",
     textTransform: "uppercase",
+    [theme.breakpoints.down("xs")]: {
+      display: "none",
+    }
 
   },
   cardSubheading: {
@@ -23,7 +29,7 @@ export const useModuleCardStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       display: "flex",
       justifyContent: "space-around",
-
+      textAlign: "center",
     }
   },
   cardBody: {
@@ -35,13 +41,28 @@ export const useModuleCardStyles = makeStyles((theme) => ({
     paddingTop: theme.spacing(4),
     color: "#2b2929",
     [theme.breakpoints.down("sm")]: {
-      display: "block",
+      display: "flex",
+      flexDirection: "column",
       paddingLeft: theme.spacing(1),
-      paddingRight: theme.spacing(3),
+      paddingRight: theme.spacing(1),
+    },
+    [theme.breakpoints.down("xs")]: {
+      display: "flex",
+      flexDirection: "column"
+    }
+  },
+  cardText: {
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center"
     }
   },
   iconStyle: {
     marginRight: theme.spacing(4.5),
+    [theme.breakpoints.down('sm')]: {
+      marginRight: theme.spacing(0),
+      marginBottom: theme.spacing(2),
+      height: "75px"
+    }
   },
   headingStyle: {
     marginBottom: theme.spacing(6),
@@ -61,4 +82,16 @@ export const useModuleCardStyles = makeStyles((theme) => ({
     textDecoration: "none",
     color: theme.palette.primary.main,
   },
+  mobileButton: {
+    backgroundColor: theme.palette.primary.main,
+    padding: theme.spacing(2, 5),
+    marginTop: theme.spacing(3),
+    color: "#f6f6f6",
+    borderRadius: "20px",
+    textTransform: "uppercase",
+    textAlign: "center",
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
+    }
+  }
 }));

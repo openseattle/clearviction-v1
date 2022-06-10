@@ -9,6 +9,7 @@ import remote from '../../Assets/Onboarding/remote.svg';
 import simpleQuestion from '../../Assets/Onboarding/simpleQuestion.svg';
 
 import { useModuleCardStyles } from '../../Styles/Onboarding/useModuleCardStyles';
+import PrimaryButton from '../../ui-kit/PrimaryButton';
 
 function ModuleCard(props) {
     const classes = useModuleCardStyles();
@@ -23,22 +24,24 @@ function ModuleCard(props) {
                     </div>
                     <div className={classes.cardBody}>
                         {number === "module 1" &&
-                            <img src={screens} alt="" />
+                            <img className={classes.iconStyle} src={screens} alt="" />
                         }
                         {number === "module 2" &&
-                            <img src={tool} alt="" />
+                            <img className={classes.iconStyle} src={tool} alt="" />
                         }
                         {number === "module 3" &&
-                            <img src={remote} alt="" />
+                            <img className={classes.iconStyle} src={remote} alt="" />
                         }
                         {number === "module 4" &&
-                            <img src={simpleQuestion} alt="" />
+                            <img className={classes.iconStyle} src={simpleQuestion} alt="" />
                         }
-                        <div style={{ marginLeft: "30px" }}>
+                        <div>
                             <Typography variant="h5" className={classes.cardSubheading}>{subheading}</Typography>
-                            <Typography variant="body2">{text}</Typography>
+                            <Typography variant="body2" className={classes.cardText}>{text}</Typography>
                         </div>
-
+                        <div className={classes.mobileButton}>
+                            <Typography variant="h6" style={{ fontSize: "17px" }}>{number}</Typography>
+                        </div>
                     </div>
                 </div>
             </Link>

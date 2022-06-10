@@ -65,19 +65,19 @@ function OnboardingMod1() {
                     <Grid item xs={2} className={classes.cardIcon} >
                         <img src={circleArrow} alt="" className={classes.icon} />
                     </Grid>
-                    <Grid item xs={9}>
+                    <Grid item xs={10}>
                         <ModuleContent content={mission} />
                     </Grid>
                     <Grid item xs={2} className={classes.cardIcon} >
                         <img src={arrowRight} alt="" className={classes.icon} />
                     </Grid>
-                    <Grid item xs={9} >
+                    <Grid item xs={10} >
                         <ModuleContent content={story} />
                     </Grid>
                     <Grid item xs={2} className={classes.cardIcon} >
                         <img src={exclamation} alt="" className={classes.icon} />
                     </Grid>
-                    <Grid item xs={9} >
+                    <Grid item xs={10} >
                         <ModuleContent content={problem} />
                     </Grid>
                 </Grid>

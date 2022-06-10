@@ -9,7 +9,7 @@ function Footer(props) {
 
     return (
         <>
-            <div className={classes.footerContainer} style={{ justifyContent: "flex-end", marginBottom: "-20px" }}>
+            <div className={classes.completeContainer}>
                 <CompleteButton />
             </div>
             <div className={classes.footerContainer}>

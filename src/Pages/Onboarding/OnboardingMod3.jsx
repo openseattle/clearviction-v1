@@ -76,22 +76,22 @@ function OnboardingMod3() {
             <Typography variant='h4' className={classes.mobileHeader}>Module 3</Typography>
             <Box >
                 <Grid container justifyContent="center" className={classes.moduleContentCard}>
-                    <Grid item sm={2} className={classes.cardIcon} >
+                    <Grid item xs={2} className={classes.cardIcon} >
                         <img className={classes.icon} src={remote} alt="" />
                     </Grid>
-                    <Grid item xs={9}>
+                    <Grid item xs={10}>
                         <ModuleContent content={remoteWork} />
                     </Grid>
-                    <Grid item sm={2} className={classes.cardIcon}>
+                    <Grid item xs={2} className={classes.cardIcon}>
                         <img className={classes.icon} src={symbols} alt="" />
                     </Grid>
-                    <Grid item xs={9}>
+                    <Grid item xs={10}>
                         <ModuleContent content={trust} />
                     </Grid>
-                    <Grid item sm={2} className={classes.cardIcon}>
+                    <Grid item xs={2} className={classes.cardIcon}>
                         <img className={classes.icon} src={file} alt="" />
                     </Grid>
-                    <Grid item xs={9}>
+                    <Grid item xs={10}>
                         <ModuleContent content={truth} />
                     </Grid>
                 </Grid>

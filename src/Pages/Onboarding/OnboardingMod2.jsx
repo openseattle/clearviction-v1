@@ -97,28 +97,28 @@ function OnboardingMod2() {
             <Typography variant='h4' className={classes.mobileHeader}>Module 2</Typography>
             <Box className={classes.pageStyle}>
                 <Grid container justifyContent="center" className={classes.moduleContentCard} >
-                    <Grid item sm={2} className={classes.cardIcon} >
+                    <Grid item xs={2} className={classes.cardIcon} >
                         <img src={remote} alt="" className={classes.icon} />
                     </Grid>
-                    <Grid item xs={9}>
+                    <Grid item xs={10}>
                         <ModuleContent content={zoom} />
                     </Grid>
-                    <Grid item sm={2} className={classes.cardIcon} >
+                    <Grid item xs={2} className={classes.cardIcon} >
                         <img src={checklist} alt="" className={classes.icon} />
                     </Grid>
-                    <Grid item xs={9} >
+                    <Grid item xs={10} >
                         <ModuleContent content={airtable} />
                     </Grid>
-                    <Grid item sm={2} className={classes.cardIcon} >
+                    <Grid item xs={2} className={classes.cardIcon} >
                         <img src={chat} alt="" className={classes.icon} />
                     </Grid>
-                    <Grid item xs={9} >
+                    <Grid item xs={10} >
                         <ModuleContent content={slack} />
                     </Grid>
-                    <Grid item sm={2} className={classes.cardIcon} >
+                    <Grid item xs={2} className={classes.cardIcon} >
                         <img src={paper} alt="" className={classes.icon} />
                     </Grid>
-                    <Grid item xs={9} >
+                    <Grid item xs={10} >
                         <ModuleContent content={miro} />
                     </Grid>
                 </Grid>
