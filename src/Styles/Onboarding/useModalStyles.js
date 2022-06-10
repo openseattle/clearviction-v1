@@ -3,7 +3,20 @@ import { makeStyles } from "@material-ui/core";
 export const useModalStyles = makeStyles((theme) => ({
     mainModal: {
         overflowY: 'auto',
+        // maxHeight: "200%"
+    },
+    modalStyle: {
         position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: '80%',
+        backgroundColor: 'white',
+        boxShadow: 24,
+        padding: "50px",
+        paddingTop: "25px",
+        paddingBottom: "25px",
+        maxHeight: "100%"
     },
     modalContainer: {
         position: 'absolute',

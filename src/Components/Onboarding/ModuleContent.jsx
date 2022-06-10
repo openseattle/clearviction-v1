@@ -236,7 +236,7 @@ function ModuleContent(props) {
                 aria-describedby=''
                 className={modalClasses.mainModal}
             >
-                <Box sx={modalStyle}>
+                <Box className={modalClasses.modalStyle}>
                     <Typography className={classes.modalTitleStyle} >
                         {modalTitle}
                     </Typography>
