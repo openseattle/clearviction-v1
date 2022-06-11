@@ -1,16 +1,24 @@
 import { makeStyles } from "@material-ui/core";
+import { LinearScale } from "@material-ui/icons";
 
 export const useModuleCardStyles = makeStyles((theme) => ({
   moduleCard: {
     boxShadow: "0px 4px 4px rgba(0, 0, 0, 0.25)",
     borderRadius: "20px",
     margin: theme.spacing(4, "auto"),
+    transition: "400ms ease-in-out",
     width: "75%",
+    '&:hover' : {
+      transform: "scale(1.08)",
+      backgroundColor: "lightgrey",
+    },
     [theme.breakpoints.down("sm")]: {
-      width: "80%",
+      width: "90%",
+      margin: theme.spacing(2, "auto"),
     },
     [theme.breakpoints.down("xs")]: {
-      boxShadow: "none",
+      // boxShadow: "none",
+      width: "95%",
     }
   },
   cardHeading: {

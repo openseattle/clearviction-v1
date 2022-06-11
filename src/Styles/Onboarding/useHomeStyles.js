@@ -13,6 +13,10 @@ export const useHomeStyles = makeStyles((theme) => ({
   },
   bodyPara: {
     marginBottom: theme.spacing(3),
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "18px",
+      marginBottom: theme.spacing(2),
+    }
   },
   cardSubheading: {
     marginBottom: theme.spacing(3),
@@ -61,7 +65,8 @@ export const useHomeStyles = makeStyles((theme) => ({
     borderStyle: "solid"
   },
   mobileHeader: {
-    fontSize: "20px",
+    fontSize: "28px",
+    marginBottom: theme.spacing(3),
     textAlign: "center",
     color: "#4E6C99",
     [theme.breakpoints.up("sm")]: {
