@@ -433,7 +433,7 @@ const data: Pages = {
             },
             {
                 type: BodyType.LINK,
-                text: "RCW 46.61.504 - actual physical control while under the influence",
+                text: "RCW 46.61.504 - Physical control of vehicle under the influence",
                 href: "https://app.leg.wa.gov/rcw/default.aspx?cite=46.61.504",
             },
             {
