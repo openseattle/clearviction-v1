@@ -137,13 +137,9 @@ export const useModuleContentStyles = makeStyles((theme) => ({
     fontSize: "18px",
     fontWeight: "bold",
     lineHeight: 2.7,
-    // [theme.breakpoints.down("sm")]: {
-    //     marginBottom: theme.spacing(4),
-    // }
   },
   mobileHeader: {
     fontSize: "20px",
-    textAlign: "center",
     color: "#4E6C99",
     textAlign: "left",
     marginLeft: "32px",

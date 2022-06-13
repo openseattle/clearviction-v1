@@ -50,28 +50,15 @@ export const useModalStyles = makeStyles((theme) => ({
         left: '50%',
         transform: 'translate(-50%, -50%)',
         width: '80%',
-        height: '80%',
+        height: 'auto',
         backgroundColor: 'white',
         boxShadow: 24,
         padding: "25px",
         paddingLeft: "25px",
-        [theme.breakpoints.down("lg")]: {
-            // top: "60%"
-        },
         [theme.breakpoints.down("md")]: {
-            // paddingLeft: "75px",
-            // top: "100%"
-            width: '85%',
-            height: '85%',
+            width: '100%',
+            // height: '100%',
         },
-        [theme.breakpoints.down("sm")]: {
-            // top: "150%",
-            // padding: "25px"
-        },
-        [theme.breakpoints.down("xs")]: {
-            // top: "185%",
-            // padding: "15px"
-        }
     },
     contentStyle: {
         // position: 'relative',
@@ -83,15 +70,31 @@ export const useModalStyles = makeStyles((theme) => ({
         fontSize: '16px',
         lineHeight: '22px',
         [theme.breakpoints.down("md")]: {
-            // paddingLeft: "75px",
-            // top: "100%"
-            // width: '85%',
-            // height: '85%',
             marginLeft: '75px',
         },
         [theme.breakpoints.down("sm")]: {
             marginLeft: '125px',
         },
-    }
+       
+    },
+    button: {
+            backgroundColor: theme.palette.primary.main,
+            color: "white",
+            textTransform: "capitalize",
+            minWidth: "248px",
+            maxWidth: "300px",
+            height: "48px",
+            textAlign: "center",
+            float: "right",
+            verticalAlign: "middle",
+            padding: "auto",
+            boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
+            borderRadius: "50px",
+            margin: "auto",
+            marginTop: theme.spacing(8),
+            fontSize: "18px",
+            fontWeight: "bold",
+            lineHeight: 2.7,
+        }
 
 }))

@@ -57,7 +57,7 @@ export default function SlackModal() {
   }
 
   return (
-    <Grid container style={{ background: '#A2B5D5' }} >
+    <Grid container>
       <Grid item xs={2} >
         {sections.map((section) => (
           <button key={section.id} onClick={() => showSection(section.id)} style={activeTab === section.id ? activeTabStyle : tabStyle} >
