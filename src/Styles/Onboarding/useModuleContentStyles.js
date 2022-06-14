@@ -6,7 +6,6 @@ export const useModuleContentStyles = makeStyles((theme) => ({
     width: "80%",
     paddingBottom: theme.spacing(4),
     [theme.breakpoints.down("sm")]: {
-      // width: "85%",
       paddingBottom: theme.spacing(2),
     }
   },
@@ -35,9 +34,6 @@ export const useModuleContentStyles = makeStyles((theme) => ({
   moduleCardBody: {
     paddingBottom: theme.spacing(2),
     color: "#2b2929",
-  },
-  firstBtn: {
-    // marginTop: "60px !important",
   },
   moduleCardBody2: {
     color: "#2b2929",
@@ -69,7 +65,6 @@ export const useModuleContentStyles = makeStyles((theme) => ({
     backgroundColor: "#fefeff",
     width: "70%",
     minWidth: "300px",
-    // maxWidth: "555px",
     height: "85px",
     boxShadow: "0 4px 4px rgba(0, 0, 0, 0.25)",
     borderRadius: "15px",
@@ -81,7 +76,6 @@ export const useModuleContentStyles = makeStyles((theme) => ({
       borderRadius: "25px",
       width: "50%",
       height: "60px",
-      // fontSize: "16px",
       justifyContent: "space-between",
       marginLeft: theme.spacing(-7),
       alignItems: "center"
@@ -104,8 +98,6 @@ export const useModuleContentStyles = makeStyles((theme) => ({
   linkText: {
     color: "#4e6c99",
     alignSelf: "center",
-    // margin: theme.spacing(0.9), 
-    // marginLeft: theme.spacing(2), 
     [theme.breakpoints.down("sm")]: {
       margin: theme.spacing(0),
       fontSize: 'calc(14px + 0.390625vw)',

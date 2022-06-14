@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
-import { Typography, Modal, Button, Box, ListItem, List, ListItemText, ListItemIcon, Grid } from '@material-ui/core';
+import { useState } from 'react';
+import { Typography, Modal, Button, Box, ListItem, List, ListItemText, ListItemIcon, Grid, Dialog, DialogTitle, DialogContent } from '@material-ui/core';
 import { useModuleContentStyles } from '../../Styles/Onboarding/useModuleContentStyles';
 import { useModalStyles } from '../../Styles/Onboarding/useModalStyles';
 import link from '../../Assets/Onboarding/link.svg';
@@ -11,7 +10,7 @@ import AirtableModal from './AirtableModal';
 import SlackModal from './SlackModal';
 import AirtableVideoModal from './AirtableVideoModal';
 import SlackVideoModal from './SlackVideoModal';
-import BulletedListMui from '../../ui-kit/BulletedListMui';
+import MiroVideoModal from './MiroVideoModal';
 
 const modalStyle = {
     position: 'absolute',
@@ -66,11 +65,13 @@ function ModuleContent(props) {
     const handleSlackVideoOpen = () => setSlackVideoOpen(true);
     const handleSlackVideoClose = () => setSlackVideoOpen(false);
 
+    const [miroVideoOpen, setMiroVideoOpen] = useState(false);
+    const handleMiroVideoOpen = () => setMiroVideoOpen(true);
+    const handleMiroVideoClose = () => setMiroVideoOpen(false);
+
 
     return (
         <div className={classes.moduleContentCard + " " + classes.regularContainer}>
-            {/* <div className={classes.regularContainer}> */}
-
             <Typography variant="h4" className={classes.moduleCardHeading}>{title}</Typography>
             <Typography variant="body2" className={classes.bold}>{subheading}</Typography>
             {paragraph1 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph1}</Typography> : null}
@@ -132,7 +133,7 @@ function ModuleContent(props) {
                     }
                     {linkIcon === "videoMiro" &&
                         <Button
-                            // onClick={handleSlackVideoOpen} 
+                            onClick={handleMiroVideoOpen} 
                             className={classes.linkContainer} >
                             <div className={classes.linkContainer}>
                                 <img src={video} alt="" className={classes.linkIcon} />
@@ -260,106 +261,137 @@ function ModuleContent(props) {
                             {p3bullet4 ? <li>{p3bullet4}</li> : null}
                         </ul>
                     </Typography>
-                    <Typography variant='body2' className={classes.moduleCardBody}>
+                    {modalParagraph4 && (
+                        <Typography variant='body2' className={classes.moduleCardBody}>
                         {modalParagraph4}
                     </Typography>
-                    <Button onClick={handleClose} className={classes.button}>
+                    )}
+                    
+                    <Button onClick={handleClose} className={classes.button} style={{ margin: 0}}>
                         Close
                     </Button>
                 </Box>
             </Modal>
 
             {/* complex airtable modal */}
-            <Modal
+            <Dialog
                 open={airtableOpen}
                 onClose={handleAirtableClose}
                 aria-labelledby=''
                 aria-describedby=''
+                fullWidth
+                maxWidth="md"
                 className={modalClasses.mainModal}
             >
-                <Box sx={modalStyle}>
+                <DialogContent>
                     <AirtableModal />
                     <Button onClick={handleAirtableClose} className={classes.button}>
                         Close
-                    </Button>
-                </Box>
-            </Modal>
+                    </Button>  
+                </DialogContent>
+            </Dialog>
 
             {/* video airtable modal */}
-            <Modal
+            <Dialog
                 open={airtableVideoOpen}
                 onClose={handleAirtableVideoClose}
                 aria-labelledby=''
                 aria-describedby=''
-                className={modalClasses.mainModal}
+                fullWidth
+                maxWidth="md"
+                className={modalClasses.videoContainer}
+                sx={{ 
+                    height: 'auto',
+                }}
             >
-                <Box className={modalClasses.videoContainer}>
+                <DialogContent className={modalClasses.contentStyle}>
                     <AirtableVideoModal />
-                    <Button onClick={handleAirtableVideoClose} className={classes.button}>
-                        Close
-                    </Button>
-                </Box>
-            </Modal>
+                </DialogContent>
+                <Button onClick={handleAirtableVideoClose} style={{ margin: "0 auto 64px"}} className={classes.button}>
+                    Close
+                </Button>
+            </Dialog>
 
             {/* complex slack modal */}
-            <Modal
+            <Dialog
                 open={slackOpen}
                 onClose={handleSlackClose}
                 aria-labelledby=''
                 aria-describedby=''
+                fullWidth
+                maxWidth="lg"
                 className={modalClasses.mainModal}
             >
-                <Box sx={modalStyle}>
+                <DialogContent sx={modalStyle}>
                     <SlackModal />
                     <Button onClick={handleSlackClose} className={classes.button}>
                         Close
                     </Button>
-                </Box>
-            </Modal>
+                </DialogContent>
+            </Dialog>
 
             {/* video slack modal */}
-            <Modal
+            <Dialog 
                 open={slackVideoOpen}
                 onClose={handleSlackVideoClose}
                 aria-labelledby=''
                 aria-describedby=''
+                fullWidth
+                maxWidth="lg"
                 className={modalClasses.mainModal}
             >
-                <Box className={modalClasses.videoContainer}>
-                    <SlackVideoModal />
-                    <Button onClick={handleSlackVideoClose} className={classes.button}>
-                        Close
-                    </Button>
-                </Box>
-            </Modal>
+                <DialogContent className={modalClasses.videoContainer}>
+                    <SlackVideoModal handleSlackVideoClose={handleSlackVideoClose} />
+                </DialogContent>
+            </Dialog>
+
+            {/* video miro modal */}
+            <Dialog
+                open={miroVideoOpen}
+                onClose={handleMiroVideoClose}
+                aria-labelledby=''
+                aria-describedby=''
+                fullScreen
+                maxWidth="md"
+                className={modalClasses.videoContainer}
+                
+            >
+                <DialogContent className={modalClasses.contentStyle}>
+                    <MiroVideoModal />
+                </DialogContent>
+                <Button onClick={handleMiroVideoClose} style={{ margin: "0 auto 64px"}} className={classes.button}>
+                    Close
+                </Button>
+            </Dialog>
+
 
             {/* trust doc modal */}
-            <Modal
+            <Dialog 
                 open={trustDocOpen}
                 onClose={handleTrustDocClose}
                 aria-labelledby=''
                 aria-describedby=''
+                fullWidth
+                maxWidth="lg"
                 className={modalClasses.mainModal}
             >
-                <Box className={modalClasses.modalContainer}>
-                    <Grid item={true} lg={10} md={12}>
-                        <Typography className={classes.modalTitleStyle} >
-                            {title}
-                        </Typography>
-                        <List >
-                            {bullets ? bullets.map((bullet, idx) =>
-                                <ListItem key={idx} >
-                                    <ListItemIcon>•</ListItemIcon>
-                                    <ListItemText >{bullet}</ListItemText>
-                                </ListItem>
-                            ) : null}
-                        </List>
-                        <Button onClick={handleTrustDocClose} className={classes.button}>
-                            Close
-                        </Button>
-                    </Grid>
-                </Box>
-            </Modal>
+                <DialogContent className={modalClasses.modalStyle}>
+                    <Typography className={classes.modalTitleStyle} >
+                        {title}
+                    </Typography>
+                    <List >
+                        {bullets ? bullets.map((bullet, idx) =>
+                            <ListItem key={idx} >
+                                <ListItemIcon>•</ListItemIcon>
+                                <ListItemText >{bullet}</ListItemText>
+                            </ListItem>
+                        ) : null}
+                    </List>
+                </DialogContent>
+                    <Button onClick={handleTrustDocClose} className={classes.button}>
+                        Close
+                    </Button>
+            </Dialog>
         </div>
     );
 };

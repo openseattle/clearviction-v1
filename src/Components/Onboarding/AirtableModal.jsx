@@ -1,4 +1,4 @@
-import { Grid, Button } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import { useState } from 'react';
 
 // icons
@@ -19,7 +19,7 @@ const linkStyle = {
   color: '#237BCD',
 }
 
-export default function AirtableModal() {
+export default function AirtableModal(props) {
   const [sectionId, setSectionId] = useState(1);
   const [activeTab, setActiveTab] = useState(1);
   const sections = [
@@ -65,7 +65,7 @@ export default function AirtableModal() {
   }
 
   return (
-    <Grid container style={{ background: '#A2B5D5' }} >
+    <Grid container style={{ justifyContent: 'space-between'}}>
       <Grid item xs={2} >
         {sections.map((section) => (
           <button key={section.id} onClick={() => showSection(section.id)} style={activeTab === section.id ? activeTabStyle : tabStyle} >

@@ -1,9 +1,7 @@
-import { useEffect } from 'react';
 import Header from '../../Components/Onboarding/Header';
 import { Box, Grid, Typography } from '@material-ui/core';
 import ModuleContent from '../../Components/Onboarding/ModuleContent';
 import { useModuleContentStyles } from '../../Styles/Onboarding/useModuleContentStyles';
-// import Theme from '../../Components/Theme';
 import Footer from '../../Components/Onboarding/Footer';
 
 // icons

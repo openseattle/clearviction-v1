@@ -1,5 +1,5 @@
 import { Grid } from '@material-ui/core';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 // icons
 import video from '../../Assets/Onboarding/video.svg';
@@ -31,6 +31,7 @@ export default function AirtableVideoModal() {
   const tabStyle = {
     cursor: 'pointer',
     width: '200px',
+    marginRight: '50px',
     height: '100px',
     color: '#fff',
     fontWeight: 600,
@@ -58,7 +59,7 @@ export default function AirtableVideoModal() {
   }
 
   return (
-    <Grid container style={{ background: '#A2B5D5', height: "84%" }} >
+    <Grid container style={{ justifyContent: 'space-between'}}>
       <Grid item xs={2} >
         {sections.map((section) => (
           <button key={section.id} onClick={() => showSection(section.id)} style={activeTab === section.id ? activeTabStyle : tabStyle} >
@@ -69,7 +70,7 @@ export default function AirtableVideoModal() {
       </Grid>
       <Grid item xs={7} md={8} lg={9} className={classes.contentStyle}>
         {sectionId === 1 && (
-          <div style={{ height: "100%" }}>
+          <div style={{ height: "100%", }}>
             <iframe title={sections.title} src={profile} width="100%" height="90%" allow="autoplay"></iframe>
           </div>
         )}

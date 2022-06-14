@@ -57,7 +57,7 @@ export default function SlackModal() {
   }
 
   return (
-    <Grid container>
+    <Grid container style={{ justifyContent: 'space-between'}}>
       <Grid item xs={2} >
         {sections.map((section) => (
           <button key={section.id} onClick={() => showSection(section.id)} style={activeTab === section.id ? activeTabStyle : tabStyle} >
