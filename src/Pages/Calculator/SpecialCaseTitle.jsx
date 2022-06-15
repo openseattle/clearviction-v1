@@ -36,7 +36,9 @@ const SpecialCaseTitle = props => {
                                 return (
                                     <ul>
                                         <li key={idx}>
-                                            <a role="button" href={b.href}>{b.text}</a>
+                                            <a target="_blank" rel="noopener noreferrer" role="button" href={b.href}>
+                                                {b.text}
+                                            </a>
                                         </li>
                                     </ul>
                                 );
