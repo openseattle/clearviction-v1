@@ -12,6 +12,7 @@ import Footer from "./Components/Footer";
 import GetInvolvedPage from "./Pages/GetInvolvedPage";
 import GetStartedPage from "./Pages/GetStartedPage";
 import ResourcesPage from "./Pages/ResourcesPage";
+import ContactSuccessPage from "./Pages/ContactSuccessPage";
 
 function App() {
     return (
@@ -44,6 +45,9 @@ function App() {
                         </Route>
                         <Route exact path="/contact">
                             <ContactPage />
+                        </Route>
+                        <Route exact path="/contact/success">
+                            <ContactSuccessPage />
                         </Route>
                         <Route path="/get-involved">
                             <GetInvolvedPage />
