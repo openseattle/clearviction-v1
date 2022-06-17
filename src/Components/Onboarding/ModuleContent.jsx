@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Typography, Modal, Button, Box, ListItem, List, ListItemText, ListItemIcon, Grid, Dialog, DialogTitle, DialogContent } from '@material-ui/core';
 import { useModuleContentStyles } from '../../Styles/Onboarding/useModuleContentStyles';
 import { useModalStyles } from '../../Styles/Onboarding/useModalStyles';
@@ -11,6 +11,7 @@ import SlackModal from './SlackModal';
 import AirtableVideoModal from './AirtableVideoModal';
 import SlackVideoModal from './SlackVideoModal';
 import MiroVideoModal from './MiroVideoModal';
+import TutorialAccordion from './Mobile/TutorialAccordion';
 
 const modalStyle = {
     position: 'absolute',
@@ -69,6 +70,13 @@ function ModuleContent(props) {
     const handleMiroVideoOpen = () => setMiroVideoOpen(true);
     const handleMiroVideoClose = () => setMiroVideoOpen(false);
 
+    const [isLargeScreen, setIsLargeScreen] = useState(true);
+
+    useEffect(() => {
+        const mediaSize = window.innerWidth;
+        mediaSize >= 768 ? setIsLargeScreen(true) : setIsLargeScreen(false);
+
+    }, [])
 
     return (
         <div className={classes.moduleContentCard + " " + classes.regularContainer}>
@@ -133,7 +141,7 @@ function ModuleContent(props) {
                     }
                     {linkIcon === "videoMiro" &&
                         <Button
-                            onClick={handleMiroVideoOpen} 
+                            onClick={handleMiroVideoOpen}
                             className={classes.linkContainer} >
                             <div className={classes.linkContainer}>
                                 <img src={video} alt="" className={classes.linkIcon} />
@@ -263,33 +271,44 @@ function ModuleContent(props) {
                     </Typography>
                     {modalParagraph4 && (
                         <Typography variant='body2' className={classes.moduleCardBody}>
-                        {modalParagraph4}
-                    </Typography>
+                            {modalParagraph4}
+                        </Typography>
                     )}
-                    
-                    <Button onClick={handleClose} className={classes.button} style={{ margin: 0}}>
+
+                    <Button onClick={handleClose} className={classes.button} style={{ margin: 0 }}>
                         Close
                     </Button>
                 </Box>
             </Modal>
 
             {/* complex airtable modal */}
-            <Dialog
-                open={airtableOpen}
-                onClose={handleAirtableClose}
-                aria-labelledby=''
-                aria-describedby=''
-                fullWidth
-                maxWidth="md"
-                className={modalClasses.mainModal}
-            >
-                <DialogContent>
-                    <AirtableModal />
-                    <Button onClick={handleAirtableClose} className={classes.button}>
-                        Close
-                    </Button>  
-                </DialogContent>
-            </Dialog>
+            {isLargeScreen ?
+                <Dialog
+                    open={airtableOpen}
+                    onClose={handleAirtableClose}
+                    aria-labelledby=''
+                    aria-describedby=''
+                    fullWidth
+                    maxWidth="md"
+                    className={modalClasses.mainModal}
+                >
+                    <DialogContent>
+                        <AirtableModal />
+                        <Button onClick={handleAirtableClose} className={classes.button}>
+                            Close
+                        </Button>
+                    </DialogContent>
+                </Dialog>
+                : <Dialog
+                    open={airtableOpen}
+                    onClose={handleAirtableClose}
+                    aria-labelledby=''
+                    aria-describedby=''
+                    fullWidth
+                    maxWidth="md"
+                    className={modalClasses.mainModal}
+                ><TutorialAccordion />
+                </Dialog>}
 
             {/* video airtable modal */}
             <Dialog
@@ -300,14 +319,14 @@ function ModuleContent(props) {
                 fullWidth
                 maxWidth="md"
                 className={modalClasses.videoContainer}
-                sx={{ 
+                sx={{
                     height: 'auto',
                 }}
             >
                 <DialogContent className={modalClasses.contentStyle}>
                     <AirtableVideoModal />
                 </DialogContent>
-                <Button onClick={handleAirtableVideoClose} style={{ margin: "0 auto 64px"}} className={classes.button}>
+                <Button onClick={handleAirtableVideoClose} style={{ margin: "0 auto 64px" }} className={classes.button}>
                     Close
                 </Button>
             </Dialog>
@@ -331,7 +350,7 @@ function ModuleContent(props) {
             </Dialog>
 
             {/* video slack modal */}
-            <Dialog 
+            <Dialog
                 open={slackVideoOpen}
                 onClose={handleSlackVideoClose}
                 aria-labelledby=''
@@ -354,19 +373,19 @@ function ModuleContent(props) {
                 fullScreen
                 maxWidth="md"
                 className={modalClasses.videoContainer}
-                
+
             >
                 <DialogContent className={modalClasses.contentStyle}>
                     <MiroVideoModal />
                 </DialogContent>
-                <Button onClick={handleMiroVideoClose} style={{ margin: "0 auto 64px"}} className={classes.button}>
+                <Button onClick={handleMiroVideoClose} style={{ margin: "0 auto 64px" }} className={classes.button}>
                     Close
                 </Button>
             </Dialog>
 
 
             {/* trust doc modal */}
-            <Dialog 
+            <Dialog
                 open={trustDocOpen}
                 onClose={handleTrustDocClose}
                 aria-labelledby=''
@@ -388,9 +407,9 @@ function ModuleContent(props) {
                         ) : null}
                     </List>
                 </DialogContent>
-                    <Button onClick={handleTrustDocClose} className={classes.button}>
-                        Close
-                    </Button>
+                <Button onClick={handleTrustDocClose} className={classes.button}>
+                    Close
+                </Button>
             </Dialog>
         </div>
     );
