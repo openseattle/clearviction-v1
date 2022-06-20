@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Typography, Modal, Button, Box, ListItem, List, ListItemText, ListItemIcon, Grid, Dialog, DialogTitle, DialogContent } from '@material-ui/core';
+import { Typography, Modal, Button, Box, ListItem, List, ListItemText, ListItemIcon, Grid, Dialog, DialogContent } from '@material-ui/core';
 import { useModuleContentStyles } from '../../Styles/Onboarding/useModuleContentStyles';
 import { useModalStyles } from '../../Styles/Onboarding/useModalStyles';
 import link from '../../Assets/Onboarding/link.svg';
@@ -289,7 +289,7 @@ function ModuleContent(props) {
                     aria-labelledby=''
                     aria-describedby=''
                     fullWidth
-                    maxWidth="md"
+                    maxWidth="lg"
                     className={modalClasses.mainModal}
                 >
                     <DialogContent>
@@ -305,7 +305,7 @@ function ModuleContent(props) {
                     aria-labelledby=''
                     aria-describedby=''
                     fullWidth
-                    maxWidth="md"
+                    maxWidth="lg"
                     className={modalClasses.mainModal}
                 ><TutorialAccordion />
                 </Dialog>}
@@ -317,7 +317,7 @@ function ModuleContent(props) {
                 aria-labelledby=''
                 aria-describedby=''
                 fullWidth
-                maxWidth="md"
+                maxWidth="lg"
                 className={modalClasses.videoContainer}
                 sx={{
                     height: 'auto',
@@ -371,7 +371,7 @@ function ModuleContent(props) {
                 aria-labelledby=''
                 aria-describedby=''
                 fullScreen
-                maxWidth="md"
+                maxWidth="lg"
                 className={modalClasses.videoContainer}
 
             >
