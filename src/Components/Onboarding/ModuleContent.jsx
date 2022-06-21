@@ -13,6 +13,7 @@ import SlackVideoModal from './SlackVideoModal';
 import MiroVideoModal from './MiroVideoModal';
 import TutorialAccordion from './Mobile/TutorialAccordion';
 import SlackAccordion from './Mobile/SlackAccoridion';
+import VideoTutorialAccordion from './Mobile/VideoTutorialAccordion';
 
 const modalStyle = {
     position: 'absolute',
@@ -316,25 +317,44 @@ function ModuleContent(props) {
                 </Dialog>}
 
             {/* video airtable modal */}
-            <Dialog
-                open={airtableVideoOpen}
-                onClose={handleAirtableVideoClose}
-                aria-labelledby=''
-                aria-describedby=''
-                fullWidth
-                maxWidth="lg"
-                className={modalClasses.videoContainer}
-                sx={{
-                    height: 'auto',
-                }}
-            >
-                <DialogContent className={modalClasses.contentStyle}>
-                    <AirtableVideoModal />
-                </DialogContent>
-                <Button onClick={handleAirtableVideoClose} style={{ margin: "0 auto 64px" }} className={classes.button}>
-                    Close
-                </Button>
-            </Dialog>
+            {isLargeScreen ?
+                <Dialog
+                    open={airtableVideoOpen}
+                    onClose={handleAirtableVideoClose}
+                    aria-labelledby=''
+                    aria-describedby=''
+                    fullWidth
+                    maxWidth="lg"
+                    className={modalClasses.videoContainer}
+                    sx={{
+                        height: 'auto',
+                    }}
+                >
+                    <DialogContent className={modalClasses.contentStyle}>
+                        <AirtableVideoModal />
+                    </DialogContent>
+                    <Button onClick={handleAirtableVideoClose} style={{ margin: "0 auto 64px" }} className={classes.button}>
+                        Close
+                    </Button>
+                </Dialog>
+                : <Dialog
+                    open={airtableVideoOpen}
+                    onClose={handleAirtableVideoClose}
+                    aria-labelledby=''
+                    aria-describedby=''
+                    fullWidth
+                    maxWidth="lg"
+                    className={modalClasses.videoContainer}
+                    sx={{
+                        height: 'auto',
+                    }}
+                >
+                    <VideoTutorialAccordion />
+                    <Button onClick={handleAirtableVideoClose} style={{ margin: "0 auto 64px" }} className={classes.button}>
+                        Close
+                    </Button>
+                </Dialog>}
+
 
             {/* complex slack modal */}
             {isLargeScreen ?
@@ -360,7 +380,7 @@ function ModuleContent(props) {
                     aria-labelledby=''
                     aria-describedby=''
                     fullWidth
-
+                    maxWidth="lg"
                     className={modalClasses.mainModal}
                 >
                     <SlackAccordion />
