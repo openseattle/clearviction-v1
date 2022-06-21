@@ -14,6 +14,7 @@ import MiroVideoModal from './MiroVideoModal';
 import TutorialAccordion from './Mobile/TutorialAccordion';
 import SlackAccordion from './Mobile/SlackAccoridion';
 import VideoTutorialAccordion from './Mobile/VideoTutorialAccordion';
+import SlackVideoAccordion from './Mobile/SlackVideoAccordion';
 
 const modalStyle = {
     position: 'absolute',
@@ -390,19 +391,34 @@ function ModuleContent(props) {
                 </Dialog>}
 
             {/* video slack modal */}
-            <Dialog
-                open={slackVideoOpen}
-                onClose={handleSlackVideoClose}
-                aria-labelledby=''
-                aria-describedby=''
-                fullWidth
-                maxWidth="lg"
-                className={modalClasses.mainModal}
-            >
-                <DialogContent className={modalClasses.videoContainer}>
-                    <SlackVideoModal handleSlackVideoClose={handleSlackVideoClose} />
-                </DialogContent>
-            </Dialog>
+            {isLargeScreen ?
+                <Dialog
+                    open={slackVideoOpen}
+                    onClose={handleSlackVideoClose}
+                    aria-labelledby=''
+                    aria-describedby=''
+                    fullWidth
+                    maxWidth="lg"
+                    className={modalClasses.mainModal}
+                >
+                    <DialogContent className={modalClasses.videoContainer}>
+                        <SlackVideoModal handleSlackVideoClose={handleSlackVideoClose} />
+                    </DialogContent>
+                </Dialog>
+                : <Dialog
+                    open={slackVideoOpen}
+                    onClose={handleSlackVideoClose}
+                    aria-labelledby=''
+                    aria-describedby=''
+                    fullWidth
+                    maxWidth="lg"
+                    className={modalClasses.mainModal}
+                >
+                    <SlackVideoAccordion />
+                    <Button onClick={handleSlackVideoClose} className={classes.button}>
+                        Close
+                    </Button>
+                </Dialog>}
 
             {/* video miro modal */}
             <Dialog
