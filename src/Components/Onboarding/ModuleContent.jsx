@@ -12,6 +12,7 @@ import AirtableVideoModal from './AirtableVideoModal';
 import SlackVideoModal from './SlackVideoModal';
 import MiroVideoModal from './MiroVideoModal';
 import TutorialAccordion from './Mobile/TutorialAccordion';
+import SlackAccordion from './Mobile/SlackAccoridion';
 
 const modalStyle = {
     position: 'absolute',
@@ -307,7 +308,11 @@ function ModuleContent(props) {
                     fullWidth
                     maxWidth="lg"
                     className={modalClasses.mainModal}
-                ><TutorialAccordion />
+                >
+                    <TutorialAccordion />
+                    <Button onClick={handleAirtableClose} className={classes.button}>
+                        Close
+                    </Button>
                 </Dialog>}
 
             {/* video airtable modal */}
@@ -332,22 +337,37 @@ function ModuleContent(props) {
             </Dialog>
 
             {/* complex slack modal */}
-            <Dialog
-                open={slackOpen}
-                onClose={handleSlackClose}
-                aria-labelledby=''
-                aria-describedby=''
-                fullWidth
-                maxWidth="lg"
-                className={modalClasses.mainModal}
-            >
-                <DialogContent sx={modalStyle}>
-                    <SlackModal />
+            {isLargeScreen ?
+                <Dialog
+                    open={slackOpen}
+                    onClose={handleSlackClose}
+                    aria-labelledby=''
+                    aria-describedby=''
+                    fullWidth
+                    maxWidth="lg"
+                    className={modalClasses.mainModal}
+                >
+                    <DialogContent sx={modalStyle}>
+                        <SlackModal />
+                        <Button onClick={handleSlackClose} className={classes.button}>
+                            Close
+                        </Button>
+                    </DialogContent>
+                </Dialog>
+                : <Dialog
+                    open={slackOpen}
+                    onClose={handleSlackClose}
+                    aria-labelledby=''
+                    aria-describedby=''
+                    fullWidth
+
+                    className={modalClasses.mainModal}
+                >
+                    <SlackAccordion />
                     <Button onClick={handleSlackClose} className={classes.button}>
                         Close
                     </Button>
-                </DialogContent>
-            </Dialog>
+                </Dialog>}
 
             {/* video slack modal */}
             <Dialog
