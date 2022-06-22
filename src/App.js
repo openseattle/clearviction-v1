@@ -77,9 +77,9 @@ function App() {
                         </Route>
                         <Route path="/onboarding-mod4">
                             <OnboardingMod4 />
+                        </Route>
                         <Route>
                             <Redirect to="/404" />
-
                         </Route>
                     </Switch>
                     <Footer />

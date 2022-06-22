@@ -50,9 +50,9 @@ function Header(props) {
                 )}
             </div>
 
-            {/* mobile header */}
+            {/* mobile header
             {/* Drawer based nav */}
-            <Box display={{ xs: "flex", sm: "none" }}>
+            {/* <Box display={{ xs: "flex", sm: "none" }}>
                 <IconButton
                     size="medium"
                     edge="start"
@@ -77,7 +77,7 @@ function Header(props) {
                         <SocialContainer />
                     </ListItem>
                 </List>
-            </Drawer>
+            </Drawer> */}
         </div>
     );
 };

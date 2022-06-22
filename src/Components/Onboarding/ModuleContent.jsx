@@ -15,6 +15,7 @@ import TutorialAccordion from './Mobile/TutorialAccordion';
 import SlackAccordion from './Mobile/SlackAccoridion';
 import VideoTutorialAccordion from './Mobile/VideoTutorialAccordion';
 import SlackVideoAccordion from './Mobile/SlackVideoAccordion';
+import TrustDocAccordion from './Mobile/TrustDocAccordion';
 
 const modalStyle = {
     position: 'absolute',
@@ -441,32 +442,44 @@ function ModuleContent(props) {
 
 
             {/* trust doc modal */}
-            <Dialog
-                open={trustDocOpen}
-                onClose={handleTrustDocClose}
-                aria-labelledby=''
-                aria-describedby=''
-                fullWidth
-                maxWidth="lg"
-                className={modalClasses.mainModal}
-            >
-                <DialogContent className={modalClasses.modalStyle}>
-                    <Typography className={classes.modalTitleStyle} >
-                        {title}
-                    </Typography>
-                    <List >
-                        {bullets ? bullets.map((bullet, idx) =>
-                            <ListItem key={idx} >
-                                <ListItemIcon>•</ListItemIcon>
-                                <ListItemText >{bullet}</ListItemText>
-                            </ListItem>
-                        ) : null}
-                    </List>
-                </DialogContent>
-                <Button onClick={handleTrustDocClose} className={classes.button}>
-                    Close
-                </Button>
-            </Dialog>
+            {isLargeScreen ?
+                <Dialog
+                    open={trustDocOpen}
+                    onClose={handleTrustDocClose}
+                    aria-labelledby=''
+                    aria-describedby=''
+                    fullWidth
+                    maxWidth="lg"
+                    className={modalClasses.mainModal}
+                >
+                    <DialogContent className={modalClasses.modalStyle}>
+                        <Typography className={classes.modalTitleStyle} >
+                            {title}
+                        </Typography>
+                        <List >
+                            {bullets ? bullets.map((bullet, idx) =>
+                                <ListItem key={idx} >
+                                    <ListItemIcon>•</ListItemIcon>
+                                    <ListItemText >{bullet}</ListItemText>
+                                </ListItem>
+                            ) : null}
+                        </List>
+                    </DialogContent>
+                    <Button onClick={handleTrustDocClose} className={classes.button}>
+                        Close
+                    </Button>
+                </Dialog>
+                : <Dialog
+                    open={trustDocOpen}
+                    onClose={handleTrustDocClose}
+                    aria-labelledby=''
+                    aria-describedby=''
+                    fullWidth
+                    maxWidth="lg"
+                    className={modalClasses.mainModal}
+                >
+                    <TrustDocAccordion />
+                </Dialog>}
         </div>
     );
 };

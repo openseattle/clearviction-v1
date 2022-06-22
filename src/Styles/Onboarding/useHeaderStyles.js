@@ -27,7 +27,7 @@ export const useHeaderStyles = makeStyles((theme) => ({
   socialContainer: {
     padding: theme.spacing(4),
     [theme.breakpoints.down("xs")]: {
-      display: "none",
+      padding: theme.spacing(0),
     }
   },
   socialIcons: {
@@ -125,11 +125,11 @@ export const useHeaderStyles = makeStyles((theme) => ({
   },
   menuStyle: {
     padding: theme.spacing(3),
-    [theme.breakpoints.down("xs")]: {
-      margin: theme.spacing(2.5),
-      display: "flex",
-      flexDirection: "column"
-    }
+    // [theme.breakpoints.down("xs")]: {
+    //   margin: theme.spacing(2.5),
+    //   display: "flex",
+    //   flexDirection: "column"
+    // }
   },
   closeIcon: {
     color: "white",

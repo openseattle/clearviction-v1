@@ -11,7 +11,7 @@ function SocialContainer(props) {
     const classes = useHeaderStyles();
 
     return (
-        <div className={classes.menuStyle}>
+        <div >
             <a href="https://twitter.com/Clearviction"
                 className={classes.socialIcons}
                 target="_blank"
