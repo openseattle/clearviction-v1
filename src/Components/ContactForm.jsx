@@ -158,6 +158,7 @@ const ContactForm = () => {
                             variant="standard"
                             fullWidth
                             color="primary"
+                            aria-label="Your full name"
                         />
                         <FormLabel className={classes.labelStyle} component="legend">
                             <Typography variant="body2" className={classes.labelTextStyle}>
@@ -179,6 +180,7 @@ const ContactForm = () => {
                             value={toSend.reply_to}
                             onChange={handleChange}
                             variant="standard"
+                            aria-label="Your email address"
                         />
                         <FormLabel className={classes.labelStyle} component="legend">
                             <Typography variant="body2" className={classes.labelTextStyle}>
@@ -197,6 +199,7 @@ const ContactForm = () => {
                             onChange={handleChange}
                             variant="standard"
                             color="primary"
+                            aria-label="Choose your contact type"
                         >
                             {contactTypes.map(option => (
                                 <MenuItem key={option.value} value={option.value}>
@@ -223,6 +226,7 @@ const ContactForm = () => {
                             onChange={handleChange}
                             variant="standard"
                             color="primary"
+                            aria-label="Your message"
                         />
                         <Box className={classes.buttonBoxStyle}>
                             <RedesignButtonPrimary type={"submit"}>Send message</RedesignButtonPrimary>

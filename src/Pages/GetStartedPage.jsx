@@ -14,6 +14,7 @@ import LegalAidServices from "../Subpages/GetStarted/LegalAidServices";
 import FinancialAidServices from "../Subpages/GetStarted/FinancialAidServices";
 import { ExternalLink } from "../ui-kit/ExternalLink";
 import CheckEligibilityButton from "../Components/CheckEligibilityButton";
+import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
 const factsProps = {
     style: { fontSize: 54 },
@@ -40,6 +41,8 @@ const eligibilityFacts = [
 
 const GetStartedPage = () => {
     const classes = useGetInvolvedStyles();
+    const [documentTitle, setDocumentTitle] = useDocumentTitle("Get Started - ");
+
     return (
         <>
             <RedesignHeroPanel title="Get Started">
@@ -59,7 +62,7 @@ const GetStartedPage = () => {
                             component="img"
                             style={{ width: "100%", padding: 16 }}
                             src={teamBuilding}
-                            alt="Teamwork solves a puzzle."
+                            alt=""
                         />
                     </Grid>
                 </Grid>

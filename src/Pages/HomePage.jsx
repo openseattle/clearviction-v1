@@ -13,11 +13,13 @@ import { useHomeStyles } from "../Styles/useHomeStyles";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
 import CheckEligibilityButton from "../Components/CheckEligibilityButton";
+import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
 const HomePage = () => {
     useEffect(() => trackPageview("Home"), []);
 
     const classes = useHomeStyles();
+    const [documentTitle, setDocumentTitle] = useDocumentTitle("Home - ");
 
     return (
         <>
@@ -40,7 +42,7 @@ const HomePage = () => {
                             <img
                                 src={calculator}
                                 className={classes.iconStyle}
-                                alt="person using a calculator      "
+                                alt=""
                             ></img>
                         </Grid>
                     </Grid>
@@ -60,19 +62,19 @@ const HomePage = () => {
             <ContentSection sectionId="how-it-works" sectionSize="lg" sectionTitle={"How It Works"}>
                 <Grid container>
                     <Grid item xs={12} sm={4}>
-                        <img className={classes.iconStyle} src={teamwork} alt={"Teamwork Icon"} />
+                        <img className={classes.iconStyle} src={teamwork} alt="" />
                         <Typography className={classes.contentTextStyle} variant="body2" align="center">
                             We break down the laws into understandable language.
                         </Typography>
                     </Grid>
                     <Grid item xs={12} sm={4}>
-                        <img className={classes.iconStyle} src={calculator} alt={"Calculator Icon"} />
+                        <img className={classes.iconStyle} src={calculator} alt="" />
                         <Typography className={classes.contentTextStyle} variant="body2" align="center">
                             You answer a few simple yes/no questions.
                         </Typography>
                     </Grid>
                     <Grid item xs={12} sm={4}>
-                        <img className={classes.iconStyle} src={checklist} alt={"Employment Icon"} />
+                        <img className={classes.iconStyle} src={checklist} alt="" />
                         <Typography className={classes.contentTextStyle} variant="body2" align="center">
                             This helps determine your vacation eligibility.
                         </Typography>
@@ -89,7 +91,7 @@ const HomePage = () => {
                 </Typography>
                 <Grid container spacing={1}>
                     <Grid item xs={12} sm={6} md={3} lg={3}>
-                        <img className={classes.iconStyle} src={city} alt={"city Icon"} />
+                        <img className={classes.iconStyle} src={city} alt="" />
                         <Typography className={classes.headingStyle} variant="h5" align="center">
                             Housing
                         </Typography>
@@ -98,7 +100,7 @@ const HomePage = () => {
                         </Typography>
                     </Grid>
                     <Grid item xs={12} sm={6} md={3} lg={3}>
-                        <img className={classes.iconStyle} src={checklist} alt={"Employment Icon"} />
+                        <img className={classes.iconStyle} src={checklist} alt="" />
                         <Typography className={classes.headingStyle} variant="h5" align="center">
                             Employment
                         </Typography>
@@ -107,7 +109,7 @@ const HomePage = () => {
                         </Typography>
                     </Grid>
                     <Grid item xs={12} sm={6} md={3} lg={3}>
-                        <img className={classes.iconStyle} src={education} alt={"Education Icon"} />
+                        <img className={classes.iconStyle} src={education} alt="" />
                         <Typography className={classes.headingStyle} variant="h5" align="center">
                             Education
                         </Typography>
@@ -116,7 +118,7 @@ const HomePage = () => {
                         </Typography>
                     </Grid>
                     <Grid item xs={12} sm={6} md={3} lg={3}>
-                        <img className={classes.iconStyle} src={lawyer} alt={"Lawyer Icon"} />
+                        <img className={classes.iconStyle} src={lawyer} alt="" />
                         <Typography className={classes.headingStyle} variant="h5" align="center">
                             Government Assistance
                         </Typography>

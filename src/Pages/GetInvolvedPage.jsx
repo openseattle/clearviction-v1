@@ -5,6 +5,7 @@ import PartnerPage from "./PartnerPage";
 import VolunteerPage from "./VolunteerPage";
 import RedesignHeroPanel from "../Components/RedesignHeroPanel";
 import ImageContentCard from "../Components/ImageContentCard";
+import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
 import diversity from "../Assets/diversity2.svg";
 import moneyJar from "../Assets/money_jar.svg";
@@ -14,6 +15,8 @@ import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
 
 const GetInvolvedPage = () => {
     const classes = useGetInvolvedStyles();
+    const [documentTitle, setDocumentTitle] = useDocumentTitle("Get Involved - ");
+
     return (
         <>
             <RedesignHeroPanel
@@ -30,6 +33,7 @@ const GetInvolvedPage = () => {
                                 image={diversity}
                                 buttonHref="#volunteer"
                                 buttonText="volunteer"
+                                alt=""
                             />
                         </Box>
                     </Grid>
@@ -40,6 +44,7 @@ const GetInvolvedPage = () => {
                                 image={moneyJar}
                                 buttonHref="#donate"
                                 buttonText="Donate"
+                                alt=""
                             />
                         </Box>
                     </Grid>
@@ -50,6 +55,7 @@ const GetInvolvedPage = () => {
                                 image={marketing}
                                 buttonHref="#partner-with-us"
                                 buttonText="Partner with us"
+                                alt=""
                             />
                         </Box>
                     </Grid>

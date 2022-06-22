@@ -33,7 +33,7 @@ const QuestionScreen = props => {
             <Grid container className={classes.backButton}>
                 <BackButton />
             </Grid>
-            <Typography variant="h6" className={classes.header}>
+            <Typography variant="h6" component="h1" className={classes.header}>
                 {props.header}
             </Typography>
             <Grid item className={classes.bodyGrid}>
@@ -58,7 +58,9 @@ const QuestionScreen = props => {
                                 return (
                                     <ul>
                                         <li key={idx}>
-                                            <a href={b.href}>{b.text}</a>
+                                            <a target="_blank" rel="noopener noreferrer" role="button" href={b.href}>
+                                                {b.text}
+                                            </a>
                                         </li>
                                     </ul>
                                 );

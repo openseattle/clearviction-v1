@@ -20,7 +20,7 @@ const CANT_DETERMINE_FEEDBACK_FORM_LINK =
 const data: Pages = {
     "landing-0": {
         type: PageType.MAIN,
-        header: "Eligibility Calulator",
+        header: "Eligibility Calculator",
         body: [
             {
                 type: BodyType.PARAGRAPH,
@@ -145,9 +145,6 @@ const data: Pages = {
     "mar-0": {
         type: PageType.SPECIAL,
         header: "You may be eligible for conviction vacation based on a special clause in conviction vacation eligibility law.",
-        progressBar: {
-            currentSectionName: SectionName.OFF,
-        },
         body: [
             {
                 type: BodyType.LINK,
@@ -173,9 +170,6 @@ const data: Pages = {
     "mar-1": {
         type: PageType.QUESTION,
         header: "Did this offense involve possession of marijuana?",
-        progressBar: {
-            currentSectionName: SectionName.OFF,
-        },
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
@@ -191,9 +185,6 @@ const data: Pages = {
     "mar-2": {
         type: PageType.QUESTION,
         header: "Were you 21 years or older at the time of offense?",
-        progressBar: {
-            currentSectionName: SectionName.OFF,
-        },
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
@@ -209,9 +200,6 @@ const data: Pages = {
     "mar-3": {
         type: PageType.QUESTION,
         header: "Was your conviction for possession of 40 grams or less of marijuana?",
-        progressBar: {
-            currentSectionName: SectionName.OFF,
-        },
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
@@ -227,9 +215,6 @@ const data: Pages = {
     "mar-4": {
         type: PageType.QUESTION,
         header: "Have you completed the terms of your sentence for this offense?",
-        progressBar: {
-            currentSectionName: SectionName.OFF,
-        },
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
@@ -257,9 +242,6 @@ const data: Pages = {
     "mar-eligible-0": {
         type: PageType.END,
         header: "From your answers, it seems that you may be eligible to vacate your marijuana misdemeanor conviction!",
-        progressBar: {
-            currentSectionName: SectionName.ELIGIBLE,
-        },
         body: [
             {
                 type: BodyType.PARAGRAPH,
@@ -433,7 +415,7 @@ const data: Pages = {
             },
             {
                 type: BodyType.LINK,
-                text: "RCW 46.61.504 - actual physical control while under the influence",
+                text: "RCW 46.61.504 - Physical control of vehicle under the influence",
                 href: "https://app.leg.wa.gov/rcw/default.aspx?cite=46.61.504",
             },
             {
@@ -567,7 +549,7 @@ const data: Pages = {
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: "Based on RCW 9.94A.640, a misdemeanor or gross misdemeanor violation, including attempt of any of the following are not eligible for vacation:",
+                text: "Based on RCW 9.96.060, a misdemeanor or gross misdemeanor violation, including attempt of any of the following are not eligible for vacation:",
             },
             {
                 type: BodyType.LINK,
@@ -736,9 +718,6 @@ const data: Pages = {
     "fsh-0": {
         type: PageType.SPECIAL,
         header: "You may be eligible for conviction vacation based on a special clause in conviction vacation eligibility law.",
-        progressBar: {
-            currentSectionName: SectionName.OFF,
-        },
         body: [
             {
                 type: BodyType.LINK,
@@ -764,9 +743,6 @@ const data: Pages = {
     "fsh-1": {
         type: PageType.QUESTION,
         header: "Are you a member of a tribe? You can also apply on behalf of a deceased family member in the tribe who meets the criteria.",
-        progressBar: {
-            currentSectionName: SectionName.OFF,
-        },
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
@@ -781,9 +757,6 @@ const data: Pages = {
     "fsh-2": {
         type: PageType.QUESTION,
         header: "Did you (or your family member) receive a fishing related conviction while exercising a treaty right?",
-        progressBar: {
-            currentSectionName: SectionName.OFF,
-        },
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
@@ -799,9 +772,6 @@ const data: Pages = {
     "fsh-3": {
         type: PageType.QUESTION,
         header: "Was it before January 1st, 1975?",
-        progressBar: {
-            currentSectionName: SectionName.OFF,
-        },
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
@@ -817,9 +787,6 @@ const data: Pages = {
     "fsh-4": {
         type: PageType.QUESTION,
         header: "Did your tribe (or your family member's tribe) exercise fishing rights at the location where it occurred?",
-        progressBar: {
-            currentSectionName: SectionName.OFF,
-        },
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
@@ -835,9 +802,6 @@ const data: Pages = {
     "fsh-eligible": {
         type: PageType.END,
         header: "It seems that you may be eligible to vacate your fishing misdemeanor conviction!",
-        progressBar: {
-            currentSectionName: SectionName.ELIGIBLE,
-        },
         body: [
             {
                 type: BodyType.PARAGRAPH,
@@ -908,9 +872,6 @@ const data: Pages = {
     "pro-0": {
         type: PageType.SPECIAL,
         header: "You may be eligible for conviction vacation based on a special clause in conviction vacation eligibility law",
-        progressBar: {
-            currentSectionName: SectionName.OFF,
-        },
         body: [
             {
                 type: BodyType.LINK,
@@ -936,9 +897,6 @@ const data: Pages = {
     "pro-1": {
         type: PageType.QUESTION,
         header: "Was the conviction a result of being a victim of one of the following?:",
-        progressBar: {
-            currentSectionName: SectionName.OFF,
-        },
         body: [
             {
                 type: BodyType.LIST,
@@ -966,9 +924,6 @@ const data: Pages = {
     "pro-2": {
         type: PageType.QUESTION,
         header: "Do you have charges pending in this state or any other state, or in any federal court for any crime other than prostitution?",
-        progressBar: {
-            currentSectionName: SectionName.OFF,
-        },
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
@@ -984,9 +939,6 @@ const data: Pages = {
     "pro-4": {
         type: PageType.QUESTION,
         header: "Have you been convicted of a new crime in this state, another state or federal or tribal court in the last 3 years/prior to when you will be applying for vacation?",
-        progressBar: {
-            currentSectionName: SectionName.OFF,
-        },
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
@@ -1001,11 +953,7 @@ const data: Pages = {
     },
     "pro-5": {
         type: PageType.QUESTION,
-        // here
         header: "Has the crime victim penalty assessment, RCW 7.68.035, been paid in full?",
-        progressBar: {
-            currentSectionName: SectionName.OFF,
-        },
         body: [
             {
                 type: BodyType.PARAGRAPH,
@@ -1027,9 +975,6 @@ const data: Pages = {
     "pro-6": {
         type: PageType.QUESTION,
         header: "If applicable, has restitution owed to any victim, excluding restitution owed to any insurance provider under Title 48 RCW, been paid in full?",
-        progressBar: {
-            currentSectionName: SectionName.OFF,
-        },
         body: [
             {
                 type: BodyType.PARAGRAPH,
@@ -1055,9 +1000,6 @@ const data: Pages = {
     "pro-eligible": {
         type: PageType.END,
         header: "It seems that you may be eligible to vacate your prostitution misdemeanor conviction!",
-        progressBar: {
-            currentSectionName: SectionName.ELIGIBLE,
-        },
         body: [
             {
                 type: BodyType.PARAGRAPH,
