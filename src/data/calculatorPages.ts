@@ -146,200 +146,216 @@ const data: Pages = {
         type: PageType.SPECIAL,
         header: "You may be eligible for conviction vacation based on a special clause in conviction vacation eligibility law.",
         body: [
+            // {
+            //     type: BodyType.LINK,
+            //     text: "RCW 9.96.060(5)",
+            //     href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.96.060",
+            // },
             {
-                type: BodyType.LINK,
-                text: "RCW 9.96.060(5)",
-                href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.96.060",
+                type: BodyType.PARAGRAPH,
+                // text: "This clause applies to certain marijuana misdemeanors for possession of 40 grams or less.",
+                text: "In February 2021, the Washington Supreme Court ruled that the law criminalizing drug possession, RCW 69.50.4013, was unconstitutional. The case is referred to as State v. Blake. As a result of this ruling, any prior conviction drug possession convictions in Washington, and certain other related convictions, can be removed from your criminal record.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: "This clause applies to certain marijuana misdemeanors for possession of 40 grams or less.",
-            },
+                // text: "We will ask you up to 4 questions to determine if you may be eligible for Conviction Vacation through this exception.",
+                text: "If you are eligible, your conviction can be vacated. This means the conviction will be treated as if it never occurred. Additionally, all fees associated with your conviction will be eliminated or refunded if you have already made payments.",
+            },            
             {
                 type: BodyType.PARAGRAPH,
-                text: "We will ask you up to 4 questions to determine if you may be eligible for Conviction Vacation through this exception.",
-            },
-        ],
-        buttons: [
+                text: "To determine your eligibility for a Blake vacate, see the detailed Guide below.",
+            },   
             {
-                text: BUTTON_TEXT.CONTINUE,
-                href: CALC_PREFIX + "/mar-1",
-            },
-        ],
-    },
-    "mar-1": {
-        type: PageType.QUESTION,
-        header: "Did this offense involve possession of marijuana?",
-        buttons: [
-            {
-                text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/mar-2",
-            },
-            {
-                text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/mar-to-main",
-            },
-        ],
-        tooltip: TooltipType.NOT_SURE,
-    },
-    "mar-2": {
-        type: PageType.QUESTION,
-        header: "Were you 21 years or older at the time of offense?",
-        buttons: [
-            {
-                text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/mar-3",
-            },
-            {
-                text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/mar-to-main",
-            },
-        ],
-        tooltip: TooltipType.NOT_SURE,
-    },
-    "mar-3": {
-        type: PageType.QUESTION,
-        header: "Was your conviction for possession of 40 grams or less of marijuana?",
-        buttons: [
-            {
-                text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/mar-4",
-            },
-            {
-                text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/mar-to-main",
-            },
-        ],
-        tooltip: TooltipType.NOT_SURE,
-    },
-    "mar-4": {
-        type: PageType.QUESTION,
-        header: "Have you completed the terms of your sentence for this offense?",
-        buttons: [
-            {
-                text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/mar-eligible-0",
-            },
-            {
-                text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/mar-ineligible-1",
-            },
-        ],
-        tooltip: TooltipType.NOT_SURE,
-    },
-    "mar-ineligible-0": {
-        type: PageType.END,
-        header: "As of now, it seems that you may NOT be eligible to vacate your marijuana misdemeanor conviction because you have not completed the terms of your offense.",
-        buttons: [
-            {
-                text: FEEDBACK_BUTTON_TEXT,
-                href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
-            },
-        ],
-        showRestartButton: true,
-        disclaimer,
-    },
-    "mar-eligible-0": {
-        type: PageType.END,
-        header: "From your answers, it seems that you may be eligible to vacate your marijuana misdemeanor conviction!",
-        body: [
+                type: BodyType.LINK,
+                text: "Civil Survival -- Blake Vacate Guide",
+                href: "https://civilsurvival.org/guides/determining-blake-eligibility/",
+            },            
             {
                 type: BodyType.PARAGRAPH,
-                text: "It looks like your conviction may be one of the following:",
-            },
-            {
-                type: BodyType.LINK,
-                text: "RCW 69.50.4014",
-                href: "https://app.leg.wa.gov/rcw/default.aspx?cite=69.50.4014",
-            },
-            {
-                type: BodyType.LINK,
-                text: "RCW 69.50.401(e)",
-                href: "https://leg.wa.gov/CodeReviser/documents/sessionlaw/1979c67.pdf?cite=1979%20c%2067%20§%201",
-            },
-            {
-                type: BodyType.LINK,
-                text: "RCW 69.50.401(d) (Possession of 40 grams or less of marijuana)",
-                href: "https://leg.wa.gov/CodeReviser/documents/sessionlaw/1971ex1c308.pdf?cite=1971%20ex.s.%20c%20308%20§%2069.50.406",
-            },
-            {
-                type: BodyType.HEADING,
-                text: "Next steps:",
-            },
-            {
-                type: BodyType.PARAGRAPH,
-                text: '1. Fill out a "Petition and Declaration for Order Vacating Conviction" (CrRLJ 09.0100).',
-            },
-            {
-                type: BodyType.LINK,
-                text: "CrRLJ 09.0100",
-                href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
-            },
-            {
-                type: BodyType.PARAGRAPH,
-                text: '2. Read "Instructions for Vacating Misdemeanor and Gross Misdemeanor Convictions" (CrRLJ 09.0300).',
-            },
-            {
-                type: BodyType.LINK,
-                text: "CrRLJ 09.0300",
-                href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
-            },
-            {
-                type: BodyType.PARAGRAPH,
-                text: "3. To better understand misdemeanor conviction vacation, please click the link below:",
-            },
-            {
-                type: BodyType.LINK,
-                text: "Click here.",
-                href: "https://www.washingtonlawhelp.org/resource/get-misdemeanor-convictions-off-your-criminal-record",
-            },
-            {
-                type: BodyType.PARAGRAPH,
-                text: "4. Additionally, as of February 25, 2021, the Washington Supreme Court struck down the state's main drug possession crime in a case called State v. Blake. Read more about how it could affect your case below. We will be providing updates in the future as to how this impacts you.",
-            },
-            {
-                type: BodyType.LINK,
-                text: "State v. Blake",
-                href: "https://www.aclu-wa.org/pages/q-blake-decision",
+                text: "If you are not eligibile for a Blake vacate, you may still be eligible to vacate your conviction through other means. Proceed to the next steps by clicking the button below.",
             },
         ],
         buttons: [
             {
-                text: FEEDBACK_BUTTON_TEXT,
-                href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
-            },
-        ],
-        showRestartButton: true,
-        disclaimer,
-    },
-    "mar-ineligible-1": {
-        type: PageType.END,
-        header: "As of now, it seems that you may NOT be eligible to vacate your marijuana misdemeanor conviction because you have not completed the terms of your offense.",
-        buttons: [
-            {
-                text: FEEDBACK_BUTTON_TEXT,
-                href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
-            },
-        ],
-        showRestartButton: true,
-        disclaimer,
-    },
-    "mar-to-main": {
-        type: PageType.MAIN,
-        header: "Based on your response, it looks like you don't qualify for the marijuana misdemeanor exception.",
-        body: [
-            {
-                type: BodyType.PARAGRAPH,
-                text: "However, your misdemeanor may still be eligible for conviction vacation through the general eligibility criteria that apply to most misdemeanors.",
-            },
-        ],
-        buttons: [
-            {
-                text: BUTTON_TEXT.CONTINUE_JOURNEY,
+                text: BUTTON_TEXT.BLAKE,
+                // href: CALC_PREFIX + "/mar-1",
                 href: CALC_PREFIX + "/main-0",
             },
         ],
     },
+    // "mar-1": {
+    //     type: PageType.QUESTION,
+    //     header: "Did this offense involve possession of marijuana?",
+    //     buttons: [
+    //         {
+    //             text: BUTTON_TEXT.YES,
+    //             href: CALC_PREFIX + "/mar-2",
+    //         },
+    //         {
+    //             text: BUTTON_TEXT.NO,
+    //             href: CALC_PREFIX + "/mar-to-main",
+    //         },
+    //     ],
+    //     tooltip: TooltipType.NOT_SURE,
+    // },
+    // "mar-2": {
+    //     type: PageType.QUESTION,
+    //     header: "Were you 21 years or older at the time of offense?",
+    //     buttons: [
+    //         {
+    //             text: BUTTON_TEXT.YES,
+    //             href: CALC_PREFIX + "/mar-3",
+    //         },
+    //         {
+    //             text: BUTTON_TEXT.NO,
+    //             href: CALC_PREFIX + "/mar-to-main",
+    //         },
+    //     ],
+    //     tooltip: TooltipType.NOT_SURE,
+    // },
+    // "mar-3": {
+    //     type: PageType.QUESTION,
+    //     header: "Was your conviction for possession of 40 grams or less of marijuana?",
+    //     buttons: [
+    //         {
+    //             text: BUTTON_TEXT.YES,
+    //             href: CALC_PREFIX + "/mar-4",
+    //         },
+    //         {
+    //             text: BUTTON_TEXT.NO,
+    //             href: CALC_PREFIX + "/mar-to-main",
+    //         },
+    //     ],
+    //     tooltip: TooltipType.NOT_SURE,
+    // },
+    // "mar-4": {
+    //     type: PageType.QUESTION,
+    //     header: "Have you completed the terms of your sentence for this offense?",
+    //     buttons: [
+    //         {
+    //             text: BUTTON_TEXT.YES,
+    //             href: CALC_PREFIX + "/mar-eligible-0",
+    //         },
+    //         {
+    //             text: BUTTON_TEXT.NO,
+    //             href: CALC_PREFIX + "/mar-ineligible-1",
+    //         },
+    //     ],
+    //     tooltip: TooltipType.NOT_SURE,
+    // },
+    // "mar-ineligible-0": {
+    //     type: PageType.END,
+    //     header: "As of now, it seems that you may NOT be eligible to vacate your marijuana misdemeanor conviction because you have not completed the terms of your offense.",
+    //     buttons: [
+    //         {
+    //             text: FEEDBACK_BUTTON_TEXT,
+    //             href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+    //         },
+    //     ],
+    //     showRestartButton: true,
+    //     disclaimer,
+    // },
+    // "mar-eligible-0": {
+    //     type: PageType.END,
+    //     header: "From your answers, it seems that you may be eligible to vacate your marijuana misdemeanor conviction!",
+    //     body: [
+    //         {
+    //             type: BodyType.PARAGRAPH,
+    //             text: "It looks like your conviction may be one of the following:",
+    //         },
+    //         {
+    //             type: BodyType.LINK,
+    //             text: "RCW 69.50.4014",
+    //             href: "https://app.leg.wa.gov/rcw/default.aspx?cite=69.50.4014",
+    //         },
+    //         {
+    //             type: BodyType.LINK,
+    //             text: "RCW 69.50.401(e)",
+    //             href: "https://leg.wa.gov/CodeReviser/documents/sessionlaw/1979c67.pdf?cite=1979%20c%2067%20§%201",
+    //         },
+    //         {
+    //             type: BodyType.LINK,
+    //             text: "RCW 69.50.401(d) (Possession of 40 grams or less of marijuana)",
+    //             href: "https://leg.wa.gov/CodeReviser/documents/sessionlaw/1971ex1c308.pdf?cite=1971%20ex.s.%20c%20308%20§%2069.50.406",
+    //         },
+    //         {
+    //             type: BodyType.HEADING,
+    //             text: "Next steps:",
+    //         },
+    //         {
+    //             type: BodyType.PARAGRAPH,
+    //             text: '1. Fill out a "Petition and Declaration for Order Vacating Conviction" (CrRLJ 09.0100).',
+    //         },
+    //         {
+    //             type: BodyType.LINK,
+    //             text: "CrRLJ 09.0100",
+    //             href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
+    //         },
+    //         {
+    //             type: BodyType.PARAGRAPH,
+    //             text: '2. Read "Instructions for Vacating Misdemeanor and Gross Misdemeanor Convictions" (CrRLJ 09.0300).',
+    //         },
+    //         {
+    //             type: BodyType.LINK,
+    //             text: "CrRLJ 09.0300",
+    //             href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
+    //         },
+    //         {
+    //             type: BodyType.PARAGRAPH,
+    //             text: "3. To better understand misdemeanor conviction vacation, please click the link below:",
+    //         },
+    //         {
+    //             type: BodyType.LINK,
+    //             text: "Click here.",
+    //             href: "https://www.washingtonlawhelp.org/resource/get-misdemeanor-convictions-off-your-criminal-record",
+    //         },
+    //         {
+    //             type: BodyType.PARAGRAPH,
+    //             text: "4. Additionally, as of February 25, 2021, the Washington Supreme Court struck down the state's main drug possession crime in a case called State v. Blake. Read more about how it could affect your case below. We will be providing updates in the future as to how this impacts you.",
+    //         },
+    //         {
+    //             type: BodyType.LINK,
+    //             text: "State v. Blake",
+    //             href: "https://www.aclu-wa.org/pages/q-blake-decision",
+    //         },
+    //     ],
+    //     buttons: [
+    //         {
+    //             text: FEEDBACK_BUTTON_TEXT,
+    //             href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+    //         },
+    //     ],
+    //     showRestartButton: true,
+    //     disclaimer,
+    // },
+    // "mar-ineligible-1": {
+    //     type: PageType.END,
+    //     header: "As of now, it seems that you may NOT be eligible to vacate your marijuana misdemeanor conviction because you have not completed the terms of your offense.",
+    //     buttons: [
+    //         {
+    //             text: FEEDBACK_BUTTON_TEXT,
+    //             href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+    //         },
+    //     ],
+    //     showRestartButton: true,
+    //     disclaimer,
+    // },
+    // "mar-to-main": {
+    //     type: PageType.MAIN,
+    //     header: "Based on your response, it looks like you don't qualify for the marijuana misdemeanor exception.",
+    //     body: [
+    //         {
+    //             type: BodyType.PARAGRAPH,
+    //             text: "However, your misdemeanor may still be eligible for conviction vacation through the general eligibility criteria that apply to most misdemeanors.",
+    //         },
+    //     ],
+    //     buttons: [
+    //         {
+    //             text: BUTTON_TEXT.CONTINUE_JOURNEY,
+    //             href: CALC_PREFIX + "/main-0",
+    //         },
+    //     ],
+    // },
     "main-0": {
         type: PageType.MAIN,
         header: "We will now ask a few questions about what your conviction was for, to assess your eligibility to vacate the conviction.",
