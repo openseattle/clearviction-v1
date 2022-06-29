@@ -31,7 +31,4 @@ export const SpecialCaseTitleStyles = makeStyles(theme => ({
         fontSize: "24px",
         lineHeight: 3,
     },
-    blakeButton: {
-        lineHeight: 3,
-    }
 }));

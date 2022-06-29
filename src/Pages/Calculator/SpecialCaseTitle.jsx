@@ -3,6 +3,7 @@ import { BodyType } from "../../data/calculatorPagesTypes";
 import { BackButton } from "../../ui-kit/BackButton";
 import PrimaryButton from "../../ui-kit/PrimaryButton";
 import { SpecialCaseTitleStyles } from "./SpecialCaseTitleStyles";
+import { ExternalLink } from "../../ui-kit/ExternalLink";
 
 const SpecialCaseTitle = props => {
     const classes = SpecialCaseTitleStyles();
@@ -45,16 +46,15 @@ const SpecialCaseTitle = props => {
                                 );
                             case BodyType.BLAKELINK:
                                 return (
-                                    <span key={b.type}>
-                                        <Link
-                                            className={classes.blakeLink}
+                                    <span className={classes.blakeLink} key={b.type}>
+                                        <ExternalLink
                                             target="_blank"
                                             rel="noopener noreferrer"
                                             role="link"
                                             href={b.href}
                                         >
                                             {b.text}
-                                        </Link>
+                                        </ExternalLink>
                                     </span>
                                 );
                         }
