@@ -43,6 +43,8 @@ export enum BodyType {
     LINK = "link",
     LIST = "list",
     HEADING = "heading",
+    // temporary placeholders for the Blake eligibilty -- sprint 26, 6/27/22
+    BLAKELINK = "span",
 }
 
 interface BaseBody {

@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography, Link } from "@material-ui/core";
 import { BodyType } from "../../data/calculatorPagesTypes";
 import { BackButton } from "../../ui-kit/BackButton";
 import PrimaryButton from "../../ui-kit/PrimaryButton";
@@ -32,15 +32,30 @@ const SpecialCaseTitle = props => {
                                         ))}
                                     </ul>
                                 );
+                            // temporary placeholder for Blake vacation -- sprint 26, 6/27/22
                             case BodyType.LINK:
                                 return (
-                                    <ul>
+                                    <ul key={b.type}>
                                         <li key={idx}>
-                                            <a target="_blank" rel="noopener noreferrer" role="button" href={b.href}>
+                                            <Link target="_blank" rel="noopener noreferrer" role="button" href={b.href}>
                                                 {b.text}
-                                            </a>
+                                            </Link>
                                         </li>
                                     </ul>
+                                );
+                            case BodyType.BLAKELINK:
+                                return (
+                                    <span key={b.type}>
+                                        <Link
+                                            className={classes.blakeLink}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            role="link"
+                                            href={b.href}
+                                        >
+                                            {b.text}
+                                        </Link>
+                                    </span>
                                 );
                         }
                     })}

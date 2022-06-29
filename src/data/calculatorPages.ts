@@ -142,6 +142,9 @@ const data: Pages = {
         ],
         tooltip: TooltipType.NOT_SURE,
     },
+    // Changes made in Sprint 26 -- 6/27/22, temporary placeholders until law becomes less nebulous
+    // placeholders will appear below previous code, which is now commented out
+    // previous code preserved in case new process fits a similar pattern
     "mar-0": {
         type: PageType.SPECIAL,
         header: "You may be eligible for conviction vacation based on a special clause in conviction vacation eligibility law.",
@@ -164,9 +167,9 @@ const data: Pages = {
             {
                 type: BodyType.PARAGRAPH,
                 text: "To determine your eligibility for a Blake vacate, see the detailed Guide below.",
-            },   
+            }, 
             {
-                type: BodyType.LINK,
+                type: BodyType.BLAKELINK,
                 text: "Civil Survival -- Blake Vacate Guide",
                 href: "https://civilsurvival.org/guides/determining-blake-eligibility/",
             },            

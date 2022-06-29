@@ -26,4 +26,12 @@ export const SpecialCaseTitleStyles = makeStyles(theme => ({
         marginBlock: "32px",
         justifyContent: "flex-start",
     },
+    // temporary placeholder for Blake vacation -- sprint 26, 6/27/22
+    blakeLink: {
+        fontSize: "24px",
+        lineHeight: 3,
+    },
+    blakeButton: {
+        lineHeight: 3,
+    }
 }));
