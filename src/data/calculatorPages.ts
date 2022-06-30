@@ -703,7 +703,7 @@ const data: Pages = {
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: "You might be eligible when 5 years have passed since your conviction.",
+                text: "You might be eligible 5 years after completion of terms of the sentence, including any legal financial obligations (LFOs) and treatment ordered as a condition of sentencing.",
             },
         ],
         buttons: [
