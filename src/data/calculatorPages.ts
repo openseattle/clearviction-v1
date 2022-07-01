@@ -24,7 +24,7 @@ const data: Pages = {
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: "Find out if your misdemeanor or gross misdemeanor conviction is eligible to vacate.",
+                text: "Find out if your misdemeanor or gross misdemeanor conviction is eligible to vacate in Washington state.",
             },
             {
                 type: BodyType.LINK,
@@ -58,7 +58,7 @@ const data: Pages = {
             {
                 type: BodyType.LIST,
                 items: [
-                    "The date and violation of your misdemeanor or gross misdemeanor conviction.",
+                    "The date and violation of your misdemeanor or gross misdemeanor conviction in Washington state.",
                     "If and when you completed the terms of your sentence.",
                     "Pending charges and/or new convictions.",
                     "Any court orders against you.",
@@ -105,7 +105,7 @@ const data: Pages = {
     },
     "landing-2": {
         type: PageType.QUESTION,
-        header: "Was this offense a misdemeanor or gross misdemeanor?",
+        header: "Was this offense a misdemeanor or gross misdemeanor in Washington state?",
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
