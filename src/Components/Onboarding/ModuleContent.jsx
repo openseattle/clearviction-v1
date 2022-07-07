@@ -258,20 +258,26 @@ function ModuleContent(props) {
                     </Typography>
                     <Typography variant='body2' className={classes.moduleCardBody}>
                         {modalParagraph2}
-                        <ul>
-                            {p2bullet1 ? <li>{p2bullet1}</li> : null}
-                            {p2bullet2 ? <li>{p2bullet2}</li> : null}
-                            {p2bullet3 ? <li>{p2bullet3}</li> : null}
-                        </ul>
+                        {p2bullet1 &&
+                            <ul>
+                                {p2bullet1 ? <li>{p2bullet1}</li> : null}
+                                {p2bullet2 ? <li>{p2bullet2}</li> : null}
+                                {p2bullet3 ? <li>{p2bullet3}</li> : null}
+                            </ul>
+                        }
+                        
                     </Typography>
                     <Typography variant='body2' className={classes.moduleCardBody}>
                         {modalParagraph3}
-                        <ul>
-                            {p3bullet1 ? <li>{p3bullet1}</li> : null}
-                            {p3bullet2 ? <li>{p3bullet2}</li> : null}
-                            {p3bullet3 ? <li>{p3bullet3}</li> : null}
-                            {p3bullet4 ? <li>{p3bullet4}</li> : null}
-                        </ul>
+                        {p3bullet1 && 
+                            <ul>
+                                {p3bullet1 ? <li>{p3bullet1}</li> : null}
+                                {p3bullet2 ? <li>{p3bullet2}</li> : null}
+                                {p3bullet3 ? <li>{p3bullet3}</li> : null}
+                                {p3bullet4 ? <li>{p3bullet4}</li> : null}
+                            </ul>
+                        }
+                        
                     </Typography>
                     {modalParagraph4 && (
                         <Typography variant='body2' className={classes.moduleCardBody}>
