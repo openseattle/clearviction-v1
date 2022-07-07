@@ -438,7 +438,7 @@ function ModuleContent(props) {
                 className={modalClasses.videoContainer}
 
             >
-                <DialogContent className={modalClasses.contentStyle}>
+                <DialogContent >
                     <MiroVideoModal />
                 </DialogContent>
                 <Button onClick={handleMiroVideoClose} style={{ margin: "0 auto 64px" }} className={classes.button}>
