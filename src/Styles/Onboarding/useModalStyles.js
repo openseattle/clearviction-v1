@@ -6,9 +6,12 @@ export const useModalStyles = makeStyles((theme) => ({
         height: 'auto',
     },
     modalStyle: {
+        position: 'relative',
+        top: '50%',
+        transform: 'translateY(-50%)',
         width: '80%',
         backgroundColor: 'white',
-        margin: '20px auto',
+        margin: 'auto',
         padding: "50px",
     },
     modalContainer: {
