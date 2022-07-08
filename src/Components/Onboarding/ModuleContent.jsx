@@ -79,7 +79,6 @@ function ModuleContent(props) {
     useEffect(() => {
         const mediaSize = window.innerWidth;
         mediaSize >= 768 ? setIsLargeScreen(true) : setIsLargeScreen(false);
-
     }, [])
 
     return (
@@ -242,14 +241,16 @@ function ModuleContent(props) {
             )}
 
             {/* main modal */}
-            <Modal
+            <Dialog
                 open={open}
                 onClose={handleClose}
                 aria-labelledby=''
                 aria-describedby=''
+                fullWidth
+                maxWidth="lg"
                 className={modalClasses.mainModal}
             >
-                <Box className={modalClasses.modalStyle}>
+                <DialogContent style={{ padding: '50px' }}>
                     <Typography className={classes.modalTitleStyle} >
                         {modalTitle}
                     </Typography>
@@ -284,13 +285,12 @@ function ModuleContent(props) {
                             {modalParagraph4}
                         </Typography>
                     )}
-
-                    <Button onClick={handleClose} className={classes.button} style={{ margin: 0 }}>
+                    <Button onClick={handleClose} className={classes.button}>
                         Close
                     </Button>
-                </Box>
-            </Modal>
-
+                </DialogContent>
+            </Dialog>
+           
             {/* complex airtable modal */}
             {isLargeScreen ?
                 <Dialog
