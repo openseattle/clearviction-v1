@@ -1,7 +1,11 @@
 import { makeStyles } from "@material-ui/core";
 
 export const useModuleContentStyles = makeStyles((theme) => ({
-  
+  mainModuleContentCard: {
+    width: "80%", 
+    flexDirection: "row", 
+    margin: theme.spacing(6, "auto"),
+  },
   moduleContentCard: {
     display: "flex",
     flexDirection: "column",

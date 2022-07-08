@@ -74,8 +74,8 @@ function OnboardingMod3() {
         <>
             <Header text={headerText} />
             <Typography variant='h4' className={classes.mobileHeader}>Module 3</Typography>
-            <Box >
-                <Grid container justifyContent="center" className={classes.moduleContentCard}>
+            <Box>
+                <Grid container className={classes.mainModuleContentCard}>
                     <Grid item xs={2} className={classes.cardIcon} >
                         <img className={classes.icon} src={remote} alt="" />
                     </Grid>
