@@ -11,12 +11,8 @@ export const useModuleContentStyles = makeStyles((theme) => ({
     flexDirection: "column",
     margin: theme.spacing(6, "auto"),
     width: "80%",
-    // alignText: "center",
     justifyContent: 'center',
     paddingBottom: theme.spacing(4),
-    // [theme.breakpoints.down("sm")]: {
-    //   paddingBottom: theme.spacing(2),
-    // }
   },
   moduleCardHeading: {
     color: theme.palette.primary.main,
@@ -112,7 +108,7 @@ export const useModuleContentStyles = makeStyles((theme) => ({
   },
   modalTitleStyle: {
     color: "#4E6C99",
-    marginBottom: theme.spacing(5),
+    margin: theme.spacing(3),
     fontWeight: 700,
     fontSize: "30px",
     lineHeight: "39px",

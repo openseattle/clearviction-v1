@@ -464,10 +464,11 @@ function ModuleContent(props) {
                                 </ListItem>
                             ) : null}
                         </List>
+                        <Button onClick={handleTrustDocClose} className={classes.button}>
+                            Close
+                        </Button>
                     </DialogContent>
-                    <Button onClick={handleTrustDocClose} className={classes.button}>
-                        Close
-                    </Button>
+                    
                 </Dialog>
                 : <Dialog
                     open={trustDocOpen}

@@ -7,12 +7,9 @@ export const useModalStyles = makeStyles((theme) => ({
     },
     modalStyle: {
         position: 'relative',
-        top: '50%',
-        transform: 'translateY(-50%)',
-        width: '80%',
         backgroundColor: 'white',
         margin: 'auto',
-        padding: "50px",
+        padding: "50px 80px",
     },
     modalContainer: {
         backgroundColor: 'white',
