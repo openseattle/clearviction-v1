@@ -333,17 +333,11 @@ function ModuleContent(props) {
                     aria-describedby=''
                     fullWidth
                     maxWidth="lg"
-                    className={modalClasses.videoContainer}
-                    sx={{
-                        height: 'auto',
-                    }}
+                    className={modalClasses.mainModal}
                 >
-                    <DialogContent className={modalClasses.contentStyle}>
-                        <AirtableVideoModal />
+                    <DialogContent className={modalClasses.videoContainer}>
+                        <AirtableVideoModal handleAirtableVideoClose={handleAirtableVideoClose} />
                     </DialogContent>
-                    <Button onClick={handleAirtableVideoClose} style={{ margin: "0 auto 64px" }} className={classes.button}>
-                        Close
-                    </Button>
                 </Dialog>
                 : <Dialog
                     open={airtableVideoOpen}

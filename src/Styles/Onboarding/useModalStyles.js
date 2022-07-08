@@ -39,7 +39,7 @@ export const useModalStyles = makeStyles((theme) => ({
         maxWidth: "300px",
         height: "48px",
         textAlign: "center",
-        float: "right",
+        display: "flex",
         verticalAlign: "middle",
         padding: "auto",
         boxShadow: "0 2px 4px rgba(0, 0, 0, 0.2)",
@@ -48,6 +48,10 @@ export const useModalStyles = makeStyles((theme) => ({
         fontSize: "18px",
         fontWeight: "bold",
         lineHeight: 2.7,
+        '&:hover' : {
+            color: "#000",
+            backgroundColor: "#ffd200",
+          },
     }
 
 }))

@@ -1,5 +1,5 @@
-import { Grid } from '@material-ui/core';
-import { useState, useEffect } from 'react';
+import { Grid, Button } from '@material-ui/core';
+import { useState } from 'react';
 
 // icons
 import video from '../../Assets/Onboarding/video.svg';
@@ -7,7 +7,7 @@ import video from '../../Assets/Onboarding/video.svg';
 // styles
 import { useModalStyles } from '../../Styles/Onboarding/useModalStyles';
 
-export default function AirtableVideoModal() {
+export default function AirtableVideoModal(props) {
   const [sectionId, setSectionId] = useState(1);
   const [activeTab, setActiveTab] = useState(1);
   const classes = useModalStyles();
@@ -59,7 +59,7 @@ export default function AirtableVideoModal() {
   }
 
   return (
-    <Grid container style={{ justifyContent: 'space-between'}}>
+    <Grid container style={{ justifyContent: 'space-between', marginBottom: '60px' }}>
       <Grid item xs={2} >
         {sections.map((section) => (
           <button key={section.id} onClick={() => showSection(section.id)} style={activeTab === section.id ? activeTabStyle : tabStyle} >
@@ -71,34 +71,37 @@ export default function AirtableVideoModal() {
       <Grid item xs={7} md={8} lg={9} className={classes.contentStyle}>
         {sectionId === 1 && (
           <div style={{ height: "100%", }}>
-            <iframe title={sections.title} src={profile} width="100%" height="90%" allow="autoplay"></iframe>
+            <iframe title={sections.title} src={profile} width="100%" height="80%" allow="autoplay"></iframe>
           </div>
         )}
         {sectionId === 2 && (
           <div style={{ height: "100%" }}>
-            <iframe title={sections.title} src={dashboard} width="100%" height="90%" allow="autoplay"></iframe>
+            <iframe title={sections.title} src={dashboard} width="100%" height="80%" allow="autoplay"></iframe>
           </div>
         )}
         {sectionId === 3 && (
           <div style={{ height: "100%" }}>
-            <iframe title={sections.title} src={engageTasks} width="100%" height="90%" allow="autoplay"></iframe>
+            <iframe title={sections.title} src={engageTasks} width="100%" height="80%" allow="autoplay"></iframe>
           </div>
         )}
         {sectionId === 4 && (
           <div style={{ height: "100%" }}>
-            <iframe title={sections.title} src={createTasks} width="100%" height="90%" allow="autoplay"></iframe>
+            <iframe title={sections.title} src={createTasks} width="100%" height="80%" allow="autoplay"></iframe>
           </div>
         )}
         {sectionId === 5 && (
           <div style={{ height: "100%" }}>
-            <iframe title={sections.title} src={requests} width="100%" height="90%" allow="autoplay"></iframe>
+            <iframe title={sections.title} src={requests} width="100%" height="80%" allow="autoplay"></iframe>
           </div>
         )}
         {sectionId === 6 && (
           <div style={{ height: "100%" }}>
-            <iframe title={sections.title} src={evaluate} width="100%" height="90%" allow="autoplay"></iframe>
+            <iframe title={sections.title} src={evaluate} width="100%" height="80%" allow="autoplay"></iframe>
           </div>
         )}
+        <Button onClick={props.handleAirtableVideoClose} style={{ margin: "0 auto 64px" }} className={classes.button}>
+            Close
+        </Button>
       </Grid>
     </Grid>
   )
