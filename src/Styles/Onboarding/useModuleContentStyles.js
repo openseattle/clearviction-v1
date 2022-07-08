@@ -135,6 +135,10 @@ export const useModuleContentStyles = makeStyles((theme) => ({
     fontSize: "18px",
     fontWeight: "bold",
     lineHeight: 2.7,
+    '&:hover' : {
+      color: "#000",
+      backgroundColor: "#ffd200",
+    },
   },
   mobileHeader: {
     fontSize: "20px",
