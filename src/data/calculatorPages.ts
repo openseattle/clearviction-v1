@@ -163,16 +163,16 @@ const data: Pages = {
                 type: BodyType.PARAGRAPH,
                 // text: "We will ask you up to 4 questions to determine if you may be eligible for Conviction Vacation through this exception.",
                 text: "If you are eligible, your conviction can be vacated. This means the conviction will be treated as if it never occurred. Additionally, all fees associated with your conviction will be eliminated or refunded if you have already made payments.",
-            },            
+            },
             {
                 type: BodyType.PARAGRAPH,
                 text: "To determine your eligibility for a Blake vacate, see the detailed Guide below.",
-            }, 
+            },
             {
                 type: BodyType.BLAKELINK,
                 text: "Civil Survival -- Blake Vacate Guide",
                 href: "https://civilsurvival.org/guides/determining-blake-eligibility/",
-            },            
+            },
             {
                 type: BodyType.PARAGRAPH,
                 text: "If you are not eligibile for a Blake vacate, you may still be eligible to vacate your conviction through other means. Proceed to the next steps by clicking the button below.",
@@ -824,7 +824,7 @@ const data: Pages = {
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: "It looks like your conviction may be one of the following:",
+                text: "It looks like your conviction may be eligible to vacate, based on the following exception for some fishing-regulation convictions related to treaty fishing rights:",
             },
             {
                 type: BodyType.LINK,
@@ -832,35 +832,38 @@ const data: Pages = {
                 href: "https://app.leg.wa.gov/RCW/default.aspx?cite=9.96.060",
             },
             {
+                type: BodyType.PARAGRAPH,
+                text: "This applies to you if your (or a deceased family member's) conviction was for violating a fishing regulation, and you (or your family member) are part of a tribe that had official treaty rights at the location and time where you were fishing.",
+            },
+            {
                 type: BodyType.HEADING,
                 text: "Next steps:",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: '1. Fill out a "Petition and Declaration for Order Vacating Conviction" (CrRLJ 09.0100).',
+                text: '1. Download and fill out "Motion and Declaration for an Order Vacating Conviction – Treaty Indian Fishing Rights" (CrRLJ CR 09.0500) from the below link. You will also need a Tribe or Nation representative to sign the Tribal Status certification.',
             },
             {
                 type: BodyType.LINK,
-                text: "CrRLJ 09.0100",
+                text: "Washington Court Form",
                 href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: '2. Read "Instructions for Vacating Misdemeanor and Gross Misdemeanor Convictions" (CrRLJ 09.0300).',
-            },
-            {
-                type: BodyType.LINK,
-                text: "CrRLJ 09.0300",
-                href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
+                text: "2. Read the local court rules or contact the clerk of the court where you will file your petition to find out if you need any additional records to be submitted with your petition.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: "3. To better understand misdemeanor conviction vacation, please click the link below:",
+                text: "3. Make at least 3 copies of all paperwork.",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "4. Read Part 2 of the below document to find out how to file your petition and schedule a hearing.",
             },
             {
                 type: BodyType.LINK,
-                text: "Click here.",
-                href: "https://www.washingtonlawhelp.org/resource/get-misdemeanor-convictions-off-your-criminal-record",
+                text: "Washington Law Help instructions on vacating a conviction related to Treaty Indian Fishing Rights. ",
+                href: "https://www.washingtonlawhelp.org/files/C9D2EA3F-0350-D9AF-ACAE-BF37E9BC9FFA/attachments/D7D7897D-DE79-4E5A-B51F-B1708D37541C/8714en_vacate-a-conviction-treaty-indian-fishing-rights.pdf",
             },
         ],
         buttons: [
