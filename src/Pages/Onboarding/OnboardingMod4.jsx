@@ -83,7 +83,7 @@ function OnboardingMod4() {
             <Header text={headerText} />
             <Typography variant='h4' className={classes.mobileHeader}>Module 4</Typography>
             <Box >
-                <Grid container style={{ width: '80%', flexDirection: 'row', margin: '70px auto' }}>
+                <Grid container className={classes.mainModuleContentCard}>
                     <Grid item xs={2} className={classes.cardIcon} >
                         <img src={boat} alt="" className={classes.icon} />
                     </Grid>
@@ -131,19 +131,29 @@ function OnboardingMod4() {
                     }
                 }}>
                     <Grid item xs={8} sm={6} md={3} lg={2}>
-                        <img src={scrum} alt="Scrum Team Icon" />
+                        <a href="https://airtable.com/appfJZShN8K4tcWHU/tblln6jlsrsqfU0TO/viwrhv3vIo3LqHezH/recg4fqrnyVrBVHYL?blocks=hide" target="_blank" rel="noreferrer">
+                            <img src={scrum} alt="Scrum Team Icon" />
+                        </a>
                     </Grid>
                     <Grid item sm={6} md={4} lg={2}>
-                        <img src={marketing} alt="Marketing Team Icon" />
+                        <a href="https://airtable.com/appfJZShN8K4tcWHU/tblln6jlsrsqfU0TO/viwrhv3vIo3LqHezH/recFUnwChbzrVG3Rm?blocks=hide" target="_blank" rel="noreferrer">
+                            <img src={marketing} alt="Marketing Team Icon" />
+                        </a>
                     </Grid>
                     <Grid item sm={6} md={4} lg={2}>
-                        <img src={nemo} alt="Nemo Team Icon" />
+                        <a href="https://airtable.com/appfJZShN8K4tcWHU/tblln6jlsrsqfU0TO/viwrhv3vIo3LqHezH/recQNivtgpqnbrVXf?blocks=hide" target="_blank" rel="noreferrer">
+                            <img src={nemo} alt="Nemo Team Icon" />
+                        </a>
                     </Grid>
                     <Grid item sm={6} md={4} lg={2}>
-                        <img src={product} alt="Product Team Icon" />
+                        <a href="https://airtable.com/appfJZShN8K4tcWHU/tblln6jlsrsqfU0TO/viwrhv3vIo3LqHezH/recFcuos1llaUgC3y?blocks=hide" target="_blank" rel="noreferrer">
+                            <img src={product} alt="Product Team Icon" />
+                        </a>
                     </Grid>
                     <Grid item sm={6} md={4} lg={2}>
-                        <img src={research} alt="User Reasearch Team Icon" />
+                        <a href="https://airtable.com/appfJZShN8K4tcWHU/tblln6jlsrsqfU0TO/viwrhv3vIo3LqHezH/recDKkzwiQfEEPW8Q?blocks=hide" target="_blank" rel="noreferrer">
+                            <img src={research} alt="User Reasearch Team Icon" />
+                        </a>
                     </Grid>
                 </Grid>
             </div>
