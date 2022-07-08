@@ -21,10 +21,7 @@ const mission = {
 
 const story = {
     title: "Our Story",
-    linkIcon: "doc",
-    linkTitle: "Clearviction Story",
-    modalTitle: "Our Story",
-    modalParagraph1: "Committed to helping people with convictions to improve their quality of life, a group of volunteers decided to create a tool that could simplify the conviction vacation process. While the project started in Seattle, we now have volunteers all across the country (and the world!) contributing to building, maintaining, and improving this product.",
+    paragraph1: "Committed to helping people with convictions to improve their quality of life, a group of volunteers decided to create a tool that could simplify the conviction vacation process. While the project started in Seattle, we now have volunteers all across the country (and the world!) contributing to building, maintaining, and improving this product.",
 }
 
 const problem = {
