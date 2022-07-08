@@ -1,4 +1,3 @@
-import { useEffect } from 'react';
 import { Grid, Typography, Box } from '@material-ui/core';
 import Theme from '../../Components/Theme';
 import { useModuleContentStyles } from '../../Styles/Onboarding/useModuleContentStyles';
@@ -80,11 +79,11 @@ const button2 = {
 function OnboardingMod4() {
     const classes = useModuleContentStyles();
     return (
-        <div>{console.log('mod4')}
+        <div>
             <Header text={headerText} />
             <Typography variant='h4' className={classes.mobileHeader}>Module 4</Typography>
             <Box >
-                <Grid container justifyContent="center" className={classes.moduleContentCard}>
+                <Grid container style={{ width: '80%', flexDirection: 'row', margin: '70px auto' }}>
                     <Grid item xs={2} className={classes.cardIcon} >
                         <img src={boat} alt="" className={classes.icon} />
                     </Grid>
@@ -118,7 +117,6 @@ function OnboardingMod4() {
                 </Grid>
             </Box>
 
-            {/* Change to team pics */}
             <div id="team" style={{ marginBottom: Theme.spacing(5) }}>
                 <Grid container spacing={2} style={{
                     display: "flex",
@@ -130,10 +128,9 @@ function OnboardingMod4() {
                     maxWidth: "77vw",
                     [Theme.breakpoints.down("sm")]: {
                         padding: "0 40px",
-                        justifyContent: "center"
                     }
                 }}>
-                    <Grid item sm={6} md={3} lg={2}>
+                    <Grid item xs={8} sm={6} md={3} lg={2}>
                         <img src={scrum} alt="Scrum Team Icon" />
                     </Grid>
                     <Grid item sm={6} md={4} lg={2}>

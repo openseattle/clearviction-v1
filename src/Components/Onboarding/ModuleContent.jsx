@@ -83,7 +83,7 @@ function ModuleContent(props) {
     }, [])
 
     return (
-        <div className={classes.moduleContentCard + " " + classes.regularContainer}>
+        <div className={classes.moduleContentCard}>
             <Typography variant="h4" className={classes.moduleCardHeading}>{title}</Typography>
             <Typography variant="body2" className={classes.bold}>{subheading}</Typography>
             {paragraph1 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph1}</Typography> : null}

@@ -1,13 +1,18 @@
 import { makeStyles } from "@material-ui/core";
 
 export const useModuleContentStyles = makeStyles((theme) => ({
+  
   moduleContentCard: {
+    display: "flex",
+    flexDirection: "column",
     margin: theme.spacing(6, "auto"),
     width: "80%",
+    // alignText: "center",
+    justifyContent: 'center',
     paddingBottom: theme.spacing(4),
-    [theme.breakpoints.down("sm")]: {
-      paddingBottom: theme.spacing(2),
-    }
+    // [theme.breakpoints.down("sm")]: {
+    //   paddingBottom: theme.spacing(2),
+    // }
   },
   moduleCardHeading: {
     color: theme.palette.primary.main,
@@ -49,9 +54,6 @@ export const useModuleContentStyles = makeStyles((theme) => ({
     marginTop: "47px",
     textAlign: "right",
     marginRight: "-25px",
-    [theme.breakpoints.down("sm")]: {
-
-    }
   },
   icon: {
     width: "70px",
