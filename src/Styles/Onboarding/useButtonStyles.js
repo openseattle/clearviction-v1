@@ -17,6 +17,11 @@ export const useButtonStyles = makeStyles((theme) => ({
       fontSize: "18px",
       fontWeight: "bold",
       lineHeight: 2.7,
+      transition: "background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+      '&:hover' : {
+         color: "#000",
+         backgroundColor: "#ffd200",
+       },
       [theme.breakpoints.down("sm")]: {
          marginBottom: theme.spacing(4),
       },
@@ -24,7 +29,6 @@ export const useButtonStyles = makeStyles((theme) => ({
          marginBottom: theme.spacing(2),
          minWidth: "175px",
          maxWidth: "175px",
-
       }
    },
    buttonSecondary: {
@@ -45,6 +49,11 @@ export const useButtonStyles = makeStyles((theme) => ({
       fontSize: "18px",
       fontWeight: "bold",
       lineHeight: 2.7,
+      transition: "background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms",
+      '&:hover' : {
+         color: "#000",
+         backgroundColor: "#ffd200",
+       },
       [theme.breakpoints.down("sm")]: {
          marginBottom: theme.spacing(4),
       }

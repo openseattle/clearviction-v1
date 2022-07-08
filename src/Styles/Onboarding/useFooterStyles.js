@@ -8,7 +8,6 @@ export const useFooterStyles = makeStyles((theme) => ({
       margin: theme.spacing(6),
       [theme.breakpoints.down("xs")]: {
          margin: theme.spacing(2),
-
       }
    },
    completeContainer: {
@@ -19,6 +18,5 @@ export const useFooterStyles = makeStyles((theme) => ({
       [theme.breakpoints.down("sm")]: {
          justifyContent: "center",
       }
-   }
-
+   },
 }));
