@@ -1,31 +1,31 @@
 import { makeStyles } from "@material-ui/core";
 
-export const useModalStyles = makeStyles((theme) => ({
+export const useModalStyles = makeStyles(theme => ({
     mainModal: {
-        overflowY: 'auto',
-        height: 'auto',
+        overflowY: "auto",
+        height: "auto",
     },
     modalStyle: {
-        position: 'relative',
-        backgroundColor: 'white',
-        margin: 'auto',
+        position: "relative",
+        backgroundColor: "white",
+        margin: "auto",
         padding: "50px 80px",
     },
     modalContainer: {
-        backgroundColor: 'white',
+        backgroundColor: "white",
         boxShadow: 24,
         padding: "75px",
     },
     videoContainer: {
-        overflowY: 'auto',
-        backgroundColor: 'white',
+        overflowY: "auto",
+        backgroundColor: "white",
     },
     contentStyle: {
         margin: theme.spacing(3),
-        maxWidth: '1000px',
+        maxWidth: "1000px",
         fontWeight: 400,
-        fontSize: '16px',
-        lineHeight: '22px', 
+        fontSize: "16px",
+        lineHeight: "22px",
         padding: 0,
     },
     button: {
@@ -45,10 +45,9 @@ export const useModalStyles = makeStyles((theme) => ({
         fontSize: "18px",
         fontWeight: "bold",
         lineHeight: 2.7,
-        '&:hover' : {
+        "&:hover": {
             color: "#000",
             backgroundColor: "#ffd200",
-          },
-    }
-
-}))
+        },
+    },
+}));

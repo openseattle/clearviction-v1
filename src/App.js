@@ -19,7 +19,6 @@ import OnboardingMod2 from "./Pages/Onboarding/OnboardingMod2";
 import OnboardingMod3 from "./Pages/Onboarding/OnboardingMod3";
 import OnboardingMod4 from "./Pages/Onboarding/OnboardingMod4";
 
-
 function App() {
     const location = useLocation();
 
@@ -34,7 +33,7 @@ function App() {
                     }}
                 >
                     <CssBaseline />
-                    {location.pathname.includes('/onboarding') ? null : <Navigation />}
+                    {location.pathname.includes("/onboarding") ? null : <Navigation />}
                     <Switch>
                         <Route path="/404">
                             <ErrorPage />
