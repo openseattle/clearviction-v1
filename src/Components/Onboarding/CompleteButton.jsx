@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Typography } from '@material-ui/core';
-import { useButtonStyles } from '../../Styles/Onboarding/useButtonStyles';
-import openCircle from '../../Assets/Onboarding/openCircle.png';
-import circleCheck from '../../Assets/Onboarding/circleCheck.png';
+import React, { useState, useEffect } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Typography } from "@material-ui/core";
+import { useButtonStyles } from "../../Styles/Onboarding/useButtonStyles";
+import openCircle from "../../Assets/Onboarding/openCircle.png";
+import circleCheck from "../../Assets/Onboarding/circleCheck.png";
 
 function CompleteButton(props) {
     const classes = useButtonStyles();
@@ -16,35 +16,33 @@ function CompleteButton(props) {
         if (completedMod) {
             setIsComplete(true);
         }
-    }, [location.pathname])
+    }, [location.pathname]);
 
     const handleComplete = () => {
         const completedMod = localStorage.getItem(`${location.pathname}`);
         if (completedMod) {
-            localStorage.removeItem(`${location.pathname}`)
-        }
-        else {
+            localStorage.removeItem(`${location.pathname}`);
+        } else {
             localStorage.setItem(`${location.pathname}`, !isComplete);
         }
         setIsComplete(!isComplete);
-    }
+    };
 
     return (
-        <Link style={{ textDecoration: "none", color: "white" }}
-            onClick={handleComplete} to={location.pathname}>
+        <Link style={{ textDecoration: "none", color: "white" }} onClick={handleComplete} to={location.pathname}>
             <div className={classes.buttonSecondary} style={isComplete ? styles.success : styles.div}>
                 <img src={isComplete ? circleCheck : openCircle} alt="" style={styles.img} />
                 <Typography variant="button">{isComplete ? "completed" : "mark as done"}</Typography>
             </div>
         </Link>
     );
-};
+}
 
 const styles = {
     img: {
-        height: '20px',
+        height: "20px",
         marginLeft: "15px",
-        marginRight: "15px"
+        marginRight: "15px",
     },
     div: {
         display: "flex",
@@ -53,8 +51,8 @@ const styles = {
     success: {
         display: "flex",
         alignItems: "center",
-        color: "green"
-    }
-}
+        color: "green",
+    },
+};
 
 export default CompleteButton;

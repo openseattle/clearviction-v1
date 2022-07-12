@@ -58,12 +58,7 @@ const GetStartedPage = () => {
                         </Box>
                     </Grid>
                     <Grid item xs={12} sm={12} md={6}>
-                        <Box
-                            component="img"
-                            style={{ width: "100%", padding: 16 }}
-                            src={teamBuilding}
-                            alt=""
-                        />
+                        <Box component="img" style={{ width: "100%", padding: 16 }} src={teamBuilding} alt="" />
                     </Grid>
                 </Grid>
             </RedesignHeroPanel>
@@ -221,8 +216,9 @@ const GetStartedPage = () => {
                 <Typography component="ul" variant="body1" className={classes.basicListStyle}>
                     <li>Outside of King County: call 1-888-201-1014 (weekdays 9.15am - 12.15pm)</li>
                     <li>In King County: call 2-1-1 (weekdays 8am - 6pm)</li>
-                    <li>You can also apply online at
-                        {" "}<ExternalLink href="https://nwjustice.org/apply-online">CLEAR*Online</ExternalLink>{" "}
+                    <li>
+                        You can also apply online at{" "}
+                        <ExternalLink href="https://nwjustice.org/apply-online">CLEAR*Online</ExternalLink>{" "}
                     </li>
                 </Typography>
 

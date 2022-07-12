@@ -39,11 +39,7 @@ const HomePage = () => {
                             </Box>
                         </Grid>
                         <Grid item xs={12} sm={6}>
-                            <img
-                                src={calculator}
-                                className={classes.iconStyle}
-                                alt=""
-                            ></img>
+                            <img src={calculator} className={classes.iconStyle} alt=""></img>
                         </Grid>
                     </Grid>
                 </Container>

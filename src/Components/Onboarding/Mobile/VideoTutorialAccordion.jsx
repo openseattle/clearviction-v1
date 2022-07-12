@@ -1,15 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Accordion from '@material-ui/core/Accordion';
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
-import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import React, { useEffect, useState } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Accordion from "@material-ui/core/Accordion";
+import AccordionSummary from "@material-ui/core/AccordionSummary";
+import AccordionDetails from "@material-ui/core/AccordionDetails";
+import Typography from "@material-ui/core/Typography";
+import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
     root: {
-        width: '100%',
+        width: "100%",
         height: "100%",
     },
     heading: {
@@ -17,17 +16,16 @@ const useStyles = makeStyles((theme) => ({
         fontWeight: theme.typography.fontWeightRegular,
     },
     linkStyle: {
-        color: '#237BCD',
-    }
+        color: "#237BCD",
+    },
 }));
 
-
-const VideoTutorialAccordion = (props) => {
+const VideoTutorialAccordion = props => {
     const classes = useStyles();
 
-    const [expanded, setExpanded] = useState('1');
+    const [expanded, setExpanded] = useState("1");
 
-    const handleChange = (panel) => (event, isExpanded) => {
+    const handleChange = panel => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);
     };
 
@@ -62,11 +60,11 @@ const VideoTutorialAccordion = (props) => {
             title: "Evaluting performance of a task someone completed for you",
             video: "https://drive.google.com/file/d/1W6QXg0U2EHgckjr8XmM9sA3a1X31N-pd/preview",
         },
-    ]
+    ];
 
     return (
         <div className={classes.root}>
-            {sections.map(elem =>
+            {sections.map(elem => (
                 <Accordion expanded={expanded === elem.id} onChange={handleChange(elem.id)} key={elem.id}>
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
@@ -76,14 +74,20 @@ const VideoTutorialAccordion = (props) => {
                         <Typography className={classes.heading}>{elem.title}</Typography>
                     </AccordionSummary>
                     <AccordionDetails content={classes.root}>
-                        <div style={{ width: '100%', height: '100%' }}>
-                            <iframe title={elem.title} src={elem.video} height="300" width="100%" allow="autoplay"></iframe>
+                        <div style={{ width: "100%", height: "100%" }}>
+                            <iframe
+                                title={elem.title}
+                                src={elem.video}
+                                height="300"
+                                width="100%"
+                                allow="autoplay"
+                            ></iframe>
                         </div>
                     </AccordionDetails>
                 </Accordion>
-            )}
+            ))}
         </div>
     );
-}
+};
 
-export default VideoTutorialAccordion
+export default VideoTutorialAccordion;

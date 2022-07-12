@@ -29,11 +29,7 @@ const AboutPage = () => {
                             </Typography>
                         </Grid>
                         <Grid item xs={12} sm={6} md={6}>
-                            <img
-                                src={map}
-                                className={classes.iconStyle + " " + classes.centerText}
-                                alt=""
-                            ></img>
+                            <img src={map} className={classes.iconStyle + " " + classes.centerText} alt=""></img>
                         </Grid>
                     </Grid>
                 </Container>

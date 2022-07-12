@@ -1,50 +1,77 @@
-import { useState, useEffect } from 'react';
-import { Typography, Modal, Button, Box, ListItem, List, ListItemText, ListItemIcon, Grid, Dialog, DialogContent } from '@material-ui/core';
-import { useModuleContentStyles } from '../../Styles/Onboarding/useModuleContentStyles';
-import { useModalStyles } from '../../Styles/Onboarding/useModalStyles';
-import link from '../../Assets/Onboarding/link.svg';
-import doc from '../../Assets/Onboarding/doc.svg';
-import video from '../../Assets/Onboarding/video.svg';
+import { useState, useEffect } from "react";
+import {
+    Typography,
+    Modal,
+    Button,
+    Box,
+    ListItem,
+    List,
+    ListItemText,
+    ListItemIcon,
+    Grid,
+    Dialog,
+    DialogContent,
+} from "@material-ui/core";
+import { useModuleContentStyles } from "../../Styles/Onboarding/useModuleContentStyles";
+import { useModalStyles } from "../../Styles/Onboarding/useModalStyles";
+import link from "../../Assets/Onboarding/link.svg";
+import doc from "../../Assets/Onboarding/doc.svg";
+import video from "../../Assets/Onboarding/video.svg";
 
-import AirtableModal from './AirtableModal';
-import SlackModal from './SlackModal';
-import AirtableVideoModal from './AirtableVideoModal';
-import SlackVideoModal from './SlackVideoModal';
-import MiroVideoModal from './MiroVideoModal';
-import TutorialAccordion from './Mobile/TutorialAccordion';
-import SlackAccordion from './Mobile/SlackAccoridion';
-import VideoTutorialAccordion from './Mobile/VideoTutorialAccordion';
-import SlackVideoAccordion from './Mobile/SlackVideoAccordion';
-import TrustDocAccordion from './Mobile/TrustDocAccordion';
+import AirtableModal from "./AirtableModal";
+import SlackModal from "./SlackModal";
+import AirtableVideoModal from "./AirtableVideoModal";
+import SlackVideoModal from "./SlackVideoModal";
+import MiroVideoModal from "./MiroVideoModal";
+import TutorialAccordion from "./Mobile/TutorialAccordion";
+import SlackAccordion from "./Mobile/SlackAccoridion";
+import VideoTutorialAccordion from "./Mobile/VideoTutorialAccordion";
+import SlackVideoAccordion from "./Mobile/SlackVideoAccordion";
+import TrustDocAccordion from "./Mobile/TrustDocAccordion";
 
 const modalStyle = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: '80%',
-    bgcolor: 'background.paper',
+    position: "absolute",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+    width: "80%",
+    bgcolor: "background.paper",
     boxShadow: 24,
-    padding: "50px"
-}
+    padding: "50px",
+};
 
 function ModuleContent(props) {
     const classes = useModuleContentStyles();
     const modalClasses = useModalStyles();
-    const { title, subheading,
-        paragraph1, paragraph2,
-        paragraph3, paragraph4,
-        linkTitle, linkTitle2,
-        linkTitle3, linkIcon,
-        linkIcon2, linkIcon3,
-        linkLocation, linkLocation2,
-        linkLocation3, modalParagraph1,
-        modalTitle, modalParagraph2,
-        modalParagraph3, modalParagraph4,
-        p2bullet1, p2bullet2,
-        p2bullet3, p3bullet1,
-        p3bullet2, p3bullet3,
-        p3bullet4, bullets
+    const {
+        title,
+        subheading,
+        paragraph1,
+        paragraph2,
+        paragraph3,
+        paragraph4,
+        linkTitle,
+        linkTitle2,
+        linkTitle3,
+        linkIcon,
+        linkIcon2,
+        linkIcon3,
+        linkLocation,
+        linkLocation2,
+        linkLocation3,
+        modalParagraph1,
+        modalTitle,
+        modalParagraph2,
+        modalParagraph3,
+        modalParagraph4,
+        p2bullet1,
+        p2bullet2,
+        p2bullet3,
+        p3bullet1,
+        p3bullet2,
+        p3bullet3,
+        p3bullet4,
+        bullets,
     } = props.content;
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
@@ -79,209 +106,210 @@ function ModuleContent(props) {
     useEffect(() => {
         const mediaSize = window.innerWidth;
         mediaSize >= 768 ? setIsLargeScreen(true) : setIsLargeScreen(false);
-    }, [])
+    }, []);
 
     return (
         <div className={classes.moduleContentCard}>
-            <Typography variant="h4" className={classes.moduleCardHeading}>{title}</Typography>
-            <Typography variant="body2" className={classes.bold}>{subheading}</Typography>
-            {paragraph1 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph1}</Typography> : null}
-            {paragraph2 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph2}</Typography> : null}
-            {paragraph3 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph3}</Typography> : null}
-            {paragraph4 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph4}</Typography> : null}
+            <Typography variant="h4" className={classes.moduleCardHeading}>
+                {title}
+            </Typography>
+            <Typography variant="body2" className={classes.bold}>
+                {subheading}
+            </Typography>
+            {paragraph1 ? (
+                <Typography variant="body1" className={classes.moduleCardBody}>
+                    {paragraph1}
+                </Typography>
+            ) : null}
+            {paragraph2 ? (
+                <Typography variant="body1" className={classes.moduleCardBody}>
+                    {paragraph2}
+                </Typography>
+            ) : null}
+            {paragraph3 ? (
+                <Typography variant="body1" className={classes.moduleCardBody}>
+                    {paragraph3}
+                </Typography>
+            ) : null}
+            {paragraph4 ? (
+                <Typography variant="body1" className={classes.moduleCardBody}>
+                    {paragraph4}
+                </Typography>
+            ) : null}
 
             {linkTitle ? (
                 <div className={classes.moduleContentLink}>
-                    {linkIcon === "link" &&
-                        <Button href={linkLocation} target="_blank" rel="noreferrer"
-                            className={classes.linkContainer}>
+                    {linkIcon === "link" && (
+                        <Button href={linkLocation} target="_blank" rel="noreferrer" className={classes.linkContainer}>
                             <div className={classes.linkContainer}>
                                 <img src={link} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText} >{linkTitle}</p>
+                                <p className={classes.linkText}>{linkTitle}</p>
                             </div>
                         </Button>
-                    }
-                    {linkIcon === "doc" &&
-                        <Button onClick={handleOpen} className={classes.linkContainer} >
-                            <div className={classes.linkContainer}>
-                                <img src={doc} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText} >{linkTitle}</p>
-                            </div>
-                        </Button>
-                    }
-                    {linkIcon === "trustDoc" &&
-                        <Button onClick={handleTrustDocOpen} className={classes.linkContainer} >
-                            <div className={classes.linkContainer}>
-                                <img src={doc} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText} >{linkTitle}</p>
-                            </div>
-                        </Button>
-                    }
-                    {linkIcon === "docAirtable" &&
-                        <Button onClick={handleAirtableOpen} style={{ textDecoration: "none", color: "#4e6c99" }} >
-                            <div className={classes.linkContainer}>
-                                <img src={doc} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText} >{linkTitle}</p>
-                            </div>
-                        </Button>
-                    }
-                    {linkIcon === "videoAirtable" &&
-                        <Button onClick={handleAirtableVideoOpen} className={classes.linkContainer} >
-                            <div className={classes.linkContainer}>
-                                <img src={video} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText} >{linkTitle}</p>
-                            </div>
-                        </Button>
-                    }
-                    {linkIcon === "videoSlack" &&
-                        <Button onClick={handleSlackVideoOpen}
-                            className={classes.linkContainer} >
-                            <div className={classes.linkContainer}>
-                                <img src={video} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText} >{linkTitle}</p>
-                            </div>
-                        </Button>
-                    }
-                    {linkIcon === "videoMiro" &&
-                        <Button
-                            onClick={handleMiroVideoOpen}
-                            className={classes.linkContainer} >
-                            <div className={classes.linkContainer}>
-                                <img src={video} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText} >{linkTitle}</p>
-                            </div>
-                        </Button>
-                    }
-                </div>
-            ) : (
-                null
-            )}
-
-            {linkTitle2 ? (
-                <div className={classes.moduleContentLink}>
-                    {linkIcon2 === "link" &&
-                        <Button href={linkLocation2} target="_blank" rel="noreferrer"
-                            className={classes.linkContainer}
-                        >
-                            <div className={classes.linkContainer}>
-                                <img src={link} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText} >{linkTitle2}</p>
-                            </div>
-                        </Button>
-                    }
-                    {linkIcon2 === "doc" &&
+                    )}
+                    {linkIcon === "doc" && (
                         <Button onClick={handleOpen} className={classes.linkContainer}>
                             <div className={classes.linkContainer}>
                                 <img src={doc} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText2} >{linkTitle2}</p>
+                                <p className={classes.linkText}>{linkTitle}</p>
                             </div>
                         </Button>
-                    }
-                    {linkIcon2 === "docAirtable" &&
-                        <Button onClick={handleAirtableOpen} className={classes.linkContainer} >
+                    )}
+                    {linkIcon === "trustDoc" && (
+                        <Button onClick={handleTrustDocOpen} className={classes.linkContainer}>
                             <div className={classes.linkContainer}>
                                 <img src={doc} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText} >{linkTitle2}</p>
+                                <p className={classes.linkText}>{linkTitle}</p>
                             </div>
                         </Button>
-                    }
-                    {linkIcon2 === "docSlack" &&
-                        <Button onClick={handleSlackOpen} className={classes.linkContainer} >
+                    )}
+                    {linkIcon === "docAirtable" && (
+                        <Button onClick={handleAirtableOpen} style={{ textDecoration: "none", color: "#4e6c99" }}>
                             <div className={classes.linkContainer}>
                                 <img src={doc} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText} >{linkTitle2}</p>
+                                <p className={classes.linkText}>{linkTitle}</p>
                             </div>
                         </Button>
-                    }
-                    {linkIcon2 === "video" &&
-                        <Button style={{ textDecoration: "none", color: "#4e6c99" }} >
+                    )}
+                    {linkIcon === "videoAirtable" && (
+                        <Button onClick={handleAirtableVideoOpen} className={classes.linkContainer}>
                             <div className={classes.linkContainer}>
                                 <img src={video} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText2} >{linkTitle2}</p>
+                                <p className={classes.linkText}>{linkTitle}</p>
                             </div>
                         </Button>
-                    }
+                    )}
+                    {linkIcon === "videoSlack" && (
+                        <Button onClick={handleSlackVideoOpen} className={classes.linkContainer}>
+                            <div className={classes.linkContainer}>
+                                <img src={video} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText}>{linkTitle}</p>
+                            </div>
+                        </Button>
+                    )}
+                    {linkIcon === "videoMiro" && (
+                        <Button onClick={handleMiroVideoOpen} className={classes.linkContainer}>
+                            <div className={classes.linkContainer}>
+                                <img src={video} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText}>{linkTitle}</p>
+                            </div>
+                        </Button>
+                    )}
                 </div>
-            ) : (
-                null
-            )}
+            ) : null}
+
+            {linkTitle2 ? (
+                <div className={classes.moduleContentLink}>
+                    {linkIcon2 === "link" && (
+                        <Button href={linkLocation2} target="_blank" rel="noreferrer" className={classes.linkContainer}>
+                            <div className={classes.linkContainer}>
+                                <img src={link} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText}>{linkTitle2}</p>
+                            </div>
+                        </Button>
+                    )}
+                    {linkIcon2 === "doc" && (
+                        <Button onClick={handleOpen} className={classes.linkContainer}>
+                            <div className={classes.linkContainer}>
+                                <img src={doc} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText2}>{linkTitle2}</p>
+                            </div>
+                        </Button>
+                    )}
+                    {linkIcon2 === "docAirtable" && (
+                        <Button onClick={handleAirtableOpen} className={classes.linkContainer}>
+                            <div className={classes.linkContainer}>
+                                <img src={doc} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText}>{linkTitle2}</p>
+                            </div>
+                        </Button>
+                    )}
+                    {linkIcon2 === "docSlack" && (
+                        <Button onClick={handleSlackOpen} className={classes.linkContainer}>
+                            <div className={classes.linkContainer}>
+                                <img src={doc} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText}>{linkTitle2}</p>
+                            </div>
+                        </Button>
+                    )}
+                    {linkIcon2 === "video" && (
+                        <Button style={{ textDecoration: "none", color: "#4e6c99" }}>
+                            <div className={classes.linkContainer}>
+                                <img src={video} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText2}>{linkTitle2}</p>
+                            </div>
+                        </Button>
+                    )}
+                </div>
+            ) : null}
 
             {linkTitle3 ? (
                 <div className={classes.moduleContentLink}>
-
-                    {linkIcon3 === "link" &&
-                        <Button href={linkLocation3} target="_blank" rel="noreferrer"
-                            className={classes.linkContainer}>
+                    {linkIcon3 === "link" && (
+                        <Button href={linkLocation3} target="_blank" rel="noreferrer" className={classes.linkContainer}>
                             <div className={classes.linkContainer}>
                                 <img src={link} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText} >{linkTitle3}</p>
+                                <p className={classes.linkText}>{linkTitle3}</p>
                             </div>
                         </Button>
-                    }
-                    {linkIcon3 === "doc" &&
-                        <Button onClick={handleOpen} style={{ textDecoration: "none", color: "#4e6c99" }} >
+                    )}
+                    {linkIcon3 === "doc" && (
+                        <Button onClick={handleOpen} style={{ textDecoration: "none", color: "#4e6c99" }}>
                             <div className={classes.linkContainer}>
                                 <img src={doc} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText} >{linkTitle3}</p>
+                                <p className={classes.linkText}>{linkTitle3}</p>
                             </div>
                         </Button>
-                    }
-                    {linkIcon3 === "video" &&
-                        <Button style={{ textDecoration: "none", color: "#4e6c99" }} >
+                    )}
+                    {linkIcon3 === "video" && (
+                        <Button style={{ textDecoration: "none", color: "#4e6c99" }}>
                             <div className={classes.linkContainer}>
                                 <img src={video} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText} >{linkTitle3}</p>
+                                <p className={classes.linkText}>{linkTitle3}</p>
                             </div>
                         </Button>
-                    }
+                    )}
                 </div>
-
-            ) : (
-                null
-            )}
+            ) : null}
 
             {/* main modal */}
             <Dialog
                 open={open}
                 onClose={handleClose}
-                aria-labelledby=''
-                aria-describedby=''
+                aria-labelledby=""
+                aria-describedby=""
                 fullWidth
                 maxWidth="lg"
                 className={modalClasses.mainModal}
             >
-                <DialogContent style={{ padding: '50px' }}>
-                    <Typography className={classes.modalTitleStyle} >
-                        {modalTitle}
-                    </Typography>
-                    <Typography variant='body2' className={classes.moduleCardBody}>
+                <DialogContent style={{ padding: "50px" }}>
+                    <Typography className={classes.modalTitleStyle}>{modalTitle}</Typography>
+                    <Typography variant="body2" className={classes.moduleCardBody}>
                         {modalParagraph1}
                     </Typography>
-                    <Typography variant='body2' className={classes.moduleCardBody}>
+                    <Typography variant="body2" className={classes.moduleCardBody}>
                         {modalParagraph2}
-                        {p2bullet1 &&
+                        {p2bullet1 && (
                             <ul>
                                 {p2bullet1 ? <li>{p2bullet1}</li> : null}
                                 {p2bullet2 ? <li>{p2bullet2}</li> : null}
                                 {p2bullet3 ? <li>{p2bullet3}</li> : null}
                             </ul>
-                        }
-                        
+                        )}
                     </Typography>
-                    <Typography variant='body2' className={classes.moduleCardBody}>
+                    <Typography variant="body2" className={classes.moduleCardBody}>
                         {modalParagraph3}
-                        {p3bullet1 && 
+                        {p3bullet1 && (
                             <ul>
                                 {p3bullet1 ? <li>{p3bullet1}</li> : null}
                                 {p3bullet2 ? <li>{p3bullet2}</li> : null}
                                 {p3bullet3 ? <li>{p3bullet3}</li> : null}
                                 {p3bullet4 ? <li>{p3bullet4}</li> : null}
                             </ul>
-                        }
-                        
+                        )}
                     </Typography>
                     {modalParagraph4 && (
-                        <Typography variant='body2' className={classes.moduleCardBody}>
+                        <Typography variant="body2" className={classes.moduleCardBody}>
                             {modalParagraph4}
                         </Typography>
                     )}
@@ -290,14 +318,14 @@ function ModuleContent(props) {
                     </Button>
                 </DialogContent>
             </Dialog>
-           
+
             {/* complex airtable modal */}
-            {isLargeScreen ?
+            {isLargeScreen ? (
                 <Dialog
                     open={airtableOpen}
                     onClose={handleAirtableClose}
-                    aria-labelledby=''
-                    aria-describedby=''
+                    aria-labelledby=""
+                    aria-describedby=""
                     fullWidth
                     maxWidth="lg"
                     className={modalClasses.mainModal}
@@ -309,11 +337,12 @@ function ModuleContent(props) {
                         </Button>
                     </DialogContent>
                 </Dialog>
-                : <Dialog
+            ) : (
+                <Dialog
                     open={airtableOpen}
                     onClose={handleAirtableClose}
-                    aria-labelledby=''
-                    aria-describedby=''
+                    aria-labelledby=""
+                    aria-describedby=""
                     fullWidth
                     maxWidth="lg"
                     className={modalClasses.mainModal}
@@ -322,15 +351,16 @@ function ModuleContent(props) {
                     <Button onClick={handleAirtableClose} className={classes.button}>
                         Close
                     </Button>
-                </Dialog>}
+                </Dialog>
+            )}
 
             {/* video airtable modal */}
-            {isLargeScreen ?
+            {isLargeScreen ? (
                 <Dialog
                     open={airtableVideoOpen}
                     onClose={handleAirtableVideoClose}
-                    aria-labelledby=''
-                    aria-describedby=''
+                    aria-labelledby=""
+                    aria-describedby=""
                     fullWidth
                     maxWidth="lg"
                     className={modalClasses.mainModal}
@@ -339,32 +369,37 @@ function ModuleContent(props) {
                         <AirtableVideoModal handleAirtableVideoClose={handleAirtableVideoClose} />
                     </DialogContent>
                 </Dialog>
-                : <Dialog
+            ) : (
+                <Dialog
                     open={airtableVideoOpen}
                     onClose={handleAirtableVideoClose}
-                    aria-labelledby=''
-                    aria-describedby=''
+                    aria-labelledby=""
+                    aria-describedby=""
                     fullWidth
                     maxWidth="lg"
                     className={modalClasses.videoContainer}
                     sx={{
-                        height: 'auto',
+                        height: "auto",
                     }}
                 >
                     <VideoTutorialAccordion />
-                    <Button onClick={handleAirtableVideoClose} style={{ margin: "0 auto 64px" }} className={classes.button}>
+                    <Button
+                        onClick={handleAirtableVideoClose}
+                        style={{ margin: "0 auto 64px" }}
+                        className={classes.button}
+                    >
                         Close
                     </Button>
-                </Dialog>}
-
+                </Dialog>
+            )}
 
             {/* complex slack modal */}
-            {isLargeScreen ?
+            {isLargeScreen ? (
                 <Dialog
                     open={slackOpen}
                     onClose={handleSlackClose}
-                    aria-labelledby=''
-                    aria-describedby=''
+                    aria-labelledby=""
+                    aria-describedby=""
                     fullWidth
                     maxWidth="lg"
                     className={modalClasses.mainModal}
@@ -376,11 +411,12 @@ function ModuleContent(props) {
                         </Button>
                     </DialogContent>
                 </Dialog>
-                : <Dialog
+            ) : (
+                <Dialog
                     open={slackOpen}
                     onClose={handleSlackClose}
-                    aria-labelledby=''
-                    aria-describedby=''
+                    aria-labelledby=""
+                    aria-describedby=""
                     fullWidth
                     maxWidth="lg"
                     className={modalClasses.mainModal}
@@ -389,15 +425,16 @@ function ModuleContent(props) {
                     <Button onClick={handleSlackClose} className={classes.button}>
                         Close
                     </Button>
-                </Dialog>}
+                </Dialog>
+            )}
 
             {/* video slack modal */}
-            {isLargeScreen ?
+            {isLargeScreen ? (
                 <Dialog
                     open={slackVideoOpen}
                     onClose={handleSlackVideoClose}
-                    aria-labelledby=''
-                    aria-describedby=''
+                    aria-labelledby=""
+                    aria-describedby=""
                     fullWidth
                     maxWidth="lg"
                     className={modalClasses.mainModal}
@@ -406,11 +443,12 @@ function ModuleContent(props) {
                         <SlackVideoModal handleSlackVideoClose={handleSlackVideoClose} />
                     </DialogContent>
                 </Dialog>
-                : <Dialog
+            ) : (
+                <Dialog
                     open={slackVideoOpen}
                     onClose={handleSlackVideoClose}
-                    aria-labelledby=''
-                    aria-describedby=''
+                    aria-labelledby=""
+                    aria-describedby=""
                     fullWidth
                     maxWidth="lg"
                     className={modalClasses.mainModal}
@@ -419,20 +457,20 @@ function ModuleContent(props) {
                     <Button onClick={handleSlackVideoClose} className={classes.button}>
                         Close
                     </Button>
-                </Dialog>}
+                </Dialog>
+            )}
 
             {/* video miro modal */}
             <Dialog
                 open={miroVideoOpen}
                 onClose={handleMiroVideoClose}
-                aria-labelledby=''
-                aria-describedby=''
+                aria-labelledby=""
+                aria-describedby=""
                 fullScreen
                 maxWidth="lg"
                 className={modalClasses.videoContainer}
-
             >
-                <DialogContent >
+                <DialogContent>
                     <MiroVideoModal />
                 </DialogContent>
                 <Button onClick={handleMiroVideoClose} style={{ margin: "0 auto 64px" }} className={classes.button}>
@@ -440,49 +478,49 @@ function ModuleContent(props) {
                 </Button>
             </Dialog>
 
-
             {/* trust doc modal */}
-            {isLargeScreen ?
+            {isLargeScreen ? (
                 <Dialog
                     open={trustDocOpen}
                     onClose={handleTrustDocClose}
-                    aria-labelledby=''
-                    aria-describedby=''
+                    aria-labelledby=""
+                    aria-describedby=""
                     fullWidth
                     maxWidth="lg"
                     className={modalClasses.mainModal}
                 >
                     <DialogContent className={modalClasses.modalStyle}>
-                        <Typography className={classes.modalTitleStyle} >
-                            {title}
-                        </Typography>
-                        <List >
-                            {bullets ? bullets.map((bullet, idx) =>
-                                <ListItem key={idx} >
-                                    <ListItemIcon>•</ListItemIcon>
-                                    <ListItemText >{bullet}</ListItemText>
-                                </ListItem>
-                            ) : null}
+                        <Typography className={classes.modalTitleStyle}>{title}</Typography>
+                        <List>
+                            {bullets
+                                ? bullets.map((bullet, idx) => (
+                                      <ListItem key={idx}>
+                                          <ListItemIcon>•</ListItemIcon>
+                                          <ListItemText>{bullet}</ListItemText>
+                                      </ListItem>
+                                  ))
+                                : null}
                         </List>
                         <Button onClick={handleTrustDocClose} className={classes.button}>
                             Close
                         </Button>
                     </DialogContent>
-                    
                 </Dialog>
-                : <Dialog
+            ) : (
+                <Dialog
                     open={trustDocOpen}
                     onClose={handleTrustDocClose}
-                    aria-labelledby=''
-                    aria-describedby=''
+                    aria-labelledby=""
+                    aria-describedby=""
                     fullWidth
                     maxWidth="lg"
                     className={modalClasses.mainModal}
                 >
                     <TrustDocAccordion />
-                </Dialog>}
+                </Dialog>
+            )}
         </div>
     );
-};
+}
 
 export default ModuleContent;

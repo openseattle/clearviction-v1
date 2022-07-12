@@ -2,7 +2,7 @@ import { Container, Typography, Box, Grid } from "@material-ui/core";
 import ContactForm from "../Components/ContactForm";
 import { useContactStyles } from "../Styles/useContactStyles";
 import new_message from "../Assets/new_message.svg";
-import { useDocumentTitle } from '../Components/customHooks/useDocumentTitle';
+import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
 const ContactPage = () => {
     const classes = useContactStyles();
