@@ -12,11 +12,13 @@ import Footer from "./Components/Footer";
 import GetInvolvedPage from "./Pages/GetInvolvedPage";
 import GetStartedPage from "./Pages/GetStartedPage";
 import ResourcesPage from "./Pages/ResourcesPage";
+import ContactSuccessPage from "./Pages/ContactSuccessPage";
 import OnboardingHome from "./Pages/Onboarding/OnboardingHome";
 import OnboardingMod1 from "./Pages/Onboarding/OnboardingMod1";
 import OnboardingMod2 from "./Pages/Onboarding/OnboardingMod2";
 import OnboardingMod3 from "./Pages/Onboarding/OnboardingMod3";
 import OnboardingMod4 from "./Pages/Onboarding/OnboardingMod4";
+
 
 function App() {
     const location = useLocation();
@@ -51,6 +53,9 @@ function App() {
                         </Route>
                         <Route exact path="/contact">
                             <ContactPage />
+                        </Route>
+                        <Route exact path="/contact/success">
+                            <ContactSuccessPage />
                         </Route>
                         <Route path="/get-involved">
                             <GetInvolvedPage />

@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import { TextField, MenuItem, FormControl, FormGroup, FormLabel, Box } from "@material-ui/core";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import { send } from "@emailjs/browser";
@@ -7,6 +8,7 @@ import { Typography } from "@material-ui/core";
 
 const ContactForm = () => {
     const classes = useContactStyles();
+    const history = useHistory();
 
     const [toSend, setToSend] = useState({
         from_name: "",
@@ -105,7 +107,8 @@ const ContactForm = () => {
             .then(response => {
                 console.log("success", response.status, response.text);
                 // TODO: create custom pop up alert
-                alert("Email Sent Successfully");
+                // alert("Email Sent Successfully");
+                history.push("/contact/success");
             })
             .catch(error => {
                 console.log("failed", error);
