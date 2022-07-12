@@ -43,6 +43,8 @@ export enum BodyType {
     LINK = "link",
     LIST = "list",
     HEADING = "heading",
+    // temporary placeholders for the Blake eligibilty -- sprint 26, 6/27/22
+    BLAKELINK = "span",
 }
 
 interface BaseBody {
@@ -82,6 +84,7 @@ export const BUTTON_TEXT = {
     CONTINUE_JOURNEY: "Continue journey",
     START: "Start",
     NEXT: "Next",
+    BLAKE: "I'm not Blake eligible"
 };
 
 export const BRANCH_TYPES = {

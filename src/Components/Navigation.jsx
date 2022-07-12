@@ -43,7 +43,7 @@ const useStyles = makeStyles(theme => ({
     skipLink: {
         marginRight: "1rem",
         position: "absolute",
-        transform: "translateX(-200%)",
+        left: "-100vw",
         transition: "transform 0.3s",
         "&:focus": {
             position: "static",
