@@ -84,7 +84,7 @@ export const BUTTON_TEXT = {
     CONTINUE_JOURNEY: "Continue journey",
     START: "Start",
     NEXT: "Next",
-    BLAKE: "I'm not Blake eligible"
+    BLAKE: "I'm not Blake eligible",
 };
 
 export const BRANCH_TYPES = {
