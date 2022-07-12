@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useHistory } from "react-router-dom";
 import { TextField, MenuItem, FormControl, FormGroup, FormLabel, Box } from "@material-ui/core";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import { send } from "@emailjs/browser";
@@ -7,6 +8,7 @@ import { Typography } from "@material-ui/core";
 
 const ContactForm = () => {
     const classes = useContactStyles();
+    const history = useHistory();
 
     const [toSend, setToSend] = useState({
         from_name: "",
@@ -19,6 +21,17 @@ const ContactForm = () => {
         errorStatus: false,
         errorMessage: "",
     });
+
+    useEffect(() => {
+        const storedSender = JSON.parse(sessionStorage.getItem("toSend"));
+        if (storedSender) {
+            setToSend(storedSender);
+        }
+    }, []);
+
+    useEffect(() => {
+        sessionStorage.setItem("toSend", JSON.stringify(toSend));
+    }, [toSend]);
 
     // TODO
     // Create a proper email validation service with formik + yup
@@ -92,13 +105,14 @@ const ContactForm = () => {
         send(SERVICE_ID, TEMPLATE_ID, toSend, USER_ID)
             .then(response => {
                 console.log("success", response.status, response.text);
-                alert("Email Sent Successfully");
                 // TODO: create custom pop up alert
+                // alert("Email Sent Successfully");
+                history.push("/contact/success");
             })
             .catch(error => {
                 console.log("failed", error);
-                alert("ERROR. Please try again.");
                 // TODO: create custom pop up alert
+                alert("ERROR. Please try again.");
             });
     };
 
@@ -146,6 +160,7 @@ const ContactForm = () => {
                             variant="standard"
                             fullWidth
                             color="primary"
+                            aria-label="Your full name"
                         />
                         <FormLabel className={classes.labelStyle} component="legend">
                             <Typography variant="body2" className={classes.labelTextStyle}>
@@ -167,6 +182,7 @@ const ContactForm = () => {
                             value={toSend.reply_to}
                             onChange={handleChange}
                             variant="standard"
+                            aria-label="Your email address"
                         />
                         <FormLabel className={classes.labelStyle} component="legend">
                             <Typography variant="body2" className={classes.labelTextStyle}>
@@ -185,6 +201,7 @@ const ContactForm = () => {
                             onChange={handleChange}
                             variant="standard"
                             color="primary"
+                            aria-label="Choose your contact type"
                         >
                             {contactTypes.map(option => (
                                 <MenuItem key={option.value} value={option.value}>
@@ -211,6 +228,7 @@ const ContactForm = () => {
                             onChange={handleChange}
                             variant="standard"
                             color="primary"
+                            aria-label="Your message"
                         />
                         <Box className={classes.buttonBoxStyle}>
                             <RedesignButtonPrimary type={"submit"}>Send message</RedesignButtonPrimary>

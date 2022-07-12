@@ -31,7 +31,7 @@ const QuickStartGuide = props => {
             <Grid container className={classes.backButton}>
                 <BackButton />
             </Grid>
-            <Typography variant="h4" className={classes.header}>
+            <Typography variant="h4" component="h1" className={classes.header}>
                 {props.header}
             </Typography>
             <Grid item className={classes.bodyGrid}>

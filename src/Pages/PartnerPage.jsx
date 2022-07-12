@@ -27,12 +27,7 @@ const PartnerPage = () => {
                 <Grid container>
                     <Grid item xs={12} sm={6}>
                         <Box display={"flex"} justifyContent={"center"}>
-                            <Box
-                                className={classes.partnerImageStyle}
-                                component="img"
-                                src={pr}
-                                alt="A person sitting on a megaphone spreading their message"
-                            />
+                            <Box className={classes.partnerImageStyle} component="img" src={pr} alt="" />
                         </Box>
                     </Grid>
                     <Grid item xs={12} sm={6}>

@@ -28,6 +28,7 @@ import {
 } from "../data/resourcesData";
 import FactGroup from "../Components/FactGroup";
 import FactTextPlaceholder from "../Components/FactTextPlaceholder";
+import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
 const employmentFacts = [
     {
@@ -39,14 +40,14 @@ const employmentFacts = [
     {
         id: "emp-fact-2",
         src: emails,
-        title: "Rejected applicaitons",
+        title: "Rejected applications",
         text: "These are a common circumstance for people who have previously been convicted.",
     },
     {
         id: "emp-fact-3",
         src: question,
         title: "Lack of experience",
-        text: "Getting a job in a new field is complicated due lack of access to education opportunities.",
+        text: "Getting a job in a new field is complicated due to lack of access to education opportunities.",
     },
 ];
 
@@ -66,7 +67,7 @@ const housingFacts = [
         src: dream,
         title: "Private Housing",
         textList: [
-            "Landlords have full disccretion, and often deny people with criminal records",
+            "Landlords have full discretion, and often deny people with criminal records",
             "Management companies usually have extensive background checks",
         ],
     },
@@ -84,7 +85,7 @@ const housingFacts = [
         src: processBuilding,
         title: "Transitional Housing",
         textList: [
-            " Might require you have substance abuse, mental health or physical issues",
+            "Might require you have substance abuse, mental health or physical issues",
             "Some require you attend special meetings or work",
         ],
     },
@@ -107,6 +108,8 @@ const educationFacts = [
 
 const ResourcesPage = () => {
     const classes = useResourcesStyles();
+    const [documentTitle, setDocumentTitle] = useDocumentTitle("Resources - ");
+
     return (
         <>
             <RedesignHeroPanel title="Resources">
@@ -122,7 +125,7 @@ const ResourcesPage = () => {
                         </Typography>
                     </Grid>
                     <Grid item xs={12} sm={6} md={6}>
-                        <Box component="img" width="100%" src={teamBuilding} alt="Teamwork solves a puzzle." />
+                        <Box component="img" width="100%" src={teamBuilding} alt="" />
                     </Grid>
                 </Grid>
             </RedesignHeroPanel>

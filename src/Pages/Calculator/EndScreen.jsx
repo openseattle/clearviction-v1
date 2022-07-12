@@ -14,18 +14,14 @@ const EndScreen = props => {
         <Grid container className={classes.grid}>
             {props.progressBar && (
                 <Grid container>
-                    <ProgressBar
-                        currentSectionName={props.currentSectionName}
-                        currentSection={props.currentSection}
-                        totalSections={props.totalSections}
-                    />
+                    <ProgressBar currentSectionName={props.currentSectionName} />
                 </Grid>
             )}
 
             <Grid container className={classes.backButton}>
                 <BackButton />
             </Grid>
-            <Typography variant="h5" className={classes.header}>
+            <Typography variant="h5" component="h1" className={classes.header}>
                 {props.header}
             </Typography>
             <Grid item className={classes.bodyGrid}>
@@ -60,7 +56,9 @@ const EndScreen = props => {
                                 return (
                                     <ul>
                                         <li key={idx}>
-                                            <a href={b.href}>{b.text}</a>
+                                            <a target="_blank" rel="noopener noreferrer" role="button" href={b.href}>
+                                                {b.text}
+                                            </a>
                                         </li>
                                     </ul>
                                 );
@@ -74,6 +72,7 @@ const EndScreen = props => {
                     return (
                         <PrimaryButton
                             key={idx}
+                            role="button"
                             className={classes.button}
                             text={b.text}
                             href={b.href}

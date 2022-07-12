@@ -31,7 +31,8 @@
         "lint": "prettier --check .",
         "predeploy": "npm run build",
         "start": "react-scripts start",
-        "test": "react-scripts test"
+        "test": "react-scripts test",
+        "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
     },
     "eslintConfig": {
         "extends": [

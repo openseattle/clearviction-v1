@@ -1,8 +1,9 @@
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography, Link } from "@material-ui/core";
 import { BodyType } from "../../data/calculatorPagesTypes";
 import { BackButton } from "../../ui-kit/BackButton";
 import PrimaryButton from "../../ui-kit/PrimaryButton";
 import { SpecialCaseTitleStyles } from "./SpecialCaseTitleStyles";
+import { ExternalLink } from "../../ui-kit/ExternalLink";
 
 const SpecialCaseTitle = props => {
     const classes = SpecialCaseTitleStyles();
@@ -11,7 +12,7 @@ const SpecialCaseTitle = props => {
             <Grid container className={classes.backButton}>
                 <BackButton />
             </Grid>
-            <Typography variant="h5" className={classes.header}>
+            <Typography variant="h5" component="h1" className={classes.header}>
                 {props.header}
             </Typography>
             <Grid item className={classes.bodyGrid}>
@@ -32,13 +33,29 @@ const SpecialCaseTitle = props => {
                                         ))}
                                     </ul>
                                 );
+                            // temporary placeholder for Blake vacation -- sprint 26, 6/27/22
                             case BodyType.LINK:
                                 return (
-                                    <ul>
+                                    <ul key={b.type}>
                                         <li key={idx}>
-                                            <a href={b.href}>{b.text}</a>
+                                            <Link target="_blank" rel="noopener noreferrer" role="button" href={b.href}>
+                                                {b.text}
+                                            </Link>
                                         </li>
                                     </ul>
+                                );
+                            case BodyType.BLAKELINK:
+                                return (
+                                    <span className={classes.blakeLink} key={b.type}>
+                                        <ExternalLink
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            role="link"
+                                            href={b.href}
+                                        >
+                                            {b.text}
+                                        </ExternalLink>
+                                    </span>
                                 );
                         }
                     })}

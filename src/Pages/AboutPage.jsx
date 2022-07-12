@@ -8,9 +8,11 @@ import { useAboutStyles } from "../Styles/useAboutStyles";
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
 
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
+import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
 const AboutPage = () => {
     const classes = useAboutStyles();
+    const [documentTitle, setDocumentTitle] = useDocumentTitle("About Us - ");
 
     return (
         <>
@@ -27,11 +29,7 @@ const AboutPage = () => {
                             </Typography>
                         </Grid>
                         <Grid item xs={12} sm={6} md={6}>
-                            <img
-                                src={map}
-                                className={classes.iconStyle + " " + classes.centerText}
-                                alt="person using a calculator"
-                            ></img>
+                            <img src={map} className={classes.iconStyle + " " + classes.centerText} alt=""></img>
                         </Grid>
                     </Grid>
                 </Container>
@@ -107,7 +105,7 @@ const AboutPage = () => {
                 <Box style={{ width: "90%", margin: "0 auto" }}>
                     <Grid container className={classes.gridStyle}>
                         <Grid item sm={12} md={6} className={classes.gridItemStyle}>
-                            <img src={checklist1} className={classes.iconStyle} alt="person using a calculator"></img>
+                            <img src={checklist1} className={classes.iconStyle} alt=""></img>
                         </Grid>
                         <Grid item sm={12} md={6} className={classes.gridItemStyle}>
                             <Typography variant="h4" className={classes.headingSpacing}>

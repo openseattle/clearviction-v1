@@ -13,8 +13,10 @@ import QuestionScreen from "./Calculator/QuestionScreen";
 import EndScreen from "./Calculator/EndScreen";
 import QuickStartGuide from "./Calculator/QuickStartGuide";
 import ProgressBar from "../Components/ProgressBar";
+import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
 const CalculatorPage = () => {
+    const [documentTitle, setDocumentTitle] = useDocumentTitle("Eligibility Calculator - ");
     console.log("enter calculator");
     const { pathname } = useLocation();
     const indexOfPageId = pathname.split("/").length - 1;

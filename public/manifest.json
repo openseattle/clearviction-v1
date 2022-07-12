@@ -1,0 +1,16 @@
+{
+    "short_name": "Clearviction",
+    "name": "Conviction Vacation Eligibility and Legal, Housing, Education, Employment Resources",
+    "icons": [
+        {
+            "src": "favicon.ico",
+            "sizes": "64x64 32x32 24x24 16x16",
+            "type": "image/x-icon"
+        },
+        {
+            "src": "apple-touch-icon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+}

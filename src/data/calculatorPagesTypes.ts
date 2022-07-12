@@ -22,7 +22,7 @@ export enum PageType {
 }
 
 export enum SectionName {
-    CONV = "Your Conviction",
+    OFF = "Your Offense",
     CIRC = "Surrounding Circumstances",
     TER = "Terms of Offense",
     ELIGIBLE = "",
@@ -30,7 +30,6 @@ export enum SectionName {
 
 interface ProgressBar {
     currentSectionName: SectionName;
-    totalSections: number; // TODO: can this be calculated dynamically?
 }
 
 type NonEmptyList<T> = {
@@ -44,6 +43,8 @@ export enum BodyType {
     LINK = "link",
     LIST = "list",
     HEADING = "heading",
+    // temporary placeholders for the Blake eligibilty -- sprint 26, 6/27/22
+    BLAKELINK = "span",
 }
 
 interface BaseBody {
@@ -83,6 +84,7 @@ export const BUTTON_TEXT = {
     CONTINUE_JOURNEY: "Continue journey",
     START: "Start",
     NEXT: "Next",
+    BLAKE: "I'm not Blake eligible",
 };
 
 export const BRANCH_TYPES = {
