@@ -63,8 +63,8 @@ const button1 = {
 }
 
 const button2 = {
-    link: "/onboarding-mod4",
-    text: "next module"
+    link: "/onboarding",
+    text: "next"
 }
 
 function OnboardingMod3() {

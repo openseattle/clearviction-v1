@@ -76,8 +76,8 @@ const button1 = {
 }
 
 const button2 = {
-    link: "/onboarding-mod3",
-    text: "next module"
+    link: "/onboarding",
+    text: "next"
 }
 
 const buttonComplete = {
