@@ -2,8 +2,8 @@ import { makeStyles } from "@material-ui/core";
 
 export const useModuleContentStyles = makeStyles((theme) => ({
   mainModuleContentCard: {
-    width: "80%", 
-    flexDirection: "row", 
+    width: "80%",
+    flexDirection: "row",
     margin: theme.spacing(6, "auto"),
   },
   moduleContentCard: {
@@ -103,7 +103,6 @@ export const useModuleContentStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("sm")]: {
       margin: theme.spacing(0),
       fontSize: 'calc(14px + 0.390625vw)',
-
     }
   },
   modalTitleStyle: {
@@ -131,7 +130,7 @@ export const useModuleContentStyles = makeStyles((theme) => ({
     fontSize: "18px",
     fontWeight: "bold",
     lineHeight: 2.7,
-    '&:hover' : {
+    '&:hover': {
       color: "#000",
       backgroundColor: "#ffd200",
     },
@@ -144,6 +143,11 @@ export const useModuleContentStyles = makeStyles((theme) => ({
     [theme.breakpoints.up("sm")]: {
       display: "none",
     }
+  },
+  externalLink: {
+    color: "#4e6c99",
+    fontSize: "20px",
+    marginBottom: theme.spacing(2),
   }
 
 }));

@@ -3,7 +3,7 @@ import { useState } from 'react';
 
 const contentStyle = {
   position: 'relative',
-  marginLeft: '110px',
+  marginLeft: '50px',
   marginTop: '10px',
   marginBottom: '10px',
   fontWeight: 400,
@@ -57,7 +57,7 @@ export default function SlackModal() {
   }
 
   return (
-    <Grid container style={{ justifyContent: 'space-between'}}>
+    <Grid container >
       <Grid item xs={2} >
         {sections.map((section) => (
           <button key={section.id} onClick={() => showSection(section.id)} style={activeTab === section.id ? activeTabStyle : tabStyle} >

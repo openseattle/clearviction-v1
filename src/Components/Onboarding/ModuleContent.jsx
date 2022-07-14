@@ -16,6 +16,7 @@ import SlackAccordion from './Mobile/SlackAccoridion';
 import VideoTutorialAccordion from './Mobile/VideoTutorialAccordion';
 import SlackVideoAccordion from './Mobile/SlackVideoAccordion';
 import TrustDocAccordion from './Mobile/TrustDocAccordion';
+import { ExternalLink } from '../../ui-kit/ExternalLink';
 
 const modalStyle = {
     position: 'absolute',
@@ -44,7 +45,8 @@ function ModuleContent(props) {
         p2bullet1, p2bullet2,
         p2bullet3, p3bullet1,
         p3bullet2, p3bullet3,
-        p3bullet4, bullets
+        p3bullet4, bullets,
+        toolSite, toolText,
     } = props.content;
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
@@ -89,6 +91,9 @@ function ModuleContent(props) {
             {paragraph2 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph2}</Typography> : null}
             {paragraph3 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph3}</Typography> : null}
             {paragraph4 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph4}</Typography> : null}
+            {toolSite ?
+                <ExternalLink variant="link" className={classes.externalLink} href={toolSite}>{toolText}</ExternalLink>
+                : null}
 
             {linkTitle ? (
                 <div className={classes.moduleContentLink}>
@@ -266,11 +271,11 @@ function ModuleContent(props) {
                                 {p2bullet3 ? <li>{p2bullet3}</li> : null}
                             </ul>
                         }
-                        
+
                     </Typography>
                     <Typography variant='body2' className={classes.moduleCardBody}>
                         {modalParagraph3}
-                        {p3bullet1 && 
+                        {p3bullet1 &&
                             <ul>
                                 {p3bullet1 ? <li>{p3bullet1}</li> : null}
                                 {p3bullet2 ? <li>{p3bullet2}</li> : null}
@@ -278,7 +283,7 @@ function ModuleContent(props) {
                                 {p3bullet4 ? <li>{p3bullet4}</li> : null}
                             </ul>
                         }
-                        
+
                     </Typography>
                     {modalParagraph4 && (
                         <Typography variant='body2' className={classes.moduleCardBody}>
@@ -290,7 +295,7 @@ function ModuleContent(props) {
                     </Button>
                 </DialogContent>
             </Dialog>
-           
+
             {/* complex airtable modal */}
             {isLargeScreen ?
                 <Dialog
@@ -468,7 +473,7 @@ function ModuleContent(props) {
                             Close
                         </Button>
                     </DialogContent>
-                    
+
                 </Dialog>
                 : <Dialog
                     open={trustDocOpen}

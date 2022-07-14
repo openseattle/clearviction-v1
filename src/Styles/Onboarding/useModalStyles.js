@@ -25,7 +25,7 @@ export const useModalStyles = makeStyles((theme) => ({
         maxWidth: '1000px',
         fontWeight: 400,
         fontSize: '16px',
-        lineHeight: '22px', 
+        lineHeight: '22px',
         padding: 0,
     },
     button: {
@@ -45,10 +45,10 @@ export const useModalStyles = makeStyles((theme) => ({
         fontSize: "18px",
         fontWeight: "bold",
         lineHeight: 2.7,
-        '&:hover' : {
+        '&:hover': {
             color: "#000",
             backgroundColor: "#ffd200",
-          },
+        },
     }
 
 }))
