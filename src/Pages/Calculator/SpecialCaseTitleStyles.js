@@ -31,4 +31,10 @@ export const SpecialCaseTitleStyles = makeStyles(theme => ({
         fontSize: "24px",
         lineHeight: 3,
     },
+    list: {
+        fontSize: "18px",
+        [theme.breakpoints.down("xs")]: {
+            fontSize: "14px",
+        }
+    },
 }));

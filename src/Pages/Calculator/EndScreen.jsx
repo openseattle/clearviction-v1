@@ -6,6 +6,7 @@ import RestartButton from "../../Components/RestartButton";
 import { CVPListItem } from "../../ui-kit/ListItem";
 import { BodyType } from "../../data/calculatorPagesTypes";
 import ProgressBar from "../../Components/ProgressBar";
+import { ExternalLink } from "../../ui-kit/ExternalLink";
 
 const EndScreen = props => {
     const classes = EndScreenStyles();
@@ -55,10 +56,10 @@ const EndScreen = props => {
                             case BodyType.LINK:
                                 return (
                                     <ul>
-                                        <li key={idx}>
-                                            <a target="_blank" rel="noopener noreferrer" role="button" href={b.href}>
+                                        <li className={classes.list} key={idx}>
+                                            <ExternalLink target="_blank" rel="noopener noreferrer" role="button" href={b.href}>
                                                 {b.text}
-                                            </a>
+                                            </ExternalLink>
                                         </li>
                                     </ul>
                                 );

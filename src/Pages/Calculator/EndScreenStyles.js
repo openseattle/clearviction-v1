@@ -38,4 +38,10 @@ export const EndScreenStyles = makeStyles(theme => ({
     restartButton: {
         marginBottom: "72px",
     },
+    list: {
+        fontSize: "18px",
+        [theme.breakpoints.down("xs")]: {
+            fontSize: "14px",
+        }
+    },
 }));

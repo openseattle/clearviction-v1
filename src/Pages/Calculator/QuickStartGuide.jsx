@@ -47,7 +47,7 @@ const QuickStartGuide = props => {
                             return (
                                 <ul>
                                     {b.items.map((item, idx) => (
-                                        <li key={idx}>{item}</li>
+                                        <li className={classes.list} key={idx}>{item}</li>
                                     ))}
                                 </ul>
                             );
