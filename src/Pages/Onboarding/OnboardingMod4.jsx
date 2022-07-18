@@ -52,6 +52,9 @@ const bugs = {
     linkTitle: "Report bugs",
     linkIcon: "link",
     linkLocation: "https://airtable.com/shrzTUdyiDQsnqR3K",
+    linkTitle2: "Glossary",
+    linkIcon2: "link",
+    linkLocation2: "https://airtable.com/appfJZShN8K4tcWHU/tblYLt2L646QsTESQ/viwAXRIfCUQNDNs7M/recYE5SnGWsEGsSf5?blocks=hide",
 }
 
 const questions = {
