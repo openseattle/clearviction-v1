@@ -30,16 +30,13 @@ const EndScreen = props => {
                     props.body.map((b, idx) => {
                         switch (b.type) {
                             case BodyType.LIST: {
-                                return b.items.map((item, index) => {
-                                    return (
-                                        <CVPListItem
-                                            key={index}
-                                            useBulletPoint={true}
-                                            text={item}
-                                            className={classes.bodyList}
-                                        />
-                                    );
-                                });
+                                return (
+                                    <ul>
+                                        {b.items.map((item, idx) => (
+                                            <li className={classes.list} key={idx}>{item}</li>
+                                        ))}
+                                    </ul>
+                                );
                             }
                             case BodyType.PARAGRAPH:
                                 return (
