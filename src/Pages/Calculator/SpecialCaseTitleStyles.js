@@ -10,6 +10,7 @@ export const SpecialCaseTitleStyles = makeStyles(theme => ({
     header: {
         marginBottom: "24px",
         fontWeight: 600,
+        textAlign: "left",
     },
     body: {
         textAlign: "left",
@@ -30,5 +31,15 @@ export const SpecialCaseTitleStyles = makeStyles(theme => ({
     blakeLink: {
         fontSize: "24px",
         lineHeight: 3,
+        [theme.breakpoints.down("xs")]: {
+            fontSize: "18px",
+            fontWeight: "bold",
+        }
+    },
+    list: {
+        fontSize: "18px",
+        [theme.breakpoints.down("xs")]: {
+            fontSize: "14px",
+        }
     },
 }));

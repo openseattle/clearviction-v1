@@ -16,6 +16,7 @@ import SecondaryButton from "../../ui-kit/SecondaryButton";
 import { trackClick } from "../../trackingUtils";
 import { BodyType } from "../../data/calculatorPagesTypes";
 import ProgressBar from "../../Components/ProgressBar";
+import { ExternalLink } from "../../ui-kit/ExternalLink";
 
 const QuestionScreen = props => {
     const classes = QuestionScreenStyles();
@@ -50,17 +51,17 @@ const QuestionScreen = props => {
                                 return (
                                     <ul>
                                         {b.items.map((item, idx) => (
-                                            <li key={idx}>{item}</li>
+                                            <li className={classes.list} key={idx}>{item}</li>
                                         ))}
                                     </ul>
                                 );
                             case BodyType.LINK:
                                 return (
                                     <ul>
-                                        <li key={idx}>
-                                            <a target="_blank" rel="noopener noreferrer" role="button" href={b.href}>
+                                        <li className={classes.list} key={idx}>
+                                            <ExternalLink target="_blank" rel="noopener noreferrer" role="button" href={b.href}>
                                                 {b.text}
-                                            </a>
+                                            </ExternalLink>
                                         </li>
                                     </ul>
                                 );
