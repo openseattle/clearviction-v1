@@ -18,16 +18,17 @@ import link from "../../Assets/Onboarding/link.svg";
 import doc from "../../Assets/Onboarding/doc.svg";
 import video from "../../Assets/Onboarding/video.svg";
 
-import AirtableModal from "./AirtableModal";
-import SlackModal from "./SlackModal";
-import AirtableVideoModal from "./AirtableVideoModal";
-import SlackVideoModal from "./SlackVideoModal";
-import MiroVideoModal from "./MiroVideoModal";
-import TutorialAccordion from "./Mobile/TutorialAccordion";
-import SlackAccordion from "./Mobile/SlackAccoridion";
-import VideoTutorialAccordion from "./Mobile/VideoTutorialAccordion";
-import SlackVideoAccordion from "./Mobile/SlackVideoAccordion";
-import TrustDocAccordion from "./Mobile/TrustDocAccordion";
+import AirtableModal from './AirtableModal';
+import SlackModal from './SlackModal';
+import AirtableVideoModal from './AirtableVideoModal';
+import SlackVideoModal from './SlackVideoModal';
+import MiroVideoModal from './MiroVideoModal';
+import TutorialAccordion from './Mobile/TutorialAccordion';
+import SlackAccordion from './Mobile/SlackAccoridion';
+import VideoTutorialAccordion from './Mobile/VideoTutorialAccordion';
+import SlackVideoAccordion from './Mobile/SlackVideoAccordion';
+import TrustDocAccordion from './Mobile/TrustDocAccordion';
+import { ExternalLink } from '../../ui-kit/ExternalLink';
 
 const modalStyle = {
     position: "absolute",
@@ -43,35 +44,21 @@ const modalStyle = {
 function ModuleContent(props) {
     const classes = useModuleContentStyles();
     const modalClasses = useModalStyles();
-    const {
-        title,
-        subheading,
-        paragraph1,
-        paragraph2,
-        paragraph3,
-        paragraph4,
-        linkTitle,
-        linkTitle2,
-        linkTitle3,
-        linkIcon,
-        linkIcon2,
-        linkIcon3,
-        linkLocation,
-        linkLocation2,
-        linkLocation3,
-        modalParagraph1,
-        modalTitle,
-        modalParagraph2,
-        modalParagraph3,
-        modalParagraph4,
-        p2bullet1,
-        p2bullet2,
-        p2bullet3,
-        p3bullet1,
-        p3bullet2,
-        p3bullet3,
-        p3bullet4,
-        bullets,
+    const { title, subheading,
+        paragraph1, paragraph2,
+        paragraph3, paragraph4,
+        linkTitle, linkTitle2,
+        linkTitle3, linkIcon,
+        linkIcon2, linkIcon3,
+        linkLocation, linkLocation2,
+        linkLocation3, modalParagraph1,
+        modalTitle, modalParagraph2,
+        modalParagraph3, modalParagraph4,
+        p2bullet1, p2bullet2,
+        p2bullet3, p3bullet1,
+        p3bullet2, p3bullet3,
+        p3bullet4, bullets,
+        toolSite, toolText,
     } = props.content;
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
@@ -110,32 +97,15 @@ function ModuleContent(props) {
 
     return (
         <div className={classes.moduleContentCard}>
-            <Typography variant="h4" className={classes.moduleCardHeading}>
-                {title}
-            </Typography>
-            <Typography variant="body2" className={classes.bold}>
-                {subheading}
-            </Typography>
-            {paragraph1 ? (
-                <Typography variant="body1" className={classes.moduleCardBody}>
-                    {paragraph1}
-                </Typography>
-            ) : null}
-            {paragraph2 ? (
-                <Typography variant="body1" className={classes.moduleCardBody}>
-                    {paragraph2}
-                </Typography>
-            ) : null}
-            {paragraph3 ? (
-                <Typography variant="body1" className={classes.moduleCardBody}>
-                    {paragraph3}
-                </Typography>
-            ) : null}
-            {paragraph4 ? (
-                <Typography variant="body1" className={classes.moduleCardBody}>
-                    {paragraph4}
-                </Typography>
-            ) : null}
+            <Typography variant="h4" className={classes.moduleCardHeading}>{title}</Typography>
+            <Typography variant="body2" className={classes.bold}>{subheading}</Typography>
+            {paragraph1 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph1}</Typography> : null}
+            {paragraph2 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph2}</Typography> : null}
+            {paragraph3 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph3}</Typography> : null}
+            {paragraph4 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph4}</Typography> : null}
+            {toolSite ?
+                <ExternalLink variant="link" className={classes.externalLink} href={toolSite}>{toolText}</ExternalLink>
+                : null}
 
             {linkTitle ? (
                 <div className={classes.moduleContentLink}>
@@ -296,17 +266,19 @@ function ModuleContent(props) {
                                 {p2bullet3 ? <li>{p2bullet3}</li> : null}
                             </ul>
                         )}
+
                     </Typography>
                     <Typography variant="body2" className={classes.moduleCardBody}>
                         {modalParagraph3}
-                        {p3bullet1 && (
+                        {p3bullet1 &&
                             <ul>
                                 {p3bullet1 ? <li>{p3bullet1}</li> : null}
                                 {p3bullet2 ? <li>{p3bullet2}</li> : null}
                                 {p3bullet3 ? <li>{p3bullet3}</li> : null}
                                 {p3bullet4 ? <li>{p3bullet4}</li> : null}
                             </ul>
-                        )}
+                        }
+
                     </Typography>
                     {modalParagraph4 && (
                         <Typography variant="body2" className={classes.moduleCardBody}>
@@ -494,11 +466,11 @@ function ModuleContent(props) {
                         <List>
                             {bullets
                                 ? bullets.map((bullet, idx) => (
-                                      <ListItem key={idx}>
-                                          <ListItemIcon>•</ListItemIcon>
-                                          <ListItemText>{bullet}</ListItemText>
-                                      </ListItem>
-                                  ))
+                                    <ListItem key={idx}>
+                                        <ListItemIcon>•</ListItemIcon>
+                                        <ListItemText>{bullet}</ListItemText>
+                                    </ListItem>
+                                ))
                                 : null}
                         </List>
                         <Button onClick={handleTrustDocClose} className={classes.button}>
