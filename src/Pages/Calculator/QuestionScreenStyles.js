@@ -12,6 +12,7 @@ export const QuestionScreenStyles = makeStyles(theme => ({
     },
     body: {
         textAlign: "left",
+        color: "black",
     },
     bodyGrid: {
         marginBottom: "72px",
@@ -38,4 +39,16 @@ export const QuestionScreenStyles = makeStyles(theme => ({
             fontSize: "14px",
         }
     },
+    dialogImg: {
+        display: "flex",
+        justifyContent: "center",
+        [theme.breakpoints.down("xs")]: {
+            width: "175px",
+            height: "90px"
+        },
+        [theme.breakpoints.down("sm")]: {
+            width: "375px",
+            height: "150px"
+        }
+    }
 }));
