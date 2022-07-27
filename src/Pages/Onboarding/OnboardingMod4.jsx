@@ -62,7 +62,7 @@ const bugs = {
 
 const questions = {
     title: "Any questions?",
-    paragraph1: "Ask your onboarding buddy. Need a buddy? Ping Seamus to get one.",
+    paragraph1: "Ask your onboarding buddy. Need a buddy? Ping Seamus in the Nemo Slack Channel to get one.",
 };
 
 const doing = {
