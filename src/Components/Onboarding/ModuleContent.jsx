@@ -1,14 +1,11 @@
 import { useState, useEffect } from "react";
 import {
     Typography,
-    Modal,
     Button,
-    Box,
     ListItem,
     List,
     ListItemText,
     ListItemIcon,
-    Grid,
     Dialog,
     DialogContent,
 } from "@material-ui/core";
@@ -303,10 +300,7 @@ function ModuleContent(props) {
                     className={modalClasses.mainModal}
                 >
                     <DialogContent>
-                        <AirtableModal />
-                        <Button onClick={handleAirtableClose} className={classes.button}>
-                            Close
-                        </Button>
+                        <AirtableModal handleAirtableClose={handleAirtableClose} />
                     </DialogContent>
                 </Dialog>
             ) : (
@@ -377,10 +371,7 @@ function ModuleContent(props) {
                     className={modalClasses.mainModal}
                 >
                     <DialogContent sx={modalStyle}>
-                        <SlackModal />
-                        <Button onClick={handleSlackClose} className={classes.button}>
-                            Close
-                        </Button>
+                        <SlackModal handleSlackClose={handleSlackClose} />
                     </DialogContent>
                 </Dialog>
             ) : (

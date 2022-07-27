@@ -9,7 +9,6 @@ import remote from "../../Assets/Onboarding/remote.svg";
 import simpleQuestion from "../../Assets/Onboarding/simpleQuestion.svg";
 
 import { useModuleCardStyles } from "../../Styles/Onboarding/useModuleCardStyles";
-import PrimaryButton from "../../ui-kit/PrimaryButton";
 
 function ModuleCard(props) {
     const classes = useModuleCardStyles();

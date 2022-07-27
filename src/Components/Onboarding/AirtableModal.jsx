@@ -1,5 +1,6 @@
-import { Grid } from "@material-ui/core";
-import { useState } from "react";
+import { Grid, Button } from "@material-ui/core";
+import { useState } from "react"; 
+import { useButtonStyles } from "../../Styles/Onboarding/useButtonStyles";
 
 // icons
 import customizeCard from "../../Assets/Onboarding/customizeCard.svg";
@@ -20,6 +21,7 @@ const linkStyle = {
 };
 
 export default function AirtableModal(props) {
+  const classes = useButtonStyles();
   const [sectionId, setSectionId] = useState(1);
   const [activeTab, setActiveTab] = useState(1);
   const sections = [
@@ -65,7 +67,7 @@ export default function AirtableModal(props) {
   };
 
   return (
-    <Grid container>
+    <Grid container >
       <Grid item xs={2} >
         {sections.map((section) => (
           <button key={section.id} onClick={() => showSection(section.id)} style={activeTab === section.id ? activeTabStyle : tabStyle} >
@@ -73,7 +75,7 @@ export default function AirtableModal(props) {
           </button>
         ))}
       </Grid>
-      <Grid item xs={7} style={contentStyle}>
+      <Grid item xs={7} style={contentStyle} >
         {sectionId === 1 && (
           <div>
             <ol>
@@ -85,12 +87,12 @@ export default function AirtableModal(props) {
           </div>
         )}
         {sectionId === 2 && (
-          <div>
+          <div style={{ marginLeft: "25px" }}>
             <p>In your kanban, you will find some tasks that you must complete as soon as possible to get yourself up to date with CVP work.</p>
           </div>
         )}
         {sectionId === 3 && (
-          <div>
+          <div style={{ marginBottom: "100px" }}>
             <ol>
               <li>
                 Check the tiles in your inbox column; they are new requests someone sent you. On the tile, you’ll see:
@@ -134,7 +136,7 @@ export default function AirtableModal(props) {
           </div>
         )}
         {sectionId === 4 && (
-          <div>
+          <div style={{ marginLeft: "25px" }} >
             <p>
               If you see a tile in the needs rework column, that indicates that something you placed into the Delivered column was inconsistent with the AC, according to whoever reviewed it. It happens to everyone!
             </p>
@@ -158,7 +160,7 @@ export default function AirtableModal(props) {
           </div>
         )}
         {sectionId === 6 && (
-          <div>
+          <div style={{ marginLeft: "25px" }} >
             <p>To differentiate which tasks are yours and which belong to other people, first display DRI (Directly Responsible Individual) on each tile.</p>
             <ul>
               <li>Click on <img src={customizeCard} alt='customize Card' /> at the top of your dashboard.</li>
@@ -182,7 +184,7 @@ export default function AirtableModal(props) {
           </div>
         )}
         {sectionId === 8 && (
-          <div>
+          <div style={{ marginLeft: "25px" }}>
             <p>When you enable the view indicated above, allowing you to see the tasks you created as done and delivered, you’ll see the tiles’ DRIs placed into the Delivered column –it’s your responsibility to evaluate and approve their work.</p>
             <ul>
               <li>Click the tile to expand.</li>
@@ -206,6 +208,9 @@ export default function AirtableModal(props) {
             </ol>
           </div>
         )}
+        <Button onClick={props.handleAirtableClose} className={classes.button} style={{ position: "absolute", left: "40%", bottom: "15px"}} >
+          Close
+        </Button> 
       </Grid>
     </Grid>
   )
