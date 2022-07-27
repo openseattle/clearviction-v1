@@ -13,13 +13,13 @@ export default function SlackVideoModal(props) {
     const classes = useModalStyles();
 
     const sections = [
-        { id: 1, title: "Set up your profile" },
-        { id: 2, title: "Where to find channels and how to join a channel?" },
-        { id: 3, title: "How to create a channel" },
-        { id: 4, title: "How to start a conversation with a teammate" },
-        { id: 5, title: "How does donut work?" },
-        { id: 6, title: "How to check threads/mentions?" },
-        { id: 7, title: "Active/inactice status" },
+        { id: 1, title: "Setting Up Your Profile" },
+        { id: 2, title: "Finding & Joining a Channel" },
+        { id: 3, title: "Creating a Channel" },
+        { id: 4, title: "Conversing With Teammates" },
+        { id: 5, title: "Understanding Donut" },
+        { id: 6, title: "Checking Threads / Mentions" },
+        { id: 7, title: "Understanding Active / Inactive Status" },
     ];
 
     const profile = "https://drive.google.com/file/d/13ke5zaKAJbChEOB5Im1tC5pypQ3XiZM-/preview";

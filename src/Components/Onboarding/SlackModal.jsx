@@ -15,16 +15,16 @@ export default function SlackModal() {
   const [sectionId, setSectionId] = useState(1);
   const [activeTab, setActiveTab] = useState(1);
   const sections = [
-    { id: 1, title: "Set up profile" },
-    { id: 2, title: "Update your notification settings" },
-    { id: 3, title: "Check Slack messages at least once every day" },
-    { id: 4, title: "Contact team members" },
-    { id: 5, title: "Be thoughtful when you message team members" },
-    { id: 6, title: "Have conversations in the open" },
-    { id: 7, title: "Understand a channel's purpose" },
-    { id: 8, title: "Join channels of interest" },
-    { id: 9, title: "Use threads to keep communication organized" },
-    { id: 10, title: "Respond to requests in a timely manner" },
+    { id: 1, title: "Setting Up Your Profile" },
+    { id: 2, title: "Updating Notification Settings" },
+    { id: 3, title: "Checking Slack At Least Once a Day" },
+    { id: 4, title: "Contacting Team Members" },
+    { id: 5, title: "Being Thoughtful When Messaging Teammates" },
+    { id: 6, title: "Having Conversations in Open" },
+    { id: 7, title: "Understanding a Channel's Purpose" },
+    { id: 8, title: "Joining Channels of Interest" },
+    { id: 9, title: "Using Threads for Organized Conversations" },
+    { id: 10, title: "Responding to Requests in a Timely Manner" },
   ];
 
   const tabStyle = {

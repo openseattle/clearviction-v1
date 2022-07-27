@@ -23,15 +23,15 @@ export default function AirtableModal(props) {
   const [sectionId, setSectionId] = useState(1);
   const [activeTab, setActiveTab] = useState(1);
   const sections = [
-    { id: 1, title: "Find your dashboard" },
-    { id: 2, title: "Work on the onboarding tasks" },
-    { id: 3, title: "Engage with the new tasks" },
-    { id: 4, title: "Re-work what needs reworking" },
-    { id: 5, title: "Add a task to someone else's kanban" },
-    { id: 6, title: "Track task requests you make of others" },
-    { id: 7, title: "Add tasks you created to your view" },
-    { id: 8, title: "Evaluate performance of a task someone completed for you" },
-    { id: 9, title: "Create your own tasks for yourself" },
+    { id: 1, title: "Finding Your Dashboard" },
+    { id: 2, title: "Working on Onboarding Tasks" },
+    { id: 3, title: "Engaging with New Tasks" },
+    { id: 4, title: "Reworking Incomplete Tasks" },
+    { id: 5, title: "Assigning a Task" },
+    { id: 6, title: "Tracking Requested Tasks" },
+    { id: 7, title: "Viewing Created Tasks" },
+    { id: 8, title: "Evaluating a Completed Task" },
+    { id: 9, title: "Creating Your Own Tasks" },
   ];
 
   const tabStyle = {
