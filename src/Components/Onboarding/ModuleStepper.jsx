@@ -56,7 +56,7 @@ export default function VerticalLinearStepper() {
     return (
         <>
             {modules.map((module, index) => (
-                <Grid container key={index} justifyContent="center" direction="row" alignItems="center">
+                <Grid container key={index} justifyContent="center" direction="row" alignItems="center" className='gridContainer'>
                     {isLargeScreen ?
                         <Grid>
                             {index > 0 ? (
