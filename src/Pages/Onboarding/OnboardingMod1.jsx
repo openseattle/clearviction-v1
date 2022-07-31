@@ -27,12 +27,16 @@ const story = {
 
 const problem = {
     title: "The Problem",
-    modalParagraph1: "37,000 people from Washington are behind bars and each year, at least 98,000 different people are booked into local jails in Washington.",
-    modalParagraph2:
+    paragraph1: "37,000 people from Washington are behind bars and each year, at least 98,000 different people are booked into local jails in Washington ",
+    paragraph2:
         "People with a criminal record face significant barriers to their day to day life after completing their prison terms. Some challenges include:",
-    p2bullet1: "Finding housing and employment.",
-    p2bullet2: "Earning professional credentials.",
-    p2bullet3: "Getting involved in their community.",
+    paragraphBullets: [
+        "Finding housing and employment.",
+        "Earning professional credentials.",
+        "Getting involved in their community.",
+    ],
+    sourceSite: "https://www.prisonpolicy.org/profiles/WA.html",
+    sourceText: "(Prison Policy Initiative).",
 };
 
 const button1 = {
@@ -73,8 +77,8 @@ function OnboardingMod1() {
                     <Grid item xs={10}>
                         <ModuleContent content={mission} />
                     </Grid>
-                    
-                    
+
+
                 </Grid>
             </Box>
             <Footer button1={button1} button2={button2} />

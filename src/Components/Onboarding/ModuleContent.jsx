@@ -56,6 +56,8 @@ function ModuleContent(props) {
         p3bullet2, p3bullet3,
         p3bullet4, bullets,
         toolSite, toolText,
+        paragraphBullets,
+        sourceSite, sourceText,
     } = props.content;
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
@@ -96,10 +98,16 @@ function ModuleContent(props) {
         <div className={classes.moduleContentCard}>
             <Typography variant="h4" className={classes.moduleCardHeading}>{title}</Typography>
             <Typography variant="body2" className={classes.bold}>{subheading}</Typography>
-            {paragraph1 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph1}</Typography> : null}
+            {paragraph1 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph1}{sourceSite ? <ExternalLink variant="link" className={classes.externalLink} href={sourceSite}>{sourceText}</ExternalLink> : ""}</Typography> : null}
+
             {paragraph2 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph2}</Typography> : null}
             {paragraph3 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph3}</Typography> : null}
             {paragraph4 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph4}</Typography> : null}
+            {paragraphBullets ?
+                <ul>
+                    {paragraphBullets.map((bullet, idx) =>
+                        <li key={idx} style={{ fontSize: "20px", color: "#2b2929" }} variant="body1">{bullet}</li>)}
+                </ul> : ''}
             {toolSite ?
                 <ExternalLink variant="link" className={classes.externalLink} href={toolSite}>{toolText}</ExternalLink>
                 : null}
