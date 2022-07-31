@@ -14,6 +14,7 @@ const headerText = {
 function OnboardingHome() {
     const classes = useHomeStyles();
 
+
     return (
         <div>
             <Header text={headerText} />
@@ -39,6 +40,7 @@ function OnboardingHome() {
                     </span>
                 </Typography>
             </div>
+
             <div className={classes.stepper}>
                 <ModuleStepper />
             </div>

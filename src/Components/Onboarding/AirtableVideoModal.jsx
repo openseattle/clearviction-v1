@@ -13,8 +13,8 @@ export default function AirtableVideoModal(props) {
     const classes = useModalStyles();
 
     const sections = [
-        { id: 1, title: "Complete Your profile" },
-        { id: 2, title: "Find Your Dashboard (Kanban)" },
+        { id: 1, title: "Completing Your profile" },
+        { id: 2, title: "Finding Your Dashboard (Kanban)" },
         { id: 3, title: "Engaging With Tasks" },
         { id: 4, title: "Creating a Task (& Assigning It)" },
         { id: 5, title: "Tracking & Viewing Tasks" },

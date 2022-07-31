@@ -79,7 +79,7 @@ const button1 = {
 
 const button2 = {
     link: "/onboarding",
-    text: "back to homepage",
+    text: "homepage",
 };
 
 function OnboardingMod4() {
@@ -142,7 +142,7 @@ function OnboardingMod4() {
                         },
                     }}
                 >
-                    <Grid item xs={8} sm={6} md={3} lg={2}>
+                    <Grid item sm={6} md={4} lg={2}>
                         <a
                             href="https://airtable.com/appfJZShN8K4tcWHU/tblln6jlsrsqfU0TO/viwrhv3vIo3LqHezH/recg4fqrnyVrBVHYL?blocks=hide"
                             target="_blank"
