@@ -49,7 +49,7 @@ const data: Pages = {
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: "If you have multiple convictions, you will need to go through the calculator separately for each one.",
+                text: "The calculator can be used for one conviction. If you have two or more convictions, use the calculator for however many convictions you have.",
             },
             {
                 type: BodyType.PARAGRAPH,
@@ -361,7 +361,7 @@ const data: Pages = {
     // },
     "main-0": {
         type: PageType.MAIN,
-        header: "We will now ask a few questions about what your conviction was for, to assess your eligibility to vacate the conviction.",
+        header: "We will now ask a few questions about what your conviction was for in order to assess your eligibility to vacate the conviction.",
         progressBar: {
             currentSectionName: SectionName.OFF,
         },
@@ -529,7 +529,7 @@ const data: Pages = {
     },
     "main-5": {
         type: PageType.QUESTION,
-        header: "Was the offense a misdemeanor or gross misdemeanor violation, including attempt of any of the following:",
+        header: "Was the offense a misdemeanor or gross misdemeanor violation, including attempt of any of the following?:",
         progressBar: {
             currentSectionName: SectionName.OFF,
         },
@@ -945,7 +945,7 @@ const data: Pages = {
     },
     "pro-2": {
         type: PageType.QUESTION,
-        header: "Do you have charges pending in this state or any other state, or in any federal court for any crime other than prostitution?",
+        header: "Do you have charges pending in Washington state or any other state, or in any federal court for any crime other than prostitution?",
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
@@ -1000,7 +1000,7 @@ const data: Pages = {
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: "You will need to provide proof except where the conviction to be vacated is for the crime of prostitution, prostitution loitering, or stay out of area of prostitution",
+                text: "You will need to provide proof except where the conviction to be vacated is for the crime of prostitution, prostitution loitering, or stay out of area of prostitution.",
             },
         ],
         buttons: [
@@ -1043,7 +1043,7 @@ const data: Pages = {
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: "1. Provide an affidavit, under penalty of perjury, stating the specific facts and circumstances proving, by a preponderance of evidence that the offense was committed as a result of being a victim of sex trafficking, prostitution, or commercial sexual abuse of a minor; sexual assault; or domestic violence as defined in RCW 9.94A.030. RCW 9.96.060 Sec. 5(2)(a).",
+                text: "1. Provide an affidavit, under penalty of perjury, stating the specific facts and circumstances which prove by a preponderance of evidence, that the offense was committed as a result of being a victim of sex trafficking, prostitution, or commercial sexual abuse of a minor; sexual assault; or domestic violence as defined in RCW 9.94A.030. RCW 9.96.060 Sec. 5(2)(a)."
             },
             {
                 type: BodyType.PARAGRAPH,
@@ -1096,7 +1096,7 @@ const data: Pages = {
     },
     "pro-ineligible-1": {
         type: PageType.END,
-        header: "Unfortunately, you are not eligible for vacation",
+        header: "Unfortunately, you are not eligible for vacation.",
         buttons: [
             {
                 text: FEEDBACK_BUTTON_TEXT,
@@ -1235,7 +1235,7 @@ const data: Pages = {
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: "As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because you answered YES to the below question:",
+                text: "As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because you answered YES to the following question:",
             },
             {
                 type: BodyType.PARAGRAPH,
@@ -1260,7 +1260,7 @@ const data: Pages = {
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: "As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because you answered YES to the below question: ",
+                text: "As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because you answered YES to the following question: ",
             },
             {
                 type: BodyType.PARAGRAPH,
@@ -1479,8 +1479,8 @@ const data: Pages = {
     },
     "too-ineligible-1": {
         type: PageType.END,
-        header: `As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because it has been less than 3 years since your 
-                conviction was completed including your financial obligations.
+        header: `As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because it has been less than 3 years since your conviction was completed,
+                including your financial obligations.
                 You might be eligible when 3 years have passed since completing the terms of your conviction including any financial obligations.`,
         buttons: [
             {
