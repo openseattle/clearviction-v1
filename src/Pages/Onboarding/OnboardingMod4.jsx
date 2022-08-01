@@ -18,6 +18,7 @@ import nemo from "../../Assets/Onboarding/nemo.svg";
 import product from "../../Assets/Onboarding/product.svg";
 import research from "../../Assets/Onboarding/research.svg";
 import bug from "../../Assets/Onboarding/bug.svg";
+import checkmark from "../../Assets/Onboarding/checkmark.svg";
 
 const headerText = {
     title: "Module 4",
@@ -48,6 +49,17 @@ const team = {
     modalParagraph3: "Better to reliably and consistently show to one than dabble in more than one.",
 };
 
+const findWork = {
+    title: "Find Work to do",
+    paragraph1:
+        "Now that you know what CV is about, and what team you are on. Let’s see how you can find a task to complete. The first tasks you should complete are already on your Airtable kanban (refer back to Module 2 tools if you are confused). Once those are complete, check the following to find another task.",
+    linkTitle: "Pick a task Guide",
+    linkIcon: "videoFindWork",
+    linkTitle2: "Misc. Tasks",
+    linkIcon2: "link",
+    linkLocation2: "https://airtable.com/appfJZShN8K4tcWHU/tblXQZfKPAJIjV4cL/viw5qPVwWi7GiDT2J?blocks=hide",
+};
+
 const bugs = {
     title: "Bug reports",
     paragraph1:
@@ -57,8 +69,9 @@ const bugs = {
     linkLocation: "https://airtable.com/shrzTUdyiDQsnqR3K",
     linkTitle2: "Glossary",
     linkIcon2: "link",
-    linkLocation2: "https://airtable.com/appfJZShN8K4tcWHU/tblYLt2L646QsTESQ/viwAXRIfCUQNDNs7M/recYE5SnGWsEGsSf5?blocks=hide",
-}
+    linkLocation2:
+        "https://airtable.com/appfJZShN8K4tcWHU/tblYLt2L646QsTESQ/viwAXRIfCUQNDNs7M/recYE5SnGWsEGsSf5?blocks=hide",
+};
 
 const questions = {
     title: "Any questions?",
@@ -103,6 +116,12 @@ function OnboardingMod4() {
                     </Grid>
                     <Grid item xs={10}>
                         <ModuleContent content={team} />
+                    </Grid>
+                    <Grid item xs={2} className={classes.cardIcon}>
+                        <img src={checkmark} alt="" className={classes.icon} />
+                    </Grid>
+                    <Grid item xs={10}>
+                        <ModuleContent content={findWork} />
                     </Grid>
                     <Grid item xs={2} className={classes.cardIcon}>
                         <img src={bug} alt="" className={classes.icon} />
