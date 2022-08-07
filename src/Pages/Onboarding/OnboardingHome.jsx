@@ -1,6 +1,7 @@
 // styling
 import { Typography } from "@material-ui/core";
 import { useHomeStyles } from "../../Styles/Onboarding/useHomeStyles";
+import { useEffect, useRef } from "react";
 
 // components
 import Header from "../../Components/Onboarding/Header";
@@ -14,6 +15,18 @@ const headerText = {
 function OnboardingHome() {
     const classes = useHomeStyles();
 
+    const moduleSection = useRef(null);
+    const gotoModuleSection = () =>
+        window.scrollTo({
+            top: moduleSection.current.offsetTop,
+            behavior: "smooth",
+        });
+
+    useEffect(() => {
+        if (window.location.href.indexOf("mod") > -1) {
+            gotoModuleSection();
+        }
+    });
 
     return (
         <div>
@@ -41,7 +54,7 @@ function OnboardingHome() {
                 </Typography>
             </div>
 
-            <div className={classes.stepper}>
+            <div className={classes.stepper} ref={moduleSection}>
                 <ModuleStepper />
             </div>
         </div>

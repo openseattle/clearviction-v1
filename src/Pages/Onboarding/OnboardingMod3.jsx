@@ -66,7 +66,7 @@ const button1 = {
 };
 
 const button2 = {
-    link: "/onboarding",
+    link: "/onboarding/#mod",
     text: "next",
 };
 

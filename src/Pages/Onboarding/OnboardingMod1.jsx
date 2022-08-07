@@ -16,18 +16,22 @@ const headerText = {
 
 const mission = {
     title: "Our Mission",
-    paragraph1: "Clearviction aims to reduce barriers faced by formerly incarcerated individuals by streamlining the process of vacating eligible convictions in Washington state.",
+    paragraph1:
+        "Clearviction aims to reduce barriers faced by formerly incarcerated individuals by streamlining the process of vacating eligible convictions in Washington state.",
 };
 
 const story = {
     title: "Our Story",
-    paragraph1: "Committed to helping people with convictions to improve their quality of life, a group of volunteers decided to create a tool that could simplify the conviction vacation process.",
-    paragraph2: "While the project started in Seattle, we now have volunteers all across the country (and the world!) contributing to building, maintaining, and improving this product.",
+    paragraph1:
+        "Committed to helping people with convictions to improve their quality of life, a group of volunteers decided to create a tool that could simplify the conviction vacation process.",
+    paragraph2:
+        "While the project started in Seattle, we now have volunteers all across the country (and the world!) contributing to building, maintaining, and improving this product.",
 };
 
 const problem = {
     title: "The Problem",
-    paragraph1: "37,000 people from Washington are behind bars and each year, at least 98,000 different people are booked into local jails in Washington ",
+    paragraph1:
+        "37,000 people from Washington are behind bars and each year, at least 98,000 different people are booked into local jails in Washington ",
     paragraph2:
         "People with a criminal record face significant barriers to their day to day life after completing their prison terms. Some challenges include:",
     paragraphBullets: [
@@ -45,7 +49,7 @@ const button1 = {
 };
 
 const button2 = {
-    link: "/onboarding",
+    link: "/onboarding/#mod",
     text: "next",
 };
 
@@ -77,8 +81,6 @@ function OnboardingMod1() {
                     <Grid item xs={10}>
                         <ModuleContent content={mission} />
                     </Grid>
-
-
                 </Grid>
             </Box>
             <Footer button1={button1} button2={button2} />
