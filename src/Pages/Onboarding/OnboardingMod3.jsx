@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Grid, Box, Typography } from "@material-ui/core";
 import { useModuleContentStyles } from "../../Styles/Onboarding/useModuleContentStyles";
 
