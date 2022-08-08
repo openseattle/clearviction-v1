@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 // components
 import ModuleCard from "./ModuleCard";
 import { Grid } from "@material-ui/core";
@@ -45,28 +46,36 @@ const styles = {
 
 export default function VerticalLinearStepper() {
     const classes = useHomeStyles();
+    const [isLargeScreen, setIsLargeScreen] = useState(true);
+
+    useEffect(() => {
+        const mediaSize = window.innerWidth;
+        mediaSize >= 768 ? setIsLargeScreen(true) : setIsLargeScreen(false);
+    }, []);
 
     return (
         <>
             {modules.map((module, index) => (
-                <Grid container key={index} justifyContent="center" direction="row" alignItems="center">
-                    <Grid>
-                        {index > 0 ? (
-                            <div className={classes.connectorLine}></div>
-                        ) : (
-                            <div className={classes.spacerLine}></div>
-                        )}
-                        {localStorage.getItem(module.link) ? (
-                            <img src={circleCheck} style={styles.img} alt="" />
-                        ) : (
-                            <div className={classes.openCircle}></div>
-                        )}
-                        {index < modules.length - 1 ? (
-                            <div className={classes.connectorLine}></div>
-                        ) : (
-                            <div className={classes.spacerLine}></div>
-                        )}
-                    </Grid>
+                <Grid container key={index} justifyContent="center" direction="row" alignItems="center" className='gridContainer'>
+                    {isLargeScreen ?
+                        <Grid>
+                            {index > 0 ? (
+                                <div className={classes.connectorLine}></div>
+                            ) : (
+                                <div className={classes.spacerLine}></div>
+                            )}
+                            {localStorage.getItem(module.link) ? (
+                                <img src={circleCheck} style={styles.img} alt="" />
+                            ) : (
+                                <div className={classes.openCircle}></div>
+                            )}
+                            {index < modules.length - 1 ? (
+                                <div className={classes.connectorLine}></div>
+                            ) : (
+                                <div className={classes.spacerLine}></div>
+                            )}
+                        </Grid>
+                        : ""}
                     <Grid item={true} xs={10} md={8} sm={8} lg={8}>
                         <ModuleCard module={module} />
                     </Grid>

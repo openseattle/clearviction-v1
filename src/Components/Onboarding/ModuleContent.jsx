@@ -1,14 +1,11 @@
 import { useState, useEffect } from "react";
 import {
     Typography,
-    Modal,
     Button,
-    Box,
     ListItem,
     List,
     ListItemText,
     ListItemIcon,
-    Grid,
     Dialog,
     DialogContent,
 } from "@material-ui/core";
@@ -18,17 +15,18 @@ import link from "../../Assets/Onboarding/link.svg";
 import doc from "../../Assets/Onboarding/doc.svg";
 import video from "../../Assets/Onboarding/video.svg";
 
-import AirtableModal from './AirtableModal';
-import SlackModal from './SlackModal';
-import AirtableVideoModal from './AirtableVideoModal';
-import SlackVideoModal from './SlackVideoModal';
-import MiroVideoModal from './MiroVideoModal';
-import TutorialAccordion from './Mobile/TutorialAccordion';
-import SlackAccordion from './Mobile/SlackAccoridion';
-import VideoTutorialAccordion from './Mobile/VideoTutorialAccordion';
-import SlackVideoAccordion from './Mobile/SlackVideoAccordion';
-import TrustDocAccordion from './Mobile/TrustDocAccordion';
-import { ExternalLink } from '../../ui-kit/ExternalLink';
+import AirtableModal from "./AirtableModal";
+import SlackModal from "./SlackModal";
+import AirtableVideoModal from "./AirtableVideoModal";
+import SlackVideoModal from "./SlackVideoModal";
+import MiroVideoModal from "./MiroVideoModal";
+import FindVideoModal from "./FindVideoModal";
+import TutorialAccordion from "./Mobile/TutorialAccordion";
+import SlackAccordion from "./Mobile/SlackAccoridion";
+import VideoTutorialAccordion from "./Mobile/VideoTutorialAccordion";
+import SlackVideoAccordion from "./Mobile/SlackVideoAccordion";
+import TrustDocAccordion from "./Mobile/TrustDocAccordion";
+import { ExternalLink } from "../../ui-kit/ExternalLink";
 
 const modalStyle = {
     position: "absolute",
@@ -44,21 +42,40 @@ const modalStyle = {
 function ModuleContent(props) {
     const classes = useModuleContentStyles();
     const modalClasses = useModalStyles();
-    const { title, subheading,
-        paragraph1, paragraph2,
-        paragraph3, paragraph4,
-        linkTitle, linkTitle2,
-        linkTitle3, linkIcon,
-        linkIcon2, linkIcon3,
-        linkLocation, linkLocation2,
-        linkLocation3, modalParagraph1,
-        modalTitle, modalParagraph2,
-        modalParagraph3, modalParagraph4,
-        p2bullet1, p2bullet2,
-        p2bullet3, p3bullet1,
-        p3bullet2, p3bullet3,
-        p3bullet4, bullets,
-        toolSite, toolText,
+    const {
+        title,
+        subheading,
+        paragraph1,
+        paragraph2,
+        paragraph3,
+        paragraph4,
+        linkTitle,
+        linkTitle2,
+        linkTitle3,
+        linkIcon,
+        linkIcon2,
+        linkIcon3,
+        linkLocation,
+        linkLocation2,
+        linkLocation3,
+        modalParagraph1,
+        modalTitle,
+        modalParagraph2,
+        modalParagraph3,
+        modalParagraph4,
+        p2bullet1,
+        p2bullet2,
+        p2bullet3,
+        p3bullet1,
+        p3bullet2,
+        p3bullet3,
+        p3bullet4,
+        bullets,
+        toolSite,
+        toolText,
+        paragraphBullets,
+        sourceSite,
+        sourceText,
     } = props.content;
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
@@ -88,6 +105,10 @@ function ModuleContent(props) {
     const handleMiroVideoOpen = () => setMiroVideoOpen(true);
     const handleMiroVideoClose = () => setMiroVideoOpen(false);
 
+    const [findVideoOpen, setFindVideoOpen] = useState(false);
+    const handleFindVideoOpen = () => setFindVideoOpen(true);
+    const handleFindVideoClose = () => setFindVideoOpen(false);
+
     const [isLargeScreen, setIsLargeScreen] = useState(true);
 
     useEffect(() => {
@@ -97,15 +118,56 @@ function ModuleContent(props) {
 
     return (
         <div className={classes.moduleContentCard}>
-            <Typography variant="h4" className={classes.moduleCardHeading}>{title}</Typography>
-            <Typography variant="body2" className={classes.bold}>{subheading}</Typography>
-            {paragraph1 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph1}</Typography> : null}
-            {paragraph2 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph2}</Typography> : null}
-            {paragraph3 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph3}</Typography> : null}
-            {paragraph4 ? <Typography variant="body1" className={classes.moduleCardBody}>{paragraph4}</Typography> : null}
-            {toolSite ?
-                <ExternalLink variant="link" className={classes.externalLink} href={toolSite}>{toolText}</ExternalLink>
-                : null}
+            <Typography variant="h4" className={classes.moduleCardHeading}>
+                {title}
+            </Typography>
+            <Typography variant="body2" className={classes.bold}>
+                {subheading}
+            </Typography>
+            {paragraph1 ? (
+                <Typography variant="body1" className={classes.moduleCardBody}>
+                    {paragraph1}
+                    {sourceSite ? (
+                        <ExternalLink variant="link" className={classes.externalLink} href={sourceSite}>
+                            {sourceText}
+                        </ExternalLink>
+                    ) : (
+                        ""
+                    )}
+                </Typography>
+            ) : null}
+
+            {paragraph2 ? (
+                <Typography variant="body1" className={classes.moduleCardBody}>
+                    {paragraph2}
+                </Typography>
+            ) : null}
+            {paragraph3 ? (
+                <Typography variant="body1" className={classes.moduleCardBody}>
+                    {paragraph3}
+                </Typography>
+            ) : null}
+            {paragraph4 ? (
+                <Typography variant="body1" className={classes.moduleCardBody}>
+                    {paragraph4}
+                </Typography>
+            ) : null}
+            {paragraphBullets ? (
+                <ul>
+                    {paragraphBullets.map((bullet, idx) => (
+                        <li key={idx} style={{ fontSize: "20px", color: "#2b2929" }} variant="body1">
+                            {bullet}
+                        </li>
+                    ))}
+                </ul>
+            ) : (
+                ""
+            )}
+            {toolSite ? (
+                <ExternalLink variant="link" className={classes.externalLink} href={toolSite}>
+                    {toolText}
+                </ExternalLink>
+            ) : null}
 
             {linkTitle ? (
                 <div className={classes.moduleContentLink}>
@@ -159,6 +221,14 @@ function ModuleContent(props) {
                     )}
                     {linkIcon === "videoMiro" && (
                         <Button onClick={handleMiroVideoOpen} className={classes.linkContainer}>
+                            <div className={classes.linkContainer}>
+                                <img src={video} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText}>{linkTitle}</p>
+                            </div>
+                        </Button>
+                    )}
+                    {linkIcon === "videoFindWork" && (
+                        <Button onClick={handleFindVideoOpen} className={classes.linkContainer}>
                             <div className={classes.linkContainer}>
                                 <img src={video} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText}>{linkTitle}</p>
@@ -266,19 +336,17 @@ function ModuleContent(props) {
                                 {p2bullet3 ? <li>{p2bullet3}</li> : null}
                             </ul>
                         )}
-
                     </Typography>
                     <Typography variant="body2" className={classes.moduleCardBody}>
                         {modalParagraph3}
-                        {p3bullet1 &&
+                        {p3bullet1 && (
                             <ul>
                                 {p3bullet1 ? <li>{p3bullet1}</li> : null}
                                 {p3bullet2 ? <li>{p3bullet2}</li> : null}
                                 {p3bullet3 ? <li>{p3bullet3}</li> : null}
                                 {p3bullet4 ? <li>{p3bullet4}</li> : null}
                             </ul>
-                        }
-
+                        )}
                     </Typography>
                     {modalParagraph4 && (
                         <Typography variant="body2" className={classes.moduleCardBody}>
@@ -303,10 +371,7 @@ function ModuleContent(props) {
                     className={modalClasses.mainModal}
                 >
                     <DialogContent>
-                        <AirtableModal />
-                        <Button onClick={handleAirtableClose} className={classes.button}>
-                            Close
-                        </Button>
+                        <AirtableModal handleAirtableClose={handleAirtableClose} />
                     </DialogContent>
                 </Dialog>
             ) : (
@@ -377,10 +442,7 @@ function ModuleContent(props) {
                     className={modalClasses.mainModal}
                 >
                     <DialogContent sx={modalStyle}>
-                        <SlackModal />
-                        <Button onClick={handleSlackClose} className={classes.button}>
-                            Close
-                        </Button>
+                        <SlackModal handleSlackClose={handleSlackClose} />
                     </DialogContent>
                 </Dialog>
             ) : (
@@ -434,6 +496,24 @@ function ModuleContent(props) {
 
             {/* video miro modal */}
             <Dialog
+                open={findVideoOpen}
+                onClose={handleFindVideoClose}
+                aria-labelledby=""
+                aria-describedby=""
+                fullScreen
+                maxWidth="lg"
+                className={modalClasses.videoContainer}
+            >
+                <DialogContent>
+                    <FindVideoModal />
+                </DialogContent>
+                <Button onClick={handleFindVideoClose} style={{ margin: "0 auto 64px" }} className={classes.button}>
+                    Close
+                </Button>
+            </Dialog>
+
+            {/* video miro modal */}
+            <Dialog
                 open={miroVideoOpen}
                 onClose={handleMiroVideoClose}
                 aria-labelledby=""
@@ -466,11 +546,11 @@ function ModuleContent(props) {
                         <List>
                             {bullets
                                 ? bullets.map((bullet, idx) => (
-                                    <ListItem key={idx}>
-                                        <ListItemIcon>•</ListItemIcon>
-                                        <ListItemText>{bullet}</ListItemText>
-                                    </ListItem>
-                                ))
+                                      <ListItem key={idx}>
+                                          <ListItemIcon>•</ListItemIcon>
+                                          <ListItemText>{bullet}</ListItemText>
+                                      </ListItem>
+                                  ))
                                 : null}
                         </List>
                         <Button onClick={handleTrustDocClose} className={classes.button}>

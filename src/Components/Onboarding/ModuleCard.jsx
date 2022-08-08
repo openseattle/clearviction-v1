@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Typography, Grid } from "@material-ui/core";
 
@@ -7,13 +7,19 @@ import screens from "../../Assets/Onboarding/screens.svg";
 import tool from "../../Assets/Onboarding/tool.svg";
 import remote from "../../Assets/Onboarding/remote.svg";
 import simpleQuestion from "../../Assets/Onboarding/simpleQuestion.svg";
+import circleCheck from "../../Assets/Onboarding/circleCheck.png";
 
 import { useModuleCardStyles } from "../../Styles/Onboarding/useModuleCardStyles";
-import PrimaryButton from "../../ui-kit/PrimaryButton";
 
 function ModuleCard(props) {
     const classes = useModuleCardStyles();
     const { number, link, text, subheading } = props.module;
+    const [isLargeScreen, setIsLargeScreen] = useState(true);
+
+    useEffect(() => {
+        const mediaSize = window.innerWidth;
+        mediaSize >= 768 ? setIsLargeScreen(true) : setIsLargeScreen(false);
+    }, []);
 
     return (
         <div className={classes.moduleCard}>
@@ -35,11 +41,19 @@ function ModuleCard(props) {
                                 {text}
                             </Typography>
                         </div>
-                        <div className={classes.mobileButton}>
-                            <Typography variant="h6" style={{ fontSize: "17px" }}>
-                                {number}
-                            </Typography>
-                        </div>
+                        {localStorage.getItem(link) ?
+                            <div className={classes.mobileSuccessButton}>
+                                <img className={classes.checkMark} src={circleCheck} alt="" />
+                                <Typography style={{ fontSize: "17px", marginLeft: '1rem', fontWeight: "bold" }}>
+                                    completed
+                                </Typography>
+                            </div> :
+                            <div className={classes.mobileButton}>
+                                <Typography variant="h6" style={{ fontSize: "17px" }}>
+                                    {number}
+                                </Typography>
+                            </div>
+                        }
                     </div>
                 </div>
             </Link>
