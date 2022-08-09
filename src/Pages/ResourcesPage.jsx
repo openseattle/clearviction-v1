@@ -140,7 +140,6 @@ const ResourcesPage = () => {
                         { url: "employment", linkName: "employment" },
                         { url: "housing", linkName: "housing" },
                         { url: "education", linkName: "education" },
-                        { url: "other", linkName: "other" },
                     ]}
                 />
             </Container>
