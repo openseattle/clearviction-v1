@@ -95,7 +95,7 @@ const data: Pages = {
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: "We would love to get your feedback as we continue building our calculator so we can learn more about how to improve it."
+                text: "We would love to get your feedback as we continue building our calculator so we can learn more about how to improve it.",
             },
         ],
         buttons: [
@@ -415,7 +415,7 @@ const data: Pages = {
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: "This is because your conviction is classified as a violent offense, defined in RCW 9.94A.030."
+                text: "This is because your conviction is classified as a violent offense, defined in RCW 9.94A.030.",
             },
             {
                 type: BodyType.LINK,
@@ -477,7 +477,7 @@ const data: Pages = {
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: "This is because your conviction is one of the following:"
+                text: "This is because your conviction is one of the following:",
             },
             {
                 type: BodyType.LINK,
@@ -506,7 +506,7 @@ const data: Pages = {
     },
     "main-3": {
         type: PageType.QUESTION,
-        header: 'Was the offense considered a “prior offense”?',
+        header: "Was the offense considered a “prior offense”?",
         progressBar: {
             currentSectionName: SectionName.OFF,
         },
@@ -584,15 +584,15 @@ const data: Pages = {
     },
     "main-ineligible-2": {
         type: PageType.QUESTION,
-        header: 'Your Conviction: Not Eligible to Vacate',
+        header: "Your Conviction: Not Eligible to Vacate",
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: 'Based on your answers, it appears that your conviction is not eligible to vacate.',
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: 'This is because your conviction is one of the following:'
+                text: "This is because your conviction is one of the following:",
             },
             {
                 type: BodyType.LINK,
@@ -621,15 +621,15 @@ const data: Pages = {
     },
     "main-ineligible-3": {
         type: PageType.END,
-        header: 'Your Conviction: Not Eligible to Vacate',
+        header: "Your Conviction: Not Eligible to Vacate",
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: 'Based on your answers, it appears that your conviction is not eligible to vacate.',
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: 'This is because you have had an additional alcohol or drug violation within 10 years of your prior offense.'
+                text: "This is because you have had an additional alcohol or drug violation within 10 years of your prior offense.",
             },
         ],
         buttons: [
@@ -661,24 +661,24 @@ const data: Pages = {
     },
     "main-ineligible-4": {
         type: PageType.END,
-        header: 'Your Conviction: Not Eligible to Vacate Right Now',
+        header: "Your Conviction: Not Eligible to Vacate Right Now",
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: 'Based on your answers, it appears that your conviction is not eligible to vacate right now.',
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate right now.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: 'This is because you have had an additional alcohol or drug violation within 10 years of your prior offense.'
+                text: "This is because you have had an additional alcohol or drug violation within 10 years of your prior offense.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: 'Your conviction might be eligible to vacate when 10 years have passed since your prior offense.'
+                text: "Your conviction might be eligible to vacate when 10 years have passed since your prior offense.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: 'It also must meet all other requirements.',
-            }
+                text: "It also must meet all other requirements.",
+            },
         ],
         buttons: [
             {
@@ -742,8 +742,8 @@ const data: Pages = {
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: "This is because you have had 2 or more domestic violence incidents."
-            }
+                text: "This is because you have had 2 or more domestic violence incidents.",
+            },
         ],
         buttons: [
             {
@@ -774,20 +774,20 @@ const data: Pages = {
     },
     "main-ineligible-6": {
         type: PageType.END,
-        header: 'Your Conviction: Not Eligible to Vacate Right Now',
+        header: "Your Conviction: Not Eligible to Vacate Right Now",
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: 'Based on your answers, it appears that your conviction is not eligible to vacate right now.',
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate right now.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: 'Your conviction might be eligible once 5 years have passed since completion of terms of the sentence, including any legal financial obligations (LFOs) and treatment ordered as a condition of sentencing.',
+                text: "Your conviction might be eligible once 5 years have passed since completion of terms of the sentence, including any legal financial obligations (LFOs) and treatment ordered as a condition of sentencing.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: 'It also must meet all other requirements.',
-            }
+                text: "It also must meet all other requirements.",
+            },
         ],
         buttons: [
             {
@@ -800,21 +800,20 @@ const data: Pages = {
     },
     "fsh-0": {
         type: PageType.SPECIAL,
-        header: 'Violation of Fishing Regulation',
+        header: "Violation of Fishing Regulation",
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: 'People who claimed to be exercising a treaty Indian fishing right might be eligible to vacate their conviction.',
+                text: "People who claimed to be exercising a treaty Indian fishing right might be eligible to vacate their conviction.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: 'This special clause can be found in RCW 9.96.060(4).',
+                text: "This special clause can be found in RCW 9.96.060(4).",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: 'We will ask you a few questions to determine whether your conviction is eligible to vacate.',
+                text: "We will ask you a few questions to determine whether your conviction is eligible to vacate.",
             },
-
         ],
         buttons: [
             {
@@ -825,12 +824,12 @@ const data: Pages = {
     },
     "fsh-1": {
         type: PageType.QUESTION,
-        header: 'Are you a member of a tribe?',
+        header: "Are you a member of a tribe?",
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: 'You can also apply on behalf of a deceased family member in the tribe who meets the criteria.'
-            }
+                text: "You can also apply on behalf of a deceased family member in the tribe who meets the criteria.",
+            },
         ],
         buttons: [
             {
@@ -890,7 +889,7 @@ const data: Pages = {
     },
     "fsh-eligible": {
         type: PageType.END,
-        header: 'Your Conviction May Be Eligible to Vacate!',
+        header: "Your Conviction May Be Eligible to Vacate!",
         body: [
             {
                 type: BodyType.PARAGRAPH,
@@ -947,15 +946,15 @@ const data: Pages = {
     },
     "fsh-to-main": {
         type: PageType.MAIN,
-        header: 'Continue to general criteria',
+        header: "Continue to general criteria",
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: 'Based on your answers, it looks like your conviction is not eligible under the fishing regulation special clause.'
+                text: "Based on your answers, it looks like your conviction is not eligible under the fishing regulation special clause.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: 'However, your conviction may still be eligible under the general criteria, which is used for most misdemeanors.',
+                text: "However, your conviction may still be eligible under the general criteria, which is used for most misdemeanors.",
             },
         ],
         buttons: [
@@ -967,19 +966,19 @@ const data: Pages = {
     },
     "pro-0": {
         type: PageType.SPECIAL,
-        header: 'Prostitution Misdemeanors',
+        header: "Prostitution Misdemeanors",
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: 'Your conviction may be eligible to vacate based on a special clause in RCW 9.96.060(3).'
+                text: "Your conviction may be eligible to vacate based on a special clause in RCW 9.96.060(3).",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: 'This clause applies to victims of prostitution, sex trafficking, and similar crimes.',
+                text: "This clause applies to victims of prostitution, sex trafficking, and similar crimes.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: 'We will ask you a few questions to determine whether your conviction is eligible under this special clause.'
+                text: "We will ask you a few questions to determine whether your conviction is eligible under this special clause.",
             },
         ],
         buttons: [
@@ -1033,7 +1032,7 @@ const data: Pages = {
     },
     "pro-4": {
         type: PageType.QUESTION,
-        header: 'Have you been convicted of a new crime in Washington, another state, federal court, or a tribal court in the last 3 years?',
+        header: "Have you been convicted of a new crime in Washington, another state, federal court, or a tribal court in the last 3 years?",
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
@@ -1116,7 +1115,7 @@ const data: Pages = {
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: "1. Provide an affidavit, under penalty of perjury, stating the specific facts and circumstances which prove by a preponderance of evidence, that the offense was committed as a result of being a victim of sex trafficking, prostitution, or commercial sexual abuse of a minor; sexual assault; or domestic violence as defined in RCW 9.94A.030. RCW 9.96.060 Sec. 5(2)(a)."
+                text: "1. Provide an affidavit, under penalty of perjury, stating the specific facts and circumstances which prove by a preponderance of evidence, that the offense was committed as a result of being a victim of sex trafficking, prostitution, or commercial sexual abuse of a minor; sexual assault; or domestic violence as defined in RCW 9.94A.030. RCW 9.96.060 Sec. 5(2)(a).",
             },
             {
                 type: BodyType.PARAGRAPH,
@@ -1157,20 +1156,20 @@ const data: Pages = {
     },
     "pro-ineligible-0": {
         type: PageType.END,
-        header: 'Your Conviction: Not Eligible to Vacate Right Now',
+        header: "Your Conviction: Not Eligible to Vacate Right Now",
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: 'Based on your answers, it appears that your conviction is not eligible to vacate right now.',
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate right now.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: 'Your conviction might be eligible to vacate once 3 years have passed after your new conviction(s).',
+                text: "Your conviction might be eligible to vacate once 3 years have passed after your new conviction(s).",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: 'It also must meet all other requirements.',
-            }
+                text: "It also must meet all other requirements.",
+            },
         ],
         buttons: [
             {
@@ -1183,20 +1182,20 @@ const data: Pages = {
     },
     "pro-ineligible-1": {
         type: PageType.END,
-        header: 'Your Conviction: Not Eligible to Vacate Right Now',
+        header: "Your Conviction: Not Eligible to Vacate Right Now",
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: 'Based on your answers, it appears that your conviction is not eligible to vacate right now.',
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate right now.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: 'Your conviction might be eligible to vacate once restitution owed to any victim has been paid in full. (Restitution owed to any insurance provider under Title 48 RCW is excluded.)',
+                text: "Your conviction might be eligible to vacate once restitution owed to any victim has been paid in full. (Restitution owed to any insurance provider under Title 48 RCW is excluded.)",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: 'It also must meet all other requirements.',
-            }
+                text: "It also must meet all other requirements.",
+            },
         ],
         buttons: [
             {
@@ -1209,20 +1208,20 @@ const data: Pages = {
     },
     "pro-ineligible-2": {
         type: PageType.END,
-        header: 'Your Conviction: Not Eligible to Vacate Right Now',
+        header: "Your Conviction: Not Eligible to Vacate Right Now",
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: 'Based on your answers, it appears that your conviction is not eligible to vacate right now.',
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate right now.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: 'Your conviction might be eligible to vacate once all other pending charges are resolved.',
+                text: "Your conviction might be eligible to vacate once all other pending charges are resolved.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: 'It also must meet all other requirements.',
-            }
+                text: "It also must meet all other requirements.",
+            },
         ],
         buttons: [
             {
@@ -1235,15 +1234,15 @@ const data: Pages = {
     },
     "pro-to-main": {
         type: PageType.MAIN,
-        header: 'Continue to General Criteria',
+        header: "Continue to General Criteria",
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: 'Based on your answers, it looks like your conviction is not eligible under this exception.',
+                text: "Based on your answers, it looks like your conviction is not eligible under this exception.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: 'However, your conviction may still be eligible under the general criteria, which is used for most misdemeanors.',
+                text: "However, your conviction may still be eligible under the general criteria, which is used for most misdemeanors.",
             },
         ],
         buttons: [
@@ -1381,11 +1380,11 @@ const data: Pages = {
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: "Based on your answers, it appears that your conviction is not eligible to vacate."
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: "Your conviction might be eligible to vacate once 3 years have passed after your new conviction(s)."
+                text: "Your conviction might be eligible to vacate once 3 years have passed after your new conviction(s).",
             },
             {
                 type: BodyType.PARAGRAPH,
@@ -1428,7 +1427,7 @@ const data: Pages = {
     },
     "qac-ineligible-3": {
         type: PageType.END,
-        header: 'Your Conviction: Not Eligible to Vacate Right Now',
+        header: "Your Conviction: Not Eligible to Vacate Right Now",
         body: [
             {
                 type: BodyType.PARAGRAPH,
@@ -1454,7 +1453,7 @@ const data: Pages = {
     },
     "qac-ineligible-4": {
         type: PageType.END,
-        header: 'Your Conviction: Not Eligible to Vacate Right Now',
+        header: "Your Conviction: Not Eligible to Vacate Right Now",
         body: [
             {
                 type: BodyType.PARAGRAPH,
@@ -1543,7 +1542,7 @@ const data: Pages = {
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: 'Based on your answers, it appears that your conviction may be eligible to vacate!',
+                text: "Based on your answers, it appears that your conviction may be eligible to vacate!",
             },
             {
                 type: BodyType.HEADING,
@@ -1576,7 +1575,7 @@ const data: Pages = {
     },
     "too-ineligible-0": {
         type: PageType.END,
-        header: 'Your Conviction: Not Eligible to Vacate Right Now',
+        header: "Your Conviction: Not Eligible to Vacate Right Now",
         body: [
             {
                 type: BodyType.PARAGRAPH,
@@ -1602,7 +1601,7 @@ const data: Pages = {
     },
     "too-ineligible-1": {
         type: PageType.END,
-        header: 'Your Conviction: Not Eligible to Vacate Right Now',
+        header: "Your Conviction: Not Eligible to Vacate Right Now",
         buttons: [
             {
                 text: FEEDBACK_BUTTON_TEXT,
@@ -1612,15 +1611,15 @@ const data: Pages = {
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: 'Based on your answers, it appears that your conviction is not eligible to vacate right now.',
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate right now.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: 'Your conviction might be eligible to vacate once 3 years have passed since you’ve completed the terms of your offense.',
+                text: "Your conviction might be eligible to vacate once 3 years have passed since you’ve completed the terms of your offense.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: 'It also must meet all other requirements.'
+                text: "It also must meet all other requirements.",
             },
         ],
         showRestartButton: true,
