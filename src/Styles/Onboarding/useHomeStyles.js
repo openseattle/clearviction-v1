@@ -74,6 +74,6 @@ export const useHomeStyles = makeStyles(theme => ({
         },
     },
     gridContainer: {
-        maxWidth: "80%"
-    }
+        maxWidth: "80%",
+    },
 }));

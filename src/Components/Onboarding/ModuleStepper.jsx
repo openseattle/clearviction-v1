@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
 // components
 import ModuleCard from "./ModuleCard";
 import { Grid } from "@material-ui/core";
@@ -56,8 +56,15 @@ export default function VerticalLinearStepper() {
     return (
         <>
             {modules.map((module, index) => (
-                <Grid container key={index} justifyContent="center" direction="row" alignItems="center" className='gridContainer'>
-                    {isLargeScreen ?
+                <Grid
+                    container
+                    key={index}
+                    justifyContent="center"
+                    direction="row"
+                    alignItems="center"
+                    className="gridContainer"
+                >
+                    {isLargeScreen ? (
                         <Grid>
                             {index > 0 ? (
                                 <div className={classes.connectorLine}></div>
@@ -75,7 +82,9 @@ export default function VerticalLinearStepper() {
                                 <div className={classes.spacerLine}></div>
                             )}
                         </Grid>
-                        : ""}
+                    ) : (
+                        ""
+                    )}
                     <Grid item={true} xs={10} md={8} sm={8} lg={8}>
                         <ModuleCard module={module} />
                     </Grid>

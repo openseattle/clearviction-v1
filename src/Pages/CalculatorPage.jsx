@@ -49,7 +49,6 @@ const CalculatorPage = () => {
                         buttonText={buttons[0].text}
                         buttonHref={buttons[0].href}
                         progressBar={progressBar}
-
                     />
                 );
             case PageType.SPECIAL:

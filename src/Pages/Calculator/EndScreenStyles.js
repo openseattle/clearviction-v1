@@ -42,6 +42,6 @@ export const EndScreenStyles = makeStyles(theme => ({
         fontSize: "18px",
         [theme.breakpoints.down("xs")]: {
             fontSize: "14px",
-        }
+        },
     },
 }));

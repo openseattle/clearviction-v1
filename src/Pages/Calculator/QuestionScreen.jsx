@@ -52,7 +52,9 @@ const QuestionScreen = props => {
                                 return (
                                     <ul>
                                         {b.items.map((item, idx) => (
-                                            <li className={classes.list} key={idx}>{item}</li>
+                                            <li className={classes.list} key={idx}>
+                                                {item}
+                                            </li>
                                         ))}
                                     </ul>
                                 );
@@ -60,7 +62,12 @@ const QuestionScreen = props => {
                                 return (
                                     <ul>
                                         <li className={classes.list} key={idx}>
-                                            <ExternalLink target="_blank" rel="noopener noreferrer" role="button" href={b.href}>
+                                            <ExternalLink
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                role="button"
+                                                href={b.href}
+                                            >
                                                 {b.text}
                                             </ExternalLink>
                                         </li>
@@ -79,7 +86,9 @@ const QuestionScreen = props => {
                 <Dialog onClose={handleClose} open={open} maxWidth="lg">
                     <CalulatorDialog />
                     <DialogActions>
-                        <Button onClick={handleClose} style={{ color: "#4E6C99" }}>OKAY</Button>
+                        <Button onClick={handleClose} style={{ color: "#4E6C99" }}>
+                            OKAY
+                        </Button>
                     </DialogActions>
                 </Dialog>
             </Grid>

@@ -33,7 +33,9 @@ const EndScreen = props => {
                                 return (
                                     <ul>
                                         {b.items.map((item, idx) => (
-                                            <li className={classes.list} key={idx}>{item}</li>
+                                            <li className={classes.list} key={idx}>
+                                                {item}
+                                            </li>
                                         ))}
                                     </ul>
                                 );
@@ -54,7 +56,12 @@ const EndScreen = props => {
                                 return (
                                     <ul>
                                         <li className={classes.list} key={idx}>
-                                            <ExternalLink target="_blank" rel="noopener noreferrer" role="button" href={b.href}>
+                                            <ExternalLink
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                role="button"
+                                                href={b.href}
+                                            >
                                                 {b.text}
                                             </ExternalLink>
                                         </li>

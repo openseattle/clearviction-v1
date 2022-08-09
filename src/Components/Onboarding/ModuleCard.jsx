@@ -41,19 +41,20 @@ function ModuleCard(props) {
                                 {text}
                             </Typography>
                         </div>
-                        {localStorage.getItem(link) ?
+                        {localStorage.getItem(link) ? (
                             <div className={classes.mobileSuccessButton}>
                                 <img className={classes.checkMark} src={circleCheck} alt="" />
-                                <Typography style={{ fontSize: "17px", marginLeft: '1rem', fontWeight: "bold" }}>
+                                <Typography style={{ fontSize: "17px", marginLeft: "1rem", fontWeight: "bold" }}>
                                     completed
                                 </Typography>
-                            </div> :
+                            </div>
+                        ) : (
                             <div className={classes.mobileButton}>
                                 <Typography variant="h6" style={{ fontSize: "17px" }}>
                                     {number}
                                 </Typography>
                             </div>
-                        }
+                        )}
                     </div>
                 </div>
             </Link>

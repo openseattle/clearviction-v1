@@ -101,8 +101,8 @@ export const useModuleCardStyles = makeStyles(theme => ({
     },
     mobileSuccessButton: {
         alignItems: "center",
-        display: 'flex',
-        backgroundColor: '#fafafa',
+        display: "flex",
+        backgroundColor: "#fafafa",
         padding: theme.spacing(2, 5),
         marginTop: theme.spacing(3),
         color: theme.palette.success.light,
@@ -117,7 +117,7 @@ export const useModuleCardStyles = makeStyles(theme => ({
         },
     },
     checkMark: {
-        marginRight: '1rem',
+        marginRight: "1rem",
         height: "30px",
         alignSelf: "center",
     },

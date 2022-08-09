@@ -29,7 +29,9 @@ const SpecialCaseTitle = props => {
                                 return (
                                     <ul>
                                         {b.items.map((item, idx) => (
-                                            <li className={classes.list} key={idx}>{item}</li>
+                                            <li className={classes.list} key={idx}>
+                                                {item}
+                                            </li>
                                         ))}
                                     </ul>
                                 );
@@ -37,7 +39,12 @@ const SpecialCaseTitle = props => {
                                 return (
                                     <ul key={b.type}>
                                         <li className={classes.list} key={idx}>
-                                            <ExternalLink target="_blank" rel="noopener noreferrer" role="link" href={b.href}>
+                                            <ExternalLink
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                role="link"
+                                                href={b.href}
+                                            >
                                                 {b.text}
                                             </ExternalLink>
                                         </li>
