@@ -49,7 +49,7 @@ const data: Pages = {
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: "If you have multiple convictions, you will need to go through the calculator separately for each one.",
+                text: "The calculator can be used for one conviction. If you have two or more convictions, use the calculator for however many convictions you have.",
             },
             {
                 type: BodyType.PARAGRAPH,
@@ -87,11 +87,15 @@ const data: Pages = {
     },
     "landing-ineligible-0": {
         type: PageType.END,
-        header: "Our calculator can't determine your eligibility",
+        header: "Help us expand our calculator!",
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: "It looks like your conviction may not be a misdemeanor. Our calculator is unable to assist you with your conviction at this point. We would like to hear your input and learn about your experience as we continue building our calculator.",
+                text: "Right now, our calculator is only able to help with misdemeanor and gross misdemeanor convictions.",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "We would love to get your feedback as we continue building our calculator so we can learn more about how to improve it.",
             },
         ],
         buttons: [
@@ -361,7 +365,7 @@ const data: Pages = {
     // },
     "main-0": {
         type: PageType.MAIN,
-        header: "We will now ask a few questions about what your conviction was for, to assess your eligibility to vacate the conviction.",
+        header: "We will now ask a few questions about what your conviction was for in order to assess your eligibility to vacate the conviction.",
         progressBar: {
             currentSectionName: SectionName.OFF,
         },
@@ -403,8 +407,16 @@ const data: Pages = {
     },
     "main-ineligible-0": {
         type: PageType.END,
-        header: "As of now, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because your conviction is classified as a violent offense as defined in RCW 9.94A.030.",
+        header: "Your Conviction: Not Eligible to Vacate",
         body: [
+            {
+                type: BodyType.PARAGRAPH,
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate.",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "This is because your conviction is classified as a violent offense, defined in RCW 9.94A.030.",
+            },
             {
                 type: BodyType.LINK,
                 text: "RCW 9.94A.030",
@@ -457,8 +469,16 @@ const data: Pages = {
     },
     "main-ineligible-1": {
         type: PageType.END,
-        header: "As of now, it seems that you may NOT be eligible to vacate your misdemeanor conviction because your offense was one of the following:",
+        header: "Your Conviction: Not Eligible to Vacate",
         body: [
+            {
+                type: BodyType.PARAGRAPH,
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate.",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "This is because your conviction is one of the following:",
+            },
             {
                 type: BodyType.LINK,
                 text: "RCW 46.61.502 - driving while under the influence",
@@ -486,14 +506,14 @@ const data: Pages = {
     },
     "main-3": {
         type: PageType.QUESTION,
-        header: 'Was the offense considered a "prior offense" under RCW 46.61.5055?',
+        header: "Was the offense considered a “prior offense”?",
         progressBar: {
             currentSectionName: SectionName.OFF,
         },
         body: [
             {
                 type: BodyType.LINK,
-                text: "What is a prior offense? | RCW 46.61.5055 (refer to Section 14 for definitions)",
+                text: "Prior offense is defined in Section 14 of RCW 46.61.5055.",
                 href: "https://app.leg.wa.gov/RCW/default.aspx?cite=46.61.5055",
             },
         ],
@@ -529,7 +549,7 @@ const data: Pages = {
     },
     "main-5": {
         type: PageType.QUESTION,
-        header: "Was the offense a misdemeanor or gross misdemeanor violation, including attempt of any of the following:",
+        header: "Was the offense of, or an attempt of, any of the following?:",
         progressBar: {
             currentSectionName: SectionName.OFF,
         },
@@ -564,11 +584,15 @@ const data: Pages = {
     },
     "main-ineligible-2": {
         type: PageType.QUESTION,
-        header: "As of now, it seems that you may NOT be eligible to vacate your  misdemeanor conviction.",
+        header: "Your Conviction: Not Eligible to Vacate",
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: "Based on RCW 9.96.060, a misdemeanor or gross misdemeanor violation, including attempt of any of the following are not eligible for vacation:",
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate.",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "This is because your conviction is one of the following:",
             },
             {
                 type: BodyType.LINK,
@@ -597,7 +621,17 @@ const data: Pages = {
     },
     "main-ineligible-3": {
         type: PageType.END,
-        header: "Unfortunately, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because you have had an additional alcohol or drug violation within 10 years of your prior offense.",
+        header: "Your Conviction: Not Eligible to Vacate",
+        body: [
+            {
+                type: BodyType.PARAGRAPH,
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate.",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "This is because you have had an additional alcohol or drug violation within 10 years of your prior offense.",
+            },
+        ],
         buttons: [
             {
                 text: FEEDBACK_BUTTON_TEXT,
@@ -627,11 +661,23 @@ const data: Pages = {
     },
     "main-ineligible-4": {
         type: PageType.END,
-        header: "As of now, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because it has been less than 10 years since your arrest for the prior offense.",
+        header: "Your Conviction: Not Eligible to Vacate Right Now",
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: "You might be eligible when 10 years have passed since your prior offense.",
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate right now.",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "This is because you have had an additional alcohol or drug violation within 10 years of your prior offense.",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "Your conviction might be eligible to vacate when 10 years have passed since your prior offense.",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "It also must meet all other requirements.",
             },
         ],
         buttons: [
@@ -688,7 +734,17 @@ const data: Pages = {
     },
     "main-ineligible-5": {
         type: PageType.END,
-        header: "Unfortunately, it seems that you may NOT be eligible to vacate your  misdemeanor conviction because you have had 2 or more domestic violence incidents.",
+        header: "Your Conviction: Not Eligible to Vacate",
+        body: [
+            {
+                type: BodyType.PARAGRAPH,
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate.",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "This is because you have had 2 or more domestic violence incidents.",
+            },
+        ],
         buttons: [
             {
                 text: FEEDBACK_BUTTON_TEXT,
@@ -718,11 +774,19 @@ const data: Pages = {
     },
     "main-ineligible-6": {
         type: PageType.END,
-        header: "As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because it has been less than 5 years since the conviction for this offense.",
+        header: "Your Conviction: Not Eligible to Vacate Right Now",
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: "You might be eligible 5 years after completion of terms of the sentence, including any legal financial obligations (LFOs) and treatment ordered as a condition of sentencing.",
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate right now.",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "Your conviction might be eligible once 5 years have passed since completion of terms of the sentence, including any legal financial obligations (LFOs) and treatment ordered as a condition of sentencing.",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "It also must meet all other requirements.",
             },
         ],
         buttons: [
@@ -736,20 +800,19 @@ const data: Pages = {
     },
     "fsh-0": {
         type: PageType.SPECIAL,
-        header: "You may be eligible for conviction vacation based on a special clause in conviction vacation eligibility law.",
+        header: "Violation of Fishing Regulation",
         body: [
             {
-                type: BodyType.LINK,
-                text: "RCW 9.96.060(4)",
-                href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.96.060",
+                type: BodyType.PARAGRAPH,
+                text: "People who claimed to be exercising a treaty Indian fishing right might be eligible to vacate their conviction.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: "This clause applies to people convicted for violating fishing regulations who claimed to be exercising a treaty Indian fishing right.",
+                text: "This special clause can be found in RCW 9.96.060(4).",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: "We will ask you 4 questions to determine if you may be eligible for Conviction Vacation through this exception.",
+                text: "We will ask you a few questions to determine whether your conviction is eligible to vacate.",
             },
         ],
         buttons: [
@@ -761,7 +824,13 @@ const data: Pages = {
     },
     "fsh-1": {
         type: PageType.QUESTION,
-        header: "Are you a member of a tribe? You can also apply on behalf of a deceased family member in the tribe who meets the criteria.",
+        header: "Are you a member of a tribe?",
+        body: [
+            {
+                type: BodyType.PARAGRAPH,
+                text: "You can also apply on behalf of a deceased family member in the tribe who meets the criteria.",
+            },
+        ],
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
@@ -820,7 +889,7 @@ const data: Pages = {
     },
     "fsh-eligible": {
         type: PageType.END,
-        header: "It seems that you may be eligible to vacate your fishing misdemeanor conviction!",
+        header: "Your Conviction May Be Eligible to Vacate!",
         body: [
             {
                 type: BodyType.PARAGRAPH,
@@ -877,11 +946,15 @@ const data: Pages = {
     },
     "fsh-to-main": {
         type: PageType.MAIN,
-        header: "Based on your answers, it looks like you don't fall into the fishing regulation exception.",
+        header: "Continue to general criteria",
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: "However, your misdemeanor may still be eligible for conviction vacation through the general eligibility criteria that apply to most misdemeanors.",
+                text: "Based on your answers, it looks like your conviction is not eligible under the fishing regulation special clause.",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "However, your conviction may still be eligible under the general criteria, which is used for most misdemeanors.",
             },
         ],
         buttons: [
@@ -893,20 +966,19 @@ const data: Pages = {
     },
     "pro-0": {
         type: PageType.SPECIAL,
-        header: "You may be eligible for conviction vacation based on a special clause in conviction vacation eligibility law",
+        header: "Prostitution Misdemeanors",
         body: [
             {
-                type: BodyType.LINK,
-                text: "RCW 9.96.060(3)",
-                href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.96.060",
+                type: BodyType.PARAGRAPH,
+                text: "Your conviction may be eligible to vacate based on a special clause in RCW 9.96.060(3).",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: "This clause applies to certain prostitution misdemeanors for victims of prostitution, sex trafficking, and similar crimes.",
+                text: "This clause applies to victims of prostitution, sex trafficking, and similar crimes.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: "We will ask you a few questions to determine if you may be eligible for Conviction Vacation through this exception.",
+                text: "We will ask you a few questions to determine whether your conviction is eligible under this special clause.",
             },
         ],
         buttons: [
@@ -945,7 +1017,7 @@ const data: Pages = {
     },
     "pro-2": {
         type: PageType.QUESTION,
-        header: "Do you have charges pending in this state or any other state, or in any federal court for any crime other than prostitution?",
+        header: "Do you have charges pending in Washington state or any other state, or in any federal court for any crime other than prostitution?",
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
@@ -960,7 +1032,7 @@ const data: Pages = {
     },
     "pro-4": {
         type: PageType.QUESTION,
-        header: "Have you been convicted of a new crime in this state, another state or federal or tribal court in the last 3 years/prior to when you will be applying for vacation?",
+        header: "Have you been convicted of a new crime in Washington, another state, federal court, or a tribal court in the last 3 years?",
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
@@ -1000,7 +1072,7 @@ const data: Pages = {
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: "You will need to provide proof except where the conviction to be vacated is for the crime of prostitution, prostitution loitering, or stay out of area of prostitution",
+                text: "You will need to provide proof except where the conviction to be vacated is for the crime of prostitution, prostitution loitering, or stay out of area of prostitution.",
             },
         ],
         buttons: [
@@ -1021,7 +1093,7 @@ const data: Pages = {
     },
     "pro-eligible": {
         type: PageType.END,
-        header: "It seems that you may be eligible to vacate your prostitution misdemeanor conviction!",
+        header: "Your Conviction: May Be Eligible to Vacate!",
         body: [
             {
                 type: BodyType.PARAGRAPH,
@@ -1043,7 +1115,7 @@ const data: Pages = {
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: "1. Provide an affidavit, under penalty of perjury, stating the specific facts and circumstances proving, by a preponderance of evidence that the offense was committed as a result of being a victim of sex trafficking, prostitution, or commercial sexual abuse of a minor; sexual assault; or domestic violence as defined in RCW 9.94A.030. RCW 9.96.060 Sec. 5(2)(a).",
+                text: "1. Provide an affidavit, under penalty of perjury, stating the specific facts and circumstances which prove by a preponderance of evidence, that the offense was committed as a result of being a victim of sex trafficking, prostitution, or commercial sexual abuse of a minor; sexual assault; or domestic violence as defined in RCW 9.94A.030. RCW 9.96.060 Sec. 5(2)(a).",
             },
             {
                 type: BodyType.PARAGRAPH,
@@ -1084,7 +1156,21 @@ const data: Pages = {
     },
     "pro-ineligible-0": {
         type: PageType.END,
-        header: "In order to qualify for vacation, you cannot have any charges for crimes pending in the last 3 years prior to your application.",
+        header: "Your Conviction: Not Eligible to Vacate Right Now",
+        body: [
+            {
+                type: BodyType.PARAGRAPH,
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate right now.",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "Your conviction might be eligible to vacate once 3 years have passed after your new conviction(s).",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "It also must meet all other requirements.",
+            },
+        ],
         buttons: [
             {
                 text: FEEDBACK_BUTTON_TEXT,
@@ -1096,7 +1182,21 @@ const data: Pages = {
     },
     "pro-ineligible-1": {
         type: PageType.END,
-        header: "Unfortunately, you are not eligible for vacation",
+        header: "Your Conviction: Not Eligible to Vacate Right Now",
+        body: [
+            {
+                type: BodyType.PARAGRAPH,
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate right now.",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "Your conviction might be eligible to vacate once restitution owed to any victim has been paid in full. (Restitution owed to any insurance provider under Title 48 RCW is excluded.)",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "It also must meet all other requirements.",
+            },
+        ],
         buttons: [
             {
                 text: FEEDBACK_BUTTON_TEXT,
@@ -1108,7 +1208,21 @@ const data: Pages = {
     },
     "pro-ineligible-2": {
         type: PageType.END,
-        header: "In order to qualify for vacation, you cannot have any charges for crimes pending in this state or any other state besides for prostitution.",
+        header: "Your Conviction: Not Eligible to Vacate Right Now",
+        body: [
+            {
+                type: BodyType.PARAGRAPH,
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate right now.",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "Your conviction might be eligible to vacate once all other pending charges are resolved.",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "It also must meet all other requirements.",
+            },
+        ],
         buttons: [
             {
                 text: FEEDBACK_BUTTON_TEXT,
@@ -1120,11 +1234,15 @@ const data: Pages = {
     },
     "pro-to-main": {
         type: PageType.MAIN,
-        header: "Based on your response, you are not eligible for this exception. However, your conviction may be eligible under other laws.",
+        header: "Continue to General Criteria",
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: "Please click below to continue to the main misdemeanor branch.",
+                text: "Based on your answers, it looks like your conviction is not eligible under this exception.",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "However, your conviction may still be eligible under the general criteria, which is used for most misdemeanors.",
             },
         ],
         buttons: [
@@ -1167,7 +1285,7 @@ const data: Pages = {
     },
     "qac-2": {
         type: PageType.QUESTION,
-        header: "Have you been convicted of a new crime in Washington or any other state in the 3 years prior to the application for vacation?",
+        header: "In the last 3 years, have you been convicted of a new crime in Washington or any other state?",
         progressBar: {
             currentSectionName: SectionName.CIRC,
         },
@@ -1214,7 +1332,7 @@ const data: Pages = {
     },
     "qac-4": {
         type: PageType.QUESTION,
-        header: "Have you violated a prior restraining order in the 5 years preceding the application for vacation?",
+        header: "In the last 5 years, have you violated a prior restraining order?",
         progressBar: {
             currentSectionName: SectionName.CIRC,
         },
@@ -1232,18 +1350,19 @@ const data: Pages = {
     },
     "qac-ineligible-0": {
         type: PageType.END,
+        header: "Your Conviction: Not Eligible to Vacate Right Now",
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: "As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because you answered YES to the below question:",
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: "“Do you have any pending criminal charges in any court in Washington or another state, or in any federal court?”",
+                text: "Your conviction might be eligible to vacate once all pending charges are resolved.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: "You might become eligible in the future if all pending criminal charges in any court in Washington, another state, or a federal court are resolved and if your application meets all other eligibility criteria.",
+                text: "It also must meet all other requirements.",
             },
         ],
         buttons: [
@@ -1257,18 +1376,19 @@ const data: Pages = {
     },
     "qac-ineligible-1": {
         type: PageType.END,
+        header: "Your Conviction: Not Eligible to Vacate Right Now",
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: "As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because you answered YES to the below question: ",
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: "“Have you been convicted of a new crime in Washington or any other state in the 3 years prior to the application for vacation?”",
+                text: "Your conviction might be eligible to vacate once 3 years have passed after your new conviction(s).",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: "You might become eligible in the future if you apply to vacate a conviction 3 years or more after your convictions for any new crimes, and if your application meets all other eligibility criteria.",
+                text: "It also must meet all other requirements.",
             },
         ],
         buttons: [
@@ -1307,21 +1427,19 @@ const data: Pages = {
     },
     "qac-ineligible-3": {
         type: PageType.END,
-        header: `As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because you answered YES to the below question: 
-                 Are you currently restrained by any of the following?:`,
+        header: "Your Conviction: Not Eligible to Vacate Right Now",
         body: [
             {
-                type: BodyType.LIST,
-                items: [
-                    "a domestic violence protection order",
-                    "a no-contact order",
-                    "an anti-harassment order",
-                    "a civil restraining order which restrains one party from contacting the other party",
-                ],
+                type: BodyType.PARAGRAPH,
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: "You might become eligible in the future if the above orders are removed, and if your application meets all other eligibility criteria.",
+                text: "Your conviction might be eligible to vacate once the order has been removed.",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "It also must meet all other requirements.",
             },
         ],
         buttons: [
@@ -1335,19 +1453,19 @@ const data: Pages = {
     },
     "qac-ineligible-4": {
         type: PageType.END,
+        header: "Your Conviction: Not Eligible to Vacate Right Now",
         body: [
             {
                 type: BodyType.PARAGRAPH,
-                text: "As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because you answered YES to the below question: ",
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: "Have you violated a prior restraining order in the 5 years preceding the application for vacation?",
+                text: "Your conviction might be eligible to vacate once 5 years have passed since violating the order.",
             },
             {
                 type: BodyType.PARAGRAPH,
-                text: `You might become eligible in the future if at least 5 years pass from your prior restraining order violation and when you apply 
-            for vacation, and if your application meets all other eligibility criteria.`,
+                text: "It also must meet all other requirements.",
             },
         ],
         buttons: [
@@ -1417,40 +1535,32 @@ const data: Pages = {
     },
     "too-eligible-0": {
         type: PageType.END,
-        header: "It seems that you may be eligible to vacate your misdemeanor conviction!",
+        header: "Your Conviction May Be Eligible to Vacate!",
         progressBar: {
             currentSectionName: SectionName.ELIGIBLE,
         },
         body: [
             {
+                type: BodyType.PARAGRAPH,
+                text: "Based on your answers, it appears that your conviction may be eligible to vacate!",
+            },
+            {
                 type: BodyType.HEADING,
                 text: "Next steps:",
             },
             {
-                type: BodyType.PARAGRAPH,
-                text: '1. Fill out a "Petition and Declaration for Order Vacating Conviction" (CrRLJ 09.0100).',
-            },
-            {
                 type: BodyType.LINK,
-                text: "CrRLJ 09.0100",
+                text: 'Fill out a "Petition and Declaration for Order Vacating Conviction" (CrRLJ 09.0100).',
                 href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
             },
             {
-                type: BodyType.PARAGRAPH,
-                text: '2. Read "Instructions for Vacating Misdemeanor and Gross Misdemeanor Convictions" (CrRLJ 09.0300).',
-            },
-            {
                 type: BodyType.LINK,
-                text: "CrRLJ 09.0300",
+                text: "Read instructions for vacating a conviction in form CrRLJ 09.0300.",
                 href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
             },
             {
-                type: BodyType.PARAGRAPH,
-                text: "3. To better understand misdemeanor conviction vacation, please click below:",
-            },
-            {
                 type: BodyType.LINK,
-                text: "Click here.",
+                text: "Read more about misdemeanor conviction vacation.",
                 href: "https://www.washingtonlawhelp.org/resource/get-misdemeanor-convictions-off-your-criminal-record",
             },
         ],
@@ -1465,9 +1575,21 @@ const data: Pages = {
     },
     "too-ineligible-0": {
         type: PageType.END,
-        header: `As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because you have not completed the terms of the conviction for this offense.  
-                You might be eligible when you've completed the terms of your conviction and 3 years have passed since the completion of your sentence, 
-                including any financial obligations.`,
+        header: "Your Conviction: Not Eligible to Vacate Right Now",
+        body: [
+            {
+                type: BodyType.PARAGRAPH,
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate.",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "Your conviction might be eligible to vacate once 3 years have passed after you complete the terms of your offense, including financial obligations.",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "It also must meet all other requirements.",
+            },
+        ],
         buttons: [
             {
                 text: FEEDBACK_BUTTON_TEXT,
@@ -1479,13 +1601,25 @@ const data: Pages = {
     },
     "too-ineligible-1": {
         type: PageType.END,
-        header: `As of now, it seems that you may NOT be eligible to vacate this misdemeanor conviction because it has been less than 3 years since your 
-                conviction was completed including your financial obligations.
-                You might be eligible when 3 years have passed since completing the terms of your conviction including any financial obligations.`,
+        header: "Your Conviction: Not Eligible to Vacate Right Now",
         buttons: [
             {
                 text: FEEDBACK_BUTTON_TEXT,
                 href: ELIGIBLE_INELIGIBLE_FEEDBACK_FORM_LINK,
+            },
+        ],
+        body: [
+            {
+                type: BodyType.PARAGRAPH,
+                text: "Based on your answers, it appears that your conviction is not eligible to vacate right now.",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "Your conviction might be eligible to vacate once 3 years have passed since you’ve completed the terms of your offense.",
+            },
+            {
+                type: BodyType.PARAGRAPH,
+                text: "It also must meet all other requirements.",
             },
         ],
         showRestartButton: true,

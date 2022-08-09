@@ -31,4 +31,10 @@ export const QuickStartGuideStyles = makeStyles(theme => ({
         marginBottom: "16px",
         marginLeft: "5vw",
     },
+    list: {
+        fontSize: "18px",
+        [theme.breakpoints.down("xs")]: {
+            fontSize: "14px",
+        },
+    },
 }));

@@ -67,6 +67,7 @@ export const useModuleContentStyles = makeStyles(theme => ({
         backgroundColor: "#fefeff",
         width: "70%",
         minWidth: "300px",
+        maxWidth: "800px",
         height: "85px",
         boxShadow: "0 4px 4px rgba(0, 0, 0, 0.25)",
         borderRadius: "15px",
@@ -143,5 +144,10 @@ export const useModuleContentStyles = makeStyles(theme => ({
         [theme.breakpoints.up("sm")]: {
             display: "none",
         },
+    },
+    externalLink: {
+        color: "#4e6c99",
+        fontSize: "20px",
+        marginBottom: theme.spacing(2),
     },
 }));

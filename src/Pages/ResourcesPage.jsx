@@ -18,7 +18,7 @@ import career from "./../Assets/career.svg";
 import graduation from "./../Assets/graduation.svg";
 import FactSubList from "../Components/FactSubList";
 import {
-    jobPortals,
+    jobBoards,
     professionalTraining,
     housingAdvisory,
     shelterListings,
@@ -140,7 +140,6 @@ const ResourcesPage = () => {
                         { url: "employment", linkName: "employment" },
                         { url: "housing", linkName: "housing" },
                         { url: "education", linkName: "education" },
-                        { url: "other", linkName: "other" },
                     ]}
                 />
             </Container>
@@ -174,10 +173,10 @@ const ResourcesPage = () => {
                     facts={[
                         {
                             id: "erf0",
-                            summary: "Job Portals",
+                            summary: "Job Boards",
                             summaryID: "job-portals-button",
                             ariaLabel: "Read More Job Portals",
-                            content: <FactSubList resources={jobPortals} />,
+                            content: <FactSubList resources={jobBoards} />,
                             contentID: "job-portals-paragraph",
                         },
                         {

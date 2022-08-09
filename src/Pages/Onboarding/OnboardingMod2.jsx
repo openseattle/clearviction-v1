@@ -20,6 +20,8 @@ const zoom = {
     subheading: "What is it?",
     paragraph1:
         "Zoom is a cloud-based video communications app that allows you to set up virtual video and audio conferencing, webinars, live chats, screen-sharing, and other collaborative capabilities.",
+    toolSite: "https://zoom.us",
+    toolText: "Click here for the Zoom website to learn more.",
     linkTitle: "Zoom Guidance",
     linkIcon: "doc",
     linkLocation: "",
@@ -38,6 +40,8 @@ const airtable = {
         "Airtable is a database software with a user-friendly interface. We use it as a primary place to organize information, tasks, and keep track of each other’s work.",
     paragraph2:
         "Check out our Airtable Glossary and keep it open in another tab as you go through this guide in case you want to reference terms you aren’t familiar with.",
+    toolSite: "https://www.airtable.com",
+    toolText: "Click here for the Airtable website to learn more.",
     linkTitle: "Watch our Airtable onboarding guide",
     linkIcon: "videoAirtable",
     linkLocation: "",
@@ -54,6 +58,8 @@ const slack = {
     subheading: "What is it?",
     paragraph1:
         "Slack is a collection of chat rooms equipped for threaded conversations, emoji reactions, and app integrations.",
+    toolSite: "https://www.slack.com",
+    toolText: "Click here for the Slack website to learn more.",
     linkTitle: "Watch our Slack onboarding guide",
     linkIcon: "videoSlack",
     linkTitle2: "Slack guide",
@@ -71,6 +77,8 @@ const miro = {
         "Miro is the online collaborative whiteboard platform that enables distributed teams to work effectively together, from brainstorming with digital sticky notes to planning and managing agile workflows.",
     paragraph2:
         "Our account is limited to three boards. Please don’t create another board or we’ll be locked out of one of our existing boards!",
+    toolSite: "https://www.miro.com",
+    toolText: "Click here for the Miro website to learn more.",
     linkTitle: "Watch our Miro guide",
     linkIcon: "videoMiro",
     linkTitle2: "Miro team profile",
@@ -84,13 +92,8 @@ const button1 = {
 };
 
 const button2 = {
-    link: "/onboarding",
+    link: "/onboarding/#mod",
     text: "next",
-};
-
-const buttonComplete = {
-    link: "/onboarding-mod2",
-    text: "mark as done",
 };
 
 function OnboardingMod2() {
@@ -130,7 +133,7 @@ function OnboardingMod2() {
                     </Grid>
                 </Grid>
             </Box>
-            <Footer button1={button1} button2={button2} buttonComplete={buttonComplete} />
+            <Footer button1={button1} button2={button2} />
         </>
     );
 }

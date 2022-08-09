@@ -1,9 +1,10 @@
-import { Grid } from "@material-ui/core";
+import { Grid, Button } from "@material-ui/core";
 import { useState } from "react";
+import { useButtonStyles } from "../../Styles/Onboarding/useButtonStyles";
 
 const contentStyle = {
     position: "relative",
-    marginLeft: "110px",
+    marginLeft: "50px",
     marginTop: "10px",
     marginBottom: "10px",
     fontWeight: 400,
@@ -11,20 +12,21 @@ const contentStyle = {
     lineHeight: "22px",
 };
 
-export default function SlackModal() {
+export default function SlackModal(props) {
+    const classes = useButtonStyles();
     const [sectionId, setSectionId] = useState(1);
     const [activeTab, setActiveTab] = useState(1);
     const sections = [
-        { id: 1, title: "Set up profile" },
-        { id: 2, title: "Update your notification settings" },
-        { id: 3, title: "Check Slack messages at least once every day" },
-        { id: 4, title: "Contact team members" },
-        { id: 5, title: "Be thoughtful when you message team members" },
-        { id: 6, title: "Have conversations in the open" },
-        { id: 7, title: "Understand a channel's purpose" },
-        { id: 8, title: "Join channels of interest" },
-        { id: 9, title: "Use threads to keep communication organized" },
-        { id: 10, title: "Respond to requests in a timely manner" },
+        { id: 1, title: "Setting Up Your Profile" },
+        { id: 2, title: "Updating Notification Settings" },
+        { id: 3, title: "Checking Slack At Least Once a Day" },
+        { id: 4, title: "Contacting Team Members" },
+        { id: 5, title: "Being Thoughtful When Messaging Teammates" },
+        { id: 6, title: "Having Conversations in Open" },
+        { id: 7, title: "Understanding a Channel's Purpose" },
+        { id: 8, title: "Joining Channels of Interest" },
+        { id: 9, title: "Using Threads for Organized Conversations" },
+        { id: 10, title: "Responding to Requests in a Timely Manner" },
     ];
 
     const tabStyle = {
@@ -57,7 +59,7 @@ export default function SlackModal() {
     };
 
     return (
-        <Grid container style={{ justifyContent: "space-between" }}>
+        <Grid container>
             <Grid item xs={2}>
                 {sections.map(section => (
                     <button
@@ -110,7 +112,7 @@ export default function SlackModal() {
                     </div>
                 )}
                 {sectionId === 3 && (
-                    <div>
+                    <div style={{ marginLeft: "25px" }}>
                         <p>
                             The only exception is when your status indicates that you’re away (update your status by
                             clicking on your profile photo and give as much detail as possible: e.g. vacation until
@@ -144,7 +146,7 @@ export default function SlackModal() {
                     </div>
                 )}
                 {sectionId === 6 && (
-                    <div>
+                    <div style={{ marginLeft: "25px" }}>
                         <p>
                             Transparent communication creates a shared purpose and lets everyone on the team
                             participate! If your first thought is that something should be a DM and your reason is:
@@ -172,7 +174,7 @@ export default function SlackModal() {
                     </div>
                 )}
                 {sectionId === 7 && (
-                    <div>
+                    <div style={{ marginBottom: "100px", marginLeft: "25px" }}>
                         <p>
                             The purpose of keeping posts in the right channel is two-fold: it ensures that only the
                             right people are informed of the post AND it keeps everyone interested in being part of the
@@ -240,7 +242,7 @@ export default function SlackModal() {
                     </div>
                 )}
                 {sectionId === 9 && (
-                    <div>
+                    <div style={{ marginLeft: "25px" }}>
                         <p>
                             There’s so much going on! In some channels, there will be a lot of people posting. To reply
                             in a thread, hover over their post and look for a speech bubble to appear on the right. This
@@ -289,6 +291,13 @@ export default function SlackModal() {
                         </ul>
                     </div>
                 )}
+                <Button
+                    onClick={props.handleSlackClose}
+                    className={classes.button}
+                    style={{ position: "absolute", left: "40%", bottom: "15px" }}
+                >
+                    Close
+                </Button>
             </Grid>
         </Grid>
     );

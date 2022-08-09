@@ -1,5 +1,6 @@
-import { Grid } from "@material-ui/core";
+import { Grid, Button } from "@material-ui/core";
 import { useState } from "react";
+import { useButtonStyles } from "../../Styles/Onboarding/useButtonStyles";
 
 // icons
 import customizeCard from "../../Assets/Onboarding/customizeCard.svg";
@@ -7,7 +8,7 @@ import filter from "../../Assets/Onboarding/filter.svg";
 
 const contentStyle = {
     position: "relative",
-    marginLeft: "110px",
+    marginLeft: "50px",
     marginTop: "15px",
     marginBottom: "15px",
     fontWeight: 400,
@@ -20,18 +21,19 @@ const linkStyle = {
 };
 
 export default function AirtableModal(props) {
+    const classes = useButtonStyles();
     const [sectionId, setSectionId] = useState(1);
     const [activeTab, setActiveTab] = useState(1);
     const sections = [
-        { id: 1, title: "Find your dashboard" },
-        { id: 2, title: "Work on the onboarding tasks" },
-        { id: 3, title: "Engage with the new tasks" },
-        { id: 4, title: "Re-work what needs reworking" },
-        { id: 5, title: "Add a task to someone else's kanban" },
-        { id: 6, title: "Track task requests you make of others" },
-        { id: 7, title: "Add tasks you created to your view" },
-        { id: 8, title: "Evaluate performance of a task someone completed for you" },
-        { id: 9, title: "Create your own tasks for yourself" },
+        { id: 1, title: "Finding Your Dashboard" },
+        { id: 2, title: "Working on Onboarding Tasks" },
+        { id: 3, title: "Engaging with New Tasks" },
+        { id: 4, title: "Reworking Incomplete Tasks" },
+        { id: 5, title: "Assigning a Task" },
+        { id: 6, title: "Tracking Requested Tasks" },
+        { id: 7, title: "Viewing Created Tasks" },
+        { id: 8, title: "Evaluating a Completed Task" },
+        { id: 9, title: "Creating Your Own Tasks" },
     ];
 
     const tabStyle = {
@@ -65,7 +67,7 @@ export default function AirtableModal(props) {
     };
 
     return (
-        <Grid container style={{ justifyContent: "space-between" }}>
+        <Grid container>
             <Grid item xs={2}>
                 {sections.map(section => (
                     <button
@@ -103,7 +105,7 @@ export default function AirtableModal(props) {
                     </div>
                 )}
                 {sectionId === 2 && (
-                    <div>
+                    <div style={{ marginLeft: "25px" }}>
                         <p>
                             In your kanban, you will find some tasks that you must complete as soon as possible to get
                             yourself up to date with CVP work.
@@ -111,7 +113,7 @@ export default function AirtableModal(props) {
                     </div>
                 )}
                 {sectionId === 3 && (
-                    <div>
+                    <div style={{ marginBottom: "100px" }}>
                         <ol>
                             <li>
                                 Check the tiles in your inbox column; they are new requests someone sent you. On the
@@ -174,7 +176,7 @@ export default function AirtableModal(props) {
                     </div>
                 )}
                 {sectionId === 4 && (
-                    <div>
+                    <div style={{ marginLeft: "25px" }}>
                         <p>
                             If you see a tile in the needs rework column, that indicates that something you placed into
                             the Delivered column was inconsistent with the AC, according to whoever reviewed it. It
@@ -223,7 +225,7 @@ export default function AirtableModal(props) {
                     </div>
                 )}
                 {sectionId === 6 && (
-                    <div>
+                    <div style={{ marginLeft: "25px" }}>
                         <p>
                             To differentiate which tasks are yours and which belong to other people, first display DRI
                             (Directly Responsible Individual) on each tile.
@@ -264,7 +266,7 @@ export default function AirtableModal(props) {
                     </div>
                 )}
                 {sectionId === 8 && (
-                    <div>
+                    <div style={{ marginLeft: "25px" }}>
                         <p>
                             When you enable the view indicated above, allowing you to see the tasks you created as done
                             and delivered, you’ll see the tiles’ DRIs placed into the Delivered column –it’s your
@@ -317,6 +319,13 @@ export default function AirtableModal(props) {
                         </ol>
                     </div>
                 )}
+                <Button
+                    onClick={props.handleAirtableClose}
+                    className={classes.button}
+                    style={{ position: "absolute", left: "40%", bottom: "15px" }}
+                >
+                    Close
+                </Button>
             </Grid>
         </Grid>
     );

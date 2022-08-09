@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Grid, Box, Typography } from "@material-ui/core";
 import { useModuleContentStyles } from "../../Styles/Onboarding/useModuleContentStyles";
 
@@ -66,7 +65,7 @@ const button1 = {
 };
 
 const button2 = {
-    link: "/onboarding",
+    link: "/onboarding/#mod",
     text: "next",
 };
 

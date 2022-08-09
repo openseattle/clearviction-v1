@@ -99,4 +99,26 @@ export const useModuleCardStyles = makeStyles(theme => ({
             display: "none",
         },
     },
+    mobileSuccessButton: {
+        alignItems: "center",
+        display: "flex",
+        backgroundColor: "#fafafa",
+        padding: theme.spacing(2, 5),
+        marginTop: theme.spacing(3),
+        color: theme.palette.success.light,
+        borderRadius: "20px",
+        textTransform: "uppercase",
+        textAlign: "center",
+        borderWidth: 3,
+        borderStyle: "solid",
+
+        [theme.breakpoints.up("sm")]: {
+            display: "none",
+        },
+    },
+    checkMark: {
+        marginRight: "1rem",
+        height: "30px",
+        alignSelf: "center",
+    },
 }));

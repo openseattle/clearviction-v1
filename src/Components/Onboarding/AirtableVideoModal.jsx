@@ -13,19 +13,19 @@ export default function AirtableVideoModal(props) {
     const classes = useModalStyles();
 
     const sections = [
-        { id: 1, title: "Complete your profile" },
-        { id: 2, title: "Find your dashboard (kanban) and tasks" },
-        { id: 3, title: "Engaging with tasks" },
-        { id: 4, title: "Creating a task for yourself & add a task to someone else's kanban" },
-        { id: 5, title: "Track task requests & Add Tasks you created to your view" },
-        { id: 6, title: "Evaluting performance of a task someone completed for you" },
+        { id: 1, title: "Completing Your profile" },
+        { id: 2, title: "Finding Your Dashboard (Kanban)" },
+        { id: 3, title: "Engaging With Tasks" },
+        { id: 4, title: "Creating a Task (& Assigning It)" },
+        { id: 5, title: "Tracking & Viewing Tasks" },
+        { id: 6, title: "Evalutinging a Completed Task" },
     ];
 
     const profile = "https://drive.google.com/file/d/1fcGzJpDKHs44ocX0AWqsBNAK5b6ivBlv/preview";
     const dashboard = "https://drive.google.com/file/d/1eLpoMObiwtTIbf5C4tG-a0sul2s2bSCF/preview";
-    const engageTasks = "https://drive.google.com/file/d/1JfIh5ytgqtCT2ixF22qp7Ar_XKWVKYZD/preview";
+    const engageTasks = "https://drive.google.com/file/d/1IS3XA1n2KopFe6N-nMoR-BQg_KQTrfTS/preview";
     const createTasks = "https://drive.google.com/file/d/1zXSu7ADYY66PL6ggWg-ks7Hq1mDxN4r0/preview";
-    const requests = "https://drive.google.com/file/d/1ReQ7xLrlg_TxmrAE8cx-98dyjOOAZlGj/preview";
+    const requests = "https://drive.google.com/file/d/1GpVX0sCVPz_6RBiJgmekdNXbeGsQ48Ca/preview";
     const evaluate = "https://drive.google.com/file/d/1W6QXg0U2EHgckjr8XmM9sA3a1X31N-pd/preview";
 
     const tabStyle = {

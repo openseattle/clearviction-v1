@@ -29,21 +29,28 @@ const SpecialCaseTitle = props => {
                                 return (
                                     <ul>
                                         {b.items.map((item, idx) => (
-                                            <li key={idx}>{item}</li>
+                                            <li className={classes.list} key={idx}>
+                                                {item}
+                                            </li>
                                         ))}
                                     </ul>
                                 );
-                            // temporary placeholder for Blake vacation -- sprint 26, 6/27/22
                             case BodyType.LINK:
                                 return (
                                     <ul key={b.type}>
-                                        <li key={idx}>
-                                            <Link target="_blank" rel="noopener noreferrer" role="button" href={b.href}>
+                                        <li className={classes.list} key={idx}>
+                                            <ExternalLink
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                role="link"
+                                                href={b.href}
+                                            >
                                                 {b.text}
-                                            </Link>
+                                            </ExternalLink>
                                         </li>
                                     </ul>
                                 );
+                            // temporary placeholder for Blake vacation -- sprint 26, 6/27/22
                             case BodyType.BLAKELINK:
                                 return (
                                     <span className={classes.blakeLink} key={b.type}>

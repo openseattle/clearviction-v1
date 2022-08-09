@@ -1,14 +1,11 @@
 import { useState, useEffect } from "react";
 import {
     Typography,
-    Modal,
     Button,
-    Box,
     ListItem,
     List,
     ListItemText,
     ListItemIcon,
-    Grid,
     Dialog,
     DialogContent,
 } from "@material-ui/core";
@@ -23,11 +20,13 @@ import SlackModal from "./SlackModal";
 import AirtableVideoModal from "./AirtableVideoModal";
 import SlackVideoModal from "./SlackVideoModal";
 import MiroVideoModal from "./MiroVideoModal";
+import FindVideoModal from "./FindVideoModal";
 import TutorialAccordion from "./Mobile/TutorialAccordion";
 import SlackAccordion from "./Mobile/SlackAccoridion";
 import VideoTutorialAccordion from "./Mobile/VideoTutorialAccordion";
 import SlackVideoAccordion from "./Mobile/SlackVideoAccordion";
 import TrustDocAccordion from "./Mobile/TrustDocAccordion";
+import { ExternalLink } from "../../ui-kit/ExternalLink";
 
 const modalStyle = {
     position: "absolute",
@@ -72,6 +71,11 @@ function ModuleContent(props) {
         p3bullet3,
         p3bullet4,
         bullets,
+        toolSite,
+        toolText,
+        paragraphBullets,
+        sourceSite,
+        sourceText,
     } = props.content;
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
@@ -101,6 +105,10 @@ function ModuleContent(props) {
     const handleMiroVideoOpen = () => setMiroVideoOpen(true);
     const handleMiroVideoClose = () => setMiroVideoOpen(false);
 
+    const [findVideoOpen, setFindVideoOpen] = useState(false);
+    const handleFindVideoOpen = () => setFindVideoOpen(true);
+    const handleFindVideoClose = () => setFindVideoOpen(false);
+
     const [isLargeScreen, setIsLargeScreen] = useState(true);
 
     useEffect(() => {
@@ -119,8 +127,16 @@ function ModuleContent(props) {
             {paragraph1 ? (
                 <Typography variant="body1" className={classes.moduleCardBody}>
                     {paragraph1}
+                    {sourceSite ? (
+                        <ExternalLink variant="link" className={classes.externalLink} href={sourceSite}>
+                            {sourceText}
+                        </ExternalLink>
+                    ) : (
+                        ""
+                    )}
                 </Typography>
             ) : null}
+
             {paragraph2 ? (
                 <Typography variant="body1" className={classes.moduleCardBody}>
                     {paragraph2}
@@ -135,6 +151,22 @@ function ModuleContent(props) {
                 <Typography variant="body1" className={classes.moduleCardBody}>
                     {paragraph4}
                 </Typography>
+            ) : null}
+            {paragraphBullets ? (
+                <ul>
+                    {paragraphBullets.map((bullet, idx) => (
+                        <li key={idx} style={{ fontSize: "20px", color: "#2b2929" }} variant="body1">
+                            {bullet}
+                        </li>
+                    ))}
+                </ul>
+            ) : (
+                ""
+            )}
+            {toolSite ? (
+                <ExternalLink variant="link" className={classes.externalLink} href={toolSite}>
+                    {toolText}
+                </ExternalLink>
             ) : null}
 
             {linkTitle ? (
@@ -189,6 +221,14 @@ function ModuleContent(props) {
                     )}
                     {linkIcon === "videoMiro" && (
                         <Button onClick={handleMiroVideoOpen} className={classes.linkContainer}>
+                            <div className={classes.linkContainer}>
+                                <img src={video} alt="" className={classes.linkIcon} />
+                                <p className={classes.linkText}>{linkTitle}</p>
+                            </div>
+                        </Button>
+                    )}
+                    {linkIcon === "videoFindWork" && (
+                        <Button onClick={handleFindVideoOpen} className={classes.linkContainer}>
                             <div className={classes.linkContainer}>
                                 <img src={video} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText}>{linkTitle}</p>
@@ -331,10 +371,7 @@ function ModuleContent(props) {
                     className={modalClasses.mainModal}
                 >
                     <DialogContent>
-                        <AirtableModal />
-                        <Button onClick={handleAirtableClose} className={classes.button}>
-                            Close
-                        </Button>
+                        <AirtableModal handleAirtableClose={handleAirtableClose} />
                     </DialogContent>
                 </Dialog>
             ) : (
@@ -405,10 +442,7 @@ function ModuleContent(props) {
                     className={modalClasses.mainModal}
                 >
                     <DialogContent sx={modalStyle}>
-                        <SlackModal />
-                        <Button onClick={handleSlackClose} className={classes.button}>
-                            Close
-                        </Button>
+                        <SlackModal handleSlackClose={handleSlackClose} />
                     </DialogContent>
                 </Dialog>
             ) : (
@@ -459,6 +493,24 @@ function ModuleContent(props) {
                     </Button>
                 </Dialog>
             )}
+
+            {/* video miro modal */}
+            <Dialog
+                open={findVideoOpen}
+                onClose={handleFindVideoClose}
+                aria-labelledby=""
+                aria-describedby=""
+                fullScreen
+                maxWidth="lg"
+                className={modalClasses.videoContainer}
+            >
+                <DialogContent>
+                    <FindVideoModal />
+                </DialogContent>
+                <Button onClick={handleFindVideoClose} style={{ margin: "0 auto 64px" }} className={classes.button}>
+                    Close
+                </Button>
+            </Dialog>
 
             {/* video miro modal */}
             <Dialog

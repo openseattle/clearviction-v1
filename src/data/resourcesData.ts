@@ -18,14 +18,6 @@ const otherEduAssistance: resourceLink[] = [
         name: "Adams State University Prison College Program",
         url: "http://www.adams.edu/extended_studies/undergrad/prisoncollegeprogram.php",
     },
-    {
-        name: "College Board Scholarship Search",
-        url: "https://bigfuture.collegeboard.org/pay-for-college/scholarship-search",
-    },
-    {
-        name: "University Beyond Bars",
-        url: "http://www.universitybeyondbars.org/",
-    },
 ];
 
 const postIncarEduPrograms: resourceLink[] = [
@@ -84,28 +76,12 @@ const shelterListings: resourceLink[] = [
         url: "https://pioneerhumanservices.org/housing",
     },
     {
-        name: "HUD Resource",
-        url: "https://resources.hud.gov/#",
-    },
-    {
         name: "Social Serve",
         url: "https://www.socialserve.com/tenant/WA/index.html?ch=KCHA",
-    },
-    {
-        name: "Aptfinder",
-        url: "http://aptfinder.org",
-    },
-    {
-        name: "Affordable Housing",
-        url: "https://affordablehousingonline.com/housing-search/Washington",
     },
 ];
 
 const housingAdvisory: resourceLink[] = [
-    {
-        name: "HUD Exchange",
-        url: "https://www.hudexchange.info/housing-and-homeless-assistance/homeless-help/?csrf_token=A027E19F-A4E2-45C1-863E37BCF1E8E003&params=%7B%22limit%22%3A20%2C%22newSearch%22%3Atrue%2C%22homelessPOCsOnly%22%3Atrue%2C%22state%22%3A%22WA%22%7D##granteeSearch",
-    },
     {
         name: "Compass Housing Alliance",
         url: "https://www.compasshousingalliance.org",
@@ -114,17 +90,9 @@ const housingAdvisory: resourceLink[] = [
         name: "The STAR Project",
         url: "https://www.thestarproject.us/",
     },
-    {
-        name: "Transgender Law Center (2016)",
-        url: "http://transgenderlawcenter.org/wp-content/uploads/2016/02/03.09.2016-Model-Homeless-Shelter-TG-Policy-single-pages.pdf",
-    },
 ];
 
-const jobPortals: JobHelpResource[] = [
-    {
-        name: "Employment Security Department Washington State",
-        url: "https://www.esd.wa.gov/jobs-and-training",
-    },
+const jobBoards: JobHelpResource[] = [
     {
         name: "Careeronestop",
         url: "https://www.careeronestop.org",
@@ -138,16 +106,12 @@ const jobPortals: JobHelpResource[] = [
         url: "https://www.goodwill.org/jobs-training/find-a-job/",
     },
     {
-        name: "Craigslist",
-        url: "http://seattle.craigslist.org/",
+        name: "People for People",
+        url: "https://mypfp.org/about-us/careers/",
     },
 ];
 
 const professionalTraining: JobHelpResource[] = [
-    {
-        name: "Washington State Department of Labor and Industries Apprenticeship",
-        url: "https://www.lni.wa.gov/licensing-permits/apprenticeship/become-an-apprentice",
-    },
     {
         name: "People for People",
         url: "https://mypfp.org/services/employment-training/",
@@ -226,7 +190,7 @@ const proSePatronsLegalAid: LegalAidService[] = [
     },
 ];
 export {
-    jobPortals,
+    jobBoards,
     professionalTraining,
     adultLegalAid,
     juvenileLegalAid,

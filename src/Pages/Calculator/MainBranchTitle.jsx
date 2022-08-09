@@ -19,11 +19,13 @@ const MainBranchTitle = props => {
             <Typography variant="h4" component="h1" className={classes.header}>
                 {props.header}
             </Typography>
-            {props.body && (
-                <Typography variant="body1" className={classes.body}>
-                    {props.body[0].text}
-                </Typography>
-            )}
+
+            {props.body &&
+                props.body.map(bodyElement => (
+                    <Typography variant="body1" className={classes.body}>
+                        {bodyElement.text}
+                    </Typography>
+                ))}
             <PrimaryButton className={classes.button} text={props.buttonText} href={props.buttonHref} />
         </Grid>
     );

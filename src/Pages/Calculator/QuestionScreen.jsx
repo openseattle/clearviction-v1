@@ -16,6 +16,8 @@ import SecondaryButton from "../../ui-kit/SecondaryButton";
 import { trackClick } from "../../trackingUtils";
 import { BodyType } from "../../data/calculatorPagesTypes";
 import ProgressBar from "../../Components/ProgressBar";
+import { ExternalLink } from "../../ui-kit/ExternalLink";
+import CalulatorDialog from "../../ui-kit/CalulatorDialog";
 
 const QuestionScreen = props => {
     const classes = QuestionScreenStyles();
@@ -50,17 +52,24 @@ const QuestionScreen = props => {
                                 return (
                                     <ul>
                                         {b.items.map((item, idx) => (
-                                            <li key={idx}>{item}</li>
+                                            <li className={classes.list} key={idx}>
+                                                {item}
+                                            </li>
                                         ))}
                                     </ul>
                                 );
                             case BodyType.LINK:
                                 return (
                                     <ul>
-                                        <li key={idx}>
-                                            <a target="_blank" rel="noopener noreferrer" role="button" href={b.href}>
+                                        <li className={classes.list} key={idx}>
+                                            <ExternalLink
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                role="button"
+                                                href={b.href}
+                                            >
                                                 {b.text}
-                                            </a>
+                                            </ExternalLink>
                                         </li>
                                     </ul>
                                 );
@@ -74,18 +83,12 @@ const QuestionScreen = props => {
                 {props.tooltip && (
                     <SecondaryButton className={classes.button} text={"I'm not sure"} onClick={handleOpen} />
                 )}
-                <Dialog onClose={handleClose} open={open}>
-                    <DialogTitle>Not sure?</DialogTitle>
-                    <DialogContent>
-                        <DialogContentText>
-                            If you don't know the answer, request your criminal record through{" "}
-                            <a target="_blank" href="https://www.wsp.wa.gov/crime/criminal-history" rel="noreferrer">
-                                Washington State Patrol.
-                            </a>
-                        </DialogContentText>
-                    </DialogContent>
+                <Dialog onClose={handleClose} open={open} maxWidth="lg">
+                    <CalulatorDialog />
                     <DialogActions>
-                        <Button onClick={handleClose}>OKAY</Button>
+                        <Button onClick={handleClose} style={{ color: "#4E6C99" }}>
+                            OKAY
+                        </Button>
                     </DialogActions>
                 </Dialog>
             </Grid>
