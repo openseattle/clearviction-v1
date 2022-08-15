@@ -1,23 +1,16 @@
-import React from "react";
-import { shallow } from "enzyme";
-import Footer from "../Footer";
+import React from 'react';
+import { render, screen } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
+import Footer from '../Footer';
 
-describe("<Footer />", () => {
-    let footer;
-    beforeEach(() => {
-        footer = shallow(<Footer />);
-    });
+describe('<Footer />', () => {
+    it('should render the footer with expected elements', () => {
+        render(<Footer />, { wrapper: BrowserRouter });
+        const footer = screen.getByTestId('footer');
+        expect(footer).toBeVisible();
 
-    it("should be a footer", () => {
-        expect(footer.find(".footer-cont")).toHaveLength(1);
-    });
-
-    it("Should have links", () => {
-        const link = () => (
-            <a className="test-link" href="https://www.test.org/">
-                <ul>test</ul>
-            </a>
-        );
-        expect(footer.containsMatchingElement(link)).toEqual(true);
+        const footerLinks = screen.getAllByTestId('footer-link');
+        expect(footerLinks.length).toEqual(6);
+        expect(footerLinks[1]).toHaveAttribute('href', '/get-started');
     });
 });
