@@ -68,7 +68,7 @@ const Footer = () => {
     return (
         <>
             {!pathname.includes("calculator") && (
-                <Box className={classes.root} component="footer">
+                <Box data-testid="footer" className={classes.root} component="footer">
                     <Container maxWidth="lg">
                         <Grid container>
                             <Grid className={classes.mobileHidden} item xs={12} sm={4} md={4}>
@@ -104,7 +104,7 @@ const Footer = () => {
                                                 sm={12}
                                                 md={6}
                                             >
-                                                <Link className={classes.linkStyles} href={page.url}>
+                                                <Link data-testid="footer-link" className={classes.linkStyles} href={page.url}>
                                                     {page.name}
                                                 </Link>
                                             </Grid>

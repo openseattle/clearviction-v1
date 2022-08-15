@@ -57,7 +57,7 @@ export default function ProgressBar({ currentSectionName }) {
     };
 
     return (
-        <Box className={classes.root} sx={{ width: "100%" }}>
+        <Box data-testid="progress-bar" className={classes.root} sx={{ width: "100%" }}>
             <Stepper activeStep={activeStep}>
                 {steps.map((label, index) => {
                     const stepProps = {};
@@ -67,7 +67,7 @@ export default function ProgressBar({ currentSectionName }) {
                     activeStep === index ? (labelToDisplay = label) : (labelToDisplay = null);
 
                     return (
-                        <Step key={label} {...stepProps}>
+                        <Step data-testid="progress-bar-step" key={label} {...stepProps}>
                             <StepLabel {...labelProps}>{labelToDisplay}</StepLabel>
                         </Step>
                     );
