@@ -17,7 +17,7 @@ import { useState } from "react";
 import NavButton from "../ui-kit/NavButton";
 import NavButtonMobile from "../ui-kit/NavButtonMobile";
 import LegalDisclaimer from "./LegalDisclaimer";
-import { NavigationLogo } from "./NavigationLogo";
+import NavigationLogo from "./NavigationLogo";
 import SkipLink from "../ui-kit/SkipLink";
 
 const useStyles = makeStyles(theme => ({
