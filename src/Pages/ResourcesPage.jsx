@@ -116,7 +116,7 @@ const ResourcesPage = () => {
                 <Grid container spacing={4}>
                     <Grid item xs={12} sm={6} md={6}>
                         <Typography className={classes.contentTextStyle} variant="subtitle1" component="p">
-                            The process of vacating a conviction is convoluted, but it’s needed to avoid barriers in
+                            The process of vacating a conviction in Washington is convoluted, but it’s needed to avoid barriers in
                             employment, housing and education.
                         </Typography>
                         <Typography className={classes.contentTextStyle} variant="subtitle1" component="p">
