@@ -40,67 +40,6 @@
     max-height: calc(100vh- 10em);
 }
 
-.progressBar {
-    width: 100%;
-    background-color: var(--gray90);
-    height: 15px;
-    overflow: hidden;
-    border-radius: 10px;
-    list-style: none;
-    padding: 0;
-    z-index: 1;
-    position: relative;
-}
-
-.progressBar-active {
-    width: 0%;
-    background-color: var(--light-blue);
-    height: 15px;
-    overflow: hidden;
-    z-index: 3;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.progressBar-current {
-    width: 0%;
-    background-color: var(--light-blue-transparent);
-    height: 15px;
-    overflow: hidden;
-    z-index: 2;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.progressBar li {
-    position: relative;
-    list-style-type: none;
-    text-align: center;
-    display: inline;
-    background: var(--gray90);
-    border: 1px solid #ffffff;
-    box-sizing: border-box;
-    border-radius: 50%;
-    width: 16px;
-    height: 16px;
-    font-size: 12px;
-    color: #ffffff;
-    float: left;
-    z-index: 4;
-}
-
-.progressBar li:nth-child(3) {
-    background: var(--light-blue);
-}
-
-.progress-bar-title {
-    font-size: 14px;
-    line-height: 16px;
-    color: var(--light-blue-transparent);
-}
-
 ul {
     list-style-type: disc;
     text-align: left;
