@@ -9,6 +9,7 @@ import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
 
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
+import { ExternalLink } from "../ui-kit/ExternalLink";
 
 const AboutPage = () => {
     const classes = useAboutStyles();
@@ -24,8 +25,7 @@ const AboutPage = () => {
                                 About Us
                             </Typography>
                             <Typography className={classes.contentTextStyle} variant="subtitle1" component="p">
-                                We are a civic-tech open-source project working to make the conviction vacation process
-                                easier and more straightforward, starting with an eligibility calculator.
+                                We are a civic-tech open-source project working to make the conviction vacation process in Washington easier and more straightforward, starting with an eligibility calculator.
                             </Typography>
                         </Grid>
                         <Grid item xs={12} sm={6} md={6}>
@@ -50,13 +50,13 @@ const AboutPage = () => {
                         Our Story
                     </Typography>
                     <Typography variant="h3" className={classes.subheadingStyle}>
-                        Those with a criminal record face significant barriers to daily life after completing their
+                        Those with a criminal record in Washington face significant barriers to daily life after completing their
                         prison terms
                     </Typography>
 
                     <Box className={classes.boxShadow}>
                         <Typography variant="subtitle1" className={classes.contentTextStyle}>
-                            <a
+                            <ExternalLink
                                 href="https://app.leg.wa.gov/billsummary?BillNumber=2890&Year=2017"
                                 target="_blank"
                                 rel="noreferrer"
@@ -64,7 +64,7 @@ const AboutPage = () => {
                                 className={classes.linkTextStyle}
                             >
                                 Washington State's New Hope Act
-                            </a>
+                            </ExternalLink>
                             makes it easier for people with past criminal records to have their convictions vacated.
                             Even then, the process of vacating a conviction is very convoluted, making it difficult for
                             most people to navigate:
@@ -109,7 +109,7 @@ const AboutPage = () => {
                         </Grid>
                         <Grid item sm={12} md={6} className={classes.gridItemStyle}>
                             <Typography variant="h4" className={classes.headingSpacing}>
-                                Our mission is to benefit individuals with criminal convictions and decrease life-long
+                                Our mission is to benefit individuals with criminal convictions in Washington and decrease life-long
                                 collateral consequences.
                             </Typography>
                             <Typography variant="subtitle1" className={classes.spaceAfter} component="p">
