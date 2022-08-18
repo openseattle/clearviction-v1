@@ -462,7 +462,7 @@ const data: Pages = {
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/main-3",
+                href: CALC_PREFIX + "/main-5",
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -524,7 +524,7 @@ const data: Pages = {
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/main-5",
+                href: CALC_PREFIX + "/main-8",
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -577,7 +577,7 @@ const data: Pages = {
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/main-8",
+                href: CALC_PREFIX + "/main-3",
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -1006,7 +1006,7 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/pro-2",
+                href: CALC_PREFIX + "/pro-5",
             },
             {
                 text: BUTTON_TEXT.NO,
@@ -1040,7 +1040,7 @@ const data: Pages = {
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/pro-5",
+                href: CALC_PREFIX + "/pro-eligible",
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -1078,7 +1078,7 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/pro-eligible",
+                href: CALC_PREFIX + "/pro-2",
             },
             {
                 text: BUTTON_TEXT.NO,
@@ -1086,7 +1086,7 @@ const data: Pages = {
             },
             {
                 text: BUTTON_TEXT.NA,
-                href: CALC_PREFIX + "/pro-eligible",
+                href: CALC_PREFIX + "/pro-2",
             },
         ],
         tooltip: TooltipType.NOT_SURE,
