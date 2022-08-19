@@ -32,7 +32,7 @@ const HomePage = () => {
                     <Grid container>
                         <Grid item xs={12} sm={6}>
                             <Typography className={classes.contentTextStyle} variant="subtitle1" component="h2">
-                                If you have convictions in Washington you can check your eligibility to vacate your
+                                If you have convictions in Washington, you can check your eligibility to vacate your
                                 conviction for free in less than 10 minutes!
                             </Typography>
                             <Box paddingTop={12}>
