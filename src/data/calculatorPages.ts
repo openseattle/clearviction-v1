@@ -650,7 +650,7 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/main-5",
+                href: CALC_PREFIX + "/main-8",
             },
             {
                 text: BUTTON_TEXT.NO,
