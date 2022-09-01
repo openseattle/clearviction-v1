@@ -28,7 +28,7 @@ const data: Pages = {
             },
             {
                 type: BodyType.LINK,
-                text: "If you are not sure whether your conviction is a misdemeanor, request your record here",
+                linkText: "If you are not sure whether your conviction is a misdemeanor, request your record here",
                 href: "https://www.wsp.wa.gov/crime/criminal-history",
             },
         ],
@@ -385,7 +385,7 @@ const data: Pages = {
         body: [
             {
                 type: BodyType.LINK,
-                text: "A violent offense, as defined in RCW 9.94A.030",
+                linkText: "A violent offense, as defined in RCW 9.94A.030",
                 href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.94A.030",
             },
             {
@@ -419,7 +419,7 @@ const data: Pages = {
             },
             {
                 type: BodyType.LINK,
-                text: "RCW 9.94A.030",
+                linkText: "RCW 9.94A.030",
                 href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.94A.030",
             },
         ],
@@ -441,17 +441,17 @@ const data: Pages = {
         body: [
             {
                 type: BodyType.LINK,
-                text: "RCW 46.61.502 - driving while under the influence",
+                linkText: "RCW 46.61.502 - driving while under the influence",
                 href: "https://app.leg.wa.gov/rcw/default.aspx?cite=46.61.502",
             },
             {
                 type: BodyType.LINK,
-                text: "RCW 46.61.504 - Physical control of vehicle under the influence",
+                linkText: "RCW 46.61.504 - Physical control of vehicle under the influence",
                 href: "https://app.leg.wa.gov/rcw/default.aspx?cite=46.61.504",
             },
             {
                 type: BodyType.LINK,
-                text: "RCW 9.91.020 - operating a railroad, etc. while intoxicated",
+                linkText: "RCW 9.91.020 - operating a railroad, etc. while intoxicated",
                 href: "https://app.leg.wa.gov/rcw/default.aspx?cite=9.91.020",
             },
         ],
@@ -481,17 +481,17 @@ const data: Pages = {
             },
             {
                 type: BodyType.LINK,
-                text: "RCW 46.61.502 - driving while under the influence",
+                linkText: "RCW 46.61.502 - driving while under the influence",
                 href: "https://app.leg.wa.gov/rcw/default.aspx?cite=46.61.502",
             },
             {
                 type: BodyType.LINK,
-                text: "RCW 46.61.504 - actual physical control while under the influence",
+                linkText: "RCW 46.61.504 - actual physical control while under the influence",
                 href: "https://app.leg.wa.gov/rcw/default.aspx?cite=46.61.504",
             },
             {
                 type: BodyType.LINK,
-                text: "RCW 9.91.020 - operating a railroad, etc. while intoxicated",
+                linkText: "RCW 9.91.020 - operating a railroad, etc. while intoxicated",
                 href: "https://app.leg.wa.gov/rcw/default.aspx?cite=9.91.020",
             },
         ],
@@ -513,7 +513,7 @@ const data: Pages = {
         body: [
             {
                 type: BodyType.LINK,
-                text: "Prior offense is defined in Section 14 of RCW 46.61.5055.",
+                linkText: "Prior offense is defined in Section 14 of RCW 46.61.5055.",
                 href: "https://app.leg.wa.gov/RCW/default.aspx?cite=46.61.5055",
             },
         ],
@@ -556,17 +556,17 @@ const data: Pages = {
         body: [
             {
                 type: BodyType.LINK,
-                text: "Chapter 9.68 RCW - obscenity and pornography",
+                linkText: "Chapter 9.68 RCW - obscenity and pornography",
                 href: "https://app.leg.wa.gov/rcw/default.aspx?cite=9.68",
             },
             {
                 type: BodyType.LINK,
-                text: "Chapter 9.68A RCW - sexual exploitation of children",
+                linkText: "Chapter 9.68A RCW - sexual exploitation of children",
                 href: "https://app.leg.wa.gov/rcw/default.aspx?cite=9.68A",
             },
             {
                 type: BodyType.LINK,
-                text: "Chapter 9A.44 RCW - sex offenses, except for failure to register as a sex offender under RCW 9A.44.132",
+                linkText: "Chapter 9A.44 RCW - sex offenses, except for failure to register as a sex offender under RCW 9A.44.132",
                 href: "https://app.leg.wa.gov/rcw/default.aspx?cite=9a.44",
             },
         ],
@@ -596,17 +596,17 @@ const data: Pages = {
             },
             {
                 type: BodyType.LINK,
-                text: "Chapter 9.68 RCW - obscenity and pornography",
+                linkText: "Chapter 9.68 RCW - obscenity and pornography",
                 href: "https://app.leg.wa.gov/rcw/default.aspx?cite=9.68",
             },
             {
                 type: BodyType.LINK,
-                text: "Chapter 9.68A RCW - sexual exploitation of children",
+                linkText: "Chapter 9.68A RCW - sexual exploitation of children",
                 href: "https://app.leg.wa.gov/rcw/default.aspx?cite=9.68A",
             },
             {
                 type: BodyType.LINK,
-                text: "Chapter 9A.44 RCW - sex offenses, except for failure to register as a sex offender under RCW 9A.44.132",
+                linkText: "Chapter 9A.44 RCW - sex offenses, except for failure to register as a sex offender under RCW 9A.44.132",
                 href: "https://app.leg.wa.gov/rcw/default.aspx?cite=9a.44",
             },
         ],
@@ -695,7 +695,7 @@ const data: Pages = {
         body: [
             {
                 type: BodyType.LINK,
-                text: "Domestic Violence Information",
+                linkText: "Domestic Violence Information",
                 href: "https://www.courts.wa.gov/dv/?fa=dv.guide",
             },
         ],
@@ -897,7 +897,7 @@ const data: Pages = {
             },
             {
                 type: BodyType.LINK,
-                text: "RCW 9.96.060 (4)",
+                linkText: "RCW 9.96.060 (4)",
                 href: "https://app.leg.wa.gov/RCW/default.aspx?cite=9.96.060",
             },
             {
@@ -914,7 +914,7 @@ const data: Pages = {
             },
             {
                 type: BodyType.LINK,
-                text: "Washington Court Form",
+                linkText: "Washington Court Form",
                 href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
             },
             {
@@ -931,7 +931,7 @@ const data: Pages = {
             },
             {
                 type: BodyType.LINK,
-                text: "Washington Law Help instructions on vacating a conviction related to Treaty Indian Fishing Rights. ",
+                linkText: "Washington Law Help instructions on vacating a conviction related to Treaty Indian Fishing Rights. ",
                 href: "https://www.washingtonlawhelp.org/files/C9D2EA3F-0350-D9AF-ACAE-BF37E9BC9FFA/attachments/D7D7897D-DE79-4E5A-B51F-B1708D37541C/8714en_vacate-a-conviction-treaty-indian-fishing-rights.pdf",
             },
         ],
@@ -1101,12 +1101,12 @@ const data: Pages = {
             },
             {
                 type: BodyType.LINK,
-                text: "RCW 9.96.060 (3)",
+                linkText: "RCW 9.96.060 (3)",
                 href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.96.060",
             },
             {
                 type: BodyType.LINK,
-                text: " RCW 9.96.080",
+                linkText: " RCW 9.96.080",
                 href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.96.080",
             },
             {
@@ -1123,7 +1123,7 @@ const data: Pages = {
             },
             {
                 type: BodyType.LINK,
-                text: "CrRLJ 09.0100",
+                linkText: "CrRLJ 09.0100",
                 href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
             },
             {
@@ -1132,7 +1132,7 @@ const data: Pages = {
             },
             {
                 type: BodyType.LINK,
-                text: "CrRLJ 09.0300",
+                linkText: "CrRLJ 09.0300",
                 href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
             },
             {
@@ -1141,7 +1141,7 @@ const data: Pages = {
             },
             {
                 type: BodyType.LINK,
-                text: "Click here.",
+                linkText: "Click here.",
                 href: "https://www.washingtonlawhelp.org/resource/get-misdemeanor-convictions-off-your-criminal-record",
             },
         ],
@@ -1517,7 +1517,7 @@ const data: Pages = {
         body: [
             {
                 type: BodyType.LINK,
-                text: "Legal financial obligations",
+                linkText: "Legal financial obligations",
                 href: "https://apps.leg.wa.gov/rcw/default.aspx?cite=9.94A.760",
             },
         ],
@@ -1550,17 +1550,21 @@ const data: Pages = {
             },
             {
                 type: BodyType.LINK,
-                text: 'Fill out a "Petition and Declaration for Order Vacating Conviction" (CrRLJ 09.0100).',
+                textBeforeLink: 'Fill out a "Petition and Declaration for Order Vacating Conviction" form: ',
+                linkText: 'CrRLJ 09.0100',
                 href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
             },
             {
                 type: BodyType.LINK,
-                text: "Read instructions for vacating a conviction in form CrRLJ 09.0300.",
+                textBeforeLink: 'Read instructions for vacating a conviction: ',
+                linkText: 'CrRLJ 09.0300',
                 href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
             },
             {
                 type: BodyType.LINK,
-                text: "Read more about misdemeanor conviction vacation.",
+                textBeforeLink: "Read more about misdemeanor conviction vacation ",
+                linkText: "here",
+                textAfterLink: ".",
                 href: "https://www.washingtonlawhelp.org/resource/get-misdemeanor-convictions-off-your-criminal-record",
             },
         ],
