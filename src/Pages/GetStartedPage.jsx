@@ -13,7 +13,6 @@ import CourtFormsFactGroup from "../Subpages/GetStarted/CourtFormsFactGroup";
 import LegalAidServices from "../Subpages/GetStarted/LegalAidServices";
 import FinancialAidServices from "../Subpages/GetStarted/FinancialAidServices";
 import { ExternalLink } from "../ui-kit/ExternalLink";
-import CheckEligibilityButton from "../Components/CheckEligibilityButton";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
 const factsProps = {
@@ -160,7 +159,7 @@ const GetStartedPage = () => {
                 <FactIconGroup facts={eligibilityFacts} />
             </Container>
             <Box justifyContent="center" display="flex">
-                <CheckEligibilityButton />
+                <RedesignButtonPrimary href="/calculator/landing-0">Check Eligibility</RedesignButtonPrimary>;
             </Box>
             <Container maxWidth="md">
                 <Divider className={classes.dividerStyle} />
