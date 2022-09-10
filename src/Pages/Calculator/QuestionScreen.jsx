@@ -17,7 +17,7 @@ import { trackClick } from "../../trackingUtils";
 import { BodyType } from "../../data/calculatorPagesTypes";
 import ProgressBar from "../../Components/ProgressBar";
 import { ExternalLink } from "../../ui-kit/ExternalLink";
-import CalulatorDialog from "../../ui-kit/CalulatorDialog";
+import CalculatorDialog from "../../ui-kit/CalculatorDialog";
 
 const QuestionScreen = props => {
     const classes = QuestionScreenStyles();

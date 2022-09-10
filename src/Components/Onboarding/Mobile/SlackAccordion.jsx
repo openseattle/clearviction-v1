@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-
-import customizeCard from "../../../Assets/Onboarding/customizeCard.svg";
-import filter from "../../../Assets/Onboarding/filter.svg";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -25,7 +22,7 @@ const useStyles = makeStyles(theme => ({
 const TutorialAccordion = props => {
     const classes = useStyles();
 
-    const [expanded, setExpanded] = useState("1");
+    const [ expanded, setExpanded, ] = useState("1");
 
     const handleChange = panel => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);

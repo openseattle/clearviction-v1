@@ -22,7 +22,7 @@ import SlackVideoModal from "./SlackVideoModal";
 import MiroVideoModal from "./MiroVideoModal";
 import FindVideoModal from "./FindVideoModal";
 import TutorialAccordion from "./Mobile/TutorialAccordion";
-import SlackAccordion from "./Mobile/SlackAccoridion";
+import SlackAccordion from "./Mobile/SlackAccordion";
 import VideoTutorialAccordion from "./Mobile/VideoTutorialAccordion";
 import SlackVideoAccordion from "./Mobile/SlackVideoAccordion";
 import TrustDocAccordion from "./Mobile/TrustDocAccordion";
