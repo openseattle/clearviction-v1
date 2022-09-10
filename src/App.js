@@ -19,7 +19,7 @@ import OnboardingMod2 from "./Pages/Onboarding/OnboardingMod2";
 import OnboardingMod3 from "./Pages/Onboarding/OnboardingMod3";
 import OnboardingMod4 from "./Pages/Onboarding/OnboardingMod4";
 
-function App() {
+function App () {
     const location = useLocation();
 
     return (

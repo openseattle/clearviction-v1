@@ -34,7 +34,7 @@ interface ProgressBar {
 
 type NonEmptyList<T> = {
     0: T;
-} & Array<T>;
+} & T[];
 
 type Body = ParagraphBody | LinkBody | ListBody;
 

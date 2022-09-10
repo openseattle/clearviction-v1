@@ -1,5 +1,4 @@
 import React from "react";
-import { Container } from "@material-ui/core";
 
 interface SkipLinkProperties {
     className?: string;
@@ -17,7 +16,7 @@ const SkipLink: React.FC<SkipLinkProperties> = props => {
      * On click event for sighted folks
      * 'enter' key works as well
      */
-    const onClick = (event: React.SyntheticEvent) => {
+    const onClick = (event: React.SyntheticEvent): void => {
         event.preventDefault();
         /**
          * Catch-all 'container' looking for HTML tags
@@ -28,14 +27,14 @@ const SkipLink: React.FC<SkipLinkProperties> = props => {
          * tabIndex seems to work well with the general layout of the site
          * Sets outline focus for screen-readers and sigthed alike
          */
-        if (container) {
+        if (container != null) {
             container.tabIndex = -1;
             container.focus();
             setTimeout(() => container.removeAttribute("tabindex"), 1000);
         }
     };
 
-    return React.cloneElement(props.children, { onClick, className: props.className });
+    return React.cloneElement(props.children, { onClick, className: props.className, });
 };
 /**
  * skipTo set as h1 seems to work well with general layout of site

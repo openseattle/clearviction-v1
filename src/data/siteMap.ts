@@ -1,12 +1,12 @@
-type Page = {
+interface Page {
     name: string;
     url: string;
     subpages?: Page[];
-};
+}
 
 // commented out pages are still in under development
 const pages: Page[] = [
-    { name: "Home", url: "/" },
+    { name: "Home", url: "/", },
     // { name: "Calculator", url: "/calculator" },
     {
         name: "Get Started",
@@ -25,8 +25,8 @@ const pages: Page[] = [
         name: "Resources",
         url: "/resources",
     },
-    { name: "About", url: "/about" },
-    { name: "Contact", url: "/contact" },
+    { name: "About", url: "/about", },
+    { name: "Contact", url: "/contact", },
 ];
 
 export default pages;

@@ -1,18 +1,18 @@
-type JobHelpResource = {
+interface JobHelpResource {
     name: string;
     url: string;
     body?: string;
-};
+}
 
-type LegalAidService = {
+interface LegalAidService {
     name: string;
     url: string;
     serviceArea?: string;
-};
-type resourceLink = {
+}
+interface resourceLink {
     name: string;
     url: string;
-};
+}
 const otherEduAssistance: resourceLink[] = [
     {
         name: "Adams State University Prison College Program",
@@ -199,5 +199,5 @@ export {
     shelterListings,
     studentAid,
     postIncarEduPrograms,
-    otherEduAssistance,
+    otherEduAssistance
 };
