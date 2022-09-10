@@ -9,22 +9,27 @@
         "standard-with-typescript"
     ],
     "overrides": [
+        {
+          "files": ["*.jsx", "*.js", "*.ts", "*.tsx"]
+        }
     ],
     "ignorePatterns": ["*/*-env.d.ts"],
+    "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module",
         "project": "./tsconfig.json"
     },
     "plugins": [
-        "react"
+        "react",
+        "@typescript-eslint"
     ],
     "rules": {
         "semi": ["error", "always"],
         "@typescript-eslint/semi": ["error", "always"],
         "quotes": ["error", "double"],
         "@typescript-eslint/quotes": ["error", "double"],
-        "indent": ["error", 4],
+        "indent": ["error", 4, { "SwitchCase": 1 }],
         "@typescript-eslint/indent": ["error", 4],
         "comma-dangle": ["error", {
             "arrays": "always",
@@ -38,6 +43,9 @@
             "singleline": { "delimiter": "semi", "requireLast": true }
         }],
         "react/react-in-jsx-scope": "off",
-        "array-bracket-spacing": ["error",  "always"]
+        "array-bracket-spacing": ["error",  "always"],
+        "react/prop-types": 1,
+        "react/no-unescaped-entities": 0,
+        "camelcase": 1
     }
 }

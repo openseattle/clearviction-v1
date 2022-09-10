@@ -29,7 +29,7 @@
         "deploy": "gh-pages -d build",
         "eject": "react-scripts eject",
         "lint": "prettier --check .",
-        "eslint": "npx eslint .",
+        "eslint": "eslint .",
         "predeploy": "npm run build",
         "start": "react-scripts start",
         "test": "react-scripts test",
@@ -50,6 +50,7 @@
     "devDependencies": {
         "@types/react-router-dom": "^5.3.2",
         "@typescript-eslint/eslint-plugin": "^5.36.2",
+        "@typescript-eslint/parser": "^5.36.2",
         "eslint": "^8.23.0",
         "eslint-config-standard-with-typescript": "^22.0.0",
         "eslint-plugin-import": "^2.26.0",
