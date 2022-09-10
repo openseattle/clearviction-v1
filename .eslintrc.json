@@ -1,7 +1,8 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "jest": true
     },
     "extends": [
         "plugin:react/recommended",
@@ -9,6 +10,7 @@
     ],
     "overrides": [
     ],
+    "ignorePatterns": ["*/*-env.d.ts"],
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module",
@@ -24,10 +26,18 @@
         "@typescript-eslint/quotes": ["error", "double"],
         "indent": ["error", 4],
         "@typescript-eslint/indent": ["error", 4],
-        "comma-dangle": ["error", "always"],
+        "comma-dangle": ["error", {
+            "arrays": "always",
+            "objects": "always",
+            "imports": "never",
+            "exports": "never",
+            "functions": "never"
+        }],
         "@typescript-eslint/member-delimiter-style": ["error", {
             "multiline": { "delimiter": "semi" },
             "singleline": { "delimiter": "semi", "requireLast": true }
-        }]
+        }],
+        "react/react-in-jsx-scope": "off",
+        "array-bracket-spacing": ["error",  "always"]
     }
 }
