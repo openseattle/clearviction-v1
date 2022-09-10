@@ -4,7 +4,7 @@ import fb from "../../Assets/Onboarding/fb.svg";
 import linkedIn from "../../Assets/Onboarding/linkedIn.svg";
 import twitter from "../../Assets/Onboarding/twitter.svg";
 
-function SocialContainer(props) {
+function SocialContainer (props) {
     const classes = useHeaderStyles();
 
     return (

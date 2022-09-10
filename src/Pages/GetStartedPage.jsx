@@ -17,7 +17,7 @@ import CheckEligibilityButton from "../Components/CheckEligibilityButton";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
 const factsProps = {
-    style: { fontSize: 54 },
+    style: { fontSize: 54, },
     color: "secondary",
 };
 
@@ -41,7 +41,7 @@ const eligibilityFacts = [
 
 const GetStartedPage = () => {
     const classes = useGetInvolvedStyles();
-    const [documentTitle, setDocumentTitle] = useDocumentTitle("Get Started - ");
+    useDocumentTitle("Get Started - ");
 
     return (
         <>
@@ -58,7 +58,7 @@ const GetStartedPage = () => {
                         </Box>
                     </Grid>
                     <Grid item xs={12} sm={12} md={6}>
-                        <Box component="img" style={{ width: "100%", padding: 16 }} src={teamBuilding} alt="" />
+                        <Box component="img" style={{ width: "100%", padding: 16, }} src={teamBuilding} alt="" />
                     </Grid>
                 </Grid>
             </RedesignHeroPanel>
@@ -69,10 +69,10 @@ const GetStartedPage = () => {
             >
                 <ResponsiveJumpButtonGroup
                     links={[
-                        { url: "documents", linkName: "documents" },
-                        { url: "eligibility", linkName: "eligibility" },
-                        { url: "court-filing", linkName: "court filing" },
-                        { url: "hearing", linkName: "hearing" },
+                        { url: "documents", linkName: "documents", },
+                        { url: "eligibility", linkName: "eligibility", },
+                        { url: "court-filing", linkName: "court filing", },
+                        { url: "hearing", linkName: "hearing", },
                     ]}
                 />
             </Container>

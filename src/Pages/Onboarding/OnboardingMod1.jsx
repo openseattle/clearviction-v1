@@ -53,7 +53,7 @@ const button2 = {
     text: "next",
 };
 
-function OnboardingMod1() {
+function OnboardingMod1 () {
     const classes = useModuleContentStyles();
     return (
         <>

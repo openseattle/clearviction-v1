@@ -13,7 +13,7 @@ import { ExternalLink } from "../ui-kit/ExternalLink";
 
 const AboutPage = () => {
     const classes = useAboutStyles();
-    const [documentTitle, setDocumentTitle] = useDocumentTitle("About Us - ");
+    useDocumentTitle("About Us - ");
 
     return (
         <>
@@ -38,8 +38,8 @@ const AboutPage = () => {
             <Container className={classes.regularContainer} maxwidth="xs">
                 <ResponsiveJumpButtonGroup
                     links={[
-                        { url: "our-story", linkName: "Our Story" },
-                        { url: "our-team", linkName: "Our Team" },
+                        { url: "our-story", linkName: "Our Story", },
+                        { url: "our-team", linkName: "Our Team", },
                     ]}
                 />
             </Container>
@@ -102,7 +102,7 @@ const AboutPage = () => {
             </Box>
 
             <Container>
-                <Box style={{ width: "90%", margin: "0 auto" }}>
+                <Box style={{ width: "90%", margin: "0 auto", }}>
                     <Grid container className={classes.gridStyle}>
                         <Grid item sm={12} md={6} className={classes.gridItemStyle}>
                             <img src={checklist1} className={classes.iconStyle} alt=""></img>
@@ -145,7 +145,7 @@ const AboutPage = () => {
                             frameBorder="0"
                             width="100%"
                             height="1048"
-                            style={{ background: "transparent", border: "1px solid #ccc", borderRadius: "6px" }}
+                            style={{ background: "transparent", border: "1px solid #ccc", borderRadius: "6px", }}
                         ></iframe>
                     </Grid>
                 </Container>

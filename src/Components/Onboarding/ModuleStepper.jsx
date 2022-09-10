@@ -5,7 +5,6 @@ import { Grid } from "@material-ui/core";
 
 // icons
 import circleCheck from "../../Assets/Onboarding/circleCheck.png";
-import openCircle from "../../Assets/Onboarding/openCircle.png";
 
 // styles
 import { useHomeStyles } from "../../Styles/Onboarding/useHomeStyles";
@@ -44,9 +43,9 @@ const styles = {
     },
 };
 
-export default function VerticalLinearStepper() {
+export default function VerticalLinearStepper () {
     const classes = useHomeStyles();
-    const [isLargeScreen, setIsLargeScreen] = useState(true);
+    const [ isLargeScreen, setIsLargeScreen, ] = useState(true);
 
     useEffect(() => {
         const mediaSize = window.innerWidth;
@@ -64,27 +63,35 @@ export default function VerticalLinearStepper() {
                     alignItems="center"
                     className="gridContainer"
                 >
-                    {isLargeScreen ? (
-                        <Grid>
-                            {index > 0 ? (
-                                <div className={classes.connectorLine}></div>
-                            ) : (
-                                <div className={classes.spacerLine}></div>
-                            )}
-                            {localStorage.getItem(module.link) ? (
-                                <img src={circleCheck} style={styles.img} alt="" />
-                            ) : (
-                                <div className={classes.openCircle}></div>
-                            )}
-                            {index < modules.length - 1 ? (
-                                <div className={classes.connectorLine}></div>
-                            ) : (
-                                <div className={classes.spacerLine}></div>
-                            )}
-                        </Grid>
-                    ) : (
-                        ""
-                    )}
+                    {isLargeScreen
+                        ? (
+                            <Grid>
+                                {index > 0
+                                    ? (
+                                        <div className={classes.connectorLine}></div>
+                                    )
+                                    : (
+                                        <div className={classes.spacerLine}></div>
+                                    )}
+                                {localStorage.getItem(module.link)
+                                    ? (
+                                        <img src={circleCheck} style={styles.img} alt="" />
+                                    )
+                                    : (
+                                        <div className={classes.openCircle}></div>
+                                    )}
+                                {index < modules.length - 1
+                                    ? (
+                                        <div className={classes.connectorLine}></div>
+                                    )
+                                    : (
+                                        <div className={classes.spacerLine}></div>
+                                    )}
+                            </Grid>
+                        )
+                        : (
+                            ""
+                        )}
                     <Grid item={true} xs={10} md={8} sm={8} lg={8}>
                         <ModuleCard module={module} />
                     </Grid>

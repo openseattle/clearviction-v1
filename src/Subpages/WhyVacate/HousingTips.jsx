@@ -4,7 +4,7 @@ import {
     MonetizationOnOutlined,
     NoSimOutlined,
     BorderColorOutlined,
-    DescriptionOutlined,
+    DescriptionOutlined
 } from "@material-ui/icons";
 import { Box, Grid, Typography, Container, List } from "@material-ui/core";
 import { WhyVacateHousingStyles } from "../../Styles/WhyVacateHousingStyles";

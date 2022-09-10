@@ -25,7 +25,7 @@ const rejected = {
 const education = {
     graphic: question,
     title: "Lack of education or experience",
-    text: ["Getting a job in a new field can be complicated, especially with convictions in your record."],
+    text: [ "Getting a job in a new field can be complicated, especially with convictions in your record.", ],
 };
 
 const friendlyIndustries = [
@@ -155,7 +155,7 @@ const WhyVacateEmployment = () => {
                             Rights may be violated during the search for employment in two ways:
                         </Typography>
                         <BulletedListMui>
-                            <Box style={{ padding: "10px" }}>
+                            <Box style={{ padding: "10px", }}>
                                 <li className={classes.contentText}>
                                     Adverse Impact (disparate impact or unintentional discrimination)
                                 </li>

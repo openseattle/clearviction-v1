@@ -2,8 +2,8 @@ import { Typography, ListItem, Button, Collapse } from "@material-ui/core";
 import { ExpandMore } from "@material-ui/icons";
 import { useState } from "react";
 
-const NavButtonMobile = ({ page, classes }) => {
-    const [expandSubMenu, setExpandSubMenu] = useState(false);
+const NavButtonMobile = ({ page, classes, }) => {
+    const [ expandSubMenu, setExpandSubMenu, ] = useState(false);
 
     const handleExpandClick = () => {
         setExpandSubMenu(!expandSubMenu);

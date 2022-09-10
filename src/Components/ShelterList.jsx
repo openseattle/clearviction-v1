@@ -1,15 +1,15 @@
 import { List, ListItem, Grid, Typography, ListItemIcon, ListItemText } from "@material-ui/core";
-import { HomeWorkOutlined } from "@material-ui/icons";
-import { Call } from "@material-ui/icons";
+import { HomeWorkOutlined, Call } from "@material-ui/icons";
+
 import { useResourcesStyles } from "../Styles/useResourcesStyles";
 import { ListItemLink } from "../ui-kit/ListItemLink";
 
-const ShelterList = ({ shelters }) => {
+const ShelterList = ({ shelters, }) => {
     const classes = useResourcesStyles();
     return (
         <List>
             {shelters.map((shelter, idx) => (
-                <ListItem key={idx} style={{ display: "block" }} divider>
+                <ListItem key={idx} style={{ display: "block", }} divider>
                     <Grid container>
                         <Grid item xs={12} sm={6}>
                             <Typography>{shelter.name} </Typography>

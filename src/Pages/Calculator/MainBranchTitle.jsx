@@ -21,8 +21,8 @@ const MainBranchTitle = props => {
             </Typography>
 
             {props.body &&
-                props.body.map(bodyElement => (
-                    <Typography variant="body1" className={classes.body}>
+                props.body.map((bodyElement, index) => (
+                    <Typography key={index} variant="body1" className={classes.body}>
                         {bodyElement.text}
                     </Typography>
                 ))}

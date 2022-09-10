@@ -5,7 +5,7 @@ import {
     ChildFriendlyOutlined,
     HomeWorkOutlined,
     LocalPharmacyOutlined,
-    AttachMoneyOutlined,
+    AttachMoneyOutlined
 } from "@material-ui/icons";
 import { Box, Grid, Typography, Container, List } from "@material-ui/core";
 import { WhyVacateHousingStyles } from "../../Styles/WhyVacateHousingStyles";

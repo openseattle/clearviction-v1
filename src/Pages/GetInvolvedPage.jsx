@@ -15,7 +15,7 @@ import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
 
 const GetInvolvedPage = () => {
     const classes = useGetInvolvedStyles();
-    const [documentTitle, setDocumentTitle] = useDocumentTitle("Get Involved - ");
+    useDocumentTitle("Get Involved - ");
 
     return (
         <>

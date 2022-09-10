@@ -29,15 +29,17 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function SecondaryButton({ text, type, linkTo, externalLink, onClick }) {
+export default function SecondaryButton ({ text, type, linkTo, externalLink, onClick, }) {
     const classes = useStyles();
-    return externalLink ? (
-        <Button rel="noopener noreferrer" href={linkTo} type={type} className={classes.button} target={"_blank"}>
-            {text}
-        </Button>
-    ) : (
-        <Button href={linkTo} onClick={onClick} type={type} className={classes.button}>
-            {text}
-        </Button>
-    );
+    return externalLink
+        ? (
+            <Button rel="noopener noreferrer" href={linkTo} type={type} className={classes.button} target={"_blank"}>
+                {text}
+            </Button>
+        )
+        : (
+            <Button href={linkTo} onClick={onClick} type={type} className={classes.button}>
+                {text}
+            </Button>
+        );
 }

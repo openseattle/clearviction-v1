@@ -1,10 +1,10 @@
 import { List, ListItem, Grid, Typography, ListItemText } from "@material-ui/core";
-import { HomeWorkOutlined } from "@material-ui/icons";
-import { Call } from "@material-ui/icons";
+import { HomeWorkOutlined, Call } from "@material-ui/icons";
+
 import { useResourcesStyles } from "../Styles/useResourcesStyles";
 import { ListItemLink } from "../ui-kit/ListItemLink";
 
-const PublicHousingList = ({ publicAssociations }) => {
+const PublicHousingList = ({ publicAssociations, }) => {
     const classes = useResourcesStyles();
     return (
         <List className={classes.publicHousingListStyle}>

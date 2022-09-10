@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
     },
     linkStyles: {
         color: "white",
-        "&:hover": { color: "white" },
+        "&:hover": { color: "white", },
     },
 
     subHeader: {
@@ -63,7 +63,7 @@ const useStyles = makeStyles(theme => ({
 
 const Footer = () => {
     const classes = useStyles();
-    const { pathname } = useLocation();
+    const { pathname, } = useLocation();
 
     return (
         <>
@@ -80,7 +80,7 @@ const Footer = () => {
                                         <Typography
                                             className={classes.subHeader}
                                             variant="body1"
-                                            style={{ maxWidth: 250 }}
+                                            style={{ maxWidth: 250, }}
                                         >
                                             Clearviction is reducing barriers faced by formerly incarcerated individuals
                                             by streamlining the process of vacating eligible convictions in Washington
@@ -114,7 +114,7 @@ const Footer = () => {
                             </Grid>
 
                             <Grid item xs={12} sm={4} md={4}>
-                                <Typography className={classes.title} variant="h5" style={{ borderRadius: "solid" }}>
+                                <Typography className={classes.title} variant="h5" style={{ borderRadius: "solid", }}>
                                     Partnerships
                                 </Typography>
                                 <List>

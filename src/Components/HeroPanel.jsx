@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 const HeroPanel = props => {
-    const { title, subtitle } = props;
+    const { title, subtitle, } = props;
     const classes = useStyles();
     return (
         <Box className={classes.hero}>

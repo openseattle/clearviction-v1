@@ -3,11 +3,8 @@ import {
     Grid,
     Typography,
     Dialog,
-    DialogTitle,
-    DialogContent,
-    DialogContentText,
     DialogActions,
-    Button,
+    Button
 } from "@material-ui/core";
 import { BackButton } from "../../ui-kit/BackButton";
 import PrimaryButton from "../../ui-kit/PrimaryButton";
@@ -21,7 +18,7 @@ import CalculatorDialog from "../../ui-kit/CalculatorDialog";
 
 const QuestionScreen = props => {
     const classes = QuestionScreenStyles();
-    const [open, setOpen] = useState(false);
+    const [ open, setOpen, ] = useState(false);
 
     const handleClose = () => setOpen(false);
     const handleOpen = () => {
@@ -42,12 +39,6 @@ const QuestionScreen = props => {
                 {props.body &&
                     props.body.map((b, idx) => {
                         switch (b.type) {
-                            default:
-                                return (
-                                    <Typography key={idx} variant="body2" className={classes.body}>
-                                        {b.text}
-                                    </Typography>
-                                );
                             case BodyType.LIST:
                                 return (
                                     <ul>
@@ -73,6 +64,12 @@ const QuestionScreen = props => {
                                         </li>
                                     </ul>
                                 );
+                            default:
+                                return (
+                                    <Typography key={idx} variant="body2" className={classes.body}>
+                                        {b.text}
+                                    </Typography>
+                                );
                         }
                     })}
             </Grid>
@@ -84,9 +81,9 @@ const QuestionScreen = props => {
                     <SecondaryButton className={classes.button} text={"I'm not sure"} onClick={handleOpen} />
                 )}
                 <Dialog onClose={handleClose} open={open} maxWidth="lg">
-                    <CalulatorDialog />
+                    <CalculatorDialog />
                     <DialogActions>
-                        <Button onClick={handleClose} style={{ color: "#4E6C99" }}>
+                        <Button onClick={handleClose} style={{ color: "#4E6C99", }}>
                             OKAY
                         </Button>
                     </DialogActions>

@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const FactImageCard = ({ fact }) => {
+const FactImageCard = ({ fact, }) => {
     const classes = useStyles();
     return (
         <Card className={classes.root}>

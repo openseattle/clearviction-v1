@@ -1,4 +1,4 @@
-import { Grid, Typography, Link } from "@material-ui/core";
+import { Grid, Typography } from "@material-ui/core";
 import { BodyType } from "../../data/calculatorPagesTypes";
 import { BackButton } from "../../ui-kit/BackButton";
 import PrimaryButton from "../../ui-kit/PrimaryButton";
@@ -19,12 +19,6 @@ const SpecialCaseTitle = props => {
                 {props.body &&
                     props.body.map((b, idx) => {
                         switch (b.type) {
-                            default:
-                                return (
-                                    <Typography key={idx} variant="body2" className={classes.body}>
-                                        {b.text}
-                                    </Typography>
-                                );
                             case BodyType.LIST:
                                 return (
                                     <ul>
@@ -63,6 +57,12 @@ const SpecialCaseTitle = props => {
                                             {b.text}
                                         </ExternalLink>
                                     </span>
+                                );
+                            default:
+                                return (
+                                    <Typography key={idx} variant="body2" className={classes.body}>
+                                        {b.text}
+                                    </Typography>
                                 );
                         }
                     })}

@@ -11,7 +11,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const FactSimpleCard = props => {
-    const { children } = props;
+    const { children, } = props;
     const classes = useStyles();
     return (
         <>

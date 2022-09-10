@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
-import { Step, Stepper, StepLabel, Box } from "@material-ui/core";
+import { Step, Stepper, StepLabel, Box, makeStyles } from "@material-ui/core";
 import { SectionName } from "../data/calculatorPagesTypes";
-import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -23,15 +22,15 @@ const useStyles = makeStyles(() => ({
     },
 }));
 
-const steps = ["Your Offense", "Surrounding Circumstances", "Terms Of Offense"];
+const steps = [ "Your Offense", "Surrounding Circumstances", "Terms Of Offense", ];
 
-export default function ProgressBar({ currentSectionName }) {
-    const [activeStep, setActiveStep] = useState(0);
+export default function ProgressBar ({ currentSectionName, }) {
+    const [ activeStep, setActiveStep, ] = useState(0);
     const classes = useStyles();
 
     useEffect(() => {
         handleNext(currentSectionName);
-    }, [currentSectionName]);
+    }, [ currentSectionName, ]);
 
     const handleNext = () => {
         let currentSection;
@@ -49,6 +48,7 @@ export default function ProgressBar({ currentSectionName }) {
                 break;
             case undefined: // this case will set the progress bar as "completed"
                 currentSection = 3;
+                break;
             default:
                 break;
         }
@@ -57,7 +57,7 @@ export default function ProgressBar({ currentSectionName }) {
     };
 
     return (
-        <Box data-testid="progress-bar" className={classes.root} sx={{ width: "100%" }}>
+        <Box data-testid="progress-bar" className={classes.root} sx={{ width: "100%", }}>
             <Stepper activeStep={activeStep}>
                 {steps.map((label, index) => {
                     const stepProps = {};

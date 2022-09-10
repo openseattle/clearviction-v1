@@ -8,15 +8,15 @@ const useStyles = makeStyles(theme => ({
         marginRight: theme.spacing(1),
         color: "white",
         textTransform: "none",
-        "&:hover": { color: theme.palette.secondary.light },
+        "&:hover": { color: theme.palette.secondary.light, },
     },
     navText: {},
 }));
-const NavButton = ({ page, theme }) => {
-    const { name, url, subpages } = page;
+const NavButton = ({ page, theme, }) => {
+    const { name, url, subpages, } = page;
     const classes = useStyles(theme);
 
-    const [anchorE1, setAnchorE1] = useState(null);
+    const [ anchorE1, setAnchorE1, ] = useState(null);
 
     const handleClick = event => {
         setAnchorE1(event.currentTarget);

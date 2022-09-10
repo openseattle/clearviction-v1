@@ -12,13 +12,12 @@ import { PageType } from "../data/calculatorPagesTypes";
 import QuestionScreen from "./Calculator/QuestionScreen";
 import EndScreen from "./Calculator/EndScreen";
 import QuickStartGuide from "./Calculator/QuickStartGuide";
-import ProgressBar from "../Components/ProgressBar";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
 const CalculatorPage = () => {
-    const [documentTitle, setDocumentTitle] = useDocumentTitle("Eligibility Calculator - ");
+    useDocumentTitle("Eligibility Calculator - ");
     console.log("enter calculator");
-    const { pathname } = useLocation();
+    const { pathname, } = useLocation();
     const indexOfPageId = pathname.split("/").length - 1;
     const pageId = pathname.split("/")[indexOfPageId];
     const content = calculatorPages[pageId];
@@ -26,7 +25,7 @@ const CalculatorPage = () => {
     if (!content) window.location = "/404";
     useEffect(() => trackPageview("Calculator"), []);
 
-    const { header, body, type, buttons, disclaimer, tooltip, progressBar, showRestartButton } = content;
+    const { header, body, type, buttons, disclaimer, tooltip, progressBar, showRestartButton, } = content;
 
     const renderPage = type => {
         switch (type) {

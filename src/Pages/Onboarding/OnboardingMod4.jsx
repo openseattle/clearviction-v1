@@ -95,7 +95,7 @@ const button2 = {
     text: "homepage",
 };
 
-function OnboardingMod4() {
+function OnboardingMod4 () {
     const classes = useModuleContentStyles();
     return (
         <div>
@@ -144,7 +144,7 @@ function OnboardingMod4() {
                 </Grid>
             </Box>
 
-            <div id="team" style={{ marginBottom: Theme.spacing(5) }}>
+            <div id="team" style={{ marginBottom: Theme.spacing(5), }}>
                 <Grid
                     container
                     spacing={2}

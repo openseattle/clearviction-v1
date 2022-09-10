@@ -6,7 +6,7 @@ import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
 const ContactPage = () => {
     const classes = useContactStyles();
-    const [documentTitle, setDocumentTitle] = useDocumentTitle("Contact Us - ");
+    useDocumentTitle("Contact Us - ");
 
     return (
         <>

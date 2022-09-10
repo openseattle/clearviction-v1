@@ -1,5 +1,4 @@
-import { SvgIcon } from "@material-ui/core";
-import { Grid, Typography, makeStyles } from "@material-ui/core";
+import { SvgIcon, Grid, Typography, makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles(theme => ({
     mainText: {
@@ -19,7 +18,7 @@ const useStyles = makeStyles(theme => ({
 
 export const IconWithHeaderAndText = props => {
     const classes = useStyles();
-    const { icon, header, text } = props;
+    const { icon, header, text, } = props;
     const textItems = text.map((t, idx) => (
         <Typography className={classes.mainText} key={idx} variant="body1" align="left">
             {t}

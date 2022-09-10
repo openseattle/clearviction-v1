@@ -1,29 +1,30 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 import smallLogo from "../../Assets/Onboarding/smallLogo.svg";
 
-import { Typography, Box, IconButton, List, ListItem, Drawer, ListItemText } from "@material-ui/core";
-import { MenuSharp as MenuIcon, CloseSharp } from "@material-ui/icons";
+import { Typography } from "@material-ui/core";
+// import {Box, IconButton, List, ListItem, Drawer, ListItemText} from "@material-ui/core";
+// import { MenuSharp as MenuIcon, CloseSharp } from "@material-ui/icons";
 import { useHeaderStyles } from "../../Styles/Onboarding/useHeaderStyles";
 import SocialContainer from "./SocialContainer";
 
-function Header(props) {
+function Header (props) {
     const classes = useHeaderStyles();
-    const { title, description, information, information2, information3 } = props.text;
+    const { title, description, information, } = props.text;
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
 
-    const [menuState, setMenuState] = useState(null);
-    const handleOpenMenu = event => {
-        setMenuState(event.currentTarget);
-    };
+    // const [ menuState, setMenuState, ] = useState(null);
+    // const handleOpenMenu = event => {
+    //     setMenuState(event.currentTarget);
+    // };
 
-    const handleCloseMenu = () => {
-        setMenuState(null);
-    };
+    // const handleCloseMenu = () => {
+    //     setMenuState(null);
+    // };
 
     return (
         <div className={classes.darkBlueBackground}>
@@ -36,25 +37,27 @@ function Header(props) {
             </div>
 
             <div className={classes.headingContainer}>
-                {title === "Welcome!" ? (
-                    <div className={classes.welcomeHeader}>
-                        <Typography variant="h1" className={classes.welcome} style={{ fontWeight: 400 }}>
-                            {title}
-                        </Typography>
-                        <Typography variant="h2" className={classes.welcomePara}>
-                            {information}
-                        </Typography>
-                    </div>
-                ) : (
-                    <div className={classes.modHeaderContainer}>
-                        <Typography variant="h2" className={classes.title}>
-                            {title}
-                        </Typography>
-                        <Typography variant="h1" className={classes.subheading}>
-                            {description}
-                        </Typography>
-                    </div>
-                )}
+                {title === "Welcome!"
+                    ? (
+                        <div className={classes.welcomeHeader}>
+                            <Typography variant="h1" className={classes.welcome} style={{ fontWeight: 400, }}>
+                                {title}
+                            </Typography>
+                            <Typography variant="h2" className={classes.welcomePara}>
+                                {information}
+                            </Typography>
+                        </div>
+                    )
+                    : (
+                        <div className={classes.modHeaderContainer}>
+                            <Typography variant="h2" className={classes.title}>
+                                {title}
+                            </Typography>
+                            <Typography variant="h1" className={classes.subheading}>
+                                {description}
+                            </Typography>
+                        </div>
+                    )}
             </div>
 
             {/* mobile header

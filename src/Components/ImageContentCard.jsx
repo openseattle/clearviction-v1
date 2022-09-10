@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const ImageContentCard = ({ content, image, buttonText, buttonHref }) => {
+const ImageContentCard = ({ content, image, buttonText, buttonHref, }) => {
     const classes = useStyles();
 
     const retrieveImage = bgImage => {

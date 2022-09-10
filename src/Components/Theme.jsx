@@ -1,7 +1,7 @@
 import { createTheme } from "@material-ui/core";
 
-const headingFontFamily = ["Sintony", "sans-serif"];
-const bodyFontFamily = ["Inter", "sans-serif"];
+const headingFontFamily = [ "Sintony", "sans-serif", ];
+const bodyFontFamily = [ "Inter", "sans-serif", ];
 
 const Theme = createTheme({
     spacing: 8,

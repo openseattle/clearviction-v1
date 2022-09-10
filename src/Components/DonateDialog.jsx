@@ -8,7 +8,7 @@ import {
     List,
     ListItem,
     makeStyles,
-    Typography,
+    Typography
 } from "@material-ui/core";
 
 import venmo from "../Assets/venmo.png";
@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const DonateDialog = ({ onClose, open }) => {
+const DonateDialog = ({ onClose, open, }) => {
     const classes = useStyles();
     return (
         <>

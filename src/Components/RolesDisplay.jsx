@@ -16,8 +16,8 @@ const RolesDisplay = () => {
         <Grid container spacing={2} justifyContent="center">
             {roles.map(role => (
                 <Grid item key={role}>
-                    <Card style={{ width: 100, height: 100 }}>
-                        <Grid container direction="column" justifyContent="center" style={{ height: "100px" }}>
+                    <Card style={{ width: 100, height: 100, }}>
+                        <Grid container direction="column" justifyContent="center" style={{ height: "100px", }}>
                             <Typography variant="body1" align="center">
                                 {role}
                             </Typography>

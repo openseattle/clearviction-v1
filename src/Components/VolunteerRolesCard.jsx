@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const VolunteerRolesCard = ({ image, discipline, roles, alt }) => {
+const VolunteerRolesCard = ({ image, discipline, roles, alt, }) => {
     const classes = useStyles();
     return (
         <>

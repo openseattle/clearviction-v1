@@ -96,7 +96,7 @@ const button2 = {
     text: "next",
 };
 
-function OnboardingMod2() {
+function OnboardingMod2 () {
     const classes = useModuleContentStyles();
 
     return (

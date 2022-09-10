@@ -7,18 +7,18 @@ import video from "../../Assets/Onboarding/video.svg";
 // styles
 import { useModalStyles } from "../../Styles/Onboarding/useModalStyles";
 
-export default function AirtableVideoModal(props) {
-    const [sectionId, setSectionId] = useState(1);
-    const [activeTab, setActiveTab] = useState(1);
+export default function AirtableVideoModal (props) {
+    const [ sectionId, setSectionId, ] = useState(1);
+    const [ activeTab, setActiveTab, ] = useState(1);
     const classes = useModalStyles();
 
     const sections = [
-        { id: 1, title: "Completing Your profile" },
-        { id: 2, title: "Finding Your Dashboard (Kanban)" },
-        { id: 3, title: "Engaging With Tasks" },
-        { id: 4, title: "Creating a Task (& Assigning It)" },
-        { id: 5, title: "Tracking & Viewing Tasks" },
-        { id: 6, title: "Evalutinging a Completed Task" },
+        { id: 1, title: "Completing Your profile", },
+        { id: 2, title: "Finding Your Dashboard (Kanban)", },
+        { id: 3, title: "Engaging With Tasks", },
+        { id: 4, title: "Creating a Task (& Assigning It)", },
+        { id: 5, title: "Tracking & Viewing Tasks", },
+        { id: 6, title: "Evalutinging a Completed Task", },
     ];
 
     const profile = "https://drive.google.com/file/d/1fcGzJpDKHs44ocX0AWqsBNAK5b6ivBlv/preview";
@@ -59,7 +59,7 @@ export default function AirtableVideoModal(props) {
     };
 
     return (
-        <Grid container style={{ justifyContent: "space-between", marginBottom: "60px" }}>
+        <Grid container style={{ justifyContent: "space-between", marginBottom: "60px", }}>
             <Grid item xs={2}>
                 {sections.map(section => (
                     <button
@@ -67,14 +67,14 @@ export default function AirtableVideoModal(props) {
                         onClick={() => showSection(section.id)}
                         style={activeTab === section.id ? activeTabStyle : tabStyle}
                     >
-                        <img src={video} alt="" style={{ width: "20px", float: "left" }} />
+                        <img src={video} alt="" style={{ width: "20px", float: "left", }} />
                         {section.title}
                     </button>
                 ))}
             </Grid>
             <Grid item xs={7} md={8} lg={9} className={classes.contentStyle}>
                 {sectionId === 1 && (
-                    <div style={{ height: "100%" }}>
+                    <div style={{ height: "100%", }}>
                         <iframe
                             title={sections.title}
                             src={profile}
@@ -85,7 +85,7 @@ export default function AirtableVideoModal(props) {
                     </div>
                 )}
                 {sectionId === 2 && (
-                    <div style={{ height: "100%" }}>
+                    <div style={{ height: "100%", }}>
                         <iframe
                             title={sections.title}
                             src={dashboard}
@@ -96,7 +96,7 @@ export default function AirtableVideoModal(props) {
                     </div>
                 )}
                 {sectionId === 3 && (
-                    <div style={{ height: "100%" }}>
+                    <div style={{ height: "100%", }}>
                         <iframe
                             title={sections.title}
                             src={engageTasks}
@@ -107,7 +107,7 @@ export default function AirtableVideoModal(props) {
                     </div>
                 )}
                 {sectionId === 4 && (
-                    <div style={{ height: "100%" }}>
+                    <div style={{ height: "100%", }}>
                         <iframe
                             title={sections.title}
                             src={createTasks}
@@ -118,7 +118,7 @@ export default function AirtableVideoModal(props) {
                     </div>
                 )}
                 {sectionId === 5 && (
-                    <div style={{ height: "100%" }}>
+                    <div style={{ height: "100%", }}>
                         <iframe
                             title={sections.title}
                             src={requests}
@@ -129,7 +129,7 @@ export default function AirtableVideoModal(props) {
                     </div>
                 )}
                 {sectionId === 6 && (
-                    <div style={{ height: "100%" }}>
+                    <div style={{ height: "100%", }}>
                         <iframe
                             title={sections.title}
                             src={evaluate}
@@ -141,7 +141,7 @@ export default function AirtableVideoModal(props) {
                 )}
                 <Button
                     onClick={props.handleAirtableVideoClose}
-                    style={{ margin: "0 auto 64px" }}
+                    style={{ margin: "0 auto 64px", }}
                     className={classes.button}
                 >
                     Close

@@ -5,18 +5,18 @@ import { useButtonStyles } from "../../Styles/Onboarding/useButtonStyles";
 import openCircle from "../../Assets/Onboarding/openCircle.png";
 import circleCheck from "../../Assets/Onboarding/circleCheck.png";
 
-function CompleteButton(props) {
+function CompleteButton (props) {
     const classes = useButtonStyles();
     const location = useLocation();
 
-    const [isComplete, setIsComplete] = useState();
+    const [ isComplete, setIsComplete, ] = useState();
 
     useEffect(() => {
         const completedMod = localStorage.getItem(`${location.pathname}`);
         if (completedMod) {
             setIsComplete(true);
         }
-    }, [location.pathname]);
+    }, [ location.pathname, ]);
 
     const handleComplete = () => {
         const completedMod = localStorage.getItem(`${location.pathname}`);
@@ -29,7 +29,7 @@ function CompleteButton(props) {
     };
 
     return (
-        <Link style={{ textDecoration: "none", color: "white" }} onClick={handleComplete} to={location.pathname}>
+        <Link style={{ textDecoration: "none", color: "white", }} onClick={handleComplete} to={location.pathname}>
             <div className={classes.buttonSecondary} style={isComplete ? styles.success : styles.div}>
                 <img src={isComplete ? circleCheck : openCircle} alt="" style={styles.img} />
                 <Typography variant="button">{isComplete ? "completed" : "mark as done"}</Typography>

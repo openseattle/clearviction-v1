@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export const CVPListItem = props => {
-    const { text, useBulletPoint, textAlignment, isLink, href, onClick } = props;
+    const { text, useBulletPoint, isLink, href, onClick, } = props;
     const classes = useStyles();
 
     const renderListItem = listType => {
@@ -16,7 +16,7 @@ export const CVPListItem = props => {
             case "link":
                 return (
                     <Link
-                        style={{ textDecoration: "underline" }}
+                        style={{ textDecoration: "underline", }}
                         href={href}
                         onClick={onClick}
                         target="_blank"
@@ -34,7 +34,7 @@ export const CVPListItem = props => {
         <ListItem>
             {useBulletPoint && (
                 <ListItemIcon className={classes.icon}>
-                    <FiberManualRecordIcon style={{ color: "black", fontSize: 8 }} />
+                    <FiberManualRecordIcon style={{ color: "black", fontSize: 8, }} />
                 </ListItemIcon>
             )}
             <Grid container alignItems="flex-start">

@@ -43,7 +43,7 @@ const useStyles = makeStyles(theme => ({
 
 const NavCardGroup = props => {
     const classes = useStyles();
-    const { subPages, xs, sm, md } = props;
+    const { subPages, xs, sm, md, } = props;
     return (
         <Box className={classes.cardGroupStyle}>
             <Grid container>
@@ -59,7 +59,7 @@ const NavCardGroup = props => {
                                 <Typography className={classes.cardTitleStyle} variant="h4">
                                     {pageCard.name}
                                 </Typography>
-                                <Box display={{ xs: "none", sm: "none", md: "block" }}>
+                                <Box display={{ xs: "none", sm: "none", md: "block", }}>
                                     {pageCard.desc && (
                                         <Typography className={classes.cardTextStyle} variant="subtitle2">
                                             {pageCard.desc}

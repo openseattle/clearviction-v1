@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
@@ -25,7 +25,7 @@ const useStyles = makeStyles(theme => ({
 const TutorialAccordion = props => {
     const classes = useStyles();
 
-    const [expanded, setExpanded] = React.useState("1");
+    const [ expanded, setExpanded, ] = React.useState("1");
 
     const handleChange = panel => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);

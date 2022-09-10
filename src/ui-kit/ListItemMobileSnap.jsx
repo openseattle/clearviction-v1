@@ -8,20 +8,20 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const ListItemMobileSnap = props => {
-    const { image, text, textLeft, edu, header } = props;
+    const { image, text, textLeft, edu, header, } = props;
     const classes = useStyles();
 
     return (
         <>
             {!edu && (
                 <>
-                    <Box display={{ xs: "block", sm: "none" }}>
-                        <ListItem style={{ justifyContent: "center" }}>{image}</ListItem>
+                    <Box display={{ xs: "block", sm: "none", }}>
+                        <ListItem style={{ justifyContent: "center", }}>{image}</ListItem>
                     </Box>
                     <ListItem>
                         {textLeft && text}
 
-                        <Box display={{ xs: "none", sm: "block" }}>
+                        <Box display={{ xs: "none", sm: "block", }}>
                             <ListItemIcon>{image}</ListItemIcon>
                         </Box>
                         {!textLeft && text}
@@ -32,8 +32,8 @@ const ListItemMobileSnap = props => {
             {/* If this is used for the Education Section. TODO is to refactor this so we only have one set of components */}
             {edu && (
                 <>
-                    <Box display={{ xs: "block", sm: "none" }}>
-                        <ListItem style={{ justifyContent: "center" }}>{image}</ListItem>
+                    <Box display={{ xs: "block", sm: "none", }}>
+                        <ListItem style={{ justifyContent: "center", }}>{image}</ListItem>
                     </Box>
 
                     <ListItem>
@@ -46,7 +46,7 @@ const ListItemMobileSnap = props => {
                             </Box>
                         )}
 
-                        <Box display={{ xs: "none", sm: "block" }}>
+                        <Box display={{ xs: "none", sm: "block", }}>
                             <ListItemIcon>{image}</ListItemIcon>
                         </Box>
 

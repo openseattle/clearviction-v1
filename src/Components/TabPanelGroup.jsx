@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-function a11yProps(index) {
+function a11yProps (index) {
     return {
         id: `tab-${index}`,
         "aria-controls": `tabpanel-${index}`,
@@ -29,8 +29,8 @@ function a11yProps(index) {
 
 const TabPanelGroup = props => {
     const classes = useStyles();
-    const [value, setValue] = useState(0);
-    const { tabs } = props;
+    const [ value, setValue, ] = useState(0);
+    const { tabs, } = props;
 
     const handleChange = (event, newValue) => {
         setValue(newValue);

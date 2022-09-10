@@ -4,10 +4,10 @@ import { useResourcesStyles } from "../Styles/useResourcesStyles";
 import { ExternalLink } from "../ui-kit/ExternalLink";
 import { ListItemLink } from "../ui-kit/ListItemLink";
 
-const HousingFinderList = ({ resources }) => {
+const HousingFinderList = ({ resources, }) => {
     const classes = useResourcesStyles();
     return (
-        <List style={{ width: "100%" }}>
+        <List style={{ width: "100%", }}>
             {resources.map((contact, idx) => (
                 <ListItem key={idx} divider>
                     <Grid container>
@@ -52,7 +52,7 @@ const HousingFinderList = ({ resources }) => {
                                         <Email className={classes.shelterIcon} />
                                         <ListItemText
                                             primaryTypographyProps={{
-                                                style: { overflowWrap: "break-word" },
+                                                style: { overflowWrap: "break-word", },
                                             }}
                                             primary={contact.email}
                                         />

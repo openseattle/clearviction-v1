@@ -1,23 +1,22 @@
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { TextField, MenuItem, FormControl, FormGroup, FormLabel, Box } from "@material-ui/core";
+import { TextField, MenuItem, FormControl, FormGroup, FormLabel, Box, Typography } from "@material-ui/core";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import { send } from "@emailjs/browser";
 import { useContactStyles } from "../Styles/useContactStyles";
-import { Typography } from "@material-ui/core";
 
 const ContactForm = () => {
     const classes = useContactStyles();
     const history = useHistory();
 
-    const [toSend, setToSend] = useState({
+    const [ toSend, setToSend, ] = useState({
         from_name: "",
         reply_to: "",
         contact_type: "",
         message: "",
     });
 
-    const [emailError, setEmailError] = useState({
+    const [ emailError, setEmailError, ] = useState({
         errorStatus: false,
         errorMessage: "",
     });
@@ -31,7 +30,7 @@ const ContactForm = () => {
 
     useEffect(() => {
         sessionStorage.setItem("toSend", JSON.stringify(toSend));
-    }, [toSend]);
+    }, [ toSend, ]);
 
     // TODO
     // Create a proper email validation service with formik + yup
@@ -78,9 +77,9 @@ const ContactForm = () => {
      *
      */
     const validateEmail = email => {
-        const validEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        const validEmail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
         if (validEmail.test(email)) {
-            setEmailError({ errorStatus: false, errorMessage: "" });
+            setEmailError({ errorStatus: false, errorMessage: "", });
         } else {
             setEmailError({
                 errorStatus: true,
@@ -90,7 +89,7 @@ const ContactForm = () => {
     };
 
     const handleChange = e => {
-        setToSend({ ...toSend, [e.target.name]: e.target.value });
+        setToSend({ ...toSend, [e.target.name]: e.target.value, });
         if (e.target.name === "reply_to") {
             validateEmail(e.target.value);
         }

@@ -3,11 +3,10 @@ import { BackButton } from "../../ui-kit/BackButton";
 import PrimaryButton from "../../ui-kit/PrimaryButton";
 import { EndScreenStyles } from "./EndScreenStyles";
 import RestartButton from "../../Components/RestartButton";
-import { CVPListItem } from "../../ui-kit/ListItem";
 import { BodyType } from "../../data/calculatorPagesTypes";
 import ProgressBar from "../../Components/ProgressBar";
 import { ExternalLink } from "../../ui-kit/ExternalLink";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const EndScreen = props => {
     const classes = EndScreenStyles();
@@ -74,7 +73,7 @@ const EndScreen = props => {
                                     </ul>
                                 );
                             default:
-                                break;
+                                return <></>;
                         }
                     })}
             </Grid>

@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
 
 export const TextWithImage = props => {
     const classes = useStyles();
-    const { img, header, text, cols, altStyle } = props;
+    const { img, header, text, cols, altStyle, } = props;
     const textItems = text.map((t, idx) => (
         <Typography className={classes.textMinimumStyle} key={idx} variant="body1" align="center">
             {t}

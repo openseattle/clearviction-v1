@@ -1,7 +1,7 @@
 import { Grid } from "@material-ui/core";
 import Fact from "./Fact";
 
-const FactIconGroup = ({ facts }) => {
+const FactIconGroup = ({ facts, }) => {
     return (
         <Grid container>
             {facts.map(fact => (

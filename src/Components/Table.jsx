@@ -4,7 +4,7 @@ const DataTable = props => {
     return (
         <TableContainer component={Paper}>
             <Typography>{props.tableHeader}</Typography>
-            <Table sx={{ minWidth: 650 }} aria-label="simple table">
+            <Table sx={{ minWidth: 650, }} aria-label="simple table">
                 <TableHead>
                     <TableRow>
                         <TableCell>Question</TableCell>
@@ -13,7 +13,7 @@ const DataTable = props => {
                 </TableHead>
                 <TableBody>
                     {props.data.map((row, idx) => (
-                        <TableRow key={idx} sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
+                        <TableRow key={idx} sx={{ "&:last-child td, &:last-child th": { border: 0, }, }}>
                             <TableCell component="th" scope="row">
                                 {row[0].question}
                             </TableCell>

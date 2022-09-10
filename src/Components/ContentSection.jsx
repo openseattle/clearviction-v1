@@ -2,7 +2,7 @@ import { Container, Paper, Typography } from "@material-ui/core";
 import { useHomeStyles } from "../Styles/useHomeStyles";
 
 const ContentSection = props => {
-    const { sectionId, sectionSize, sectionTitle, children } = props;
+    const { sectionId, sectionSize, sectionTitle, children, } = props;
     const classes = useHomeStyles();
 
     return (

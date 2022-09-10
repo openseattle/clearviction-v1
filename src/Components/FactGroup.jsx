@@ -1,7 +1,7 @@
 import { Grid } from "@material-ui/core";
 import FactExpandMoreCard from "./FactExpandMoreCard";
 
-const FactGroup = ({ facts }) => {
+const FactGroup = ({ facts, }) => {
     return (
         <Grid container>
             {facts.map(fact => (

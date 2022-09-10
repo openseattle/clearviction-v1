@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
 const SlackVideoAccordion = props => {
     const classes = useStyles();
 
-    const [expanded, setExpanded] = useState("1");
+    const [ expanded, setExpanded, ] = useState("1");
 
     const handleChange = panel => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);
@@ -79,7 +79,7 @@ const SlackVideoAccordion = props => {
                         <Typography className={classes.heading}>{elem.title}</Typography>
                     </AccordionSummary>
                     <AccordionDetails content={classes.root}>
-                        <div style={{ width: "100%", height: "100%" }}>
+                        <div style={{ width: "100%", height: "100%", }}>
                             <iframe
                                 title={elem.title}
                                 src={elem.video}

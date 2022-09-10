@@ -1,6 +1,6 @@
 import { Button, ButtonGroup, useMediaQuery } from "@material-ui/core";
 
-const ResponsiveJumpButtonGroup = ({ links }) => {
+const ResponsiveJumpButtonGroup = ({ links, }) => {
     const matches = useMediaQuery("(min-width:600px)");
     return (
         <>

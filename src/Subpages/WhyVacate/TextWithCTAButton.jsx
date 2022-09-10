@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export const TextWithCTAButton = props => {
-    const { text, buttonText, buttonLinkTo } = props;
+    const { text, buttonText, buttonLinkTo, } = props;
     const classes = useStyles();
     return (
         <>

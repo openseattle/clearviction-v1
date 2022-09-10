@@ -11,8 +11,8 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const FactExpandMoreCard = ({ summary, content, ariaLabel, contentID, summaryID }) => {
-    const [expanded, setExpanded] = useState(false);
+const FactExpandMoreCard = ({ summary, content, ariaLabel, contentID, summaryID, }) => {
+    const [ expanded, setExpanded, ] = useState(false);
 
     const handleExpandClick = () => {
         setExpanded(!expanded);
@@ -34,7 +34,7 @@ const FactExpandMoreCard = ({ summary, content, ariaLabel, contentID, summaryID 
                         </Typography>
                     </CardContent>
 
-                    <ExpandMore style={{ marginLeft: "auto", marginRight: "1em" }} />
+                    <ExpandMore style={{ marginLeft: "auto", marginRight: "1em", }} />
                 </CardActions>
             </CardActionArea>
             <Collapse in={expanded} timeout="auto" unmountOnExit>

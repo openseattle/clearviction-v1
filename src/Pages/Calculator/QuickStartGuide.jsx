@@ -6,7 +6,7 @@ import {
     DialogContentText,
     DialogTitle,
     Grid,
-    Typography,
+    Typography
 } from "@material-ui/core";
 import { useState } from "react";
 import { BodyType } from "../../data/calculatorPagesTypes";
@@ -17,7 +17,7 @@ import SecondaryButton from "../../ui-kit/SecondaryButton";
 import { QuickStartGuideStyles } from "./QuickStartGuideStyles";
 
 const QuickStartGuide = props => {
-    const [open, setOpen] = useState(false);
+    const [ open, setOpen, ] = useState(false);
 
     const handleClose = () => setOpen(false);
     const handleOpen = () => {
@@ -37,12 +37,6 @@ const QuickStartGuide = props => {
             <Grid item className={classes.bodyGrid}>
                 {props.body.map((b, idx) => {
                     switch (b.type) {
-                        default:
-                            return (
-                                <Typography key={idx} variant="body2" className={classes.body}>
-                                    {b.text}
-                                </Typography>
-                            );
                         case BodyType.LIST:
                             return (
                                 <ul>
@@ -52,6 +46,12 @@ const QuickStartGuide = props => {
                                         </li>
                                     ))}
                                 </ul>
+                            );
+                        default:
+                            return (
+                                <Typography key={idx} variant="body2" className={classes.body}>
+                                    {b.text}
+                                </Typography>
                             );
                     }
                 })}

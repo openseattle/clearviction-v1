@@ -19,8 +19,8 @@ const useStyles = makeStyles(theme => ({
 
 export const BackButton = props => {
     const classes = useStyles();
-    let history = useHistory();
-    const [open, setOpen] = useState(false);
+    const history = useHistory();
+    const [ open, setOpen, ] = useState(false);
 
     const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -30,10 +30,11 @@ export const BackButton = props => {
         try {
             if (document.referrer.includes("calculator")) {
                 history.goBack();
-            } else
+            } else {
                 throw Error(
                     "nonCalcReferrer: unable to verify referral by a calculator question. Restarting Calculator..."
                 );
+            }
         } catch (error) {
             console.log(error);
             setOpen(true);
@@ -57,7 +58,7 @@ export const BackButton = props => {
                 open={open}
                 autoHideDuration={6000}
                 onClose={handleClose}
-                anchorOrigin={{ vertical: "top", horizontal: "center" }}
+                anchorOrigin={{ vertical: "top", horizontal: "center", }}
             >
                 <Alert onClose={handleClose} severity="error">
                     Unable to access previous questions. Restarting...

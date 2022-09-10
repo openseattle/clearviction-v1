@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const DonateLevelCard = ({ amount, image, text, alt }) => {
+const DonateLevelCard = ({ amount, image, text, alt, }) => {
     const classes = useStyles();
     return (
         <>

@@ -12,7 +12,7 @@ const headerText = {
     information: "We're excited you're joining the Clearviction Project.",
 };
 
-function OnboardingHome() {
+function OnboardingHome () {
     const classes = useHomeStyles();
 
     const moduleSection = useRef(null);
@@ -46,8 +46,8 @@ function OnboardingHome() {
                     in one sitting if your schedule allows for it.)
                 </Typography>
                 <Typography variant="body2" className={classes.bodyPara}>
-                    <span style={{ fontWeight: "bold", fontStyle: "italic" }}>Note:</span>{" "}
-                    <span style={{ fontStyle: "italic" }}>
+                    <span style={{ fontWeight: "bold", fontStyle: "italic", }}>Note:</span>{" "}
+                    <span style={{ fontStyle: "italic", }}>
                         this resource is an imperfect and incomplete MVP. We've authored the core 20% (which should
                         provide 80% of the value) and continue to fill in the rest!
                     </span>

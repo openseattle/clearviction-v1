@@ -23,7 +23,7 @@ const useStyles = makeStyles(theme => ({
 const TrustDocAccordion = () => {
     const classes = useStyles();
 
-    const [expanded, setExpanded] = useState("1");
+    const [ expanded, setExpanded, ] = useState("1");
 
     const handleChange = panel => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);

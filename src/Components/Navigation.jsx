@@ -9,7 +9,7 @@ import {
     Container,
     makeStyles,
     ButtonGroup,
-    Button,
+    Button
 } from "@material-ui/core";
 import { MenuSharp as MenuIcon, CloseSharp } from "@material-ui/icons";
 import pages from "../data/siteMap";
@@ -53,7 +53,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 const Navigation = () => {
-    const [menuState, setMenuState] = useState(null);
+    const [ menuState, setMenuState, ] = useState(null);
     const handleOpenMenu = event => {
         setMenuState(event.currentTarget);
     };
@@ -70,13 +70,13 @@ const Navigation = () => {
                 <Container maxWidth="xl">
                     <Toolbar>
                         <SkipLink className={classes.skipLink}>
-                            <Button style={{ color: "white" }}>Skip Navigation Links</Button>
+                            <Button style={{ color: "white", }}>Skip Navigation Links</Button>
                         </SkipLink>
                         <NavigationLogo />
-                        <Box style={{ flexGrow: 1 }} />
+                        <Box style={{ flexGrow: 1, }} />
 
                         {/* desktop menu */}
-                        <Box display={{ xs: "none", sm: "none", md: "flex" }}>
+                        <Box display={{ xs: "none", sm: "none", md: "flex", }}>
                             <ButtonGroup>
                                 {pages.map((page, idx) => (
                                     <NavButton key={idx} page={page} />
@@ -86,7 +86,7 @@ const Navigation = () => {
                         {/* mobile menu */}
 
                         {/* Drawer based nav */}
-                        <Box display={{ xs: "flex", sm: "flex", md: "none" }}>
+                        <Box display={{ xs: "flex", sm: "flex", md: "none", }}>
                             <IconButton
                                 size="medium"
                                 edge="start"
@@ -99,7 +99,7 @@ const Navigation = () => {
                         </Box>
                         <Drawer anchor="right" open={Boolean(menuState)} onClose={handleCloseMenu}>
                             <List className={classes.menuStyle}>
-                                <ListItem style={{ justifyContent: "center" }}>
+                                <ListItem style={{ justifyContent: "center", }}>
                                     <IconButton onClick={handleCloseMenu} aria-label="close menu">
                                         <CloseSharp fontSize="large" className={classes.closeIcon} />
                                     </IconButton>

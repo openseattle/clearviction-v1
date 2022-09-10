@@ -21,7 +21,7 @@ const remoteWork = {
     paragraph2: "Progress over perfection",
     paragraph3: "Asynchronous when we can & synchronous when we need",
     paragraph4:
-        '"A team is not a group of people that work together, A team is a group of people that trust each other." - Simon Sinek',
+        "\"A team is not a group of people that work together, A team is a group of people that trust each other.\" - Simon Sinek",
 };
 
 const trust = {
@@ -69,7 +69,7 @@ const button2 = {
     text: "next",
 };
 
-function OnboardingMod3() {
+function OnboardingMod3 () {
     const classes = useModuleContentStyles();
 
     return (

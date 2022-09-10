@@ -23,11 +23,11 @@ const useStyles = makeStyles(theme => ({
 
 export const TwoParagraphTextWithHeader = props => {
     const classes = useStyles();
-    const { header, text } = props;
+    const { header, text, } = props;
     const textItems = text.map((t, idx) => (
         <>
             <Grid key={idx} item xs={12}>
-                <Typography className={classes.text} align="left" style={{ wordBreak: "break-word" }}>
+                <Typography className={classes.text} align="left" style={{ wordBreak: "break-word", }}>
                     {t}
                 </Typography>
             </Grid>

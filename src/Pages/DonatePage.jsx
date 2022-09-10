@@ -41,7 +41,7 @@ const donationLevels = [
 ];
 
 const DonatePage = () => {
-    const [open, setOpen] = useState(false);
+    const [ open, setOpen, ] = useState(false);
 
     const handleClickOpen = () => {
         setOpen(true);

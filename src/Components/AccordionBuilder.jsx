@@ -1,14 +1,14 @@
 import { Accordion, AccordionDetails, AccordionSummary, Typography, Box } from "@material-ui/core";
 import { ExpandMore } from "@material-ui/icons";
 
-function a11yProps(index) {
+function a11yProps (index) {
     return {
         id: `panel${index}a-header`,
         "aria-controls": `panel${index}a-content`,
     };
 }
 
-const AccordionBuilder = ({ faqs }) => {
+const AccordionBuilder = ({ faqs, }) => {
     return (
         <div aria-label="info-accordion">
             {faqs.map((faq, idx) => (

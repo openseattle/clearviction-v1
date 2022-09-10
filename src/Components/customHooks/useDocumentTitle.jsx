@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const useDocumentTitle = title => {
-    const [documentTitle, setDocumentTitle] = useState(title);
+    const [ documentTitle, setDocumentTitle, ] = useState(title);
 
     useEffect(() => {
         document.title = documentTitle + "Clearviction";
-    }, [documentTitle]);
+    }, [ documentTitle, ]);
 
-    return [documentTitle, setDocumentTitle];
+    return [ documentTitle, setDocumentTitle, ];
 };
 
 export { useDocumentTitle };

@@ -6,7 +6,7 @@ import Fact from "../Components/Fact";
 import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
 
 const factsProps = {
-    style: { fontSize: "3em" },
+    style: { fontSize: "3em", },
     color: "secondary",
 };
 

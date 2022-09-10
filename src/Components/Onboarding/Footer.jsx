@@ -2,7 +2,7 @@ import { useFooterStyles } from "../../Styles/Onboarding/useFooterStyles";
 import PrimaryButton from "./PrimaryButton";
 import CompleteButton from "./CompleteButton";
 
-function Footer(props) {
+function Footer (props) {
     const classes = useFooterStyles();
 
     return (

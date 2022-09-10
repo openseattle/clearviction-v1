@@ -7,7 +7,7 @@ import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 
 const ContactSuccessPage = () => {
     const classes = useContactStyles();
-    const [documentTitle, setDocumentTitle] = useDocumentTitle("Contact Success - ");
+    useDocumentTitle("Contact Success - ");
 
     return (
         <Box className={classes.regularContainer}>

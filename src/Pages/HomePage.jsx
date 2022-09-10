@@ -6,7 +6,7 @@ import education from "../Assets/education.svg";
 import lawyer from "../Assets/lawyer.svg";
 import teamwork from "../Assets/teamwork.svg";
 import calculator from "../Assets/calculator.svg";
-import washington from "../Assets/washington.svg"
+import washington from "../Assets/washington.svg";
 import { Box, Container, Grid, Typography } from "@material-ui/core";
 import ContentSection from "../Components/ContentSection";
 import HomeFAQAccordion from "../Subpages/Home/HomeFAQAccordion";
@@ -20,7 +20,7 @@ const HomePage = () => {
     useEffect(() => trackPageview("Home"), []);
 
     const classes = useHomeStyles();
-    const [documentTitle, setDocumentTitle] = useDocumentTitle("Home - ");
+    useDocumentTitle("Home - ");
 
     return (
         <>
@@ -49,9 +49,9 @@ const HomePage = () => {
             <Container className={classes.regularContainer} maxwidth="sm">
                 <ResponsiveJumpButtonGroup
                     links={[
-                        { url: "how-it-works", linkName: "How It Works" },
-                        { url: "why-vacate", linkName: "why vacate" },
-                        { url: "faq", linkName: "FAQ" },
+                        { url: "how-it-works", linkName: "How It Works", },
+                        { url: "why-vacate", linkName: "why vacate", },
+                        { url: "faq", linkName: "FAQ", },
                     ]}
                 />
             </Container>

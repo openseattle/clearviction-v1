@@ -1,6 +1,6 @@
 import { Link, List, ListItem } from "@material-ui/core";
 
-const FactSubList = ({ resources }) => {
+const FactSubList = ({ resources, }) => {
     return (
         <List>
             {resources.map(resource => (

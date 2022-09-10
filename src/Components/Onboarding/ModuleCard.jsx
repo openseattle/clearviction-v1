@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { Typography, Grid } from "@material-ui/core";
+import { Typography } from "@material-ui/core";
 
 // icons
 import screens from "../../Assets/Onboarding/screens.svg";
@@ -11,19 +11,19 @@ import circleCheck from "../../Assets/Onboarding/circleCheck.png";
 
 import { useModuleCardStyles } from "../../Styles/Onboarding/useModuleCardStyles";
 
-function ModuleCard(props) {
+function ModuleCard (props) {
     const classes = useModuleCardStyles();
-    const { number, link, text, subheading } = props.module;
-    const [isLargeScreen, setIsLargeScreen] = useState(true);
+    const { number, link, text, subheading, } = props.module;
+    // const [ isLargeScreen, setIsLargeScreen, ] = useState(true);
 
-    useEffect(() => {
-        const mediaSize = window.innerWidth;
-        mediaSize >= 768 ? setIsLargeScreen(true) : setIsLargeScreen(false);
-    }, []);
+    // useEffect(() => {
+    //     const mediaSize = window.innerWidth;
+    //     mediaSize >= 768 ? setIsLargeScreen(true) : setIsLargeScreen(false);
+    // }, []);
 
     return (
         <div className={classes.moduleCard}>
-            <Link style={{ textDecoration: "none" }} to={link}>
+            <Link style={{ textDecoration: "none", }} to={link}>
                 <div>
                     <div className={classes.cardHeading}>
                         <Typography variant="body1">{number}</Typography>
@@ -41,20 +41,22 @@ function ModuleCard(props) {
                                 {text}
                             </Typography>
                         </div>
-                        {localStorage.getItem(link) ? (
-                            <div className={classes.mobileSuccessButton}>
-                                <img className={classes.checkMark} src={circleCheck} alt="" />
-                                <Typography style={{ fontSize: "17px", marginLeft: "1rem", fontWeight: "bold" }}>
+                        {localStorage.getItem(link)
+                            ? (
+                                <div className={classes.mobileSuccessButton}>
+                                    <img className={classes.checkMark} src={circleCheck} alt="" />
+                                    <Typography style={{ fontSize: "17px", marginLeft: "1rem", fontWeight: "bold", }}>
                                     completed
-                                </Typography>
-                            </div>
-                        ) : (
-                            <div className={classes.mobileButton}>
-                                <Typography variant="h6" style={{ fontSize: "17px" }}>
-                                    {number}
-                                </Typography>
-                            </div>
-                        )}
+                                    </Typography>
+                                </div>
+                            )
+                            : (
+                                <div className={classes.mobileButton}>
+                                    <Typography variant="h6" style={{ fontSize: "17px", }}>
+                                        {number}
+                                    </Typography>
+                                </div>
+                            )}
                     </div>
                 </div>
             </Link>

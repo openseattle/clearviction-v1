@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 const RedesignHeroPanel = props => {
-    const { title, subtitle, children } = props;
+    const { title, subtitle, children, } = props;
     const classes = useStyles();
     return (
         <Box className={classes.hero}>

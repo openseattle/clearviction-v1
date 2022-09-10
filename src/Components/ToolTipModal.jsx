@@ -16,7 +16,7 @@ const boxStyle = {
 };
 
 const ToolTipModal = props => {
-    const [open, setOpen] = useState(false);
+    const [ open, setOpen, ] = useState(false);
 
     const handleClose = () => setOpen(false);
     const handleOpen = () => {
@@ -26,7 +26,7 @@ const ToolTipModal = props => {
 
     return (
         <div data-testid="tooltip-modal-wrapper">
-            <Button onClick={handleOpen} style={{ color: "black", textDecoration: "underline" }}>
+            <Button onClick={handleOpen} style={{ color: "black", textDecoration: "underline", }}>
                 <Typography variant="h5">{props.text}</Typography>
             </Button>
             <Modal
@@ -37,7 +37,7 @@ const ToolTipModal = props => {
                 aria-describedby="modal-modal-description"
             >
                 <Box data-testid="tooltip-content" style={boxStyle}>
-                    <Typography id="modal-modal-description" style={{ mt: 2, fontSize: "18px" }}>
+                    <Typography id="modal-modal-description" style={{ mt: 2, fontSize: "18px", }}>
                         If you don't know the answer, you may check your criminal record{" "}
                         <a target="_blank" href="https://www.wsp.wa.gov/crime/criminal-history" rel="noreferrer">
                             here
