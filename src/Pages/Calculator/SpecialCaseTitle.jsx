@@ -67,7 +67,16 @@ const SpecialCaseTitle = props => {
                         }
                     })}
             </Grid>
-            <PrimaryButton className={classes.button} text={props.buttonText} href={props.buttonHref} />
+            <PrimaryButton
+                className={classes.button}
+                text={props.buttonText}
+                href={props.buttonHref}
+                header={props.header}
+                body={props.body}
+                onButtonClick={props.onButtonClick}
+                origin="SpecialCaseTitle"
+                pageId={props.pageId}
+            />
         </Grid>
     );
 };

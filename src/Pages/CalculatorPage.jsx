@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { trackPageview } from "../trackingUtils";
-import { useLocation } from "react-router-dom";
+import { useLocation, useHistory } from "react-router-dom";
 import calculatorPages from "../data/calculatorPages";
 import "../CSS/Calculator.css";
 
@@ -22,9 +22,26 @@ const CalculatorPage = () => {
     const indexOfPageId = pathname.split("/").length - 1;
     const pageId = pathname.split("/")[indexOfPageId];
     const content = calculatorPages[pageId];
+    const history = useHistory();
+    const questionHistory = JSON.parse(window.sessionStorage.getItem("questionHistory"));
+
+    if (pageId === "landing-0") {
+        window.sessionStorage.removeItem("questionHistory");
+    }
+
+    function onButtonClick(newHistory) {
+        if (questionHistory) {
+            window.sessionStorage.setItem("questionHistory", JSON.stringify([...questionHistory, newHistory]));
+        } else {
+            window.sessionStorage.setItem("questionHistory", JSON.stringify([newHistory]));
+        }
+        history.push(newHistory.nextPage);
+    }
 
     if (!content) window.location = "/404";
-    useEffect(() => trackPageview("Calculator"), []);
+    useEffect(() => {
+        trackPageview("Calculator");
+    }, []);
 
     const { header, body, type, buttons, disclaimer, tooltip, progressBar, showRestartButton } = content;
 
@@ -58,6 +75,8 @@ const CalculatorPage = () => {
                         body={body}
                         buttonText={buttons[0].text}
                         buttonHref={buttons[0].href}
+                        onButtonClick={onButtonClick}
+                        pageId={pageId}
                     />
                 );
             case PageType.QUESTION:
@@ -68,6 +87,8 @@ const CalculatorPage = () => {
                         buttons={buttons}
                         progressBar={progressBar}
                         tooltip={tooltip}
+                        onButtonClick={onButtonClick}
+                        pageId={pageId}
                     />
                 );
             case PageType.END:
@@ -80,6 +101,7 @@ const CalculatorPage = () => {
                         showRestartButton={showRestartButton}
                         disclaimer={disclaimer}
                         progressBar={progressBar}
+                        questionHistory={questionHistory}
                     />
                 );
             default:

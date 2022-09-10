@@ -35,7 +35,27 @@ const PrimaryButton = props => {
     const classes = useStyles();
 
     return (
-        <Button role="button" className={classes.button} href={props.href} target={props.target} variant="contained">
+        <Button
+            role="button"
+            className={classes.button}
+            href={props.href}
+            target={props.target}
+            variant="contained"
+            onClick={
+                props.origin
+                    ? e => {
+                          e.preventDefault();
+                          props.onButtonClick({
+                              nextPage: props.href,
+                              href: props.pageId,
+                              header: props.header,
+                              body: props.body,
+                              answer: props.text,
+                          });
+                      }
+                    : null
+            }
+        >
             {props.text}
         </Button>
     );

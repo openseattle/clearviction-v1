@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import {
     Grid,
     Typography,
@@ -78,7 +78,19 @@ const QuestionScreen = props => {
             </Grid>
             <Grid container justifyContent="center" className={classes.buttonGrid}>
                 {props.buttons.map((b, idx) => {
-                    return <PrimaryButton href={b.href} key={idx} text={b.text} className={classes.button} />;
+                    return (
+                        <PrimaryButton
+                            href={b.href}
+                            key={idx}
+                            text={b.text}
+                            className={classes.button}
+                            header={props.header}
+                            body={props.body}
+                            onButtonClick={props.onButtonClick}
+                            origin="QuestionScreen"
+                            pageId={props.pageId}
+                        />
+                    );
                 })}
                 {props.tooltip && (
                     <SecondaryButton className={classes.button} text={"I'm not sure"} onClick={handleOpen} />
