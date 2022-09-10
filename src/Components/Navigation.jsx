@@ -10,13 +10,13 @@ import {
     makeStyles,
     ButtonGroup,
     Button,
+    Typography,
 } from "@material-ui/core";
 import { MenuSharp as MenuIcon, CloseSharp } from "@material-ui/icons";
 import pages from "../data/siteMap";
 import { useState } from "react";
 import NavButton from "../ui-kit/NavButton";
 import NavButtonMobile from "../ui-kit/NavButtonMobile";
-import LegalDisclaimer from "./LegalDisclaimer";
 import NavigationLogo from "./NavigationLogo";
 import SkipLink from "../ui-kit/SkipLink";
 
@@ -39,6 +39,10 @@ const useStyles = makeStyles(theme => ({
     expandIconStyle: {
         color: "white",
         margin: theme.spacing(1),
+    },
+    disclaimer: {
+        margin: theme.spacing(2),
+        fontSize: 11,
     },
     skipLink: {
         marginRight: "1rem",
@@ -108,7 +112,12 @@ const Navigation = () => {
                                     <NavButtonMobile key={page.name} page={page} classes={classes} />
                                 ))}
                                 <ListItem>
-                                    <LegalDisclaimer />
+                                    <Box justifyContent="center">
+                                        <Typography className={classes.disclaimer} align="center" variant="subtitle2">
+                                            The information on this site is not, nor should it be, considered legal
+                                            advice.
+                                        </Typography>
+                                    </Box>
                                 </ListItem>
                             </List>
                         </Drawer>

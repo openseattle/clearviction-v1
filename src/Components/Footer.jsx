@@ -4,7 +4,6 @@ import { useLocation } from "react-router-dom";
 import democracylabLogo from "../Assets/democracylab-logo.png";
 import openseattleLogo from "../Assets/openseattle-logo.png";
 import pages from "../data/siteMap";
-import LegalDisclaimer from "./LegalDisclaimer";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -27,7 +26,10 @@ const useStyles = makeStyles(theme => ({
         color: "white",
         "&:hover": { color: "white" },
     },
-
+    disclaimer: {
+        margin: theme.spacing(2),
+        fontSize: 11,
+    },
     subHeader: {
         fontSize: 11,
     },
@@ -104,7 +106,11 @@ const Footer = () => {
                                                 sm={12}
                                                 md={6}
                                             >
-                                                <Link data-testid="footer-link" className={classes.linkStyles} href={page.url}>
+                                                <Link
+                                                    data-testid="footer-link"
+                                                    className={classes.linkStyles}
+                                                    href={page.url}
+                                                >
                                                     {page.name}
                                                 </Link>
                                             </Grid>
@@ -133,7 +139,11 @@ const Footer = () => {
                                 </List>
                             </Grid>
                         </Grid>
-                        <LegalDisclaimer />
+                        <Box justifyContent="center">
+                            <Typography className={classes.disclaimer} align="center" variant="subtitle2">
+                                The information on this site is not, nor should it be, considered legal advice.
+                            </Typography>
+                        </Box>
                     </Container>
                 </Box>
             )}
