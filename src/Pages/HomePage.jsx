@@ -6,14 +6,13 @@ import education from "../Assets/education.svg";
 import lawyer from "../Assets/lawyer.svg";
 import teamwork from "../Assets/teamwork.svg";
 import calculator from "../Assets/calculator.svg";
-import washington from "../Assets/washington.svg"
+import washington from "../Assets/washington.svg";
 import { Box, Container, Grid, Typography } from "@material-ui/core";
 import ContentSection from "../Components/ContentSection";
 import HomeFAQAccordion from "../Subpages/Home/HomeFAQAccordion";
 import { useHomeStyles } from "../Styles/useHomeStyles";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
-import CheckEligibilityButton from "../Components/CheckEligibilityButton";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
 const HomePage = () => {
@@ -36,7 +35,10 @@ const HomePage = () => {
                                 conviction for free in less than 10 minutes!
                             </Typography>
                             <Box paddingTop={12}>
-                                <CheckEligibilityButton />
+                                <RedesignButtonPrimary href="/calculator/landing-0">
+                                    Check Eligibility
+                                </RedesignButtonPrimary>
+                                ;
                             </Box>
                         </Grid>
                         <Grid item xs={12} sm={6}>
