@@ -134,6 +134,11 @@ const HomePage = () => {
                 </Typography>
                 <HomeFAQAccordion />
             </Container>
+            <Container maxWidth="lg" className={classes.lightBlueBackGround}>
+                <Typography variant="h3" className={classes.headingStyle}>
+                Help us improve the calculator by participating in research
+                </Typography>
+            </Container>
         </>
     );
 };
