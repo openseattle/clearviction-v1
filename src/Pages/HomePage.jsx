@@ -136,23 +136,21 @@ const HomePage = () => {
                 <HomeFAQAccordion />
             </Container>
             <Box className={classes.lightBlueBackGround}>
-              <Container maxWidth="lg">
-                <Grid container alignItems="center">
-                <Grid item xs={12} sm={6} md={8}>
-                  <Typography variant="h3" className={classes.headingStyle}>
-                    Help us improve the calculator by participating in research
-                  </Typography>
-                    <RedesignButtonSecondary
-                      href="https://docs.google.com/forms/d/1KXmPrwzHeE8_EEL88RFkjOFP4S1A52Ode1vV6SJijao/viewform?edit_requested=true"
-                    >
-                      Learn more
-                    </RedesignButtonSecondary>
-                  </Grid>
-                  <Grid item xs={12} sm={6} md={4}>
-                    <img src={checklistTwo} className={classes.iconStyle} alt=""></img>
-                  </Grid>             
-                </Grid>	 
-              </Container>                                        
+                <Container maxWidth="lg">
+                    <Grid container alignItems="center">
+                        <Grid item xs={12} sm={6} md={8}>
+                            <Typography variant="h3" className={classes.headingStyle}>
+                                Help us improve the calculator by participating in research
+                            </Typography>
+                            <RedesignButtonSecondary href="https://docs.google.com/forms/d/1KXmPrwzHeE8_EEL88RFkjOFP4S1A52Ode1vV6SJijao/viewform?edit_requested=true">
+                                Learn more
+                            </RedesignButtonSecondary>
+                        </Grid>
+                        <Grid item xs={12} sm={6} md={4}>
+                            <img src={checklistTwo} className={classes.iconStyle} alt=""></img>
+                        </Grid>
+                    </Grid>
+                </Container>
             </Box>
         </>
     );
