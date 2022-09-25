@@ -38,7 +38,6 @@ const HomePage = () => {
                                 <RedesignButtonPrimary href="/calculator/landing-0">
                                     Check Eligibility
                                 </RedesignButtonPrimary>
-                                ;
                             </Box>
                         </Grid>
                         <Grid item xs={12} sm={6}>
@@ -138,6 +137,7 @@ const HomePage = () => {
                 <Typography variant="h3" className={classes.headingStyle}>
                 Help us improve the calculator by participating in research
                 </Typography>
+
             </Container>
         </>
     );
