@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { trackPageview } from "../trackingUtils";
 import city from "../Assets/city.svg";
 import checklist from "../Assets/checklist.svg";
+import checklistTwo from "../Assets/checklist1.svg";
 import education from "../Assets/education.svg";
 import lawyer from "../Assets/lawyer.svg";
 import teamwork from "../Assets/teamwork.svg";
@@ -134,14 +135,20 @@ const HomePage = () => {
                 </Typography>
                 <HomeFAQAccordion />
             </Container>
-            <Container maxWidth="lg" className={classes.lightBlueBackGround}>
-                <Typography variant="h3" className={classes.headingStyle}>
-                Help us improve the calculator by participating in research
-                </Typography>
-                <RedesignButtonSecondary>
-                    Hello
-                </RedesignButtonSecondary>
-            </Container>
+            <Box className={classes.lightBlueBackGround}>
+                <Container maxWidth="lg">
+                
+                    <Typography variant="h3" className={classes.headingStyle}>
+                    Help us improve the calculator by participating in research
+                    </Typography>
+                    <Grid container>
+            		<RedesignButtonSecondary>
+                        Learn more
+                    </RedesignButtonSecondary>
+                    <img src={checklistTwo} className={classes.iconStyle} alt=""></img>
+                    </Grid>	 
+                </Container>
+            </Box>
         </>
     );
 };
