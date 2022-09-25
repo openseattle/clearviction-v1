@@ -12,6 +12,7 @@ import ContentSection from "../Components/ContentSection";
 import HomeFAQAccordion from "../Subpages/Home/HomeFAQAccordion";
 import { useHomeStyles } from "../Styles/useHomeStyles";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
+import { RedesignButtonSecondary } from "../ui-kit/RedesignButtonSecondary";
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
@@ -137,7 +138,9 @@ const HomePage = () => {
                 <Typography variant="h3" className={classes.headingStyle}>
                 Help us improve the calculator by participating in research
                 </Typography>
-
+                <RedesignButtonSecondary>
+                    Hello
+                </RedesignButtonSecondary>
             </Container>
         </>
     );
