@@ -1,30 +1,25 @@
 import React from "react";
-import { shallow } from "enzyme";
+import { render, screen } from "@testing-library/react";
 import ProgressBar from "../ProgressBar";
 
-describe("<ProgressBar />", () => {
-    let progressBar;
-    const props = {
+const getDefaultProps = () => {
+    return {
         currentSectionName: "Surrounding Circumstances",
         totalSections: 3,
     };
-    beforeEach(() => {
-        progressBar = shallow(<ProgressBar {...props} />);
-    });
+};
 
-    it("should render a progressbar", () => {
-        expect(progressBar.exists(".progressBar-Wrapper")).toEqual(true);
-    });
-    it("renders the li", () => {
-        expect(progressBar.exists("li")).toEqual(true);
-    });
-    it("renders the title", () => {
-        expect(progressBar.exists(".progress-bar-title")).toEqual(true);
-    });
-    it("renders the current bar correctly", () => {
-        expect(progressBar.find(".progressBar-current").prop("style")).toHaveProperty("width", "68%");
-    });
-    it("renders the active bar correctly", () => {
-        expect(progressBar.find(".progressBar-active").prop("style")).toHaveProperty("width", "34%");
+describe("<ProgressBar />", () => {
+    it("should render a progress bar with expected elements", () => {
+        render(<ProgressBar {...getDefaultProps()} />);
+        const progressBar = screen.getByTestId("progress-bar");
+        expect(progressBar).toBeVisible();
+
+        const steps = screen.getAllByTestId("progress-bar-step");
+        expect(steps.length).toEqual(3);
+
+        const firstStepLabel = screen.getByText("Surrounding Circumstances");
+        expect(firstStepLabel).toBeVisible();
+        expect(firstStepLabel).toHaveClass("MuiStepLabel-active");
     });
 });

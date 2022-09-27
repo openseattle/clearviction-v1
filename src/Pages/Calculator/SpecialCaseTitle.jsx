@@ -45,7 +45,7 @@ const SpecialCaseTitle = props => {
                                                 role="link"
                                                 href={b.href}
                                             >
-                                                {b.text}
+                                                {b.linkText}
                                             </ExternalLink>
                                         </li>
                                     </ul>

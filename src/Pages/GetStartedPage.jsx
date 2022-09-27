@@ -8,12 +8,11 @@ import RedesignHeroPanel from "../Components/RedesignHeroPanel";
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
 import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
-import FactSimpleCard from "../Components/FactSimpleCard";
+import FactCard from "../Components/FactCard";
 import CourtFormsFactGroup from "../Subpages/GetStarted/CourtFormsFactGroup";
 import LegalAidServices from "../Subpages/GetStarted/LegalAidServices";
 import FinancialAidServices from "../Subpages/GetStarted/FinancialAidServices";
 import { ExternalLink } from "../ui-kit/ExternalLink";
-import CheckEligibilityButton from "../Components/CheckEligibilityButton";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
 const factsProps = {
@@ -160,7 +159,7 @@ const GetStartedPage = () => {
                 <FactIconGroup facts={eligibilityFacts} />
             </Container>
             <Box justifyContent="center" display="flex">
-                <CheckEligibilityButton />
+                <RedesignButtonPrimary href="/calculator/landing-0">Check Eligibility</RedesignButtonPrimary>;
             </Box>
             <Container maxWidth="md">
                 <Divider className={classes.dividerStyle} />
@@ -180,20 +179,26 @@ const GetStartedPage = () => {
                 <Typography className={classes.volunteerTextStyle}>Your request to vacate may be denied if:</Typography>
                 <Grid container>
                     <Grid item xs={12} sm={12} md={4}>
-                        <FactSimpleCard>
-                            The court does not believe that vacating your conviction will be in the interest of society
-                        </FactSimpleCard>
+                        <FactCard
+                            simpleCardContents={
+                                "The court does not believe that vacating your conviction will be in the interest of society"
+                            }
+                            isSimpleCard={true}
+                        />
                     </Grid>
                     <Grid item xs={12} sm={12} md={4}>
-                        <FactSimpleCard>
-                            There are inaccuracies in your court records and/or the application
-                        </FactSimpleCard>
+                        <FactCard
+                            simpleCardContents={"There are inaccuracies in your court records and/or the application"}
+                            isSimpleCard={true}
+                        />
                     </Grid>
                     <Grid item xs={12} sm={12} md={4}>
-                        <FactSimpleCard>
-                            You violated probation, have not paid off your fines or are otherwise not eligible to vacate
-                            that conviction
-                        </FactSimpleCard>
+                        <FactCard
+                            simpleCardContents={
+                                "You violated probation, have not paid off your fines or are otherwise not eligible to vacate that conviction"
+                            }
+                            isSimpleCard={true}
+                        />
                     </Grid>
                 </Grid>
             </Container>

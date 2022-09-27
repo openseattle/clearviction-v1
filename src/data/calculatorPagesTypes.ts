@@ -56,7 +56,9 @@ interface ParagraphBody extends BaseBody {
 }
 
 interface LinkBody extends BaseBody {
-    text: string;
+    textBeforeLink?: string;
+    linkText: string;
+    textAfterLink?: string;
     href: string;
 }
 

@@ -1,44 +1,31 @@
 import React from "react";
-import { mount } from "enzyme";
-import Modal from "@mui/material/Modal";
-import Backdrop from "@mui/material/Backdrop";
-import Button from "@mui/material/Button";
+import { render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import ToolTipModal from "../ToolTipModal";
 
 describe("<ToolTipModal />", () => {
-    let wrapper;
-    beforeEach(() => {
-        wrapper = mount(<ToolTipModal text={"test"} />);
+    const template = <ToolTipModal text={"test"} />;
+
+    it("should render the default modal ui", () => {
+        render(template);
+
+        expect(screen.getByTestId("tooltip-modal-wrapper")).toBeVisible();
+        expect(screen.getByRole("button", { name: /test/i })).toBeInTheDocument();
+        expect(screen.queryByTestId("tooltip-modal")).not.toBeInTheDocument();
     });
 
-    describe("ui", () => {
-        it("should render a modal", () => {
-            expect(wrapper.exists(Modal)).toEqual(true);
-        });
+    it("should open and close the modal", async () => {
+        const user = userEvent.setup();
+        const contentMatcher = /If you don't know the answer, you may check your criminal record/i;
 
-        it("should render a button", () => {
-            expect(wrapper.exists(Button)).toEqual(true);
-        });
+        render(template);
 
-        it("should render correct text on the button", () => {
-            expect(wrapper.find(Button).text()).toEqual("test");
-        });
-    });
+        await user.click(screen.getByRole("button", { name: /test/i }));
 
-    describe("clicking on the button", () => {
-        it("should open the modal", () => {
-            expect(wrapper.find(Modal).props().open).toEqual(false);
-            wrapper.find(Button).simulate("click");
-            expect(wrapper.find(Modal).props().open).toEqual(true);
-        });
-    });
+        expect(screen.getByText(contentMatcher)).toBeVisible();
 
-    describe("clicking outside the modal", () => {
-        it("should close the modal", () => {
-            wrapper.find(Button).simulate("click");
-            expect(wrapper.find(Modal).prop("open")).toEqual(true);
-            wrapper.find(Backdrop).simulate("click");
-            expect(wrapper.find(Modal).prop("open")).toEqual(false);
-        });
+        await user.keyboard("{Esc}");
+
+        expect(screen.queryByText(contentMatcher)).not.toBeInTheDocument();
     });
 });

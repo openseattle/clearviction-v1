@@ -6,13 +6,13 @@ import education from "../Assets/education.svg";
 import lawyer from "../Assets/lawyer.svg";
 import teamwork from "../Assets/teamwork.svg";
 import calculator from "../Assets/calculator.svg";
+import washington from "../Assets/washington.svg";
 import { Box, Container, Grid, Typography } from "@material-ui/core";
 import ContentSection from "../Components/ContentSection";
 import HomeFAQAccordion from "../Subpages/Home/HomeFAQAccordion";
 import { useHomeStyles } from "../Styles/useHomeStyles";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
-import CheckEligibilityButton from "../Components/CheckEligibilityButton";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
 const HomePage = () => {
@@ -26,20 +26,23 @@ const HomePage = () => {
             <Box className={classes.darkBlueBackground}>
                 <Container maxWidth="lg">
                     <Typography className={classes.headingStyle} variant="h1">
-                        Vacation Eligibility Calculator
+                        Washington's Vacation Eligibility Calculator
                     </Typography>
                     <Grid container>
                         <Grid item xs={12} sm={6}>
                             <Typography className={classes.contentTextStyle} variant="subtitle1" component="h2">
-                                If you have convictions in Washington you can check your eligibility to vacate your
+                                If you have convictions in Washington, you can check your eligibility to vacate your
                                 conviction for free in less than 10 minutes!
                             </Typography>
                             <Box paddingTop={12}>
-                                <CheckEligibilityButton />
+                                <RedesignButtonPrimary href="/calculator/landing-0">
+                                    Check Eligibility
+                                </RedesignButtonPrimary>
+                                ;
                             </Box>
                         </Grid>
                         <Grid item xs={12} sm={6}>
-                            <img src={calculator} className={classes.iconStyle} alt=""></img>
+                            <img src={washington} className={classes.iconStyle} alt=""></img>
                         </Grid>
                     </Grid>
                 </Container>
@@ -72,7 +75,7 @@ const HomePage = () => {
                     <Grid item xs={12} sm={4}>
                         <img className={classes.iconStyle} src={checklist} alt="" />
                         <Typography className={classes.contentTextStyle} variant="body2" align="center">
-                            This helps determine your vacation eligibility.
+                            This helps determine your vacation eligibility in Washington.
                         </Typography>
                     </Grid>
                 </Grid>

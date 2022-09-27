@@ -27,7 +27,6 @@ import {
     otherEduAssistance,
 } from "../data/resourcesData";
 import FactGroup from "../Components/FactGroup";
-import FactTextPlaceholder from "../Components/FactTextPlaceholder";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
 const employmentFacts = [
@@ -116,8 +115,8 @@ const ResourcesPage = () => {
                 <Grid container spacing={4}>
                     <Grid item xs={12} sm={6} md={6}>
                         <Typography className={classes.contentTextStyle} variant="subtitle1" component="p">
-                            The process of vacating a conviction is convoluted, but it’s needed to avoid barriers in
-                            employment, housing and education.
+                            The process of vacating a conviction in Washington is convoluted, but it’s needed to avoid
+                            barriers in employment, housing and education.
                         </Typography>
                         <Typography className={classes.contentTextStyle} variant="subtitle1" component="p">
                             Find out why it’s important to vacate your conviction and get resources to help you while

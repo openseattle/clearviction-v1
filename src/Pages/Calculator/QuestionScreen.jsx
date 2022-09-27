@@ -68,7 +68,7 @@ const QuestionScreen = props => {
                                                 role="button"
                                                 href={b.href}
                                             >
-                                                {b.text}
+                                                {b.linkText}
                                             </ExternalLink>
                                         </li>
                                     </ul>

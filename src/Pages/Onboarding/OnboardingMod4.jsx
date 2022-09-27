@@ -82,7 +82,7 @@ const doing = {
     title: "See what the teams are doing",
     linkTitle: "Airtable teams list",
     linkIcon: "link",
-    linkLocation: "https://airtable.com/appfJZShN8K4tcWHU/tblln6jlsrsqfU0TO/viwrhv3vIo3LqHezH?blocks=hide",
+    linkLocation: "https://airtable.com/shrK9XGUYAHu8gy6k",
 };
 
 const button1 = {

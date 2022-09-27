@@ -7,12 +7,13 @@ import { CVPListItem } from "../../ui-kit/ListItem";
 import { BodyType } from "../../data/calculatorPagesTypes";
 import ProgressBar from "../../Components/ProgressBar";
 import { ExternalLink } from "../../ui-kit/ExternalLink";
+import PropTypes from "prop-types";
 
 const EndScreen = props => {
     const classes = EndScreenStyles();
 
     return (
-        <Grid container className={classes.grid}>
+        <Grid data-testid="end-screen" container className={classes.grid}>
             {props.progressBar && (
                 <Grid container>
                     <ProgressBar currentSectionName={props.currentSectionName} />
@@ -31,9 +32,9 @@ const EndScreen = props => {
                         switch (b.type) {
                             case BodyType.LIST: {
                                 return (
-                                    <ul>
-                                        {b.items.map((item, idx) => (
-                                            <li className={classes.list} key={idx}>
+                                    <ul key={idx}>
+                                        {b.items.map((item, itemIdx) => (
+                                            <li className={classes.list} key={itemIdx}>
                                                 {item}
                                             </li>
                                         ))}
@@ -54,16 +55,13 @@ const EndScreen = props => {
                                 );
                             case BodyType.LINK:
                                 return (
-                                    <ul>
+                                    <ul key={idx}>
                                         <li className={classes.list} key={idx}>
-                                            <ExternalLink
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                role="button"
-                                                href={b.href}
-                                            >
-                                                {b.text}
+                                            {b.textBeforeLink && <span>{b.textBeforeLink}</span>}
+                                            <ExternalLink target="_blank" rel="noopener noreferrer" href={b.href}>
+                                                {b.linkText}
                                             </ExternalLink>
+                                            {b.textAfterLink && <span>{b.textAfterLink}</span>}
                                         </li>
                                     </ul>
                                 );
@@ -98,6 +96,15 @@ const EndScreen = props => {
             </Grid>
         </Grid>
     );
+};
+
+EndScreen.propTypes = {
+    header: PropTypes.string.isRequired,
+    body: PropTypes.arrayOf(PropTypes.object).isRequired,
+    buttons: PropTypes.arrayOf(PropTypes.object).isRequired,
+    disclaimer: PropTypes.string.isRequired,
+    showRestartButton: PropTypes.bool.isRequired,
+    progressBar: PropTypes.object.isRequired,
 };
 
 export default EndScreen;
