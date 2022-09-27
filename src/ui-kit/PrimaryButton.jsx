@@ -1,4 +1,5 @@
-import { Button, makeStyles } from "@material-ui/core";
+import { Button } from "@mui/material";
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(theme => ({
     flexGrow: {
@@ -12,11 +13,11 @@ const useStyles = makeStyles(theme => ({
         minWidth: "248px",
         maxWidth: "30vw",
         fontSize: "18px",
-        [theme.breakpoints.down("md")]: {
+        [theme.breakpoints.down('lg')]: {
             width: "100%",
             fontSize: "14px",
         },
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down('md')]: {
             width: "100%",
             fontSize: "12px",
         },

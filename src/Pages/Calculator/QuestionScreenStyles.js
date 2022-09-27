@@ -1,4 +1,4 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from '@mui/styles';
 
 export const QuestionScreenStyles = makeStyles(theme => ({
     grid: {
@@ -35,18 +35,18 @@ export const QuestionScreenStyles = makeStyles(theme => ({
     },
     list: {
         fontSize: "18px",
-        [theme.breakpoints.down("xs")]: {
+        [theme.breakpoints.down('sm')]: {
             fontSize: "14px",
         },
     },
     dialogImg: {
         display: "flex",
         justifyContent: "center",
-        [theme.breakpoints.down("xs")]: {
+        [theme.breakpoints.down('sm')]: {
             width: "175px",
             height: "90px",
         },
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down('md')]: {
             width: "375px",
             height: "150px",
         },

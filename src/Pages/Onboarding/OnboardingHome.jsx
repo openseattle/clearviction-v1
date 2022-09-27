@@ -1,5 +1,5 @@
 // styling
-import { Typography } from "@material-ui/core";
+import { Typography } from "@mui/material";
 import { useHomeStyles } from "../../Styles/Onboarding/useHomeStyles";
 import { useEffect, useRef } from "react";
 

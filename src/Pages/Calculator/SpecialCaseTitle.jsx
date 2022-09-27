@@ -1,4 +1,4 @@
-import { Grid, Typography, Link } from "@material-ui/core";
+import { Grid, Typography, Link } from "@mui/material";
 import { BodyType } from "../../data/calculatorPagesTypes";
 import { BackButton } from "../../ui-kit/BackButton";
 import PrimaryButton from "../../ui-kit/PrimaryButton";

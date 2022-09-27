@@ -1,5 +1,6 @@
-import { Card, CardActionArea, CardActions, CardContent, Collapse, makeStyles, Typography } from "@material-ui/core";
-import { ExpandMore } from "@material-ui/icons";
+import { Card, CardActionArea, CardActions, CardContent, Collapse, Typography } from "@mui/material";
+import { makeStyles } from '@mui/styles';
+import { ExpandMore } from "@mui/icons-material";
 import { useState } from "react";
 
 const useStyles = makeStyles(theme => ({

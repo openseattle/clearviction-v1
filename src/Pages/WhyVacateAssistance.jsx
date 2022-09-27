@@ -1,4 +1,4 @@
-import { Container, Typography, Grid } from "@material-ui/core";
+import { Container, Typography, Grid } from "@mui/material";
 import { GovBarriers } from "../Subpages/WhyVacate/GovBarriers";
 import { WhyVacateHousingStyles } from "../Styles/WhyVacateHousingStyles";
 import { TextWithCTAButton } from "../Subpages/WhyVacate/TextWithCTAButton";

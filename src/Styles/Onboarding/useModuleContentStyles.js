@@ -1,4 +1,4 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from '@mui/styles';
 
 export const useModuleContentStyles = makeStyles(theme => ({
     mainModuleContentCard: {
@@ -18,7 +18,7 @@ export const useModuleContentStyles = makeStyles(theme => ({
         color: theme.palette.primary.main,
         marginBottom: theme.spacing(5),
         lineHeight: 1.2,
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down('md')]: {
             marginLeft: theme.spacing(1),
         },
     },
@@ -29,7 +29,7 @@ export const useModuleContentStyles = makeStyles(theme => ({
         margin: "auto",
         color: "#2b2929",
         textAlign: "center",
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down('md')]: {
             width: "90%",
         },
     },
@@ -45,7 +45,7 @@ export const useModuleContentStyles = makeStyles(theme => ({
         width: "50%",
         margin: "40px auto",
         textAlign: "center",
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down('md')]: {
             width: "80%",
             margin: "10px auto",
         },
@@ -57,7 +57,7 @@ export const useModuleContentStyles = makeStyles(theme => ({
     },
     icon: {
         width: "70px",
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down('md')]: {
             width: "50px",
         },
     },
@@ -75,7 +75,7 @@ export const useModuleContentStyles = makeStyles(theme => ({
         fontWeight: "bold",
         display: "flex",
         padding: theme.spacing(1),
-        [theme.breakpoints.down("xs")]: {
+        [theme.breakpoints.down('sm')]: {
             borderRadius: "25px",
             width: "50%",
             height: "60px",
@@ -87,7 +87,7 @@ export const useModuleContentStyles = makeStyles(theme => ({
     linkIcon: {
         margin: theme.spacing(1.5),
         marginRight: theme.spacing(3),
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down('md')]: {
             width: "30px",
             margin: theme.spacing(1),
             marginRight: theme.spacing(3),
@@ -101,7 +101,7 @@ export const useModuleContentStyles = makeStyles(theme => ({
     linkText: {
         color: "#4e6c99",
         alignSelf: "center",
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down('md')]: {
             margin: theme.spacing(0),
             fontSize: "calc(14px + 0.390625vw)",
         },

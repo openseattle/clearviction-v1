@@ -7,7 +7,7 @@ import {
     DialogTitle,
     Grid,
     Typography,
-} from "@material-ui/core";
+} from "@mui/material";
 import { useState } from "react";
 import { BodyType } from "../../data/calculatorPagesTypes";
 import { trackClick } from "../../trackingUtils";

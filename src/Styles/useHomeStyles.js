@@ -1,4 +1,4 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from '@mui/styles';
 
 export const useHomeStyles = makeStyles(theme => ({
     darkBlueBackground: {
@@ -19,7 +19,7 @@ export const useHomeStyles = makeStyles(theme => ({
     },
     paperStyle: {
         padding: theme.spacing(4),
-        [theme.breakpoints.down("xs")]: {
+        [theme.breakpoints.down('sm')]: {
             padding: theme.spacing(1),
         },
     },
@@ -68,7 +68,7 @@ export const useHomeStyles = makeStyles(theme => ({
     },
     reportStyle: {
         padding: theme.spacing(3),
-        [theme.breakpoints.down("xs")]: {
+        [theme.breakpoints.down('sm')]: {
             padding: theme.spacing(0),
         },
     },

@@ -1,5 +1,5 @@
-import { Typography, ListItem, Button, Collapse } from "@material-ui/core";
-import { ExpandMore } from "@material-ui/icons";
+import { Typography, ListItem, Button, Collapse } from "@mui/material";
+import { ExpandMore } from "@mui/icons-material";
 import { useState } from "react";
 
 const NavButtonMobile = ({ page, classes }) => {

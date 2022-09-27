@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography } from "@material-ui/core";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import FactGroup from "../Components/FactGroup";
 import timeGraphic from "../Assets/time.svg";
 import emails from "../Assets/sending_emails.svg";

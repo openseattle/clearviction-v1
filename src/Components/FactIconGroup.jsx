@@ -1,4 +1,4 @@
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 import Fact from "./Fact";
 
 const FactIconGroup = ({ facts }) => {

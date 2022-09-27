@@ -7,15 +7,15 @@ import {
     Grid,
     List,
     ListItem,
-    makeStyles,
     Typography,
-} from "@material-ui/core";
+} from "@mui/material";
+import { makeStyles } from '@mui/styles';
 
 import venmo from "../Assets/venmo.png";
 
 const useStyles = makeStyles(theme => ({
     closeButtonStyle: {
-        color: theme.palette.highlight.main,
+        color: theme.palette.secondary.main,
         margin: theme.spacing(2),
     },
 }));
