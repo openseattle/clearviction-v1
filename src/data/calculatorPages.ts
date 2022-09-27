@@ -566,7 +566,8 @@ const data: Pages = {
             },
             {
                 type: BodyType.LINK,
-                linkText: "Chapter 9A.44 RCW - sex offenses, except for failure to register as a sex offender under RCW 9A.44.132",
+                linkText:
+                    "Chapter 9A.44 RCW - sex offenses, except for failure to register as a sex offender under RCW 9A.44.132",
                 href: "https://app.leg.wa.gov/rcw/default.aspx?cite=9a.44",
             },
         ],
@@ -606,7 +607,8 @@ const data: Pages = {
             },
             {
                 type: BodyType.LINK,
-                linkText: "Chapter 9A.44 RCW - sex offenses, except for failure to register as a sex offender under RCW 9A.44.132",
+                linkText:
+                    "Chapter 9A.44 RCW - sex offenses, except for failure to register as a sex offender under RCW 9A.44.132",
                 href: "https://app.leg.wa.gov/rcw/default.aspx?cite=9a.44",
             },
         ],
@@ -931,7 +933,8 @@ const data: Pages = {
             },
             {
                 type: BodyType.LINK,
-                linkText: "Washington Law Help instructions on vacating a conviction related to Treaty Indian Fishing Rights. ",
+                linkText:
+                    "Washington Law Help instructions on vacating a conviction related to Treaty Indian Fishing Rights. ",
                 href: "https://www.washingtonlawhelp.org/files/C9D2EA3F-0350-D9AF-ACAE-BF37E9BC9FFA/attachments/D7D7897D-DE79-4E5A-B51F-B1708D37541C/8714en_vacate-a-conviction-treaty-indian-fishing-rights.pdf",
             },
         ],
@@ -1551,13 +1554,13 @@ const data: Pages = {
             {
                 type: BodyType.LINK,
                 textBeforeLink: 'Fill out a "Petition and Declaration for Order Vacating Conviction" form: ',
-                linkText: 'CrRLJ 09.0100',
+                linkText: "CrRLJ 09.0100",
                 href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
             },
             {
                 type: BodyType.LINK,
-                textBeforeLink: 'Read instructions for vacating a conviction: ',
-                linkText: 'CrRLJ 09.0300',
+                textBeforeLink: "Read instructions for vacating a conviction: ",
+                linkText: "CrRLJ 09.0300",
                 href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
             },
             {
