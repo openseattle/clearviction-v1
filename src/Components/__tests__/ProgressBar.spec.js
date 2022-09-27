@@ -20,6 +20,6 @@ describe("<ProgressBar />", () => {
 
         const firstStepLabel = screen.getByText("Surrounding Circumstances");
         expect(firstStepLabel).toBeVisible();
-        expect(firstStepLabel).toHaveClass('Mui-active');
+        expect(firstStepLabel).toHaveClass("Mui-active");
     });
 });
