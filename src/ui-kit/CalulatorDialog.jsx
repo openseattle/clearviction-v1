@@ -1,33 +1,30 @@
-import React from "react";
-import { useLocation } from "react-router-dom";
+// import { useLocation } from "react-router-dom";
 import { Typography, DialogTitle, DialogContent, DialogContentText, CardMedia } from "@material-ui/core";
-import { QuestionScreenStyles } from "../Pages/Calculator/QuestionScreenStyles";
+// import { QuestionScreenStyles } from "../Pages/Calculator/QuestionScreenStyles";
 import { ExternalLink } from "./ExternalLink";
-import RAPSheet from "../Assets/RAPSheet.png";
+// import RAPSheet from "../Assets/RAPSheet.png";
 
 const CalulatorDialog = props => {
-    const classes = QuestionScreenStyles();
-    const location = useLocation();
+    // const classes = QuestionScreenStyles();
+    // const location = useLocation();
 
     return (
         <>
-            <DialogTitle>Not sure of the answer?</DialogTitle>
+            <DialogTitle>Not sure?</DialogTitle>
             <DialogContent>
                 <DialogContentText style={{ color: "black" }}>
                     <Typography style={{ marginBottom: "1rem" }}>
-                        Let's find the answer in your RAP (Record of Arrests and Prosecutions) sheet.
-                    </Typography>
-                    <Typography style={{ marginBottom: "1rem" }}>
-                        You can request for your Criminal History Record{" "}
+                        If you don't know the answer, request your criminal record through{" "}
                         <ExternalLink
                             target="_blank"
                             href="https://www.wsp.wa.gov/crime/criminal-history"
                             rel="noreferrer"
                         >
-                            here.
+                            Washington State Patrol.
                         </ExternalLink>
                     </Typography>
-                    <Typography>If you have your RAP sheet:</Typography>
+
+                    {/* <Typography>If you have your RAP sheet:</Typography>
                     <ol>
                         <li style={{ marginBottom: ".75rem" }}>
                             Refer to Section <strong>"6: CONVICTION AND/OR ADVERSE FINDING SUMMARY"</strong> (see the
@@ -167,7 +164,7 @@ const CalulatorDialog = props => {
                         </>
                     ) : (
                         ""
-                    )}
+                    )} */}
                 </DialogContentText>
             </DialogContent>
         </>
