@@ -7,7 +7,6 @@ const useStyles = makeStyles(theme => ({
         borderRadius: "50px",
         padding: "16px",
         backgroundColor: theme.palette.primary.light,
-        // primary.contrastText only has 2.07:1 contrast ratio with primary.light
         color: theme.palette.secondary.contrastText,
         "&:hover": {
             backgroundColor: theme.palette.secondary,
