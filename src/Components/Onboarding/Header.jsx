@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 import smallLogo from "../../Assets/Onboarding/smallLogo.svg";
 
-import { Typography, Box, IconButton, List, ListItem, Drawer, ListItemText } from "@material-ui/core";
-import { MenuSharp as MenuIcon, CloseSharp } from "@material-ui/icons";
+import { Typography, Box, IconButton, List, ListItem, Drawer, ListItemText } from "@mui/material";
+import { MenuSharp as MenuIcon, CloseSharp } from "@mui/icons-material";
 import { useHeaderStyles } from "../../Styles/Onboarding/useHeaderStyles";
 import SocialContainer from "./SocialContainer";
 

@@ -1,4 +1,4 @@
-import { Box, Grid } from "@material-ui/core";
+import { Box, Grid } from "@mui/material";
 
 import pha from "../../Assets/city.svg";
 import supportiveHousing from "../../Assets/diversity.svg";

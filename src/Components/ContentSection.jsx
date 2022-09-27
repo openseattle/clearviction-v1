@@ -1,4 +1,4 @@
-import { Container, Paper, Typography } from "@material-ui/core";
+import { Container, Paper, Typography } from "@mui/material";
 import { useHomeStyles } from "../Styles/useHomeStyles";
 
 const ContentSection = props => {

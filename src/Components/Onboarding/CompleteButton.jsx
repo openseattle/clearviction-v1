@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Typography } from "@material-ui/core";
+import { Typography } from "@mui/material";
 import { useButtonStyles } from "../../Styles/Onboarding/useButtonStyles";
 import openCircle from "../../Assets/Onboarding/openCircle.png";
 import circleCheck from "../../Assets/Onboarding/circleCheck.png";

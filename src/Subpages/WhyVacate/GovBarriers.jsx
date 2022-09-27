@@ -1,4 +1,4 @@
-import { Container, Typography, Box, List } from "@material-ui/core";
+import { Container, Typography, Box, List } from "@mui/material";
 import { WhyVacateHousingStyles } from "../../Styles/WhyVacateHousingStyles";
 import ListItemMobileSnap from "../../ui-kit/ListItemMobileSnap";
 import snap from "../../Assets/chicken.svg";

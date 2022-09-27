@@ -1,4 +1,4 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from '@mui/styles';
 
 export const useMod2Styles = makeStyles(theme => ({
     subHeading: {
@@ -11,7 +11,7 @@ export const useMod2Styles = makeStyles(theme => ({
         marginBottom: theme.spacing(8),
         textAlign: "center",
         paddingLeft: theme.spacing(3),
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down('md')]: {
             fontSize: "40px",
             marginTop: theme.spacing(8),
             marginBottom: theme.spacing(6),
@@ -25,7 +25,7 @@ export const useMod2Styles = makeStyles(theme => ({
             justifyContent: "space-around",
             textAlign: "center",
             padding: "0 50px",
-            [theme.breakpoints.down("sm")]: {
+            [theme.breakpoints.down('md')]: {
                 padding: 0,
                 flexDirection: "column",
                 margin: "auto",

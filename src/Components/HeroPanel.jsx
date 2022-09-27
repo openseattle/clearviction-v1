@@ -1,4 +1,5 @@
-import { Box, makeStyles, Typography } from "@material-ui/core";
+import { Box, Typography } from "@mui/material";
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(theme => ({
     hero: {
@@ -13,7 +14,7 @@ const useStyles = makeStyles(theme => ({
         paddingTop: theme.spacing(2),
         paddingBottom: theme.spacing(2),
         fontSize: 24,
-        [theme.breakpoints.down("xs")]: {
+        [theme.breakpoints.down('sm')]: {
             fontSize: 18,
         },
     },

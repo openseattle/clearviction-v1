@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 // components
 import ModuleCard from "./ModuleCard";
-import { Grid } from "@material-ui/core";
+import { Grid } from "@mui/material";
 
 // icons
 import circleCheck from "../../Assets/Onboarding/circleCheck.png";

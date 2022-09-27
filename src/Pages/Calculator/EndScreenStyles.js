@@ -1,4 +1,4 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from '@mui/styles';
 
 export const EndScreenStyles = makeStyles(theme => ({
     grid: {
@@ -40,7 +40,7 @@ export const EndScreenStyles = makeStyles(theme => ({
     },
     list: {
         fontSize: "18px",
-        [theme.breakpoints.down("xs")]: {
+        [theme.breakpoints.down('sm')]: {
             fontSize: "14px",
         },
     },

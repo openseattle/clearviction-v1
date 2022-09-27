@@ -8,7 +8,7 @@ import {
     ListItemIcon,
     Dialog,
     DialogContent,
-} from "@material-ui/core";
+} from "@mui/material";
 import { useModuleContentStyles } from "../../Styles/Onboarding/useModuleContentStyles";
 import { useModalStyles } from "../../Styles/Onboarding/useModalStyles";
 import link from "../../Assets/Onboarding/link.svg";

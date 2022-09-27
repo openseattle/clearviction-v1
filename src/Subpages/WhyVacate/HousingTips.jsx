@@ -5,8 +5,8 @@ import {
     NoSimOutlined,
     BorderColorOutlined,
     DescriptionOutlined,
-} from "@material-ui/icons";
-import { Box, Grid, Typography, Container, List } from "@material-ui/core";
+} from "@mui/icons-material";
+import { Box, Grid, Typography, Container, List } from "@mui/material";
 import { WhyVacateHousingStyles } from "../../Styles/WhyVacateHousingStyles";
 import { IconWithHeaderAndText } from "./IconWithHeaderAndText";
 

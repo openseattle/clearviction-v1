@@ -1,4 +1,4 @@
-import { Grid, Typography, Container } from "@material-ui/core";
+import { Grid, Typography, Container } from "@mui/material";
 import { HousingTips } from "../Subpages/WhyVacate/HousingTips";
 import { HousingBarriers } from "../Subpages/WhyVacate/HousingBarriers";
 import { HousingOtherOptions } from "../Subpages/WhyVacate/HousingOtherOptions";

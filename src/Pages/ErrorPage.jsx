@@ -3,7 +3,7 @@ import { trackPageview } from "../trackingUtils";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
 /** MATERIAL UI IMPORTS */
-import { Typography, Container, Grid } from "@material-ui/core";
+import { Typography, Container, Grid } from "@mui/material";
 
 const ErrorPage = () => {
     useEffect(() => trackPageview("Error"), []);

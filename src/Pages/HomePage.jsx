@@ -7,7 +7,7 @@ import lawyer from "../Assets/lawyer.svg";
 import teamwork from "../Assets/teamwork.svg";
 import calculator from "../Assets/calculator.svg";
 import washington from "../Assets/washington.svg";
-import { Box, Container, Grid, Typography } from "@material-ui/core";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import ContentSection from "../Components/ContentSection";
 import HomeFAQAccordion from "../Subpages/Home/HomeFAQAccordion";
 import { useHomeStyles } from "../Styles/useHomeStyles";
@@ -38,7 +38,6 @@ const HomePage = () => {
                                 <RedesignButtonPrimary href="/calculator/landing-0">
                                     Check Eligibility
                                 </RedesignButtonPrimary>
-                                ;
                             </Box>
                         </Grid>
                         <Grid item xs={12} sm={6}>

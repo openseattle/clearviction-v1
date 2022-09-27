@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { Typography, DialogTitle, DialogContent, DialogContentText, CardMedia } from "@material-ui/core";
+import { Typography, DialogTitle, DialogContent, DialogContentText, CardMedia } from "@mui/material";
 import { QuestionScreenStyles } from "../Pages/Calculator/QuestionScreenStyles";
 import { ExternalLink } from "./ExternalLink";
 import RAPSheet from "../Assets/RAPSheet.png";

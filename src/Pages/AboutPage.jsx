@@ -1,5 +1,5 @@
-import { Container, Grid, Typography, Box, Divider } from "@material-ui/core";
-import { HourglassEmpty, LocalAtmOutlined, PanToolOutlined } from "@material-ui/icons";
+import { Container, Grid, Typography, Box, Divider } from "@mui/material";
+import { HourglassEmpty, LocalAtmOutlined, PanToolOutlined } from "@mui/icons-material";
 
 import map from "../Assets/map.svg";
 import checklist1 from "../Assets/checklist1.svg";

@@ -1,4 +1,4 @@
-import { Typography } from "@material-ui/core";
+import { Typography } from "@mui/material";
 
 /**
  * BulletedListMui is a solution for unordered lists that want bullet points

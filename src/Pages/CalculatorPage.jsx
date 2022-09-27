@@ -5,7 +5,7 @@ import calculatorPages from "../data/calculatorPages";
 import "../CSS/Calculator.css";
 
 /** MATERIAL UI IMPORTS */
-import { Container, Grid } from "@material-ui/core";
+import { Container, Grid } from "@mui/material";
 import MainBranchTitle from "./Calculator/MainBranchTitle";
 import SpecialCaseTitle from "./Calculator/SpecialCaseTitle";
 import { PageType } from "../data/calculatorPagesTypes";

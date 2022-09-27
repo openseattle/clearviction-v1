@@ -1,6 +1,6 @@
-import { List, ListItem, Grid, Typography, ListItemText } from "@material-ui/core";
-import { HomeWorkOutlined } from "@material-ui/icons";
-import { Call } from "@material-ui/icons";
+import { List, ListItem, Grid, Typography, ListItemText } from "@mui/material";
+import { HomeWorkOutlined } from "@mui/icons-material";
+import { Call } from "@mui/icons-material";
 import { useResourcesStyles } from "../Styles/useResourcesStyles";
 import { ListItemLink } from "../ui-kit/ListItemLink";
 

@@ -1,5 +1,5 @@
-import { Accordion, AccordionDetails, AccordionSummary, Typography, Box } from "@material-ui/core";
-import { ExpandMore } from "@material-ui/icons";
+import { Accordion, AccordionDetails, AccordionSummary, Typography, Box } from "@mui/material";
+import { ExpandMore } from "@mui/icons-material";
 
 function a11yProps(index) {
     return {

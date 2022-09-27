@@ -8,7 +8,7 @@ import {
     DialogContentText,
     DialogActions,
     Button,
-} from "@material-ui/core";
+} from "@mui/material";
 import { BackButton } from "../../ui-kit/BackButton";
 import PrimaryButton from "../../ui-kit/PrimaryButton";
 import { QuestionScreenStyles } from "./QuestionScreenStyles";
