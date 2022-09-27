@@ -36,7 +36,7 @@ This repo is for our informational website, which will eventually be home to the
 To get our static website up and running on your machine, you can follow the commands below:
 
 ```
-$ git clone https://github.com/openseattle/cvp
+$ git clone https://github.com/openseattle/clearviction.git
 ```
 
 ### Installation
