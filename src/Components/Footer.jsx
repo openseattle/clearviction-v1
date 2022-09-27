@@ -104,7 +104,11 @@ const Footer = () => {
                                                 sm={12}
                                                 md={6}
                                             >
-                                                <Link data-testid="footer-link" className={classes.linkStyles} href={page.url}>
+                                                <Link
+                                                    data-testid="footer-link"
+                                                    className={classes.linkStyles}
+                                                    href={page.url}
+                                                >
                                                     {page.name}
                                                 </Link>
                                             </Grid>
