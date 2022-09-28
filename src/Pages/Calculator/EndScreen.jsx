@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography } from "@mui/material";
 import { BackButton } from "../../ui-kit/BackButton";
 import PrimaryButton from "../../ui-kit/PrimaryButton";
 import { EndScreenStyles } from "./EndScreenStyles";
@@ -7,7 +7,7 @@ import { CVPListItem } from "../../ui-kit/ListItem";
 import { BodyType } from "../../data/calculatorPagesTypes";
 import ProgressBar from "../../Components/ProgressBar";
 import { ExternalLink } from "../../ui-kit/ExternalLink";
-import PropTypes from 'prop-types';
+import PropTypes from "prop-types";
 
 const EndScreen = props => {
     const classes = EndScreenStyles();
@@ -57,19 +57,11 @@ const EndScreen = props => {
                                 return (
                                     <ul key={idx}>
                                         <li className={classes.list} key={idx}>
-                                            {b.textBeforeLink &&
-                                                <span>{b.textBeforeLink}</span>
-                                            }
-                                            <ExternalLink
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                href={b.href}
-                                            >
+                                            {b.textBeforeLink && <span>{b.textBeforeLink}</span>}
+                                            <ExternalLink target="_blank" rel="noopener noreferrer" href={b.href}>
                                                 {b.linkText}
                                             </ExternalLink>
-                                            {b.textAfterLink &&
-                                                <span>{b.textAfterLink}</span>
-                                            }
+                                            {b.textAfterLink && <span>{b.textAfterLink}</span>}
                                         </li>
                                     </ul>
                                 );
@@ -110,9 +102,9 @@ EndScreen.propTypes = {
     header: PropTypes.string.isRequired,
     body: PropTypes.arrayOf(PropTypes.object).isRequired,
     buttons: PropTypes.arrayOf(PropTypes.object).isRequired,
-    disclaimer: PropTypes.string.isRequired,
     showRestartButton: PropTypes.bool.isRequired,
-    progressBar: PropTypes.object.isRequired,
+    disclaimer: PropTypes.string,
+    progressBar: PropTypes.object,
 };
 
 export default EndScreen;

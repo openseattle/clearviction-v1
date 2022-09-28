@@ -1,4 +1,4 @@
-import { Box, Container, Divider, Grid, Typography } from "@material-ui/core";
+import { Box, Container, Divider, Grid, Typography } from "@mui/material";
 import RedesignHeroPanel from "../Components/RedesignHeroPanel";
 
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";

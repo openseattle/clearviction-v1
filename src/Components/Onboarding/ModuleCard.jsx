@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Typography, Grid } from "@material-ui/core";
+import { Typography, Grid } from "@mui/material";
 
 // icons
 import screens from "../../Assets/Onboarding/screens.svg";

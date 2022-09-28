@@ -1,4 +1,5 @@
-import { Box, Container, makeStyles, Typography } from "@material-ui/core";
+import { Box, Container, Typography } from "@mui/material";
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(theme => ({
     hero: {

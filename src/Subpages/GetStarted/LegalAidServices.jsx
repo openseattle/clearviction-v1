@@ -1,4 +1,4 @@
-import { Grid, Link, List, ListItem } from "@material-ui/core";
+import { Grid, Link, List, ListItem } from "@mui/material";
 import FactExpandMoreCard from "../../Components/FactExpandMoreCard";
 import { adultLegalAid, juvenileLegalAid, proSePatronsLegalAid } from "../../data/resourcesData";
 
@@ -10,7 +10,12 @@ const aidFacts = [
             <List>
                 {proSePatronsLegalAid.map(resource => (
                     <ListItem key={resource.name}>
-                        <Link target="_blank" rel="noopener noreferrer" href={resource.url} variant="caption">
+                        <Link
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={resource.url}
+                            variant="caption"
+                            underline="hover">
                             {resource.name}
                         </Link>
                     </ListItem>
@@ -25,7 +30,12 @@ const aidFacts = [
             <List>
                 {adultLegalAid.map(resource => (
                     <ListItem key={resource.name}>
-                        <Link target="_blank" rel="noopener noreferrer" href={resource.url} variant="caption">
+                        <Link
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={resource.url}
+                            variant="caption"
+                            underline="hover">
                             {resource.name}
                         </Link>
                     </ListItem>
@@ -40,7 +50,12 @@ const aidFacts = [
             <List>
                 {juvenileLegalAid.map(resource => (
                     <ListItem key={resource.name}>
-                        <Link target="_blank" rel="noopener noreferrer" href={resource.url} variant="caption">
+                        <Link
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            href={resource.url}
+                            variant="caption"
+                            underline="hover">
                             {resource.name}
                         </Link>
                     </ListItem>

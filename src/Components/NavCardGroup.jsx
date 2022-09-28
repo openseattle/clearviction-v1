@@ -1,4 +1,5 @@
-import { Box, Button, Grid, makeStyles, Typography } from "@material-ui/core";
+import { Box, Button, Grid, Typography } from "@mui/material";
+import { makeStyles } from '@mui/styles';
 import { NavLink } from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
@@ -9,7 +10,7 @@ const useStyles = makeStyles(theme => ({
     cardStyle: {
         width: "100%",
         minHeight: 172,
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down('md')]: {
             minHeight: 48,
         },
         borderRadius: 0,
@@ -25,14 +26,14 @@ const useStyles = makeStyles(theme => ({
     },
     cardTitleStyle: {
         padding: theme.spacing(2),
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down('md')]: {
             padding: theme.spacing(1),
         },
     },
     cardTextStyle: {
         fontSize: 14,
         padding: theme.spacing(2),
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down('md')]: {
             padding: theme.spacing(1),
         },
     },

@@ -1,4 +1,4 @@
-import { Box, Container, Divider, Grid } from "@material-ui/core";
+import { Box, Container, Divider, Grid } from "@mui/material";
 
 import DonatePage from "./DonatePage";
 import PartnerPage from "./PartnerPage";

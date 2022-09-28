@@ -1,5 +1,6 @@
-import { Button, makeStyles, Menu, MenuItem, Typography } from "@material-ui/core";
-import { ExpandMoreOutlined } from "@material-ui/icons";
+import { Button, Menu, MenuItem, Typography } from "@mui/material";
+import { makeStyles } from '@mui/styles';
+import { ExpandMoreOutlined } from "@mui/icons-material";
 import { useState } from "react";
 
 const useStyles = makeStyles(theme => ({
@@ -8,7 +9,13 @@ const useStyles = makeStyles(theme => ({
         marginRight: theme.spacing(1),
         color: "white",
         textTransform: "none",
-        "&:hover": { color: theme.palette.secondary.light },
+        borderRight: "none",
+        border: "1px solid transparent",
+        "&:hover": { 
+            color: theme.palette.secondary.light,
+            borderRight: "none",
+            border: "1px solid transparent",
+        },
     },
     navText: {},
 }));
@@ -28,6 +35,8 @@ const NavButton = ({ page, theme }) => {
         return (
             <>
                 <Button
+                    variant="text"
+                    sx={{ border: 'none' }}
                     aria-controls="sub menu"
                     aria-haspopup="true"
                     className={classes.navButtonStyle}

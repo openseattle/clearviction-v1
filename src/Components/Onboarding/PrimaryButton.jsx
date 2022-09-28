@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Typography } from "@material-ui/core";
+import { Typography } from "@mui/material";
 import { useButtonStyles } from "../../Styles/Onboarding/useButtonStyles";
 
 function PrimaryButton(props) {

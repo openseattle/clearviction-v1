@@ -1,4 +1,4 @@
-import { Container, Typography, Box, Grid } from "@material-ui/core";
+import { Container, Typography, Box, Grid } from "@mui/material";
 import ContactForm from "../Components/ContactForm";
 import { useContactStyles } from "../Styles/useContactStyles";
 import new_message from "../Assets/new_message.svg";

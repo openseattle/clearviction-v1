@@ -1,4 +1,5 @@
-import { Tabs, Tab, Box, makeStyles } from "@material-ui/core";
+import { Tabs, Tab, Box } from "@mui/material";
+import { makeStyles } from '@mui/styles';
 import { useState } from "react";
 
 const TabPanel = props => {

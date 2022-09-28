@@ -1,4 +1,4 @@
-import { Box, Grid, Typography, List, Container } from "@material-ui/core";
+import { Box, Grid, Typography, List, Container } from "@mui/material";
 import { WhyVacateHousingStyles } from "../../Styles/WhyVacateHousingStyles";
 import { CVPListItem } from "../../ui-kit/ListItem";
 
