@@ -4,6 +4,7 @@ _Required unless this is just a change to documentation._
 - _[Replace with link]_
 
 ### Type of change
+_Please delete any options that are not relevant_
 
 - [ ] Bug fix (non-breaking change which fixes an issue)
 - [ ] New feature (non-breaking change which adds functionality)
