@@ -6,10 +6,10 @@ type Page = {
 
 // commented out pages are still in under development
 const pages: Page[] = [
-  // { name: "Home", url: "/" },
+  { name: "Home", url: "/" },
   // { name: "Calculator", url: "/calculator" },
   { name: "Get Started", url: "/get-started", },
-  { name: "About", url: "/about" },
+  // { name: "About", url: "/about" },
   { name: "Get Involved", url: "/get-involved",
       // subpages: [
       //   { name: "Volunteer", url: "/get-involved/volunteer" },
