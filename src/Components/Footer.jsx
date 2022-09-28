@@ -25,6 +25,8 @@ const useStyles = makeStyles(theme => ({
         margin: theme.spacing(1),
     },
     linkStyles: {
+        lineHeight: 2.5,
+        textDecoration: "none",
         color: "white",
         "&:hover": { color: "white" },
     },
