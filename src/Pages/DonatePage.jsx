@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-import { Box, Container, Grid, Typography } from "@material-ui/core";
+import { Box, Container, Grid, Typography } from "@mui/material";
 
 import laptop from "../Assets/laptop.svg";
 import startup from "../Assets/startup.svg";

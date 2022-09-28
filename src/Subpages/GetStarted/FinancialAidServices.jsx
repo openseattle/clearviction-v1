@@ -1,4 +1,4 @@
-import { Grid, Link, List, ListItem, Typography } from "@material-ui/core";
+import { Grid, Link, List, ListItem, Typography } from "@mui/material";
 import FactExpandMoreCard from "../../Components/FactExpandMoreCard";
 import { ExternalLink } from "../../ui-kit/ExternalLink";
 

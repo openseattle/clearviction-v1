@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography } from "@mui/material";
 import { BackButton } from "../../ui-kit/BackButton";
 import PrimaryButton from "../../ui-kit/PrimaryButton";
 import { EndScreenStyles } from "./EndScreenStyles";
@@ -102,9 +102,9 @@ EndScreen.propTypes = {
     header: PropTypes.string.isRequired,
     body: PropTypes.arrayOf(PropTypes.object).isRequired,
     buttons: PropTypes.arrayOf(PropTypes.object).isRequired,
-    disclaimer: PropTypes.string.isRequired,
     showRestartButton: PropTypes.bool.isRequired,
-    progressBar: PropTypes.object.isRequired,
+    disclaimer: PropTypes.string,
+    progressBar: PropTypes.object,
 };
 
 export default EndScreen;

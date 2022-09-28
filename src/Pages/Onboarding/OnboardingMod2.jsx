@@ -1,5 +1,5 @@
 import Header from "../../Components/Onboarding/Header";
-import { Box, Grid, Typography } from "@material-ui/core";
+import { Box, Grid, Typography } from "@mui/material";
 import ModuleContent from "../../Components/Onboarding/ModuleContent";
 import { useModuleContentStyles } from "../../Styles/Onboarding/useModuleContentStyles";
 import Footer from "../../Components/Onboarding/Footer";

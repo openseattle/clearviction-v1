@@ -1,4 +1,4 @@
-import { ButtonBase } from "@material-ui/core";
+import { ButtonBase } from "@mui/material";
 import largeLogo from "../Assets/cVLogoInlineLight.svg";
 import smallLogo from "../Assets/cv_small_logo_dark. 1.svg";
 import { useEffect, useState } from "react";

@@ -1,4 +1,5 @@
-import { Button, makeStyles } from "@material-ui/core";
+import { Button } from "@mui/material";
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(theme => ({
     RedesignButtonSecondaryStyle: {
@@ -6,9 +7,11 @@ const useStyles = makeStyles(theme => ({
         height: "48px",
         borderRadius: "50px",
         padding: "16px",
+        backgroundColor: theme.palette.primary.light,
+        color: theme.palette.secondary.contrastText,
         "&:hover": {
-            backgroundColor: theme.palette.primary.dark,
-            color: theme.palette.primary.contrastText,
+            backgroundColor: theme.palette.secondary,
+            color: theme.palette.secondary.contrastText,
         },
     },
 }));
@@ -19,8 +22,9 @@ export const RedesignButtonSecondary = props => {
     return (
         <Button
             className={`${classes.RedesignButtonSecondaryStyle} ${props.classes}`}
-            variant="outlined"
-            color="primary"
+            role="button"
+            variant="contained"
+            {...props}
         >
             {props.children}
         </Button>

@@ -1,4 +1,4 @@
-import { Grid, Typography } from "@material-ui/core";
+import { Grid, Typography } from "@mui/material";
 import PrimaryButton from "../../ui-kit/PrimaryButton";
 import { MainBranchTitleStyles } from "./MainBranchTitleStyles";
 import { BackButton } from "../../ui-kit/BackButton";

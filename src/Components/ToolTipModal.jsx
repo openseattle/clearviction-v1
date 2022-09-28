@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { trackClick } from "../trackingUtils";
-import { Modal, Box, Button, Typography } from "@material-ui/core";
+import { Modal, Box, Button, Typography } from "@mui/material";
 
 const boxStyle = {
     position: "absolute",

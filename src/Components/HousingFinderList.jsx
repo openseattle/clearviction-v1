@@ -1,5 +1,5 @@
-import { List, ListItem, Grid, Typography, ListItemText } from "@material-ui/core";
-import { Email, HomeWorkOutlined, Call } from "@material-ui/icons";
+import { List, ListItem, Grid, Typography, ListItemText } from "@mui/material";
+import { Email, HomeWorkOutlined, Call } from "@mui/icons-material";
 import { useResourcesStyles } from "../Styles/useResourcesStyles";
 import { ExternalLink } from "../ui-kit/ExternalLink";
 import { ListItemLink } from "../ui-kit/ListItemLink";

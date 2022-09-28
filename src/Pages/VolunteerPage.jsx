@@ -1,5 +1,5 @@
-import { Grid, Typography, Container } from "@material-ui/core";
-import { Alarm, CloudDone, Sync } from "@material-ui/icons";
+import { Grid, Typography, Container } from "@mui/material";
+import { Alarm, CloudDone, Sync } from "@mui/icons-material";
 
 import Fact from "../Components/Fact";
 

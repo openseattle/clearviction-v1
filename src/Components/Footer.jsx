@@ -1,4 +1,5 @@
-import { Grid, Box, Container, List, ListItem, makeStyles, Link, Typography } from "@material-ui/core";
+import { Grid, Box, Container, List, ListItem, Link, Typography } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 import { useLocation } from "react-router-dom";
 
 import democracylabLogo from "../Assets/democracylab-logo.png";
@@ -16,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     title: {
         margin: theme.spacing(1),
         textAlign: "left",
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down("md")]: {
             textAlign: "center",
         },
     },
@@ -34,7 +35,7 @@ const useStyles = makeStyles(theme => ({
     openSeattle: {
         width: 100,
         height: 80,
-        [theme.breakpoints.down("xs")]: {
+        [theme.breakpoints.down("sm")]: {
             width: 80,
             height: 60,
         },
@@ -43,19 +44,19 @@ const useStyles = makeStyles(theme => ({
         marginRight: theme.spacing(2),
         width: 120,
         height: 40,
-        [theme.breakpoints.down("xs")]: {
+        [theme.breakpoints.down("sm")]: {
             width: 100,
             height: 30,
         },
     },
     mobileCenter: {
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down("md")]: {
             display: "flex",
             justifyContent: "center",
         },
     },
     mobileHidden: {
-        [theme.breakpoints.down("xs")]: {
+        [theme.breakpoints.down("sm")]: {
             display: "none",
         },
     },
@@ -108,6 +109,7 @@ const Footer = () => {
                                                     data-testid="footer-link"
                                                     className={classes.linkStyles}
                                                     href={page.url}
+                                                    underline="hover"
                                                 >
                                                     {page.name}
                                                 </Link>

@@ -1,4 +1,4 @@
-import { Grid, Typography, Container } from "@material-ui/core";
+import { Grid, Typography, Container } from "@mui/material";
 import { EducationOccLicReq } from "../Subpages/WhyVacate/EducationOccLicReq";
 import { WhyVacateHousingStyles } from "../Styles/WhyVacateHousingStyles";
 import { TextWithCTAButton } from "../Subpages/WhyVacate/TextWithCTAButton";

@@ -1,5 +1,5 @@
-import { Box, Container, Divider, Grid, Link, Paper, Typography } from "@material-ui/core";
-import { AccountBalance, DateRange, History } from "@material-ui/icons";
+import { Box, Container, Divider, Grid, Link, Paper, Typography } from "@mui/material";
+import { AccountBalance, DateRange, History } from "@mui/icons-material";
 
 import teamBuilding from "../Assets/team_building.svg";
 import humanProfile from "../Assets/human.svg";
@@ -108,6 +108,7 @@ const GetStartedPage = () => {
                                         rel="noopener noreferrer"
                                         target="_blank"
                                         href="https://watch.wsp.wa.gov/WATCH/Home/Notice?ReturnPage=%2FHome%2FIndex"
+                                        underline="hover"
                                     >
                                         “unofficial” copy through WATCH
                                     </Link>{" "}

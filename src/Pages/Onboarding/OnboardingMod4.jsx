@@ -1,4 +1,4 @@
-import { Grid, Typography, Box } from "@material-ui/core";
+import { Grid, Typography, Box } from "@mui/material";
 import Theme from "../../Components/Theme";
 import { useModuleContentStyles } from "../../Styles/Onboarding/useModuleContentStyles";
 
@@ -156,7 +156,7 @@ function OnboardingMod4() {
                         textAlign: "center",
                         padding: "0 50px",
                         maxWidth: "77vw",
-                        [Theme.breakpoints.down("sm")]: {
+                        [Theme.breakpoints.down('md')]: {
                             padding: "0 40px",
                         },
                     }}

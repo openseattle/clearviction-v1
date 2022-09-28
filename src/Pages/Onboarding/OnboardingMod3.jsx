@@ -1,4 +1,4 @@
-import { Grid, Box, Typography } from "@material-ui/core";
+import { Grid, Box, Typography } from "@mui/material";
 import { useModuleContentStyles } from "../../Styles/Onboarding/useModuleContentStyles";
 
 import Header from "../../Components/Onboarding/Header";

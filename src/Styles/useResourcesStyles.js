@@ -1,4 +1,4 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from '@mui/styles';
 
 export const useResourcesStyles = makeStyles(theme => ({
     dividerStyle: {
@@ -57,7 +57,7 @@ export const useResourcesStyles = makeStyles(theme => ({
     },
     reportStyle: {
         padding: theme.spacing(3),
-        [theme.breakpoints.down("xs")]: {
+        [theme.breakpoints.down('sm')]: {
             padding: theme.spacing(0),
         },
     },

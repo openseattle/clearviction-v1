@@ -1,4 +1,4 @@
-import { Container } from "@material-ui/core";
+import { Container } from "@mui/material";
 import HeroPanel from "../Components/HeroPanel";
 import WhyVacateAssistance from "./WhyVacateAssistance";
 import WhyVacateEducation from "./WhyVacateEducation";

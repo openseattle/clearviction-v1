@@ -1,10 +1,10 @@
-import { makeStyles } from "@material-ui/core";
+import { makeStyles } from '@mui/styles';
 
 export const useContactStyles = makeStyles(theme => ({
     regularContainer: {
         padding: theme.spacing(8),
         margin: theme.spacing(6),
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down('md')]: {
             padding: theme.spacing(1, 0),
             margin: theme.spacing(2, 0),
         },
@@ -13,11 +13,11 @@ export const useContactStyles = makeStyles(theme => ({
         marginBottom: theme.spacing(8),
         marginLeft: theme.spacing(8),
         color: theme.palette.primary.dark,
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down('md')]: {
             marginLeft: theme.spacing(2),
             marginBottom: theme.spacing(2),
         },
-        [theme.breakpoints.down("xs")]: {
+        [theme.breakpoints.down('sm')]: {
             marginLeft: theme.spacing(1),
         },
     },
@@ -26,11 +26,11 @@ export const useContactStyles = makeStyles(theme => ({
         // marginBottom: theme.spacing(8),
         // marginLeft: theme.spacing(8),
         color: theme.palette.primary.dark,
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down('md')]: {
             // marginLeft: theme.spacing(2),
             marginBottom: theme.spacing(2),
         },
-        [theme.breakpoints.down("xs")]: {
+        [theme.breakpoints.down('sm')]: {
             // marginLeft: theme.spacing(1),
         },
     },
@@ -40,11 +40,11 @@ export const useContactStyles = makeStyles(theme => ({
         marginTop: theme.spacing(4),
         marginBottom: theme.spacing(4),
         color: theme.palette.primary.dark,
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down('md')]: {
             marginLeft: theme.spacing(2),
             marginBottom: theme.spacing(2),
         },
-        [theme.breakpoints.down("xs")]: {
+        [theme.breakpoints.down('sm')]: {
             marginLeft: theme.spacing(1),
         },
     },
@@ -54,20 +54,20 @@ export const useContactStyles = makeStyles(theme => ({
         // marginTop: theme.spacing(4),
         // marginBottom: theme.spacing(2),
         color: theme.palette.primary.dark,
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down('md')]: {
             marginLeft: theme.spacing(2),
             // marginBottom: theme.spacing(2),
         },
-        [theme.breakpoints.down("xs")]: {
+        [theme.breakpoints.down('sm')]: {
             // marginLeft: theme.spacing(1),
         },
     },
     formContainer: {
         paddingLeft: theme.spacing(7),
-        [theme.breakpoints.down("md")]: {
+        [theme.breakpoints.down('lg')]: {
             paddingLeft: theme.spacing(5),
         },
-        [theme.breakpoints.down("sm")]: {
+        [theme.breakpoints.down('md')]: {
             padding: theme.spacing(2),
         },
     },

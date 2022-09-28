@@ -1,4 +1,5 @@
-import { ListItem, Box, ListItemIcon, Typography, makeStyles } from "@material-ui/core";
+import { ListItem, Box, ListItemIcon, Typography } from "@mui/material";
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(theme => ({
     title: {

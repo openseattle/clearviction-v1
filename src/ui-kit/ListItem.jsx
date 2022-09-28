@@ -1,5 +1,6 @@
-import { Grid, ListItem, ListItemIcon, ListItemText, Link, makeStyles } from "@material-ui/core";
-import FiberManualRecordIcon from "@material-ui/icons/FiberManualRecord";
+import { Grid, ListItem, ListItemIcon, ListItemText, Link } from "@mui/material";
+import { makeStyles } from '@mui/styles';
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 
 const useStyles = makeStyles(theme => ({
     icon: {
@@ -21,7 +22,7 @@ export const CVPListItem = props => {
                         onClick={onClick}
                         target="_blank"
                         rel="noreferrer"
-                    >
+                        underline="hover">
                         {text}
                     </Link>
                 );

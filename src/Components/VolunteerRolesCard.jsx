@@ -1,4 +1,5 @@
-import { Box, Card, makeStyles, Typography } from "@material-ui/core";
+import { Box, Card, Typography } from "@mui/material";
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(theme => ({
     roleRootStyle: {

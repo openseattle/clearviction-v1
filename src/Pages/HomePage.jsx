@@ -2,16 +2,18 @@ import { useEffect } from "react";
 import { trackPageview } from "../trackingUtils";
 import city from "../Assets/city.svg";
 import checklist from "../Assets/checklist.svg";
+import checklistTwo from "../Assets/checklist1.svg";
 import education from "../Assets/education.svg";
 import lawyer from "../Assets/lawyer.svg";
 import teamwork from "../Assets/teamwork.svg";
 import calculator from "../Assets/calculator.svg";
 import washington from "../Assets/washington.svg";
-import { Box, Container, Grid, Typography } from "@material-ui/core";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import ContentSection from "../Components/ContentSection";
 import HomeFAQAccordion from "../Subpages/Home/HomeFAQAccordion";
 import { useHomeStyles } from "../Styles/useHomeStyles";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
+import { RedesignButtonSecondary } from "../ui-kit/RedesignButtonSecondary";
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
@@ -133,6 +135,23 @@ const HomePage = () => {
                 </Typography>
                 <HomeFAQAccordion />
             </Container>
+            <Box className={classes.lightBlueBackGround}>
+                <Container maxWidth="lg">
+                    <Grid container alignItems="center">
+                        <Grid item xs={12} sm={6} md={8}>
+                            <Typography variant="h3" className={classes.headingStyle}>
+                                Help us improve the calculator by participating in research
+                            </Typography>
+                            <RedesignButtonSecondary href="https://docs.google.com/forms/d/1KXmPrwzHeE8_EEL88RFkjOFP4S1A52Ode1vV6SJijao/viewform?edit_requested=true">
+                                Learn more
+                            </RedesignButtonSecondary>
+                        </Grid>
+                        <Grid item xs={12} sm={6} md={4}>
+                            <img src={checklistTwo} className={classes.iconStyle} alt=""></img>
+                        </Grid>
+                    </Grid>
+                </Container>
+            </Box>
         </>
     );
 };
