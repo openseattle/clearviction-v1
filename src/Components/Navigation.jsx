@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import { makeStyles } from '@mui/styles';
 import { MenuSharp as MenuIcon, CloseSharp } from "@mui/icons-material";
-import pages from "../data/siteMap";
+import pages from "../data/headerSiteMap";
 import { useState } from "react";
 import NavButton from "../ui-kit/NavButton";
 import NavButtonMobile from "../ui-kit/NavButtonMobile";

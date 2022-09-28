@@ -4,7 +4,7 @@ import { useLocation } from "react-router-dom";
 
 import democracylabLogo from "../Assets/democracylab-logo.png";
 import openseattleLogo from "../Assets/openseattle-logo.png";
-import pages from "../data/siteMap";
+import pages from "../data/footerSiteMap";
 import LegalDisclaimer from "./LegalDisclaimer";
 
 const useStyles = makeStyles(theme => ({
@@ -30,7 +30,6 @@ const useStyles = makeStyles(theme => ({
         color: "white",
         "&:hover": { color: "white" },
     },
-
     subHeader: {
         fontSize: 11,
     },
