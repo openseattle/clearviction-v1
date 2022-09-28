@@ -147,9 +147,6 @@ const ResourcesPage = () => {
                 <Typography className={classes.headingStyle} variant="h2">
                     Employment
                 </Typography>
-                <Typography className={classes.volunteerTextStyle} variant="h3">
-                    Why Vacate?
-                </Typography>
                 <Typography className={classes.headingStyle} variant="body1">
                     Simply having a conviction does not prevent you from having a job, however, it can be more difficult
                     depending on the type of job and the employer. It is important to not lose hope while facing
@@ -197,9 +194,6 @@ const ResourcesPage = () => {
                 <Typography className={classes.headingStyle} variant="h2">
                     Housing
                 </Typography>
-                <Typography className={classes.headingStyle} variant="h3">
-                    Why Vacate?
-                </Typography>
                 <Typography className={classes.headingStyle} variant="body1">
                     There are many different barriers that can prevent people with convictions from fair access to
                     housing. Each different type of housing comes with its own set of obstacles that you should take
@@ -246,9 +240,6 @@ const ResourcesPage = () => {
             <Container id="education" component="section" className={classes.regularContainerStyle} maxWidth="md">
                 <Typography className={classes.headingStyle} variant="h2">
                     Education
-                </Typography>
-                <Typography className={classes.headingStyle} variant="h3">
-                    Why Vacate?
                 </Typography>
                 <Typography className={classes.headingStyle} variant="body1">
                     With a conviction in your record, you might face some barriers when it comes to getting
