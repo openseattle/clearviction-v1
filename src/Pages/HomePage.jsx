@@ -38,7 +38,7 @@ const HomePage = () => {
                             </Typography>
                             <Box paddingTop={12}>
                                 <RedesignButtonPrimary href="/calculator/landing-0">
-                                    Check Eligibility
+                                    Access Calculator
                                 </RedesignButtonPrimary>
                             </Box>
                         </Grid>
