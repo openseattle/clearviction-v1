@@ -17,7 +17,7 @@ const pages: Page[] = [
       //   { name: "Partner with Us", url: "/get-involved/partner-with-us" },
       // ],
   },
-  { name: "Resources", url: "/resources", },
+  { name: "Why Vacate", url: "/why-vacate", },
   { name: "Contact", url: "/contact" },
 ];
 
