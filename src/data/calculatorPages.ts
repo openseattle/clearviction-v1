@@ -694,7 +694,6 @@ const data: Pages = {
     "main-8": {
         type: PageType.QUESTION,
         header: "Was the offense considered domestic violence against a family / household member or spouse / partner?",
-
         progressBar: {
             currentSectionName: SectionName.OFF,
         },
