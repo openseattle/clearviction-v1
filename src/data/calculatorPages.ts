@@ -1257,7 +1257,7 @@ const data: Pages = {
     },
     "qac-0": {
         type: PageType.SPECIAL,
-        header: "This set of questions covers other conviction-related circumstances that will affect conviction eligibility.",
+        header: "This set of questions covers other conviction-related circumstances that will affect your eligibility to vacate the conviction.",
         progressBar: {
             currentSectionName: SectionName.CIRC,
         },
