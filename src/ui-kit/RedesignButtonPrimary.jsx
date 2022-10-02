@@ -4,8 +4,6 @@ import { makeStyles } from '@mui/styles';
 const useStyles = makeStyles(theme => ({
     RedesignButtonPrimaryStyle: {
         width: "450px",
-        backgroundColor: "#ffffff",
-        color: "#2F3554",
         height: "60px",
         borderRadius: "50px",
         padding: "16px",
