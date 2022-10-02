@@ -3,8 +3,8 @@ import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles(theme => ({
     RedesignButtonPrimaryStyle: {
-        width: "450px",
-        height: "60px",
+        width: "248px",
+        height: "48px",
         borderRadius: "50px",
         padding: "16px",
         "&:hover": {
