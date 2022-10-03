@@ -34,6 +34,7 @@ const useStyles = makeStyles(theme => ({
     arrowIcon: {
         verticalAlign: "middle",
         marginLeft: 15,
+        justifyContent: "flex-end"
     },
     subHeader: {
         fontSize: 11,
@@ -116,7 +117,7 @@ const Footer = () => {
                                                 href={page.url}
                                                 underline="hover">
                                                 {page.name} 
-                                                <ArrowRightIcon className={classes.arrowIcon} sx={{ right: 0 }}/>
+                                                <ArrowRightIcon className={classes.arrowIcon} />
                                             </Link> 
                                         </Grid>
                                     ))}
