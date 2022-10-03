@@ -1,5 +1,6 @@
 import { Grid, Box, Container, List, ListItem, Link, Typography } from "@mui/material";
-import { makeStyles } from "@mui/styles";
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import { makeStyles } from '@mui/styles';
 import { useLocation } from "react-router-dom";
 
 import democracylabLogo from "../Assets/democracylab-logo.png";
@@ -29,6 +30,10 @@ const useStyles = makeStyles(theme => ({
         textDecoration: "none",
         color: "white",
         "&:hover": { color: "white" },
+    },
+    arrowIcon: {
+        verticalAlign: "middle",
+        marginLeft: 15,
     },
     subHeader: {
         fontSize: 11,
@@ -67,58 +72,57 @@ const Footer = () => {
     const classes = useStyles();
     const { pathname } = useLocation();
 
-    return (
-        <>
-            {!pathname.includes("calculator") && (
-                <Box data-testid="footer" className={classes.root} component="footer">
-                    <Container maxWidth="lg">
-                        <Grid container>
-                            <Grid className={classes.mobileHidden} item xs={12} sm={4} md={4}>
-                                <Typography className={classes.title} variant="h5">
-                                    Welcome!
-                                </Typography>
-                                <List>
-                                    <ListItem>
-                                        <Typography
-                                            className={classes.subHeader}
-                                            variant="body1"
-                                            style={{ maxWidth: 250 }}
+    return <>
+        {!pathname.includes("calculator") && (
+            <Box data-testid="footer" className={classes.root} component="footer">
+                <Container maxWidth="lg">
+                    <Grid container>
+                        <Grid className={classes.mobileHidden} item xs={12} sm={4} md={4}>
+                            <Typography className={classes.title} variant="h5">
+                                Welcome!
+                            </Typography>
+                            <List>
+                                <ListItem>
+                                    <Typography
+                                        className={classes.subHeader}
+                                        variant="body1"
+                                        style={{ maxWidth: 250 }}
+                                    >
+                                        Clearviction is reducing barriers faced by formerly incarcerated individuals
+                                        by streamlining the process of vacating eligible convictions in Washington
+                                        state.
+                                    </Typography>
+                                </ListItem>
+                            </List>
+                        </Grid>
+                        <Grid item xs={12} sm={4} md={4}>
+                            <Typography className={classes.title} variant="h5">
+                                Explore
+                            </Typography>
+                            <List>
+                                <Grid className={classes.body} container>
+                                    {pages.map(page => (
+                                        <Grid
+                                            className={classes.mobileCenter}
+                                            item
+                                            key={page.name}
+                                            xs={12}
+                                            sm={12}
+                                            md={6}
                                         >
-                                            Clearviction is reducing barriers faced by formerly incarcerated individuals
-                                            by streamlining the process of vacating eligible convictions in Washington
-                                            state.
-                                        </Typography>
-                                    </ListItem>
-                                </List>
-                            </Grid>
-                            <Grid item xs={12} sm={4} md={4}>
-                                <Typography className={classes.title} variant="h5">
-                                    Explore
-                                </Typography>
-                                <List>
-                                    <Grid className={classes.body} container>
-                                        {pages.map(page => (
-                                            <Grid
-                                                className={classes.mobileCenter}
-                                                item
-                                                key={page.name}
-                                                xs={12}
-                                                sm={12}
-                                                md={6}
-                                            >
-                                                <Link
-                                                    data-testid="footer-link"
-                                                    className={classes.linkStyles}
-                                                    href={page.url}
-                                                    underline="hover"
-                                                >
-                                                    {page.name}
-                                                </Link>
-                                            </Grid>
-                                        ))}
-                                    </Grid>
-                                </List>
-                            </Grid>
+                                            <Link
+                                                data-testid="footer-link"
+                                                className={classes.linkStyles}
+                                                href={page.url}
+                                                underline="hover">
+                                                {page.name} 
+                                                <ArrowRightIcon className={classes.arrowIcon} sx={{ right: 0 }}/>
+                                            </Link> 
+                                        </Grid>
+                                    ))}
+                                </Grid>
+                            </List>
+                        </Grid>
 
                             <Grid item xs={12} sm={4} md={4}>
                                 <Typography className={classes.title} variant="h5" style={{ borderRadius: "solid" }}>
