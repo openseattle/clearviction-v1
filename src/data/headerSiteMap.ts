@@ -19,6 +19,7 @@ const pages: Page[] = [
   },
   { name: "Why Vacate", url: "/why-vacate", },
   { name: "Contact", url: "/contact" },
+  { name: "Access Calculator", url: "/calculator/landing-0"}
 ];
 
 export default pages;
