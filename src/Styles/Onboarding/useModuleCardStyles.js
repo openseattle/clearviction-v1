@@ -1,4 +1,4 @@
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 
 export const useModuleCardStyles = makeStyles(theme => ({
     moduleCard: {
@@ -11,11 +11,11 @@ export const useModuleCardStyles = makeStyles(theme => ({
             transform: "scale(1.08)",
             backgroundColor: "lightgrey",
         },
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             width: "90%",
             margin: theme.spacing(2, "auto"),
         },
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             width: "95%",
         },
     },
@@ -25,17 +25,24 @@ export const useModuleCardStyles = makeStyles(theme => ({
         color: "#f6f6f6",
         borderRadius: "20px",
         textTransform: "uppercase",
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             display: "none",
         },
     },
+    // added a new style to change the style of specifically the text
+    cardHeadingText: {
+        fontSize: "22px",
+        fontWeight: "700",
+    },
     cardSubheading: {
         marginBottom: theme.spacing(3),
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             display: "flex",
             justifyContent: "space-around",
             textAlign: "center",
         },
+        fontSize: "25px",
+        color: "#2f3554",
     },
     cardBody: {
         display: "flex",
@@ -45,25 +52,26 @@ export const useModuleCardStyles = makeStyles(theme => ({
         paddingRight: theme.spacing(3),
         paddingTop: theme.spacing(4),
         color: "#2b2929",
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             display: "flex",
             flexDirection: "column",
             paddingLeft: theme.spacing(1),
             paddingRight: theme.spacing(1),
         },
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             display: "flex",
             flexDirection: "column",
         },
     },
     cardText: {
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             textAlign: "center",
         },
+        fontSize: "20px",
     },
     iconStyle: {
         marginRight: theme.spacing(4.5),
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             marginRight: theme.spacing(0),
             marginBottom: theme.spacing(2),
             height: "75px",
@@ -78,7 +86,7 @@ export const useModuleCardStyles = makeStyles(theme => ({
     subheadingStyle: {
         marginBottom: theme.spacing(8),
         paddingBottom: theme.spacing(8),
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             fontSize: "40px",
         },
     },

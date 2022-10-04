@@ -26,7 +26,9 @@ function ModuleCard(props) {
             <Link style={{ textDecoration: "none" }} to={link}>
                 <div>
                     <div className={classes.cardHeading}>
-                        <Typography variant="body1">{number}</Typography>
+                        <Typography variant="body1" className={classes.cardHeadingText}>
+                            {number}
+                        </Typography>
                     </div>
                     <div className={classes.cardBody}>
                         {number === "module 1" && <img className={classes.iconStyle} src={screens} alt="" />}
