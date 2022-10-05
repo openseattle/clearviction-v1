@@ -31,7 +31,7 @@ export const useModuleCardStyles = makeStyles(theme => ({
     },
     // added a new style to change the style of specifically the text
     cardHeadingText: {
-        fontSize: "22px",
+        fontSize: "1.375rem",
         fontWeight: "700",
     },
     cardSubheading: {
@@ -41,7 +41,7 @@ export const useModuleCardStyles = makeStyles(theme => ({
             justifyContent: "space-around",
             textAlign: "center",
         },
-        fontSize: "25px",
+        fontSize: "1.5625rem",
         color: "#2f3554",
     },
     cardBody: {
@@ -67,7 +67,7 @@ export const useModuleCardStyles = makeStyles(theme => ({
         [theme.breakpoints.down("md")]: {
             textAlign: "center",
         },
-        fontSize: "20px",
+        fontSize: "1.25rem",
     },
     iconStyle: {
         marginRight: theme.spacing(4.5),
