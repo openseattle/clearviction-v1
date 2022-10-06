@@ -217,7 +217,7 @@ const GetStartedPage = () => {
                     Legal aid
                 </Typography>
                 <Typography variant="body1">
-                    Many pro bono services are only available after being refered by CLEAR, a toll-free legal hotline:
+                    Many pro bono services are only available after being referred by CLEAR, a toll-free legal hotline:
                 </Typography>
                 <Typography component="ul" variant="body1" className={classes.basicListStyle}>
                     <li>Outside of King County: call 1-888-201-1014 (weekdays 9.15am - 12.15pm)</li>
