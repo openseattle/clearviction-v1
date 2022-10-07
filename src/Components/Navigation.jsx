@@ -19,6 +19,7 @@ import NavButtonMobile from "../ui-kit/NavButtonMobile";
 import LegalDisclaimer from "./LegalDisclaimer";
 import NavigationLogo from "./NavigationLogo";
 import SkipLink from "../ui-kit/SkipLink";
+import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 
 const useStyles = makeStyles(theme => ({
     closeIcon: {
@@ -50,6 +51,21 @@ const useStyles = makeStyles(theme => ({
             transform: "translateX(0)",
         },
     },
+    navCalc: {
+        height: "40px",
+        fontSize: "14px",
+        borderRadius: "50px",
+        padding: "16px",
+        backgroundColor: "white",
+        color: theme.palette.primary.dark,
+        "&:hover": {
+            backgroundColor: theme.palette.secondary.main,
+            color: theme.palette.secondary.contrastText,
+        },
+        [theme.breakpoints.down('lg')]: {
+            height: "60px",
+        },
+    }
 }));
 
 const Navigation = () => {
@@ -78,9 +94,16 @@ const Navigation = () => {
                     <Box display={{ xs: "none", sm: "none", md: "flex" }}>
                         <ButtonGroup>
                             {headerPages.map((page, idx) => (
-                                <NavButton key={idx} page={page} />
+                                page.name !== "Access Calculator" ? <NavButton key={idx} page={page} /> : null
                             ))}
                         </ButtonGroup>
+                        <RedesignButtonPrimary 
+                            href="/calculator/landing-0"
+                            className={classes.navCalc}
+                            >
+                            Access Calculator
+                        </RedesignButtonPrimary>
+
                     </Box>
                     {/* mobile menu */}
 
