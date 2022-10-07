@@ -79,4 +79,16 @@ export const useHomeStyles = makeStyles(theme => ({
         width: "100%",
         padding: theme.spacing(2),
     },
+    calcHome: {
+        width: "100%",
+        height: "60px",
+        borderRadius: "50px",
+        padding: "16px",
+        backgroundColor: "white",
+        color: theme.palette.primary.dark,
+        "&:hover": {
+            backgroundColor: theme.palette.secondary.main,
+            color: theme.palette.secondary.contrastText,
+        },
+    }
 }));
