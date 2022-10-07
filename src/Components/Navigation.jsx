@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import { makeStyles } from '@mui/styles';
 import { MenuSharp as MenuIcon, CloseSharp } from "@mui/icons-material";
-import pages from "../data/headerSiteMap";
+import { headerPages } from "../data/siteMap";
 import { useState } from "react";
 import NavButton from "../ui-kit/NavButton";
 import NavButtonMobile from "../ui-kit/NavButtonMobile";
@@ -77,7 +77,7 @@ const Navigation = () => {
                     {/* desktop menu */}
                     <Box display={{ xs: "none", sm: "none", md: "flex" }}>
                         <ButtonGroup>
-                            {pages.map((page, idx) => (
+                            {headerPages.map((page, idx) => (
                                 <NavButton key={idx} page={page} />
                             ))}
                         </ButtonGroup>
@@ -103,7 +103,7 @@ const Navigation = () => {
                                     <CloseSharp fontSize="large" className={classes.closeIcon} />
                                 </IconButton>
                             </ListItem>
-                            {pages.map(page => (
+                            {headerPages.map(page => (
                                 <NavButtonMobile key={page.name} page={page} classes={classes} />
                             ))}
                             <ListItem>
