@@ -1,7 +1,11 @@
-# This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
+# This workflow will do the following for every version of node in the matrix:
+# - clean installation of node dependencies & cache/restore them
+# - build the source code
+# - run lint checks and generate an aggregated report
+# - run tests
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Run Tests
+name: Pull Request Checks
 
 on:
     pull_request:
@@ -23,6 +27,13 @@ jobs:
               with:
                   node-version: ${{ matrix.node-version }}
                   cache: "npm"
-            - run: npm ci
-            - run: CI=false npm run build --if-present
-            - run: npm test
+            - name: Set up NPM CI
+              run: npm ci
+            - name: Build app
+              run: CI=false npm run build --if-present
+            - name: Run formatter check
+              run: npm run format:check
+            - name: Run linter and generate summary report
+              run: npm run lint:summary
+            - name: Run tests
+              run: npm test
