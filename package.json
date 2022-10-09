@@ -27,7 +27,7 @@
         "web-vitals": "^1.0.1"
     },
     "scripts": {
-        "build": "react-scripts build",
+        "build": "DISABLE_ESLINT_PLUGIN='true' react-scripts build",
         "clean": "prettier --write .",
         "deploy": "gh-pages -d build",
         "eject": "react-scripts eject",
@@ -38,7 +38,7 @@
         "lint:summary": "SORT_BY=errors DESC=true eslint -f summary .",
         "predeploy": "npm run build",
         "start": "react-scripts start",
-        "test": "react-scripts test"
+        "test": "ESLINT_NO_DEV_ERRORS='true' react-scripts test"
     },
     "browserslist": {
         "production": [
