@@ -30,13 +30,14 @@ jobs:
             - name: Set up NPM CI
               run: npm ci
             - name: Build app
+              id: build
               run: CI=false npm run build --if-present
             - name: Run formatter check
+              if: ${{ steps.build.conclusion == 'success'}}
               run: npm run format:check
-              continue-on-error: true
             - name: Run linter and generate summary report
+              if: ${{ steps.build.conclusion == 'success' && (failure() || success()) }}
               run: npm run lint:summary
-              continue-on-error: true
             - name: Run tests
+              if: ${{ steps.build.conclusion == 'success' && (failure() || success()) }}
               run: npm test
-              continue-on-error: true
