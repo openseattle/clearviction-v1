@@ -3,8 +3,8 @@ import { render, screen, within } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 import EndScreen from "./EndScreen";
 import { BodyType } from "../../data/calculatorPagesTypes";
-import { ThemeProvider } from '@mui/material/styles';
-import Theme from '../../Components/Theme';
+import { ThemeProvider } from "@mui/material/styles";
+import Theme from "../../Components/Theme";
 
 describe("<EndScreen />", () => {
     it("should render all main elements as expected when all props are passed", () => {
@@ -52,11 +52,13 @@ describe("<EndScreen />", () => {
                     header={"Your Conviction May Be Eligible to Vacate!"}
                     body={body}
                     buttons={buttons}
-                    disclaimer={'This is the disclaimer'}
+                    disclaimer={"This is the disclaimer"}
                     showRestartButton={true}
-                    progressBar={progressBar} />
+                    progressBar={progressBar}
+                />
             </ThemeProvider>,
-        { wrapper: BrowserRouter });
+            { wrapper: BrowserRouter }
+        );
 
         expect(screen.getByTestId("end-screen")).toBeVisible();
         expect(screen.getByRole("heading", { name: "Your Conviction May Be Eligible to Vacate!" })).toBeInTheDocument();

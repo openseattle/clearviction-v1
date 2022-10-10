@@ -1,13 +1,14 @@
-import { Box, Card, CardContent, Typography } from "@mui/material";
-import { makeStyles } from '@mui/styles';
+import { Card, CardContent, Typography } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles(theme => ({
     root: {
         height: "100%",
         display: "flex",
         flexDirection: "column",
-        justifyContent: "space-between",
+        justifyContent: "center",
         padding: theme.spacing(2),
+        marginTop: theme.spacing(2),
     },
     headingStyle: {
         marginBottom: theme.spacing(2),
@@ -25,13 +26,6 @@ const FactCard = ({ simpleCardContents, isSimpleCard, fact }) => {
     const classes = useStyles();
     return (
         <Card className={classes.root}>
-            <Box display="flex" justifyContent="center">
-                <img className={classes.cardImageStyle} alt={""} src={fact?.src} />
-            </Box>
-            <Typography variant="h5" align="center" className={classes.headingStyle}>
-                {fact?.title}
-            </Typography>
-
             <CardContent>
                 {isSimpleCard && (
                     <Typography variant="body1" align="center">

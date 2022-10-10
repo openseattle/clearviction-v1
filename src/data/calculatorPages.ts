@@ -693,14 +693,7 @@ const data: Pages = {
     },
     "main-8": {
         type: PageType.QUESTION,
-        header: "Was the offense considered domestic violence against family / household member or spouse / partner?",
-        body: [
-            {
-                type: BodyType.LINK,
-                linkText: "Domestic Violence Information",
-                href: "https://www.courts.wa.gov/dv/?fa=dv.guide",
-            },
-        ],
+        header: "Was the offense considered domestic violence against a family / household member or spouse / partner?",
         progressBar: {
             currentSectionName: SectionName.OFF,
         },
@@ -1257,7 +1250,7 @@ const data: Pages = {
     },
     "qac-0": {
         type: PageType.SPECIAL,
-        header: "This set of questions covers other conviction-related circumstances that will affect conviction eligibility.",
+        header: "This set of questions covers other conviction-related circumstances that will affect your eligibility to vacate the conviction.",
         progressBar: {
             currentSectionName: SectionName.CIRC,
         },

@@ -441,7 +441,7 @@ function ModuleContent(props) {
                     maxWidth="lg"
                     className={modalClasses.mainModal}
                 >
-                    <DialogContent sx={modalStyle}>
+                    <DialogContent>
                         <SlackModal handleSlackClose={handleSlackClose} />
                     </DialogContent>
                 </Dialog>
