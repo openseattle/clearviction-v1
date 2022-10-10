@@ -12,13 +12,14 @@ on:
         branches: ["staging"]
 
 jobs:
-    test:
+    pull-request-checks:
         runs-on: ubuntu-latest
 
         strategy:
             matrix:
-                node-version: [16.x, 18.x]
                 # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+                node-version: [16.x, 18.x]   
+            # Allows jobs to run on both versions, even if one fails
             fail-fast: false
         steps:
             - uses: actions/checkout@v3
@@ -35,9 +36,11 @@ jobs:
             - name: Run formatter check
               if: ${{ steps.build.conclusion == 'success'}}
               run: npm run format:check
+              continue-on-error: true
             - name: Run linter and generate summary report
               if: ${{ steps.build.conclusion == 'success' && (failure() || success()) }}
               run: npm run lint:summary
+              continue-on-error: true
             - name: Run tests
               if: ${{ steps.build.conclusion == 'success' && (failure() || success()) }}
               run: npm test
