@@ -62,9 +62,6 @@ const useStyles = makeStyles(theme => ({
             backgroundColor: theme.palette.secondary.main,
             color: theme.palette.secondary.contrastText,
         },
-        [theme.breakpoints.down('lg')]: {
-            height: "60px",
-        },
     }
 }));
 
@@ -91,7 +88,7 @@ const Navigation = () => {
                     <Box style={{ flexGrow: 1 }} />
 
                     {/* desktop menu */}
-                    <Box display={{ xs: "none", sm: "none", md: "flex" }}>
+                    <Box display={{ xs: "none", sm: "none", md: "none", lg: "flex" }}>
                         <ButtonGroup>
                             {headerPages.map((page, idx) => (
                                 page.name !== "Access Calculator" ? <NavButton key={idx} page={page} /> : null
@@ -108,7 +105,7 @@ const Navigation = () => {
                     {/* mobile menu */}
 
                     {/* Drawer based nav */}
-                    <Box display={{ xs: "flex", sm: "flex", md: "none" }}>
+                    <Box display={{ xs: "flex", sm: "flex", md: "flex", lg: "none" }}>
                         <IconButton
                             size="medium"
                             edge="start"

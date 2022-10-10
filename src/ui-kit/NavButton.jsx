@@ -5,6 +5,7 @@ import { useState } from "react";
 
 const useStyles = makeStyles(theme => ({
     navButtonStyle: {
+        textAlign: "center",
         marginLeft: theme.spacing(1),
         marginRight: theme.spacing(1),
         color: "white",
