@@ -36,7 +36,7 @@ const useStyles = makeStyles(theme => ({
         position: "absolute",
         right: 65,
         top: 8,
-        [theme.breakpoints.down("md")]: {
+        [theme.breakpoints.down("lg")]: {
             display: "none",
         },
     },
