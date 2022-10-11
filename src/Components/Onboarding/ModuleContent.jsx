@@ -8,6 +8,7 @@ import {
     ListItemIcon,
     Dialog,
     DialogContent,
+    useMediaQuery,
 } from "@mui/material";
 import { useModuleContentStyles } from "../../Styles/Onboarding/useModuleContentStyles";
 import { useModalStyles } from "../../Styles/Onboarding/useModalStyles";
@@ -27,17 +28,6 @@ import VideoTutorialAccordion from "./Mobile/VideoTutorialAccordion";
 import SlackVideoAccordion from "./Mobile/SlackVideoAccordion";
 import TrustDocAccordion from "./Mobile/TrustDocAccordion";
 import { ExternalLink } from "../../ui-kit/ExternalLink";
-
-const modalStyle = {
-    position: "absolute",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    width: "80%",
-    bgcolor: "background.paper",
-    boxShadow: 24,
-    padding: "50px",
-};
 
 function ModuleContent(props) {
     const classes = useModuleContentStyles();
@@ -109,12 +99,7 @@ function ModuleContent(props) {
     const handleFindVideoOpen = () => setFindVideoOpen(true);
     const handleFindVideoClose = () => setFindVideoOpen(false);
 
-    const [isLargeScreen, setIsLargeScreen] = useState(true);
-
-    useEffect(() => {
-        const mediaSize = window.innerWidth;
-        mediaSize >= 768 ? setIsLargeScreen(true) : setIsLargeScreen(false);
-    }, []);
+    const isLargeScreen = useMediaQuery('(min-width:850px)');
 
     return (
         <div className={classes.moduleContentCard}>
