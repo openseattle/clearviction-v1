@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from "react";
 // components
 import ModuleCard from "./ModuleCard";
-import { Grid } from "@mui/material";
+import { Grid, useMediaQuery } from "@mui/material";
 
 // icons
 import circleCheck from "../../Assets/Onboarding/circleCheck.png";
@@ -46,12 +45,9 @@ const styles = {
 
 export default function VerticalLinearStepper() {
     const classes = useHomeStyles();
-    const [isLargeScreen, setIsLargeScreen] = useState(true);
 
-    useEffect(() => {
-        const mediaSize = window.innerWidth;
-        mediaSize >= 768 ? setIsLargeScreen(true) : setIsLargeScreen(false);
-    }, []);
+    const isLargeScreen = useMediaQuery('(min-width:600px)');
+
 
     return (
         <>
