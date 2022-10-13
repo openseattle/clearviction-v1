@@ -68,7 +68,7 @@ export default function AirtableModal(props) {
 
     return (
         <Grid container>
-            <Grid item xs={2}>
+            <Grid item xs={3}>
                 {sections.map(section => (
                     <button
                         key={section.id}
@@ -79,7 +79,7 @@ export default function AirtableModal(props) {
                     </button>
                 ))}
             </Grid>
-            <Grid item xs={7} style={contentStyle}>
+            <Grid item xs={8} style={contentStyle}>
                 {sectionId === 1 && (
                     <div>
                         <ol>
