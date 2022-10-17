@@ -54,7 +54,7 @@ const WhyVacateEducation = () => {
                     "If you’re not yet eligible to vacate or want to know more, make sure to check out our resorces with tips for student loans, finding post-incarceration education and more."
                 }
                 buttonText={"Get Education Resources"}
-                buttonLinkTo={"/resources/assistance/education"}
+                buttonLinkTo={"/why-vacate#education"}
             />
         </>
     );
