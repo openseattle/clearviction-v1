@@ -10,7 +10,7 @@ import {
     ButtonGroup,
     Button,
 } from "@mui/material";
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 import { MenuSharp as MenuIcon, CloseSharp } from "@mui/icons-material";
 import { headerPages } from "../data/siteMap";
 import { useState } from "react";
@@ -52,17 +52,17 @@ const useStyles = makeStyles(theme => ({
         },
     },
     navCalc: {
-        height: "40px",
-        fontSize: "14px",
+        height: "2rem",
+        fontSize: "1rem",
         borderRadius: "50px",
-        padding: "16px",
+        padding: "1rem",
         backgroundColor: "white",
         color: theme.palette.primary.dark,
         "&:hover": {
             backgroundColor: theme.palette.secondary.main,
             color: theme.palette.secondary.contrastText,
         },
-    }
+    },
 }));
 
 const Navigation = () => {
@@ -77,65 +77,63 @@ const Navigation = () => {
 
     const classes = useStyles();
 
-    return <>
-        <AppBar color="primary" elevation={0} role="navigation">
-            <Container maxWidth="xl">
-                <Toolbar>
-                    <SkipLink className={classes.skipLink}>
-                        <Button style={{ color: "white" }}>Skip Navigation Links</Button>
-                    </SkipLink>
-                    <NavigationLogo />
-                    <Box style={{ flexGrow: 1 }} />
+    return (
+        <>
+            <AppBar color="primary" elevation={0} role="navigation">
+                <Container maxWidth="xl">
+                    <Toolbar>
+                        <SkipLink className={classes.skipLink}>
+                            <Button style={{ color: "white" }}>Skip Navigation Links</Button>
+                        </SkipLink>
+                        <NavigationLogo />
+                        <Box style={{ flexGrow: 1 }} />
 
-                    {/* desktop menu */}
-                    <Box display={{ xs: "none", sm: "none", md: "none", lg: "flex" }}>
-                        <ButtonGroup>
-                            {headerPages.map((page, idx) => (
-                                page.name !== "Access Calculator" ? <NavButton key={idx} page={page} /> : null
-                            ))}
-                        </ButtonGroup>
-                        <RedesignButtonPrimary 
-                            href="/calculator/landing-0"
-                            className={classes.navCalc}
+                        {/* desktop menu */}
+                        <Box display={{ xs: "none", sm: "none", md: "none", lg: "flex" }}>
+                            <ButtonGroup>
+                                {headerPages.map((page, idx) =>
+                                    page.name !== "Access Calculator" ? <NavButton key={idx} page={page} /> : null
+                                )}
+                            </ButtonGroup>
+                            <RedesignButtonPrimary href="/calculator/landing-0" className={classes.navCalc}>
+                                Access Calculator
+                            </RedesignButtonPrimary>
+                        </Box>
+                        {/* mobile menu */}
+
+                        {/* Drawer based nav */}
+                        <Box display={{ xs: "flex", sm: "flex", md: "flex", lg: "none" }}>
+                            <IconButton
+                                size="medium"
+                                edge="start"
+                                color="inherit"
+                                aria-label="Show/hide navigation menu"
+                                onClick={handleOpenMenu}
                             >
-                            Access Calculator
-                        </RedesignButtonPrimary>
-
-                    </Box>
-                    {/* mobile menu */}
-
-                    {/* Drawer based nav */}
-                    <Box display={{ xs: "flex", sm: "flex", md: "flex", lg: "none" }}>
-                        <IconButton
-                            size="medium"
-                            edge="start"
-                            color="inherit"
-                            aria-label="Show/hide navigation menu"
-                            onClick={handleOpenMenu}
-                        >
-                            <MenuIcon fontSize="large" />
-                        </IconButton>
-                    </Box>
-                    <Drawer anchor="right" open={Boolean(menuState)} onClose={handleCloseMenu}>
-                        <List className={classes.menuStyle}>
-                            <ListItem style={{ justifyContent: "center" }}>
-                                <IconButton onClick={handleCloseMenu} aria-label="close menu" size="large">
-                                    <CloseSharp fontSize="large" className={classes.closeIcon} />
-                                </IconButton>
-                            </ListItem>
-                            {headerPages.map(page => (
-                                <NavButtonMobile key={page.name} page={page} classes={classes} />
-                            ))}
-                            <ListItem>
-                                <LegalDisclaimer />
-                            </ListItem>
-                        </List>
-                    </Drawer>
-                </Toolbar>
-            </Container>
-        </AppBar>
-        <Box height={56} />
-    </>;
+                                <MenuIcon fontSize="large" />
+                            </IconButton>
+                        </Box>
+                        <Drawer anchor="right" open={Boolean(menuState)} onClose={handleCloseMenu}>
+                            <List className={classes.menuStyle}>
+                                <ListItem style={{ justifyContent: "center" }}>
+                                    <IconButton onClick={handleCloseMenu} aria-label="close menu" size="large">
+                                        <CloseSharp fontSize="large" className={classes.closeIcon} />
+                                    </IconButton>
+                                </ListItem>
+                                {headerPages.map(page => (
+                                    <NavButtonMobile key={page.name} page={page} classes={classes} />
+                                ))}
+                                <ListItem>
+                                    <LegalDisclaimer />
+                                </ListItem>
+                            </List>
+                        </Drawer>
+                    </Toolbar>
+                </Container>
+            </AppBar>
+            <Box height={56} />
+        </>
+    );
 };
 
 export default Navigation;
