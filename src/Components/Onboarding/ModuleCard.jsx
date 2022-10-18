@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Typography, Grid } from "@mui/material";
+import { Typography } from "@mui/material";
 
 // icons
 import screens from "../../Assets/Onboarding/screens.svg";
@@ -14,12 +13,6 @@ import { useModuleCardStyles } from "../../Styles/Onboarding/useModuleCardStyles
 function ModuleCard(props) {
     const classes = useModuleCardStyles();
     const { number, link, text, subheading } = props.module;
-    const [isLargeScreen, setIsLargeScreen] = useState(true);
-
-    useEffect(() => {
-        const mediaSize = window.innerWidth;
-        mediaSize >= 768 ? setIsLargeScreen(true) : setIsLargeScreen(false);
-    }, []);
 
     return (
         <div className={classes.moduleCard}>
