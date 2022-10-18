@@ -160,7 +160,7 @@ const GetStartedPage = () => {
                 <FactIconGroup facts={eligibilityFacts} />
             </Container>
             <Box justifyContent="center" display="flex">
-                <RedesignButtonPrimary href="/calculator/landing-0">Check Eligibility</RedesignButtonPrimary>;
+                <RedesignButtonPrimary href="/calculator/landing-0">Check Eligibility</RedesignButtonPrimary>
             </Box>
             <Container maxWidth="md">
                 <Divider className={classes.dividerStyle} />
