@@ -40,13 +40,13 @@ const employmentFacts = [
         id: "emp-fact-2",
         src: emails,
         title: "Rejected applications",
-        text: "These are a common circumstance for people who have previously been convicted.",
+        text: "This is a common circumstance for people who have previously been convicted.",
     },
     {
         id: "emp-fact-3",
         src: question,
         title: "Lack of experience",
-        text: "Getting a job in a new field is complicated due to lack of access to education opportunities.",
+        text: "Getting a job in a new field is complicated by lack of access to educational opportunities.",
     },
 ];
 
@@ -101,7 +101,7 @@ const educationFacts = [
         id: "edu-fact-2",
         src: graduation,
         title: "College Acceptance",
-        text: "Colleges run background checks on applicants. Whether you will be accepted depends on the kind of check they do and the type and time of crime. ",
+        text: "Colleges run background checks on applicants. Whether you will be accepted depends on the kind of check they do and the type and time of crime.",
     },
 ];
 
