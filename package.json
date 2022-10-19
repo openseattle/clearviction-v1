@@ -24,25 +24,21 @@
         "react-dom": "^17.*.*",
         "react-router-dom": "^5.2.0",
         "react-scripts": "^5.0.0",
-        "typescript": "^4.5.2",
         "web-vitals": "^1.0.1"
     },
     "scripts": {
-        "build": "react-scripts build",
+        "build": "DISABLE_ESLINT_PLUGIN='true' react-scripts build",
         "clean": "prettier --write .",
         "deploy": "gh-pages -d build",
         "eject": "react-scripts eject",
-        "lint": "prettier --check .",
+        "format": "prettier --write \"./**/*.{js,jsx,json}\"",
+        "format:check": "prettier --check \"./**/*.{js,jsx,json}\"",
+        "lint": "eslint src/",
+        "lint:fix": "eslint --fix src/",
+        "lint:summary": "SORT_BY=errors DESC=true eslint -f summary src/",
         "predeploy": "npm run build",
         "start": "react-scripts start",
-        "test": "react-scripts test",
-        "pretty": "prettier --write \"./**/*.{js,jsx,json}\""
-    },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
+        "test": "ESLINT_NO_DEV_ERRORS='true' react-scripts test"
     },
     "browserslist": {
         "production": [
@@ -58,6 +54,19 @@
     },
     "devDependencies": {
         "@types/react-router-dom": "^5.3.2",
-        "prettier": "2.5.1"
+        "@typescript-eslint/eslint-plugin": "^5.36.2",
+        "@typescript-eslint/parser": "^5.36.2",
+        "eslint": "^8.25.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-standard-with-typescript": "^22.0.0",
+        "eslint-formatter-summary": "^1.1.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-jsx-a11y": "^6.6.1",
+        "eslint-plugin-n": "^15.2.5",
+        "eslint-plugin-promise": "^6.0.1",
+        "eslint-plugin-react": "^7.31.9",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "prettier": "2.5.1",
+        "typescript": "^4.5.2"
     }
 }
