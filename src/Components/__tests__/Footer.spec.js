@@ -19,6 +19,6 @@ describe("<Footer />", () => {
 
         const footerLinks = screen.getAllByTestId("footer-link");
         expect(footerLinks.length).toEqual(4);
-        expect(footerLinks[1]).toHaveAttribute("href", "/get-started");
+        expect(footerLinks[0]).toHaveAttribute("href", "/get-started");
     });
 });
