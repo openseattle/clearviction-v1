@@ -1,5 +1,5 @@
 import { Grid, ListItem, ListItemIcon, ListItemText, Link } from "@mui/material";
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 
 const useStyles = makeStyles(theme => ({
@@ -22,7 +22,8 @@ export const CVPListItem = props => {
                         onClick={onClick}
                         target="_blank"
                         rel="noreferrer"
-                        underline="hover">
+                        underline="hover"
+                    >
                         {text}
                     </Link>
                 );

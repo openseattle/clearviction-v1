@@ -1,5 +1,5 @@
 import { Box, Typography, Container } from "@mui/material";
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 import SecondaryButton from "../../ui-kit/SecondaryButton";
 
 const useStyles = makeStyles(theme => ({
@@ -14,12 +14,12 @@ const useStyles = makeStyles(theme => ({
         paddingTop: theme.spacing(8),
         paddingBottom: theme.spacing(8),
         padding: theme.spacing(5),
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             paddingTop: theme.spacing(5),
             paddingBottom: theme.spacing(5),
             padding: theme.spacing(2),
         },
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             minHeight: 300,
         },
     },

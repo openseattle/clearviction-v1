@@ -1,73 +1,73 @@
 ---
 env:
-  browser: true
-  es2021: true
-  jest: true
+    browser: true
+    es2021: true
+    jest: true
 extends:
-- eslint:recommended
-- plugin:react/recommended
-- standard-with-typescript
-- airbnb
-- airbnb/hooks
+    - eslint:recommended
+    - plugin:react/recommended
+    - standard-with-typescript
+    - airbnb
+    - airbnb/hooks
 overrides:
-- files:
-  - "*.jsx"
-  - "*.js"
-  - "*.ts"
-  - "*.tsx"
+    - files:
+          - "*.jsx"
+          - "*.js"
+          - "*.ts"
+          - "*.tsx"
 ignorePatterns:
-- "*/*-env.d.ts"
+    - "*/*-env.d.ts"
 parser: "@typescript-eslint/parser"
 parserOptions:
-  ecmaFeatures:
-    jsx: true
-  ecmaVersion: latest
-  sourceType: module
-  project: "./tsconfig.json"
+    ecmaFeatures:
+        jsx: true
+    ecmaVersion: latest
+    sourceType: module
+    project: "./tsconfig.json"
 plugins:
-- react
-- "@typescript-eslint"
+    - react
+    - "@typescript-eslint"
 rules:
-  semi:
-  - error
-  - always
-  "@typescript-eslint/semi":
-  - error
-  - always
-  quotes:
-  - error
-  - double
-  "@typescript-eslint/quotes":
-  - error
-  - double
-  jsx-quotes:
-  - error
-  - prefer-double
-  indent:
-  - error
-  - 4
-  - SwitchCase: 1
-  "@typescript-eslint/indent":
-  - error
-  - 4
-  comma-dangle:
-  - error
-  - arrays: always
-    objects: always
-    imports: never
-    exports: never
-    functions: never
-  "@typescript-eslint/member-delimiter-style":
-  - error
-  - multiline:
-      delimiter: semi
-    singleline:
-      delimiter: semi
-      requireLast: true
-  react/react-in-jsx-scope: 'off'
-  array-bracket-spacing:
-  - error
-  - always
-  react/prop-types: 1
-  react/no-unescaped-entities: 0
-  camelcase: 1
+    semi:
+        - error
+        - always
+    "@typescript-eslint/semi":
+        - error
+        - always
+    quotes:
+        - error
+        - double
+    "@typescript-eslint/quotes":
+        - error
+        - double
+    jsx-quotes:
+        - error
+        - prefer-double
+    indent:
+        - error
+        - 4
+        - SwitchCase: 1
+    "@typescript-eslint/indent":
+        - error
+        - 4
+    comma-dangle:
+        - error
+        - arrays: always
+          objects: always
+          imports: never
+          exports: never
+          functions: never
+    "@typescript-eslint/member-delimiter-style":
+        - error
+        - multiline:
+              delimiter: semi
+          singleline:
+              delimiter: semi
+              requireLast: true
+    react/react-in-jsx-scope: "off"
+    array-bracket-spacing:
+        - error
+        - always
+    react/prop-types: 1
+    react/no-unescaped-entities: 0
+    camelcase: 1

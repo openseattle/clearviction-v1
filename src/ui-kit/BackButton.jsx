@@ -1,5 +1,5 @@
 import { Button, Snackbar } from "@mui/material";
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 import { ArrowBackIos } from "@mui/icons-material";
 import { Alert } from "@mui/lab";
 import { useState } from "react";
@@ -9,10 +9,10 @@ const useStyles = makeStyles(theme => ({
     backButtonStyle: {
         fontWeight: "lighter",
         fontSize: "18px",
-        [theme.breakpoints.down('lg')]: {
+        [theme.breakpoints.down("lg")]: {
             fontSize: "14px",
         },
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             fontSize: "12px",
         },
     },

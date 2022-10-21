@@ -1,6 +1,6 @@
 import "./App.css";
 import { CssBaseline, Box } from "@mui/material";
-import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
+import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
 import Theme from "./Components/Theme";
 import { Switch, Route, Redirect, useLocation } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
