@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { MenuSharp as MenuIcon, CloseSharp } from "@mui/icons-material";
-import { headerPages } from "../data/siteMap";
+import { headerPages, PageId } from "../data/siteMap";
 import { useState } from "react";
 import NavButton from "../ui-kit/NavButton";
 import NavButtonMobile from "../ui-kit/NavButtonMobile";
@@ -93,7 +93,7 @@ const Navigation = () => {
                         <Box display={{ xs: "none", sm: "none", md: "none", lg: "flex" }}>
                             <ButtonGroup>
                                 {headerPages.map((page, idx) =>
-                                    page.name !== "Access Calculator" ? <NavButton key={idx} page={page} /> : null
+                                    page.key !== PageId.AccessCalculator ? <NavButton key={idx} page={page} /> : null
                                 )}
                             </ButtonGroup>
                             <RedesignButtonPrimary href="/calculator/landing-0" className={classes.navCalc}>
