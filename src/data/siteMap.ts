@@ -1,23 +1,34 @@
+export enum PageId {
+    Home = "HOME",
+    GetStarted = "GET-STARTED",
+    GetInvolved = "GET-INVOLVED",
+    WhyVacate = "WHY-VACATE",
+    Contact = "CONTACT",
+    AccessCalculator = "ACCESS-CALCULATOR",
+    About = "ABOUT",
+}
+
 type Page = {
     name: string;
     url: string;
+    key: string;
     subpages?: Page[];
 };
 
 const headerPages: Page[] = [
-    { name: "Home", url: "/" },
-    { name: "Get Started", url: "/get-started" },
-    { name: "Get Involved", url: "/get-involved" },
-    { name: "Why Vacate", url: "/why-vacate" },
-    { name: "Contact", url: "/contact" },
-    { name: "Access Calculator", url: "/calculator/landing-0" },
+    { name: "Home", url: "/", key: PageId.Home },
+    { name: "Get Started", url: "/get-started", key: PageId.GetStarted },
+    { name: "Get Involved", url: "/get-involved", key: PageId.GetInvolved },
+    { name: "Why Vacate", url: "/why-vacate", key: PageId.WhyVacate },
+    { name: "Contact", url: "/contact", key: PageId.Contact },
+    { name: "Access Calculator", url: "/calculator/landing-0", key: PageId.AccessCalculator },
 ];
 
 const footerPages: Page[] = [
-    { name: "Get Started", url: "/get-started" },
-    { name: "About", url: "/about" },
-    { name: "Get Involved", url: "/get-involved" },
-    { name: "Contact", url: "/contact" },
+    { name: "Get Started", url: "/get-started", key: PageId.GetStarted },
+    { name: "About", url: "/about", key: PageId.About },
+    { name: "Get Involved", url: "/get-involved", key: PageId.GetInvolved },
+    { name: "Contact", url: "/contact", key: PageId.Contact },
 ];
 
 export { headerPages, footerPages };
