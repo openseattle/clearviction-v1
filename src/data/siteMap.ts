@@ -1,4 +1,4 @@
-export enum PageId {
+enum PageId {
     Home = "HOME",
     GetStarted = "GET-STARTED",
     GetInvolved = "GET-INVOLVED",
@@ -11,7 +11,7 @@ export enum PageId {
 type Page = {
     name: string;
     url: string;
-    key: string;
+    key: PageId;
     subpages?: Page[];
 };
 
@@ -31,4 +31,4 @@ const footerPages: Page[] = [
     { name: "Contact", url: "/contact", key: PageId.Contact },
 ];
 
-export { headerPages, footerPages };
+export { headerPages, footerPages, PageId };
