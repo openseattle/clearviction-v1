@@ -52,7 +52,8 @@ const useStyles = makeStyles(theme => ({
         },
     },
     navCalc: {
-        height: "2rem",
+        height: "3rem",
+        textAlign: "center",
         fontSize: "1rem",
         borderRadius: "50px",
         padding: "1rem",
