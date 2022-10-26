@@ -1,0 +1,65 @@
+# This workflow will do the following for every version of node in the matrix:
+# - clean installation of node dependencies (uses `npm-ci` to optimize for build times in CI workflow)
+# - run static checks (linting & formatting) and generate an aggregated report
+# - run tests
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: Pull Request Checks
+
+on:
+    pull_request:
+        branches: ["staging"]
+
+jobs:
+    run-static-checks:
+        name: Run Static Code Checks
+
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+                node-version: [16.x, 18.x]   
+            # Allows jobs to run on both versions, even if one fails
+            fail-fast: false
+        steps:
+            - uses: actions/checkout@v3
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: "npm"
+            - name: Build app
+              id: build
+              run: npm ci
+            - name: Run formatter check
+              if: ${{ steps.build.conclusion == 'success'}}
+              run: npm run format:check
+            - name: Run linter and generate summary report
+              # runs linting even if formatting fails
+              if: ${{ steps.build.conclusion == 'success' && (failure() || success()) }}
+              run: npm run lint:summary
+    
+    run-tests:
+        name: Run Tests
+
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+                node-version: [16.x, 18.x]   
+            # Allows jobs to run on both versions, even if one fails
+            fail-fast: false
+        steps:
+            - uses: actions/checkout@v3
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: "npm"
+            - name: Build app
+              id: build
+              run: npm ci
+            - name: Run tests
+              run: npm test
