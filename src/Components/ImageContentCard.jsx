@@ -1,6 +1,7 @@
 import { Paper, Typography, Box } from "@mui/material";
 import { makeStyles } from '@mui/styles';
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
+import { RedesignButtonSecondary } from "../ui-kit/RedesignButtonSecondary";
 
 const useStyles = makeStyles(theme => ({
     rootStyle: {
@@ -43,7 +44,7 @@ const ImageContentCard = ({ content, image, buttonText, buttonHref }) => {
                     </Typography>
 
                     <Box className={classes.cardButtonBoxStyle}>
-                        <RedesignButtonPrimary href={buttonHref}>{buttonText}</RedesignButtonPrimary>
+                        <RedesignButtonSecondary href={buttonHref}>{buttonText}</RedesignButtonSecondary>
                     </Box>
                 </Paper>
             </Box>

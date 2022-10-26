@@ -7,10 +7,10 @@ const useStyles = makeStyles(theme => ({
         height: "48px",
         borderRadius: "50px",
         padding: "16px",
-        backgroundColor: theme.palette.primary.light,
-        color: theme.palette.secondary.contrastText,
+        backgroundColor: theme.palette.common.white,
+        color: theme.palette.primary.dark,
         "&:hover": {
-            backgroundColor: theme.palette.secondary,
+            backgroundColor: theme.palette.primary.light,
             color: theme.palette.secondary.contrastText,
         },
     },
