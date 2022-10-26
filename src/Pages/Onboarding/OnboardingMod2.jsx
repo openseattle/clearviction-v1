@@ -8,7 +8,7 @@ import Footer from "../../Components/Onboarding/Footer";
 import remote from "../../Assets/Onboarding/remote.svg";
 import checklist from "../../Assets/Onboarding/checklist.svg";
 import chat from "../../Assets/Onboarding/chat.svg";
-import paper from "../../Assets/Onboarding/paper.svg";
+import paper from "../../Assets/Onboarding/paper.svg"; //
 
 const headerText = {
     title: "Module 2",
