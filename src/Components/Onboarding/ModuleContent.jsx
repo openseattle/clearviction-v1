@@ -99,7 +99,7 @@ function ModuleContent(props) {
     const handleFindVideoOpen = () => setFindVideoOpen(true);
     const handleFindVideoClose = () => setFindVideoOpen(false);
 
-    const isLargeScreen = useMediaQuery('(min-width:850px)');
+    const isLargeScreen = useMediaQuery("(min-width:850px)");
 
     return (
         <div className={classes.moduleContentCard}>

@@ -156,7 +156,7 @@ function OnboardingMod4() {
                         textAlign: "center",
                         padding: "0 50px",
                         maxWidth: "77vw",
-                        [Theme.breakpoints.down('md')]: {
+                        [Theme.breakpoints.down("md")]: {
                             padding: "0 40px",
                         },
                     }}

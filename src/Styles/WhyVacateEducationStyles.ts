@@ -1,11 +1,11 @@
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 
 export const WhyVacateHousingStyles = makeStyles(theme => ({
     containerStyles: {
         margin: theme.spacing(2),
         marginTop: theme.spacing(5),
         marginBottom: theme.spacing(5),
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             padding: theme.spacing(3),
         },
     },

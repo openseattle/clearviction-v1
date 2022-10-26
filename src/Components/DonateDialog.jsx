@@ -9,7 +9,7 @@ import {
     ListItem,
     Typography,
 } from "@mui/material";
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 
 import venmo from "../Assets/venmo.png";
 

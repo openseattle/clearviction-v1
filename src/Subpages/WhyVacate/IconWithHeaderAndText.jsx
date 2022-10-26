@@ -1,6 +1,6 @@
 import { SvgIcon } from "@mui/material";
 import { Grid, Typography } from "@mui/material";
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles(theme => ({
     mainText: {

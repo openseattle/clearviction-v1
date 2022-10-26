@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Step, Stepper, StepLabel, Box } from "@mui/material";
 import { SectionName } from "../data/calculatorPagesTypes";
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles(() => ({
     root: {

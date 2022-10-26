@@ -1,5 +1,5 @@
 import { Paper, Typography, Box } from "@mui/material";
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 
 const useStyles = makeStyles(theme => ({

@@ -1,4 +1,4 @@
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 
 export const useAboutStyles = makeStyles(theme => ({
     darkBlueBackground: {
@@ -6,13 +6,13 @@ export const useAboutStyles = makeStyles(theme => ({
         color: "white",
         padding: theme.spacing(9),
         marginBottom: theme.spacing(4),
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             padding: theme.spacing(9, 0),
         },
     },
     regularContainer: {
         padding: theme.spacing(8),
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             padding: theme.spacing(3),
         },
     },
@@ -26,7 +26,7 @@ export const useAboutStyles = makeStyles(theme => ({
     subheadingStyle: {
         marginBottom: theme.spacing(8),
         paddingBottom: theme.spacing(8),
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             fontSize: "40px",
         },
     },
@@ -40,7 +40,7 @@ export const useAboutStyles = makeStyles(theme => ({
     },
     gridItemStyle: {
         padding: theme.spacing(0.8),
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             marginBottom: theme.spacing(3),
         },
     },
@@ -49,7 +49,7 @@ export const useAboutStyles = makeStyles(theme => ({
         boxShadow: "0px 2px 1px rgba(0, 0, 0, 0.2)",
         borderRadius: "6px",
         padding: theme.spacing(9),
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             padding: theme.spacing(4),
         },
     },
@@ -59,7 +59,7 @@ export const useAboutStyles = makeStyles(theme => ({
         height: 1,
         width: "80%",
         margin: theme.spacing(22, "auto"),
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             margin: theme.spacing(15, "auto"),
         },
     },
@@ -77,7 +77,7 @@ export const useAboutStyles = makeStyles(theme => ({
         // [theme.breakpoints.down("sm")]: {
         //   padding: theme.spacing(1)
         // },
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             padding: theme.spacing(1, 0),
         },
     },

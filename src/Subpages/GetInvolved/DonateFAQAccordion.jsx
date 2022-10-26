@@ -98,8 +98,10 @@ const DonateFAQAccordion = () => {
                 <>
                     <Typography className={classes.contentTextStyle}>
                         You can send us an email at{" "}
-                        <Link href="mailto:contact@clearviction.org" underline="hover">contact@clearviction.org</Link> and we will get
-                        back to you within 24 hours.
+                        <Link href="mailto:contact@clearviction.org" underline="hover">
+                            contact@clearviction.org
+                        </Link>{" "}
+                        and we will get back to you within 24 hours.
                     </Typography>
                 </>
             ),

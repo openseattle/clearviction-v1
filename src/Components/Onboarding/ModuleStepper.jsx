@@ -46,8 +46,7 @@ const styles = {
 export default function VerticalLinearStepper() {
     const classes = useHomeStyles();
 
-    const isLargeScreen = useMediaQuery('(min-width:600px)');
-
+    const isLargeScreen = useMediaQuery("(min-width:600px)");
 
     return (
         <>

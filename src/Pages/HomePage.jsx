@@ -37,8 +37,8 @@ const HomePage = () => {
                                 conviction for free in less than 10 minutes!
                             </Typography>
                             <Box paddingTop={12}>
-                                <RedesignButtonPrimary href="/calculator/landing-0">
-                                    Check Eligibility
+                                <RedesignButtonPrimary href="/calculator/landing-0" className={classes.calcHome}>
+                                    Access Calculator
                                 </RedesignButtonPrimary>
                             </Box>
                         </Grid>

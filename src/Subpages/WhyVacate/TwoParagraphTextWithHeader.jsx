@@ -1,5 +1,5 @@
 import { Grid, Typography, Container, Box } from "@mui/material";
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles(theme => ({
     lightBlueSectionBackground: {
@@ -10,7 +10,7 @@ const useStyles = makeStyles(theme => ({
         margin: theme.spacing(2),
         marginTop: theme.spacing(5),
         marginBottom: theme.spacing(5),
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             padding: theme.spacing(3),
         },
     },

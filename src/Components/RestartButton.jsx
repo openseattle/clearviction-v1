@@ -1,4 +1,4 @@
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 
 const BACK_ARROW_TRANSFORM = "scale(-1, 1) rotate(270deg)";
 const useStyles = makeStyles(theme => ({

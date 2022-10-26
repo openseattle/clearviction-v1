@@ -15,7 +15,8 @@ const aidFacts = [
                             rel="noopener noreferrer"
                             href={resource.url}
                             variant="caption"
-                            underline="hover">
+                            underline="hover"
+                        >
                             {resource.name}
                         </Link>
                     </ListItem>
@@ -35,7 +36,8 @@ const aidFacts = [
                             rel="noopener noreferrer"
                             href={resource.url}
                             variant="caption"
-                            underline="hover">
+                            underline="hover"
+                        >
                             {resource.name}
                         </Link>
                     </ListItem>
@@ -55,7 +57,8 @@ const aidFacts = [
                             rel="noopener noreferrer"
                             href={resource.url}
                             variant="caption"
-                            underline="hover">
+                            underline="hover"
+                        >
                             {resource.name}
                         </Link>
                     </ListItem>
