@@ -128,7 +128,7 @@ export const useModuleContentStyles = makeStyles(theme => ({
         borderRadius: "50px",
         margin: "auto",
         marginTop: theme.spacing(8),
-        fontSize: "18px",
+        fontSize: "19px",
         fontWeight: "bold",
         lineHeight: 2.7,
         "&:hover": {

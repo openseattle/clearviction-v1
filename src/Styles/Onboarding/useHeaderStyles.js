@@ -63,16 +63,16 @@ export const useHeaderStyles = makeStyles(theme => ({
         },
     },
     title: {
-        fontSize: "40px",
+        fontSize: "50px",
         lineHeight: "50px",
         fontWeight: 400,
         textAlign: "center",
         marginBottom: theme.spacing(0),
         [theme.breakpoints.down('lg')]: {
-            fontSize: "40px",
+            fontSize: "50px",
         },
         [theme.breakpoints.down('md')]: {
-            fontSize: "30px",
+            fontSize: "50px",
         },
     },
     subheading: {
