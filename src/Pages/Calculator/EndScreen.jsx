@@ -1,22 +1,31 @@
+/* eslint-disable react/forbid-prop-types */
+/* eslint-disable react/no-array-index-key */
 import { Grid, Typography } from "@mui/material";
+import PropTypes from "prop-types";
 import { BackButton } from "../../ui-kit/BackButton";
 import PrimaryButton from "../../ui-kit/PrimaryButton";
 import { EndScreenStyles } from "./EndScreenStyles";
 import RestartButton from "../../Components/RestartButton";
-import { CVPListItem } from "../../ui-kit/ListItem";
-import { BodyType } from "../../data/calculatorPagesTypes";
+import { BodyType } from "../../data/calculatorPagesTypes.ts";
 import ProgressBar from "../../Components/ProgressBar";
 import { ExternalLink } from "../../ui-kit/ExternalLink";
-import PropTypes from "prop-types";
 
-const EndScreen = props => {
+function EndScreen({
+    showProgressBar,
+    currentSectionName,
+    header,
+    body,
+    buttons,
+    showRestartButton,
+    disclaimer,
+}) {
     const classes = EndScreenStyles();
 
     return (
         <Grid data-testid="end-screen" container className={classes.grid}>
-            {props.progressBar && (
+            {showProgressBar && (
                 <Grid container>
-                    <ProgressBar currentSectionName={props.currentSectionName} />
+                    <ProgressBar currentSectionName={currentSectionName} />
                 </Grid>
             )}
 
@@ -24,11 +33,11 @@ const EndScreen = props => {
                 <BackButton />
             </Grid>
             <Typography variant="h5" component="h1" className={classes.header}>
-                {props.header}
+                {header}
             </Typography>
             <Grid item className={classes.bodyGrid}>
-                {props.body &&
-                    props.body.map((b, idx) => {
+                {body &&
+                    body.map((b, idx) => {
                         switch (b.type) {
                             case BodyType.LIST: {
                                 return (
@@ -58,7 +67,11 @@ const EndScreen = props => {
                                     <ul key={idx}>
                                         <li className={classes.list} key={idx}>
                                             {b.textBeforeLink && <span>{b.textBeforeLink}</span>}
-                                            <ExternalLink target="_blank" rel="noopener noreferrer" href={b.href}>
+                                            <ExternalLink
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                href={b.href}
+                                            >
                                                 {b.linkText}
                                             </ExternalLink>
                                             {b.textAfterLink && <span>{b.textAfterLink}</span>}
@@ -66,37 +79,35 @@ const EndScreen = props => {
                                     </ul>
                                 );
                             default:
-                                break;
+                                return null;
                         }
                     })}
             </Grid>
             <Grid item className={classes.buttonGrid}>
-                {props.buttons.map((b, idx) => {
-                    return (
-                        <PrimaryButton
-                            key={idx}
-                            role="button"
-                            className={classes.button}
-                            text={b.text}
-                            href={b.href}
-                            target={b.target}
-                        />
-                    );
-                })}
+                {buttons.map((b, idx) => (
+                    <PrimaryButton
+                        key={idx}
+                        role="button"
+                        className={classes.button}
+                        text={b.text}
+                        href={b.href}
+                        target={b.target}
+                    />
+                ))}
             </Grid>
             <Grid item className={classes.restartButton}>
-                {props.showRestartButton && <RestartButton className={classes.button} />}
+                {showRestartButton && <RestartButton className={classes.button} />}
             </Grid>
             <Grid item className={classes.restartButton}>
-                {props.disclaimer && (
+                {disclaimer && (
                     <Typography variant="caption" className={classes.body}>
-                        {props.disclaimer}
+                        {disclaimer}
                     </Typography>
                 )}
             </Grid>
         </Grid>
     );
-};
+}
 
 EndScreen.propTypes = {
     header: PropTypes.string.isRequired,
@@ -104,7 +115,12 @@ EndScreen.propTypes = {
     buttons: PropTypes.arrayOf(PropTypes.object).isRequired,
     showRestartButton: PropTypes.bool.isRequired,
     disclaimer: PropTypes.string,
-    progressBar: PropTypes.object,
+    showProgressBar: PropTypes.bool,
+};
+
+EndScreen.defaultProps = {
+    disclaimer: "",
+    showProgressBar: false,
 };
 
 export default EndScreen;

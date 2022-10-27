@@ -5,9 +5,9 @@ import sending_emails from "../Assets/sending_emails.svg";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 
-const ContactSuccessPage = () => {
+function ContactSuccessPage() {
     const classes = useContactStyles();
-    const [documentTitle, setDocumentTitle] = useDocumentTitle("Contact Success - ");
+    useDocumentTitle("Contact Success - ");
 
     return (
         <Box className={classes.regularContainer}>
@@ -16,9 +16,15 @@ const ContactSuccessPage = () => {
                     Thank You!
                 </Typography>
                 <Box>
-                    <Grid container direction="column" justifyContent="center" alignItems="center" spacing={10}>
+                    <Grid
+                        container
+                        direction="column"
+                        justifyContent="center"
+                        alignItems="center"
+                        spacing={10}
+                    >
                         <Grid item>
-                            <img src={sending_emails} className={classes.iconStyle} alt=""></img>
+                            <img src={sending_emails} className={classes.iconStyle} alt="" />
                         </Grid>
                         <Grid item>
                             <Typography variant="h5" className={classes.successContentTextStyle}>
@@ -36,6 +42,6 @@ const ContactSuccessPage = () => {
             </Container>
         </Box>
     );
-};
+}
 
 export default ContactSuccessPage;

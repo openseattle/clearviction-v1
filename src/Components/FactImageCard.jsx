@@ -21,12 +21,12 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const FactImageCard = ({ fact }) => {
+function FactImageCard({ fact }) {
     const classes = useStyles();
     return (
         <Card className={classes.root}>
             <Box display="flex" justifyContent="center">
-                <img className={classes.cardImageStyle} alt={""} src={fact.src} />
+                <img className={classes.cardImageStyle} alt="" src={fact.src} />
             </Box>
             <Typography variant="h5" align="center" className={classes.headingStyle}>
                 {fact.title}
@@ -48,6 +48,6 @@ const FactImageCard = ({ fact }) => {
             </CardContent>
         </Card>
     );
-};
+}
 
 export default FactImageCard;

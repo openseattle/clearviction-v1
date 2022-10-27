@@ -1,11 +1,11 @@
-import { Grid, Typography, Link } from "@mui/material";
-import { BodyType } from "../../data/calculatorPagesTypes";
+import { Grid, Typography } from "@mui/material";
+import { BodyType } from "../../data/calculatorPagesTypes.ts";
 import { BackButton } from "../../ui-kit/BackButton";
 import PrimaryButton from "../../ui-kit/PrimaryButton";
 import { SpecialCaseTitleStyles } from "./SpecialCaseTitleStyles";
 import { ExternalLink } from "../../ui-kit/ExternalLink";
 
-const SpecialCaseTitle = props => {
+function SpecialCaseTitle({ header, body, buttonText, buttonHref }) {
     const classes = SpecialCaseTitleStyles();
     return (
         <Grid container className={classes.grid}>
@@ -13,23 +13,17 @@ const SpecialCaseTitle = props => {
                 <BackButton />
             </Grid>
             <Typography variant="h5" component="h1" className={classes.header}>
-                {props.header}
+                {header}
             </Typography>
             <Grid item className={classes.bodyGrid}>
-                {props.body &&
-                    props.body.map((b, idx) => {
+                {body &&
+                    body.map((b, idx) => {
                         switch (b.type) {
-                            default:
-                                return (
-                                    <Typography key={idx} variant="body2" className={classes.body}>
-                                        {b.text}
-                                    </Typography>
-                                );
                             case BodyType.LIST:
                                 return (
                                     <ul>
-                                        {b.items.map((item, idx) => (
-                                            <li className={classes.list} key={idx}>
+                                        {b.items.map((item, itemIdx) => (
+                                            <li className={classes.list} key={itemIdx}>
                                                 {item}
                                             </li>
                                         ))}
@@ -64,12 +58,18 @@ const SpecialCaseTitle = props => {
                                         </ExternalLink>
                                     </span>
                                 );
+                            default:
+                                return (
+                                    <Typography key={idx} variant="body2" className={classes.body}>
+                                        {b.text}
+                                    </Typography>
+                                );
                         }
                     })}
             </Grid>
-            <PrimaryButton className={classes.button} text={props.buttonText} href={props.buttonHref} />
+            <PrimaryButton className={classes.button} text={buttonText} href={buttonHref} />
         </Grid>
     );
-};
+}
 
 export default SpecialCaseTitle;

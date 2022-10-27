@@ -1,14 +1,15 @@
 import { ButtonBase } from "@mui/material";
+import { useEffect, useState } from "react";
 import largeLogo from "../Assets/cVLogoInlineLight.svg";
 import smallLogo from "../Assets/cv_small_logo_dark. 1.svg";
-import { useEffect, useState } from "react";
 
-const NavigationLogo = () => {
+function NavigationLogo() {
     const [isLargeScreen, setIsLargeScreen] = useState(true);
 
     useEffect(() => {
         const mediaSize = window.innerWidth;
-        mediaSize >= 768 ? setIsLargeScreen(true) : setIsLargeScreen(false);
+        const shouldSetAsLargeScreen = mediaSize >= 768;
+        setIsLargeScreen(shouldSetAsLargeScreen);
     }, []);
 
     return (
@@ -20,6 +21,6 @@ const NavigationLogo = () => {
             )}
         </ButtonBase>
     );
-};
+}
 
 export default NavigationLogo;

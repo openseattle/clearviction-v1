@@ -4,12 +4,17 @@ import fb from "../../Assets/Onboarding/fb.svg";
 import linkedIn from "../../Assets/Onboarding/linkedIn.svg";
 import twitter from "../../Assets/Onboarding/twitter.svg";
 
-function SocialContainer(props) {
+function SocialContainer() {
     const classes = useHeaderStyles();
 
     return (
         <div>
-            <a href="https://twitter.com/Clearviction" className={classes.socialIcons} target="_blank" rel="noreferrer">
+            <a
+                href="https://twitter.com/Clearviction"
+                className={classes.socialIcons}
+                target="_blank"
+                rel="noreferrer"
+            >
                 <img src={twitter} alt="Twitter" />
             </a>
             <a

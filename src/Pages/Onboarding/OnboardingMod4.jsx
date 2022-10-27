@@ -1,5 +1,5 @@
 import { Grid, Typography, Box } from "@mui/material";
-import Theme from "../../Components/Theme";
+import Theme from "../../Components/Theme.tsx";
 import { useModuleContentStyles } from "../../Styles/Onboarding/useModuleContentStyles";
 
 // Components
@@ -46,7 +46,8 @@ const team = {
     modalParagraph1:
         "Message the correspondent slack channel of the team introducing yourself and stating that you want to join. ",
     modalParagraph2: "Attend their weekly meetings and perform the tasks assigned.",
-    modalParagraph3: "Better to reliably and consistently show to one than dabble in more than one.",
+    modalParagraph3:
+        "Better to reliably and consistently show to one than dabble in more than one.",
 };
 
 const findWork = {
@@ -57,7 +58,8 @@ const findWork = {
     linkIcon: "videoFindWork",
     linkTitle2: "Misc. Tasks",
     linkIcon2: "link",
-    linkLocation2: "https://airtable.com/appfJZShN8K4tcWHU/tblXQZfKPAJIjV4cL/viw5qPVwWi7GiDT2J?blocks=hide",
+    linkLocation2:
+        "https://airtable.com/appfJZShN8K4tcWHU/tblXQZfKPAJIjV4cL/viw5qPVwWi7GiDT2J?blocks=hide",
 };
 
 const bugs = {
@@ -75,7 +77,8 @@ const bugs = {
 
 const questions = {
     title: "Any questions?",
-    paragraph1: "Ask your onboarding buddy. Need a buddy? Ping Seamus in the Nemo Slack Channel to get one.",
+    paragraph1:
+        "Ask your onboarding buddy. Need a buddy? Ping Seamus in the Nemo Slack Channel to get one.",
 };
 
 const doing = {

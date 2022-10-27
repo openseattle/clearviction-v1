@@ -1,9 +1,9 @@
 import React from "react";
 import { render, screen, within } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "@mui/material/styles";
 import EndScreen from "./EndScreen";
 import { BodyType } from "../../data/calculatorPagesTypes";
-import { ThemeProvider } from "@mui/material/styles";
 import Theme from "../../Components/Theme";
 
 describe("<EndScreen />", () => {
@@ -49,21 +49,25 @@ describe("<EndScreen />", () => {
         render(
             <ThemeProvider theme={Theme}>
                 <EndScreen
-                    header={"Your Conviction May Be Eligible to Vacate!"}
+                    header="Your Conviction May Be Eligible to Vacate!"
                     body={body}
                     buttons={buttons}
-                    disclaimer={"This is the disclaimer"}
-                    showRestartButton={true}
-                    progressBar={progressBar}
+                    disclaimer="This is the disclaimer"
+                    showRestartButton
+                    showProgressBar={true}
                 />
             </ThemeProvider>,
             { wrapper: BrowserRouter }
         );
 
         expect(screen.getByTestId("end-screen")).toBeVisible();
-        expect(screen.getByRole("heading", { name: "Your Conviction May Be Eligible to Vacate!" })).toBeInTheDocument();
+        expect(
+            screen.getByRole("heading", { name: "Your Conviction May Be Eligible to Vacate!" })
+        ).toBeInTheDocument();
 
-        expect(screen.getByText("It looks like your conviction may be eligible to vacate")).toBeInTheDocument();
+        expect(
+            screen.getByText("It looks like your conviction may be eligible to vacate")
+        ).toBeInTheDocument();
         expect(screen.getByRole("heading", { name: "Next steps:" })).toBeInTheDocument();
 
         const lists = screen.getAllByRole("list");
@@ -79,13 +83,18 @@ describe("<EndScreen />", () => {
         expect(fullLineLink).not.toHaveAttribute("role", "button");
 
         const inlineLinkListItem = within(lists[2]).getByRole("listitem");
-        expect(inlineLinkListItem).toHaveTextContent("test of inline link. inline link - text after link");
+        expect(inlineLinkListItem).toHaveTextContent(
+            "test of inline link. inline link - text after link"
+        );
 
         const inlineLink = within(inlineLinkListItem).getByRole("link");
         expect(inlineLink).toHaveTextContent("inline link");
         expect(inlineLink).toHaveAttribute("href", "www.inlinelink.com");
 
-        expect(screen.getByRole("button", { name: "test button" })).toHaveAttribute("href", "test.com");
+        expect(screen.getByRole("button", { name: "test button" })).toHaveAttribute(
+            "href",
+            "test.com"
+        );
         expect(screen.getByRole("link", { name: "Check another conviction" })).toBeInTheDocument();
         expect(screen.getByText("This is the disclaimer")).toBeInTheDocument();
         expect(screen.getByTestId("progress-bar")).toBeInTheDocument();

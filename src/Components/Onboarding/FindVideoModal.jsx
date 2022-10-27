@@ -3,6 +3,7 @@ export default function FindVideoModal() {
 
     return (
         <div
+            // eslint-disable-next-line react/no-unknown-property
             container
             style={{
                 position: "relative",
@@ -16,9 +17,15 @@ export default function FindVideoModal() {
             <iframe
                 title="miro"
                 src={find}
-                style={{ alignSelf: "center", width: "100%", maxWidth: "900px", height: "100%", maxHeight: "600px" }}
+                style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    maxWidth: "900px",
+                    height: "100%",
+                    maxHeight: "600px",
+                }}
                 allow="autoplay"
-            ></iframe>
+            />
         </div>
     );
 }

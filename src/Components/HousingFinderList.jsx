@@ -4,7 +4,7 @@ import { useResourcesStyles } from "../Styles/useResourcesStyles";
 import { ExternalLink } from "../ui-kit/ExternalLink";
 import { ListItemLink } from "../ui-kit/ListItemLink";
 
-const HousingFinderList = ({ resources }) => {
+function HousingFinderList({ resources }) {
     const classes = useResourcesStyles();
     return (
         <List style={{ width: "100%" }}>
@@ -33,7 +33,9 @@ const HousingFinderList = ({ resources }) => {
                                     <ListItemLink href={`tel:+${contact.phone}`}>
                                         <Call className={classes.shelterIcon} />
                                         {contact.tags2Phones && (
-                                            <Typography variant="body1">{contact.tags2Phones[0]}</Typography>
+                                            <Typography variant="body1">
+                                                {contact.tags2Phones[0]}
+                                            </Typography>
                                         )}
                                         <ListItemText primary={contact.phone} />
                                     </ListItemLink>
@@ -42,7 +44,9 @@ const HousingFinderList = ({ resources }) => {
                                     <ListItemLink href={`tel:+${contact.phone2}`}>
                                         <Call className={classes.shelterIcon} />
                                         {contact.tags2Phones && (
-                                            <Typography variant="body1">{contact.tags2Phones[1]}</Typography>
+                                            <Typography variant="body1">
+                                                {contact.tags2Phones[1]}
+                                            </Typography>
                                         )}
                                         <ListItemText primary={contact.phone2} />
                                     </ListItemLink>
@@ -65,6 +69,6 @@ const HousingFinderList = ({ resources }) => {
             ))}
         </List>
     );
-};
+}
 
 export default HousingFinderList;

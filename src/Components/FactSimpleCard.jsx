@@ -11,20 +11,18 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const FactSimpleCard = props => {
+function FactSimpleCard(props) {
     const { children } = props;
     const classes = useStyles();
     return (
-        <>
-            <Card className={classes.rootStyle}>
-                <CardContent>
-                    <Typography variant="body1" align="center">
-                        {children}
-                    </Typography>
-                </CardContent>
-            </Card>
-        </>
+        <Card className={classes.rootStyle}>
+            <CardContent>
+                <Typography variant="body1" align="center">
+                    {children}
+                </Typography>
+            </CardContent>
+        </Card>
     );
-};
+}
 
 export default FactSimpleCard;

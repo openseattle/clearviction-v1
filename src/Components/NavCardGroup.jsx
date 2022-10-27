@@ -42,14 +42,21 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const NavCardGroup = props => {
+function NavCardGroup(props) {
     const classes = useStyles();
     const { subPages, xs, sm, md } = props;
     return (
         <Box className={classes.cardGroupStyle}>
             <Grid container>
                 {subPages.map(pageCard => (
-                    <Grid className={classes.gridStyle} item key={pageCard.name} xs={xs} sm={sm} md={md}>
+                    <Grid
+                        className={classes.gridStyle}
+                        item
+                        key={pageCard.name}
+                        xs={xs}
+                        sm={sm}
+                        md={md}
+                    >
                         <Button
                             className={classes.cardStyle}
                             activeClassName={classes.cardStyleActive}
@@ -62,7 +69,10 @@ const NavCardGroup = props => {
                                 </Typography>
                                 <Box display={{ xs: "none", sm: "none", md: "block" }}>
                                     {pageCard.desc && (
-                                        <Typography className={classes.cardTextStyle} variant="subtitle2">
+                                        <Typography
+                                            className={classes.cardTextStyle}
+                                            variant="subtitle2"
+                                        >
                                             {pageCard.desc}
                                         </Typography>
                                     )}
@@ -74,6 +84,6 @@ const NavCardGroup = props => {
             </Grid>
         </Box>
     );
-};
+}
 
 export default NavCardGroup;

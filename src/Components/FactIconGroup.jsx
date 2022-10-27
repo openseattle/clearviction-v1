@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import Fact from "./Fact";
 
-const FactIconGroup = ({ facts }) => {
+function FactIconGroup({ facts }) {
     return (
         <Grid container>
             {facts.map(fact => (
@@ -11,6 +11,6 @@ const FactIconGroup = ({ facts }) => {
             ))}
         </Grid>
     );
-};
+}
 
 export default FactIconGroup;

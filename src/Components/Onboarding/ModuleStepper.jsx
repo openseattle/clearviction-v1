@@ -1,10 +1,9 @@
 // components
-import ModuleCard from "./ModuleCard";
 import { Grid, useMediaQuery } from "@mui/material";
+import ModuleCard from "./ModuleCard";
 
 // icons
 import circleCheck from "../../Assets/Onboarding/circleCheck.png";
-import openCircle from "../../Assets/Onboarding/openCircle.png";
 
 // styles
 import { useHomeStyles } from "../../Styles/Onboarding/useHomeStyles";
@@ -62,25 +61,25 @@ export default function VerticalLinearStepper() {
                     {isLargeScreen ? (
                         <Grid>
                             {index > 0 ? (
-                                <div className={classes.connectorLine}></div>
+                                <div className={classes.connectorLine} />
                             ) : (
-                                <div className={classes.spacerLine}></div>
+                                <div className={classes.spacerLine} />
                             )}
                             {localStorage.getItem(module.link) ? (
                                 <img src={circleCheck} style={styles.img} alt="" />
                             ) : (
-                                <div className={classes.openCircle}></div>
+                                <div className={classes.openCircle} />
                             )}
                             {index < modules.length - 1 ? (
-                                <div className={classes.connectorLine}></div>
+                                <div className={classes.connectorLine} />
                             ) : (
-                                <div className={classes.spacerLine}></div>
+                                <div className={classes.spacerLine} />
                             )}
                         </Grid>
                     ) : (
                         ""
                     )}
-                    <Grid item={true} xs={10} md={8} sm={8} lg={8}>
+                    <Grid item xs={10} md={8} sm={8} lg={8}>
                         <ModuleCard module={module} />
                     </Grid>
                 </Grid>

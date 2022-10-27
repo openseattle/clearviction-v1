@@ -2,12 +2,10 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import ProgressBar from "../ProgressBar";
 
-const getDefaultProps = () => {
-    return {
-        currentSectionName: "Surrounding Circumstances",
-        totalSections: 3,
-    };
-};
+const getDefaultProps = () => ({
+    currentSectionName: "Surrounding Circumstances",
+    totalSections: 3,
+});
 
 describe("<ProgressBar />", () => {
     it("should render a progress bar with expected elements", () => {

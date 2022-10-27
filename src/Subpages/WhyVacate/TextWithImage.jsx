@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export const TextWithImage = props => {
+export function TextWithImage(props) {
     const classes = useStyles();
     const { img, header, text, cols, altStyle } = props;
     const textItems = text.map((t, idx) => (
@@ -46,4 +46,4 @@ export const TextWithImage = props => {
             {textItems}
         </Grid>
     );
-};
+}

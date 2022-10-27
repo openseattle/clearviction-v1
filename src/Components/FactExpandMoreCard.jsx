@@ -1,9 +1,16 @@
-import { Card, CardActionArea, CardActions, CardContent, Collapse, Typography } from "@mui/material";
+import {
+    Card,
+    CardActionArea,
+    CardActions,
+    CardContent,
+    Collapse,
+    Typography,
+} from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { ExpandMore } from "@mui/icons-material";
 import { useState } from "react";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
     rootStyle: {
         margin: 8,
     },
@@ -12,7 +19,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const FactExpandMoreCard = ({ summary, content, ariaLabel, contentID, summaryID }) => {
+function FactExpandMoreCard({ summary, content, ariaLabel, contentID, summaryID }) {
     const [expanded, setExpanded] = useState(false);
 
     const handleExpandClick = () => {
@@ -43,6 +50,6 @@ const FactExpandMoreCard = ({ summary, content, ariaLabel, contentID, summaryID 
             </Collapse>
         </Card>
     );
-};
+}
 
 export default FactExpandMoreCard;

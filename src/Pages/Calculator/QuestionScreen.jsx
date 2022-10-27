@@ -1,58 +1,43 @@
 import { useState } from "react";
-import {
-    Grid,
-    Typography,
-    Dialog,
-    DialogTitle,
-    DialogContent,
-    DialogContentText,
-    DialogActions,
-    Button,
-} from "@mui/material";
+import { Grid, Typography, Dialog, DialogActions, Button } from "@mui/material";
 import { BackButton } from "../../ui-kit/BackButton";
 import PrimaryButton from "../../ui-kit/PrimaryButton";
 import { QuestionScreenStyles } from "./QuestionScreenStyles";
 import SecondaryButton from "../../ui-kit/SecondaryButton";
 import { trackClick } from "../../trackingUtils";
-import { BodyType } from "../../data/calculatorPagesTypes";
+import { BodyType } from "../../data/calculatorPagesTypes.ts";
 import ProgressBar from "../../Components/ProgressBar";
 import { ExternalLink } from "../../ui-kit/ExternalLink";
 import CalulatorDialog from "../../ui-kit/CalulatorDialog";
 
-const QuestionScreen = props => {
+function QuestionScreen({ text, progressBar, header, body, buttons, tooltip }) {
     const classes = QuestionScreenStyles();
     const [open, setOpen] = useState(false);
 
     const handleClose = () => setOpen(false);
     const handleOpen = () => {
         setOpen(true);
-        trackClick(props.text);
+        trackClick(text);
     };
 
     return (
         <Grid container className={classes.grid}>
-            {props.progressBar && <ProgressBar currentSectionName={props.progressBar.currentSectionName} />}
+            {progressBar && <ProgressBar currentSectionName={progressBar.currentSectionName} />}
             <Grid container className={classes.backButton}>
                 <BackButton />
             </Grid>
             <Typography variant="h6" component="h1" className={classes.header}>
-                {props.header}
+                {header}
             </Typography>
             <Grid item className={classes.bodyGrid}>
-                {props.body &&
-                    props.body.map((b, idx) => {
+                {body &&
+                    body.map((b, idx) => {
                         switch (b.type) {
-                            default:
-                                return (
-                                    <Typography key={idx} variant="body2" className={classes.body}>
-                                        {b.text}
-                                    </Typography>
-                                );
                             case BodyType.LIST:
                                 return (
                                     <ul>
-                                        {b.items.map((item, idx) => (
-                                            <li className={classes.list} key={idx}>
+                                        {b.items.map((item, itemIdx) => (
+                                            <li className={classes.list} key={itemIdx}>
                                                 {item}
                                             </li>
                                         ))}
@@ -73,15 +58,30 @@ const QuestionScreen = props => {
                                         </li>
                                     </ul>
                                 );
+                            default:
+                                return (
+                                    <Typography key={idx} variant="body2" className={classes.body}>
+                                        {b.text}
+                                    </Typography>
+                                );
                         }
                     })}
             </Grid>
             <Grid container justifyContent="center" className={classes.buttonGrid}>
-                {props.buttons.map((b, idx) => {
-                    return <PrimaryButton href={b.href} key={idx} text={b.text} className={classes.button} />;
-                })}
-                {props.tooltip && (
-                    <SecondaryButton className={classes.button} text={"I'm not sure"} onClick={handleOpen} />
+                {buttons.map((b, idx) => (
+                    <PrimaryButton
+                        href={b.href}
+                        key={idx}
+                        text={b.text}
+                        className={classes.button}
+                    />
+                ))}
+                {tooltip && (
+                    <SecondaryButton
+                        className={classes.button}
+                        text={"I'm not sure"}
+                        onClick={handleOpen}
+                    />
                 )}
                 <Dialog onClose={handleClose} open={open} maxWidth="lg">
                     <CalulatorDialog />
@@ -94,6 +94,6 @@ const QuestionScreen = props => {
             </Grid>
         </Grid>
     );
-};
+}
 
 export default QuestionScreen;

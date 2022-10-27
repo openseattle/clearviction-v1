@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const TrustDocAccordion = () => {
+function TrustDocAccordion() {
     const classes = useStyles();
 
     const [expanded, setExpanded] = useState("1");
@@ -65,7 +65,11 @@ const TrustDocAccordion = () => {
     return (
         <div className={classes.root}>
             {trustDoc.map(elem => (
-                <Accordion expanded={expanded === elem.id} onChange={handleChange(elem.id)} key={elem.id}>
+                <Accordion
+                    expanded={expanded === elem.id}
+                    onChange={handleChange(elem.id)}
+                    key={elem.id}
+                >
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1a-content"
@@ -82,6 +86,6 @@ const TrustDocAccordion = () => {
             ))}
         </div>
     );
-};
+}
 
 export default TrustDocAccordion;

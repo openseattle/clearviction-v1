@@ -11,9 +11,9 @@ import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 import { ExternalLink } from "../ui-kit/ExternalLink";
 
-const AboutPage = () => {
+function AboutPage() {
     const classes = useAboutStyles();
-    const [documentTitle, setDocumentTitle] = useDocumentTitle("About Us - ");
+    useDocumentTitle("About Us - ");
 
     return (
         <>
@@ -24,13 +24,22 @@ const AboutPage = () => {
                             <Typography className={classes.headingStyle} variant="h1">
                                 About Us
                             </Typography>
-                            <Typography className={classes.contentTextStyle} variant="subtitle1" component="p">
-                                We are a civic-tech open-source project working to make the conviction vacation process
-                                in Washington easier and more straightforward, starting with an eligibility calculator.
+                            <Typography
+                                className={classes.contentTextStyle}
+                                variant="subtitle1"
+                                component="p"
+                            >
+                                We are a civic-tech open-source project working to make the
+                                conviction vacation process in Washington easier and more
+                                straightforward, starting with an eligibility calculator.
                             </Typography>
                         </Grid>
                         <Grid item xs={12} sm={6} md={6}>
-                            <img src={map} className={classes.iconStyle + " " + classes.centerText} alt=""></img>
+                            <img
+                                src={map}
+                                className={`${classes.iconStyle} ${classes.centerText}`}
+                                alt=""
+                            />
                         </Grid>
                     </Grid>
                 </Container>
@@ -51,8 +60,8 @@ const AboutPage = () => {
                         Our Story
                     </Typography>
                     <Typography variant="h3" className={classes.subheadingStyle}>
-                        Those with a criminal record in Washington face significant barriers to daily life after
-                        completing their prison terms
+                        Those with a criminal record in Washington face significant barriers to
+                        daily life after completing their prison terms
                     </Typography>
 
                     <Box className={classes.boxShadow}>
@@ -66,30 +75,31 @@ const AboutPage = () => {
                             >
                                 Washington State's New Hope Act
                             </ExternalLink>
-                            makes it easier for people with past criminal records to have their convictions vacated.
-                            Even then, the process of vacating a conviction is very convoluted, making it difficult for
-                            most people to navigate:
+                            makes it easier for people with past criminal records to have their
+                            convictions vacated. Even then, the process of vacating a conviction is
+                            very convoluted, making it difficult for most people to navigate:
                         </Typography>
 
-                        <Grid container className={classes.gridStyle + " " + classes.centerText}>
+                        <Grid container className={`${classes.gridStyle} ${classes.centerText}`}>
                             <Grid item md={4} className={classes.gridItemStyle}>
                                 <HourglassEmpty className={classes.theProblemIcon} />
                                 <Typography variant="subtitle1">
-                                    It has a number of steps that require time and know-how, increasing the barrier of
-                                    entry for applicants
+                                    It has a number of steps that require time and know-how,
+                                    increasing the barrier of entry for applicants
                                 </Typography>
                             </Grid>
                             <Grid item md={4} className={classes.gridItemStyle}>
                                 <LocalAtmOutlined className={classes.theProblemIcon} />
                                 <Typography variant="subtitle1">
-                                    While hiring an attorney can help simplify the process, it's unaffordable for most
+                                    While hiring an attorney can help simplify the process, it's
+                                    unaffordable for most
                                 </Typography>
                             </Grid>
                             <Grid item md={4} className={classes.gridItemStyle}>
                                 <PanToolOutlined className={classes.theProblemIcon} />
                                 <Typography variant="subtitle1">
-                                    Volunteer services are available, but they are often inaccessible and don't cover
-                                    all steps
+                                    Volunteer services are available, but they are often
+                                    inaccessible and don't cover all steps
                                 </Typography>
                             </Grid>
                         </Grid>
@@ -106,14 +116,18 @@ const AboutPage = () => {
                 <Box style={{ width: "90%", margin: "0 auto" }}>
                     <Grid container className={classes.gridStyle}>
                         <Grid item sm={12} md={6} className={classes.gridItemStyle}>
-                            <img src={checklist1} className={classes.iconStyle} alt=""></img>
+                            <img src={checklist1} className={classes.iconStyle} alt="" />
                         </Grid>
                         <Grid item sm={12} md={6} className={classes.gridItemStyle}>
                             <Typography variant="h4" className={classes.headingSpacing}>
-                                Our mission is to benefit individuals with criminal convictions in Washington and
-                                decrease life-long collateral consequences.
+                                Our mission is to benefit individuals with criminal convictions in
+                                Washington and decrease life-long collateral consequences.
                             </Typography>
-                            <Typography variant="subtitle1" className={classes.spaceAfter} component="p">
+                            <Typography
+                                variant="subtitle1"
+                                className={classes.spaceAfter}
+                                component="p"
+                            >
                                 To support this mission, we first focused on creating a&nbsp;
                                 <a
                                     href="https://www.clearviction.org/calculator/"
@@ -124,7 +138,8 @@ const AboutPage = () => {
                                 >
                                     Conviction Eligibility Calculator
                                 </a>
-                                to help people determine if they are eligible to vacate their conviction.
+                                to help people determine if they are eligible to vacate their
+                                conviction.
                             </Typography>
                         </Grid>
                     </Grid>
@@ -146,12 +161,16 @@ const AboutPage = () => {
                             frameBorder="0"
                             width="100%"
                             height="1048"
-                            style={{ background: "transparent", border: "1px solid #ccc", borderRadius: "6px" }}
-                        ></iframe>
+                            style={{
+                                background: "transparent",
+                                border: "1px solid #ccc",
+                                borderRadius: "6px",
+                            }}
+                        />
                     </Grid>
                 </Container>
             </Box>
         </>
     );
-};
+}
 export default AboutPage;

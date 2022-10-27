@@ -1,8 +1,8 @@
+import { Box, Grid, Typography } from "@mui/material";
 import Header from "../../Components/Onboarding/Header";
 import ModuleContent from "../../Components/Onboarding/ModuleContent";
 import Footer from "../../Components/Onboarding/Footer";
 
-import { Box, Grid, Typography } from "@mui/material";
 import { useModuleContentStyles } from "../../Styles/Onboarding/useModuleContentStyles";
 
 import arrowRight from "../../Assets/Onboarding/arrowRight.svg";

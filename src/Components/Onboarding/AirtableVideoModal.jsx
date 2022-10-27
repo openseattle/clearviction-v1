@@ -7,7 +7,7 @@ import video from "../../Assets/Onboarding/video.svg";
 // styles
 import { useModalStyles } from "../../Styles/Onboarding/useModalStyles";
 
-export default function AirtableVideoModal(props) {
+export default function AirtableVideoModal({ handleAirtableVideoClose }) {
     const [sectionId, setSectionId] = useState(1);
     const [activeTab, setActiveTab] = useState(1);
     const classes = useModalStyles();
@@ -63,6 +63,7 @@ export default function AirtableVideoModal(props) {
             <Grid item xs={2}>
                 {sections.map(section => (
                     <button
+                        type="button"
                         key={section.id}
                         onClick={() => showSection(section.id)}
                         style={activeTab === section.id ? activeTabStyle : tabStyle}
@@ -81,7 +82,7 @@ export default function AirtableVideoModal(props) {
                             width="100%"
                             height="80%"
                             allow="autoplay"
-                        ></iframe>
+                        />
                     </div>
                 )}
                 {sectionId === 2 && (
@@ -92,7 +93,7 @@ export default function AirtableVideoModal(props) {
                             width="100%"
                             height="80%"
                             allow="autoplay"
-                        ></iframe>
+                        />
                     </div>
                 )}
                 {sectionId === 3 && (
@@ -103,7 +104,7 @@ export default function AirtableVideoModal(props) {
                             width="100%"
                             height="80%"
                             allow="autoplay"
-                        ></iframe>
+                        />
                     </div>
                 )}
                 {sectionId === 4 && (
@@ -114,7 +115,7 @@ export default function AirtableVideoModal(props) {
                             width="100%"
                             height="80%"
                             allow="autoplay"
-                        ></iframe>
+                        />
                     </div>
                 )}
                 {sectionId === 5 && (
@@ -125,7 +126,7 @@ export default function AirtableVideoModal(props) {
                             width="100%"
                             height="80%"
                             allow="autoplay"
-                        ></iframe>
+                        />
                     </div>
                 )}
                 {sectionId === 6 && (
@@ -136,11 +137,11 @@ export default function AirtableVideoModal(props) {
                             width="100%"
                             height="80%"
                             allow="autoplay"
-                        ></iframe>
+                        />
                     </div>
                 )}
                 <Button
-                    onClick={props.handleAirtableVideoClose}
+                    onClick={handleAirtableVideoClose}
                     style={{ margin: "0 auto 64px" }}
                     className={classes.button}
                 >

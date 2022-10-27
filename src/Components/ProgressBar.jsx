@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Step, Stepper, StepLabel, Box } from "@mui/material";
-import { SectionName } from "../data/calculatorPagesTypes";
 import { makeStyles } from "@mui/styles";
+import { SectionName } from "../data/calculatorPagesTypes.ts";
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -30,10 +30,6 @@ export default function ProgressBar({ currentSectionName }) {
     const classes = useStyles();
 
     useEffect(() => {
-        handleNext(currentSectionName);
-    }, [currentSectionName]);
-
-    const handleNext = () => {
         let currentSection;
         switch (currentSectionName) {
             case SectionName.OFF:
@@ -49,12 +45,13 @@ export default function ProgressBar({ currentSectionName }) {
                 break;
             case undefined: // this case will set the progress bar as "completed"
                 currentSection = 3;
+                break;
             default:
                 break;
         }
 
         setActiveStep(currentSection);
-    };
+    }, [currentSectionName]);
 
     return (
         <Box data-testid="progress-bar" className={classes.root} sx={{ width: "100%" }}>
@@ -62,9 +59,8 @@ export default function ProgressBar({ currentSectionName }) {
                 {steps.map((label, index) => {
                     const stepProps = {};
                     const labelProps = {};
-                    let labelToDisplay;
                     // logic to display step label or not
-                    activeStep === index ? (labelToDisplay = label) : (labelToDisplay = null);
+                    const labelToDisplay = activeStep === index ? label : null;
 
                     return (
                         <Step data-testid="progress-bar-step" key={label} {...stepProps}>

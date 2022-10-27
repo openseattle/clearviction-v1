@@ -10,9 +10,9 @@ import circleCheck from "../../Assets/Onboarding/circleCheck.png";
 
 import { useModuleCardStyles } from "../../Styles/Onboarding/useModuleCardStyles";
 
-function ModuleCard(props) {
+function ModuleCard({ module: moduleProp }) {
     const classes = useModuleCardStyles();
-    const { number, link, text, subheading } = props.module;
+    const { number, link, text, subheading } = moduleProp;
 
     return (
         <div className={classes.moduleCard}>
@@ -24,10 +24,18 @@ function ModuleCard(props) {
                         </Typography>
                     </div>
                     <div className={classes.cardBody}>
-                        {number === "module 1" && <img className={classes.iconStyle} src={screens} alt="" />}
-                        {number === "module 2" && <img className={classes.iconStyle} src={tool} alt="" />}
-                        {number === "module 3" && <img className={classes.iconStyle} src={remote} alt="" />}
-                        {number === "module 4" && <img className={classes.iconStyle} src={simpleQuestion} alt="" />}
+                        {number === "module 1" && (
+                            <img className={classes.iconStyle} src={screens} alt="" />
+                        )}
+                        {number === "module 2" && (
+                            <img className={classes.iconStyle} src={tool} alt="" />
+                        )}
+                        {number === "module 3" && (
+                            <img className={classes.iconStyle} src={remote} alt="" />
+                        )}
+                        {number === "module 4" && (
+                            <img className={classes.iconStyle} src={simpleQuestion} alt="" />
+                        )}
                         <div>
                             <Typography variant="h5" className={classes.cardSubheading}>
                                 {subheading}
@@ -39,7 +47,13 @@ function ModuleCard(props) {
                         {localStorage.getItem(link) ? (
                             <div className={classes.mobileSuccessButton}>
                                 <img className={classes.checkMark} src={circleCheck} alt="" />
-                                <Typography style={{ fontSize: "17px", marginLeft: "1rem", fontWeight: "bold" }}>
+                                <Typography
+                                    style={{
+                                        fontSize: "17px",
+                                        marginLeft: "1rem",
+                                        fontWeight: "bold",
+                                    }}
+                                >
                                     completed
                                 </Typography>
                             </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@mui/styles";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const SlackVideoAccordion = props => {
+function SlackVideoAccordion() {
     const classes = useStyles();
 
     const [expanded, setExpanded] = useState("1");
@@ -70,7 +70,11 @@ const SlackVideoAccordion = props => {
     return (
         <div className={classes.root}>
             {sections.map(elem => (
-                <Accordion expanded={expanded === elem.id} onChange={handleChange(elem.id)} key={elem.id}>
+                <Accordion
+                    expanded={expanded === elem.id}
+                    onChange={handleChange(elem.id)}
+                    key={elem.id}
+                >
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1a-content"
@@ -86,13 +90,13 @@ const SlackVideoAccordion = props => {
                                 height="300"
                                 width="100%"
                                 allow="autoplay"
-                            ></iframe>
+                            />
                         </div>
                     </AccordionDetails>
                 </Accordion>
             ))}
         </div>
     );
-};
+}
 
 export default SlackVideoAccordion;

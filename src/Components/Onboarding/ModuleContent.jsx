@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
     Typography,
     Button,
@@ -29,7 +29,7 @@ import SlackVideoAccordion from "./Mobile/SlackVideoAccordion";
 import TrustDocAccordion from "./Mobile/TrustDocAccordion";
 import { ExternalLink } from "../../ui-kit/ExternalLink";
 
-function ModuleContent(props) {
+function ModuleContent({ content }) {
     const classes = useModuleContentStyles();
     const modalClasses = useModalStyles();
     const {
@@ -66,7 +66,7 @@ function ModuleContent(props) {
         paragraphBullets,
         sourceSite,
         sourceText,
-    } = props.content;
+    } = content;
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -113,7 +113,11 @@ function ModuleContent(props) {
                 <Typography variant="body1" className={classes.moduleCardBody}>
                     {paragraph1}
                     {sourceSite ? (
-                        <ExternalLink variant="link" className={classes.externalLink} href={sourceSite}>
+                        <ExternalLink
+                            variant="link"
+                            className={classes.externalLink}
+                            href={sourceSite}
+                        >
                             {sourceText}
                         </ExternalLink>
                     ) : (
@@ -140,7 +144,7 @@ function ModuleContent(props) {
             {paragraphBullets ? (
                 <ul>
                     {paragraphBullets.map((bullet, idx) => (
-                        <li key={idx} style={{ fontSize: "20px", color: "#2b2929" }} variant="body1">
+                        <li key={idx} style={{ fontSize: "20px", color: "#2b2929" }}>
                             {bullet}
                         </li>
                     ))}
@@ -157,7 +161,12 @@ function ModuleContent(props) {
             {linkTitle ? (
                 <div className={classes.moduleContentLink}>
                     {linkIcon === "link" && (
-                        <Button href={linkLocation} target="_blank" rel="noreferrer" className={classes.linkContainer}>
+                        <Button
+                            href={linkLocation}
+                            target="_blank"
+                            rel="noreferrer"
+                            className={classes.linkContainer}
+                        >
                             <div className={classes.linkContainer}>
                                 <img src={link} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText}>{linkTitle}</p>
@@ -181,7 +190,10 @@ function ModuleContent(props) {
                         </Button>
                     )}
                     {linkIcon === "docAirtable" && (
-                        <Button onClick={handleAirtableOpen} style={{ textDecoration: "none", color: "#4e6c99" }}>
+                        <Button
+                            onClick={handleAirtableOpen}
+                            style={{ textDecoration: "none", color: "#4e6c99" }}
+                        >
                             <div className={classes.linkContainer}>
                                 <img src={doc} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText}>{linkTitle}</p>
@@ -226,7 +238,12 @@ function ModuleContent(props) {
             {linkTitle2 ? (
                 <div className={classes.moduleContentLink}>
                     {linkIcon2 === "link" && (
-                        <Button href={linkLocation2} target="_blank" rel="noreferrer" className={classes.linkContainer}>
+                        <Button
+                            href={linkLocation2}
+                            target="_blank"
+                            rel="noreferrer"
+                            className={classes.linkContainer}
+                        >
                             <div className={classes.linkContainer}>
                                 <img src={link} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText}>{linkTitle2}</p>
@@ -271,7 +288,12 @@ function ModuleContent(props) {
             {linkTitle3 ? (
                 <div className={classes.moduleContentLink}>
                     {linkIcon3 === "link" && (
-                        <Button href={linkLocation3} target="_blank" rel="noreferrer" className={classes.linkContainer}>
+                        <Button
+                            href={linkLocation3}
+                            target="_blank"
+                            rel="noreferrer"
+                            className={classes.linkContainer}
+                        >
                             <div className={classes.linkContainer}>
                                 <img src={link} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText}>{linkTitle3}</p>
@@ -279,7 +301,10 @@ function ModuleContent(props) {
                         </Button>
                     )}
                     {linkIcon3 === "doc" && (
-                        <Button onClick={handleOpen} style={{ textDecoration: "none", color: "#4e6c99" }}>
+                        <Button
+                            onClick={handleOpen}
+                            style={{ textDecoration: "none", color: "#4e6c99" }}
+                        >
                             <div className={classes.linkContainer}>
                                 <img src={doc} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText}>{linkTitle3}</p>
@@ -492,7 +517,11 @@ function ModuleContent(props) {
                 <DialogContent>
                     <FindVideoModal />
                 </DialogContent>
-                <Button onClick={handleFindVideoClose} style={{ margin: "0 auto 64px" }} className={classes.button}>
+                <Button
+                    onClick={handleFindVideoClose}
+                    style={{ margin: "0 auto 64px" }}
+                    className={classes.button}
+                >
                     Close
                 </Button>
             </Dialog>
@@ -510,7 +539,11 @@ function ModuleContent(props) {
                 <DialogContent>
                     <MiroVideoModal />
                 </DialogContent>
-                <Button onClick={handleMiroVideoClose} style={{ margin: "0 auto 64px" }} className={classes.button}>
+                <Button
+                    onClick={handleMiroVideoClose}
+                    style={{ margin: "0 auto 64px" }}
+                    className={classes.button}
+                >
                     Close
                 </Button>
             </Dialog>

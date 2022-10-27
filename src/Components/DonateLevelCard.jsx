@@ -15,25 +15,23 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const DonateLevelCard = ({ amount, image, text, alt }) => {
+function DonateLevelCard({ amount, image, text, alt }) {
     const classes = useStyles();
     return (
-        <>
-            <Card className={classes.rootCardStyle}>
-                <Typography className={classes.amountStyle} variant="h3" align="center">
-                    {amount}
+        <Card className={classes.rootCardStyle}>
+            <Typography className={classes.amountStyle} variant="h3" align="center">
+                {amount}
+            </Typography>
+            <Box display="flex" justifyContent="center">
+                <Box className={classes.donationImageStyle} component="img" alt={alt} src={image} />
+            </Box>
+            <CardContent>
+                <Typography variant="subtitle2" align="center">
+                    {text}
                 </Typography>
-                <Box display="flex" justifyContent="center">
-                    <Box className={classes.donationImageStyle} component="img" alt={alt} src={image} />
-                </Box>
-                <CardContent>
-                    <Typography variant="subtitle2" align="center">
-                        {text}
-                    </Typography>
-                </CardContent>
-            </Card>
-        </>
+            </CardContent>
+        </Card>
     );
-};
+}
 
 export default DonateLevelCard;

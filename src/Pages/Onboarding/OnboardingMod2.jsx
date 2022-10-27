@@ -1,5 +1,5 @@
-import Header from "../../Components/Onboarding/Header";
 import { Box, Grid, Typography } from "@mui/material";
+import Header from "../../Components/Onboarding/Header";
 import ModuleContent from "../../Components/Onboarding/ModuleContent";
 import { useModuleContentStyles } from "../../Styles/Onboarding/useModuleContentStyles";
 import Footer from "../../Components/Onboarding/Footer";
@@ -50,7 +50,8 @@ const airtable = {
     linkLocation2: "",
     linkTitle3: "Read our Glossary",
     linkIcon3: "link",
-    linkLocation3: "https://airtable.com/appfJZShN8K4tcWHU/tblYLt2L646QsTESQ/viwbST7tdt1d2hOiR?blocks=hide",
+    linkLocation3:
+        "https://airtable.com/appfJZShN8K4tcWHU/tblYLt2L646QsTESQ/viwbST7tdt1d2hOiR?blocks=hide",
 };
 
 const slack = {

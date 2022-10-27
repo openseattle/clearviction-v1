@@ -1,10 +1,9 @@
 import { List, ListItem, Grid, Typography, ListItemIcon, ListItemText } from "@mui/material";
-import { HomeWorkOutlined } from "@mui/icons-material";
-import { Call } from "@mui/icons-material";
+import { HomeWorkOutlined, Call } from "@mui/icons-material";
 import { useResourcesStyles } from "../Styles/useResourcesStyles";
 import { ListItemLink } from "../ui-kit/ListItemLink";
 
-const ShelterList = ({ shelters }) => {
+function ShelterList({ shelters }) {
     const classes = useResourcesStyles();
     return (
         <List>
@@ -24,7 +23,7 @@ const ShelterList = ({ shelters }) => {
                                     <ListItemIcon>
                                         <HomeWorkOutlined className={classes.shelterIcon} />
                                     </ListItemIcon>
-                                    <ListItemText primary={shelter.address + " " + shelter.city} />
+                                    <ListItemText primary={`${shelter.address} ${shelter.city}`} />
                                 </ListItemLink>
                                 <ListItemLink href={`tel:+${shelter.phone}`} data-rel="external">
                                     <ListItemIcon>
@@ -39,6 +38,6 @@ const ShelterList = ({ shelters }) => {
             ))}
         </List>
     );
-};
+}
 
 export default ShelterList;

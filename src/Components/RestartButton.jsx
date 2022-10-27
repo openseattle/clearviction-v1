@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const RestartButton = () => {
+function RestartButton() {
     const classes = useStyles();
 
     return (
@@ -30,6 +30,6 @@ const RestartButton = () => {
             Check another conviction
         </a>
     );
-};
+}
 
 export default RestartButton;

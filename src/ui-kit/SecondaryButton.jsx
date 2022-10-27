@@ -33,7 +33,13 @@ const useStyles = makeStyles(theme => ({
 export default function SecondaryButton({ text, type, linkTo, externalLink, onClick }) {
     const classes = useStyles();
     return externalLink ? (
-        <Button rel="noopener noreferrer" href={linkTo} type={type} className={classes.button} target={"_blank"}>
+        <Button
+            rel="noopener noreferrer"
+            href={linkTo}
+            type={type}
+            className={classes.button}
+            target="_blank"
+        >
             {text}
         </Button>
     ) : (

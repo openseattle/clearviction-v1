@@ -14,7 +14,8 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export const RedesignButtonPrimary = props => {
+export function RedesignButtonPrimary(props) {
+    const { children } = props;
     const classes = useStyles();
 
     return (
@@ -25,7 +26,7 @@ export const RedesignButtonPrimary = props => {
             color="primary"
             {...props}
         >
-            {props.children}
+            {children}
         </Button>
     );
-};
+}

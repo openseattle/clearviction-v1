@@ -8,12 +8,16 @@ function a11yProps(index) {
     };
 }
 
-const AccordionBuilder = ({ faqs }) => {
+function AccordionBuilder({ faqs }) {
     return (
         <div aria-label="info-accordion">
             {faqs.map((faq, idx) => (
                 <Accordion key={idx} elevation={0}>
-                    <AccordionSummary expandIcon={<ExpandMore />} aria-controls={faq.detailsID} {...a11yProps}>
+                    <AccordionSummary
+                        expandIcon={<ExpandMore />}
+                        aria-controls={faq.detailsID}
+                        {...a11yProps}
+                    >
                         <Typography variant="subtitle1" component="p">
                             {faq.summary}
                         </Typography>
@@ -25,5 +29,5 @@ const AccordionBuilder = ({ faqs }) => {
             ))}
         </div>
     );
-};
+}
 export default AccordionBuilder;

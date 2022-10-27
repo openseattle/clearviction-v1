@@ -1,29 +1,18 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
+import { Typography } from "@mui/material";
 import smallLogo from "../../Assets/Onboarding/smallLogo.svg";
-
-import { Typography, Box, IconButton, List, ListItem, Drawer, ListItemText } from "@mui/material";
-import { MenuSharp as MenuIcon, CloseSharp } from "@mui/icons-material";
 import { useHeaderStyles } from "../../Styles/Onboarding/useHeaderStyles";
 import SocialContainer from "./SocialContainer";
 
-function Header(props) {
+function Header({ text }) {
     const classes = useHeaderStyles();
-    const { title, description, information, information2, information3 } = props.text;
+    const { title, description, information } = text;
 
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
-
-    const [menuState, setMenuState] = useState(null);
-    const handleOpenMenu = event => {
-        setMenuState(event.currentTarget);
-    };
-
-    const handleCloseMenu = () => {
-        setMenuState(null);
-    };
 
     return (
         <div className={classes.darkBlueBackground}>
@@ -38,7 +27,11 @@ function Header(props) {
             <div className={classes.headingContainer}>
                 {title === "Welcome!" ? (
                     <div className={classes.welcomeHeader}>
-                        <Typography variant="h1" className={classes.welcome} style={{ fontWeight: 400 }}>
+                        <Typography
+                            variant="h1"
+                            className={classes.welcome}
+                            style={{ fontWeight: 400 }}
+                        >
                             {title}
                         </Typography>
                         <Typography variant="h2" className={classes.welcomePara}>

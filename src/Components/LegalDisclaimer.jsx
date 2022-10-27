@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const LegalDisclaimer = () => {
+function LegalDisclaimer() {
     const classes = useStyles();
     return (
         <Box justifyContent="center">
@@ -17,6 +17,6 @@ const LegalDisclaimer = () => {
             </Typography>
         </Box>
     );
-};
+}
 
 export default LegalDisclaimer;

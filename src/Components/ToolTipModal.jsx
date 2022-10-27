@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { trackClick } from "../trackingUtils";
 import { Modal, Box, Button, Typography } from "@mui/material";
+import { trackClick } from "../trackingUtils";
 
 const boxStyle = {
     position: "absolute",
@@ -15,19 +15,19 @@ const boxStyle = {
     padding: 4,
 };
 
-const ToolTipModal = props => {
+function ToolTipModal({ text }) {
     const [open, setOpen] = useState(false);
 
     const handleClose = () => setOpen(false);
     const handleOpen = () => {
         setOpen(true);
-        trackClick(props.text);
+        trackClick(text);
     };
 
     return (
         <div data-testid="tooltip-modal-wrapper">
             <Button onClick={handleOpen} style={{ color: "black", textDecoration: "underline" }}>
-                <Typography variant="h5">{props.text}</Typography>
+                <Typography variant="h5">{text}</Typography>
             </Button>
             <Modal
                 data-testid="tooltip-modal"
@@ -39,7 +39,11 @@ const ToolTipModal = props => {
                 <Box data-testid="tooltip-content" style={boxStyle}>
                     <Typography id="modal-modal-description" style={{ mt: 2, fontSize: "18px" }}>
                         If you don't know the answer, you may check your criminal record{" "}
-                        <a target="_blank" href="https://www.wsp.wa.gov/crime/criminal-history" rel="noreferrer">
+                        <a
+                            target="_blank"
+                            href="https://www.wsp.wa.gov/crime/criminal-history"
+                            rel="noreferrer"
+                        >
                             here
                         </a>
                         .
@@ -48,6 +52,6 @@ const ToolTipModal = props => {
             </Modal>
         </div>
     );
-};
+}
 
 export default ToolTipModal;

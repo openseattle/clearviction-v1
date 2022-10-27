@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import { Button, Snackbar } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { ArrowBackIos } from "@mui/icons-material";
@@ -18,11 +19,13 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export const BackButton = props => {
+// eslint-disable-next-line import/prefer-default-export
+export function BackButton(props) {
     const classes = useStyles();
-    let history = useHistory();
+    const history = useHistory();
     const [open, setOpen] = useState(false);
 
+    // eslint-disable-next-line no-promise-executor-return
     const sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
     const handleClick = () => {
@@ -31,10 +34,11 @@ export const BackButton = props => {
         try {
             if (document.referrer.includes("calculator")) {
                 history.goBack();
-            } else
+            } else {
                 throw Error(
                     "nonCalcReferrer: unable to verify referral by a calculator question. Restarting Calculator..."
                 );
+            }
         } catch (error) {
             console.log(error);
             setOpen(true);
@@ -66,4 +70,4 @@ export const BackButton = props => {
             </Snackbar>
         </>
     );
-};
+}

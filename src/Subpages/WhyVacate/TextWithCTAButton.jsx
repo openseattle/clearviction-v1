@@ -30,21 +30,19 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export const TextWithCTAButton = props => {
+export function TextWithCTAButton(props) {
     const { text, buttonText, buttonLinkTo } = props;
     const classes = useStyles();
     return (
-        <>
-            <Box className={classes.backgroundSecondary}>
-                <Container maxWidth="lg">
-                    <Typography variant="body1" className={classes.mainText} align="center">
-                        {text}
-                    </Typography>
-                    <Box className={classes.buttonBoxStyles}>
-                        <SecondaryButton linkTo={buttonLinkTo} text={buttonText} />
-                    </Box>
-                </Container>
-            </Box>
-        </>
+        <Box className={classes.backgroundSecondary}>
+            <Container maxWidth="lg">
+                <Typography variant="body1" className={classes.mainText} align="center">
+                    {text}
+                </Typography>
+                <Box className={classes.buttonBoxStyles}>
+                    <SecondaryButton linkTo={buttonLinkTo} text={buttonText} />
+                </Box>
+            </Container>
+        </Box>
     );
-};
+}
