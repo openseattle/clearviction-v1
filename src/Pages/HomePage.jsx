@@ -37,9 +37,12 @@ const HomePage = () => {
                                 conviction for free in less than 10 minutes!
                             </Typography>
                             <Box paddingTop={12}>
-                                <RedesignButtonSecondary href="/calculator/landing-0" sx={{
-                                    width: '100%'
-                                }}>
+                                <RedesignButtonSecondary
+                                    href="/calculator/landing-0"
+                                    sx={{
+                                        width: "100%",
+                                    }}
+                                >
                                     Access Calculator
                                 </RedesignButtonSecondary>
                             </Box>
@@ -144,7 +147,14 @@ const HomePage = () => {
                             <Typography variant="h3" className={classes.headingStyle}>
                                 Help us improve the calculator by participating in research
                             </Typography>
-                            <RedesignButtonSecondary href="https://docs.google.com/forms/d/1KXmPrwzHeE8_EEL88RFkjOFP4S1A52Ode1vV6SJijao/viewform?edit_requested=true">
+                            <RedesignButtonSecondary
+                                href="https://docs.google.com/forms/d/1KXmPrwzHeE8_EEL88RFkjOFP4S1A52Ode1vV6SJijao/viewform?edit_requested=true"
+                                sx={theme => ({
+                                    "&:hover": {
+                                        backgroundColor: theme.palette.primary.dark,
+                                    },
+                                })}
+                            >
                                 Learn more
                             </RedesignButtonSecondary>
                         </Grid>
