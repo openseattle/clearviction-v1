@@ -36,6 +36,7 @@ function ModuleContent(props) {
         title,
         subheading,
         paragraph1,
+        paragraph1B,
         paragraph2,
         paragraph3,
         paragraph4,
@@ -99,7 +100,7 @@ function ModuleContent(props) {
     const handleFindVideoOpen = () => setFindVideoOpen(true);
     const handleFindVideoClose = () => setFindVideoOpen(false);
 
-    const isLargeScreen = useMediaQuery('(min-width:850px)');
+    const isLargeScreen = useMediaQuery("(min-width:850px)");
 
     return (
         <div className={classes.moduleContentCard}>
@@ -119,6 +120,7 @@ function ModuleContent(props) {
                     ) : (
                         ""
                     )}
+                    {paragraph1B ? <>{paragraph1B}</> : ""}
                 </Typography>
             ) : null}
 
@@ -140,7 +142,7 @@ function ModuleContent(props) {
             {paragraphBullets ? (
                 <ul>
                     {paragraphBullets.map((bullet, idx) => (
-                        <li key={idx} style={{ fontSize: "20px", color: "#2b2929" }} variant="body1">
+                        <li key={idx} className={classes.listElement} variant="body1">
                             {bullet}
                         </li>
                     ))}

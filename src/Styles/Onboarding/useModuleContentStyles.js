@@ -1,15 +1,16 @@
-import { makeStyles } from '@mui/styles';
+import { VerticalAlignCenter } from "@mui/icons-material";
+import { makeStyles } from "@mui/styles";
 
 export const useModuleContentStyles = makeStyles(theme => ({
     mainModuleContentCard: {
         width: "80%",
         flexDirection: "row",
-        margin: theme.spacing(6, "auto"),
+        margin: theme.spacing(4.875, "auto", 0, "auto"),
     },
     moduleContentCard: {
         display: "flex",
         flexDirection: "column",
-        margin: theme.spacing(6, "auto"),
+        margin: theme.spacing(3.625, "auto"),
         width: "80%",
         justifyContent: "center",
         paddingBottom: theme.spacing(4),
@@ -18,7 +19,7 @@ export const useModuleContentStyles = makeStyles(theme => ({
         color: theme.palette.primary.main,
         marginBottom: theme.spacing(5),
         lineHeight: 1.2,
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             marginLeft: theme.spacing(1),
         },
     },
@@ -29,7 +30,7 @@ export const useModuleContentStyles = makeStyles(theme => ({
         margin: "auto",
         color: "#2b2929",
         textAlign: "center",
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             width: "90%",
         },
     },
@@ -40,24 +41,31 @@ export const useModuleContentStyles = makeStyles(theme => ({
         paddingBottom: theme.spacing(2),
         color: "#2b2929",
     },
+    listElement: {
+        fontSize: "1.25rem",
+        color: "#2b2929",
+        "&::marker": {
+            fontSize: "0.75rem",
+        },
+    },
     moduleCardBody2: {
         color: "#2b2929",
         width: "50%",
         margin: "40px auto",
         textAlign: "center",
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             width: "80%",
             margin: "10px auto",
         },
     },
     cardIcon: {
-        marginTop: "47px",
+        marginTop: "20px",
         textAlign: "right",
         marginRight: "-25px",
     },
     icon: {
         width: "70px",
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             width: "50px",
         },
     },
@@ -75,7 +83,7 @@ export const useModuleContentStyles = makeStyles(theme => ({
         fontWeight: "bold",
         display: "flex",
         padding: theme.spacing(1),
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             borderRadius: "25px",
             width: "50%",
             height: "60px",
@@ -87,7 +95,7 @@ export const useModuleContentStyles = makeStyles(theme => ({
     linkIcon: {
         margin: theme.spacing(1.5),
         marginRight: theme.spacing(3),
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             width: "30px",
             margin: theme.spacing(1),
             marginRight: theme.spacing(3),
@@ -101,7 +109,7 @@ export const useModuleContentStyles = makeStyles(theme => ({
     linkText: {
         color: "#4e6c99",
         alignSelf: "center",
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             margin: theme.spacing(0),
             fontSize: "calc(14px + 0.390625vw)",
         },

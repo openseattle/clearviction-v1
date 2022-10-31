@@ -23,9 +23,12 @@ const mission = {
 const story = {
     title: "Our Story",
     paragraph1:
-        "Committed to helping people with convictions to improve their quality of life, a group of volunteers decided to create a tool that could simplify the conviction vacation process.",
+        "Committed to helping people with convictions to improve their quality of life, a group of volunteers decided to create a ",
+    paragraph1B: " that could simplify the conviction vacation process.",
     paragraph2:
         "While the project started in Seattle, we now have volunteers all across the country (and the world!) contributing to building, maintaining, and improving this product.",
+    sourceSite: "https://www.clearviction.org/calculator/landing-1",
+    sourceText: "tool",
 };
 
 const problem = {

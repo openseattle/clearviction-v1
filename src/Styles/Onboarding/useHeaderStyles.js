@@ -1,11 +1,11 @@
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 
 export const useHeaderStyles = makeStyles(theme => ({
     darkBlueBackground: {
         backgroundColor: theme.palette.primary.dark,
         color: "white",
         marginBottom: theme.spacing(4),
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             padding: theme.spacing(2),
             display: "flex",
             justifyContent: "space-between",
@@ -17,35 +17,35 @@ export const useHeaderStyles = makeStyles(theme => ({
         position: "absolute",
         top: 0,
         left: 0,
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             width: "70px",
         },
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             width: "35px",
         },
     },
     socialContainer: {
         padding: theme.spacing(4),
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             padding: theme.spacing(0),
         },
     },
     socialIcons: {
         float: "right",
         padding: theme.spacing(2, 2),
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             padding: theme.spacing(2, 1),
         },
     },
     regularContainer: {
         padding: theme.spacing(3),
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             padding: theme.spacing(3),
         },
     },
     headingContainer: {
         padding: theme.spacing(3),
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             display: "none",
         },
     },
@@ -55,10 +55,10 @@ export const useHeaderStyles = makeStyles(theme => ({
         lineHeight: "73px",
         fontWeight: 500,
         padding: theme.spacing(8),
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             padding: theme.spacing(3),
         },
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             padding: 0,
         },
     },
@@ -68,10 +68,10 @@ export const useHeaderStyles = makeStyles(theme => ({
         fontWeight: 400,
         textAlign: "center",
         marginBottom: theme.spacing(0),
-        [theme.breakpoints.down('lg')]: {
+        [theme.breakpoints.down("lg")]: {
             fontSize: "40px",
         },
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             fontSize: "30px",
         },
     },
@@ -79,11 +79,11 @@ export const useHeaderStyles = makeStyles(theme => ({
         fontSize: "60px",
         lineHeight: 1.2,
         marginBottom: theme.spacing(8),
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             fontSize: "50px",
             lineHeight: 1.2,
         },
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             fontSize: "40px",
             lineHeight: 1,
         },
@@ -103,10 +103,10 @@ export const useHeaderStyles = makeStyles(theme => ({
         margin: "auto",
     },
     welcome: {
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             fontSize: "60px",
         },
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             fontSize: "40px",
         },
     },
@@ -115,10 +115,10 @@ export const useHeaderStyles = makeStyles(theme => ({
         lineHeight: 1.5,
         marginBottom: theme.spacing(9),
         marginTop: theme.spacing(5),
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             fontSize: "25px",
         },
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             fontSize: "20px",
         },
     },
