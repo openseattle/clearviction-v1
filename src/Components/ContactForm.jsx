@@ -142,11 +142,7 @@ const ContactForm = () => {
     return (
         <Box className={classes.formContainer}>
             <form onSubmit={handleFormSubmit}>
-                <FormControl
-                    variant="standard"
-                    required
-                    component="fieldset"
-                    className={classes.formStyle}>
+                <FormControl variant="standard" required component="fieldset" className={classes.formStyle}>
                     <FormGroup>
                         <FormLabel className={classes.labelStyle} component="legend">
                             <Typography variant="body2" className={classes.labelTextStyle}>

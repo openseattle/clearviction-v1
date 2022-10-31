@@ -37,7 +37,7 @@
         "lint:fix": "eslint --fix src/",
         "lint:summary": "SORT_BY=errors DESC=true eslint -f summary src/",
         "predeploy": "npm run build",
-        "start": "react-scripts start",
+        "start": "DISABLE_ESLINT_PLUGIN='true' react-scripts start",
         "test": "ESLINT_NO_DEV_ERRORS='true' react-scripts test"
     },
     "browserslist": {

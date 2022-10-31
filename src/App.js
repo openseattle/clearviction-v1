@@ -1,6 +1,6 @@
 import "./App.css";
 import { CssBaseline, Box } from "@mui/material";
-import { ThemeProvider, StyledEngineProvider } from '@mui/material/styles';
+import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
 import Theme from "./Components/Theme";
 import { Switch, Route, Redirect, useLocation } from "react-router-dom";
 import HomePage from "./Pages/HomePage";
@@ -12,7 +12,7 @@ import ContactPage from "./Pages/ContactPage";
 import Footer from "./Components/Footer";
 import GetInvolvedPage from "./Pages/GetInvolvedPage";
 import GetStartedPage from "./Pages/GetStartedPage";
-import ResourcesPage from "./Pages/ResourcesPage";
+import WhyVacatePage from "./Pages/WhyVacatePage";
 import ContactSuccessPage from "./Pages/ContactSuccessPage";
 import OnboardingHome from "./Pages/Onboarding/OnboardingHome";
 import OnboardingMod1 from "./Pages/Onboarding/OnboardingMod1";
@@ -64,8 +64,8 @@ function App() {
                             <Route path="/get-started">
                                 <GetStartedPage />
                             </Route>
-                            <Route path="/resources">
-                                <ResourcesPage />
+                            <Route path="/why-vacate">
+                                <WhyVacatePage />
                             </Route>
 
                             {/* Volunteer onboarding pages */}

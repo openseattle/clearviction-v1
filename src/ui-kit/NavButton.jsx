@@ -1,17 +1,18 @@
 import { Button, Menu, MenuItem, Typography } from "@mui/material";
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 import { ExpandMoreOutlined } from "@mui/icons-material";
 import { useState } from "react";
 
 const useStyles = makeStyles(theme => ({
     navButtonStyle: {
+        textAlign: "center",
         marginLeft: theme.spacing(1),
         marginRight: theme.spacing(1),
         color: "white",
         textTransform: "none",
         borderRight: "none",
         border: "1px solid transparent",
-        "&:hover": { 
+        "&:hover": {
             color: theme.palette.secondary.light,
             borderRight: "none",
             border: "1px solid transparent",
@@ -36,7 +37,7 @@ const NavButton = ({ page, theme }) => {
             <>
                 <Button
                     variant="text"
-                    sx={{ border: 'none' }}
+                    sx={{ border: "none" }}
                     aria-controls="sub menu"
                     aria-haspopup="true"
                     className={classes.navButtonStyle}

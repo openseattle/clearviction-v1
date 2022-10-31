@@ -1,4 +1,3 @@
-import { VerticalAlignCenter } from "@mui/icons-material";
 import { makeStyles } from "@mui/styles";
 
 export const useModuleContentStyles = makeStyles(theme => ({

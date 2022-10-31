@@ -1,10 +1,11 @@
 import { Grid, Box, Container, List, ListItem, Link, Typography } from "@mui/material";
+import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 import { makeStyles } from "@mui/styles";
 import { useLocation } from "react-router-dom";
 
 import democracylabLogo from "../Assets/democracylab-logo.png";
 import openseattleLogo from "../Assets/openseattle-logo.png";
-import pages from "../data/siteMap";
+import { footerPages } from "../data/siteMap";
 import LegalDisclaimer from "./LegalDisclaimer";
 
 const useStyles = makeStyles(theme => ({
@@ -25,10 +26,20 @@ const useStyles = makeStyles(theme => ({
         margin: theme.spacing(1),
     },
     linkStyles: {
+        lineHeight: 2.5,
+        textDecoration: "none",
         color: "white",
         "&:hover": { color: "white" },
     },
-
+    arrowIcon: {
+        verticalAlign: "middle",
+        position: "absolute",
+        right: 65,
+        top: 8,
+        [theme.breakpoints.down("lg")]: {
+            display: "none",
+        },
+    },
     subHeader: {
         fontSize: 11,
     },
@@ -50,6 +61,7 @@ const useStyles = makeStyles(theme => ({
         },
     },
     mobileCenter: {
+        position: "relative",
         [theme.breakpoints.down("md")]: {
             display: "flex",
             justifyContent: "center",
@@ -96,7 +108,7 @@ const Footer = () => {
                                 </Typography>
                                 <List>
                                     <Grid className={classes.body} container>
-                                        {pages.map(page => (
+                                        {footerPages.map(page => (
                                             <Grid
                                                 className={classes.mobileCenter}
                                                 item
@@ -112,6 +124,7 @@ const Footer = () => {
                                                     underline="hover"
                                                 >
                                                     {page.name}
+                                                    <ArrowRightIcon className={classes.arrowIcon} />
                                                 </Link>
                                             </Grid>
                                         ))}
