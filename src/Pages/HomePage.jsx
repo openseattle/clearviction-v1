@@ -37,9 +37,11 @@ const HomePage = () => {
                                 conviction for free in less than 10 minutes!
                             </Typography>
                             <Box paddingTop={12}>
-                                <RedesignButtonPrimary href="/calculator/landing-0" className={classes.calcHome}>
+                                <RedesignButtonSecondary href="/calculator/landing-0" sx={{
+                                    width: '100%'
+                                }}>
                                     Access Calculator
-                                </RedesignButtonPrimary>
+                                </RedesignButtonSecondary>
                             </Box>
                         </Grid>
                         <Grid item xs={12} sm={6}>

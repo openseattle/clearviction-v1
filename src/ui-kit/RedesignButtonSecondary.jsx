@@ -1,32 +1,15 @@
 import { Button } from "@mui/material";
-import { makeStyles } from "@mui/styles";
+import { styled } from "@mui/material/styles";
 
-const useStyles = makeStyles(theme => ({
-    RedesignButtonSecondaryStyle: {
-        width: "248px",
-        height: "48px",
-        borderRadius: "50px",
-        padding: "16px",
-        backgroundColor: theme.palette.primary.light,
-        color: theme.palette.secondary.contrastText,
-        "&:hover": {
-            backgroundColor: theme.palette.secondary,
-            color: theme.palette.secondary.contrastText,
-        },
+// Uses styled() instead of makeStyles()
+export const RedesignButtonSecondary = styled(Button)(({ theme }) => ({
+    width: 248,
+    height: 48,
+    borderRadius: 50,
+    backgroundColor: "white",
+    color: theme.palette.primary.dark,
+    "&:hover": {
+        backgroundColor: theme.palette.primary.main,
+        color: theme.palette.primary.contrastText,
     },
 }));
-
-export const RedesignButtonSecondary = props => {
-    const classes = useStyles();
-
-    return (
-        <Button
-            className={`${classes.RedesignButtonSecondaryStyle} ${props.classes}`}
-            role="button"
-            variant="contained"
-            {...props}
-        >
-            {props.children}
-        </Button>
-    );
-};
