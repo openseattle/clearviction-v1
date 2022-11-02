@@ -13,7 +13,7 @@ import marketing from "../Assets/marketing.svg";
 
 import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
 
-function GetInvolvedPage() {
+const GetInvolvedPage = () => {
     const classes = useGetInvolvedStyles();
     useDocumentTitle("Get Involved - ");
 
@@ -70,6 +70,6 @@ function GetInvolvedPage() {
             <PartnerPage />
         </>
     );
-}
+};
 
 export default GetInvolvedPage;

@@ -22,7 +22,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export function TwoParagraphTextWithHeader(props) {
+export const TwoParagraphTextWithHeader = props => {
     const classes = useStyles();
     const { header, text } = props;
     const textItems = text.map((t, idx) => (
@@ -54,4 +54,4 @@ export function TwoParagraphTextWithHeader(props) {
             </Container>
         </Box>
     );
-}
+};

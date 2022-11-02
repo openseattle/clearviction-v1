@@ -29,7 +29,7 @@ import SlackVideoAccordion from "./Mobile/SlackVideoAccordion";
 import TrustDocAccordion from "./Mobile/TrustDocAccordion";
 import { ExternalLink } from "../../ui-kit/ExternalLink";
 
-function ModuleContent({ content }) {
+const ModuleContent = ({ content }) => {
     const classes = useModuleContentStyles();
     const modalClasses = useModalStyles();
     const {
@@ -113,11 +113,7 @@ function ModuleContent({ content }) {
                 <Typography variant="body1" className={classes.moduleCardBody}>
                     {paragraph1}
                     {sourceSite ? (
-                        <ExternalLink
-                            variant="link"
-                            className={classes.externalLink}
-                            href={sourceSite}
-                        >
+                        <ExternalLink variant="link" className={classes.externalLink} href={sourceSite}>
                             {sourceText}
                         </ExternalLink>
                     ) : (
@@ -161,12 +157,7 @@ function ModuleContent({ content }) {
             {linkTitle ? (
                 <div className={classes.moduleContentLink}>
                     {linkIcon === "link" && (
-                        <Button
-                            href={linkLocation}
-                            target="_blank"
-                            rel="noreferrer"
-                            className={classes.linkContainer}
-                        >
+                        <Button href={linkLocation} target="_blank" rel="noreferrer" className={classes.linkContainer}>
                             <div className={classes.linkContainer}>
                                 <img src={link} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText}>{linkTitle}</p>
@@ -190,10 +181,7 @@ function ModuleContent({ content }) {
                         </Button>
                     )}
                     {linkIcon === "docAirtable" && (
-                        <Button
-                            onClick={handleAirtableOpen}
-                            style={{ textDecoration: "none", color: "#4e6c99" }}
-                        >
+                        <Button onClick={handleAirtableOpen} style={{ textDecoration: "none", color: "#4e6c99" }}>
                             <div className={classes.linkContainer}>
                                 <img src={doc} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText}>{linkTitle}</p>
@@ -238,12 +226,7 @@ function ModuleContent({ content }) {
             {linkTitle2 ? (
                 <div className={classes.moduleContentLink}>
                     {linkIcon2 === "link" && (
-                        <Button
-                            href={linkLocation2}
-                            target="_blank"
-                            rel="noreferrer"
-                            className={classes.linkContainer}
-                        >
+                        <Button href={linkLocation2} target="_blank" rel="noreferrer" className={classes.linkContainer}>
                             <div className={classes.linkContainer}>
                                 <img src={link} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText}>{linkTitle2}</p>
@@ -288,12 +271,7 @@ function ModuleContent({ content }) {
             {linkTitle3 ? (
                 <div className={classes.moduleContentLink}>
                     {linkIcon3 === "link" && (
-                        <Button
-                            href={linkLocation3}
-                            target="_blank"
-                            rel="noreferrer"
-                            className={classes.linkContainer}
-                        >
+                        <Button href={linkLocation3} target="_blank" rel="noreferrer" className={classes.linkContainer}>
                             <div className={classes.linkContainer}>
                                 <img src={link} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText}>{linkTitle3}</p>
@@ -301,10 +279,7 @@ function ModuleContent({ content }) {
                         </Button>
                     )}
                     {linkIcon3 === "doc" && (
-                        <Button
-                            onClick={handleOpen}
-                            style={{ textDecoration: "none", color: "#4e6c99" }}
-                        >
+                        <Button onClick={handleOpen} style={{ textDecoration: "none", color: "#4e6c99" }}>
                             <div className={classes.linkContainer}>
                                 <img src={doc} alt="" className={classes.linkIcon} />
                                 <p className={classes.linkText}>{linkTitle3}</p>
@@ -517,11 +492,7 @@ function ModuleContent({ content }) {
                 <DialogContent>
                     <FindVideoModal />
                 </DialogContent>
-                <Button
-                    onClick={handleFindVideoClose}
-                    style={{ margin: "0 auto 64px" }}
-                    className={classes.button}
-                >
+                <Button onClick={handleFindVideoClose} style={{ margin: "0 auto 64px" }} className={classes.button}>
                     Close
                 </Button>
             </Dialog>
@@ -539,11 +510,7 @@ function ModuleContent({ content }) {
                 <DialogContent>
                     <MiroVideoModal />
                 </DialogContent>
-                <Button
-                    onClick={handleMiroVideoClose}
-                    style={{ margin: "0 auto 64px" }}
-                    className={classes.button}
-                >
+                <Button onClick={handleMiroVideoClose} style={{ margin: "0 auto 64px" }} className={classes.button}>
                     Close
                 </Button>
             </Dialog>
@@ -591,6 +558,6 @@ function ModuleContent({ content }) {
             )}
         </div>
     );
-}
+};
 
 export default ModuleContent;

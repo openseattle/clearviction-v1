@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 // eslint-disable-next-line import/prefer-default-export
-export function BackButton(props) {
+export const BackButton = props => {
     const classes = useStyles();
     const history = useHistory();
     const [open, setOpen] = useState(false);
@@ -70,4 +70,4 @@ export function BackButton(props) {
             </Snackbar>
         </>
     );
-}
+};

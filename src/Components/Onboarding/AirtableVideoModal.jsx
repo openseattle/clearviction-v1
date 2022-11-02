@@ -7,7 +7,7 @@ import video from "../../Assets/Onboarding/video.svg";
 // styles
 import { useModalStyles } from "../../Styles/Onboarding/useModalStyles";
 
-export default function AirtableVideoModal({ handleAirtableVideoClose }) {
+const AirtableVideoModal = ({ handleAirtableVideoClose }) => {
     const [sectionId, setSectionId] = useState(1);
     const [activeTab, setActiveTab] = useState(1);
     const classes = useModalStyles();
@@ -76,78 +76,40 @@ export default function AirtableVideoModal({ handleAirtableVideoClose }) {
             <Grid item xs={7} md={8} lg={9} className={classes.contentStyle}>
                 {sectionId === 1 && (
                     <div style={{ height: "100%" }}>
-                        <iframe
-                            title={sections.title}
-                            src={profile}
-                            width="100%"
-                            height="80%"
-                            allow="autoplay"
-                        />
+                        <iframe title={sections.title} src={profile} width="100%" height="80%" allow="autoplay" />
                     </div>
                 )}
                 {sectionId === 2 && (
                     <div style={{ height: "100%" }}>
-                        <iframe
-                            title={sections.title}
-                            src={dashboard}
-                            width="100%"
-                            height="80%"
-                            allow="autoplay"
-                        />
+                        <iframe title={sections.title} src={dashboard} width="100%" height="80%" allow="autoplay" />
                     </div>
                 )}
                 {sectionId === 3 && (
                     <div style={{ height: "100%" }}>
-                        <iframe
-                            title={sections.title}
-                            src={engageTasks}
-                            width="100%"
-                            height="80%"
-                            allow="autoplay"
-                        />
+                        <iframe title={sections.title} src={engageTasks} width="100%" height="80%" allow="autoplay" />
                     </div>
                 )}
                 {sectionId === 4 && (
                     <div style={{ height: "100%" }}>
-                        <iframe
-                            title={sections.title}
-                            src={createTasks}
-                            width="100%"
-                            height="80%"
-                            allow="autoplay"
-                        />
+                        <iframe title={sections.title} src={createTasks} width="100%" height="80%" allow="autoplay" />
                     </div>
                 )}
                 {sectionId === 5 && (
                     <div style={{ height: "100%" }}>
-                        <iframe
-                            title={sections.title}
-                            src={requests}
-                            width="100%"
-                            height="80%"
-                            allow="autoplay"
-                        />
+                        <iframe title={sections.title} src={requests} width="100%" height="80%" allow="autoplay" />
                     </div>
                 )}
                 {sectionId === 6 && (
                     <div style={{ height: "100%" }}>
-                        <iframe
-                            title={sections.title}
-                            src={evaluate}
-                            width="100%"
-                            height="80%"
-                            allow="autoplay"
-                        />
+                        <iframe title={sections.title} src={evaluate} width="100%" height="80%" allow="autoplay" />
                     </div>
                 )}
-                <Button
-                    onClick={handleAirtableVideoClose}
-                    style={{ margin: "0 auto 64px" }}
-                    className={classes.button}
-                >
+                <Button onClick={handleAirtableVideoClose} style={{ margin: "0 auto 64px" }} className={classes.button}>
                     Close
                 </Button>
             </Grid>
         </Grid>
     );
-}
+};
+
+export default AirtableVideoModal;

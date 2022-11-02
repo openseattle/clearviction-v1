@@ -2,7 +2,7 @@ import { useFooterStyles } from "../../Styles/Onboarding/useFooterStyles";
 import PrimaryButton from "./PrimaryButton";
 import CompleteButton from "./CompleteButton";
 
-function Footer({ button1, button2 }) {
+const Footer = ({ button1, button2 }) => {
     const classes = useFooterStyles();
 
     return (
@@ -16,6 +16,6 @@ function Footer({ button1, button2 }) {
             </div>
         </>
     );
-}
+};
 
 export default Footer;

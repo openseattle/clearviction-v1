@@ -3,7 +3,7 @@ import AccordionBuilder from "../../Components/AccordionBuilder";
 import { ExternalLink } from "../../ui-kit/ExternalLink";
 import { useHomeStyles } from "../../Styles/useHomeStyles";
 
-function DonateFAQAccordion() {
+const DonateFAQAccordion = () => {
     const classes = useHomeStyles();
 
     const questions = [
@@ -13,15 +13,14 @@ function DonateFAQAccordion() {
             details: (
                 <>
                     <Typography className={classes.contentTextStyle}>
-                        As we're all volunteers, any of our donations will go directly to helping
-                        those convicted and give them a fresh start.
+                        As we're all volunteers, any of our donations will go directly to helping those convicted and
+                        give them a fresh start.
                     </Typography>
                     <Typography className={classes.contentTextStyle}>
-                        Your support will help pay for the technological tools needed by our team to
-                        let this project grow. To develop needed resources for those with
-                        convictions, supermarket vouchers will be provided for participants in our
-                        research. Your aid will also help support low-income individuals overcome
-                        the financial barriers to vacate their record.
+                        Your support will help pay for the technological tools needed by our team to let this project
+                        grow. To develop needed resources for those with convictions, supermarket vouchers will be
+                        provided for participants in our research. Your aid will also help support low-income
+                        individuals overcome the financial barriers to vacate their record.
                     </Typography>
                 </>
             ),
@@ -32,10 +31,9 @@ function DonateFAQAccordion() {
             summaryID: "safe-button",
             details: (
                 <Typography className={classes.contentTextStyle}>
-                    Yes! We use Venmo for all our online donations. Venmo is PayPal’s subsidiary and
-                    uses bank-level encryption to keep your data safe. The app's security features
-                    include data encryption, purchase verification, multifactor authentication, and
-                    fraud protection.
+                    Yes! We use Venmo for all our online donations. Venmo is PayPal’s subsidiary and uses bank-level
+                    encryption to keep your data safe. The app's security features include data encryption, purchase
+                    verification, multifactor authentication, and fraud protection.
                 </Typography>
             ),
             detailsID: "safe-paragraph",
@@ -46,16 +44,13 @@ function DonateFAQAccordion() {
             details: (
                 <>
                     <Typography className={classes.contentTextStyle}>
-                        You will need a Venmo account to donate online. This can easily be set up
-                        using only a mobile phone or email address. You can then choose to either
-                        add funds to your Venmo account or link an external payment method like a
-                        bank account or credit card.
+                        You will need a Venmo account to donate online. This can easily be set up using only a mobile
+                        phone or email address. You can then choose to either add funds to your Venmo account or link an
+                        external payment method like a bank account or credit card.
                     </Typography>
                     <Typography className={classes.contentTextStyle}>
                         You can sign up for a Venmo account here:{" "}
-                        <ExternalLink href="https://account.venmo.com/signup">
-                            https://get.venmo.com
-                        </ExternalLink>
+                        <ExternalLink href="https://account.venmo.com/signup">https://get.venmo.com</ExternalLink>
                     </Typography>
                 </>
             ),
@@ -85,9 +80,9 @@ function DonateFAQAccordion() {
             summaryID: "how-long-button",
             details: (
                 <Typography className={classes.contentTextStyle}>
-                    To vacate your Washington conviction, the process takes on average three to four
-                    months, depending on your individual circumstances, the court’s caseload at the
-                    time, and whether there are any objections to vacating your conviction.
+                    To vacate your Washington conviction, the process takes on average three to four months, depending
+                    on your individual circumstances, the court’s caseload at the time, and whether there are any
+                    objections to vacating your conviction.
                 </Typography>
             ),
             detailsID: "how-long-paragraph",
@@ -108,6 +103,6 @@ function DonateFAQAccordion() {
         },
     ];
     return <AccordionBuilder faqs={questions} />;
-}
+};
 
 export default DonateFAQAccordion;

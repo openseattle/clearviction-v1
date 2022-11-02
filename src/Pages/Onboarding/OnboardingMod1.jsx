@@ -53,7 +53,7 @@ const button2 = {
     text: "next",
 };
 
-function OnboardingMod1() {
+const OnboardingMod1 = () => {
     const classes = useModuleContentStyles();
     return (
         <>
@@ -86,6 +86,6 @@ function OnboardingMod1() {
             <Footer button1={button1} button2={button2} />
         </>
     );
-}
+};
 
 export default OnboardingMod1;

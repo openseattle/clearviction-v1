@@ -28,28 +28,21 @@ const facts = [
     },
 ];
 
-function VolunteerPage() {
+const VolunteerPage = () => {
     const classes = useGetInvolvedStyles();
     return (
         <>
-            <Container
-                component="section"
-                id="volunteer"
-                className={classes.regularContainerStyle}
-                maxWidth="md"
-            >
+            <Container component="section" id="volunteer" className={classes.regularContainerStyle} maxWidth="md">
                 <Typography className={classes.headingStyle} variant="h2">
                     Help us break down barriers by joining the team.
                 </Typography>
                 <Typography className={classes.volunteerTextStyle} variant="body1">
-                    Conviction vacation makes it easier for formerly incarcerated individuals to
-                    access housing and employment, two things that are crucial for reducing the odds
-                    of re-incarceration.
+                    Conviction vacation makes it easier for formerly incarcerated individuals to access housing and
+                    employment, two things that are crucial for reducing the odds of re-incarceration.
                 </Typography>
                 <Typography className={classes.volunteerTextStyle} variant="body1">
-                    By volunteering, you will help us reduce barriers and streamline the process of
-                    vacating eligible convictions in Washington state to make it easier for people
-                    to move forward.
+                    By volunteering, you will help us reduce barriers and streamline the process of vacating eligible
+                    convictions in Washington state to make it easier for people to move forward.
                 </Typography>
                 <Typography>You'll be a perfect fit if you:</Typography>
                 <Grid container>
@@ -81,6 +74,6 @@ function VolunteerPage() {
             </Container>
         </>
     );
-}
+};
 
 export default VolunteerPage;

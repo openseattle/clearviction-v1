@@ -17,7 +17,7 @@ import { RedesignButtonSecondary } from "../ui-kit/RedesignButtonSecondary";
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
-function HomePage() {
+const HomePage = () => {
     useEffect(() => trackPageview("Home"), []);
 
     const classes = useHomeStyles();
@@ -32,20 +32,12 @@ function HomePage() {
                     </Typography>
                     <Grid container>
                         <Grid item xs={12} sm={6}>
-                            <Typography
-                                className={classes.contentTextStyle}
-                                variant="subtitle1"
-                                component="h2"
-                            >
-                                If you have convictions in Washington, you can check your
-                                eligibility to vacate your conviction for free in less than 10
-                                minutes!
+                            <Typography className={classes.contentTextStyle} variant="subtitle1" component="h2">
+                                If you have convictions in Washington, you can check your eligibility to vacate your
+                                conviction for free in less than 10 minutes!
                             </Typography>
                             <Box paddingTop={12}>
-                                <RedesignButtonPrimary
-                                    href="/calculator/landing-0"
-                                    className={classes.calcHome}
-                                >
+                                <RedesignButtonPrimary href="/calculator/landing-0" className={classes.calcHome}>
                                     Access Calculator
                                 </RedesignButtonPrimary>
                             </Box>
@@ -71,31 +63,19 @@ function HomePage() {
                 <Grid container>
                     <Grid item xs={12} sm={4}>
                         <img className={classes.iconStyle} src={teamwork} alt="" />
-                        <Typography
-                            className={classes.contentTextStyle}
-                            variant="body2"
-                            align="center"
-                        >
+                        <Typography className={classes.contentTextStyle} variant="body2" align="center">
                             We break down the laws into understandable language.
                         </Typography>
                     </Grid>
                     <Grid item xs={12} sm={4}>
                         <img className={classes.iconStyle} src={calculator} alt="" />
-                        <Typography
-                            className={classes.contentTextStyle}
-                            variant="body2"
-                            align="center"
-                        >
+                        <Typography className={classes.contentTextStyle} variant="body2" align="center">
                             You answer a few simple yes/no questions.
                         </Typography>
                     </Grid>
                     <Grid item xs={12} sm={4}>
                         <img className={classes.iconStyle} src={checklist} alt="" />
-                        <Typography
-                            className={classes.contentTextStyle}
-                            variant="body2"
-                            align="center"
-                        >
+                        <Typography className={classes.contentTextStyle} variant="body2" align="center">
                             This helps determine your vacation eligibility in Washington.
                         </Typography>
                     </Grid>
@@ -106,14 +86,8 @@ function HomePage() {
             </ContentSection>
 
             <ContentSection sectionId="why-vacate" sectionSize="lg" sectionTitle="Why Vacate?">
-                <Typography
-                    className={classes.headingStyle}
-                    variant="subtitle1"
-                    align="center"
-                    component="h3"
-                >
-                    A conviction vacation seals the offense from your record, and will give you more
-                    chance to access:
+                <Typography className={classes.headingStyle} variant="subtitle1" align="center" component="h3">
+                    A conviction vacation seals the offense from your record, and will give you more chance to access:
                 </Typography>
                 <Grid container spacing={1}>
                     <Grid item xs={12} sm={6} md={3} lg={3}>
@@ -121,11 +95,7 @@ function HomePage() {
                         <Typography className={classes.headingStyle} variant="h5" align="center">
                             Housing
                         </Typography>
-                        <Typography
-                            className={classes.contentTextStyle}
-                            variant="body1"
-                            align="center"
-                        >
+                        <Typography className={classes.contentTextStyle} variant="body1" align="center">
                             Make it easier to find and be approved for rent or purchasing a home.
                         </Typography>
                     </Grid>
@@ -134,11 +104,7 @@ function HomePage() {
                         <Typography className={classes.headingStyle} variant="h5" align="center">
                             Employment
                         </Typography>
-                        <Typography
-                            className={classes.contentTextStyle}
-                            variant="body1"
-                            align="center"
-                        >
+                        <Typography className={classes.contentTextStyle} variant="body1" align="center">
                             Reduce barriers to finding and obtaining employment.
                         </Typography>
                     </Grid>
@@ -156,11 +122,7 @@ function HomePage() {
                         <Typography className={classes.headingStyle} variant="h5" align="center">
                             Government Assistance
                         </Typography>
-                        <Typography
-                            className={classes.contentTextStyle}
-                            variant="body1"
-                            align="center"
-                        >
+                        <Typography className={classes.contentTextStyle} variant="body1" align="center">
                             Receive government help and support.
                         </Typography>
                     </Grid>
@@ -192,6 +154,6 @@ function HomePage() {
             </Box>
         </>
     );
-}
+};
 
 export default HomePage;

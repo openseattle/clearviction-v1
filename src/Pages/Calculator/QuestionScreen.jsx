@@ -10,7 +10,7 @@ import ProgressBar from "../../Components/ProgressBar";
 import { ExternalLink } from "../../ui-kit/ExternalLink";
 import CalulatorDialog from "../../ui-kit/CalulatorDialog";
 
-function QuestionScreen({ text, progressBar, header, body, buttons, tooltip }) {
+const QuestionScreen = ({ text, progressBar, header, body, buttons, tooltip }) => {
     const classes = QuestionScreenStyles();
     const [open, setOpen] = useState(false);
 
@@ -69,20 +69,9 @@ function QuestionScreen({ text, progressBar, header, body, buttons, tooltip }) {
             </Grid>
             <Grid container justifyContent="center" className={classes.buttonGrid}>
                 {buttons.map((b, idx) => (
-                    <PrimaryButton
-                        href={b.href}
-                        key={idx}
-                        text={b.text}
-                        className={classes.button}
-                    />
+                    <PrimaryButton href={b.href} key={idx} text={b.text} className={classes.button} />
                 ))}
-                {tooltip && (
-                    <SecondaryButton
-                        className={classes.button}
-                        text={"I'm not sure"}
-                        onClick={handleOpen}
-                    />
-                )}
+                {tooltip && <SecondaryButton className={classes.button} text={"I'm not sure"} onClick={handleOpen} />}
                 <Dialog onClose={handleClose} open={open} maxWidth="lg">
                     <CalulatorDialog />
                     <DialogActions>
@@ -94,6 +83,6 @@ function QuestionScreen({ text, progressBar, header, body, buttons, tooltip }) {
             </Grid>
         </Grid>
     );
-}
+};
 
 export default QuestionScreen;

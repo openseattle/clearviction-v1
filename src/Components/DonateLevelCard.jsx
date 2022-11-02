@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-function DonateLevelCard({ amount, image, text, alt }) {
+const DonateLevelCard = ({ amount, image, text, alt }) => {
     const classes = useStyles();
     return (
         <Card className={classes.rootCardStyle}>
@@ -32,6 +32,6 @@ function DonateLevelCard({ amount, image, text, alt }) {
             </CardContent>
         </Card>
     );
-}
+};
 
 export default DonateLevelCard;

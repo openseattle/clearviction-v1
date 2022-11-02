@@ -9,28 +9,24 @@ const faFacts = [
         content: (
             <>
                 <Typography variant="body2">
-                    You may be eligible for financial assistance of fees, fines, or restitution for
-                    a misdemeanor or felony:
+                    You may be eligible for financial assistance of fees, fines, or restitution for a misdemeanor or
+                    felony:
                 </Typography>
                 <Typography component="ul" variant="body2">
                     <li>
                         {" "}
-                        <ExternalLink href="https://nwjustice.org/clear-hotline">
-                            CLEAR hotline
-                        </ExternalLink>{" "}
-                        - refer you to legal organizations
+                        <ExternalLink href="https://nwjustice.org/clear-hotline">CLEAR hotline</ExternalLink> - refer
+                        you to legal organizations
                     </li>
                     <li>
                         {" "}
                         <ExternalLink href="https://columbialegal.org/wp-content/uploads/2019/10/CLS-Re-Entry-Clinic-Brochure.pdf">
                             Re-Entry Clinic
                         </ExternalLink>{" "}
-                        - a joint project of Columbia Legal Services and FareStart, focusing on
-                        legal issues related to LFO’s
+                        - a joint project of Columbia Legal Services and FareStart, focusing on legal issues related to
+                        LFO’s
                     </li>
-                    <li>
-                        Contact us at contact@cvp.com and we will get back to you within 24 hours.
-                    </li>
+                    <li>Contact us at contact@cvp.com and we will get back to you within 24 hours.</li>
                 </Typography>
                 <Typography variant="body2">
                     If you want more info about your rights concerning LFOs, consult the website of{" "}
@@ -56,12 +52,11 @@ const faFacts = [
                     to find out if you are eligible to waive your fees (p. 1-2).
                 </li>
                 <li>
-                    It also includes the instructions to ask for a fee waiver (p. 4-9) and all
-                    necessary forms (p. 10-14).
+                    It also includes the instructions to ask for a fee waiver (p. 4-9) and all necessary forms (p.
+                    10-14).
                 </li>
                 <li>
-                    If you have trouble filling out the documents, use this website created by
-                    Northwest Justice{" "}
+                    If you have trouble filling out the documents, use this website created by Northwest Justice{" "}
                     <ExternalLink href="https://lawhelpinteractive.org/Interview/GenerateInterview/7063/engine">
                         to help fill out the documents for free
                     </ExternalLink>
@@ -71,7 +66,7 @@ const faFacts = [
         ),
     },
 ];
-function FinancialAidServices() {
+const FinancialAidServices = () => {
     return (
         <Grid container>
             {faFacts.map(fact => (
@@ -81,6 +76,6 @@ function FinancialAidServices() {
             ))}
         </Grid>
     );
-}
+};
 
 export default FinancialAidServices;

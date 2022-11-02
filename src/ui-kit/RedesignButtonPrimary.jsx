@@ -14,7 +14,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export function RedesignButtonPrimary(props) {
+export const RedesignButtonPrimary = props => {
     const { children } = props;
     const classes = useStyles();
 
@@ -29,4 +29,4 @@ export function RedesignButtonPrimary(props) {
             {children}
         </Button>
     );
-}
+};

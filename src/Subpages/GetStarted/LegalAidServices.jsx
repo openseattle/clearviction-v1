@@ -67,7 +67,7 @@ const aidFacts = [
         ),
     },
 ];
-function LegalAidServices() {
+const LegalAidServices = () => {
     return (
         <Grid container>
             {aidFacts.map(fact => (
@@ -77,6 +77,6 @@ function LegalAidServices() {
             ))}
         </Grid>
     );
-}
+};
 
 export default LegalAidServices;

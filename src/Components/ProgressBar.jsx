@@ -25,7 +25,7 @@ const useStyles = makeStyles(() => ({
 
 const steps = ["Your Offense", "Surrounding Circumstances", "Terms Of Offense"];
 
-export default function ProgressBar({ currentSectionName }) {
+const ProgressBar = ({ currentSectionName }) => {
     const [activeStep, setActiveStep] = useState(0);
     const classes = useStyles();
 
@@ -71,4 +71,6 @@ export default function ProgressBar({ currentSectionName }) {
             </Stepper>
         </Box>
     );
-}
+};
+
+export default ProgressBar;

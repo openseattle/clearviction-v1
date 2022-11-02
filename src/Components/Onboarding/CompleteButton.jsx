@@ -22,7 +22,7 @@ const styles = {
     },
 };
 
-function CompleteButton() {
+const CompleteButton = () => {
     const classes = useButtonStyles();
     const location = useLocation();
 
@@ -46,22 +46,13 @@ function CompleteButton() {
     };
 
     return (
-        <Link
-            style={{ textDecoration: "none", color: "white" }}
-            onClick={handleComplete}
-            to={location.pathname}
-        >
-            <div
-                className={classes.buttonSecondary}
-                style={isComplete ? styles.success : styles.div}
-            >
+        <Link style={{ textDecoration: "none", color: "white" }} onClick={handleComplete} to={location.pathname}>
+            <div className={classes.buttonSecondary} style={isComplete ? styles.success : styles.div}>
                 <img src={isComplete ? circleCheck : openCircle} alt="" style={styles.img} />
-                <Typography variant="button">
-                    {isComplete ? "completed" : "mark as done"}
-                </Typography>
+                <Typography variant="button">{isComplete ? "completed" : "mark as done"}</Typography>
             </div>
         </Link>
     );
-}
+};
 
 export default CompleteButton;

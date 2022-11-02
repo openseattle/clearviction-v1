@@ -5,7 +5,7 @@ import edu from "../../Assets/education.svg";
 import lic from "../../Assets/career.svg";
 
 // eslint-disable-next-line import/prefer-default-export
-export function EducationBarriers() {
+export const EducationBarriers = () => {
     const classes = WhyVacateHousingStyles();
     return (
         <Box className={classes.roots}>
@@ -17,11 +17,10 @@ export function EducationBarriers() {
                         header="Occupational Licenses"
                         text={
                             <Typography className={classes.rootsBodyText} variant="body1">
-                                Some states’ laws contain an automatic disqualification prohibiting
-                                a person with a felony conviction from obtaining an occupational
-                                license, regardless of whether the offense is directly related to
-                                the practice of the occupation or poses a substantive risk to public
-                                safety.
+                                Some states’ laws contain an automatic disqualification prohibiting a person with a
+                                felony conviction from obtaining an occupational license, regardless of whether the
+                                offense is directly related to the practice of the occupation or poses a substantive
+                                risk to public safety.
                             </Typography>
                         }
                     />
@@ -31,11 +30,10 @@ export function EducationBarriers() {
                         header="College Acceptance"
                         text={
                             <Typography className={classes.rootsBodyText} variant="body1">
-                                Colleges run background checks on applicants. Whether you will be
-                                accepted depends on the kind of check they do and the type and time
-                                of crime. With competitive admissions, some schools may not accept
-                                you, but if you choose a school with high acceptance rates and write
-                                a great essay, your chances of going to college are pretty strong.
+                                Colleges run background checks on applicants. Whether you will be accepted depends on
+                                the kind of check they do and the type and time of crime. With competitive admissions,
+                                some schools may not accept you, but if you choose a school with high acceptance rates
+                                and write a great essay, your chances of going to college are pretty strong.
                             </Typography>
                         }
                         textLeft
@@ -44,4 +42,4 @@ export function EducationBarriers() {
             </Container>
         </Box>
     );
-}
+};

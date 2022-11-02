@@ -19,7 +19,7 @@ const useStyles = makeStyles(() => ({
     },
 }));
 
-function ImageContentCard({ content, image, buttonText, buttonHref }) {
+const ImageContentCard = ({ content, image, buttonText, buttonHref }) => {
     const classes = useStyles();
 
     const retrieveImage = bgImage => `url(${bgImage})`;
@@ -35,12 +35,7 @@ function ImageContentCard({ content, image, buttonText, buttonHref }) {
                     backgroundPosition: "40% -60%",
                 }}
             >
-                <Typography
-                    className={classes.cardTextSTyle}
-                    variant="subtitle1"
-                    align="center"
-                    component="h2"
-                >
+                <Typography className={classes.cardTextSTyle} variant="subtitle1" align="center" component="h2">
                     {content}
                 </Typography>
 
@@ -50,6 +45,6 @@ function ImageContentCard({ content, image, buttonText, buttonHref }) {
             </Paper>
         </Box>
     );
-}
+};
 
 export default ImageContentCard;

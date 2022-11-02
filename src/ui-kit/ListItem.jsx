@@ -9,7 +9,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 // eslint-disable-next-line import/prefer-default-export
-export function CVPListItem(props) {
+export const CVPListItem = props => {
     const { text, useBulletPoint, isLink, href, onClick } = props;
     const classes = useStyles();
 
@@ -48,4 +48,4 @@ export function CVPListItem(props) {
             </Grid>
         </ListItem>
     );
-}
+};

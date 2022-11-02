@@ -5,7 +5,7 @@ import snap from "../../Assets/chicken.svg";
 import tanf from "../../Assets/family.svg";
 
 // eslint-disable-next-line import/prefer-default-export
-export function GovBarriers() {
+export const GovBarriers = () => {
     const classes = WhyVacateHousingStyles();
     return (
         <Box className={classes.containerSpaceOnlyStyles}>
@@ -17,10 +17,9 @@ export function GovBarriers() {
                         header="Temporary Assistance for Needy Families"
                         text={
                             <Typography className={classes.rootsBodyText} variant="body1">
-                                If you are a Washington state resident who is responsible for the
-                                care of a child or are pregnant, you may qualify for TANF. You
-                                cannot receive TANF if you are convicted of a felony or if you have
-                                violated your probation or parole.
+                                If you are a Washington state resident who is responsible for the care of a child or are
+                                pregnant, you may qualify for TANF. You cannot receive TANF if you are convicted of a
+                                felony or if you have violated your probation or parole.
                             </Typography>
                         }
                     />
@@ -30,10 +29,9 @@ export function GovBarriers() {
                         header="Supplemental Nutrition Assistance Program"
                         text={
                             <Typography className={classes.rootsBodyText} variant="body1">
-                                SNAP helps low income people by providing Electronic Benefits Card
-                                (EBT Card) to buy food on a monthly basis. You cannot receive Basic
-                                Food if you are convicted of a felony or if have violated your
-                                probation or parole.
+                                SNAP helps low income people by providing Electronic Benefits Card (EBT Card) to buy
+                                food on a monthly basis. You cannot receive Basic Food if you are convicted of a felony
+                                or if have violated your probation or parole.
                             </Typography>
                         }
                         textLeft
@@ -42,4 +40,4 @@ export function GovBarriers() {
             </Container>
         </Box>
     );
-}
+};

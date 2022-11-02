@@ -2,7 +2,7 @@ import { Box, Grid, Typography, List, Container } from "@mui/material";
 import { WhyVacateHousingStyles } from "../../Styles/WhyVacateHousingStyles.ts";
 import { CVPListItem } from "../../ui-kit/ListItem";
 
-export function EducationOccLicReq() {
+export const EducationOccLicReq = () => {
     const classes = WhyVacateHousingStyles();
     return (
         <Box>
@@ -16,9 +16,8 @@ export function EducationOccLicReq() {
                 <Grid className={classes.containerSpaceOnlyStyles} container>
                     <Grid item xs={12}>
                         <Typography className={classes.blackHeaderText} variant="h4" align="left">
-                            Occupational licensing requirements can be among the most difficult
-                            barriers faced by people with criminal records seeking to enter the
-                            workforce.
+                            Occupational licensing requirements can be among the most difficult barriers faced by people
+                            with criminal records seeking to enter the workforce.
                         </Typography>
                         <Typography
                             className={classes.blackHeaderText}
@@ -26,8 +25,8 @@ export function EducationOccLicReq() {
                             align="left"
                             style={{ paddingBottom: "64px" }}
                         >
-                            The following factors will be considered in determining whether a
-                            criminal conviction should be grounds to deny a license:
+                            The following factors will be considered in determining whether a criminal conviction should
+                            be grounds to deny a license:
                         </Typography>
                     </Grid>
                     <Grid item xs={12} sm={6} md={6}>
@@ -92,4 +91,4 @@ export function EducationOccLicReq() {
             </Container>
         </Box>
     );
-}
+};

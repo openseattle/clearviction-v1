@@ -28,8 +28,7 @@ const trust = {
     title: "Trust practices",
     linkIcon: "trustDoc",
     linkTitle: "Trust practices",
-    linkLocation:
-        "https://airtable.com/appfJZShN8K4tcWHU/tblwBmfy7sXtKZb8y/viwB9AEhG2TBetEA0?blocks=hide",
+    linkLocation: "https://airtable.com/appfJZShN8K4tcWHU/tblwBmfy7sXtKZb8y/viwB9AEhG2TBetEA0?blocks=hide",
     bullets: [
         "Showing up and engaging/participating fully: Make sure people are active in the project and interacting with other team members.",
         "Expectation setting: Ensure there is an agreement between people with expectations and people expected to satisfy them.",
@@ -57,8 +56,7 @@ const truth = {
     linkLocation: "https://drive.google.com/drive/u/5/folders/14NbUv8CE6e1vnKifNbA3Kl2dsghTYPk2",
     linkIcon2: "link",
     linkTitle2: "Our SOT Reference",
-    linkLocation2:
-        "https://docs.google.com/document/d/1QaJJ5JD2AHsaB1A8zHTTjtvmFDk7wpYTbj4UBJIcFzI/edit",
+    linkLocation2: "https://docs.google.com/document/d/1QaJJ5JD2AHsaB1A8zHTTjtvmFDk7wpYTbj4UBJIcFzI/edit",
 };
 
 const button1 = {
@@ -71,7 +69,7 @@ const button2 = {
     text: "next",
 };
 
-function OnboardingMod3() {
+const OnboardingMod3 = () => {
     const classes = useModuleContentStyles();
 
     return (
@@ -106,6 +104,6 @@ function OnboardingMod3() {
             <Footer button1={button1} button2={button2} />
         </>
     );
-}
+};
 
 export default OnboardingMod3;

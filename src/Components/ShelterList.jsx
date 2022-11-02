@@ -3,7 +3,7 @@ import { HomeWorkOutlined, Call } from "@mui/icons-material";
 import { useResourcesStyles } from "../Styles/useResourcesStyles";
 import { ListItemLink } from "../ui-kit/ListItemLink";
 
-function ShelterList({ shelters }) {
+const ShelterList = ({ shelters }) => {
     const classes = useResourcesStyles();
     return (
         <List>
@@ -38,6 +38,6 @@ function ShelterList({ shelters }) {
             ))}
         </List>
     );
-}
+};
 
 export default ShelterList;

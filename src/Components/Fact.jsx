@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 
-function Fact({ icon, text }) {
+const Fact = ({ icon, text }) => {
     return (
         <>
             <Box display="flex" justifyContent="center" padding={3}>
@@ -11,6 +11,6 @@ function Fact({ icon, text }) {
             </Typography>
         </>
     );
-}
+};
 
 export default Fact;

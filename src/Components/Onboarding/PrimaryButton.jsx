@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Typography } from "@mui/material";
 import { useButtonStyles } from "../../Styles/Onboarding/useButtonStyles";
 
-function PrimaryButton({ button }) {
+const PrimaryButton = ({ button }) => {
     const classes = useButtonStyles();
     const { text, link } = button;
     return (
@@ -13,6 +13,6 @@ function PrimaryButton({ button }) {
             </div>
         </Link>
     );
-}
+};
 
 export default PrimaryButton;

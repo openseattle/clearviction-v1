@@ -20,15 +20,10 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-function DonateDialog({ onClose, open }) {
+const DonateDialog = ({ onClose, open }) => {
     const classes = useStyles();
     return (
-        <Dialog
-            onClose={onClose}
-            aria-labelledby="donate-to-clearviction"
-            open={open}
-            maxWidth="md"
-        >
+        <Dialog onClose={onClose} aria-labelledby="donate-to-clearviction" open={open} maxWidth="md">
             <DialogTitle>Right now, we accept donations through Venmo*.</DialogTitle>
             <DialogContent>
                 <Grid container>
@@ -49,16 +44,12 @@ function DonateDialog({ onClose, open }) {
                 </Grid>
             </DialogContent>
             <DialogActions>
-                <Button
-                    aria-controls="closes dialog"
-                    className={classes.closeButtonStyle}
-                    onClick={onClose}
-                >
+                <Button aria-controls="closes dialog" className={classes.closeButtonStyle} onClick={onClose}>
                     okay
                 </Button>
             </DialogActions>
         </Dialog>
     );
-}
+};
 
 export default DonateDialog;

@@ -2,7 +2,7 @@ import React from "react";
 import { Typography, DialogTitle, DialogContent, DialogContentText } from "@mui/material";
 import { ExternalLink } from "./ExternalLink";
 
-function CalulatorDialog(props) {
+const CalulatorDialog = props => {
     return (
         <>
             <DialogTitle>Not sure?</DialogTitle>
@@ -11,18 +11,14 @@ function CalulatorDialog(props) {
                     <Typography style={{ marginBottom: "1rem" }}>
                         If you don't know the answer, request your criminal record through{" "}
                     </Typography>
-                    <ExternalLink
-                        target="_blank"
-                        href="https://www.wsp.wa.gov/crime/criminal-history"
-                        rel="noreferrer"
-                    >
+                    <ExternalLink target="_blank" href="https://www.wsp.wa.gov/crime/criminal-history" rel="noreferrer">
                         Washington State Patrol.
                     </ExternalLink>
                 </DialogContentText>
             </DialogContent>
         </>
     );
-}
+};
 
 export default CalulatorDialog;
 

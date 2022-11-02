@@ -4,7 +4,7 @@ import { MainBranchTitleStyles } from "./MainBranchTitleStyles";
 import { BackButton } from "../../ui-kit/BackButton";
 import ProgressBar from "../../Components/ProgressBar";
 
-function MainBranchTitle({ progressBar, backButton, header, body, buttonText, buttonHref }) {
+const MainBranchTitle = ({ progressBar, backButton, header, body, buttonText, buttonHref }) => {
     const classes = MainBranchTitleStyles();
     return (
         <Grid container className={classes.grid}>
@@ -29,6 +29,6 @@ function MainBranchTitle({ progressBar, backButton, header, body, buttonText, bu
             <PrimaryButton className={classes.button} text={buttonText} href={buttonHref} />
         </Grid>
     );
-}
+};
 
 export default MainBranchTitle;

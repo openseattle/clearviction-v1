@@ -6,7 +6,7 @@ import ContentSection from "../Components/ContentSection";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
 
-function PartnerPage() {
+const PartnerPage = () => {
     const classes = useGetInvolvedStyles();
 
     return (
@@ -16,9 +16,8 @@ function PartnerPage() {
                     Help us bring a message of hope into your community.
                 </Typography>
                 <Typography className={classes.volunteerTextStyle} variant="body1">
-                    We appreciate finding new ways to work with organisations and people who share
-                    our goals and want to help us raise awareness. Whether it be guidance or
-                    support, we'd love to hear more.
+                    We appreciate finding new ways to work with organisations and people who share our goals and want to
+                    help us raise awareness. Whether it be guidance or support, we'd love to hear more.
                 </Typography>
                 <Container className={classes.CTAButtonContainerStyle}>
                     <RedesignButtonPrimary href="/contact">Contact Us</RedesignButtonPrimary>
@@ -28,12 +27,7 @@ function PartnerPage() {
                 <Grid container>
                     <Grid item xs={12} sm={6}>
                         <Box display="flex" justifyContent="center">
-                            <Box
-                                className={classes.partnerImageStyle}
-                                component="img"
-                                src={pr}
-                                alt=""
-                            />
+                            <Box className={classes.partnerImageStyle} component="img" src={pr} alt="" />
                         </Box>
                     </Grid>
                     <Grid item xs={12} sm={6}>
@@ -41,18 +35,17 @@ function PartnerPage() {
                             Share the calculator with your community
                         </Typography>
                         <Typography className={classes.volunteerTextStyle} variant="body1">
-                            Do you know someone who could benefit from our calculator? Want to help
-                            us spread the word around your community?
+                            Do you know someone who could benefit from our calculator? Want to help us spread the word
+                            around your community?
                         </Typography>
                         <Typography className={classes.volunteerTextStyle} variant="body1">
-                            Share our mission on your social media or send it to someone you know
-                            needs it.
+                            Share our mission on your social media or send it to someone you know needs it.
                         </Typography>
                     </Grid>
                 </Grid>
             </ContentSection>
         </>
     );
-}
+};
 
 export default PartnerPage;

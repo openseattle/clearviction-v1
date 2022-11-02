@@ -16,7 +16,7 @@ import PrimaryButton from "../../ui-kit/PrimaryButton";
 import SecondaryButton from "../../ui-kit/SecondaryButton";
 import { QuickStartGuideStyles } from "./QuickStartGuideStyles";
 
-function QuickStartGuide({ text, header, body, buttonText, buttonHref, tooltip }) {
+const QuickStartGuide = ({ text, header, body, buttonText, buttonHref, tooltip }) => {
     const [open, setOpen] = useState(false);
 
     const handleClose = () => setOpen(false);
@@ -59,24 +59,14 @@ function QuickStartGuide({ text, header, body, buttonText, buttonHref, tooltip }
             <Grid container justifyContent="center" className={classes.buttonGrid}>
                 <PrimaryButton className={classes.button} text={buttonText} href={buttonHref} />
 
-                {tooltip && (
-                    <SecondaryButton
-                        className={classes.button}
-                        text={"I'm not sure"}
-                        onClick={handleOpen}
-                    />
-                )}
+                {tooltip && <SecondaryButton className={classes.button} text={"I'm not sure"} onClick={handleOpen} />}
 
                 <Dialog onClose={handleClose} open={open}>
                     <DialogTitle>Not sure?</DialogTitle>
                     <DialogContent>
                         <DialogContentText>
                             If you don't know the answer, request your criminal record through{" "}
-                            <a
-                                target="_blank"
-                                href="https://www.wsp.wa.gov/crime/criminal-history"
-                                rel="noreferrer"
-                            >
+                            <a target="_blank" href="https://www.wsp.wa.gov/crime/criminal-history" rel="noreferrer">
                                 Washington State Patrol.
                             </a>
                         </DialogContentText>
@@ -88,6 +78,6 @@ function QuickStartGuide({ text, header, body, buttonText, buttonHref, tooltip }
             </Grid>
         </Grid>
     );
-}
+};
 
 export default QuickStartGuide;

@@ -10,15 +10,7 @@ import { BodyType } from "../../data/calculatorPagesTypes.ts";
 import ProgressBar from "../../Components/ProgressBar";
 import { ExternalLink } from "../../ui-kit/ExternalLink";
 
-function EndScreen({
-    showProgressBar,
-    currentSectionName,
-    header,
-    body,
-    buttons,
-    showRestartButton,
-    disclaimer,
-}) {
+const EndScreen = ({ showProgressBar, currentSectionName, header, body, buttons, showRestartButton, disclaimer }) => {
     const classes = EndScreenStyles();
 
     return (
@@ -67,11 +59,7 @@ function EndScreen({
                                     <ul key={idx}>
                                         <li className={classes.list} key={idx}>
                                             {b.textBeforeLink && <span>{b.textBeforeLink}</span>}
-                                            <ExternalLink
-                                                target="_blank"
-                                                rel="noopener noreferrer"
-                                                href={b.href}
-                                            >
+                                            <ExternalLink target="_blank" rel="noopener noreferrer" href={b.href}>
                                                 {b.linkText}
                                             </ExternalLink>
                                             {b.textAfterLink && <span>{b.textAfterLink}</span>}
@@ -107,7 +95,7 @@ function EndScreen({
             </Grid>
         </Grid>
     );
-}
+};
 
 EndScreen.propTypes = {
     header: PropTypes.string.isRequired,

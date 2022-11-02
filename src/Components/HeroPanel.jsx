@@ -19,7 +19,7 @@ const useStyles = makeStyles(theme => ({
         },
     },
 }));
-function HeroPanel(props) {
+const HeroPanel = props => {
     const { title, subtitle } = props;
     const classes = useStyles();
     return (
@@ -34,6 +34,6 @@ function HeroPanel(props) {
             )}
         </Box>
     );
-}
+};
 
 export default HeroPanel;

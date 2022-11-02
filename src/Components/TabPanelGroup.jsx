@@ -2,7 +2,7 @@ import { Tabs, Tab, Box } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { useState } from "react";
 
-function TabPanel(props) {
+const TabPanel = props => {
     const { children, value, index, ...other } = props;
 
     return (
@@ -10,7 +10,7 @@ function TabPanel(props) {
             {value === index && <Box p={3}>{children}</Box>}
         </div>
     );
-}
+};
 
 const useStyles = makeStyles(() => ({
     tabPanelStyle: {
@@ -28,7 +28,7 @@ function a11yProps(index) {
     };
 }
 
-function TabPanelGroup(props) {
+const TabPanelGroup = props => {
     const classes = useStyles();
     const [value, setValue] = useState(0);
     const { tabs } = props;
@@ -40,27 +40,17 @@ function TabPanelGroup(props) {
         <Box>
             <Tabs value={value} onChange={handleChange} variant="fullWidth">
                 {tabs.map(tab => (
-                    <Tab
-                        className={classes.tabStyle}
-                        key={tab.index}
-                        label={tab.label}
-                        {...a11yProps(tab.index)}
-                    />
+                    <Tab className={classes.tabStyle} key={tab.index} label={tab.label} {...a11yProps(tab.index)} />
                 ))}
             </Tabs>
 
             {tabs.map(tab => (
-                <TabPanel
-                    className={classes.tabPanelStyle}
-                    key={tab.index}
-                    value={value}
-                    index={tab.index}
-                >
+                <TabPanel className={classes.tabPanelStyle} key={tab.index} value={value} index={tab.index}>
                     {tab.content}
                 </TabPanel>
             ))}
         </Box>
     );
-}
+};
 
 export default TabPanelGroup;

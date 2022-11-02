@@ -104,7 +104,7 @@ const educationFacts = [
     },
 ];
 
-function WhyVacatePage() {
+const WhyVacatePage = () => {
     const classes = useResourcesStyles();
 
     return (
@@ -112,21 +112,13 @@ function WhyVacatePage() {
             <RedesignHeroPanel title="Why Vacate">
                 <Grid container spacing={4}>
                     <Grid item xs={12} sm={6} md={6}>
-                        <Typography
-                            className={classes.contentTextStyle}
-                            variant="subtitle1"
-                            component="p"
-                        >
-                            The process of vacating a conviction in Washington is convoluted, but
-                            it’s needed to avoid barriers in employment, housing and education.
+                        <Typography className={classes.contentTextStyle} variant="subtitle1" component="p">
+                            The process of vacating a conviction in Washington is convoluted, but it’s needed to avoid
+                            barriers in employment, housing and education.
                         </Typography>
-                        <Typography
-                            className={classes.contentTextStyle}
-                            variant="subtitle1"
-                            component="p"
-                        >
-                            Find out why it’s important to vacate your conviction and get resources
-                            to help you while you work your way to it.
+                        <Typography className={classes.contentTextStyle} variant="subtitle1" component="p">
+                            Find out why it’s important to vacate your conviction and get resources to help you while
+                            you work your way to it.
                         </Typography>
                     </Grid>
                     <Grid item xs={12} sm={6} md={6}>
@@ -149,19 +141,14 @@ function WhyVacatePage() {
                 />
             </Container>
 
-            <Container
-                id="employment"
-                component="section"
-                className={classes.regularContainerStyle}
-                maxWidth="md"
-            >
+            <Container id="employment" component="section" className={classes.regularContainerStyle} maxWidth="md">
                 <Typography className={classes.headingStyle} variant="h2">
                     Employment
                 </Typography>
                 <Typography className={classes.headingStyle} variant="body1">
-                    Simply having a conviction does not prevent you from having a job, however, it
-                    can be more difficult depending on the type of job and the employer. It is
-                    important to not lose hope while facing challenges such as:
+                    Simply having a conviction does not prevent you from having a job, however, it can be more difficult
+                    depending on the type of job and the employer. It is important to not lose hope while facing
+                    challenges such as:
                 </Typography>
                 <Grid container spacing={3}>
                     {employmentFacts.map(fact => (
@@ -201,19 +188,14 @@ function WhyVacatePage() {
                 <Divider className={classes.dividerStyle} />
             </Container>
 
-            <Container
-                id="housing"
-                component="section"
-                className={classes.regularContainerStyle}
-                maxWidth="md"
-            >
+            <Container id="housing" component="section" className={classes.regularContainerStyle} maxWidth="md">
                 <Typography className={classes.headingStyle} variant="h2">
                     Housing
                 </Typography>
                 <Typography className={classes.headingStyle} variant="body1">
-                    There are many different barriers that can prevent people with convictions from
-                    fair access to housing. Each different type of housing comes with its own set of
-                    obstacles that you should take into consideration when looking for housing:
+                    There are many different barriers that can prevent people with convictions from fair access to
+                    housing. Each different type of housing comes with its own set of obstacles that you should take
+                    into consideration when looking for housing:
                 </Typography>
                 <Grid container spacing={3}>
                     {housingFacts.map(fact => (
@@ -253,19 +235,14 @@ function WhyVacatePage() {
                 <Divider className={classes.dividerStyle} />
             </Container>
 
-            <Container
-                id="education"
-                component="section"
-                className={classes.regularContainerStyle}
-                maxWidth="md"
-            >
+            <Container id="education" component="section" className={classes.regularContainerStyle} maxWidth="md">
                 <Typography className={classes.headingStyle} variant="h2">
                     Education
                 </Typography>
                 <Typography className={classes.headingStyle} variant="body1">
-                    With a conviction in your record, you might face some barriers when it comes to
-                    getting opportunities where a background check is performed. Here are the main
-                    educational challenges faced by those with convicitons:
+                    With a conviction in your record, you might face some barriers when it comes to getting
+                    opportunities where a background check is performed. Here are the main educational challenges faced
+                    by those with convicitons:
                 </Typography>
                 <Grid container spacing={4}>
                     {educationFacts.map(fact => (
@@ -311,6 +288,6 @@ function WhyVacatePage() {
             </Container>
         </>
     );
-}
+};
 
 export default WhyVacatePage;

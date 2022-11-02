@@ -42,9 +42,8 @@ const courtFormsFacts = [
         ariaLabel: "Read More Gross Misdemeanor Convictions",
         content: (
             <Typography variant="body2">
-                {northwestJusticeCenterPacket("Vacation packet from Northwest Justice Project")}{" "}
-                with details about the eligibility to vacate (p. 2-4) and the needed court forms (p.
-                5-13).
+                {northwestJusticeCenterPacket("Vacation packet from Northwest Justice Project")} with details about the
+                eligibility to vacate (p. 2-4) and the needed court forms (p. 5-13).
             </Typography>
         ),
         contentID: "GMC-paragraph",
@@ -56,9 +55,9 @@ const courtFormsFacts = [
         ariaLabel: "Read More Marijuana Misdemeanors",
         content: (
             <Typography variant="body2">
-                {northwestJusticeCenterPacket("Vacation packet from Northwest Justice Project")}{" "}
-                with the steps to vacate (p. 2-6), all necessary court documents (p. 8-13) and a
-                sample letter for WSP to seal your record (p. 7).
+                {northwestJusticeCenterPacket("Vacation packet from Northwest Justice Project")} with the steps to
+                vacate (p. 2-6), all necessary court documents (p. 8-13) and a sample letter for WSP to seal your record
+                (p. 7).
             </Typography>
         ),
         contentID: "MM-paragraph",
@@ -71,9 +70,9 @@ const courtFormsFacts = [
         content: (
             <Typography variant="body2">
                 If you were a victim of trafficking, you can use this{" "}
-                {northwestJusticeCenterPacket("vacation packet from Northwest Justice Project")}{" "}
-                with info on the eligibility to vacate (p. 1-3), steps to take (p. 4-8), court forms
-                (p. 10-18) and a sample letter for WSP (p. 9).
+                {northwestJusticeCenterPacket("vacation packet from Northwest Justice Project")} with info on the
+                eligibility to vacate (p. 1-3), steps to take (p. 4-8), court forms (p. 10-18) and a sample letter for
+                WSP (p. 9).
             </Typography>
         ),
         contentID: "PC-paragraph",
@@ -85,16 +84,15 @@ const courtFormsFacts = [
         ariaLabel: "Read More Non-Violent Class B or C Felony",
         content: (
             <Typography variant="body2">
-                {northwestJusticeCenterPacket("Vacation packet from Northwest Justice Project")}{" "}
-                including an overview of the eligibility to vacate (p. 3-5), steps to vacate (p.
-                7-12), all necessary court documents (p. 13-23) and a sample letter to WSP (p. 24).
+                {northwestJusticeCenterPacket("Vacation packet from Northwest Justice Project")} including an overview
+                of the eligibility to vacate (p. 3-5), steps to vacate (p. 7-12), all necessary court documents (p.
+                13-23) and a sample letter to WSP (p. 24).
                 <br />
                 <br />
-                To vacate a felony conviction, you will also need a Certificate of Discharge. If the
-                court has not issued the Certificate of Discharge yet, you must file for a
-                certificate before you can vacate the felony.{" "}
-                {certificateOfDischargeForm("This packet")} will assist you to obtain a Certificate
-                of Discharge in Washington State.
+                To vacate a felony conviction, you will also need a Certificate of Discharge. If the court has not
+                issued the Certificate of Discharge yet, you must file for a certificate before you can vacate the
+                felony. {certificateOfDischargeForm("This packet")} will assist you to obtain a Certificate of Discharge
+                in Washington State.
             </Typography>
         ),
         contentID: "BCF-paragraph",
@@ -106,9 +104,9 @@ const courtFormsFacts = [
         ariaLabel: "Read More Treaty to Indian Fishing Convictions",
         content: (
             <Typography variant="body2">
-                {northwestJusticeCenterPacket("Vacation packet from Northwest Justice Project")}{" "}
-                including an overview of the eligibility to vacate (p. 1-2), steps to take (p. 3-7),
-                all court forms (p. 8-16), and a sample letter for WSP (p. 17).
+                {northwestJusticeCenterPacket("Vacation packet from Northwest Justice Project")} including an overview
+                of the eligibility to vacate (p. 1-2), steps to take (p. 3-7), all court forms (p. 8-16), and a sample
+                letter for WSP (p. 17).
             </Typography>
         ),
         contentID: "IFC-paragraph",
@@ -121,22 +119,20 @@ const courtFormsFacts = [
         content: (
             <>
                 <Typography variant="body2">
-                    Detailed {teamChildPacket("packet from TeamChild")} containing all court
-                    documents (p. 30-40), sample letters to WSP and JRA (p. 41-42), and the specific
-                    practices per county (p. 19-27).
+                    Detailed {teamChildPacket("packet from TeamChild")} containing all court documents (p. 30-40),
+                    sample letters to WSP and JRA (p. 41-42), and the specific practices per county (p. 19-27).
                 </Typography>
                 <Typography variant="body2">
-                    The {kingCountySealJuvenileRecords("packet from King County Superior Court")}{" "}
-                    briefly describes the procedure to vacate and contains all necessary court
-                    documents (p. 11-17) and a sample of how to fill in the court documents (p.
-                    4-9).
+                    The {kingCountySealJuvenileRecords("packet from King County Superior Court")} briefly describes the
+                    procedure to vacate and contains all necessary court documents (p. 11-17) and a sample of how to
+                    fill in the court documents (p. 4-9).
                 </Typography>
             </>
         ),
         contentID: "JCR-paragraph",
     },
 ];
-function CourtFormsFactGroup() {
+const CourtFormsFactGroup = () => {
     return (
         <Grid container>
             {courtFormsFacts.map(fact => (
@@ -153,6 +149,6 @@ function CourtFormsFactGroup() {
             ))}
         </Grid>
     );
-}
+};
 
 export default CourtFormsFactGroup;

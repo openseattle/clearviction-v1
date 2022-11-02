@@ -15,7 +15,7 @@ const boxStyle = {
     padding: 4,
 };
 
-function ToolTipModal({ text }) {
+const ToolTipModal = ({ text }) => {
     const [open, setOpen] = useState(false);
 
     const handleClose = () => setOpen(false);
@@ -39,11 +39,7 @@ function ToolTipModal({ text }) {
                 <Box data-testid="tooltip-content" style={boxStyle}>
                     <Typography id="modal-modal-description" style={{ mt: 2, fontSize: "18px" }}>
                         If you don't know the answer, you may check your criminal record{" "}
-                        <a
-                            target="_blank"
-                            href="https://www.wsp.wa.gov/crime/criminal-history"
-                            rel="noreferrer"
-                        >
+                        <a target="_blank" href="https://www.wsp.wa.gov/crime/criminal-history" rel="noreferrer">
                             here
                         </a>
                         .
@@ -52,6 +48,6 @@ function ToolTipModal({ text }) {
             </Modal>
         </div>
     );
-}
+};
 
 export default ToolTipModal;

@@ -1,19 +1,11 @@
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import {
-    TextField,
-    MenuItem,
-    FormControl,
-    FormGroup,
-    FormLabel,
-    Box,
-    Typography,
-} from "@mui/material";
+import { TextField, MenuItem, FormControl, FormGroup, FormLabel, Box, Typography } from "@mui/material";
 import { send } from "@emailjs/browser";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import { useContactStyles } from "../Styles/useContactStyles";
 
-function ContactForm() {
+const ContactForm = () => {
     const classes = useContactStyles();
     const history = useHistory();
 
@@ -149,12 +141,7 @@ function ContactForm() {
     return (
         <Box className={classes.formContainer}>
             <form onSubmit={handleFormSubmit}>
-                <FormControl
-                    variant="standard"
-                    required
-                    component="fieldset"
-                    className={classes.formStyle}
-                >
+                <FormControl variant="standard" required component="fieldset" className={classes.formStyle}>
                     <FormGroup>
                         <FormLabel className={classes.labelStyle} component="legend">
                             <Typography variant="body2" className={classes.labelTextStyle}>
@@ -243,15 +230,13 @@ function ContactForm() {
                             aria-label="Your message"
                         />
                         <Box className={classes.buttonBoxStyle}>
-                            <RedesignButtonPrimary type="submit">
-                                Send message
-                            </RedesignButtonPrimary>
+                            <RedesignButtonPrimary type="submit">Send message</RedesignButtonPrimary>
                         </Box>
                     </FormGroup>
                 </FormControl>
             </form>
         </Box>
     );
-}
+};
 
 export default ContactForm;

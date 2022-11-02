@@ -21,7 +21,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-function FactImageCard({ fact }) {
+const FactImageCard = ({ fact }) => {
     const classes = useStyles();
     return (
         <Card className={classes.root}>
@@ -48,6 +48,6 @@ function FactImageCard({ fact }) {
             </CardContent>
         </Card>
     );
-}
+};
 
 export default FactImageCard;

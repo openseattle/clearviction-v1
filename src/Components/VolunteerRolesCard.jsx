@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-function VolunteerRolesCard({ image, discipline, roles, alt }) {
+const VolunteerRolesCard = ({ image, discipline, roles, alt }) => {
     const classes = useStyles();
     return (
         <Card className={classes.roleRootStyle}>
@@ -29,17 +29,12 @@ function VolunteerRolesCard({ image, discipline, roles, alt }) {
                 {discipline}
             </Typography>
             {roles.map((role, idx) => (
-                <Typography
-                    className={classes.roleTextStyle}
-                    variant="body1"
-                    align="center"
-                    key={idx}
-                >
+                <Typography className={classes.roleTextStyle} variant="body1" align="center" key={idx}>
                     {role}
                 </Typography>
             ))}
         </Card>
     );
-}
+};
 
 export default VolunteerRolesCard;

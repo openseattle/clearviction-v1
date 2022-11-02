@@ -40,7 +40,7 @@ const donationLevels = [
     },
 ];
 
-function DonatePage() {
+const DonatePage = () => {
     const [open, setOpen] = useState(false);
 
     const handleClickOpen = () => {
@@ -53,18 +53,13 @@ function DonatePage() {
     const classes = useGetInvolvedStyles();
     return (
         <>
-            <Container
-                component="section"
-                id="donate"
-                className={classes.regularContainerStyle}
-                maxWidth="md"
-            >
+            <Container component="section" id="donate" className={classes.regularContainerStyle} maxWidth="md">
                 <Typography className={classes.headingStyle} variant="h2">
                     Your donations can go a long way to make the project grow.
                 </Typography>
                 <Typography className={classes.volunteerTextStyle} variant="body1">
-                    Here’s how your generosity can help us achieve our milestones and make it
-                    possible to connect our project with more and more people who need it:
+                    Here’s how your generosity can help us achieve our milestones and make it possible to connect our
+                    project with more and more people who need it:
                 </Typography>
                 <Grid container spacing={3}>
                     {donationLevels.map(level => (
@@ -95,6 +90,6 @@ function DonatePage() {
             </Container>
         </>
     );
-}
+};
 
 export default DonatePage;

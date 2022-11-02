@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import largeLogo from "../Assets/cVLogoInlineLight.svg";
 import smallLogo from "../Assets/cv_small_logo_dark. 1.svg";
 
-function NavigationLogo() {
+const NavigationLogo = () => {
     const [isLargeScreen, setIsLargeScreen] = useState(true);
 
     useEffect(() => {
@@ -21,6 +21,6 @@ function NavigationLogo() {
             )}
         </ButtonBase>
     );
-}
+};
 
 export default NavigationLogo;

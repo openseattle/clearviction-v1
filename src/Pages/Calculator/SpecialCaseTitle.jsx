@@ -5,7 +5,7 @@ import PrimaryButton from "../../ui-kit/PrimaryButton";
 import { SpecialCaseTitleStyles } from "./SpecialCaseTitleStyles";
 import { ExternalLink } from "../../ui-kit/ExternalLink";
 
-function SpecialCaseTitle({ header, body, buttonText, buttonHref }) {
+const SpecialCaseTitle = ({ header, body, buttonText, buttonHref }) => {
     const classes = SpecialCaseTitleStyles();
     return (
         <Grid container className={classes.grid}>
@@ -70,6 +70,6 @@ function SpecialCaseTitle({ header, body, buttonText, buttonHref }) {
             <PrimaryButton className={classes.button} text={buttonText} href={buttonHref} />
         </Grid>
     );
-}
+};
 
 export default SpecialCaseTitle;

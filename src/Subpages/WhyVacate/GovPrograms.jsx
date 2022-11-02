@@ -11,7 +11,7 @@ import { Box, Grid, Typography, Container, List } from "@mui/material";
 import { WhyVacateHousingStyles } from "../../Styles/WhyVacateHousingStyles.ts";
 import { IconWithHeaderAndText } from "./IconWithHeaderAndText";
 
-export function GovPrograms() {
+export const GovPrograms = () => {
     const classes = WhyVacateHousingStyles();
     return (
         <Box className={classes.lightBlueSectionBackground}>
@@ -29,10 +29,9 @@ export function GovPrograms() {
                         Acessible programs for those with convictions
                     </Typography>
                     <Typography className={classes.title} variant="h6">
-                        Visit Washington Connection to find out what benefits you may be eligible
-                        for. You can also use the Benefits Eligibility Screening Tool (BEST) to find
-                        out if you are eligible for benefits through the Social Security
-                        Administration.
+                        Visit Washington Connection to find out what benefits you may be eligible for. You can also use
+                        the Benefits Eligibility Screening Tool (BEST) to find out if you are eligible for benefits
+                        through the Social Security Administration.
                     </Typography>
                     <Grid item sm={12} md={12}>
                         <List>
@@ -91,4 +90,4 @@ export function GovPrograms() {
             </Container>
         </Box>
     );
-}
+};

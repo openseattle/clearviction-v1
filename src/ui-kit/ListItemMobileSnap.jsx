@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-function ListItemMobileSnap(props) {
+const ListItemMobileSnap = props => {
     const { image, text, textLeft, edu, header } = props;
     const classes = useStyles();
 
@@ -64,6 +64,6 @@ function ListItemMobileSnap(props) {
             )}
         </>
     );
-}
+};
 
 export default ListItemMobileSnap;

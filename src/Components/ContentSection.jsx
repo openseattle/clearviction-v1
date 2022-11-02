@@ -1,7 +1,7 @@
 import { Container, Paper, Typography } from "@mui/material";
 import { useHomeStyles } from "../Styles/useHomeStyles";
 
-function ContentSection(props) {
+const ContentSection = props => {
     const { sectionId, sectionSize, sectionTitle, children } = props;
     const classes = useHomeStyles();
 
@@ -9,12 +9,7 @@ function ContentSection(props) {
         <Container id={sectionId} className={classes.regularContainer} maxWidth={sectionSize}>
             <Paper className={classes.paperStyle}>
                 {sectionTitle && (
-                    <Typography
-                        className={classes.headingStyle}
-                        variant="h3"
-                        align="center"
-                        component="h2"
-                    >
+                    <Typography className={classes.headingStyle} variant="h3" align="center" component="h2">
                         {sectionTitle}
                     </Typography>
                 )}
@@ -22,6 +17,6 @@ function ContentSection(props) {
             </Paper>
         </Container>
     );
-}
+};
 
 export default ContentSection;

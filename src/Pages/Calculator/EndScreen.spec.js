@@ -61,13 +61,9 @@ describe("<EndScreen />", () => {
         );
 
         expect(screen.getByTestId("end-screen")).toBeVisible();
-        expect(
-            screen.getByRole("heading", { name: "Your Conviction May Be Eligible to Vacate!" })
-        ).toBeInTheDocument();
+        expect(screen.getByRole("heading", { name: "Your Conviction May Be Eligible to Vacate!" })).toBeInTheDocument();
 
-        expect(
-            screen.getByText("It looks like your conviction may be eligible to vacate")
-        ).toBeInTheDocument();
+        expect(screen.getByText("It looks like your conviction may be eligible to vacate")).toBeInTheDocument();
         expect(screen.getByRole("heading", { name: "Next steps:" })).toBeInTheDocument();
 
         const lists = screen.getAllByRole("list");
@@ -83,18 +79,13 @@ describe("<EndScreen />", () => {
         expect(fullLineLink).not.toHaveAttribute("role", "button");
 
         const inlineLinkListItem = within(lists[2]).getByRole("listitem");
-        expect(inlineLinkListItem).toHaveTextContent(
-            "test of inline link. inline link - text after link"
-        );
+        expect(inlineLinkListItem).toHaveTextContent("test of inline link. inline link - text after link");
 
         const inlineLink = within(inlineLinkListItem).getByRole("link");
         expect(inlineLink).toHaveTextContent("inline link");
         expect(inlineLink).toHaveAttribute("href", "www.inlinelink.com");
 
-        expect(screen.getByRole("button", { name: "test button" })).toHaveAttribute(
-            "href",
-            "test.com"
-        );
+        expect(screen.getByRole("button", { name: "test button" })).toHaveAttribute("href", "test.com");
         expect(screen.getByRole("link", { name: "Check another conviction" })).toBeInTheDocument();
         expect(screen.getByText("This is the disclaimer")).toBeInTheDocument();
         expect(screen.getByTestId("progress-bar")).toBeInTheDocument();

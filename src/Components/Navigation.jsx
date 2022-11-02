@@ -66,7 +66,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-function Navigation() {
+const Navigation = () => {
     const [menuState, setMenuState] = useState(null);
     const handleOpenMenu = event => {
         setMenuState(event.currentTarget);
@@ -93,15 +93,10 @@ function Navigation() {
                         <Box display={{ xs: "none", sm: "none", md: "none", lg: "flex" }}>
                             <ButtonGroup>
                                 {headerPages.map((page, idx) =>
-                                    page.key !== PageId.AccessCalculator ? (
-                                        <NavButton key={idx} page={page} />
-                                    ) : null
+                                    page.key !== PageId.AccessCalculator ? <NavButton key={idx} page={page} /> : null
                                 )}
                             </ButtonGroup>
-                            <RedesignButtonPrimary
-                                href="/calculator/landing-0"
-                                className={classes.navCalc}
-                            >
+                            <RedesignButtonPrimary href="/calculator/landing-0" className={classes.navCalc}>
                                 Access Calculator
                             </RedesignButtonPrimary>
                         </Box>
@@ -122,23 +117,12 @@ function Navigation() {
                         <Drawer anchor="right" open={Boolean(menuState)} onClose={handleCloseMenu}>
                             <List className={classes.menuStyle}>
                                 <ListItem style={{ justifyContent: "center" }}>
-                                    <IconButton
-                                        onClick={handleCloseMenu}
-                                        aria-label="close menu"
-                                        size="large"
-                                    >
-                                        <CloseSharp
-                                            fontSize="large"
-                                            className={classes.closeIcon}
-                                        />
+                                    <IconButton onClick={handleCloseMenu} aria-label="close menu" size="large">
+                                        <CloseSharp fontSize="large" className={classes.closeIcon} />
                                     </IconButton>
                                 </ListItem>
                                 {headerPages.map(page => (
-                                    <NavButtonMobile
-                                        key={page.name}
-                                        page={page}
-                                        classes={classes}
-                                    />
+                                    <NavButtonMobile key={page.name} page={page} classes={classes} />
                                 ))}
                                 <ListItem>
                                     <LegalDisclaimer />
@@ -151,6 +135,6 @@ function Navigation() {
             <Box height={56} />
         </>
     );
-}
+};
 
 export default Navigation;

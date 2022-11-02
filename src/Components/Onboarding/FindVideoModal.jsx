@@ -1,4 +1,4 @@
-export default function FindVideoModal() {
+const FindVideoModal = () => {
     const find = "https://drive.google.com/file/d/1TG5iz3ioxMFxNsS1YO8MoKaY9uD-NHjm/preview";
 
     return (
@@ -28,4 +28,6 @@ export default function FindVideoModal() {
             />
         </div>
     );
-}
+};
+
+export default FindVideoModal;

@@ -1,9 +1,4 @@
-// styles
-// import { useModalStyles } from '../../Styles/Onboarding/useModalStyles';
-
-export default function MiroVideoModal() {
-    // const classes = useModalStyles();
-
+const MiroVideoModal = () => {
     const miro = "https://drive.google.com/file/d/1dPIDPah9GbxFhOwi25t_x8YgvPU_33LZ/preview";
 
     return (
@@ -33,4 +28,6 @@ export default function MiroVideoModal() {
             />
         </div>
     );
-}
+};
+
+export default MiroVideoModal;

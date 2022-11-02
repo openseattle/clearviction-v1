@@ -46,6 +46,9 @@ rules:
     "@typescript-eslint/no-shadow":
         - error
     react/react-in-jsx-scope: "off"
+    react/function-component-definition:
+        - error
+        - namedComponents: arrow-function
     react/prop-types: 1
     react/no-array-index-key: 1
     react/jsx-props-no-spreading: 1

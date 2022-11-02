@@ -50,8 +50,7 @@ const airtable = {
     linkLocation2: "",
     linkTitle3: "Read our Glossary",
     linkIcon3: "link",
-    linkLocation3:
-        "https://airtable.com/appfJZShN8K4tcWHU/tblYLt2L646QsTESQ/viwbST7tdt1d2hOiR?blocks=hide",
+    linkLocation3: "https://airtable.com/appfJZShN8K4tcWHU/tblYLt2L646QsTESQ/viwbST7tdt1d2hOiR?blocks=hide",
 };
 
 const slack = {
@@ -97,7 +96,7 @@ const button2 = {
     text: "next",
 };
 
-function OnboardingMod2() {
+const OnboardingMod2 = () => {
     const classes = useModuleContentStyles();
 
     return (
@@ -137,6 +136,6 @@ function OnboardingMod2() {
             <Footer button1={button1} button2={button2} />
         </>
     );
-}
+};
 
 export default OnboardingMod2;

@@ -32,20 +32,14 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-function PrimaryButton({ href, target, text }) {
+const PrimaryButton = ({ href, target, text }) => {
     const classes = useStyles();
 
     return (
-        <Button
-            role="button"
-            className={classes.button}
-            href={href}
-            target={target}
-            variant="contained"
-        >
+        <Button role="button" className={classes.button} href={href} target={target} variant="contained">
             {text}
         </Button>
     );
-}
+};
 
 export default PrimaryButton;

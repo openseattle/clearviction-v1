@@ -14,7 +14,7 @@ import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 import calculatorPages from "../data/calculatorPages.ts";
 import { trackPageview } from "../trackingUtils";
 
-function CalculatorPage() {
+const CalculatorPage = () => {
     useDocumentTitle("Eligibility Calculator - ");
     const { pathname } = useLocation();
     const indexOfPageId = pathname.split("/").length - 1;
@@ -24,8 +24,7 @@ function CalculatorPage() {
     if (!content) window.location = "/404";
     useEffect(() => trackPageview("Calculator"), []);
 
-    const { header, body, type, buttons, disclaimer, tooltip, progressBar, showRestartButton } =
-        content;
+    const { header, body, type, buttons, disclaimer, tooltip, progressBar, showRestartButton } = content;
 
     const renderPage = pageType => {
         switch (pageType) {
@@ -93,6 +92,6 @@ function CalculatorPage() {
             </Grid>
         </Container>
     );
-}
+};
 
 export default CalculatorPage;

@@ -1,15 +1,6 @@
-import {
-    Table,
-    TableBody,
-    TableCell,
-    TableContainer,
-    TableHead,
-    TableRow,
-    Paper,
-    Typography,
-} from "@mui/material";
+import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Typography } from "@mui/material";
 
-function DataTable({ tableHeader, data }) {
+const DataTable = ({ tableHeader, data }) => {
     return (
         <TableContainer component={Paper}>
             <Typography>{tableHeader}</Typography>
@@ -22,10 +13,7 @@ function DataTable({ tableHeader, data }) {
                 </TableHead>
                 <TableBody>
                     {data.map((row, idx) => (
-                        <TableRow
-                            key={idx}
-                            sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-                        >
+                        <TableRow key={idx} sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
                             <TableCell component="th" scope="row">
                                 {row[0].question}
                             </TableCell>
@@ -36,6 +24,6 @@ function DataTable({ tableHeader, data }) {
             </Table>
         </TableContainer>
     );
-}
+};
 
 export default DataTable;

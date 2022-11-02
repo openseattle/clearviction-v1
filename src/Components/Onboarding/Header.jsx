@@ -6,7 +6,7 @@ import smallLogo from "../../Assets/Onboarding/smallLogo.svg";
 import { useHeaderStyles } from "../../Styles/Onboarding/useHeaderStyles";
 import SocialContainer from "./SocialContainer";
 
-function Header({ text }) {
+const Header = ({ text }) => {
     const classes = useHeaderStyles();
     const { title, description, information } = text;
 
@@ -27,11 +27,7 @@ function Header({ text }) {
             <div className={classes.headingContainer}>
                 {title === "Welcome!" ? (
                     <div className={classes.welcomeHeader}>
-                        <Typography
-                            variant="h1"
-                            className={classes.welcome}
-                            style={{ fontWeight: 400 }}
-                        >
+                        <Typography variant="h1" className={classes.welcome} style={{ fontWeight: 400 }}>
                             {title}
                         </Typography>
                         <Typography variant="h2" className={classes.welcomePara}>
@@ -80,6 +76,6 @@ function Header({ text }) {
             </Drawer> */}
         </div>
     );
-}
+};
 
 export default Header;

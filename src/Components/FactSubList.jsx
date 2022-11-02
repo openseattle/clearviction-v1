@@ -1,6 +1,6 @@
 import { Link, List, ListItem } from "@mui/material";
 
-function FactSubList({ resources }) {
+const FactSubList = ({ resources }) => {
     return (
         <List>
             {resources.map(resource => (
@@ -18,5 +18,5 @@ function FactSubList({ resources }) {
             ))}
         </List>
     );
-}
+};
 export default FactSubList;

@@ -2,7 +2,7 @@ import { Typography, ListItem, Button, Collapse } from "@mui/material";
 import { ExpandMore } from "@mui/icons-material";
 import { useState } from "react";
 
-function NavButtonMobile({ page, classes }) {
+const NavButtonMobile = ({ page, classes }) => {
     const [expandSubMenu, setExpandSubMenu] = useState(false);
 
     const handleExpandClick = () => {
@@ -34,9 +34,7 @@ function NavButtonMobile({ page, classes }) {
                         {page.subpages.map((subpage, idx) => (
                             // eslint-disable-next-line react/no-array-index-key
                             <Button key={idx} href={subpage.url} fullwidth>
-                                <Typography className={classes.subMenuButton}>
-                                    {subpage.name}
-                                </Typography>
+                                <Typography className={classes.subMenuButton}>{subpage.name}</Typography>
                             </Button>
                         ))}
                     </Collapse>
@@ -44,6 +42,6 @@ function NavButtonMobile({ page, classes }) {
             )}
         </>
     );
-}
+};
 
 export default NavButtonMobile;

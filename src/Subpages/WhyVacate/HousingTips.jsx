@@ -10,7 +10,7 @@ import { Box, Grid, Typography, Container, List } from "@mui/material";
 import { WhyVacateHousingStyles } from "../../Styles/WhyVacateHousingStyles.ts";
 import { IconWithHeaderAndText } from "./IconWithHeaderAndText";
 
-export function HousingTips() {
+export const HousingTips = () => {
     const classes = WhyVacateHousingStyles();
     return (
         <Box className={classes.lightBlueSectionBackground}>
@@ -75,14 +75,13 @@ export function HousingTips() {
                         </List>
                     </Grid>
                     <Typography className={classes.contentText}>
-                        If you live in Seattle, you have more protection: under a new law, landlords
-                        may not require that you talk about your criminal history at all, and may
-                        not reject your application for housing because of your adult criminal
-                        history unless they think there is a reason to believe you will be a danger
-                        to other tenants or to the property
+                        If you live in Seattle, you have more protection: under a new law, landlords may not require
+                        that you talk about your criminal history at all, and may not reject your application for
+                        housing because of your adult criminal history unless they think there is a reason to believe
+                        you will be a danger to other tenants or to the property
                     </Typography>
                 </Box>
             </Container>
         </Box>
     );
-}
+};

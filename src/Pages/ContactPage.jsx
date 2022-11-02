@@ -4,7 +4,7 @@ import { useContactStyles } from "../Styles/useContactStyles";
 import new_message from "../Assets/new_message.svg";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
-function ContactPage() {
+const ContactPage = () => {
     const classes = useContactStyles();
     useDocumentTitle("Contact Us - ");
 
@@ -31,5 +31,5 @@ function ContactPage() {
             </Container>
         </Box>
     );
-}
+};
 export default ContactPage;

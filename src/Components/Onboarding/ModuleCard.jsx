@@ -10,7 +10,7 @@ import circleCheck from "../../Assets/Onboarding/circleCheck.png";
 
 import { useModuleCardStyles } from "../../Styles/Onboarding/useModuleCardStyles";
 
-function ModuleCard({ module: moduleProp }) {
+const ModuleCard = ({ module: moduleProp }) => {
     const classes = useModuleCardStyles();
     const { number, link, text, subheading } = moduleProp;
 
@@ -24,18 +24,10 @@ function ModuleCard({ module: moduleProp }) {
                         </Typography>
                     </div>
                     <div className={classes.cardBody}>
-                        {number === "module 1" && (
-                            <img className={classes.iconStyle} src={screens} alt="" />
-                        )}
-                        {number === "module 2" && (
-                            <img className={classes.iconStyle} src={tool} alt="" />
-                        )}
-                        {number === "module 3" && (
-                            <img className={classes.iconStyle} src={remote} alt="" />
-                        )}
-                        {number === "module 4" && (
-                            <img className={classes.iconStyle} src={simpleQuestion} alt="" />
-                        )}
+                        {number === "module 1" && <img className={classes.iconStyle} src={screens} alt="" />}
+                        {number === "module 2" && <img className={classes.iconStyle} src={tool} alt="" />}
+                        {number === "module 3" && <img className={classes.iconStyle} src={remote} alt="" />}
+                        {number === "module 4" && <img className={classes.iconStyle} src={simpleQuestion} alt="" />}
                         <div>
                             <Typography variant="h5" className={classes.cardSubheading}>
                                 {subheading}
@@ -69,6 +61,6 @@ function ModuleCard({ module: moduleProp }) {
             </Link>
         </div>
     );
-}
+};
 
 export default ModuleCard;

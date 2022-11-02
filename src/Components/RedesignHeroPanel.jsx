@@ -18,7 +18,7 @@ const useStyles = makeStyles(theme => ({
         paddingBottom: theme.spacing(5),
     },
 }));
-function RedesignHeroPanel(props) {
+const RedesignHeroPanel = props => {
     const { title, subtitle, children } = props;
     const classes = useStyles();
     return (
@@ -36,6 +36,6 @@ function RedesignHeroPanel(props) {
             </Container>
         </Box>
     );
-}
+};
 
 export default RedesignHeroPanel;

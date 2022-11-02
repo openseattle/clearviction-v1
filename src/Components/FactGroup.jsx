@@ -1,7 +1,7 @@
 import { Grid } from "@mui/material";
 import FactExpandMoreCard from "./FactExpandMoreCard";
 
-function FactGroup({ facts }) {
+const FactGroup = ({ facts }) => {
     return (
         <Grid container>
             {facts.map(fact => (
@@ -17,6 +17,6 @@ function FactGroup({ facts }) {
             ))}
         </Grid>
     );
-}
+};
 
 export default FactGroup;

@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     },
     navText: {},
 }));
-function NavButton({ page, theme }) {
+const NavButton = ({ page, theme }) => {
     const { name, url, subpages } = page;
     const classes = useStyles(theme);
 
@@ -64,12 +64,7 @@ function NavButton({ page, theme }) {
                     keepMounted
                 >
                     {subpages.map((subpage, idx) => (
-                        <MenuItem
-                            key={idx}
-                            onClick={handleClose}
-                            component={Button}
-                            href={subpage.url}
-                        >
+                        <MenuItem key={idx} onClick={handleClose} component={Button} href={subpage.url}>
                             {subpage.name}
                         </MenuItem>
                     ))}
@@ -82,6 +77,6 @@ function NavButton({ page, theme }) {
             <Typography className={classes.navText}>{name}</Typography>
         </Button>
     );
-}
+};
 
 export default NavButton;

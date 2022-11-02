@@ -42,7 +42,7 @@ const styles = {
     },
 };
 
-export default function VerticalLinearStepper() {
+const VerticalLinearStepper = () => {
     const classes = useHomeStyles();
 
     const isLargeScreen = useMediaQuery("(min-width:600px)");
@@ -86,4 +86,6 @@ export default function VerticalLinearStepper() {
             ))}
         </>
     );
-}
+};
+
+export default VerticalLinearStepper;

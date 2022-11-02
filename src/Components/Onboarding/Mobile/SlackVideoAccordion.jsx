@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-function SlackVideoAccordion() {
+const SlackVideoAccordion = () => {
     const classes = useStyles();
 
     const [expanded, setExpanded] = useState("1");
@@ -70,11 +70,7 @@ function SlackVideoAccordion() {
     return (
         <div className={classes.root}>
             {sections.map(elem => (
-                <Accordion
-                    expanded={expanded === elem.id}
-                    onChange={handleChange(elem.id)}
-                    key={elem.id}
-                >
+                <Accordion expanded={expanded === elem.id} onChange={handleChange(elem.id)} key={elem.id}>
                     <AccordionSummary
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1a-content"
@@ -84,19 +80,13 @@ function SlackVideoAccordion() {
                     </AccordionSummary>
                     <AccordionDetails content={classes.root}>
                         <div style={{ width: "100%", height: "100%" }}>
-                            <iframe
-                                title={elem.title}
-                                src={elem.video}
-                                height="300"
-                                width="100%"
-                                allow="autoplay"
-                            />
+                            <iframe title={elem.title} src={elem.video} height="300" width="100%" allow="autoplay" />
                         </div>
                     </AccordionDetails>
                 </Accordion>
             ))}
         </div>
     );
-}
+};
 
 export default SlackVideoAccordion;

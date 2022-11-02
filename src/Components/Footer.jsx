@@ -73,7 +73,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-function Footer() {
+const Footer = () => {
     const classes = useStyles();
     const { pathname } = useLocation();
 
@@ -88,14 +88,9 @@ function Footer() {
                             </Typography>
                             <List>
                                 <ListItem>
-                                    <Typography
-                                        className={classes.subHeader}
-                                        variant="body1"
-                                        style={{ maxWidth: 250 }}
-                                    >
-                                        Clearviction is reducing barriers faced by formerly
-                                        incarcerated individuals by streamlining the process of
-                                        vacating eligible convictions in Washington state.
+                                    <Typography className={classes.subHeader} variant="body1" style={{ maxWidth: 250 }}>
+                                        Clearviction is reducing barriers faced by formerly incarcerated individuals by
+                                        streamlining the process of vacating eligible convictions in Washington state.
                                     </Typography>
                                 </ListItem>
                             </List>
@@ -131,11 +126,7 @@ function Footer() {
                         </Grid>
 
                         <Grid item xs={12} sm={4} md={4}>
-                            <Typography
-                                className={classes.title}
-                                variant="h5"
-                                style={{ borderRadius: "solid" }}
-                            >
+                            <Typography className={classes.title} variant="h5" style={{ borderRadius: "solid" }}>
                                 Partnerships
                             </Typography>
                             <List>
@@ -159,6 +150,6 @@ function Footer() {
             </Box>
         )
     );
-}
+};
 
 export default Footer;

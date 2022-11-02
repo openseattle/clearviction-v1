@@ -30,7 +30,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export function TextWithCTAButton(props) {
+export const TextWithCTAButton = props => {
     const { text, buttonText, buttonLinkTo } = props;
     const classes = useStyles();
     return (
@@ -45,4 +45,4 @@ export function TextWithCTAButton(props) {
             </Container>
         </Box>
     );
-}
+};

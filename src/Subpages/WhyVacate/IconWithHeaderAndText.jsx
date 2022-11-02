@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export function IconWithHeaderAndText(props) {
+export const IconWithHeaderAndText = props => {
     const classes = useStyles();
     const { icon, header, text } = props;
     const textItems = text.map((t, idx) => (
@@ -39,4 +39,4 @@ export function IconWithHeaderAndText(props) {
             </Grid>
         </Grid>
     );
-}
+};

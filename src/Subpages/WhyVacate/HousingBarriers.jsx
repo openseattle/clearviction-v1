@@ -6,7 +6,7 @@ import privateHousing from "../../Assets/process.svg";
 import transitionalHousing from "../../Assets/dream.svg";
 import { TextWithImage } from "./TextWithImage";
 
-export function HousingBarriers() {
+export const HousingBarriers = () => {
     return (
         <Box>
             <Grid container spacing={1}>
@@ -50,4 +50,4 @@ export function HousingBarriers() {
             </Grid>
         </Box>
     );
-}
+};

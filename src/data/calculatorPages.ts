@@ -36,8 +36,7 @@ const data: Pages = {
             },
             {
                 type: BodyType.LINK,
-                linkText:
-                    "If you are not sure whether your conviction is a misdemeanor, request your record here",
+                linkText: "If you are not sure whether your conviction is a misdemeanor, request your record here",
                 href: "https://www.wsp.wa.gov/crime/criminal-history",
             },
         ],
@@ -1555,8 +1554,7 @@ const data: Pages = {
             },
             {
                 type: BodyType.LINK,
-                textBeforeLink:
-                    'Fill out a "Petition and Declaration for Order Vacating Conviction" form: ',
+                textBeforeLink: 'Fill out a "Petition and Declaration for Order Vacating Conviction" form: ',
                 linkText: "CrRLJ 09.0100",
                 href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
             },
