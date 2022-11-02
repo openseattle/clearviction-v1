@@ -6,16 +6,16 @@ import FactImageCard from "../Components/FactImageCard";
 
 import { useResourcesStyles } from "../Styles/useResourcesStyles";
 
-import teamBuilding from "./../Assets/team_building.svg";
-import cityBuildings from "./../Assets/city.svg";
-import time from "./../Assets/time.svg";
-import emails from "./../Assets/sending_emails.svg";
-import question from "./../Assets/question.svg";
-import dream from "./../Assets/dream.svg";
-import diversity from "./../Assets/diversity.svg";
-import processBuilding from "./../Assets/process.svg";
-import career from "./../Assets/career.svg";
-import graduation from "./../Assets/graduation.svg";
+import teamBuilding from "../Assets/team_building.svg";
+import cityBuildings from "../Assets/city.svg";
+import time from "../Assets/time.svg";
+import emails from "../Assets/sending_emails.svg";
+import question from "../Assets/question.svg";
+import dream from "../Assets/dream.svg";
+import diversity from "../Assets/diversity.svg";
+import processBuilding from "../Assets/process.svg";
+import career from "../Assets/career.svg";
+import graduation from "../Assets/graduation.svg";
 import FactSubList from "../Components/FactSubList";
 import {
     jobBoards,
@@ -25,9 +25,8 @@ import {
     studentAid,
     postIncarEduPrograms,
     otherEduAssistance,
-} from "../data/resourcesData";
+} from "../data/resourcesData.ts";
 import FactGroup from "../Components/FactGroup";
-import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
 const employmentFacts = [
     {
@@ -107,7 +106,6 @@ const educationFacts = [
 
 const WhyVacatePage = () => {
     const classes = useResourcesStyles();
-    const [documentTitle, setDocumentTitle] = useDocumentTitle("Resources - ");
 
     return (
         <>
@@ -131,7 +129,7 @@ const WhyVacatePage = () => {
 
             <Container
                 id="read-more"
-                className={classes.regularContainerStyle + " " + classes.centerText}
+                className={`${classes.regularContainerStyle} ${classes.centerText}`}
                 maxwidth="sm"
             >
                 <ResponsiveJumpButtonGroup
@@ -202,7 +200,7 @@ const WhyVacatePage = () => {
                 <Grid container spacing={3}>
                     {housingFacts.map(fact => (
                         <Grid key={fact.id} item xs={12} sm={6} md={6}>
-                            <FactImageCard fact={fact} key={fact.id} id={fact.id} height={"52em"} />
+                            <FactImageCard fact={fact} key={fact.id} id={fact.id} height="52em" />
                         </Grid>
                     ))}
                 </Grid>

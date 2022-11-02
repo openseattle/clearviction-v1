@@ -1,10 +1,10 @@
-type TeamMember = {
+interface TeamMember {
     firstName: string;
     lastName: string;
     role: string;
     linkedIn?: string;
     profileImage?: string;
-};
+}
 
 const team: TeamMember[] = [
     {

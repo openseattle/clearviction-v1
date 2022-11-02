@@ -17,16 +17,17 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export const RedesignButtonSecondary = props => {
-    const classes = useStyles();
+    const { classes, children } = props;
+    const styleClasses = useStyles();
 
     return (
         <Button
-            className={`${classes.RedesignButtonSecondaryStyle} ${props.classes}`}
+            className={`${styleClasses.RedesignButtonSecondaryStyle} ${classes}`}
             role="button"
             variant="contained"
             {...props}
         >
-            {props.children}
+            {children}
         </Button>
     );
 };

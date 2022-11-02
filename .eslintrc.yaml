@@ -6,9 +6,10 @@ env:
 extends:
     - eslint:recommended
     - plugin:react/recommended
-    - standard-with-typescript
     - airbnb
     - airbnb/hooks
+    - standard-with-typescript
+    - plugin:prettier/recommended
 overrides:
     - files:
           - "*.jsx"
@@ -17,57 +18,40 @@ overrides:
           - "*.tsx"
 ignorePatterns:
     - "*/*-env.d.ts"
+    - "**/__tests__/**"
+    - "**/*.spec.js"
+    - "build/"
+settings:
+    import/resolver:
+        - typescript: "{}"
 parser: "@typescript-eslint/parser"
 parserOptions:
     ecmaFeatures:
-        jsx: true
+        jsx: false
     ecmaVersion: latest
     sourceType: module
     project: "./tsconfig.json"
 plugins:
     - react
     - "@typescript-eslint"
+    - unused-imports
+    - import
 rules:
-    semi:
+    unused-imports/no-unused-imports:
         - error
-        - always
-    "@typescript-eslint/semi":
-        - error
-        - always
-    quotes:
-        - error
-        - double
-    "@typescript-eslint/quotes":
-        - error
-        - double
     jsx-quotes:
         - error
         - prefer-double
-    indent:
+    no-shadow: "off"
+    "@typescript-eslint/no-shadow":
         - error
-        - 4
-        - SwitchCase: 1
-    "@typescript-eslint/indent":
-        - error
-        - 4
-    comma-dangle:
-        - error
-        - arrays: always
-          objects: always
-          imports: never
-          exports: never
-          functions: never
-    "@typescript-eslint/member-delimiter-style":
-        - error
-        - multiline:
-              delimiter: semi
-          singleline:
-              delimiter: semi
-              requireLast: true
     react/react-in-jsx-scope: "off"
-    array-bracket-spacing:
+    react/function-component-definition:
         - error
-        - always
+        - namedComponents: arrow-function
     react/prop-types: 1
+    react/no-array-index-key: 1
+    react/jsx-props-no-spreading: 1
+    import/prefer-default-export: 1
     react/no-unescaped-entities: 0
     camelcase: 1

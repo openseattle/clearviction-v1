@@ -1,9 +1,9 @@
-type publicHousingContact = {
+interface publicHousingContact {
     area: string;
     address: string;
     city: string;
     phone: string;
-};
+}
 const associations: publicHousingContact[] = [
     {
         area: "Anacortes",

@@ -12,13 +12,13 @@ import {
 } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { MenuSharp as MenuIcon, CloseSharp } from "@mui/icons-material";
-import { headerPages, PageId } from "../data/siteMap";
 import { useState } from "react";
+import { headerPages, PageId } from "../data/siteMap.ts";
 import NavButton from "../ui-kit/NavButton";
 import NavButtonMobile from "../ui-kit/NavButtonMobile";
 import LegalDisclaimer from "./LegalDisclaimer";
 import NavigationLogo from "./NavigationLogo";
-import SkipLink from "../ui-kit/SkipLink";
+import SkipLink from "../ui-kit/SkipLink.tsx";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 
 const useStyles = makeStyles(theme => ({

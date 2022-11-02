@@ -40,7 +40,7 @@ const eligibilityFacts = [
 
 const GetStartedPage = () => {
     const classes = useGetInvolvedStyles();
-    const [documentTitle, setDocumentTitle] = useDocumentTitle("Get Started - ");
+    useDocumentTitle("Get Started - ");
 
     return (
         <>
@@ -63,7 +63,7 @@ const GetStartedPage = () => {
             </RedesignHeroPanel>
             <Container
                 id="read-more"
-                className={classes.regularContainerStyle + " " + classes.centerText}
+                className={`${classes.regularContainerStyle} ${classes.centerText}`}
                 maxwidth="sm"
             >
                 <ResponsiveJumpButtonGroup
@@ -181,24 +181,20 @@ const GetStartedPage = () => {
                 <Grid container>
                     <Grid item xs={12} sm={12} md={4}>
                         <FactCard
-                            simpleCardContents={
-                                "The court does not believe that vacating your conviction will be in the interest of society"
-                            }
-                            isSimpleCard={true}
+                            simpleCardContents="The court does not believe that vacating your conviction will be in the interest of society"
+                            isSimpleCard
                         />
                     </Grid>
                     <Grid item xs={12} sm={12} md={4}>
                         <FactCard
-                            simpleCardContents={"There are inaccuracies in your court records and/or the application"}
-                            isSimpleCard={true}
+                            simpleCardContents="There are inaccuracies in your court records and/or the application"
+                            isSimpleCard
                         />
                     </Grid>
                     <Grid item xs={12} sm={12} md={4}>
                         <FactCard
-                            simpleCardContents={
-                                "You violated probation, have not paid off your fines or are otherwise not eligible to vacate that conviction"
-                            }
-                            isSimpleCard={true}
+                            simpleCardContents="You violated probation, have not paid off your fines or are otherwise not eligible to vacate that conviction"
+                            isSimpleCard
                         />
                     </Grid>
                 </Grid>

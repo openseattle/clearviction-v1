@@ -32,12 +32,12 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const PrimaryButton = props => {
+const PrimaryButton = ({ href, target, text }) => {
     const classes = useStyles();
 
     return (
-        <Button role="button" className={classes.button} href={props.href} target={props.target} variant="contained">
-            {props.text}
+        <Button role="button" className={classes.button} href={href} target={target} variant="contained">
+            {text}
         </Button>
     );
 };

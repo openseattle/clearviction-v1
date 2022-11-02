@@ -12,7 +12,7 @@ const TabPanel = props => {
     );
 };
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
     tabPanelStyle: {
         backgroundColor: "white",
         color: "black",

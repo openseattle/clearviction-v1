@@ -3,7 +3,7 @@ import { makeStyles } from "@mui/styles";
 import { ExpandMore } from "@mui/icons-material";
 import { useState } from "react";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
     rootStyle: {
         margin: 8,
     },

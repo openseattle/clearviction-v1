@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
-import { TextField, MenuItem, FormControl, FormGroup, FormLabel, Box } from "@mui/material";
-import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
+import { TextField, MenuItem, FormControl, FormGroup, FormLabel, Box, Typography } from "@mui/material";
 import { send } from "@emailjs/browser";
+import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import { useContactStyles } from "../Styles/useContactStyles";
-import { Typography } from "@mui/material";
 
 const ContactForm = () => {
     const classes = useContactStyles();
@@ -78,7 +77,7 @@ const ContactForm = () => {
      *
      */
     const validateEmail = email => {
-        const validEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        const validEmail = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
         if (validEmail.test(email)) {
             setEmailError({ errorStatus: false, errorMessage: "" });
         } else {
@@ -231,7 +230,7 @@ const ContactForm = () => {
                             aria-label="Your message"
                         />
                         <Box className={classes.buttonBoxStyle}>
-                            <RedesignButtonPrimary type={"submit"}>Send message</RedesignButtonPrimary>
+                            <RedesignButtonPrimary type="submit">Send message</RedesignButtonPrimary>
                         </Box>
                     </FormGroup>
                 </FormControl>

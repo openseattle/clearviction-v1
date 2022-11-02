@@ -6,7 +6,15 @@
  * See calculatorPagesTypes.ts for schema to identify the available page types and required fields.
  */
 
-import { Pages, BodyType, TooltipType, BUTTON_TEXT, SectionName, PageType } from "./calculatorPagesTypes";
+import {
+    Pages,
+    BodyType,
+    TooltipType,
+    BUTTON_TEXT,
+    SectionName,
+    PageType,
+    // eslint-disable-next-line import/extensions
+} from "./calculatorPagesTypes";
 
 const CALC_PREFIX = "/calculator";
 const disclaimer =
@@ -35,7 +43,7 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.NEXT,
-                href: CALC_PREFIX + "/landing-1",
+                href: `${CALC_PREFIX}/landing-1`,
             },
         ],
     },
@@ -81,7 +89,7 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.START,
-                href: CALC_PREFIX + "/landing-2",
+                href: `${CALC_PREFIX}/landing-2`,
             },
         ],
     },
@@ -113,11 +121,11 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/landing-3",
+                href: `${CALC_PREFIX}/landing-3`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/landing-ineligible-0",
+                href: `${CALC_PREFIX}/landing-ineligible-0`,
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -128,19 +136,19 @@ const data: Pages = {
         buttons: [
             {
                 text: "Possession of marijuana",
-                href: CALC_PREFIX + "/mar-0",
+                href: `${CALC_PREFIX}/mar-0`,
             },
             {
                 text: "Prostitution",
-                href: CALC_PREFIX + "/pro-0",
+                href: `${CALC_PREFIX}/pro-0`,
             },
             {
                 text: "Violation of a fishing regulation",
-                href: CALC_PREFIX + "/fsh-0",
+                href: `${CALC_PREFIX}/fsh-0`,
             },
             {
                 text: "None of the above",
-                href: CALC_PREFIX + "/main-0",
+                href: `${CALC_PREFIX}/main-0`,
                 color: "green",
             },
         ],
@@ -186,7 +194,7 @@ const data: Pages = {
             {
                 text: BUTTON_TEXT.BLAKE,
                 // href: CALC_PREFIX + "/mar-1",
-                href: CALC_PREFIX + "/main-0",
+                href: `${CALC_PREFIX}/main-0`,
             },
         ],
     },
@@ -372,7 +380,7 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.CONTINUE,
-                href: CALC_PREFIX + "/main-1",
+                href: `${CALC_PREFIX}/main-1`,
             },
         ],
     },
@@ -396,11 +404,11 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/main-ineligible-0",
+                href: `${CALC_PREFIX}/main-ineligible-0`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/main-2",
+                href: `${CALC_PREFIX}/main-2`,
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -458,11 +466,11 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/main-ineligible-1",
+                href: `${CALC_PREFIX}/main-ineligible-1`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/main-5",
+                href: `${CALC_PREFIX}/main-5`,
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -520,11 +528,11 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/main-4",
+                href: `${CALC_PREFIX}/main-4`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/main-8",
+                href: `${CALC_PREFIX}/main-8`,
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -538,11 +546,11 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/main-ineligible-3",
+                href: `${CALC_PREFIX}/main-ineligible-3`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/main-7",
+                href: `${CALC_PREFIX}/main-7`,
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -574,11 +582,11 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/main-ineligible-2",
+                href: `${CALC_PREFIX}/main-ineligible-2`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/main-3",
+                href: `${CALC_PREFIX}/main-3`,
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -652,11 +660,11 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/main-8",
+                href: `${CALC_PREFIX}/main-8`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/main-ineligible-4",
+                href: `${CALC_PREFIX}/main-ineligible-4`,
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -700,11 +708,11 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/main-9",
+                href: `${CALC_PREFIX}/main-9`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/qac-0",
+                href: `${CALC_PREFIX}/qac-0`,
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -718,11 +726,11 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/main-ineligible-5",
+                href: `${CALC_PREFIX}/main-ineligible-5`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/main-10",
+                href: `${CALC_PREFIX}/main-10`,
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -758,11 +766,11 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/qac-0",
+                href: `${CALC_PREFIX}/qac-0`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/main-ineligible-6",
+                href: `${CALC_PREFIX}/main-ineligible-6`,
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -813,7 +821,7 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.CONTINUE,
-                href: CALC_PREFIX + "/fsh-1",
+                href: `${CALC_PREFIX}/fsh-1`,
             },
         ],
     },
@@ -829,11 +837,11 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/fsh-2",
+                href: `${CALC_PREFIX}/fsh-2`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/fsh-to-main",
+                href: `${CALC_PREFIX}/fsh-to-main`,
             },
         ],
     },
@@ -843,11 +851,11 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/fsh-3",
+                href: `${CALC_PREFIX}/fsh-3`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/fsh-to-main",
+                href: `${CALC_PREFIX}/fsh-to-main`,
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -858,11 +866,11 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/fsh-4",
+                href: `${CALC_PREFIX}/fsh-4`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/fsh-to-main",
+                href: `${CALC_PREFIX}/fsh-to-main`,
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -873,11 +881,11 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/fsh-eligible",
+                href: `${CALC_PREFIX}/fsh-eligible`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/fsh-to-main",
+                href: `${CALC_PREFIX}/fsh-to-main`,
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -956,7 +964,7 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.CONTINUE,
-                href: CALC_PREFIX + "/main-0",
+                href: `${CALC_PREFIX}/main-0`,
             },
         ],
     },
@@ -980,7 +988,7 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.CONTINUE,
-                href: CALC_PREFIX + "/pro-1",
+                href: `${CALC_PREFIX}/pro-1`,
             },
         ],
     },
@@ -1002,11 +1010,11 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/pro-5",
+                href: `${CALC_PREFIX}/pro-5`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/pro-to-main",
+                href: `${CALC_PREFIX}/pro-to-main`,
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -1017,11 +1025,11 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/pro-ineligible-2",
+                href: `${CALC_PREFIX}/pro-ineligible-2`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/pro-4",
+                href: `${CALC_PREFIX}/pro-4`,
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -1032,11 +1040,11 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/pro-ineligible-0",
+                href: `${CALC_PREFIX}/pro-ineligible-0`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/pro-eligible",
+                href: `${CALC_PREFIX}/pro-eligible`,
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -1053,11 +1061,11 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/pro-6",
+                href: `${CALC_PREFIX}/pro-6`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/pro-to-main",
+                href: `${CALC_PREFIX}/pro-to-main`,
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -1074,15 +1082,15 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/pro-2",
+                href: `${CALC_PREFIX}/pro-2`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/pro-ineligible-1",
+                href: `${CALC_PREFIX}/pro-ineligible-1`,
             },
             {
                 text: BUTTON_TEXT.NA,
-                href: CALC_PREFIX + "/pro-2",
+                href: `${CALC_PREFIX}/pro-2`,
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -1244,7 +1252,7 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.CONTINUE_JOURNEY,
-                href: CALC_PREFIX + "/main-0",
+                href: `${CALC_PREFIX}/main-0`,
             },
         ],
     },
@@ -1257,7 +1265,7 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.CONTINUE,
-                href: CALC_PREFIX + "/qac-1",
+                href: `${CALC_PREFIX}/qac-1`,
             },
         ],
     },
@@ -1270,11 +1278,11 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/qac-ineligible-0",
+                href: `${CALC_PREFIX}/qac-ineligible-0`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/qac-2",
+                href: `${CALC_PREFIX}/qac-2`,
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -1288,11 +1296,11 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/qac-ineligible-1",
+                href: `${CALC_PREFIX}/qac-ineligible-1`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/qac-3",
+                href: `${CALC_PREFIX}/qac-3`,
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -1317,11 +1325,11 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/qac-ineligible-3",
+                href: `${CALC_PREFIX}/qac-ineligible-3`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/qac-4",
+                href: `${CALC_PREFIX}/qac-4`,
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -1335,11 +1343,11 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/qac-ineligible-4",
+                href: `${CALC_PREFIX}/qac-ineligible-4`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/too-0",
+                href: `${CALC_PREFIX}/too-0`,
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -1482,7 +1490,7 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.CONTINUE,
-                href: CALC_PREFIX + "/too-1",
+                href: `${CALC_PREFIX}/too-1`,
             },
         ],
     },
@@ -1495,11 +1503,11 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/too-2",
+                href: `${CALC_PREFIX}/too-2`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/too-ineligible-0",
+                href: `${CALC_PREFIX}/too-ineligible-0`,
             },
         ],
         tooltip: TooltipType.NOT_SURE,
@@ -1520,11 +1528,11 @@ const data: Pages = {
         buttons: [
             {
                 text: BUTTON_TEXT.YES,
-                href: CALC_PREFIX + "/too-eligible-0",
+                href: `${CALC_PREFIX}/too-eligible-0`,
             },
             {
                 text: BUTTON_TEXT.NO,
-                href: CALC_PREFIX + "/too-ineligible-1",
+                href: `${CALC_PREFIX}/too-ineligible-1`,
             },
         ],
         tooltip: TooltipType.NOT_SURE,

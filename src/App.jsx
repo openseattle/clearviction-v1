@@ -1,8 +1,8 @@
 import "./App.css";
 import { CssBaseline, Box } from "@mui/material";
 import { ThemeProvider, StyledEngineProvider } from "@mui/material/styles";
-import Theme from "./Components/Theme";
 import { Switch, Route, Redirect, useLocation } from "react-router-dom";
+import Theme from "./Components/Theme.tsx";
 import HomePage from "./Pages/HomePage";
 import Navigation from "./Components/Navigation";
 import CalculatorPage from "./Pages/CalculatorPage";
@@ -20,7 +20,7 @@ import OnboardingMod2 from "./Pages/Onboarding/OnboardingMod2";
 import OnboardingMod3 from "./Pages/Onboarding/OnboardingMod3";
 import OnboardingMod4 from "./Pages/Onboarding/OnboardingMod4";
 
-function App() {
+const App = () => {
     const location = useLocation();
 
     return (
@@ -94,6 +94,6 @@ function App() {
             </StyledEngineProvider>
         </div>
     );
-}
+};
 
 export default App;

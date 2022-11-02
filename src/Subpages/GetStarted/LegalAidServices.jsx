@@ -1,6 +1,6 @@
 import { Grid, Link, List, ListItem } from "@mui/material";
 import FactExpandMoreCard from "../../Components/FactExpandMoreCard";
-import { adultLegalAid, juvenileLegalAid, proSePatronsLegalAid } from "../../data/resourcesData";
+import { adultLegalAid, juvenileLegalAid, proSePatronsLegalAid } from "../../data/resourcesData.ts";
 
 const aidFacts = [
     {
@@ -69,15 +69,13 @@ const aidFacts = [
 ];
 const LegalAidServices = () => {
     return (
-        <>
-            <Grid container>
-                {aidFacts.map(fact => (
-                    <Grid key={fact.id} item xs={12} sm={6} md={4}>
-                        <FactExpandMoreCard summary={fact.summary} content={fact.content} />
-                    </Grid>
-                ))}
-            </Grid>
-        </>
+        <Grid container>
+            {aidFacts.map(fact => (
+                <Grid key={fact.id} item xs={12} sm={6} md={4}>
+                    <FactExpandMoreCard summary={fact.summary} content={fact.content} />
+                </Grid>
+            ))}
+        </Grid>
     );
 };
 

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import { makeStyles } from "@mui/styles";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -22,10 +22,10 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const TutorialAccordion = props => {
+const TutorialAccordion = () => {
     const classes = useStyles();
 
-    const [expanded, setExpanded] = React.useState("1");
+    const [expanded, setExpanded] = useState("1");
 
     const handleChange = panel => (event, isExpanded) => {
         setExpanded(isExpanded ? panel : false);
@@ -239,7 +239,7 @@ const TutorialAccordion = props => {
                             <li>In the new line created:</li>
                             <ul>
                                 <li>
-                                    Change <i>And</i> to <i>Or</i>.
+                                    Change <i>And</i> to<i>Or</i>.
                                 </li>
                                 <li>
                                     Select <i>Creator</i>.

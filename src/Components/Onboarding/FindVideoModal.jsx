@@ -1,8 +1,9 @@
-export default function FindVideoModal() {
+const FindVideoModal = () => {
     const find = "https://drive.google.com/file/d/1TG5iz3ioxMFxNsS1YO8MoKaY9uD-NHjm/preview";
 
     return (
         <div
+            // eslint-disable-next-line react/no-unknown-property
             container
             style={{
                 position: "relative",
@@ -16,9 +17,17 @@ export default function FindVideoModal() {
             <iframe
                 title="miro"
                 src={find}
-                style={{ alignSelf: "center", width: "100%", maxWidth: "900px", height: "100%", maxHeight: "600px" }}
+                style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    maxWidth: "900px",
+                    height: "100%",
+                    maxHeight: "600px",
+                }}
                 allow="autoplay"
-            ></iframe>
+            />
         </div>
     );
-}
+};
+
+export default FindVideoModal;

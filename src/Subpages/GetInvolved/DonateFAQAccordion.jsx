@@ -30,13 +30,11 @@ const DonateFAQAccordion = () => {
             summary: "Is it safe and secure for me to donate online?",
             summaryID: "safe-button",
             details: (
-                <>
-                    <Typography className={classes.contentTextStyle}>
-                        Yes! We use Venmo for all our online donations. Venmo is PayPal’s subsidiary and uses bank-level
-                        encryption to keep your data safe. The app's security features include data encryption, purchase
-                        verification, multifactor authentication, and fraud protection.
-                    </Typography>
-                </>
+                <Typography className={classes.contentTextStyle}>
+                    Yes! We use Venmo for all our online donations. Venmo is PayPal’s subsidiary and uses bank-level
+                    encryption to keep your data safe. The app's security features include data encryption, purchase
+                    verification, multifactor authentication, and fraud protection.
+                </Typography>
             ),
             detailsID: "safe-paragraph",
         },
@@ -81,13 +79,11 @@ const DonateFAQAccordion = () => {
             summary: "How long does the process take?",
             summaryID: "how-long-button",
             details: (
-                <>
-                    <Typography className={classes.contentTextStyle}>
-                        To vacate your Washington conviction, the process takes on average three to four months,
-                        depending on your individual circumstances, the court’s caseload at the time, and whether there
-                        are any objections to vacating your conviction.
-                    </Typography>
-                </>
+                <Typography className={classes.contentTextStyle}>
+                    To vacate your Washington conviction, the process takes on average three to four months, depending
+                    on your individual circumstances, the court’s caseload at the time, and whether there are any
+                    objections to vacating your conviction.
+                </Typography>
             ),
             detailsID: "how-long-paragraph",
         },
@@ -95,15 +91,13 @@ const DonateFAQAccordion = () => {
             summary: " Who should I contact if I have more questions?",
             summaryID: "contact-button",
             details: (
-                <>
-                    <Typography className={classes.contentTextStyle}>
-                        You can send us an email at{" "}
-                        <Link href="mailto:contact@clearviction.org" underline="hover">
-                            contact@clearviction.org
-                        </Link>{" "}
-                        and we will get back to you within 24 hours.
-                    </Typography>
-                </>
+                <Typography className={classes.contentTextStyle}>
+                    You can send us an email at{" "}
+                    <Link href="mailto:contact@clearviction.org" underline="hover">
+                        contact@clearviction.org
+                    </Link>{" "}
+                    and we will get back to you within 24 hours.
+                </Typography>
             ),
             detailsID: "contact-paragraph",
         },

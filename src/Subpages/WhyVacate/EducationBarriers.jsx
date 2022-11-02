@@ -1,9 +1,10 @@
 import { Container, Typography, Box, List } from "@mui/material";
-import { WhyVacateHousingStyles } from "../../Styles/WhyVacateHousingStyles";
+import { WhyVacateHousingStyles } from "../../Styles/WhyVacateHousingStyles.ts";
 import ListItemMobileSnap from "../../ui-kit/ListItemMobileSnap";
 import edu from "../../Assets/education.svg";
 import lic from "../../Assets/career.svg";
 
+// eslint-disable-next-line import/prefer-default-export
 export const EducationBarriers = () => {
     const classes = WhyVacateHousingStyles();
     return (
@@ -13,7 +14,7 @@ export const EducationBarriers = () => {
                     <ListItemMobileSnap
                         edu
                         image={<Box component="img" src={lic} className={classes.rootsImage} />}
-                        header={"Occupational Licenses"}
+                        header="Occupational Licenses"
                         text={
                             <Typography className={classes.rootsBodyText} variant="body1">
                                 Some states’ laws contain an automatic disqualification prohibiting a person with a
@@ -26,7 +27,7 @@ export const EducationBarriers = () => {
                     <ListItemMobileSnap
                         edu
                         image={<Box component="img" src={edu} className={classes.rootsImage} />}
-                        header={"College Acceptance"}
+                        header="College Acceptance"
                         text={
                             <Typography className={classes.rootsBodyText} variant="body1">
                                 Colleges run background checks on applicants. Whether you will be accepted depends on

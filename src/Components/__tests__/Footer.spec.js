@@ -1,9 +1,9 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import Footer from "../Footer";
 import { ThemeProvider } from "@mui/material/styles";
-import Theme from "../../Components/Theme";
+import Footer from "../Footer";
+import Theme from "../Theme.tsx";
 
 describe("<Footer />", () => {
     it("should render the footer with expected elements", () => {

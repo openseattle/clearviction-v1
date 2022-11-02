@@ -12,7 +12,7 @@ const contentStyle = {
     lineHeight: "22px",
 };
 
-export default function SlackModal(props) {
+const SlackModal = ({ handleSlackClose }) => {
     const classes = useButtonStyles();
     const [sectionId, setSectionId] = useState(1);
     const [activeTab, setActiveTab] = useState(1);
@@ -63,6 +63,7 @@ export default function SlackModal(props) {
             <Grid item xs={3}>
                 {sections.map(section => (
                     <button
+                        type="button"
                         key={section.id}
                         onClick={() => showSection(section.id)}
                         style={activeTab === section.id ? activeTabStyle : tabStyle}
@@ -292,7 +293,7 @@ export default function SlackModal(props) {
                     </div>
                 )}
                 <Button
-                    onClick={props.handleSlackClose}
+                    onClick={handleSlackClose}
                     className={classes.button}
                     style={{ position: "absolute", left: "40%", bottom: "15px" }}
                 >
@@ -301,4 +302,6 @@ export default function SlackModal(props) {
             </Grid>
         </Grid>
     );
-}
+};
+
+export default SlackModal;

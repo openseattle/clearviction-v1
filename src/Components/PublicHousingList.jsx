@@ -1,6 +1,5 @@
 import { List, ListItem, Grid, Typography, ListItemText } from "@mui/material";
-import { HomeWorkOutlined } from "@mui/icons-material";
-import { Call } from "@mui/icons-material";
+import { HomeWorkOutlined, Call } from "@mui/icons-material";
 import { useResourcesStyles } from "../Styles/useResourcesStyles";
 import { ListItemLink } from "../ui-kit/ListItemLink";
 
@@ -22,7 +21,7 @@ const PublicHousingList = ({ publicAssociations }) => {
                                     href={`https://www.google.com/maps/search/?api=1&query=${association.area}+${association.address}+${association.city}`}
                                 >
                                     <HomeWorkOutlined className={classes.shelterIcon} />
-                                    <ListItemText primary={association.address + " " + association.city} />
+                                    <ListItemText primary={`${association.address} ${association.city}`} />
                                 </ListItemLink>
                             </List>
                         </Grid>

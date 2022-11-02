@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { makeStyles } from "@mui/styles";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const SlackVideoAccordion = props => {
+const SlackVideoAccordion = () => {
     const classes = useStyles();
 
     const [expanded, setExpanded] = useState("1");
@@ -80,13 +80,7 @@ const SlackVideoAccordion = props => {
                     </AccordionSummary>
                     <AccordionDetails content={classes.root}>
                         <div style={{ width: "100%", height: "100%" }}>
-                            <iframe
-                                title={elem.title}
-                                src={elem.video}
-                                height="300"
-                                width="100%"
-                                allow="autoplay"
-                            ></iframe>
+                            <iframe title={elem.title} src={elem.video} height="300" width="100%" allow="autoplay" />
                         </div>
                     </AccordionDetails>
                 </Accordion>

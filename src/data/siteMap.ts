@@ -8,12 +8,12 @@ enum PageId {
     About = "ABOUT",
 }
 
-type Page = {
+interface Page {
     name: string;
     url: string;
     key: PageId;
     subpages?: Page[];
-};
+}
 
 const headerPages: Page[] = [
     { name: "Home", url: "/", key: PageId.Home },

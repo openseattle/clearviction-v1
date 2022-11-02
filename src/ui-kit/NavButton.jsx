@@ -48,7 +48,7 @@ const NavButton = ({ page, theme }) => {
                 </Button>
 
                 <Menu
-                    id={"subpages menu"}
+                    id="subpages menu"
                     getContentAnchorEl={null}
                     anchorEl={anchorE1}
                     anchorOrigin={{
@@ -71,13 +71,12 @@ const NavButton = ({ page, theme }) => {
                 </Menu>
             </>
         );
-    } else {
-        return (
-            <Button className={classes.navButtonStyle} href={url}>
-                <Typography className={classes.navText}>{name}</Typography>
-            </Button>
-        );
     }
+    return (
+        <Button className={classes.navButtonStyle} href={url}>
+            <Typography className={classes.navText}>{name}</Typography>
+        </Button>
+    );
 };
 
 export default NavButton;

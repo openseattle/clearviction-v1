@@ -15,15 +15,13 @@ import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
 
 const GetInvolvedPage = () => {
     const classes = useGetInvolvedStyles();
-    const [documentTitle, setDocumentTitle] = useDocumentTitle("Get Involved - ");
+    useDocumentTitle("Get Involved - ");
 
     return (
         <>
             <RedesignHeroPanel
                 title="Get Involved"
-                subtitle={
-                    "There are many ways to participate with the Clearviction team, and we appreciate all of them!"
-                }
+                subtitle="There are many ways to participate with the Clearviction team, and we appreciate all of them!"
             >
                 <Grid container>
                     <Grid item xs={12} sm={12} md={4}>

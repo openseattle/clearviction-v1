@@ -4,29 +4,29 @@ import { MainBranchTitleStyles } from "./MainBranchTitleStyles";
 import { BackButton } from "../../ui-kit/BackButton";
 import ProgressBar from "../../Components/ProgressBar";
 
-const MainBranchTitle = props => {
+const MainBranchTitle = ({ progressBar, backButton, header, body, buttonText, buttonHref }) => {
     const classes = MainBranchTitleStyles();
     return (
         <Grid container className={classes.grid}>
-            {props.progressBar && <ProgressBar currentSectionName={props.progressBar.currentSectionName} />}
+            {progressBar && <ProgressBar currentSectionName={progressBar.currentSectionName} />}
 
-            {props.backButton && (
+            {backButton && (
                 <Grid container className={classes.backButton}>
                     <BackButton />
                 </Grid>
             )}
 
             <Typography variant="h4" component="h1" className={classes.header}>
-                {props.header}
+                {header}
             </Typography>
 
-            {props.body &&
-                props.body.map(bodyElement => (
+            {body &&
+                body.map(bodyElement => (
                     <Typography variant="body1" className={classes.body}>
                         {bodyElement.text}
                     </Typography>
                 ))}
-            <PrimaryButton className={classes.button} text={props.buttonText} href={props.buttonHref} />
+            <PrimaryButton className={classes.button} text={buttonText} href={buttonHref} />
         </Grid>
     );
 };

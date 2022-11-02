@@ -1,9 +1,10 @@
 import { Container, Typography, Box, List } from "@mui/material";
-import { WhyVacateHousingStyles } from "../../Styles/WhyVacateHousingStyles";
+import { WhyVacateHousingStyles } from "../../Styles/WhyVacateHousingStyles.ts";
 import ListItemMobileSnap from "../../ui-kit/ListItemMobileSnap";
 import snap from "../../Assets/chicken.svg";
 import tanf from "../../Assets/family.svg";
 
+// eslint-disable-next-line import/prefer-default-export
 export const GovBarriers = () => {
     const classes = WhyVacateHousingStyles();
     return (
@@ -13,7 +14,7 @@ export const GovBarriers = () => {
                     <ListItemMobileSnap
                         edu
                         image={<Box component="img" src={tanf} className={classes.roleImage} />}
-                        header={"Temporary Assistance for Needy Families"}
+                        header="Temporary Assistance for Needy Families"
                         text={
                             <Typography className={classes.rootsBodyText} variant="body1">
                                 If you are a Washington state resident who is responsible for the care of a child or are
@@ -25,7 +26,7 @@ export const GovBarriers = () => {
                     <ListItemMobileSnap
                         edu
                         image={<Box component="img" src={snap} className={classes.roleImage} />}
-                        header={"Supplemental Nutrition Assistance Program"}
+                        header="Supplemental Nutrition Assistance Program"
                         text={
                             <Typography className={classes.rootsBodyText} variant="body1">
                                 SNAP helps low income people by providing Electronic Benefits Card (EBT Card) to buy
