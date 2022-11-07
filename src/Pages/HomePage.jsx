@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography, Button } from "@mui/material";
 import { trackPageview } from "../trackingUtils";
 import city from "../Assets/city.svg";
 import checklist from "../Assets/checklist.svg";
@@ -37,14 +37,14 @@ const HomePage = () => {
                                 conviction for free in less than 10 minutes!
                             </Typography>
                             <Box paddingTop={12}>
-                                <RedesignButtonSecondary
+                                <Button
+                                    variant="contained"
+                                    color="secondary"
                                     href="/calculator/landing-0"
-                                    sx={{
-                                        width: "100%",
-                                    }}
+                                    fullWidth={true}
                                 >
                                     Access Calculator
-                                </RedesignButtonSecondary>
+                                </Button>
                             </Box>
                         </Grid>
                         <Grid item xs={12} sm={6}>
@@ -147,7 +147,10 @@ const HomePage = () => {
                             <Typography variant="h3" className={classes.headingStyle}>
                                 Help us improve the calculator by participating in research
                             </Typography>
-                            <RedesignButtonSecondary
+                            <Button
+                                fullWidth={true}
+                                variant="contained"
+                                color="secondary"
                                 href="https://docs.google.com/forms/d/1KXmPrwzHeE8_EEL88RFkjOFP4S1A52Ode1vV6SJijao/viewform?edit_requested=true"
                                 sx={theme => ({
                                     "&:hover": {
@@ -156,7 +159,7 @@ const HomePage = () => {
                                 })}
                             >
                                 Learn more
-                            </RedesignButtonSecondary>
+                            </Button>
                         </Grid>
                         <Grid item xs={12} sm={6} md={4}>
                             <img src={checklistTwo} className={classes.iconStyle} alt="" />

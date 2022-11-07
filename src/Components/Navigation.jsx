@@ -84,9 +84,9 @@ const Navigation = () => {
                                     page.key !== PageId.AccessCalculator ? <NavButton key={idx} page={page} /> : null
                                 )}
                             </ButtonGroup>
-                            <RedesignButtonSecondary href="/calculator/landing-0">
+                            <Button variant="contained" color="secondary" href="/calculator/landing-0">
                                 Access Calculator
-                            </RedesignButtonSecondary>
+                            </Button>
                         </Box>
                         {/* mobile menu */}
 
