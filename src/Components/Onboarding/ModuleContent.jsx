@@ -36,6 +36,7 @@ const ModuleContent = ({ content }) => {
         title,
         subheading,
         paragraph1,
+        paragraph1B,
         paragraph2,
         paragraph3,
         paragraph4,
@@ -119,6 +120,7 @@ const ModuleContent = ({ content }) => {
                     ) : (
                         ""
                     )}
+                    {paragraph1B ? <>{paragraph1B}</> : ""}
                 </Typography>
             ) : null}
 
@@ -140,7 +142,7 @@ const ModuleContent = ({ content }) => {
             {paragraphBullets ? (
                 <ul>
                     {paragraphBullets.map((bullet, idx) => (
-                        <li key={idx} style={{ fontSize: "20px", color: "#2b2929" }}>
+                        <li key={idx} className={classes.listElement}>
                             {bullet}
                         </li>
                     ))}
