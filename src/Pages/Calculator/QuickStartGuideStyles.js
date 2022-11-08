@@ -1,4 +1,4 @@
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 
 export const QuickStartGuideStyles = makeStyles(theme => ({
     grid: {
@@ -33,7 +33,7 @@ export const QuickStartGuideStyles = makeStyles(theme => ({
     },
     list: {
         fontSize: "18px",
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             fontSize: "14px",
         },
     },

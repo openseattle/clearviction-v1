@@ -9,8 +9,8 @@ const data = {
         },
         {
             header: "Why should I consider vacating my conviction?",
-            body1: `If you are convicted of a crime, your criminal record will continue to show that conviction in background checks. Having a criminal record might negatively affect your housing, employment, and educational opportunities.`,
-            body2: ` If you are experiencing this, vacating your conviction removes that crime from background checks, and you can say legally that you were never convicted of that crime. This can help you get access to housing, education, employment, volunteering opportunities, and more.`,
+            body1: "If you are convicted of a crime, your criminal record will continue to show that conviction in background checks. Having a criminal record might negatively affect your housing, employment, and educational opportunities.",
+            body2: " If you are experiencing this, vacating your conviction removes that crime from background checks, and you can say legally that you were never convicted of that crime. This can help you get access to housing, education, employment, volunteering opportunities, and more.",
         },
         {
             header: "How do I know if my conviction is eligible to vacate?",

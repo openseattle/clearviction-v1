@@ -10,9 +10,9 @@ import circleCheck from "../../Assets/Onboarding/circleCheck.png";
 
 import { useModuleCardStyles } from "../../Styles/Onboarding/useModuleCardStyles";
 
-function ModuleCard(props) {
+const ModuleCard = ({ module: moduleProp }) => {
     const classes = useModuleCardStyles();
-    const { number, link, text, subheading } = props.module;
+    const { number, link, text, subheading } = moduleProp;
 
     return (
         <div className={classes.moduleCard}>
@@ -39,7 +39,13 @@ function ModuleCard(props) {
                         {localStorage.getItem(link) ? (
                             <div className={classes.mobileSuccessButton}>
                                 <img className={classes.checkMark} src={circleCheck} alt="" />
-                                <Typography style={{ fontSize: "17px", marginLeft: "1rem", fontWeight: "bold" }}>
+                                <Typography
+                                    style={{
+                                        fontSize: "17px",
+                                        marginLeft: "1rem",
+                                        fontWeight: "bold",
+                                    }}
+                                >
                                     completed
                                 </Typography>
                             </div>
@@ -55,6 +61,6 @@ function ModuleCard(props) {
             </Link>
         </div>
     );
-}
+};
 
 export default ModuleCard;

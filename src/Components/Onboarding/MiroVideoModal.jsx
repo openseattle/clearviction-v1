@@ -1,13 +1,9 @@
-// styles
-// import { useModalStyles } from '../../Styles/Onboarding/useModalStyles';
-
-export default function MiroVideoModal() {
-    // const classes = useModalStyles();
-
+const MiroVideoModal = () => {
     const miro = "https://drive.google.com/file/d/1dPIDPah9GbxFhOwi25t_x8YgvPU_33LZ/preview";
 
     return (
         <div
+            // eslint-disable-next-line react/no-unknown-property
             container
             style={{
                 position: "relative",
@@ -21,9 +17,17 @@ export default function MiroVideoModal() {
             <iframe
                 title="miro"
                 src={miro}
-                style={{ alignSelf: "center", width: "100%", maxWidth: "900px", height: "100%", maxHeight: "600px" }}
+                style={{
+                    alignSelf: "center",
+                    width: "100%",
+                    maxWidth: "900px",
+                    height: "100%",
+                    maxHeight: "600px",
+                }}
                 allow="autoplay"
-            ></iframe>
+            />
         </div>
     );
-}
+};
+
+export default MiroVideoModal;

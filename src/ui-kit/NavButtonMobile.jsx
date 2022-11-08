@@ -25,13 +25,14 @@ const NavButtonMobile = ({ page, classes }) => {
                         component={Button}
                         onClick={handleExpandClick}
                         aria-expanded={expandSubMenu}
-                        aria-label={"show more"}
+                        aria-label="show more"
                     >
                         <Typography className={classes.menuButton}>{page.name}</Typography>
                         <ExpandMore className={classes.expandIconStyle} fontSize="medium" />
                     </ListItem>
                     <Collapse in={expandSubMenu} timeout="auto" unmountOnExit>
                         {page.subpages.map((subpage, idx) => (
+                            // eslint-disable-next-line react/no-array-index-key
                             <Button key={idx} href={subpage.url} fullwidth>
                                 <Typography className={classes.subMenuButton}>{subpage.name}</Typography>
                             </Button>

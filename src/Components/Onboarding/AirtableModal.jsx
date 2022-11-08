@@ -20,7 +20,7 @@ const linkStyle = {
     color: "#237BCD",
 };
 
-export default function AirtableModal(props) {
+const AirtableModal = ({ handleAirtableClose }) => {
     const classes = useButtonStyles();
     const [sectionId, setSectionId] = useState(1);
     const [activeTab, setActiveTab] = useState(1);
@@ -71,6 +71,7 @@ export default function AirtableModal(props) {
             <Grid item xs={3}>
                 {sections.map(section => (
                     <button
+                        type="button"
                         key={section.id}
                         onClick={() => showSection(section.id)}
                         style={activeTab === section.id ? activeTabStyle : tabStyle}
@@ -252,7 +253,7 @@ export default function AirtableModal(props) {
                             <li>In the new line created:</li>
                             <ul>
                                 <li>
-                                    Change <i>And</i> to <i>Or</i>.
+                                    Change <i>And</i> to<i>Or</i>.
                                 </li>
                                 <li>
                                     Select <i>Creator</i>.
@@ -320,7 +321,7 @@ export default function AirtableModal(props) {
                     </div>
                 )}
                 <Button
-                    onClick={props.handleAirtableClose}
+                    onClick={handleAirtableClose}
                     className={classes.button}
                     style={{ position: "absolute", left: "40%", bottom: "15px" }}
                 >
@@ -329,4 +330,6 @@ export default function AirtableModal(props) {
             </Grid>
         </Grid>
     );
-}
+};
+
+export default AirtableModal;

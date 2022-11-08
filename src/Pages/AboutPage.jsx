@@ -13,7 +13,7 @@ import { ExternalLink } from "../ui-kit/ExternalLink";
 
 const AboutPage = () => {
     const classes = useAboutStyles();
-    const [documentTitle, setDocumentTitle] = useDocumentTitle("About Us - ");
+    useDocumentTitle("About Us - ");
 
     return (
         <>
@@ -30,7 +30,7 @@ const AboutPage = () => {
                             </Typography>
                         </Grid>
                         <Grid item xs={12} sm={6} md={6}>
-                            <img src={map} className={classes.iconStyle + " " + classes.centerText} alt=""></img>
+                            <img src={map} className={`${classes.iconStyle} ${classes.centerText}`} alt="" />
                         </Grid>
                     </Grid>
                 </Container>
@@ -71,7 +71,7 @@ const AboutPage = () => {
                             most people to navigate:
                         </Typography>
 
-                        <Grid container className={classes.gridStyle + " " + classes.centerText}>
+                        <Grid container className={`${classes.gridStyle} ${classes.centerText}`}>
                             <Grid item md={4} className={classes.gridItemStyle}>
                                 <HourglassEmpty className={classes.theProblemIcon} />
                                 <Typography variant="subtitle1">
@@ -106,7 +106,7 @@ const AboutPage = () => {
                 <Box style={{ width: "90%", margin: "0 auto" }}>
                     <Grid container className={classes.gridStyle}>
                         <Grid item sm={12} md={6} className={classes.gridItemStyle}>
-                            <img src={checklist1} className={classes.iconStyle} alt=""></img>
+                            <img src={checklist1} className={classes.iconStyle} alt="" />
                         </Grid>
                         <Grid item sm={12} md={6} className={classes.gridItemStyle}>
                             <Typography variant="h4" className={classes.headingSpacing}>
@@ -146,8 +146,12 @@ const AboutPage = () => {
                             frameBorder="0"
                             width="100%"
                             height="1048"
-                            style={{ background: "transparent", border: "1px solid #ccc", borderRadius: "6px" }}
-                        ></iframe>
+                            style={{
+                                background: "transparent",
+                                border: "1px solid #ccc",
+                                borderRadius: "6px",
+                            }}
+                        />
                     </Grid>
                 </Container>
             </Box>

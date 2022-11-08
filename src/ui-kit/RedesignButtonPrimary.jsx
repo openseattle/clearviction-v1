@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles(theme => ({
     RedesignButtonPrimaryStyle: {
@@ -15,6 +15,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export const RedesignButtonPrimary = props => {
+    const { children } = props;
     const classes = useStyles();
 
     return (
@@ -25,7 +26,7 @@ export const RedesignButtonPrimary = props => {
             color="primary"
             {...props}
         >
-            {props.children}
+            {children}
         </Button>
     );
 };

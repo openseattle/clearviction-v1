@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import {
     Typography,
     Button,
@@ -29,7 +29,7 @@ import SlackVideoAccordion from "./Mobile/SlackVideoAccordion";
 import TrustDocAccordion from "./Mobile/TrustDocAccordion";
 import { ExternalLink } from "../../ui-kit/ExternalLink";
 
-function ModuleContent(props) {
+const ModuleContent = ({ content }) => {
     const classes = useModuleContentStyles();
     const modalClasses = useModalStyles();
     const {
@@ -66,7 +66,7 @@ function ModuleContent(props) {
         paragraphBullets,
         sourceSite,
         sourceText,
-    } = props.content;
+    } = content;
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -99,7 +99,7 @@ function ModuleContent(props) {
     const handleFindVideoOpen = () => setFindVideoOpen(true);
     const handleFindVideoClose = () => setFindVideoOpen(false);
 
-    const isLargeScreen = useMediaQuery('(min-width:850px)');
+    const isLargeScreen = useMediaQuery("(min-width:850px)");
 
     return (
         <div className={classes.moduleContentCard}>
@@ -140,7 +140,7 @@ function ModuleContent(props) {
             {paragraphBullets ? (
                 <ul>
                     {paragraphBullets.map((bullet, idx) => (
-                        <li key={idx} style={{ fontSize: "20px", color: "#2b2929" }} variant="body1">
+                        <li key={idx} style={{ fontSize: "20px", color: "#2b2929" }}>
                             {bullet}
                         </li>
                     ))}
@@ -558,6 +558,6 @@ function ModuleContent(props) {
             )}
         </div>
     );
-}
+};
 
 export default ModuleContent;

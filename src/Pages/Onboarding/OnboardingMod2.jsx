@@ -1,5 +1,5 @@
-import Header from "../../Components/Onboarding/Header";
 import { Box, Grid, Typography } from "@mui/material";
+import Header from "../../Components/Onboarding/Header";
 import ModuleContent from "../../Components/Onboarding/ModuleContent";
 import { useModuleContentStyles } from "../../Styles/Onboarding/useModuleContentStyles";
 import Footer from "../../Components/Onboarding/Footer";
@@ -96,7 +96,7 @@ const button2 = {
     text: "next",
 };
 
-function OnboardingMod2() {
+const OnboardingMod2 = () => {
     const classes = useModuleContentStyles();
 
     return (
@@ -136,6 +136,6 @@ function OnboardingMod2() {
             <Footer button1={button1} button2={button2} />
         </>
     );
-}
+};
 
 export default OnboardingMod2;

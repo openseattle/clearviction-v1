@@ -2,7 +2,7 @@ import { useFooterStyles } from "../../Styles/Onboarding/useFooterStyles";
 import PrimaryButton from "./PrimaryButton";
 import CompleteButton from "./CompleteButton";
 
-function Footer(props) {
+const Footer = ({ button1, button2 }) => {
     const classes = useFooterStyles();
 
     return (
@@ -11,11 +11,11 @@ function Footer(props) {
                 <CompleteButton />
             </div>
             <div className={classes.footerContainer}>
-                <PrimaryButton button={props.button1} className={classes.button} />
-                <PrimaryButton button={props.button2} />
+                <PrimaryButton button={button1} className={classes.button} />
+                <PrimaryButton button={button2} />
             </div>
         </>
     );
-}
+};
 
 export default Footer;

@@ -19,7 +19,7 @@ jobs:
         strategy:
             matrix:
                 # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-                node-version: [16.x, 18.x]   
+                node-version: [16.x, 18.x]
             # Allows jobs to run on both versions, even if one fails
             fail-fast: false
         steps:
@@ -38,8 +38,8 @@ jobs:
             - name: Run linter and generate summary report
               # runs linting even if formatting fails
               if: ${{ steps.build.conclusion == 'success' && (failure() || success()) }}
-              run: npm run lint:summary
-    
+              run: npm run lint
+
     run-tests:
         name: Run Tests
 
@@ -48,7 +48,7 @@ jobs:
         strategy:
             matrix:
                 # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-                node-version: [16.x, 18.x]   
+                node-version: [16.x, 18.x]
             # Allows jobs to run on both versions, even if one fails
             fail-fast: false
         steps:

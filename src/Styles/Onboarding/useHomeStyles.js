@@ -1,4 +1,4 @@
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 
 export const useHomeStyles = makeStyles(theme => ({
     body: {
@@ -6,14 +6,14 @@ export const useHomeStyles = makeStyles(theme => ({
         margin: theme.spacing(3, "auto"),
         width: "60%",
         color: "#1d1c1c",
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             width: "80%",
             padding: theme.spacing(1),
         },
     },
     bodyPara: {
         marginBottom: theme.spacing(3),
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             fontSize: "18px",
             marginBottom: theme.spacing(2),
         },
@@ -42,7 +42,7 @@ export const useHomeStyles = makeStyles(theme => ({
         height: "12em",
         marginLeft: "0.95em",
         marginTop: "-3px",
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             height: "15em",
         },
     },
@@ -52,7 +52,7 @@ export const useHomeStyles = makeStyles(theme => ({
         borderLeftColor: "#fafafa",
         height: "12em",
         marginLeft: "1em",
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             height: "15em",
         },
     },

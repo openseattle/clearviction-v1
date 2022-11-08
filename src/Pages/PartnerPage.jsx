@@ -26,7 +26,7 @@ const PartnerPage = () => {
             <ContentSection className={classes.regularContainerStyle} sectionSize="md">
                 <Grid container>
                     <Grid item xs={12} sm={6}>
-                        <Box display={"flex"} justifyContent={"center"}>
+                        <Box display="flex" justifyContent="center">
                             <Box className={classes.partnerImageStyle} component="img" src={pr} alt="" />
                         </Box>
                     </Grid>

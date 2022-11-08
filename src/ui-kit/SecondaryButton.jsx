@@ -1,5 +1,5 @@
 import { Button } from "@mui/material";
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles(theme => ({
     flexGrow: {
@@ -12,10 +12,10 @@ const useStyles = makeStyles(theme => ({
         width: "248px",
         height: "48px",
         fontSize: "18px",
-        [theme.breakpoints.down('lg')]: {
+        [theme.breakpoints.down("lg")]: {
             fontSize: "14px",
         },
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             fontSize: "12px",
         },
         border: `${theme.palette.primary.main} solid`,
@@ -30,10 +30,10 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-export default function SecondaryButton({ text, type, linkTo, externalLink, onClick }) {
+const SecondaryButton = ({ text, type, linkTo, externalLink, onClick }) => {
     const classes = useStyles();
     return externalLink ? (
-        <Button rel="noopener noreferrer" href={linkTo} type={type} className={classes.button} target={"_blank"}>
+        <Button rel="noopener noreferrer" href={linkTo} type={type} className={classes.button} target="_blank">
             {text}
         </Button>
     ) : (
@@ -41,4 +41,6 @@ export default function SecondaryButton({ text, type, linkTo, externalLink, onCl
             {text}
         </Button>
     );
-}
+};
+
+export default SecondaryButton;

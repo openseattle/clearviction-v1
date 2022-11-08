@@ -1,7 +1,7 @@
 // styling
 import { Typography } from "@mui/material";
-import { useHomeStyles } from "../../Styles/Onboarding/useHomeStyles";
 import { useEffect, useRef } from "react";
+import { useHomeStyles } from "../../Styles/Onboarding/useHomeStyles";
 
 // components
 import Header from "../../Components/Onboarding/Header";
@@ -12,7 +12,7 @@ const headerText = {
     information: "We're excited you're joining the Clearviction Project.",
 };
 
-function OnboardingHome() {
+const OnboardingHome = () => {
     const classes = useHomeStyles();
 
     const moduleSection = useRef(null);
@@ -59,6 +59,6 @@ function OnboardingHome() {
             </div>
         </div>
     );
-}
+};
 
 export default OnboardingHome;

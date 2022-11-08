@@ -10,7 +10,8 @@ const FactSubList = ({ resources }) => {
                         rel="noopener noreferrer"
                         href={resource.url}
                         variant="caption"
-                        underline="hover">
+                        underline="hover"
+                    >
                         {resource.name}
                     </Link>
                 </ListItem>

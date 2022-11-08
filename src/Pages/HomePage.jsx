@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { Box, Container, Grid, Typography } from "@mui/material";
 import { trackPageview } from "../trackingUtils";
 import city from "../Assets/city.svg";
 import checklist from "../Assets/checklist.svg";
@@ -8,7 +9,6 @@ import lawyer from "../Assets/lawyer.svg";
 import teamwork from "../Assets/teamwork.svg";
 import calculator from "../Assets/calculator.svg";
 import washington from "../Assets/washington.svg";
-import { Box, Container, Grid, Typography } from "@mui/material";
 import ContentSection from "../Components/ContentSection";
 import HomeFAQAccordion from "../Subpages/Home/HomeFAQAccordion";
 import { useHomeStyles } from "../Styles/useHomeStyles";
@@ -21,7 +21,7 @@ const HomePage = () => {
     useEffect(() => trackPageview("Home"), []);
 
     const classes = useHomeStyles();
-    const [documentTitle, setDocumentTitle] = useDocumentTitle("Home - ");
+    useDocumentTitle("Home - ");
 
     return (
         <>
@@ -37,13 +37,13 @@ const HomePage = () => {
                                 conviction for free in less than 10 minutes!
                             </Typography>
                             <Box paddingTop={12}>
-                                <RedesignButtonPrimary href="/calculator/landing-0">
-                                    Check Eligibility
+                                <RedesignButtonPrimary href="/calculator/landing-0" className={classes.calcHome}>
+                                    Access Calculator
                                 </RedesignButtonPrimary>
                             </Box>
                         </Grid>
                         <Grid item xs={12} sm={6}>
-                            <img src={washington} className={classes.iconStyle} alt=""></img>
+                            <img src={washington} className={classes.iconStyle} alt="" />
                         </Grid>
                     </Grid>
                 </Container>
@@ -59,7 +59,7 @@ const HomePage = () => {
                 />
             </Container>
 
-            <ContentSection sectionId="how-it-works" sectionSize="lg" sectionTitle={"How It Works"}>
+            <ContentSection sectionId="how-it-works" sectionSize="lg" sectionTitle="How It Works">
                 <Grid container>
                     <Grid item xs={12} sm={4}>
                         <img className={classes.iconStyle} src={teamwork} alt="" />
@@ -81,11 +81,11 @@ const HomePage = () => {
                     </Grid>
                 </Grid>
                 <Box className={classes.buttonBoxStyle}>
-                    <RedesignButtonPrimary href={"/get-started"}>Get Started</RedesignButtonPrimary>
+                    <RedesignButtonPrimary href="/get-started">Get Started</RedesignButtonPrimary>
                 </Box>
             </ContentSection>
 
-            <ContentSection sectionId={"why-vacate"} sectionSize={"lg"} sectionTitle={"Why Vacate?"}>
+            <ContentSection sectionId="why-vacate" sectionSize="lg" sectionTitle="Why Vacate?">
                 <Typography className={classes.headingStyle} variant="subtitle1" align="center" component="h3">
                     A conviction vacation seals the offense from your record, and will give you more chance to access:
                 </Typography>
@@ -147,7 +147,7 @@ const HomePage = () => {
                             </RedesignButtonSecondary>
                         </Grid>
                         <Grid item xs={12} sm={6} md={4}>
-                            <img src={checklistTwo} className={classes.iconStyle} alt=""></img>
+                            <img src={checklistTwo} className={classes.iconStyle} alt="" />
                         </Grid>
                     </Grid>
                 </Container>

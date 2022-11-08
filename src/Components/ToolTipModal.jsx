@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { trackClick } from "../trackingUtils";
 import { Modal, Box, Button, Typography } from "@mui/material";
+import { trackClick } from "../trackingUtils";
 
 const boxStyle = {
     position: "absolute",
@@ -15,19 +15,19 @@ const boxStyle = {
     padding: 4,
 };
 
-const ToolTipModal = props => {
+const ToolTipModal = ({ text }) => {
     const [open, setOpen] = useState(false);
 
     const handleClose = () => setOpen(false);
     const handleOpen = () => {
         setOpen(true);
-        trackClick(props.text);
+        trackClick(text);
     };
 
     return (
         <div data-testid="tooltip-modal-wrapper">
             <Button onClick={handleOpen} style={{ color: "black", textDecoration: "underline" }}>
-                <Typography variant="h5">{props.text}</Typography>
+                <Typography variant="h5">{text}</Typography>
             </Button>
             <Modal
                 data-testid="tooltip-modal"

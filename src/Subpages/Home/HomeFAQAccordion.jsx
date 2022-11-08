@@ -58,11 +58,11 @@ const HomeFAQAccordion = () => {
                     </Typography>
                     <Typography className={classes.contentTextStyle}>
                         For Felonies, please refer to{" "}
-                        <ExternalLink href={"https://apps.leg.wa.gov/RCW/default.aspx?cite=9.94a.640"}>
+                        <ExternalLink href="https://apps.leg.wa.gov/RCW/default.aspx?cite=9.94a.640">
                             RCW 9.94A.640
                         </ExternalLink>
                         . An easy to read resource to understand your eligibility is available at{" "}
-                        <ExternalLink href={"https://www.washingtonlawhelp.org/search?q=vacation"}>
+                        <ExternalLink href="https://www.washingtonlawhelp.org/search?q=vacation">
                             Washington Law Help
                         </ExternalLink>
                         .
@@ -100,13 +100,11 @@ const HomeFAQAccordion = () => {
             summary: "How long does the process take?",
             summaryID: "how-long-button",
             details: (
-                <>
-                    <Typography className={classes.contentTextStyle}>
-                        To vacate your Washington conviction, the process takes on average three to four months,
-                        depending on your individual circumstances, the court’s caseload at the time, and whether there
-                        are any objections to vacating your conviction.
-                    </Typography>
-                </>
+                <Typography className={classes.contentTextStyle}>
+                    To vacate your Washington conviction, the process takes on average three to four months, depending
+                    on your individual circumstances, the court’s caseload at the time, and whether there are any
+                    objections to vacating your conviction.
+                </Typography>
             ),
             detailsID: "how-long-paragraph",
         },
@@ -114,13 +112,11 @@ const HomeFAQAccordion = () => {
             summary: "What happens after my conviction is vacated?",
             summaryID: "after-vacate-button",
             details: (
-                <>
-                    <Typography className={classes.contentTextStyle}>
-                        You will receive a court order vacating the conviction—which has the effect of withdrawing the
-                        guilty judgment and dismissing the charges against you. You can then legally state that you were
-                        not convicted of the offense.
-                    </Typography>
-                </>
+                <Typography className={classes.contentTextStyle}>
+                    You will receive a court order vacating the conviction—which has the effect of withdrawing the
+                    guilty judgment and dismissing the charges against you. You can then legally state that you were not
+                    convicted of the offense.
+                </Typography>
             ),
             detailsID: "after-vacate-paragraph",
         },
@@ -138,7 +134,7 @@ const HomeFAQAccordion = () => {
                     <Typography className={classes.contentTextStyle}>
                         Information about the court records from the cases that led to the convictions are still public.
                         You can still find them on{" "}
-                        <ExternalLink href="https://www.courts.wa.gov">www.courts.wa.gov</ExternalLink>.
+                        <ExternalLink href="https://www.courts.wa.gov">www.courts.wa.gov</ExternalLink>
                     </Typography>
                     <Typography className={classes.contentTextStyle}>
                         Prosecutors can still use evidence of vacated convictions in a later criminal prosecution. They

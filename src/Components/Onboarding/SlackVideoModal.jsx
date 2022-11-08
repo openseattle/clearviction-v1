@@ -7,7 +7,7 @@ import video from "../../Assets/Onboarding/video.svg";
 // styles
 import { useModalStyles } from "../../Styles/Onboarding/useModalStyles";
 
-export default function SlackVideoModal(props) {
+const SlackVideoModal = ({ handleSlackVideoClose }) => {
     const [sectionId, setSectionId] = useState(1);
     const [activeTab, setActiveTab] = useState(1);
     const classes = useModalStyles();
@@ -64,6 +64,7 @@ export default function SlackVideoModal(props) {
             <Grid item xs={2}>
                 {sections.map(section => (
                     <button
+                        type="button"
                         key={section.id}
                         onClick={() => showSection(section.id)}
                         style={activeTab === section.id ? activeTabStyle : tabStyle}
@@ -76,67 +77,45 @@ export default function SlackVideoModal(props) {
             <Grid item xs={7} md={8} lg={9} className={classes.contentStyle}>
                 {sectionId === 1 && (
                     <div style={{ height: "100%" }}>
-                        <iframe
-                            title={sections.title}
-                            src={profile}
-                            width="100%"
-                            height="80%"
-                            allow="autoplay"
-                        ></iframe>
+                        <iframe title={sections.title} src={profile} width="100%" height="80%" allow="autoplay" />
                     </div>
                 )}
                 {sectionId === 2 && (
                     <div style={{ height: "100%" }}>
-                        <iframe
-                            title={sections.title}
-                            src={channels}
-                            width="100%"
-                            height="80%"
-                            allow="autoplay"
-                        ></iframe>
+                        <iframe title={sections.title} src={channels} width="100%" height="80%" allow="autoplay" />
                     </div>
                 )}
                 {sectionId === 3 && (
                     <div style={{ height: "100%" }}>
-                        <iframe
-                            title={sections.title}
-                            src={createChannel}
-                            width="100%"
-                            height="80%"
-                            allow="autoplay"
-                        ></iframe>
+                        <iframe title={sections.title} src={createChannel} width="100%" height="80%" allow="autoplay" />
                     </div>
                 )}
                 {sectionId === 4 && (
                     <div style={{ height: "100%" }}>
-                        <iframe title={sections.title} src={convo} width="100%" height="80%" allow="autoplay"></iframe>
+                        <iframe title={sections.title} src={convo} width="100%" height="80%" allow="autoplay" />
                     </div>
                 )}
                 {sectionId === 5 && (
                     <div style={{ height: "100%" }}>
-                        <iframe title={sections.title} src={donut} width="100%" height="80%" allow="autoplay"></iframe>
+                        <iframe title={sections.title} src={donut} width="100%" height="80%" allow="autoplay" />
                     </div>
                 )}
                 {sectionId === 6 && (
                     <div style={{ height: "80%" }}>
-                        <iframe
-                            title={sections.title}
-                            src={threads}
-                            width="100%"
-                            height="80%"
-                            allow="autoplay"
-                        ></iframe>
+                        <iframe title={sections.title} src={threads} width="100%" height="80%" allow="autoplay" />
                     </div>
                 )}
                 {sectionId === 7 && (
                     <div style={{ height: "80%" }}>
-                        <iframe title={sections.title} src={active} width="100%" height="80%" allow="autoplay"></iframe>
+                        <iframe title={sections.title} src={active} width="100%" height="80%" allow="autoplay" />
                     </div>
                 )}
-                <Button onClick={props.handleSlackVideoClose} className={classes.button}>
+                <Button onClick={handleSlackVideoClose} className={classes.button}>
                     Close
                 </Button>
             </Grid>
         </Grid>
     );
-}
+};
+
+export default SlackVideoModal;

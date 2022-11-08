@@ -1,4 +1,4 @@
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 
 export const WhyVacateEmploymentStyles = makeStyles(theme => ({
     sectionSpaceStyle: {
@@ -7,19 +7,19 @@ export const WhyVacateEmploymentStyles = makeStyles(theme => ({
     },
     containerStyles: {
         margin: theme.spacing(15),
-        [theme.breakpoints.down('lg')]: {
+        [theme.breakpoints.down("lg")]: {
             margin: theme.spacing(8),
         },
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             margin: theme.spacing(5),
         },
     },
     containerStylesAlt: {
         margin: theme.spacing(15),
-        [theme.breakpoints.down('lg')]: {
+        [theme.breakpoints.down("lg")]: {
             margin: theme.spacing(8),
         },
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             margin: theme.spacing(5),
         },
     },
