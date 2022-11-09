@@ -45,6 +45,8 @@ jobs:
 
         runs-on: ubuntu-latest
 
+        continue-on-error: true
+
         strategy:
             matrix:
                 # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
