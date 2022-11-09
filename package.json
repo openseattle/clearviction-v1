@@ -37,7 +37,8 @@
         "lint:summary": "SORT_BY=errors DESC=true eslint -f summary src/",
         "predeploy": "npm run build",
         "start": "DISABLE_ESLINT_PLUGIN='true' react-scripts start",
-        "test": "ESLINT_NO_DEV_ERRORS='true' react-scripts test"
+        "test": "ESLINT_NO_DEV_ERRORS='true' react-scripts test",
+        "test:coverage": "npm run test -- --coverage --watchAll=false"
     },
     "browserslist": {
         "production": [
@@ -71,5 +72,22 @@
         "eslint-plugin-unused-imports": "^2.0.0",
         "prettier": "2.5.1",
         "typescript": "^4.5.2"
+    },
+    "jest": {
+        "collectCoverageFrom": [
+            "src/{Components,Pages,Subpages,ui-kit}/**/*.{js,jsx,ts,tsx}",
+            "!<rootDir>/node_modules/"
+        ],
+        "coverageThreshold": {
+            "global": {
+                "branches": 50,
+                "functions": 50,
+                "lines": 50,
+                "statements": 50
+            }
+        },
+        "coverageReporters": [
+            "text"
+        ]
     }
 }

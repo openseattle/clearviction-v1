@@ -40,6 +40,30 @@ jobs:
               if: ${{ steps.build.conclusion == 'success' && (failure() || success()) }}
               run: npm run lint:summary
 
+    run-test-coverage:
+        name: Run Test Coverage
+
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+                node-version: [16.x, 18.x]
+            # Allows jobs to run on both versions, even if one fails
+            fail-fast: false
+        steps:
+            - uses: actions/checkout@v3
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v3
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: "npm"
+            - name: Build app
+              id: build
+              run: npm ci
+            - name: Run test coverage
+              run: npm run test:coverage
+
     run-tests:
         name: Run Tests
 
