@@ -134,32 +134,6 @@ const teamDesc = {
             modalParagraph2:
                 "This team also serves as a spring board for newly onboarded volunteers to get a taste of what we're working on and how we collaborate. Our work is generally broken down into several Task Groups with Nemo members leading up each of those efforts.",
         },
-        // Other teams listed below, not in Figma file and no icons ready.
-        /* {
-            linkTitle: "Community Relationships",
-            linkIcon: "teamIcon",
-            linkImg: <img src={community} alt="" className="makeStyles-linkIcon-11" />,
-        },
-        {
-            linkTitle: "Legal Research",
-            linkIcon: "teamIcon",
-            linkImg: <img src={legalResearch} alt="" className="makeStyles-linkIcon-11" />,
-        },
-        {
-            linkTitle: "Data Analytics",
-            linkIcon: "teamIcon",
-            linkImg: <img src={data} alt="" className="makeStyles-linkIcon-11" />,
-        },
-        {
-            linkTitle: "Tech Foundations",
-            linkIcon: "teamIcon",
-            linkImg: <img src={tech} alt="" className="makeStyles-linkIcon-11" />,
-        },
-        {
-            linkTitle: "Funding Pursuit",
-            linkIcon: "teamIcon",
-            linkImg: <img src={funding} alt="" className="makeStyles-linkIcon-11" />,
-        }, */
     ],
 };
 
@@ -223,6 +197,30 @@ const OnboardingMod4 = () => {
                     </Grid>
                     <Grid item xs={10}>
                         <ModuleContent content={teamDesc} />
+                        {/* Seamus wanted to keep a live version thats 
+                        always up to date with all teams using this embed */}
+                        <details
+                            style={{
+                                fontSize: "calc(14px + 0.390625vw)",
+                                fontFamily: "Inter",
+                                fontWeight: "500",
+                                color: "#4E6C99",
+                            }}
+                        >
+                            <summary>View all teams</summary>
+                            <iframe
+                                title="teams-airtable"
+                                className="airtable-embed"
+                                src="https://airtable.com/embed/shrK9XGUYAHu8gy6k?backgroundColor=teal&viewControls=on"
+                                frameBorder="0"
+                                width="100%"
+                                height="900"
+                                style={{
+                                    background: "transparent",
+                                    border: "1px solid #4E6C99",
+                                }}
+                            />
+                        </details>
                     </Grid>
                     <Grid item xs={2} className={classes.cardIcon}>
                         <img src={question} alt="" className={classes.icon} />
