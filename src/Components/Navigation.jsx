@@ -19,8 +19,6 @@ import NavButtonMobile from "../ui-kit/NavButtonMobile";
 import LegalDisclaimer from "./LegalDisclaimer";
 import NavigationLogo from "./NavigationLogo";
 import SkipLink from "../ui-kit/SkipLink.tsx";
-import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
-import { RedesignButtonSecondary } from "../ui-kit/RedesignButtonSecondary";
 
 const useStyles = makeStyles(theme => ({
     closeIcon: {

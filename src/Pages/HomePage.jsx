@@ -13,7 +13,6 @@ import ContentSection from "../Components/ContentSection";
 import HomeFAQAccordion from "../Subpages/Home/HomeFAQAccordion";
 import { useHomeStyles } from "../Styles/useHomeStyles";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
-import { RedesignButtonSecondary } from "../ui-kit/RedesignButtonSecondary";
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
@@ -37,12 +36,7 @@ const HomePage = () => {
                                 conviction for free in less than 10 minutes!
                             </Typography>
                             <Box paddingTop={12}>
-                                <Button
-                                    variant="contained"
-                                    color="secondary"
-                                    href="/calculator/landing-0"
-                                    fullWidth={true}
-                                >
+                                <Button variant="contained" color="secondary" href="/calculator/landing-0" fullWidth>
                                     Access Calculator
                                 </Button>
                             </Box>
@@ -148,7 +142,7 @@ const HomePage = () => {
                                 Help us improve the calculator by participating in research
                             </Typography>
                             <Button
-                                fullWidth={true}
+                                fullWidth
                                 variant="contained"
                                 color="secondary"
                                 href="https://docs.google.com/forms/d/1KXmPrwzHeE8_EEL88RFkjOFP4S1A52Ode1vV6SJijao/viewform?edit_requested=true"
