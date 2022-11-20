@@ -7,7 +7,7 @@ const DonationForm = () => {
                 title="Clearviction Donation Form"
                 src="https://donorbox.org/embed/clearviction-givingtuesday"
                 name="donorbox"
-                allowpaymentrequest="allowpaymentrequest"
+                // allowpaymentrequest="allowpaymentrequest"
                 seamless="seamless"
                 frameBorder="0"
                 height="900"
