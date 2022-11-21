@@ -1,12 +1,11 @@
 import { Container, Typography, Grid, Box, Divider } from "@mui/material";
-// import { Flexbox } from "@mui-system";
 
 // Components
 import { useDonationStyles } from "../Styles/useDonationStyles";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 import RedesignHeroPanel from "../Components/RedesignHeroPanel";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
-import DonationForm from "../Components/DonationForm";
+import { DonationMeter, DonationForm } from "../Components/DonationForm";
 import DonationVideo from "../Components/DonationVideo";
 import DonatePage from "./DonatePage";
 
@@ -24,15 +23,13 @@ const GivingTuesdayPage = () => {
                             legal system in Washington State.
                         </Typography>
                     </Grid>
-                    <Grid item xs={12} sm={12} md={6}>
-                        {/* <Box component="img" style={{ width: "100%", padding: 16 }} src={teamBuilding} alt="" /> */}
-                    </Grid>
                 </Grid>
             </RedesignHeroPanel>
             <Box className={classes.regularContainer}>
                 <Container>
+                    <DonationMeter />
                     <Container>
-                        <Typography variant="h2">Why donate?</Typography>
+                        <Typography variant="h3">Why donate?</Typography>
                         <DonationVideo />
                         <Typography variant="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit</Typography>
                     </Container>
