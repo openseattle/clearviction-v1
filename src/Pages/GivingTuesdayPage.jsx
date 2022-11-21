@@ -1,4 +1,5 @@
 import { Container, Typography, Grid, Box, Divider } from "@mui/material";
+import { SocialIcon } from "react-social-icons";
 
 // Components
 import { useDonationStyles } from "../Styles/useDonationStyles";
@@ -8,6 +9,7 @@ import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import { DonationMeter, DonationForm } from "../Components/DonationForm";
 import DonationVideo from "../Components/DonationVideo";
 import DonatePage from "./DonatePage";
+// import { AddBoxSharp } from "@mui/icons-material";
 
 const GivingTuesdayPage = () => {
     const classes = useDonationStyles();
@@ -25,43 +27,61 @@ const GivingTuesdayPage = () => {
                     </Grid>
                 </Grid>
             </RedesignHeroPanel>
-            <Box className={classes.regularContainer}>
+            <Box className={classes.contentContainer}>
                 <Container>
                     <DonationMeter />
-                    <Container>
-                        <Typography variant="h3">Why donate?</Typography>
-                        <DonationVideo />
-                        <Typography variant="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit</Typography>
-                    </Container>
 
-                    <Container>
-                        <Typography variant="h4">Your voice is a powerful tool. Share our fundraiser.</Typography>
-                        <Typography variant="p">
-                            Help Clearviction expand its reach by sharing your donation activity with friends, family,
-                            and more.
+                    <Box className={classes.regularContainer}>
+                        <Typography className={classes.headingStyle} variant="h2">
+                            Why donate?
                         </Typography>
-                        {/* I was looking into react-social comonent libarry for embedding social sharing.  */}
+                        <DonationVideo />
+                        <Typography className={classes.bodyContent}>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        </Typography>
+                    </Box>
+
+                    <Container className={classes.boxShadow}>
+                        <Box className={classes.shareContent}>
+                            <Typography className={classes.headingStyle} variant="h4">
+                                Your voice is a powerful tool. Share our fundraiser.
+                            </Typography>
+                            <Typography className={classes.subheadingStyle} variant="body1">
+                                Help Clearviction expand its reach by sharing your donation activity with friends,
+                                family, and more.
+                            </Typography>
+                        </Box>
+                        <Box className={classes.socialIcons}>
+                            <SocialIcon bgColor="#FFD200" url="https://twitter.com/Clearviction" />
+                            <SocialIcon url="https://instagram.com" bgColor="#FFD200" />
+                            <SocialIcon url="https://www.linkedin.com/company/clearviction" bgColor="#FFD200" />
+                        </Box>
                     </Container>
 
-                    <Divider /* className={classes.dividerStyle} <- from getstartedstyles */ />
+                    <Divider className={classes.divider} />
 
                     <Container>
-                        {/* Probably want to change the donate page to accept props, so we can change the title */}
-                        <DonatePage />
+                        <DonatePage title="How will your donations help Clearviction's goals?" />
                     </Container>
 
-                    <Divider />
+                    <Divider className={classes.divider} />
 
                     <Container>
-                        <Typography variant="h2">Meet the people commited to making a difference.</Typography>
-                        <Typography variant="p">Lorem ipsum dolor sit amet, consectetur adipiscing elit</Typography>
+                        <Typography className={classes.headingStyle} variant="h2">
+                            Meet the people commited to making a difference.
+                        </Typography>
+                        <Typography className={classes.bodyContent}>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                        </Typography>
 
                         <img src="https://via.placeholder.com/500x300)" alt="" />
                     </Container>
 
-                    <Container>
-                        <Typography variant="h4">Help us break down barriers by joining our team.</Typography>
-                        <Typography variant="p">
+                    <Container className={classes.bodyContent}>
+                        <Typography className={classes.headingStyle} variant="h4">
+                            Help us break down barriers by joining our team.
+                        </Typography>
+                        <Typography className={classes.subheadingStyle} variant="body1">
                             When you share your expertise with us, we get closer to reducing barriers and timelines for
                             individuals looking to vacate their convictions in Washington State.
                         </Typography>

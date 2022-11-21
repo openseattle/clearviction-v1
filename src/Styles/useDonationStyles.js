@@ -3,14 +3,73 @@ import { makeStyles } from "@mui/styles";
 export const useDonationStyles = makeStyles(theme => ({
     // Added About Styles in comment Code
 
-    regularContainer: {
+    contentContainer: {
         display: "flex",
-        padding: theme.spacing(8),
+        padding: theme.spacing(3),
+        marginTop: theme.spacing(6),
+        marginBottom: theme.spacing(6),
         [theme.breakpoints.down("md")]: {
             padding: theme.spacing(3),
         },
     },
-    donationBox: {},
+    regularContainer: {
+        padding: theme.spacing(8),
+        marginTop: theme.spacing(3),
+        marginBottom: theme.spacing(3),
+        [theme.breakpoints.down("md")]: {
+            padding: theme.spacing(3),
+        },
+    },
+    bodyContent: {
+        marginTop: theme.spacing(6),
+        marginBottom: theme.spacing(6),
+    },
+    donationBox: {
+        position: "sticky",
+        top: "2",
+    },
+    headingStyle: {
+        marginBottom: theme.spacing(6),
+        color: theme.palette.primary.dark,
+    },
+    subheadingStyle: {
+        marginBottom: theme.spacing(1),
+        paddingBottom: theme.spacing(1),
+        [theme.breakpoints.down("md")]: {
+            fontSize: "40px",
+        },
+    },
+    boxShadow: {
+        backgroundColor: "#fff",
+        display: "flex",
+        boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.2)",
+        borderRadius: "6px",
+        padding: theme.spacing(2),
+        [theme.breakpoints.down("md")]: {
+            padding: theme.spacing(4),
+        },
+    },
+    shareContent: {
+        margin: theme.spacing(2),
+        padding: theme.spacing(2),
+    },
+    socialIcons: {
+        marginTop: theme.spacing(2),
+        padding: theme.spacing(2),
+        flexDirection: "column",
+        justifyContent: "space-evenly",
+        display: "flex",
+    },
+    divider: {
+        color: "grey",
+        backgroundColor: "#d8d8d8",
+        height: 1,
+        width: "80%",
+        margin: theme.spacing(22, "auto"),
+        [theme.breakpoints.down("md")]: {
+            margin: theme.spacing(15, "auto"),
+        },
+    },
     // darkBlueBackground: {
     //     backgroundColor: theme.palette.primary.dark,
     //     color: "white",
@@ -20,26 +79,6 @@ export const useDonationStyles = makeStyles(theme => ({
     //         padding: theme.spacing(9, 0),
     //     },
     // },
-    // regularContainer: {
-    //     padding: theme.spacing(8),
-    //     [theme.breakpoints.down("md")]: {
-    //         padding: theme.spacing(3),
-    //     },
-    // },
-    // embedContainer: {
-    //     paddingTop: theme.spacing(8),
-    //     paddingBottom: theme.spacing(8),
-    // },
-    headingStyle: {
-        marginBottom: theme.spacing(6),
-    },
-    subheadingStyle: {
-        marginBottom: theme.spacing(8),
-        paddingBottom: theme.spacing(8),
-        [theme.breakpoints.down("md")]: {
-            fontSize: "40px",
-        },
-    },
     // linkTextStyle: {
     //     marginRight: theme.spacing(1),
     //     textDecoration: "none",
@@ -52,25 +91,6 @@ export const useDonationStyles = makeStyles(theme => ({
     //     padding: theme.spacing(0.8),
     //     [theme.breakpoints.down("md")]: {
     //         marginBottom: theme.spacing(3),
-    //     },
-    // },
-    // boxShadow: {
-    //     backgroundColor: "#fff",
-    //     boxShadow: "0px 2px 1px rgba(0, 0, 0, 0.2)",
-    //     borderRadius: "6px",
-    //     padding: theme.spacing(9),
-    //     [theme.breakpoints.down("md")]: {
-    //         padding: theme.spacing(4),
-    //     },
-    // },
-    // divider: {
-    //     color: "grey",
-    //     backgroundColor: "#d8d8d8",
-    //     height: 1,
-    //     width: "80%",
-    //     margin: theme.spacing(22, "auto"),
-    //     [theme.breakpoints.down("md")]: {
-    //         margin: theme.spacing(15, "auto"),
     //     },
     // },
     // buttonBoxStyle: {
