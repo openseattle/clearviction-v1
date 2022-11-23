@@ -25,8 +25,8 @@ export const useDonationStyles = makeStyles(theme => ({
         marginBottom: theme.spacing(6),
     },
     donationBox: {
-        position: "sticky",
-        top: "2",
+        position: "relative",
+        height: "4521px",
     },
     headingStyle: {
         marginBottom: theme.spacing(6),
