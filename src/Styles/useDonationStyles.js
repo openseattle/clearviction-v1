@@ -1,6 +1,6 @@
 import { makeStyles } from "@mui/styles";
 
-export const useDonationStyles = makeStyles(theme => ({
+export default makeStyles(theme => ({
     // Added About Styles in comment Code
 
     contentContainer: {

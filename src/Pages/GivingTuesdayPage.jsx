@@ -2,7 +2,7 @@ import { Container, Typography, Grid, Box, Divider } from "@mui/material";
 import { SocialIcon } from "react-social-icons";
 
 // Components
-import { useDonationStyles } from "../Styles/useDonationStyles";
+import useDonationStyles from "../Styles/useDonationStyles";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 import RedesignHeroPanel from "../Components/RedesignHeroPanel";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
