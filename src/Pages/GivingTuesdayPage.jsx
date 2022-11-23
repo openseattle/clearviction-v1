@@ -9,6 +9,7 @@ import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import { DonationMeter, DonationForm } from "../Components/DonationForm";
 import DonationVideo from "../Components/DonationVideo";
 import DonatePage from "./DonatePage";
+
 // import { AddBoxSharp } from "@mui/icons-material";
 
 const GivingTuesdayPage = () => {
@@ -17,7 +18,7 @@ const GivingTuesdayPage = () => {
 
     return (
         <>
-            <RedesignHeroPanel title="Giving Tuesday">
+            <RedesignHeroPanel className={classes.customHero} title="Giving Tuesday">
                 <Grid container>
                     <Grid item xs={12} sm={12} md={6}>
                         <Typography variant="subtitle1" component="p">
@@ -29,6 +30,9 @@ const GivingTuesdayPage = () => {
             </RedesignHeroPanel>
             <Box className={classes.contentContainer}>
                 <Container>
+                    <Container className={classes.donationBoxInline}>
+                        <DonationForm />
+                    </Container>
                     <DonationMeter />
 
                     <Box className={classes.regularContainer}>
@@ -61,7 +65,7 @@ const GivingTuesdayPage = () => {
                     <Divider className={classes.divider} />
 
                     <Container>
-                        <DonatePage title="How will your donations help Clearviction's goals?" />
+                        <DonatePage title="How will your donations help Clearviction's goals?" md={6} />
                     </Container>
 
                     <Divider className={classes.divider} />
@@ -73,8 +77,14 @@ const GivingTuesdayPage = () => {
                         <Typography className={classes.bodyContent}>
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit
                         </Typography>
-
-                        <img src="https://via.placeholder.com/500x300)" alt="" />
+                        <Box className={classes.centerImageBox}>
+                            <Box
+                                className={classes.centeredImage}
+                                component="img"
+                                alt=""
+                                src="https://via.placeholder.com/500x300)"
+                            />
+                        </Box>
                     </Container>
 
                     <Container className={classes.bodyContent}>
@@ -86,12 +96,13 @@ const GivingTuesdayPage = () => {
                             individuals looking to vacate their convictions in Washington State.
                         </Typography>
                     </Container>
-
-                    <RedesignButtonPrimary href="get-involved" aria-label="">
-                        learn more
-                    </RedesignButtonPrimary>
+                    <Container className={classes.GTButtonContainerStyle}>
+                        <RedesignButtonPrimary href="get-involved" aria-label="">
+                            learn more
+                        </RedesignButtonPrimary>
+                    </Container>
                 </Container>
-                <Container className={classes.donationBox}>
+                <Container className={classes.donationBoxSticky}>
                     <DonationForm />
                 </Container>
             </Box>
