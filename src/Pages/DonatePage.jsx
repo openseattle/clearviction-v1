@@ -40,7 +40,7 @@ const donationLevels = [
     },
 ];
 
-const DonatePage = ({ title }) => {
+const DonatePage = ({ title, md }) => {
     const [open, setOpen] = useState(false);
 
     const handleClickOpen = () => {
@@ -63,7 +63,7 @@ const DonatePage = ({ title }) => {
                 </Typography>
                 <Grid container spacing={3}>
                     {donationLevels.map(level => (
-                        <Grid item key={level.name} xs={12} sm={6} md={3} lg={3}>
+                        <Grid item key={level.name} xs={12} sm={6} md={md} lg={md}>
                             <Box display="flex" justifyContent="center">
                                 <DonateLevelCard
                                     amount={level.amount}

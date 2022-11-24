@@ -7,10 +7,10 @@ const DonationForm = () => {
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                position: "sticky",
-                marginBottom: "-110px",
-                marginTop: "-422px",
-                top: "100px",
+                position: { xs: "relative", md: "sticky" },
+                marginBottom: { xs: "155px", md: "-110px" },
+                marginTop: { xs: "0px", md: "-422px" },
+                top: { xs: "0px", md: "100px" },
             }}
         >
             <iframe
