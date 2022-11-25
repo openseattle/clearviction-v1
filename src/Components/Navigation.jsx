@@ -19,7 +19,6 @@ import NavButtonMobile from "../ui-kit/NavButtonMobile";
 import LegalDisclaimer from "./LegalDisclaimer";
 import NavigationLogo from "./NavigationLogo";
 import SkipLink from "../ui-kit/SkipLink.tsx";
-import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 
 const useStyles = makeStyles(theme => ({
     closeIcon: {
@@ -51,19 +50,6 @@ const useStyles = makeStyles(theme => ({
             transform: "translateX(0)",
         },
     },
-    navCalc: {
-        height: "3rem",
-        textAlign: "center",
-        fontSize: "1rem",
-        borderRadius: "50px",
-        padding: "1rem",
-        backgroundColor: "white",
-        color: theme.palette.primary.dark,
-        "&:hover": {
-            backgroundColor: theme.palette.secondary.main,
-            color: theme.palette.secondary.contrastText,
-        },
-    },
 }));
 
 const Navigation = () => {
@@ -84,26 +70,26 @@ const Navigation = () => {
                 <Container maxWidth="xl">
                     <Toolbar>
                         <SkipLink className={classes.skipLink}>
-                            <Button style={{ color: "white" }}>Skip Navigation Links</Button>
+                            <Button>Skip Navigation Links</Button>
                         </SkipLink>
                         <NavigationLogo />
                         <Box style={{ flexGrow: 1 }} />
 
                         {/* desktop menu */}
-                        <Box display={{ xs: "none", sm: "none", md: "none", lg: "flex" }}>
+                        <Box display={{ xs: "none", sm: "none", md: "none", lg: "none", xl: "flex" }}>
                             <ButtonGroup>
                                 {headerPages.map((page, idx) =>
                                     page.key !== PageId.AccessCalculator ? <NavButton key={idx} page={page} /> : null
                                 )}
                             </ButtonGroup>
-                            <RedesignButtonPrimary href="/calculator/landing-0" className={classes.navCalc}>
+                            <Button variant="contained" color="secondary" href="/calculator/landing-0">
                                 Access Calculator
-                            </RedesignButtonPrimary>
+                            </Button>
                         </Box>
                         {/* mobile menu */}
 
                         {/* Drawer based nav */}
-                        <Box display={{ xs: "flex", sm: "flex", md: "flex", lg: "none" }}>
+                        <Box display={{ xs: "flex", sm: "flex", md: "flex", lg: "flex", xl: "none" }}>
                             <IconButton
                                 size="medium"
                                 edge="start"
