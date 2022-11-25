@@ -90,7 +90,7 @@ const Navigation = () => {
                         <Box style={{ flexGrow: 1 }} />
 
                         {/* desktop menu */}
-                        <Box display={{ xs: "none", sm: "none", md: "none", lg: "flex" }}>
+                        <Box display={{ xs: "none", sm: "none", md: "none", lg: "none", xl: "flex" }}>
                             <ButtonGroup>
                                 {headerPages.map((page, idx) =>
                                     page.key !== PageId.AccessCalculator ? <NavButton key={idx} page={page} /> : null
@@ -103,7 +103,7 @@ const Navigation = () => {
                         {/* mobile menu */}
 
                         {/* Drawer based nav */}
-                        <Box display={{ xs: "flex", sm: "flex", md: "flex", lg: "none" }}>
+                        <Box display={{ xs: "flex", sm: "flex", md: "flex", lg: "flex", xl: "none" }}>
                             <IconButton
                                 size="medium"
                                 edge="start"
