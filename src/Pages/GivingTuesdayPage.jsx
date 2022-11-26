@@ -41,7 +41,8 @@ const GivingTuesdayPage = () => {
                         </Typography>
                         <DonationVideo />
                         <Typography className={classes.bodyContent}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                            Hear directly from our founder Seamus Brugh on what donations mean for our project and
+                            people it serves. When we reach $22,937, Seamus will get pied in the face!
                         </Typography>
                     </Box>
 
@@ -75,7 +76,13 @@ const GivingTuesdayPage = () => {
                             Meet the people commited to making a difference.
                         </Typography>
                         <Typography className={classes.bodyContent}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                            Despite being a completely remote team, each Clearviction volunteer has committed their time
+                            and expertise to the success of this project. No two of us have the same background, but we
+                            are stronger when we pool our collective skills and knowledge.
+                        </Typography>
+                        <Typography className={classes.bodyContent}>
+                            We are committed to improving the future for those wishing to vacate their convictions
+                            because we know people are more than just the notations on their record.
                         </Typography>
                         <Box className={classes.centerImageBox}>
                             <Box
