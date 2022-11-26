@@ -32,7 +32,7 @@ export default makeStyles(theme => ({
             display: "inline-block",
         },
         position: "relative",
-        height: "5421px",
+        height: "5121px",
     },
     donationBoxInline: {
         [theme.breakpoints.up("xs")]: {

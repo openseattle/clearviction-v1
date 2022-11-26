@@ -5,6 +5,7 @@ import { useHomeStyles } from "../../Styles/useHomeStyles";
 
 const DonateFAQAccordion = () => {
     const classes = useHomeStyles();
+    const { pathname } = window.location;
 
     const questions = [
         {
@@ -102,6 +103,101 @@ const DonateFAQAccordion = () => {
             detailsID: "contact-paragraph",
         },
     ];
+
+    const tuesQuestions = [
+        {
+            summary: "How will my donation be used?",
+            summaryID: "how-button",
+            details: (
+                <Typography className={classes.contentTextStyle}>
+                    Clearviction is staffed by a group of dedicated volunteers, and any of our donations will go
+                    directly to supporting efforts to give those convicted a fresh start.
+                </Typography>
+            ),
+            detailsID: "how-paragraph",
+        },
+        {
+            summary: "Who can donate?",
+            summaryID: "who-button",
+            details: (
+                <Typography className={classes.contentTextStyle}>
+                    Anyone and everyone! However, Clearviction does not accept donations that are made as a political
+                    endorsement.
+                </Typography>
+            ),
+            detailsID: "who-paragraph",
+        },
+        {
+            summary: "Is is safe and secure for me to donate online?",
+            summaryID: "safe-button",
+            details: (
+                <Typography className={classes.contentTextStyle}>
+                    Clearviction utilizes Donorbox for safe an secure transactions. Donorbox's reliable security
+                    includes two-factor authentication, data encryption, fraud detection, and the assurance that none of
+                    your information is ever stored on Donorbox servers. For more information,
+                    <Link href="https://donorbox.org/features#security_and_safety" underline="hover">
+                        visit Donorbox.
+                    </Link>
+                </Typography>
+            ),
+            detailsID: "safe-paragraph",
+        },
+        {
+            summary: "I need a record of my donation for tax purposes.",
+            summaryID: "record-button",
+            details: (
+                <Typography className={classes.contentTextStyle}>
+                    Donorbox automatically sends you a receipt of your donation, even if you wish to remain anonymous.
+                    This receipt can be customized to include any information you require. Clearviction is an official
+                    501(c)(3) non-profit and donations to clearviction are all tax deductible. Any donatoins greater
+                    than or equal to $250 require a receipt.
+                    <Link
+                        href="mhttps://www.irs.gov/charities-non-profits/charitable-organizations/charitable-contributions-written-acknowledgments"
+                        underline="hover"
+                    >
+                        View the IRS' requirements.
+                    </Link>
+                </Typography>
+            ),
+            detailsID: "record-paragraph",
+        },
+        {
+            summary: "Can I make a donation by check?",
+            summaryID: "check-button",
+            details: (
+                <>
+                    <Typography className={classes.contentTextStyle}>
+                        Yes, please make the check out to Clearviction and mail it to:
+                    </Typography>
+                    <Typography className={classes.contentTextStyle}>
+                        Clearviction
+                        <br />
+                        802 5th Ave N, unit 213
+                        <br />
+                        Seattle, WA 98109
+                    </Typography>
+                </>
+            ),
+            detailsID: "check-paragraph",
+        },
+        {
+            summary: "Who should I contact if I have more questions?",
+            summaryID: "contact-button",
+            details: (
+                <Typography className={classes.contentTextStyle}>
+                    You can send us an email at{" "}
+                    <Link href="mailto:contact@clearviction.org" underline="hover">
+                        contact@clearviction.org
+                    </Link>{" "}
+                    and we will get back to you within 24 hours.
+                </Typography>
+            ),
+            detailsID: "contact-paragraph",
+        },
+    ];
+    if (pathname === "/givingtuesday") {
+        return <AccordionBuilder faqs={tuesQuestions} />;
+    }
     return <AccordionBuilder faqs={questions} />;
 };
 
