@@ -41,7 +41,8 @@ const GivingTuesdayPage = () => {
                         </Typography>
                         <DonationVideo />
                         <Typography className={classes.bodyContent}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit
+                            Hear directly from our founder Seamus Brugh on what donations mean for our project and
+                            people it serves. When we reach $22,937, Seamus will get pied in the face!
                         </Typography>
                     </Box>
 
@@ -56,9 +57,17 @@ const GivingTuesdayPage = () => {
                             </Typography>
                         </Box>
                         <Box className={classes.socialIcons}>
-                            <SocialIcon bgColor="#FFD200" url="https://twitter.com/Clearviction" />
-                            <SocialIcon url="https://instagram.com" bgColor="#FFD200" />
-                            <SocialIcon url="https://www.linkedin.com/company/clearviction" bgColor="#FFD200" />
+                            <SocialIcon
+                                className={classes.iconItem}
+                                bgColor="#FFD200"
+                                url="https://twitter.com/Clearviction"
+                            />
+                            <SocialIcon className={classes.iconItem} url="https://instagram.com" bgColor="#FFD200" />
+                            <SocialIcon
+                                className={classes.iconItem}
+                                url="https://www.linkedin.com/company/clearviction"
+                                bgColor="#FFD200"
+                            />
                         </Box>
                     </Container>
 

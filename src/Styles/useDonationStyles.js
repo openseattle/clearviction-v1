@@ -32,7 +32,7 @@ export default makeStyles(theme => ({
             display: "inline-block",
         },
         position: "relative",
-        height: "4521px",
+        height: "5021px",
     },
     donationBoxInline: {
         [theme.breakpoints.up("xs")]: {
@@ -77,6 +77,11 @@ export default makeStyles(theme => ({
         flexDirection: "column",
         justifyContent: "space-evenly",
         display: "flex",
+    },
+    iconItem: {
+        "&:hover": {
+            transform: "translateY(-2px)",
+        },
     },
     divider: {
         color: "grey",
