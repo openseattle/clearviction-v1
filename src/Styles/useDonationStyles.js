@@ -32,7 +32,7 @@ export default makeStyles(theme => ({
             display: "inline-block",
         },
         position: "relative",
-        height: "5021px",
+        height: "5421px",
     },
     donationBoxInline: {
         [theme.breakpoints.up("xs")]: {
@@ -125,64 +125,4 @@ export default makeStyles(theme => ({
             minHeight: "fit-content",
         },
     },
-    // darkBlueBackground: {
-    //     backgroundColor: theme.palette.primary.dark,
-    //     color: "white",
-    //     padding: theme.spacing(9),
-    //     marginBottom: theme.spacing(4),
-    //     [theme.breakpoints.down("md")]: {
-    //         padding: theme.spacing(9, 0),
-    //     },
-    // },
-    // linkTextStyle: {
-    //     marginRight: theme.spacing(1),
-    //     textDecoration: "none",
-    //     color: theme.palette.primary.main,
-    // },
-    // gridStyle: {
-    //     padding: theme.spacing(8, 0),
-    // },
-    // gridItemStyle: {
-    //     padding: theme.spacing(0.8),
-    //     [theme.breakpoints.down("md")]: {
-    //         marginBottom: theme.spacing(3),
-    //     },
-    // },
-    // buttonBoxStyle: {
-    //     display: "flex",
-    //     justifyContent: "center",
-    //     marginTop: theme.spacing(8),
-    // },
-    // iconStyle: {
-    //     width: "100%",
-    //     padding: theme.spacing(2),
-    // },
-    // cardGridStyle: {
-    //     padding: theme.spacing(1),
-    //     // [theme.breakpoints.down("sm")]: {
-    //     //   padding: theme.spacing(1)
-    //     // },
-    //     [theme.breakpoints.down("sm")]: {
-    //         padding: theme.spacing(1, 0),
-    //     },
-    // },
-    // theProblemIcon: {
-    //     color: theme.palette.secondary.main,
-    //     fontSize: "40px",
-    //     margin: theme.spacing(4),
-    // },
-    // listStyle: {
-    //     display: "flex",
-    //     flexDirection: "row",
-    //     justifyContent: "space-around",
-    // },
-    // centerText: {
-    //     textAlign: "center",
-    // },
-    // headingSpacing: {
-    //     marginBottom: theme.spacing(4),
-    // },
-    // spaceAfter: {
-    //     marginRight: theme.spacing(0),
-    // },
 }));
