@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import { Box, Container, Grid, Typography } from "@mui/material";
 
 import laptop from "../Assets/laptop.svg";
@@ -11,7 +9,6 @@ import searchEngineer from "../Assets/search_enginer.svg";
 
 import DonateFAQAccordion from "../Subpages/GetInvolved/DonateFAQAccordion";
 import DonateLevelCard from "../Components/DonateLevelCard";
-import DonateDialog from "../Components/DonateDialog";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
 
@@ -51,15 +48,6 @@ const donationLevels = [
 ];
 
 const DonatePage = ({ title, md }) => {
-    const [open, setOpen] = useState(false);
-
-    const handleClickOpen = () => {
-        setOpen(true);
-    };
-
-    const handleClose = () => {
-        setOpen(false);
-    };
     const classes = useGetInvolvedStyles();
     return (
         <>
@@ -97,7 +85,6 @@ const DonatePage = ({ title, md }) => {
                 <RedesignButtonPrimary href="https://donorbox.org/clearviction-givingtuesday">
                     donate
                 </RedesignButtonPrimary>
-                {/* <DonateDialog open={open} onClose={handleClose} /> */}
             </Container>
 
             <Container className={classes.regularContainerStyle} maxWidth="md">
