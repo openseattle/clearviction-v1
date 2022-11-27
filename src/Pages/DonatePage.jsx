@@ -94,8 +94,10 @@ const DonatePage = ({ title, md }) => {
             </Container>
 
             <Container className={classes.CTAButtonContainerStyle}>
-                <RedesignButtonPrimary onClick={handleClickOpen}>donate</RedesignButtonPrimary>
-                <DonateDialog open={open} onClose={handleClose} />
+                <RedesignButtonPrimary href="https://donorbox.org/clearviction-givingtuesday">
+                    donate
+                </RedesignButtonPrimary>
+                {/* <DonateDialog open={open} onClose={handleClose} /> */}
             </Container>
 
             <Container className={classes.regularContainerStyle} maxWidth="md">
