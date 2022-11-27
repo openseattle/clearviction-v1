@@ -1,6 +1,15 @@
-import { Container, Typography, Grid, Box, Divider } from "@mui/material";
-import { SocialIcon } from "react-social-icons";
+import {
+    TwitterShareButton,
+    TwitterIcon,
+    LinkedinShareButton,
+    LinkedinIcon,
+    FacebookShareButton,
+    FacebookIcon,
+} from "react-share";
 
+import { useEffect } from "react";
+
+import { Container, Typography, Grid, Box, Divider } from "@mui/material";
 // Components
 import useDonationStyles from "../Styles/useDonationStyles";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
@@ -15,6 +24,20 @@ import DonatePage from "./DonatePage";
 const GivingTuesdayPage = () => {
     const classes = useDonationStyles();
     useDocumentTitle("Giving Tuesday - ");
+
+    // useEffect(() => {
+    //     // meta tags needed for linkedin share to display all info.
+    //     document.head.innerHTML += `
+    //     <meta id="og-title" property="og:title" content="Clearviction Test title" />
+    //     <meta id="og-image" property="og:image" content="/home/glenn/projects/clearviction/public/apple-touch-icon.png" />
+    //     <meta id="og-description" property="og:description" content="Description that will show in the preview" />
+    //     `;
+    //     return function cleanup() {
+    //         document.getElementById("og-title").remove();
+    //         document.getElementById("og-image").remove();
+    //         document.getElementById("og-description").remove();
+    //     };
+    // }, []);
 
     return (
         <>
@@ -55,10 +78,27 @@ const GivingTuesdayPage = () => {
                                 family, and more.
                             </Typography>
                         </Box>
-                        <Box className={classes.socialIcons}>
-                            <SocialIcon bgColor="#FFD200" url="https://twitter.com/Clearviction" />
-                            <SocialIcon url="https://instagram.com" bgColor="#FFD200" />
-                            <SocialIcon url="https://www.linkedin.com/company/clearviction" bgColor="#FFD200" />
+                        <Box id="social" className={classes.socialIcons}>
+                            <TwitterShareButton
+                                title="Sample Title Giving Tuesday TITLE"
+                                url="http://clearviction.org/givingtuesday"
+                                hashtags={["givingtuesday", "clearviction"]}
+                                related={["Giving Tuesday Twitter Account?"]}
+                                source="http//clearviction.org"
+                            >
+                                <TwitterIcon size={50} round bgStyle={{ fill: "#FFD200" }} />
+                            </TwitterShareButton>
+                            <FacebookShareButton url="http://clearviction.org/givingtuesday" hashtag="#givingtuesday">
+                                <FacebookIcon size={50} round bgStyle={{ fill: "#FFD200" }} />
+                            </FacebookShareButton>
+                            <LinkedinShareButton
+                                url="http://clearviction.org"
+                                title="Clearviction Test title"
+                                summary="Clearviction test summary"
+                                source="http://clearviction.org"
+                            >
+                                <LinkedinIcon size={50} round bgStyle={{ fill: "#FFD200" }} />
+                            </LinkedinShareButton>
                         </Box>
                     </Container>
 
