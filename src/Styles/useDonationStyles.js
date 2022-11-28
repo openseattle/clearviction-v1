@@ -129,7 +129,7 @@ export default makeStyles(theme => ({
         marginTop: theme.spacing(6),
         marginBottom: theme.spacing(6),
         position: "sticky",
-        top: "50px",
+        top: "80px",
         justifyContent: "center",
         [theme.breakpoints.up("md")]: {
             display: "none",
