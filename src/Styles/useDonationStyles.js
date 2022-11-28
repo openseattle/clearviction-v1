@@ -125,4 +125,17 @@ export default makeStyles(theme => ({
             minHeight: "fit-content",
         },
     },
+    mobileDonate: {
+        marginTop: theme.spacing(6),
+        marginBottom: theme.spacing(6),
+        position: "sticky",
+        top: "50px",
+        justifyContent: "center",
+        [theme.breakpoints.up("md")]: {
+            display: "none",
+        },
+        [theme.breakpoints.down("md")]: {
+            display: "flex",
+        },
+    },
 }));
