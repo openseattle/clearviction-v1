@@ -131,6 +131,7 @@ export default makeStyles(theme => ({
         position: "sticky",
         top: "80px",
         justifyContent: "center",
+        zIndex: "1",
         [theme.breakpoints.up("md")]: {
             display: "none",
         },
