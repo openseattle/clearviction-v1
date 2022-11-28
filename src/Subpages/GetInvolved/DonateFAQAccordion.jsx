@@ -167,10 +167,11 @@ const DonateFAQAccordion = () => {
             details: (
                 <>
                     <Typography className={classes.contentTextStyle}>
-                        Yes, please make the check out to Clearviction and mail it to:
+                        Donorbox has the capability for direct ACH payments, but you are still welcome to mail a check.
+                        Please make the check out to Clearviction and mail it to:
                     </Typography>
                     <Typography className={classes.contentTextStyle}>
-                        Clearviction
+                        Seamus Brugh
                         <br />
                         802 5th Ave N, unit 213
                         <br />
