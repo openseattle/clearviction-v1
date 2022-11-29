@@ -63,7 +63,7 @@ const GetInvolvedPage = () => {
             <Container maxWidth="md">
                 <Divider className={classes.dividerStyle} />
             </Container>
-            <DonatePage title="Your donations can go a long way to make the project grow." md={3} />
+            <DonatePage title="Your donations can go a long way to make the project grow." md={3} showSmallDonate={true} />
             <Container maxWidth="md">
                 <Divider className={classes.dividerStyle} />
             </Container>

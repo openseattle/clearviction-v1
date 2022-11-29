@@ -44,7 +44,7 @@ export default makeStyles(theme => ({
         position: "relative",
         alignItems: "center",
         justifyContent: "center",
-        height: "400px",
+        height: "450px",
     },
     headingStyle: {
         marginBottom: theme.spacing(6),

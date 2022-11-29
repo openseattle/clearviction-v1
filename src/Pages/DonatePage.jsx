@@ -47,7 +47,7 @@ const donationLevels = [
     },
 ];
 
-const DonatePage = ({ title, md }) => {
+const DonatePage = ({ title, md, showSmallDonate }) => {
     const classes = useGetInvolvedStyles();
     return (
         <>
@@ -80,13 +80,15 @@ const DonatePage = ({ title, md }) => {
                     ))}
                 </Grid>
             </Container>
-
-            <Container className={classes.CTAButtonContainerStyle}>
-                <RedesignButtonPrimary href="https://donorbox.org/clearviction-givingtuesday">
-                    donate
-                </RedesignButtonPrimary>
-            </Container>
-
+            {showSmallDonate ? 
+                <Container className={classes.CTAButtonContainerStyle}>
+                    <RedesignButtonPrimary href="https://donorbox.org/clearviction-givingtuesday">
+                        donate
+                    </RedesignButtonPrimary>
+                </Container>
+                :
+                <></>
+            }
             <Container className={classes.regularContainerStyle} maxWidth="md">
                 <Typography className={classes.headingStyle} variant="h3">
                     Frequently Asked Questions

@@ -98,14 +98,14 @@ const GivingTuesdayPage = () => {
                     <Divider className={classes.divider} />
 
                     <Container>
-                        <DonatePage title="How will your donations help Clearviction's goals?" md={6} />
+                        <DonatePage title="How will your donations help Clearviction's goals?" md={6} showSmallDonate={false} />
                     </Container>
 
                     <Divider className={classes.divider} />
 
                     <Container>
                         <Typography className={classes.headingStyle} variant="h2">
-                            Meet the people commited to making a difference.
+                            Meet the people committed to making a difference.
                         </Typography>
                         <Typography className={classes.bodyContent}>
                             Despite being a completely remote team, each Clearviction volunteer has committed their time
