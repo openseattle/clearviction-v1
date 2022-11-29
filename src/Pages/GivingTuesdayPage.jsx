@@ -25,22 +25,9 @@ const GivingTuesdayPage = () => {
     const classes = useDonationStyles();
     useDocumentTitle("Giving Tuesday - ");
 
-    // useEffect(() => {
-    //     // meta tags needed for linkedin share to display all info.
-    //     document.head.innerHTML += `
-    //     <meta id="og-title" property="og:title" content="Clearviction Test title" />
-    //     <meta id="og-image" property="og:image" content="/home/glenn/projects/clearviction/public/apple-touch-icon.png" />
-    //     <meta id="og-description" property="og:description" content="Description that will show in the preview" />
-    //     `;
-    //     return function cleanup() {
-    //         document.getElementById("og-title").remove();
-    //         document.getElementById("og-image").remove();
-    //         document.getElementById("og-description").remove();
-    //     };
-    // }, []);
-
     return (
         <>
+
             <RedesignHeroPanel className={classes.customHero} title="Giving Tuesday">
                 <Grid container>
                     <Grid item xs={12} sm={12} md={6}>
@@ -74,28 +61,24 @@ const GivingTuesdayPage = () => {
                                 Your voice is a powerful tool. Share our fundraiser.
                             </Typography>
                             <Typography className={classes.subheadingStyle} variant="body1">
-                                Help Clearviction expand its reach by sharing your donation activity with friends,
+                                234 Help Clearviction expand its reach by sharing your donation activity with friends,
                                 family, and more.
                             </Typography>
                         </Box>
                         <Box id="social" className={classes.socialIcons}>
                             <TwitterShareButton
-                                title="Sample Title Giving Tuesday TITLE"
-                                url="http://clearviction.org/givingtuesday"
-                                hashtags={["givingtuesday", "clearviction"]}
-                                related={["Giving Tuesday Twitter Account?"]}
-                                source="http//clearviction.org"
+                                title="This #GivingTuesday, join the global movement and please support Clearviction today."
+                                url="http://www.clearviction.org/givingtuesday"
+                                hashtags={["Clearviction", "socialjustice", "CivicTech", "givingseason", "socialimpact", "givingtuesday2022"]}
+                                source="http://www.clearviction.org/givingtuesday"
                             >
                                 <TwitterIcon size={50} round bgStyle={{ fill: "#FFD200" }} />
                             </TwitterShareButton>
-                            <FacebookShareButton url="http://clearviction.org/givingtuesday" hashtag="#givingtuesday">
+                            <FacebookShareButton url="http://www.clearviction.org/givingtuesday" hashtag="#clearviction">
                                 <FacebookIcon size={50} round bgStyle={{ fill: "#FFD200" }} />
                             </FacebookShareButton>
                             <LinkedinShareButton
-                                url="http://clearviction.org"
-                                title="Clearviction Test title"
-                                summary="Clearviction test summary"
-                                source="http://clearviction.org"
+                                url="http://www.clearviction.org/givingtuesday"
                             >
                                 <LinkedinIcon size={50} round bgStyle={{ fill: "#FFD200" }} />
                             </LinkedinShareButton>
@@ -151,3 +134,5 @@ const GivingTuesdayPage = () => {
 };
 
 export default GivingTuesdayPage;
+
+
