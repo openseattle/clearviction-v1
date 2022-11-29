@@ -34,10 +34,10 @@ const HomePage = () => {
                         }}
                     >
                         <Box mb={{ xs: 2, md: 0 }} mr={{ xs: 0, md: 8 }}>
-                            <Typography variant="h3" color="secondary.light">
+                            <Typography variant="h2" color="secondary.light" fontWeight="700">
                                 #GivingTuesday
                             </Typography>
-                            <Typography variant="subtitle1" sx={{ fontSize: 16, lineHeight: "2em" }}>
+                            <Typography variant="subtitle1" sx={{ fontSize: 16, lineHeight: "2em" }} textAlign="center">
                                 November 29, 2022
                             </Typography>
                         </Box>
