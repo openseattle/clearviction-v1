@@ -63,7 +63,7 @@ const GivingTuesdayPage = () => {
                                 Your voice is a powerful tool. Share our fundraiser.
                             </Typography>
                             <Typography className={classes.subheadingStyle} variant="body1">
-                                234 Help Clearviction expand its reach by sharing your donation activity with friends,
+                                Help Clearviction expand its reach by sharing your donation activity with friends,
                                 family, and more.
                             </Typography>
                         </Box>
