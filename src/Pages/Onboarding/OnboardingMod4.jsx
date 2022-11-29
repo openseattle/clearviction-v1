@@ -45,7 +45,7 @@ const otherTeams = {
             linkIcon: "doc",
             modalTitle: "How to join other teams",
             modalParagraph1:
-                "Message the correspondent slack channel of the team introducing yourself and stating that you want to join. ",
+                "Message the correspondent Slack channel of the team introducing yourself and stating that you want to join.",
             modalParagraph2: "Attend their weekly meetings and perform the tasks assigned.",
             modalParagraph3: "Better to reliably and consistently show to one than dabble in more than one.",
         },
@@ -86,34 +86,34 @@ const teamDesc = {
         {
             linkTitle: "Scrum",
             linkIcon: "teamIcon",
-            linkImg: <img src={scrum} alt="" className="makeStyles-linkIcon-11" />,
+            linkImg: <img src={scrum} alt="" className="makeStyles-linkIcon-61" />,
             modalTitle: "Scrum",
             modalParagraph1:
                 "The Scrum team works in 2 week sprints where we focus on a few specific tasks each sprint.",
             modalParagraph2:
-                "Interested? Join the “calculator scrum team” on slack. There you will see posts asking for volunteers for the next scrum team, and what disciplines we are looking for. Sign up by commenting and adding your name to this team!",
+                "Interested? Join the “calculator scrum team” on Slack. There you will see posts asking for volunteers for the next scrum team, and what disciplines we are looking for. Sign up by commenting and adding your name to this team!",
             modalParagraph3: "Please note, only people who have finished their Agile learning task should join Scrum.",
         },
         {
             linkTitle: "Marketing",
             linkIcon: "teamIcon",
-            linkImg: <img src={marketing} alt="" className="makeStyles-linkIcon-11" />,
+            linkImg: <img src={marketing} alt="" className="makeStyles-linkIcon-61" />,
             modalTitle: "Marketing",
             modalParagraph1:
-                "We promote Clearviction’s mission, vision and causes to get the attention of potential volunteers, partners and donors. ",
+                "We promote Clearviction’s mission, vision and causes to get the attention of potential volunteers, partners and donors.",
         },
         {
             linkTitle: "User Research",
             linkIcon: "teamIcon",
-            linkImg: <img src={userResearch} alt="" className="makeStyles-linkIcon-11" />,
+            linkImg: <img src={userResearch} alt="" className="makeStyles-linkIcon-61" />,
             modalTitle: "User Research",
             modalParagraph1:
-                "We provide relevant insights on how users interact with ClearViction, through UX methods including user interviews, usability testing, persona research, surveys and more.",
+                "We provide relevant insights on how users interact with Clearviction, through UX methods including user interviews, usability testing, persona research, surveys and more.",
         },
         {
             linkTitle: "Product",
             linkIcon: "teamIcon",
-            linkImg: <img src={product} alt="" className="makeStyles-linkIcon-11" />,
+            linkImg: <img src={product} alt="" className="makeStyles-linkIcon-61" />,
             modalTitle: "Product",
             modalParagraph1:
                 "We decide what direction the product should go in, what the priority should be, and make sure it happens in a way that makes a positive impact for the user.",
@@ -121,10 +121,10 @@ const teamDesc = {
         {
             linkTitle: "Nemo",
             linkIcon: "teamIcon",
-            linkImg: <img src={nemo} alt="" className="makeStyles-linkIcon-11" />,
+            linkImg: <img src={nemo} alt="" className="makeStyles-linkIcon-61" />,
             modalTitle: "Nemo",
             modalParagraph1:
-                "We are a catch-all bucket for work that either doesn't fall under the umbrellas of other teams (like dealing with bugs) AND work that needs to be done that the other teams don't have time for. ",
+                "We are a catch-all bucket for work that either doesn't fall under the umbrellas of other teams (like dealing with bugs) AND work that needs to be done that the other teams don't have time for.",
             modalParagraph2:
                 "This team also serves as a spring board for newly onboarded volunteers to get a taste of what we're working on and how we collaborate. Our work is generally broken down into several Task Groups with Nemo members leading up each of those efforts.",
         },
