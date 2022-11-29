@@ -110,9 +110,9 @@ export default makeStyles(theme => ({
         overflow: "hidden",
     },
     centeredImage: {
-        height: 300,
+        height: 400,
         width: 500,
-        maxHeight: { xs: 235, md: 300 },
+        maxHeight: { xs: 235, md: 400 },
         maxWidth: { xs: 338, md: 500 },
         marginLeft: "auto",
         marginRight: "auto",
