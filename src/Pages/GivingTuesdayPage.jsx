@@ -29,11 +29,17 @@ const GivingTuesdayPage = () => {
                 </Grid>
             </RedesignHeroPanel>
             <Box className={classes.contentContainer}>
-                <Container>
+                <Container height="5400px" position="relative">
                     <Container className={classes.donationBoxInline}>
                         <DonationForm />
                     </Container>
                     <DonationMeter />
+
+                    <Container className={classes.mobileDonate}>
+                        <RedesignButtonPrimary href="https://donorbox.org/clearviction-givingtuesday">
+                            donate
+                        </RedesignButtonPrimary>
+                    </Container>
 
                     <Box className={classes.regularContainer}>
                         <Typography className={classes.headingStyle} variant="h2">
