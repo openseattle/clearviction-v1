@@ -1,6 +1,13 @@
-import { Container, Typography, Grid, Box, Divider } from "@mui/material";
-import { SocialIcon } from "react-social-icons";
+import {
+    TwitterShareButton,
+    TwitterIcon,
+    LinkedinShareButton,
+    LinkedinIcon,
+    FacebookShareButton,
+    FacebookIcon,
+} from "react-share";
 
+import { Container, Typography, Grid, Box, Divider } from "@mui/material";
 // Components
 import useDonationStyles from "../Styles/useDonationStyles";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
@@ -9,8 +16,6 @@ import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import { DonationMeter, DonationForm } from "../Components/DonationForm";
 import DonationVideo from "../Components/DonationVideo";
 import DonatePage from "./DonatePage";
-
-// import { AddBoxSharp } from "@mui/icons-material";
 
 const GivingTuesdayPage = () => {
     const classes = useDonationStyles();
@@ -29,7 +34,7 @@ const GivingTuesdayPage = () => {
                 </Grid>
             </RedesignHeroPanel>
             <Box className={classes.contentContainer}>
-                <Container height="5400px" position="relative">
+                <Container>
                     <Container className={classes.donationBoxInline}>
                         <DonationForm />
                     </Container>
@@ -62,17 +67,31 @@ const GivingTuesdayPage = () => {
                                 family, and more.
                             </Typography>
                         </Box>
-                        <Box className={classes.socialIcons}>
-                            <SocialIcon
-                                className={classes.iconItem}
-                                bgColor="#FFD200"
-                                url="https://www.facebook.com/people/Clearviction/100083375737419"
-                            />
-                            <SocialIcon
-                                className={classes.iconItem}
-                                url="https://www.linkedin.com/company/clearviction"
-                                bgColor="#FFD200"
-                            />
+                        <Box id="social" className={classes.socialIcons}>
+                            <TwitterShareButton
+                                title="This #GivingTuesday, join the global movement and please support Clearviction today."
+                                url="http://www.clearviction.org/givingtuesday"
+                                hashtags={[
+                                    "Clearviction",
+                                    "socialjustice",
+                                    "CivicTech",
+                                    "givingseason",
+                                    "socialimpact",
+                                    "givingtuesday2022",
+                                ]}
+                                source="http://www.clearviction.org/givingtuesday"
+                            >
+                                <TwitterIcon size={50} round bgStyle={{ fill: "#FFD200" }} />
+                            </TwitterShareButton>
+                            <FacebookShareButton
+                                url="http://www.clearviction.org/givingtuesday"
+                                hashtag="#clearviction"
+                            >
+                                <FacebookIcon size={50} round bgStyle={{ fill: "#FFD200" }} />
+                            </FacebookShareButton>
+                            <LinkedinShareButton url="http://www.clearviction.org/givingtuesday">
+                                <LinkedinIcon size={50} round bgStyle={{ fill: "#FFD200" }} />
+                            </LinkedinShareButton>
                         </Box>
                     </Container>
 
@@ -92,10 +111,6 @@ const GivingTuesdayPage = () => {
                             Despite being a completely remote team, each Clearviction volunteer has committed their time
                             and expertise to the success of this project. No two of us have the same background, but we
                             are stronger when we pool our collective skills and knowledge.
-                        </Typography>
-                        <Typography className={classes.bodyContent}>
-                            We are committed to improving the future for those wishing to vacate their convictions
-                            because we know people are more than just the notations on their record.
                         </Typography>
                         <Box className={classes.centerImageBox}>
                             <Box

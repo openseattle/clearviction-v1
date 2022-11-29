@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography, Button } from "@mui/material";
 import { trackPageview } from "../trackingUtils";
 import city from "../Assets/city.svg";
 import checklist from "../Assets/checklist.svg";
@@ -13,7 +13,6 @@ import ContentSection from "../Components/ContentSection";
 import HomeFAQAccordion from "../Subpages/Home/HomeFAQAccordion";
 import { useHomeStyles } from "../Styles/useHomeStyles";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
-import { RedesignButtonSecondary } from "../ui-kit/RedesignButtonSecondary";
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
@@ -51,9 +50,9 @@ const HomePage = () => {
                                 conviction for free in less than 10 minutes!
                             </Typography>
                             <Box paddingTop={12}>
-                                <RedesignButtonPrimary href="/calculator/landing-0" className={classes.calcHome}>
+                                <Button variant="contained" color="secondary" href="/calculator/landing-0" fullWidth>
                                     Access Calculator
-                                </RedesignButtonPrimary>
+                                </Button>
                             </Box>
                         </Grid>
                         <Grid item xs={12} sm={6}>
@@ -156,9 +155,19 @@ const HomePage = () => {
                             <Typography variant="h3" className={classes.headingStyle}>
                                 Help us improve the calculator by participating in research
                             </Typography>
-                            <RedesignButtonSecondary href="https://docs.google.com/forms/d/1KXmPrwzHeE8_EEL88RFkjOFP4S1A52Ode1vV6SJijao/viewform?edit_requested=true">
+                            <Button
+                                fullWidth
+                                variant="contained"
+                                color="secondary"
+                                href="https://docs.google.com/forms/d/1KXmPrwzHeE8_EEL88RFkjOFP4S1A52Ode1vV6SJijao/viewform?edit_requested=true"
+                                sx={theme => ({
+                                    "&:hover": {
+                                        backgroundColor: theme.palette.primary.dark,
+                                    },
+                                })}
+                            >
                                 Learn more
-                            </RedesignButtonSecondary>
+                            </Button>
                         </Grid>
                         <Grid item xs={12} sm={6} md={4}>
                             <img src={checklistTwo} className={classes.iconStyle} alt="" />

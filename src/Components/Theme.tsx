@@ -228,6 +228,38 @@ theme.components = {
             },
         },
     },
+    MuiButton: {
+        styleOverrides: {
+            root: {
+                borderRadius: 50,
+            },
+            outlined: {
+                borderWidth: 3,
+                "&:hover": {
+                    borderWidth: 3,
+                },
+            },
+            outlinedPrimary: {
+                backgroundColor: "white",
+                color: theme.palette.primary.main,
+                borderColor: theme.palette.primary.main,
+                "&:hover": {
+                    backgroundColor: theme.palette.primary.main,
+                    color: theme.palette.primary.contrastText,
+                },
+            },
+            containedPrimary: {
+                "&:hover": {
+                    backgroundColor: theme.palette.secondary.main,
+                    color: theme.palette.secondary.contrastText,
+                },
+            },
+            containedSecondary: {
+                backgroundColor: "white",
+                "&:hover": { backgroundColor: theme.palette.primary.main, color: theme.palette.primary.contrastText },
+            },
+        },
+    },
 };
 
 export default theme;

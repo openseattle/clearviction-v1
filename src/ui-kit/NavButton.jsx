@@ -73,7 +73,7 @@ const NavButton = ({ page, theme }) => {
         );
     }
     return (
-        <Button className={classes.navButtonStyle} href={url}>
+        <Button variant="text" sx={{ textTransform: "none", color: "white" }} href={url}>
             <Typography className={classes.navText}>{name}</Typography>
         </Button>
     );
