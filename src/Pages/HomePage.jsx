@@ -28,14 +28,14 @@ const HomePage = () => {
             <Box className={classes.darkBlueBackground}>
                 <Container maxWidth="lg">
                     <Box className={classes.givingTuesdayBanner}>
-                        <div>
+                        <Box>
                             <Typography className={classes.givingTuesdayHeader} variant="h2">
                                 #GivingTuesday
                             </Typography>
                             <Typography className={classes.givingTuesdayDate} variant="subtitle1">
                                 November 29, 2022
                             </Typography>
-                        </div>
+                        </Box>
                         <Box className={classes.givingTuesdayButton}>
                             <RedesignButtonPrimary href="/givingtuesday">Donate Now</RedesignButtonPrimary>
                         </Box>
