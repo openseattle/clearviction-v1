@@ -46,18 +46,6 @@ export default makeStyles(theme => ({
         justifyContent: "center",
         height: "400px",
     },
-    donationBoxInline: {
-        [theme.breakpoints.up("xs")]: {
-            display: "flex",
-        },
-        [theme.breakpoints.up("md")]: {
-            display: "none",
-        },
-        position: "relative",
-        alignItems: "center",
-        justifyContent: "center",
-        height: "400px",
-    },
     headingStyle: {
         marginBottom: theme.spacing(6),
         color: theme.palette.primary.dark,
