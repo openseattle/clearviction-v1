@@ -17,7 +17,6 @@ import { DonationMeter, DonationForm } from "../Components/DonationForm";
 import DonationVideo from "../Components/DonationVideo";
 import DonatePage from "./DonatePage";
 
-
 const GivingTuesdayPage = () => {
     const classes = useDonationStyles();
     useDocumentTitle("Giving Tuesday - ");
@@ -35,7 +34,6 @@ const GivingTuesdayPage = () => {
                 </Grid>
             </RedesignHeroPanel>
             <Box className={classes.contentContainer}>
-
                 <Container>
                     <Container className={classes.donationBoxInline}>
                         <DonationForm />
@@ -73,17 +71,25 @@ const GivingTuesdayPage = () => {
                             <TwitterShareButton
                                 title="This #GivingTuesday, join the global movement and please support Clearviction today."
                                 url="http://www.clearviction.org/givingtuesday"
-                                hashtags={["Clearviction", "socialjustice", "CivicTech", "givingseason", "socialimpact", "givingtuesday2022"]}
+                                hashtags={[
+                                    "Clearviction",
+                                    "socialjustice",
+                                    "CivicTech",
+                                    "givingseason",
+                                    "socialimpact",
+                                    "givingtuesday2022",
+                                ]}
                                 source="http://www.clearviction.org/givingtuesday"
                             >
                                 <TwitterIcon size={50} round bgStyle={{ fill: "#FFD200" }} />
                             </TwitterShareButton>
-                            <FacebookShareButton url="http://www.clearviction.org/givingtuesday" hashtag="#clearviction">
+                            <FacebookShareButton
+                                url="http://www.clearviction.org/givingtuesday"
+                                hashtag="#clearviction"
+                            >
                                 <FacebookIcon size={50} round bgStyle={{ fill: "#FFD200" }} />
                             </FacebookShareButton>
-                            <LinkedinShareButton
-                                url="http://www.clearviction.org/givingtuesday"
-                            >
+                            <LinkedinShareButton url="http://www.clearviction.org/givingtuesday">
                                 <LinkedinIcon size={50} round bgStyle={{ fill: "#FFD200" }} />
                             </LinkedinShareButton>
                         </Box>
@@ -140,5 +146,3 @@ const GivingTuesdayPage = () => {
 };
 
 export default GivingTuesdayPage;
-
-
