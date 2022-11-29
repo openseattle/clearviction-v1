@@ -134,7 +134,7 @@ const DonateFAQAccordion = () => {
                 <Typography className={classes.contentTextStyle}>
                     Clearviction utilizes Donorbox for safe an secure transactions. Donorbox's reliable security
                     includes two-factor authentication, data encryption, fraud detection, and the assurance that none of
-                    your information is ever stored on Donorbox servers. For more information,
+                    your information is ever stored on Donorbox servers. For more information,{" "}
                     <Link href="https://donorbox.org/features#security_and_safety" underline="hover">
                         visit Donorbox.
                     </Link>
@@ -150,7 +150,7 @@ const DonateFAQAccordion = () => {
                     Donorbox automatically sends you a receipt of your donation, even if you wish to remain anonymous.
                     This receipt can be customized to include any information you require. Clearviction is an official
                     501(c)(3) non-profit and donations to clearviction are all tax deductible. Any donatoins greater
-                    than or equal to $250 require a receipt.
+                    than or equal to $250 require a receipt.{" "}
                     <Link
                         href="mhttps://www.irs.gov/charities-non-profits/charitable-organizations/charitable-contributions-written-acknowledgments"
                         underline="hover"

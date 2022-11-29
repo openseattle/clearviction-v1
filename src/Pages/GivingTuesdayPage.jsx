@@ -66,9 +66,8 @@ const GivingTuesdayPage = () => {
                             <SocialIcon
                                 className={classes.iconItem}
                                 bgColor="#FFD200"
-                                url="https://twitter.com/Clearviction"
+                                url="https://www.facebook.com/people/Clearviction/100083375737419"
                             />
-                            <SocialIcon className={classes.iconItem} url="https://instagram.com" bgColor="#FFD200" />
                             <SocialIcon
                                 className={classes.iconItem}
                                 url="https://www.linkedin.com/company/clearviction"
@@ -103,7 +102,7 @@ const GivingTuesdayPage = () => {
                                 className={classes.centeredImage}
                                 component="img"
                                 alt=""
-                                src="https://via.placeholder.com/500x300)"
+                                src="https://cvp-team-photos.s3.us-west-2.amazonaws.com/team-gif.gif"
                             />
                         </Box>
                     </Container>
