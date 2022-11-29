@@ -48,6 +48,7 @@ const donationLevels = [
 ];
 
 const DonatePage = ({ title, md }) => {
+
     const classes = useGetInvolvedStyles();
     return (
         <>
