@@ -2,13 +2,16 @@
 
 ## Table of Contents
 
--   [About the Project](#about-the-project)
-    -   [Our Mission](#our-mission)
--   [Development Setup](#development-setup)
-    -   [Installation](#installation)
--   [Contributing](#contributing)
--   [Get In Contact](#get-in-contact)
--   [License](#license)
+- [Clearviction](#clearviction)
+  - [Table of Contents](#table-of-contents)
+  - [About The Project](#about-the-project)
+  - [Our Mission](#our-mission)
+  - [Development Setup](#development-setup)
+    - [Installation](#installation)
+    - [Other Commands](#other-commands)
+  - [Development Process](#development-process)
+  - [Get In Contact](#get-in-contact)
+  - [License](#license)
 
 ## About The Project
 
@@ -35,8 +38,8 @@ This repo is for our informational website, which will eventually be home to the
 
 To get our static website up and running on your machine, you can follow the commands below:
 
-```
-$ git clone https://github.com/openseattle/cvp
+```bash
+git clone https://github.com/openseattle/cvp
 ```
 
 ### Installation
@@ -45,19 +48,19 @@ In the project directory, you can run:
 
 1. Ensure you have `nodejs` installed on your machine using whatever system package manager, on Mac using [homebrew](https://brew.sh) run:
 
-    ```
+    ```bash
     brew install nodejs
     ```
 
 1. Install project dependecies
 
-    ```
+    ```bash
     npm install
     ```
 
 1. Start the app in development mode
 
-    ```
+    ```bash
     npm start
     ```
 
@@ -65,18 +68,24 @@ In the project directory, you can run:
 
 ### Other Commands
 
-#### `npm test`
+```bash
+npm test
+```
 
-Launches the test runner in the interactive watch mode.<br>
+Launches the test runner in the interactive watch mode.
+
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests)
 for more information.
 
-#### `npm run build`
+```bash
+npm run build
+```
 
-Builds the app for production to the `build` folder.<br>
+Builds the app for production to the `build` folder.
+
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.<br>
+The build is minified and the filenames include the hashes.
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.

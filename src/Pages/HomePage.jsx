@@ -26,6 +26,31 @@ const HomePage = () => {
         <>
             <Box className={classes.darkBlueBackground}>
                 <Container maxWidth="lg">
+                    <Box
+                        sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            flexDirection: { xs: "column", md: "row" },
+                        }}
+                    >
+                        <Box mb={{ xs: 2, md: 0 }} mr={{ xs: 0, md: 8 }}>
+                            <Typography variant="h2" color="secondary.light" fontWeight="700">
+                                #GivingTuesday
+                            </Typography>
+                            <Typography variant="subtitle1" sx={{ fontSize: 16, lineHeight: "2em" }} textAlign="center">
+                                November 29, 2022
+                            </Typography>
+                        </Box>
+                        <Button
+                            sx={{ width: "fit-content", paddingX: 4 }}
+                            variant="contained"
+                            color="primary"
+                            href="/givingtuesday"
+                        >
+                            Donate Now
+                        </Button>
+                    </Box>
+
                     <Typography className={classes.headingStyle} variant="h1">
                         Washington's Vacation Eligibility Calculator
                     </Typography>

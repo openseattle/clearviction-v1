@@ -26,24 +26,28 @@ const remoteWork = {
 
 const trust = {
     title: "Trust practices",
-    linkIcon: "trustDoc",
-    linkTitle: "Trust practices",
-    linkLocation: "https://airtable.com/appfJZShN8K4tcWHU/tblwBmfy7sXtKZb8y/viwB9AEhG2TBetEA0?blocks=hide",
-    bullets: [
-        "Showing up and engaging/participating fully: Make sure people are active in the project and interacting with other team members.",
-        "Expectation setting: Ensure there is an agreement between people with expectations and people expected to satisfy them.",
-        "Safe space: Create a safe space for people to independently make decisions and challenge the ones they disagree with.",
-        "Positivity: Navigate difficult conversations and improvement with positivity, honesty, and shared responsibility.",
-        "Respect: Everyone should be empowered to ask questions and engage in conversations, but should do it respectfully.",
-        "Transparency: Practice open and honest conversations with team members and create a culture where communication can flow freely between team members.",
-        "In the event of conflicting information, the SOT is authoritative.",
-        "Always include context into your communication.",
-        "If you call a meeting, you must have an agenda published and attached to the calendar event before the meeting starts.",
-        "Meetings start on time and end on time.",
-        "Attend your scheduled meetings. If you will be absent, mark it on the agenda (linked in calendar event).",
-        "Tell the team when you are on vacation or out for any reason (through this Airtable form and on the Slack channel #comings-and-goings).",
-        "Iterative and incremental creation is a keystone in remote work. It's a prerequisite for asynchronous contributions, Agile production cycles, and designing/building products in our rapidly evolving world.",
-        "Set clear expectations: We are here to work together in service of our mission, which requires relying on each other. Any time someone is relying on you for something, it's important to establish a shared understanding of what that something is.",
+    links: [
+        {
+            linkIcon: "trustDoc",
+            linkTitle: "Trust practices",
+            linkLocation: "https://airtable.com/appfJZShN8K4tcWHU/tblwBmfy7sXtKZb8y/viwB9AEhG2TBetEA0?blocks=hide",
+            bullets: [
+                "Showing up and engaging/participating fully: Make sure people are active in the project and interacting with other team members.",
+                "Expectation setting: Ensure there is an agreement between people with expectations and people expected to satisfy them.",
+                "Safe space: Create a safe space for people to independently make decisions and challenge the ones they disagree with.",
+                "Positivity: Navigate difficult conversations and improvement with positivity, honesty, and shared responsibility.",
+                "Respect: Everyone should be empowered to ask questions and engage in conversations, but should do it respectfully.",
+                "Transparency: Practice open and honest conversations with team members and create a culture where communication can flow freely between team members.",
+                "In the event of conflicting information, the SOT is authoritative.",
+                "Always include context into your communication.",
+                "If you call a meeting, you must have an agenda published and attached to the calendar event before the meeting starts.",
+                "Meetings start on time and end on time.",
+                "Attend your scheduled meetings. If you will be absent, mark it on the agenda (linked in calendar event).",
+                "Tell the team when you are on vacation or out for any reason (through this Airtable form and on the Slack channel #comings-and-goings).",
+                "Iterative and incremental creation is a keystone in remote work. It's a prerequisite for asynchronous contributions, Agile production cycles, and designing/building products in our rapidly evolving world.",
+                "Set clear expectations: We are here to work together in service of our mission, which requires relying on each other. Any time someone is relying on you for something, it's important to establish a shared understanding of what that something is.",
+            ],
+        },
     ],
 };
 
@@ -51,12 +55,18 @@ const truth = {
     title: "Source of Truth",
     paragraph1:
         "When we work asynchronously, divided by time zones and overloaded calendars, it's imperative that people be able to find answers to their own questions. This becomes a possibility only when information lives in a certain place, and conflicts are avoided.",
-    linkIcon: "link",
-    linkTitle: "CV Materials",
-    linkLocation: "https://drive.google.com/drive/u/5/folders/14NbUv8CE6e1vnKifNbA3Kl2dsghTYPk2",
-    linkIcon2: "link",
-    linkTitle2: "Our SOT Reference",
-    linkLocation2: "https://docs.google.com/document/d/1QaJJ5JD2AHsaB1A8zHTTjtvmFDk7wpYTbj4UBJIcFzI/edit",
+    links: [
+        {
+            linkIcon: "link",
+            linkTitle: "CV Materials",
+            linkLocation: "https://drive.google.com/drive/u/5/folders/14NbUv8CE6e1vnKifNbA3Kl2dsghTYPk2",
+        },
+        {
+            linkIcon: "link",
+            linkTitle: "Our SOT Reference",
+            linkLocation: "https://docs.google.com/document/d/1QaJJ5JD2AHsaB1A8zHTTjtvmFDk7wpYTbj4UBJIcFzI/edit",
+        },
+    ],
 };
 
 const button1 = {
