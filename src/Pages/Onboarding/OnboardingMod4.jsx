@@ -1,5 +1,5 @@
 import { Grid, Typography, Box } from "@mui/material";
-import Theme from "../../Components/Theme";
+import Theme from "../../Components/Theme.tsx";
 import { useModuleContentStyles } from "../../Styles/Onboarding/useModuleContentStyles";
 
 // Components
@@ -95,7 +95,7 @@ const button2 = {
     text: "homepage",
 };
 
-function OnboardingMod4() {
+const OnboardingMod4 = () => {
     const classes = useModuleContentStyles();
     return (
         <div>
@@ -156,7 +156,7 @@ function OnboardingMod4() {
                         textAlign: "center",
                         padding: "0 50px",
                         maxWidth: "77vw",
-                        [Theme.breakpoints.down('md')]: {
+                        [Theme.breakpoints.down("md")]: {
                             padding: "0 40px",
                         },
                     }}
@@ -212,6 +212,6 @@ function OnboardingMod4() {
             <Footer button1={button1} button2={button2} />
         </div>
     );
-}
+};
 
 export default OnboardingMod4;

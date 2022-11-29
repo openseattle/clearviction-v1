@@ -1,23 +1,21 @@
 import { useEffect } from "react";
-import { trackPageview } from "../trackingUtils";
 import { useLocation } from "react-router-dom";
-import calculatorPages from "../data/calculatorPages";
 import "../CSS/Calculator.css";
 
 /** MATERIAL UI IMPORTS */
 import { Container, Grid } from "@mui/material";
 import MainBranchTitle from "./Calculator/MainBranchTitle";
 import SpecialCaseTitle from "./Calculator/SpecialCaseTitle";
-import { PageType } from "../data/calculatorPagesTypes";
+import { PageType } from "../data/calculatorPagesTypes.ts";
 import QuestionScreen from "./Calculator/QuestionScreen";
 import EndScreen from "./Calculator/EndScreen";
 import QuickStartGuide from "./Calculator/QuickStartGuide";
-import ProgressBar from "../Components/ProgressBar";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
+import calculatorPages from "../data/calculatorPages.ts";
+import { trackPageview } from "../trackingUtils";
 
 const CalculatorPage = () => {
-    const [documentTitle, setDocumentTitle] = useDocumentTitle("Eligibility Calculator - ");
-    console.log("enter calculator");
+    useDocumentTitle("Eligibility Calculator - ");
     const { pathname } = useLocation();
     const indexOfPageId = pathname.split("/").length - 1;
     const pageId = pathname.split("/")[indexOfPageId];
@@ -28,8 +26,8 @@ const CalculatorPage = () => {
 
     const { header, body, type, buttons, disclaimer, tooltip, progressBar, showRestartButton } = content;
 
-    const renderPage = type => {
-        switch (type) {
+    const renderPage = pageType => {
+        switch (pageType) {
             case PageType.GUIDE:
                 return (
                     <QuickStartGuide
@@ -79,11 +77,11 @@ const CalculatorPage = () => {
                         tooltip={tooltip}
                         showRestartButton={showRestartButton}
                         disclaimer={disclaimer}
-                        progressBar={progressBar}
+                        showProgressBar={Boolean(progressBar)}
                     />
                 );
             default:
-                break;
+                return null;
         }
     };
 

@@ -1,5 +1,5 @@
 import { Box, Card, Typography } from "@mui/material";
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles(theme => ({
     roleRootStyle: {
@@ -21,21 +21,19 @@ const useStyles = makeStyles(theme => ({
 const VolunteerRolesCard = ({ image, discipline, roles, alt }) => {
     const classes = useStyles();
     return (
-        <>
-            <Card className={classes.roleRootStyle}>
-                <Box display="flex" justifyContent="center">
-                    <Box className={classes.roleImageStyle} component="img" src={image} alt={alt} />
-                </Box>
-                <Typography className={classes.roleHeadingStyle} variant="h5" align="center">
-                    {discipline}
+        <Card className={classes.roleRootStyle}>
+            <Box display="flex" justifyContent="center">
+                <Box className={classes.roleImageStyle} component="img" src={image} alt={alt} />
+            </Box>
+            <Typography className={classes.roleHeadingStyle} variant="h5" align="center">
+                {discipline}
+            </Typography>
+            {roles.map((role, idx) => (
+                <Typography className={classes.roleTextStyle} variant="body1" align="center" key={idx}>
+                    {role}
                 </Typography>
-                {roles.map((role, idx) => (
-                    <Typography className={classes.roleTextStyle} variant="body1" align="center" key={idx}>
-                        {role}
-                    </Typography>
-                ))}
-            </Card>
-        </>
+            ))}
+        </Card>
     );
 };
 

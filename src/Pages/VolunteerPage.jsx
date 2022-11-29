@@ -70,7 +70,7 @@ const VolunteerPage = () => {
                         border: "1px solid #ccc",
                         borderRadius: "6px",
                     }}
-                ></iframe>
+                />
             </Container>
         </>
     );

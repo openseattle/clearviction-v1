@@ -1,42 +1,13 @@
-export interface Pages {
-    [pageId: string]: PageData;
-}
-
-interface PageData {
-    header?: string;
-    body?: NonEmptyList<Body>;
-    buttons?: NonEmptyList<Button>;
-    tooltip?: TooltipType;
-    disclaimer?: string;
-    progressBar?: ProgressBar;
-    showRestartButton?: boolean;
-    type?: PageType;
-}
-
-export enum PageType {
-    GUIDE = "guide",
-    MAIN = "main",
-    SPECIAL = "special",
-    QUESTION = "question",
-    END = "end",
-}
-
-export enum SectionName {
-    OFF = "Your Offense",
-    CIRC = "Surrounding Circumstances",
-    TER = "Terms of Offense",
-    ELIGIBLE = "",
-}
-
-interface ProgressBar {
-    currentSectionName: SectionName;
-}
-
 type NonEmptyList<T> = {
     0: T;
-} & Array<T>;
+} & T[];
 
-type Body = ParagraphBody | LinkBody | ListBody;
+interface Button {
+    text: string;
+    href: string;
+    color?: string;
+    target?: string;
+}
 
 export enum BodyType {
     PARAGRAPH = "paragraph",
@@ -66,16 +37,43 @@ interface ListBody extends BaseBody {
     items: NonEmptyList<string>;
 }
 
-interface Button {
-    text: string;
-    href: string;
-    color?: string;
-    target?: string;
+export enum PageType {
+    GUIDE = "guide",
+    MAIN = "main",
+    SPECIAL = "special",
+    QUESTION = "question",
+    END = "end",
+}
+
+export enum SectionName {
+    OFF = "Your Offense",
+    CIRC = "Surrounding Circumstances",
+    TER = "Terms of Offense",
+    ELIGIBLE = "",
 }
 
 export enum TooltipType {
     NOT_SURE = "I'm not sure.",
     NOT_A_MISDEMEANOR = "My conviction is not a misdemeanor or I'm not sure.",
+}
+
+interface ProgressBar {
+    currentSectionName: SectionName;
+}
+
+type Body = ParagraphBody | LinkBody | ListBody;
+interface PageData {
+    header?: string;
+    body?: NonEmptyList<Body>;
+    buttons?: NonEmptyList<Button>;
+    tooltip?: TooltipType;
+    disclaimer?: string;
+    progressBar?: ProgressBar;
+    showRestartButton?: boolean;
+    type?: PageType;
+}
+export interface Pages {
+    [pageId: string]: PageData;
 }
 
 export const BUTTON_TEXT = {

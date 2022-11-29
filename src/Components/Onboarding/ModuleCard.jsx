@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Typography, Grid } from "@mui/material";
+import { Typography } from "@mui/material";
 
 // icons
 import screens from "../../Assets/Onboarding/screens.svg";
@@ -11,22 +10,18 @@ import circleCheck from "../../Assets/Onboarding/circleCheck.png";
 
 import { useModuleCardStyles } from "../../Styles/Onboarding/useModuleCardStyles";
 
-function ModuleCard(props) {
+const ModuleCard = ({ module: moduleProp }) => {
     const classes = useModuleCardStyles();
-    const { number, link, text, subheading } = props.module;
-    const [isLargeScreen, setIsLargeScreen] = useState(true);
-
-    useEffect(() => {
-        const mediaSize = window.innerWidth;
-        mediaSize >= 768 ? setIsLargeScreen(true) : setIsLargeScreen(false);
-    }, []);
+    const { number, link, text, subheading } = moduleProp;
 
     return (
         <div className={classes.moduleCard}>
             <Link style={{ textDecoration: "none" }} to={link}>
                 <div>
                     <div className={classes.cardHeading}>
-                        <Typography variant="body1">{number}</Typography>
+                        <Typography variant="body1" className={classes.cardHeadingText}>
+                            {number}
+                        </Typography>
                     </div>
                     <div className={classes.cardBody}>
                         {number === "module 1" && <img className={classes.iconStyle} src={screens} alt="" />}
@@ -44,7 +39,13 @@ function ModuleCard(props) {
                         {localStorage.getItem(link) ? (
                             <div className={classes.mobileSuccessButton}>
                                 <img className={classes.checkMark} src={circleCheck} alt="" />
-                                <Typography style={{ fontSize: "17px", marginLeft: "1rem", fontWeight: "bold" }}>
+                                <Typography
+                                    style={{
+                                        fontSize: "17px",
+                                        marginLeft: "1rem",
+                                        fontWeight: "bold",
+                                    }}
+                                >
                                     completed
                                 </Typography>
                             </div>
@@ -60,6 +61,6 @@ function ModuleCard(props) {
             </Link>
         </div>
     );
-}
+};
 
 export default ModuleCard;

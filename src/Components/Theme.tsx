@@ -1,10 +1,10 @@
-import { createTheme, Theme } from '@mui/material/styles';
+import { createTheme, Theme } from "@mui/material/styles";
 
-const HEADING_FONT_FAMILY = 'Sintony';
-const HEADING_FONT_STYLE = 'sans-serif';
-const BODY_FONT_FAMILY = 'Inter';
+const HEADING_FONT_FAMILY = "Sintony";
+const HEADING_FONT_STYLE = "sans-serif";
+const BODY_FONT_FAMILY = "Inter";
 
-declare module '@mui/styles' {
+declare module "@mui/styles" {
     interface DefaultTheme extends Theme {}
 }
 
@@ -57,7 +57,7 @@ theme.components = {
                 fontSize: "86px",
                 letterSpacing: "-1.5px",
                 lineHeight: "95px",
-                [theme.breakpoints.down('sm')]: {
+                [theme.breakpoints.down("sm")]: {
                     fontSize: "64px",
                     lineHeight: "72px",
                 },
@@ -69,7 +69,7 @@ theme.components = {
                 fontSize: "56px",
                 letterSpacing: "-0.5px",
                 lineHeight: "72px",
-                [theme.breakpoints.down('sm')]: {
+                [theme.breakpoints.down("sm")]: {
                     fontSize: "48px",
                     lineHeight: "64px",
                 },
@@ -121,7 +121,7 @@ theme.components = {
                 fontSize: "20px",
                 letterSpacing: "0.1px",
                 lineHeight: "28px",
-                [theme.breakpoints.down('md')]: {
+                [theme.breakpoints.down("md")]: {
                     fontSize: "18px",
                     lineHeight: "22px",
                 },
@@ -131,7 +131,7 @@ theme.components = {
                 fontSize: "20px",
                 letterSpacing: "0.5px",
                 lineHeight: "28px",
-                [theme.breakpoints.down('sm')]: {
+                [theme.breakpoints.down("sm")]: {
                     fontSize: "16px",
                     lineHeight: "22px",
                 },
@@ -141,12 +141,12 @@ theme.components = {
                 fontSize: "18px",
                 letterSpacing: "0.25px",
                 lineHeight: "26px",
-                [theme.breakpoints.down('sm')]: {
+                [theme.breakpoints.down("sm")]: {
                     fontSize: "14px",
                     lineHeight: "20px",
                 },
             },
-    
+
             caption: {
                 fontWeight: "lighter",
                 fontSize: "14px",
@@ -225,6 +225,38 @@ theme.components = {
                     borderBottomLeftRadius: 6,
                     borderBottomRightRadius: 6,
                 },
+            },
+        },
+    },
+    MuiButton: {
+        styleOverrides: {
+            root: {
+                borderRadius: 50,
+            },
+            outlined: {
+                borderWidth: 3,
+                "&:hover": {
+                    borderWidth: 3,
+                },
+            },
+            outlinedPrimary: {
+                backgroundColor: "white",
+                color: theme.palette.primary.main,
+                borderColor: theme.palette.primary.main,
+                "&:hover": {
+                    backgroundColor: theme.palette.primary.main,
+                    color: theme.palette.primary.contrastText,
+                },
+            },
+            containedPrimary: {
+                "&:hover": {
+                    backgroundColor: theme.palette.secondary.main,
+                    color: theme.palette.secondary.contrastText,
+                },
+            },
+            containedSecondary: {
+                backgroundColor: "white",
+                "&:hover": { backgroundColor: theme.palette.primary.main, color: theme.palette.primary.contrastText },
             },
         },
     },

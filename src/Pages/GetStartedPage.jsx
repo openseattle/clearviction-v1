@@ -40,7 +40,7 @@ const eligibilityFacts = [
 
 const GetStartedPage = () => {
     const classes = useGetInvolvedStyles();
-    const [documentTitle, setDocumentTitle] = useDocumentTitle("Get Started - ");
+    useDocumentTitle("Get Started - ");
 
     return (
         <>
@@ -63,7 +63,7 @@ const GetStartedPage = () => {
             </RedesignHeroPanel>
             <Container
                 id="read-more"
-                className={classes.regularContainerStyle + " " + classes.centerText}
+                className={`${classes.regularContainerStyle} ${classes.centerText}`}
                 maxwidth="sm"
             >
                 <ResponsiveJumpButtonGroup
@@ -160,7 +160,7 @@ const GetStartedPage = () => {
                 <FactIconGroup facts={eligibilityFacts} />
             </Container>
             <Box justifyContent="center" display="flex">
-                <RedesignButtonPrimary href="/calculator/landing-0">Check Eligibility</RedesignButtonPrimary>;
+                <RedesignButtonPrimary href="/calculator/landing-0">Check Eligibility</RedesignButtonPrimary>
             </Box>
             <Container maxWidth="md">
                 <Divider className={classes.dividerStyle} />
@@ -181,24 +181,20 @@ const GetStartedPage = () => {
                 <Grid container>
                     <Grid item xs={12} sm={12} md={4}>
                         <FactCard
-                            simpleCardContents={
-                                "The court does not believe that vacating your conviction will be in the interest of society"
-                            }
-                            isSimpleCard={true}
+                            simpleCardContents="The court does not believe that vacating your conviction will be in the interest of society"
+                            isSimpleCard
                         />
                     </Grid>
                     <Grid item xs={12} sm={12} md={4}>
                         <FactCard
-                            simpleCardContents={"There are inaccuracies in your court records and/or the application"}
-                            isSimpleCard={true}
+                            simpleCardContents="There are inaccuracies in your court records and/or the application"
+                            isSimpleCard
                         />
                     </Grid>
                     <Grid item xs={12} sm={12} md={4}>
                         <FactCard
-                            simpleCardContents={
-                                "You violated probation, have not paid off your fines or are otherwise not eligible to vacate that conviction"
-                            }
-                            isSimpleCard={true}
+                            simpleCardContents="You violated probation, have not paid off your fines or are otherwise not eligible to vacate that conviction"
+                            isSimpleCard
                         />
                     </Grid>
                 </Grid>
@@ -217,7 +213,7 @@ const GetStartedPage = () => {
                     Legal aid
                 </Typography>
                 <Typography variant="body1">
-                    Many pro bono services are only available after being refered by CLEAR, a toll-free legal hotline:
+                    Many pro bono services are only available after being referred by CLEAR, a toll-free legal hotline:
                 </Typography>
                 <Typography component="ul" variant="body1" className={classes.basicListStyle}>
                     <li>Outside of King County: call 1-888-201-1014 (weekdays 9.15am - 12.15pm)</li>

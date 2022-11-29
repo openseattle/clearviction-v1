@@ -1,5 +1,5 @@
 import { Tabs, Tab, Box } from "@mui/material";
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 import { useState } from "react";
 
 const TabPanel = props => {
@@ -12,7 +12,7 @@ const TabPanel = props => {
     );
 };
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles(() => ({
     tabPanelStyle: {
         backgroundColor: "white",
         color: "black",

@@ -4,28 +4,32 @@ import FactExpandMoreCard from "../../Components/FactExpandMoreCard";
 const northwestJusticeCenterPacket = text => (
     <Link
         href="https://www.washingtonlawhelp.org/files/C9D2EA3F-0350-D9AF-ACAE-BF37E9BC9FFA/attachments/21968678-A4F9-42E5-BA32-58826390C62D/8705en_get-misdemeanor-convictions-off-criminal-record.pdf"
-        underline="hover">
+        underline="hover"
+    >
         {text}
     </Link>
 );
 const certificateOfDischargeForm = text => (
     <Link
         href="https://www.courts.wa.gov/forms/documents/CR08.0670_Obtaining a Certificate of Discharge_2019 07.pdf"
-        underline="hover">
+        underline="hover"
+    >
         {text}
     </Link>
 );
 const teamChildPacket = text => (
     <Link
         href="https://teamchild.org/wp-content/uploads/2019/03/Sealing-Juvenile-Court-Records-in-Washington-State-2018.pdf"
-        underline="hover">
+        underline="hover"
+    >
         {text}
     </Link>
 );
 const kingCountySealJuvenileRecords = text => (
     <Link
         href="https://kingcounty.gov/~/media/courts/superior-court/docs/juvenile/juvenile-forms/10-sealing-records-instructions-and-forms-pdf-web.ashx?la=en"
-        underline="hover">
+        underline="hover"
+    >
         {text}
     </Link>
 );
@@ -130,22 +134,20 @@ const courtFormsFacts = [
 ];
 const CourtFormsFactGroup = () => {
     return (
-        <>
-            <Grid container>
-                {courtFormsFacts.map(fact => (
-                    <Grid key={fact.id} item xs={12} sm={6} md={4}>
-                        <FactExpandMoreCard
-                            summary={fact.summary}
-                            summaryID={fact.summaryID}
-                            content={fact.content}
-                            contentID={fact.contentID}
-                            id={fact.id}
-                            ariaLabel={fact.ariaLabel}
-                        />
-                    </Grid>
-                ))}
-            </Grid>
-        </>
+        <Grid container>
+            {courtFormsFacts.map(fact => (
+                <Grid key={fact.id} item xs={12} sm={6} md={4}>
+                    <FactExpandMoreCard
+                        summary={fact.summary}
+                        summaryID={fact.summaryID}
+                        content={fact.content}
+                        contentID={fact.contentID}
+                        id={fact.id}
+                        ariaLabel={fact.ariaLabel}
+                    />
+                </Grid>
+            ))}
+        </Grid>
     );
 };
 

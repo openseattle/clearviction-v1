@@ -4,7 +4,7 @@ import fb from "../../Assets/Onboarding/fb.svg";
 import linkedIn from "../../Assets/Onboarding/linkedIn.svg";
 import twitter from "../../Assets/Onboarding/twitter.svg";
 
-function SocialContainer(props) {
+const SocialContainer = () => {
     const classes = useHeaderStyles();
 
     return (
@@ -30,6 +30,6 @@ function SocialContainer(props) {
             </a>
         </div>
     );
-}
+};
 
 export default SocialContainer;

@@ -1,9 +1,9 @@
 import React from "react";
 import { render, screen, within } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider } from "@mui/material/styles";
 import EndScreen from "./EndScreen";
 import { BodyType } from "../../data/calculatorPagesTypes";
-import { ThemeProvider } from "@mui/material/styles";
 import Theme from "../../Components/Theme";
 
 describe("<EndScreen />", () => {
@@ -49,12 +49,12 @@ describe("<EndScreen />", () => {
         render(
             <ThemeProvider theme={Theme}>
                 <EndScreen
-                    header={"Your Conviction May Be Eligible to Vacate!"}
+                    header="Your Conviction May Be Eligible to Vacate!"
                     body={body}
                     buttons={buttons}
-                    disclaimer={"This is the disclaimer"}
-                    showRestartButton={true}
-                    progressBar={progressBar}
+                    disclaimer="This is the disclaimer"
+                    showRestartButton
+                    showProgressBar={true}
                 />
             </ThemeProvider>,
             { wrapper: BrowserRouter }

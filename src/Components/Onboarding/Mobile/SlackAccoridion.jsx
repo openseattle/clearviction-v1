@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from "react";
-import { makeStyles } from '@mui/styles';
+import React, { useState } from "react";
+import { makeStyles } from "@mui/styles";
 import Accordion from "@mui/material/Accordion";
 import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-
-import customizeCard from "../../../Assets/Onboarding/customizeCard.svg";
-import filter from "../../../Assets/Onboarding/filter.svg";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -22,7 +19,7 @@ const useStyles = makeStyles(theme => ({
     },
 }));
 
-const TutorialAccordion = props => {
+const TutorialAccordion = () => {
     const classes = useStyles();
 
     const [expanded, setExpanded] = useState("1");

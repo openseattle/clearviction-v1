@@ -1,6 +1,6 @@
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 
-export const MainBranchTitleStyles = makeStyles(theme => ({
+export const MainBranchTitleStyles = makeStyles(() => ({
     grid: {
         display: "inline-block",
         marginTop: "72px",

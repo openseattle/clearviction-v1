@@ -4,7 +4,7 @@ import userEvent from "@testing-library/user-event";
 import ToolTipModal from "../ToolTipModal";
 
 describe("<ToolTipModal />", () => {
-    const template = <ToolTipModal text={"test"} />;
+    const template = <ToolTipModal text="test" />;
 
     it("should render the default modal ui", () => {
         render(template);

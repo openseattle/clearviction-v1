@@ -1,4 +1,4 @@
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 
 export const useFooterStyles = makeStyles(theme => ({
     footerContainer: {
@@ -6,7 +6,7 @@ export const useFooterStyles = makeStyles(theme => ({
         flexDirection: "row",
         justifyContent: "space-between",
         margin: theme.spacing(6),
-        [theme.breakpoints.down('sm')]: {
+        [theme.breakpoints.down("sm")]: {
             margin: theme.spacing(2),
         },
     },
@@ -15,7 +15,7 @@ export const useFooterStyles = makeStyles(theme => ({
         justifyContent: "flex-end",
         margin: theme.spacing(6),
         marginBottom: "-20px",
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             justifyContent: "center",
         },
     },

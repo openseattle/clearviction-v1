@@ -1,5 +1,5 @@
 import { Box, Card, CardContent, Typography } from "@mui/material";
-import { makeStyles } from '@mui/styles';
+import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles(theme => ({
     root: {
@@ -26,7 +26,7 @@ const FactImageCard = ({ fact }) => {
     return (
         <Card className={classes.root}>
             <Box display="flex" justifyContent="center">
-                <img className={classes.cardImageStyle} alt={""} src={fact.src} />
+                <img className={classes.cardImageStyle} alt="" src={fact.src} />
             </Box>
             <Typography variant="h5" align="center" className={classes.headingStyle}>
                 {fact.title}
