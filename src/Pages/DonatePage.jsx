@@ -34,7 +34,7 @@ const donationLevels = [
         amount: "$30",
         donationImage: laptop,
         desc: "pay the filing fee for a low-income individual ",
-        tueDesc: "Support low-income individuals overcome financial barriers blocking teh vacation of their record.",
+        tueDesc: "Support low-income individuals overcome financial barriers blocking the vacation of their record.",
         tueImage: chart,
     },
     {

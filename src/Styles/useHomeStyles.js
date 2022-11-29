@@ -98,7 +98,6 @@ export const useHomeStyles = makeStyles(theme => ({
         maxWidth: "801px",
     },
     givingTuesdayHeader: {
-        fontSize: "64px",
         fontWeight: "700",
         color: "#FFEEA3",
     },

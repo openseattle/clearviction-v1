@@ -105,7 +105,7 @@ const GivingTuesdayPage = () => {
 
                     <Container>
                         <Typography className={classes.headingStyle} variant="h2">
-                            Meet the people commited to making a difference.
+                            Meet the people committed to making a difference.
                         </Typography>
                         <Typography className={classes.bodyContent}>
                             Despite being a completely remote team, each Clearviction volunteer has committed their time
