@@ -4,7 +4,7 @@ const FindVideoModal = () => {
     return (
         <div
             // eslint-disable-next-line react/no-unknown-property
-            container
+            container="true"
             style={{
                 position: "relative",
                 overflow: "hidden",
