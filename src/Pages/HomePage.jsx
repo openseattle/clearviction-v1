@@ -26,18 +26,29 @@ const HomePage = () => {
         <>
             <Box className={classes.darkBlueBackground}>
                 <Container maxWidth="lg">
-                    <Box className={classes.givingTuesdayBanner}>
-                        <Box>
-                            <Typography className={classes.givingTuesdayHeader} variant="h2">
+                    <Box
+                        sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            flexDirection: { xs: "column", md: "row" },
+                        }}
+                    >
+                        <Box mb={{ xs: 2, md: 0 }} mr={{ xs: 0, md: 8 }}>
+                            <Typography variant="h3" color="secondary.light">
                                 #GivingTuesday
                             </Typography>
-                            <Typography className={classes.givingTuesdayDate} variant="subtitle1">
+                            <Typography variant="subtitle1" sx={{ fontSize: 16, lineHeight: "2em" }}>
                                 November 29, 2022
                             </Typography>
                         </Box>
-                        <Box className={classes.givingTuesdayButton}>
-                            <RedesignButtonPrimary href="/givingtuesday">Donate Now</RedesignButtonPrimary>
-                        </Box>
+                        <Button
+                            sx={{ width: "fit-content", paddingX: 4 }}
+                            variant="contained"
+                            color="primary"
+                            href="/givingtuesday"
+                        >
+                            Donate Now
+                        </Button>
                     </Box>
 
                     <Typography className={classes.headingStyle} variant="h1">
