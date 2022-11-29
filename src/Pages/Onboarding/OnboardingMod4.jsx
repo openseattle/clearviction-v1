@@ -1,23 +1,17 @@
 import { Grid, Typography, Box } from "@mui/material";
 import { useModuleContentStyles } from "../../Styles/Onboarding/useModuleContentStyles";
-
-// Components
 import Header from "../../Components/Onboarding/Header";
 import ModuleContent from "../../Components/Onboarding/ModuleContent";
 import Footer from "../../Components/Onboarding/Footer";
-
-// icons
 import boat from "../../Assets/Onboarding/boat.svg";
 import question from "../../Assets/Onboarding/question.svg";
 import venn from "../../Assets/Onboarding/venn.svg";
 import group from "../../Assets/Onboarding/group.svg";
-
 import scrum from "../../Assets/Onboarding/scrum.svg";
 import userResearch from "../../Assets/Onboarding/userResearch.svg";
 import product from "../../Assets/Onboarding/product.svg";
 import nemo from "../../Assets/Onboarding/nemo.svg";
 import marketing from "../../Assets/Onboarding/marketing.svg";
-
 import bug from "../../Assets/Onboarding/bug.svg";
 import checkmark from "../../Assets/Onboarding/checkmark.svg";
 
