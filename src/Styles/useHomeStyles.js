@@ -91,4 +91,22 @@ export const useHomeStyles = makeStyles(theme => ({
             color: theme.palette.secondary.contrastText,
         },
     },
+    givingTuesdayBanner: {
+        display: "flex",
+        flexWrap: "wrap",
+        justifyContent: "space-between",
+        maxWidth: "801px",
+    },
+    givingTuesdayHeader: {
+        fontSize: "64px",
+        fontWeight: "700",
+        color: "#FFEEA3",
+    },
+    givingTuesdayDate: { textAlign: "center" },
+    givingTuesdayButton: {
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        paddingBottom: "30px",
+    },
 }));

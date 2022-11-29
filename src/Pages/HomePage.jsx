@@ -27,6 +27,20 @@ const HomePage = () => {
         <>
             <Box className={classes.darkBlueBackground}>
                 <Container maxWidth="lg">
+                    <Box className={classes.givingTuesdayBanner}>
+                        <div>
+                            <Typography className={classes.givingTuesdayHeader} variant="h2">
+                                #GivingTuesday
+                            </Typography>
+                            <Typography className={classes.givingTuesdayDate} variant="subtitle1">
+                                November 29, 2022
+                            </Typography>
+                        </div>
+                        <Box className={classes.givingTuesdayButton}>
+                            <RedesignButtonPrimary href="/givingtuesday">Donate Now</RedesignButtonPrimary>
+                        </Box>
+                    </Box>
+
                     <Typography className={classes.headingStyle} variant="h1">
                         Washington's Vacation Eligibility Calculator
                     </Typography>
