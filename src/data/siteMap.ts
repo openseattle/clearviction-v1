@@ -1,5 +1,6 @@
 enum PageId {
     Home = "HOME",
+    GivingTuesday = "GIVINGTUESDAY",
     GetStarted = "GET-STARTED",
     GetInvolved = "GET-INVOLVED",
     WhyVacate = "WHY-VACATE",
@@ -17,6 +18,7 @@ interface Page {
 
 const headerPages: Page[] = [
     { name: "Home", url: "/", key: PageId.Home },
+    { name: "Giving Tuesday", url: "/givingtuesday", key: PageId.GivingTuesday },
     { name: "Get Started", url: "/get-started", key: PageId.GetStarted },
     { name: "Get Involved", url: "/get-involved", key: PageId.GetInvolved },
     { name: "Why Vacate", url: "/why-vacate", key: PageId.WhyVacate },
