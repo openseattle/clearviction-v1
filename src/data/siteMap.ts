@@ -1,5 +1,6 @@
 enum PageId {
     Home = "HOME",
+    GivingTuesday = "GIVINGTUESDAY",
     GetStarted = "GET-STARTED",
     GetInvolved = "GET-INVOLVED",
     WhyVacate = "WHY-VACATE",

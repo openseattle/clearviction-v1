@@ -40,20 +40,8 @@ const ModuleContent = ({ content }) => {
         paragraph2,
         paragraph3,
         paragraph4,
-        linkTitle,
-        linkTitle2,
-        linkTitle3,
-        linkIcon,
-        linkIcon2,
-        linkIcon3,
-        linkLocation,
-        linkLocation2,
-        linkLocation3,
-        modalParagraph1,
-        modalTitle,
-        modalParagraph2,
-        modalParagraph3,
-        modalParagraph4,
+        // switching from indivdual values to array of links
+        links,
         p2bullet1,
         p2bullet2,
         p2bullet3,
@@ -61,13 +49,14 @@ const ModuleContent = ({ content }) => {
         p3bullet2,
         p3bullet3,
         p3bullet4,
-        bullets,
         toolSite,
         toolText,
         paragraphBullets,
         sourceSite,
         sourceText,
     } = content;
+
+    const [selectedLink, setSelectedLink] = useState(-1);
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
@@ -156,148 +145,116 @@ const ModuleContent = ({ content }) => {
                 </ExternalLink>
             ) : null}
 
-            {linkTitle ? (
-                <div className={classes.moduleContentLink}>
-                    {linkIcon === "link" && (
-                        <Button href={linkLocation} target="_blank" rel="noreferrer" className={classes.linkContainer}>
-                            <div className={classes.linkContainer}>
-                                <img src={link} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText}>{linkTitle}</p>
-                            </div>
-                        </Button>
-                    )}
-                    {linkIcon === "doc" && (
-                        <Button onClick={handleOpen} className={classes.linkContainer}>
-                            <div className={classes.linkContainer}>
-                                <img src={doc} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText}>{linkTitle}</p>
-                            </div>
-                        </Button>
-                    )}
-                    {linkIcon === "trustDoc" && (
-                        <Button onClick={handleTrustDocOpen} className={classes.linkContainer}>
-                            <div className={classes.linkContainer}>
-                                <img src={doc} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText}>{linkTitle}</p>
-                            </div>
-                        </Button>
-                    )}
-                    {linkIcon === "docAirtable" && (
-                        <Button onClick={handleAirtableOpen} style={{ textDecoration: "none", color: "#4e6c99" }}>
-                            <div className={classes.linkContainer}>
-                                <img src={doc} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText}>{linkTitle}</p>
-                            </div>
-                        </Button>
-                    )}
-                    {linkIcon === "videoAirtable" && (
-                        <Button onClick={handleAirtableVideoOpen} className={classes.linkContainer}>
-                            <div className={classes.linkContainer}>
-                                <img src={video} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText}>{linkTitle}</p>
-                            </div>
-                        </Button>
-                    )}
-                    {linkIcon === "videoSlack" && (
-                        <Button onClick={handleSlackVideoOpen} className={classes.linkContainer}>
-                            <div className={classes.linkContainer}>
-                                <img src={video} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText}>{linkTitle}</p>
-                            </div>
-                        </Button>
-                    )}
-                    {linkIcon === "videoMiro" && (
-                        <Button onClick={handleMiroVideoOpen} className={classes.linkContainer}>
-                            <div className={classes.linkContainer}>
-                                <img src={video} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText}>{linkTitle}</p>
-                            </div>
-                        </Button>
-                    )}
-                    {linkIcon === "videoFindWork" && (
-                        <Button onClick={handleFindVideoOpen} className={classes.linkContainer}>
-                            <div className={classes.linkContainer}>
-                                <img src={video} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText}>{linkTitle}</p>
-                            </div>
-                        </Button>
-                    )}
-                </div>
-            ) : null}
-
-            {linkTitle2 ? (
-                <div className={classes.moduleContentLink}>
-                    {linkIcon2 === "link" && (
-                        <Button href={linkLocation2} target="_blank" rel="noreferrer" className={classes.linkContainer}>
-                            <div className={classes.linkContainer}>
-                                <img src={link} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText}>{linkTitle2}</p>
-                            </div>
-                        </Button>
-                    )}
-                    {linkIcon2 === "doc" && (
-                        <Button onClick={handleOpen} className={classes.linkContainer}>
-                            <div className={classes.linkContainer}>
-                                <img src={doc} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText2}>{linkTitle2}</p>
-                            </div>
-                        </Button>
-                    )}
-                    {linkIcon2 === "docAirtable" && (
-                        <Button onClick={handleAirtableOpen} className={classes.linkContainer}>
-                            <div className={classes.linkContainer}>
-                                <img src={doc} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText}>{linkTitle2}</p>
-                            </div>
-                        </Button>
-                    )}
-                    {linkIcon2 === "docSlack" && (
-                        <Button onClick={handleSlackOpen} className={classes.linkContainer}>
-                            <div className={classes.linkContainer}>
-                                <img src={doc} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText}>{linkTitle2}</p>
-                            </div>
-                        </Button>
-                    )}
-                    {linkIcon2 === "video" && (
-                        <Button style={{ textDecoration: "none", color: "#4e6c99" }}>
-                            <div className={classes.linkContainer}>
-                                <img src={video} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText2}>{linkTitle2}</p>
-                            </div>
-                        </Button>
-                    )}
-                </div>
-            ) : null}
-
-            {linkTitle3 ? (
-                <div className={classes.moduleContentLink}>
-                    {linkIcon3 === "link" && (
-                        <Button href={linkLocation3} target="_blank" rel="noreferrer" className={classes.linkContainer}>
-                            <div className={classes.linkContainer}>
-                                <img src={link} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText}>{linkTitle3}</p>
-                            </div>
-                        </Button>
-                    )}
-                    {linkIcon3 === "doc" && (
-                        <Button onClick={handleOpen} style={{ textDecoration: "none", color: "#4e6c99" }}>
-                            <div className={classes.linkContainer}>
-                                <img src={doc} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText}>{linkTitle3}</p>
-                            </div>
-                        </Button>
-                    )}
-                    {linkIcon3 === "video" && (
-                        <Button style={{ textDecoration: "none", color: "#4e6c99" }}>
-                            <div className={classes.linkContainer}>
-                                <img src={video} alt="" className={classes.linkIcon} />
-                                <p className={classes.linkText}>{linkTitle3}</p>
-                            </div>
-                        </Button>
-                    )}
-                </div>
-            ) : null}
+            {links && links.length > 0
+                ? links.map((linkButton, idx) => {
+                      // links is an array containing all links within a module
+                      // linkButton is the individual object being mapped over from the array.
+                      return (
+                          <div key={idx} className={classes.moduleContentLink}>
+                              {linkButton.linkIcon === "teamIcon" && (
+                                  <Button
+                                      onClick={() => {
+                                          setSelectedLink(idx);
+                                          handleOpen();
+                                      }}
+                                      className={classes.linkContainer}
+                                  >
+                                      <div className={classes.linkContainer}>
+                                          {linkButton.linkImg}
+                                          <p className={classes.linkText}>{linkButton.linkTitle}</p>
+                                      </div>
+                                  </Button>
+                              )}
+                              {linkButton.linkIcon === "link" && (
+                                  <Button
+                                      href={linkButton.linkLocation}
+                                      target="_blank"
+                                      rel="noreferrer"
+                                      className={classes.linkContainer}
+                                  >
+                                      <div className={classes.linkContainer}>
+                                          <img src={link} alt="" className={classes.linkIcon} />
+                                          <p className={classes.linkText}>{linkButton.linkTitle}</p>
+                                      </div>
+                                  </Button>
+                              )}
+                              {linkButton.linkIcon === "doc" && (
+                                  <Button
+                                      onClick={() => {
+                                          setSelectedLink(idx);
+                                          handleOpen();
+                                      }}
+                                      className={classes.linkContainer}
+                                  >
+                                      <div className={classes.linkContainer}>
+                                          <img src={doc} alt="" className={classes.linkIcon} />
+                                          <p className={classes.linkText}>{linkButton.linkTitle}</p>
+                                      </div>
+                                  </Button>
+                              )}
+                              {linkButton.linkIcon === "trustDoc" && (
+                                  <Button onClick={handleTrustDocOpen} className={classes.linkContainer}>
+                                      <div className={classes.linkContainer}>
+                                          <img src={doc} alt="" className={classes.linkIcon} />
+                                          <p className={classes.linkText}>{linkButton.linkTitle}</p>
+                                      </div>
+                                  </Button>
+                              )}
+                              {linkButton.linkIcon === "docSlack" && (
+                                  <Button onClick={handleSlackOpen} className={classes.linkContainer}>
+                                      <div className={classes.linkContainer}>
+                                          <img src={doc} alt="" className={classes.linkIcon} />
+                                          <p className={classes.linkText}>{linkButton.linkTitle}</p>
+                                      </div>
+                                  </Button>
+                              )}
+                              {linkButton.linkIcon === "docAirtable" && (
+                                  <Button
+                                      onClick={handleAirtableOpen}
+                                      style={{ textDecoration: "none", color: "#4e6c99" }}
+                                  >
+                                      <div className={classes.linkContainer}>
+                                          <img src={doc} alt="" className={classes.linkIcon} />
+                                          <p className={classes.linkText}>{linkButton.linkTitle}</p>
+                                      </div>
+                                  </Button>
+                              )}
+                              {linkButton.linkIcon === "videoAirtable" && (
+                                  <Button onClick={handleAirtableVideoOpen} className={classes.linkContainer}>
+                                      <div className={classes.linkContainer}>
+                                          <img src={video} alt="" className={classes.linkIcon} />
+                                          <p className={classes.linkText}>{linkButton.linkTitle}</p>
+                                      </div>
+                                  </Button>
+                              )}
+                              {linkButton.linkIcon === "videoSlack" && (
+                                  <Button onClick={handleSlackVideoOpen} className={classes.linkContainer}>
+                                      <div className={classes.linkContainer}>
+                                          <img src={video} alt="" className={classes.linkIcon} />
+                                          <p className={classes.linkText}>{linkButton.linkTitle}</p>
+                                      </div>
+                                  </Button>
+                              )}
+                              {linkButton.linkIcon === "videoMiro" && (
+                                  <Button onClick={handleMiroVideoOpen} className={classes.linkContainer}>
+                                      <div className={classes.linkContainer}>
+                                          <img src={video} alt="" className={classes.linkIcon} />
+                                          <p className={classes.linkText}>{linkButton.linkTitle}</p>
+                                      </div>
+                                  </Button>
+                              )}
+                              {linkButton.linkIcon === "videoFindWork" && (
+                                  <Button onClick={handleFindVideoOpen} className={classes.linkContainer}>
+                                      <div className={classes.linkContainer}>
+                                          <img src={video} alt="" className={classes.linkIcon} />
+                                          <p className={classes.linkText}>{linkButton.linkTitle}</p>
+                                      </div>
+                                  </Button>
+                              )}
+                          </div>
+                      );
+                  })
+                : null}
 
             {/* main modal */}
             <Dialog
@@ -309,41 +266,43 @@ const ModuleContent = ({ content }) => {
                 maxWidth="lg"
                 className={modalClasses.mainModal}
             >
-                <DialogContent style={{ padding: "50px" }}>
-                    <Typography className={classes.modalTitleStyle}>{modalTitle}</Typography>
-                    <Typography variant="body2" className={classes.moduleCardBody}>
-                        {modalParagraph1}
-                    </Typography>
-                    <Typography variant="body2" className={classes.moduleCardBody}>
-                        {modalParagraph2}
-                        {p2bullet1 && (
-                            <ul>
-                                {p2bullet1 ? <li>{p2bullet1}</li> : null}
-                                {p2bullet2 ? <li>{p2bullet2}</li> : null}
-                                {p2bullet3 ? <li>{p2bullet3}</li> : null}
-                            </ul>
-                        )}
-                    </Typography>
-                    <Typography variant="body2" className={classes.moduleCardBody}>
-                        {modalParagraph3}
-                        {p3bullet1 && (
-                            <ul>
-                                {p3bullet1 ? <li>{p3bullet1}</li> : null}
-                                {p3bullet2 ? <li>{p3bullet2}</li> : null}
-                                {p3bullet3 ? <li>{p3bullet3}</li> : null}
-                                {p3bullet4 ? <li>{p3bullet4}</li> : null}
-                            </ul>
-                        )}
-                    </Typography>
-                    {modalParagraph4 && (
+                {selectedLink !== -1 ? (
+                    <DialogContent style={{ padding: "50px" }}>
+                        <Typography className={classes.modalTitleStyle}>{links[selectedLink].modalTitle}</Typography>
                         <Typography variant="body2" className={classes.moduleCardBody}>
-                            {modalParagraph4}
+                            {links[selectedLink].modalParagraph1}
                         </Typography>
-                    )}
-                    <Button onClick={handleClose} className={classes.button}>
-                        Close
-                    </Button>
-                </DialogContent>
+                        <Typography variant="body2" className={classes.moduleCardBody}>
+                            {links[selectedLink].modalParagraph2}
+                            {p2bullet1 && (
+                                <ul>
+                                    {p2bullet1 ? <li>{p2bullet1}</li> : null}
+                                    {p2bullet2 ? <li>{p2bullet2}</li> : null}
+                                    {p2bullet3 ? <li>{p2bullet3}</li> : null}
+                                </ul>
+                            )}
+                        </Typography>
+                        <Typography variant="body2" className={classes.moduleCardBody}>
+                            {links[selectedLink].modalParagraph3}
+                            {p3bullet1 && (
+                                <ul>
+                                    {p3bullet1 ? <li>{p3bullet1}</li> : null}
+                                    {p3bullet2 ? <li>{p3bullet2}</li> : null}
+                                    {p3bullet3 ? <li>{p3bullet3}</li> : null}
+                                    {p3bullet4 ? <li>{p3bullet4}</li> : null}
+                                </ul>
+                            )}
+                        </Typography>
+                        {links[selectedLink].modalParagraph4 && (
+                            <Typography variant="body2" className={classes.moduleCardBody}>
+                                {links[selectedLink].modalParagraph4}
+                            </Typography>
+                        )}
+                        <Button onClick={handleClose} className={classes.button}>
+                            Close
+                        </Button>
+                    </DialogContent>
+                ) : null}
             </Dialog>
 
             {/* complex airtable modal */}
@@ -531,8 +490,8 @@ const ModuleContent = ({ content }) => {
                     <DialogContent className={modalClasses.modalStyle}>
                         <Typography className={classes.modalTitleStyle}>{title}</Typography>
                         <List>
-                            {bullets
-                                ? bullets.map((bullet, idx) => (
+                            {links && links[0].bullets
+                                ? links[0].bullets.map((bullet, idx) => (
                                       <ListItem key={idx}>
                                           <ListItemIcon>•</ListItemIcon>
                                           <ListItemText>{bullet}</ListItemText>
