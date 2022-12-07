@@ -63,28 +63,28 @@ export const useHeaderStyles = makeStyles(theme => ({
         },
     },
     title: {
-        fontSize: "50px",
+        fontSize: "3.125rem",
         lineHeight: "50px",
         fontWeight: 400,
         textAlign: "center",
         marginBottom: theme.spacing(0),
         [theme.breakpoints.down("lg")]: {
-            fontSize: "50px",
+            fontSize: "3.125rem",
         },
         [theme.breakpoints.down("md")]: {
-            fontSize: "50px",
+            fontSize: "3.125rem",
         },
     },
     subheading: {
-        fontSize: "60px",
+        fontSize: "3.75rem",
         lineHeight: 1.2,
         marginBottom: theme.spacing(8),
         [theme.breakpoints.down("md")]: {
-            fontSize: "50px",
+            fontSize: "3.125rem",
             lineHeight: 1.2,
         },
         [theme.breakpoints.down("sm")]: {
-            fontSize: "40px",
+            fontSize: "2.5rem",
             lineHeight: 1,
         },
     },
@@ -98,28 +98,28 @@ export const useHeaderStyles = makeStyles(theme => ({
     welcomeHeader: {
         width: "55%",
         textAlign: "center",
-        fontSize: "61px",
+        fontSize: "3.75rem",
         paddingTop: theme.spacing(8),
         margin: "auto",
     },
     welcome: {
         [theme.breakpoints.down("md")]: {
-            fontSize: "60px",
+            fontSize: "3.75rem",
         },
         [theme.breakpoints.down("sm")]: {
-            fontSize: "40px",
+            fontSize: "2.5rem",
         },
     },
     welcomePara: {
-        fontSize: "45px",
+        fontSize: "2.813rem",
         lineHeight: 1.5,
         marginBottom: theme.spacing(9),
         marginTop: theme.spacing(5),
         [theme.breakpoints.down("md")]: {
-            fontSize: "25px",
+            fontSize: "1.563rem",
         },
         [theme.breakpoints.down("sm")]: {
-            fontSize: "20px",
+            fontSize: "1.25rem",
         },
     },
     menuStyle: {
