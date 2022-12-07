@@ -4,12 +4,12 @@ export const useModuleContentStyles = makeStyles(theme => ({
     mainModuleContentCard: {
         width: "80%",
         flexDirection: "row",
-        margin: theme.spacing(6, "auto"),
+        margin: theme.spacing(4.875, "auto", 0, "auto"),
     },
     moduleContentCard: {
         display: "flex",
         flexDirection: "column",
-        margin: theme.spacing(6, "auto"),
+        margin: theme.spacing(3.625, "auto"),
         width: "80%",
         justifyContent: "center",
         paddingBottom: theme.spacing(4),
@@ -40,6 +40,13 @@ export const useModuleContentStyles = makeStyles(theme => ({
         paddingBottom: theme.spacing(2),
         color: "#2b2929",
     },
+    listElement: {
+        fontSize: "1.25rem",
+        color: "#2b2929",
+        "&::marker": {
+            fontSize: "0.75rem",
+        },
+    },
     moduleCardBody2: {
         color: "#2b2929",
         width: "50%",
@@ -51,7 +58,7 @@ export const useModuleContentStyles = makeStyles(theme => ({
         },
     },
     cardIcon: {
-        marginTop: "47px",
+        marginTop: "20px",
         textAlign: "right",
         marginRight: "-25px",
     },

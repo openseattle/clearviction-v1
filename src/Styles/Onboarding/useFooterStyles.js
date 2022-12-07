@@ -13,7 +13,7 @@ export const useFooterStyles = makeStyles(theme => ({
     completeContainer: {
         display: "flex",
         justifyContent: "flex-end",
-        margin: theme.spacing(6),
+        margin: theme.spacing(3.625, 6, 3.625, 6),
         marginBottom: "-20px",
         [theme.breakpoints.down("md")]: {
             justifyContent: "center",
