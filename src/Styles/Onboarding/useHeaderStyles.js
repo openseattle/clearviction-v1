@@ -68,10 +68,10 @@ export const useHeaderStyles = makeStyles(theme => ({
         fontWeight: 400,
         textAlign: "center",
         marginBottom: theme.spacing(0),
-        [theme.breakpoints.down('lg')]: {
+        [theme.breakpoints.down("lg")]: {
             fontSize: "50px",
         },
-        [theme.breakpoints.down('md')]: {
+        [theme.breakpoints.down("md")]: {
             fontSize: "50px",
         },
     },
