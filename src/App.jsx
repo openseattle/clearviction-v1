@@ -13,6 +13,7 @@ import Footer from "./Components/Footer";
 import GetInvolvedPage from "./Pages/GetInvolvedPage";
 import GetStartedPage from "./Pages/GetStartedPage";
 import WhyVacatePage from "./Pages/WhyVacatePage";
+import GivingTuesdayPage from "./Pages/GivingTuesdayPage";
 import ContactSuccessPage from "./Pages/ContactSuccessPage";
 import OnboardingHome from "./Pages/Onboarding/OnboardingHome";
 import OnboardingMod1 from "./Pages/Onboarding/OnboardingMod1";
@@ -67,7 +68,9 @@ const App = () => {
                             <Route path="/why-vacate">
                                 <WhyVacatePage />
                             </Route>
-
+                            <Route path="/givingtuesday">
+                                <GivingTuesdayPage />
+                            </Route>
                             {/* Volunteer onboarding pages */}
                             <Route exact path="/onboarding">
                                 <OnboardingHome />
