@@ -109,7 +109,7 @@ const ModuleContent = ({ content }) => {
                     ) : (
                         ""
                     )}
-                    {paragraph1B ? <>{paragraph1B}</> : ""}
+                    {paragraph1B ? { paragraph1B } : ""}
                 </Typography>
             ) : null}
 
