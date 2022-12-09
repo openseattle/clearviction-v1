@@ -23,7 +23,7 @@ export const useModuleContentStyles = makeStyles(theme => ({
         },
     },
     moduleCardHeading2: {
-        fontSize: "36px",
+        fontSize: "2.25rem",
         lineHeight: "42.19px",
         width: "50%",
         margin: "auto",
@@ -78,7 +78,7 @@ export const useModuleContentStyles = makeStyles(theme => ({
         height: "85px",
         boxShadow: "0 4px 4px rgba(0, 0, 0, 0.25)",
         borderRadius: "15px",
-        fontSize: "19px",
+        fontSize: "1.188rem",
         fontWeight: "bold",
         display: "flex",
         padding: theme.spacing(1),
@@ -117,7 +117,7 @@ export const useModuleContentStyles = makeStyles(theme => ({
         color: "#4E6C99",
         margin: theme.spacing(3),
         fontWeight: 700,
-        fontSize: "30px",
+        fontSize: "1.875rem",
         lineHeight: "39px",
     },
     button: {
@@ -135,7 +135,7 @@ export const useModuleContentStyles = makeStyles(theme => ({
         borderRadius: "50px",
         margin: "auto",
         marginTop: theme.spacing(8),
-        fontSize: "18px",
+        fontSize: "1.188rem",
         fontWeight: "bold",
         lineHeight: 2.7,
         "&:hover": {
@@ -144,7 +144,7 @@ export const useModuleContentStyles = makeStyles(theme => ({
         },
     },
     mobileHeader: {
-        fontSize: "20px",
+        fontSize: "1.25rem",
         color: "#4E6C99",
         textAlign: "left",
         marginLeft: "32px",
@@ -154,7 +154,7 @@ export const useModuleContentStyles = makeStyles(theme => ({
     },
     externalLink: {
         color: "#4e6c99",
-        fontSize: "20px",
+        fontSize: "1.25rem",
         marginBottom: theme.spacing(2),
     },
 }));
