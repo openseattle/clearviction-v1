@@ -1560,7 +1560,7 @@ const data: Pages = {
             },
             {
                 type: BodyType.LINK,
-                textBeforeLink: "Read instructions for vacating a conviction: ",
+                textBeforeLink: 'Read "Instructions for Vacating Misdemeanor and Gross Misdemeanor Convictions": ',
                 linkText: "CrRLJ 09.0300",
                 href: "https://www.courts.wa.gov/forms/?fa=forms.contribute&formID=38",
             },
