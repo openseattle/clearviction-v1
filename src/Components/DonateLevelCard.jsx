@@ -3,7 +3,7 @@ import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles(theme => ({
     rootCardStyle: {
-        height: 448,
+        height: 470,
         width: 300,
     },
     amountStyle: {
