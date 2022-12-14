@@ -1,12 +1,12 @@
 import { Box, Container, Divider, Grid, Link, Paper, Typography } from "@mui/material";
 import { AccountBalance, DateRange, History } from "@mui/icons-material";
 
-import teamBuilding from "../Assets/team_building.svg";
+import chart from "../Assets/chart.svg";
 import humanProfile from "../Assets/human.svg";
 import FactIconGroup from "../Components/FactIconGroup";
 import RedesignHeroPanel from "../Components/RedesignHeroPanel";
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
-import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
+import useGetInvolvedStyles from "../Styles/useGetInvolvedStyles";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import FactCard from "../Components/FactCard";
 import CourtFormsFactGroup from "../Subpages/GetStarted/CourtFormsFactGroup";
@@ -45,19 +45,14 @@ const GetStartedPage = () => {
     return (
         <>
             <RedesignHeroPanel title="Get Started">
-                <Grid container>
+                <Grid container className={classes.heroPanel}>
                     <Grid item xs={12} sm={12} md={6}>
                         <Typography className={classes.volunteerTextStyle} variant="subtitle1" component="p">
                             Vacate your conviction in the state of Washington by following these 4 steps!
                         </Typography>
-                        <Box marginTop="8em" marginBottom="8em">
-                            <RedesignButtonPrimary href="#read-more" aria-label="to Step 1: Documents">
-                                read more
-                            </RedesignButtonPrimary>
-                        </Box>
                     </Grid>
                     <Grid item xs={12} sm={12} md={6}>
-                        <Box component="img" style={{ width: "100%", padding: 16 }} src={teamBuilding} alt="" />
+                        <Box component="img" style={{ width: "100%", padding: 16 }} src={chart} alt="" />
                     </Grid>
                 </Grid>
             </RedesignHeroPanel>
