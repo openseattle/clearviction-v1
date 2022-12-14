@@ -11,7 +11,7 @@ import diversity from "../Assets/diversity2.svg";
 import moneyJar from "../Assets/money_jar.svg";
 import marketing from "../Assets/marketing.svg";
 
-import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
+import useGetInvolvedStyles from "../Styles/useGetInvolvedStyles";
 
 const GetInvolvedPage = () => {
     const classes = useGetInvolvedStyles();

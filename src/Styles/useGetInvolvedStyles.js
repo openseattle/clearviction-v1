@@ -1,6 +1,6 @@
 import { makeStyles } from "@mui/styles";
 
-export const useGetInvolvedStyles = makeStyles(theme => ({
+export default makeStyles(theme => ({
     regularContainerStyle: {
         marginTop: theme.spacing(8),
         marginBottom: theme.spacing(8),
@@ -46,5 +46,10 @@ export const useGetInvolvedStyles = makeStyles(theme => ({
         padding: "3em",
         marginTop: theme.spacing(5),
         marginBottom: theme.spacing(5),
+    },
+    heroPanel: {
+        direction: "row",
+        justifyContent: "center",
+        alignItems: "flex-start",
     },
 }));
