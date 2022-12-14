@@ -5,10 +5,10 @@ import { useState } from "react";
 
 const useStyles = makeStyles(() => ({
     rootStyle: {
-        margin: 8,
+        margin: 4,
     },
     contentStyle: {
-        height: "8em",
+        height: "9.5em",
     },
 }));
 
