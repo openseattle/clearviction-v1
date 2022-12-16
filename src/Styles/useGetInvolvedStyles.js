@@ -26,6 +26,7 @@ export default makeStyles(theme => ({
     volunteerTextStyle: {
         marginTop: theme.spacing(3),
         marginBottom: theme.spacing(3),
+        padding: theme.spacing(2),
     },
     dividerStyle: {
         marginTop: theme.spacing(8),
@@ -54,8 +55,11 @@ export default makeStyles(theme => ({
     },
     steps: {
         display: "inline-flex",
-        justifyContent: "space-evenly",
+        justifyContent: "space-between",
         alignItems: "center",
+        [theme.breakpoints.down("sm")]: {
+            flexDirection: "column",
+        },
     },
     stepIcon: {
         display: "flex",
