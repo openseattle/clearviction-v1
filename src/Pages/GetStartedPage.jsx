@@ -2,6 +2,10 @@ import { Box, Container, Divider, Grid, Link, Paper, Typography } from "@mui/mat
 import { AccountBalance, DateRange, History } from "@mui/icons-material";
 
 import chart from "../Assets/chart.svg";
+import gsStep1 from "../Assets/gsStep1.svg";
+import gsStep2 from "../Assets/gsStep2.svg";
+import gsStep3 from "../Assets/gsStep3.svg";
+import gsStep4 from "../Assets/gsStep4.svg";
 import humanProfile from "../Assets/human.svg";
 import FactIconGroup from "../Components/FactIconGroup";
 import RedesignHeroPanel from "../Components/RedesignHeroPanel";
@@ -53,6 +57,32 @@ const GetStartedPage = () => {
                     </Grid>
                     <Grid item xs={12} sm={12} md={6}>
                         <Box component="img" style={{ width: "100%", padding: 16 }} src={chart} alt="" />
+                    </Grid>
+                </Grid>
+                <Grid className={classes.steps} container>
+                    <Grid className={classes.stepIcon}>
+                        <Box component="img" style={{ width: "70px" }} src={gsStep1} alt="" />
+                        <Typography className={classes.volunteerTextStyle} variant="subtitle1" component="p">
+                            Gather Documents
+                        </Typography>
+                    </Grid>
+                    <Grid className={classes.stepIcon}>
+                        <Box component="img" style={{ width: "70px" }} src={gsStep2} alt="" />
+                        <Typography className={classes.volunteerTextStyle} variant="subtitle1" component="p">
+                            Calculate Eligibility
+                        </Typography>
+                    </Grid>
+                    <Grid className={classes.stepIcon}>
+                        <Box component="img" style={{ width: "70px" }} src={gsStep3} alt="" />
+                        <Typography className={classes.volunteerTextStyle} variant="subtitle1" component="p">
+                            File with Court
+                        </Typography>
+                    </Grid>
+                    <Grid className={classes.stepIcon}>
+                        <Box component="img" style={{ width: "70px" }} src={gsStep4} alt="" />
+                        <Typography className={classes.volunteerTextStyle} variant="subtitle1" component="p">
+                            Schedule Hearing
+                        </Typography>
                     </Grid>
                 </Grid>
             </RedesignHeroPanel>

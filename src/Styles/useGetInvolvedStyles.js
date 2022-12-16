@@ -52,4 +52,14 @@ export default makeStyles(theme => ({
         justifyContent: "center",
         alignItems: "flex-start",
     },
+    steps: {
+        display: "inline-flex",
+        justifyContent: "space-evenly",
+        alignItems: "center",
+    },
+    stepIcon: {
+        display: "flex",
+        alignItems: "center",
+        flexDirection: "column",
+    },
 }));
