@@ -36,7 +36,19 @@ const GivingTuesdayPage = () => {
             <Box className={classes.contentContainer}>
                 <Container>
                     <Container className={classes.donationBoxInline}>
-                        <DonationForm />
+                        <Box
+                            sx={{
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                position: { xs: "relative", md: "sticky" },
+                                marginBottom: { xs: "155px", md: "-110px" },
+                                marginTop: { xs: "0px", md: "-422px" },
+                                top: { xs: "0px", md: "100px" },
+                            }}
+                        >
+                            <DonationForm />
+                        </Box>
                     </Container>
                     <DonationMeter />
 
@@ -138,7 +150,19 @@ const GivingTuesdayPage = () => {
                     </Container>
                 </Container>
                 <Container className={classes.donationBoxSticky}>
-                    <DonationForm />
+                    <Box
+                        sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            position: { xs: "relative", md: "sticky" },
+                            marginBottom: { xs: "155px", md: "-110px" },
+                            marginTop: { xs: "0px", md: "-422px" },
+                            top: { xs: "0px", md: "100px" },
+                        }}
+                    >
+                        <DonationForm positionMedium="sticky" marginMedium="-110px" marginTop="-422px" top="100px" />
+                    </Box>
                 </Container>
             </Box>
         </>
