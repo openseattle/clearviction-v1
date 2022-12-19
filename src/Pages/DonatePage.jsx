@@ -1,5 +1,5 @@
+import PropTypes from "prop-types";
 import { Box, Container, Grid, Typography } from "@mui/material";
-
 import laptop from "../Assets/laptop.svg";
 import startup from "../Assets/startup.svg";
 import note from "../Assets/note_taking.svg";
@@ -98,3 +98,8 @@ const DonatePage = ({ title, md }) => {
 };
 
 export default DonatePage;
+
+DonatePage.propTypes = {
+    title: PropTypes.string.isRequired,
+    md: PropTypes.string.isRequired,
+};
