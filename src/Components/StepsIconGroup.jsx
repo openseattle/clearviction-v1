@@ -1,3 +1,4 @@
+import React from "react";
 import { Grid, Box, Typography } from "@mui/material";
 import useGetInvolvedStyles from "../Styles/useGetInvolvedStyles";
 import gsStep1 from "../Assets/gsStep1.svg";
@@ -7,13 +8,6 @@ import gsStep4 from "../Assets/gsStep4.svg";
 
 const StepsIconGroup = () => {
     const classes = useGetInvolvedStyles();
-
-    //     {/* <Grid className={classes.stepIcon}>
-    // <Box component="img" style={{ width: "70px" }} src={gsStep4} alt="" />
-    // <Typography className={classes.volunteerTextStyle} variant="subtitle1" component="p">
-    //     Schedule Hearing
-    // </Typography>
-    // </Grid>  */}
 
     const gettingStartedSteps = [
         {
@@ -39,16 +33,16 @@ const StepsIconGroup = () => {
     ];
 
     return (
-        <Grid className={classes.steps}>
+        <>
             {gettingStartedSteps.map(step => (
                 <Grid className={classes.stepIcon}>
-                    <Box component="img" style={{ width: "70px" }} src={step.icon} alt="" />
+                    <Box component="img" style={{ width: "70px" }} src={step.icon} alt="" key={step.id} />
                     <Typography className={classes.volunteerTextStyle} variant="subtitle1" component="p">
                         {step.text}
                     </Typography>
                 </Grid>
             ))}
-        </Grid>
+        </>
     );
 };
 
