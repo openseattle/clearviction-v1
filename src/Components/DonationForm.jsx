@@ -9,7 +9,7 @@ const DonationForm = () => {
             seamless="seamless"
             frameBorder="0"
             height="900"
-            width="100%"
+            width="fit-content"
             style={{
                 maxWidth: "425px",
                 minWidth: "250px",
