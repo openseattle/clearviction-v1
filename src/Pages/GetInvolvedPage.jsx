@@ -62,9 +62,6 @@ const GetInvolvedPage = () => {
             <Container maxWidth="md">
                 <Divider className={classes.dividerStyle} />
             </Container>
-            <Container maxWidth="md">
-                <Divider className={classes.dividerStyle} />
-            </Container>
             <PartnerPage />
         </>
     );
