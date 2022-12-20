@@ -42,6 +42,7 @@ export default makeStyles(theme => ({
         listStyleType: "disc",
         paddingLeft: theme.spacing(3),
         marginBottom: theme.spacing(3),
+        marginTop: theme.spacing(3),
     },
     paperStyle: {
         padding: "3em",
@@ -55,7 +56,7 @@ export default makeStyles(theme => ({
     },
     steps: {
         display: "inline-flex",
-        justifyContent: "space-between",
+        justifyContent: "space-evenly",
         alignItems: "center",
         [theme.breakpoints.down("sm")]: {
             flexDirection: "column",
@@ -65,5 +66,19 @@ export default makeStyles(theme => ({
         display: "flex",
         alignItems: "center",
         flexDirection: "column",
+    },
+    centerImageBox: {
+        width: "100%",
+        display: "flex",
+        justifyContent: "center",
+        overflow: "hidden",
+    },
+    centeredImage: {
+        height: 300,
+        width: 500,
+        maxHeight: { xs: 235, md: 400 },
+        maxWidth: { xs: 338, md: 500 },
+        marginLeft: "auto",
+        marginRight: "auto",
     },
 }));
