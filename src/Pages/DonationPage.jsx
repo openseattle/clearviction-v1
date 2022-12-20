@@ -7,7 +7,7 @@ import RedesignButtonWide from "../ui-kit/RedesignButtonWide";
 import { DonationForm } from "../Components/DonationForm";
 import Donatebody from "../Components/DonateBody";
 
-const DonationLandingPage = () => {
+const DonationPage = () => {
     const classes = useDonationStyles();
     useDocumentTitle("Donate - ");
 
@@ -69,4 +69,4 @@ const DonationLandingPage = () => {
     );
 };
 
-export default DonationLandingPage;
+export default DonationPage;

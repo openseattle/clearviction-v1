@@ -9,7 +9,7 @@ import CalculatorPage from "./Pages/CalculatorPage";
 import ErrorPage from "./Pages/ErrorPage";
 import AboutPage from "./Pages/AboutPage";
 import ContactPage from "./Pages/ContactPage";
-import DonationLandingPage from "./Pages/DonationLandingPage";
+import DonationPage from "./Pages/DonationPage";
 import Footer from "./Components/Footer";
 import GetInvolvedPage from "./Pages/GetInvolvedPage";
 import GetStartedPage from "./Pages/GetStartedPage";
@@ -58,7 +58,7 @@ const App = () => {
                                 <ContactPage />
                             </Route>
                             <Route exact path="/donate">
-                                <DonationLandingPage />
+                                <DonationPage />
                             </Route>
                             <Route exact path="/contact/success">
                                 <ContactSuccessPage />
