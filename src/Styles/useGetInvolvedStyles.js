@@ -20,6 +20,8 @@ export const useGetInvolvedStyles = makeStyles(theme => ({
         marginBottom: theme.spacing(8),
     },
     headingStyle: {
+        color: theme.palette.primary.dark,
+        fontSize: "56px",
         marginTop: theme.spacing(8),
         marginBottom: theme.spacing(8),
     },
