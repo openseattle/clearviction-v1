@@ -10,7 +10,7 @@ import searchEngineer from "../Assets/search_enginer.svg";
 import DonateFAQAccordion from "../Subpages/GetInvolved/DonateFAQAccordion";
 import DonateLevelCard from "./DonateLevelCard";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
-import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
+import useDonateStyles from "../Styles/useDonationStyles";
 
 const donationLevels = [
     {
@@ -76,7 +76,7 @@ const donationLevels = [
 ];
 
 const DonateBody = ({ title, md }) => {
-    const classes = useGetInvolvedStyles();
+    const classes = useDonateStyles();
     return (
         <>
             <Container component="section" id="donate" className={classes.regularContainerStyle}>
