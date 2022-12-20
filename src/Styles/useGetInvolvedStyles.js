@@ -25,6 +25,21 @@ export const useGetInvolvedStyles = makeStyles(theme => ({
         marginTop: theme.spacing(8),
         marginBottom: theme.spacing(8),
     },
+    headingStyleLong: {
+        color: theme.palette.primary.dark,
+
+        [theme.breakpoints.up("sm")]: {
+            marginLeft: theme.spacing(2),
+            fontSize: "56px",
+        },
+        [theme.breakpoints.down("sm")]: {
+            fontSize: "48px",
+        },
+
+        fontSize: "56px",
+        marginTop: theme.spacing(8),
+        marginBottom: theme.spacing(8),
+    },
     volunteerTextStyle: {
         marginTop: theme.spacing(3),
         marginBottom: theme.spacing(3),

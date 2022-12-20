@@ -80,7 +80,7 @@ const DonateBody = ({ title, md }) => {
     return (
         <>
             <Container component="section" id="donate" className={classes.regularContainerStyle}>
-                <Typography className={classes.headingStyle} variant="h2">
+                <Typography className={classes.headingStyleLong} variant="h2">
                     {title}
                 </Typography>
                 <Typography className={classes.volunteerTextStyle} variant="body1">
