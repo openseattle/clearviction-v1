@@ -1,6 +1,5 @@
 import { Box, Container, Divider, Grid } from "@mui/material";
 
-import DonatePage from "./DonatePage";
 import PartnerPage from "./PartnerPage";
 import VolunteerPage from "./VolunteerPage";
 import RedesignHeroPanel from "../Components/RedesignHeroPanel";
@@ -63,7 +62,6 @@ const GetInvolvedPage = () => {
             <Container maxWidth="md">
                 <Divider className={classes.dividerStyle} />
             </Container>
-            <DonatePage title="Your donations can go a long way to make the project grow." md={3} />
             <Container maxWidth="md">
                 <Divider className={classes.dividerStyle} />
             </Container>
