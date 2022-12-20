@@ -11,12 +11,10 @@ const DonateFAQAccordion = () => {
             summary: "How will my donation be used?",
             summaryID: "donation-button",
             details: (
-                <>
-                    <Typography className={classes.contentTextStyle}>
-                        Clearviction is staffed by a group of dedicated volunteers, and any of our 
-                        donations will go directly to supporting efforts to give those convicted a fresh start.
-                    </Typography>
-                </>
+                <Typography className={classes.contentTextStyle}>
+                    Clearviction is staffed by a group of dedicated volunteers, and any of our donations will go
+                    directly to supporting efforts to give those convicted a fresh start.
+                </Typography>
             ),
             detailsID: "donation-paragraph",
         },
@@ -25,7 +23,8 @@ const DonateFAQAccordion = () => {
             summaryID: "who-button",
             details: (
                 <Typography className={classes.contentTextStyle}>
-                    Anyone and everyone! However, Clearviction does not accept donations that are made as a political endorsement.
+                    Anyone and everyone! However, Clearviction does not accept donations that are made as a political
+                    endorsement.
                 </Typography>
             ),
             detailsID: "who-paragraph",
@@ -36,9 +35,9 @@ const DonateFAQAccordion = () => {
             details: (
                 <>
                     <Typography className={classes.contentTextStyle}>
-                        Clearviction utilizes Donorbox for safe and secure transactions. Donorbox’s reliable security 
-                        includes two-factor authentication, data encryption, fraud detection, and the assurance that none 
-                        of your information is ever stored on Donorbox servers. 
+                        Clearviction utilizes Donorbox for safe and secure transactions. Donorbox’s reliable security
+                        includes two-factor authentication, data encryption, fraud detection, and the assurance that
+                        none of your information is ever stored on Donorbox servers.
                     </Typography>
                     <Typography className={classes.contentTextStyle}>
                         For more information, visit Donorbox:{" "}
@@ -54,13 +53,13 @@ const DonateFAQAccordion = () => {
             details: (
                 <>
                     <Typography className={classes.contentTextStyle}>
-                        Donorbox automatically sends you a receipt of your donation, even if you wish to remain anonymous. 
-                        This receipt can be customized to include any information you require.
+                        Donorbox automatically sends you a receipt of your donation, even if you wish to remain
+                        anonymous. This receipt can be customized to include any information you require.
                     </Typography>
                     <Typography className={classes.contentTextStyle}>
-                        Clearviction is an official 501(c)(3) non-profit and donations to Clearviction 
-                        are all tax deductible. Any donations greater than or equal to $250 require a receipt. 
-                        View the IRS’ requirements.
+                        Clearviction is an official 501(c)(3) non-profit and donations to Clearviction are all tax
+                        deductible. Any donations greater than or equal to $250 require a receipt. View the IRS’
+                        requirements.
                     </Typography>
                 </>
             ),
@@ -72,15 +71,15 @@ const DonateFAQAccordion = () => {
             details: (
                 <>
                     <Typography>
-                        Donorbox has the capability for direct ACH payments, but you are still welcome to mail a check. 
+                        Donorbox has the capability for direct ACH payments, but you are still welcome to mail a check.
                         Please make the check out to Clearviction and mail it to:
                     </Typography>
                     <Typography className={classes.contentTextStyle}>
-                            Seamus Brugh
-                            <br />
-                            802 5th Ave N, unit 213
-                            <br />
-                            Seattle, WA 98109
+                        Seamus Brugh
+                        <br />
+                        802 5th Ave N, unit 213
+                        <br />
+                        Seattle, WA 98109
                     </Typography>
                 </>
             ),

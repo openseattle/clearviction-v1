@@ -1,4 +1,4 @@
-import { Box, Card, CardContent, Typography } from "@mui/material";
+import { Box, Card, Typography } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles(theme => ({
@@ -28,7 +28,7 @@ const DonateLevelCard = ({ amount, image, text, alt }) => {
                 <Box className={classes.donationImageStyle} component="img" alt={alt} src={image} />
             </Box>
             <Box sx={{ marginTop: "auto", marginBottom: "auto" }}>
-                <Typography component='div' variant="subtitle2" align="center">
+                <Typography component="div" variant="subtitle2" align="center">
                     {text}
                 </Typography>
             </Box>
