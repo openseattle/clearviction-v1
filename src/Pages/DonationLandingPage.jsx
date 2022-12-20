@@ -5,7 +5,7 @@ import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 import RedesignHeroPanel from "../Components/RedesignHeroPanel";
 import RedesignButtonWide from "../ui-kit/RedesignButtonWide";
 import { DonationForm } from "../Components/DonationForm";
-import DonatePage from "./DonatePage";
+import Donatebody from "../Components/DonateBody";
 
 const DonationLandingPage = () => {
     const classes = useDonationStyles();
@@ -62,7 +62,7 @@ const DonationLandingPage = () => {
             </RedesignHeroPanel>
             <Box className={classes.contentContainer}>
                 <Container>
-                    <DonatePage title="How will your donations help Clearviction's goals?" md={3} />
+                    <Donatebody title="How will your donations help Clearviction's goals?" md={3} />
                 </Container>
             </Box>
         </>

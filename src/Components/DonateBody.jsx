@@ -8,7 +8,7 @@ import chart from "../Assets/chart.svg";
 import searchEngineer from "../Assets/search_enginer.svg";
 
 import DonateFAQAccordion from "../Subpages/GetInvolved/DonateFAQAccordion";
-import DonateLevelCard from "../Components/DonateLevelCard";
+import DonateLevelCard from "./DonateLevelCard";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
 
@@ -75,7 +75,7 @@ const donationLevels = [
     },
 ];
 
-const DonatePage = ({ title, md }) => {
+const DonateBody = ({ title, md }) => {
     const classes = useGetInvolvedStyles();
     return (
         <>
@@ -119,9 +119,9 @@ const DonatePage = ({ title, md }) => {
     );
 };
 
-export default DonatePage;
+export default DonateBody;
 
-DonatePage.propTypes = {
+DonateBody.propTypes = {
     title: PropTypes.string.isRequired,
     md: PropTypes.string.isRequired,
 };

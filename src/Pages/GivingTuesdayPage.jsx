@@ -15,7 +15,7 @@ import RedesignHeroPanel from "../Components/RedesignHeroPanel";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import { DonationMeter, DonationForm } from "../Components/DonationForm";
 import DonationVideo from "../Components/DonationVideo";
-import DonatePage from "./DonatePage";
+import DonateBody from "../Components/DonateBody";
 
 const GivingTuesdayPage = () => {
     const classes = useDonationStyles();
@@ -110,7 +110,7 @@ const GivingTuesdayPage = () => {
                     <Divider className={classes.divider} />
 
                     <Container>
-                        <DonatePage title="How will your donations help Clearviction's goals?" md={6} />
+                        <DonateBody title="How will your donations help Clearviction's goals?" md={6} />
                     </Container>
 
                     <Divider className={classes.divider} />
