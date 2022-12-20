@@ -100,54 +100,6 @@ const GetStartedPage = () => {
                 <Grid>
                     <RecordInformation />
                 </Grid>
-                {/* <Paper className={classes.paperStyle}>
-                    <Grid container>
-                        <Grid item xs={12} sm={6}>
-                            <img src={humanProfile} alt="" width="100%" />
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <Box display="flex">
-                                <Typography className={classes.volunteerTextStyle}>
-                                    Get an{" "}
-                                    <Link
-                                        rel="noopener noreferrer"
-                                        target="_blank"
-                                        href="https://watch.wsp.wa.gov/WATCH/Home/Notice?ReturnPage=%2FHome%2FIndex"
-                                        underline="hover"
-                                    >
-                                        “unofficial” copy through WATCH
-                                    </Link>{" "}
-                                    for a $11.00 fee. This report is not always accurate so you should ask the
-                                    prosecutor.
-                                </Typography>
-                            </Box>
-                        </Grid>
-                    </Grid>
-                </Paper>
-                <Paper className={classes.paperStyle}>
-                    <Grid container>
-                        <Grid item xs={12} sm={8}>
-                            <Typography>
-                                If the WATCH printout is not good enough, go to your local police or sheriff’s office
-                                for an official “record review/challenge” fingerprint card.
-                            </Typography>
-                            <Typography className={classes.volunteerTextStyle}>
-                                Next, write WSP a letter asking them to send an official copy of your complete CHRI.
-                                Include the fingerprint card and a $12 money order. A copy of your CHRI will be returned
-                                to the address on the fingerprint card. Send everything to:
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={12} sm={4}>
-                            <Typography className={classes.volunteerTextStyle} align="right">
-                                Washington State Patrol <br />
-                                Identification and <br />
-                                Background Section <br />
-                                PO Box 42633 <br />
-                                Olympia WA 98504-2633 <br />
-                            </Typography>
-                        </Grid>
-                    </Grid>
-                </Paper> */}
             </Container>
             <Container maxWidth="md">
                 <Divider className={classes.dividerStyle} />
