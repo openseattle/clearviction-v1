@@ -19,7 +19,7 @@ import RecordInformation from "../Subpages/GetStarted/RecordInformation";
 
 const factsProps = {
     style: { fontSize: 54 },
-    color: "primary",
+    color: "secondary",
 };
 
 const eligibilityFacts = [
@@ -182,7 +182,6 @@ const GetStartedPage = () => {
                         <ExternalLink href="https://nwjustice.org/apply-online">CLEAR*Online</ExternalLink>{" "}
                     </li>
                 </Typography>
-
                 <LegalAidServices />
                 <Typography className={classes.headingStyle} variant="h3">
                     Financial aid
