@@ -74,11 +74,19 @@ export default makeStyles(theme => ({
         overflow: "hidden",
     },
     centeredImage: {
-        height: 300,
-        width: 500,
-        maxHeight: { xs: 235, md: 400 },
-        maxWidth: { xs: 338, md: 500 },
+        height: 350,
+        width: 700,
+        // maxHeight: { xs: 235, md: 400 },
+        // maxWidth: { xs: 338, md: 500 },
         marginLeft: "auto",
         marginRight: "auto",
+        [theme.breakpoints.down("md")]: {
+            height: 250,
+            width: 580,
+        },
+        [theme.breakpoints.down("sm")]: {
+            height: 250,
+            width: 380,
+        },
     },
 }));
