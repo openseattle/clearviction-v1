@@ -1,4 +1,4 @@
-import { Paper, Typography, Box } from "@mui/material";
+import { Paper, Typography, Box, Button } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 
@@ -27,20 +27,35 @@ const ImageContentCard = ({ content, image, buttonText, buttonHref }) => {
     return (
         <Box padding={1}>
             <Paper
-                className={classes.rootStyle}
-                style={{
+                sx={{
+                    height: 460,
+                    minWidth: 280,
+                    maxWidth: 324,
                     backgroundImage: retrieveImage(image),
                     backgroundRepeat: "no-repeat",
-                    backgroundSize: "512px 564px",
-                    backgroundPosition: "40% -60%",
+                    backgroundSize: "130%",
+                    backgroundPosition: "-40px 220px",
                 }}
             >
-                <Typography className={classes.cardTextSTyle} variant="subtitle1" align="center" component="h2">
-                    {content}
-                </Typography>
+                <Box
+                    sx={{
+                        width: "100%",
+                        height: "100%",
+                        px: 4,
+                        py: 8,
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "space-between",
+                    }}
+                >
+                    <Typography variant="subtitle1" align="center" component="h2">
+                        {content}
+                    </Typography>
 
-                <Box className={classes.cardButtonBoxStyle}>
-                    <RedesignButtonPrimary href={buttonHref}>{buttonText}</RedesignButtonPrimary>
+                    <Button variant="contained" sx={{ width: "100%" }} href={buttonHref}>
+                        {buttonText}
+                    </Button>
                 </Box>
             </Paper>
         </Box>
