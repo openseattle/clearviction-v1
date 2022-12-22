@@ -1,27 +1,6 @@
 import { Paper, Typography, Box, Button } from "@mui/material";
-import { makeStyles } from "@mui/styles";
-import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
-
-const useStyles = makeStyles(() => ({
-    rootStyle: {
-        height: 460,
-        minWidth: 280,
-        maxWidth: 324,
-    },
-    cardTextSTyle: {
-        padding: 34,
-    },
-    cardButtonBoxStyle: {
-        marginTop: 64,
-        display: "flex",
-        justifyContent: "center",
-        width: "100%",
-    },
-}));
 
 const ImageContentCard = ({ content, image, buttonText, buttonHref }) => {
-    const classes = useStyles();
-
     const retrieveImage = bgImage => `url(${bgImage})`;
 
     return (
