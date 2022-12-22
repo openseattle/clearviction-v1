@@ -1,4 +1,4 @@
-import { Box, Container, Divider, Grid, Typography } from "@mui/material"; // removed Link and Paper
+import { Box, Container, Divider, Grid, Typography } from "@mui/material";
 import { AccountBalance, DateRange, History } from "@mui/icons-material";
 
 import chart from "../Assets/chart.svg";
@@ -97,9 +97,7 @@ const GetStartedPage = () => {
                 <Typography className={classes.volunteerTextStyle} variant="body1" fontWeight="bold">
                     To get a copy of your CHRI, you have two options:
                 </Typography>
-                <Grid>
-                    <RecordInformation />
-                </Grid>
+                <RecordInformation />
             </Container>
             <Container maxWidth="md">
                 <Divider className={classes.dividerStyle} />
