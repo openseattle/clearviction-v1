@@ -54,7 +54,7 @@ const RecordInformation = () => {
     return (
         <Grid container>
             {chriInfo.map(fact => (
-                <Grid key={fact.id} item xs={12} sm={6} md={4}>
+                <Grid key={fact.id} item xs={12} sm={6} md={6}>
                     <FactExpandMoreCard summary={fact.summary} content={fact.content} />
                 </Grid>
             ))}
