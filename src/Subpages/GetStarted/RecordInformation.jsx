@@ -6,6 +6,8 @@ const chriInfo = [
     {
         id: "chri0",
         summary: "“Unofficial” Copy Through W.A.T.C.H",
+        price: "$11",
+        turnaround: "Estimated Turnaround: Instant",
         content: (
             <Typography variant="body2">
                 {" "}
@@ -25,6 +27,8 @@ const chriInfo = [
     {
         id: "chri1",
         summary: "Official Record Review (Fingerprint Card)",
+        price: "$70",
+        turnaround: "Estimated Turnaround: 2 weeks",
         content: (
             <Typography variant="body2" component="ul">
                 <li>
@@ -55,7 +59,12 @@ const RecordInformation = () => {
         <Grid container>
             {chriInfo.map(fact => (
                 <Grid key={fact.id} item xs={12} sm={6} md={6}>
-                    <FactExpandMoreCard summary={fact.summary} content={fact.content} />
+                    <FactExpandMoreCard
+                        summary={fact.summary}
+                        content={fact.content}
+                        price={fact.price}
+                        turnaround={fact.turnaround}
+                    />
                 </Grid>
             ))}
         </Grid>
