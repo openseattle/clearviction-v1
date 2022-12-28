@@ -76,8 +76,6 @@ export default makeStyles(theme => ({
     centeredImage: {
         height: 350,
         width: 700,
-        // maxHeight: { xs: 235, md: 400 },
-        // maxWidth: { xs: 338, md: 500 },
         marginLeft: "auto",
         marginRight: "auto",
         [theme.breakpoints.down("md")]: {
@@ -87,6 +85,18 @@ export default makeStyles(theme => ({
         [theme.breakpoints.down("sm")]: {
             height: 250,
             width: 380,
+        },
+    },
+    topScrollBox: {
+        width: "100%",
+        display: "flex",
+        justifyContent: "end",
+        overflow: "hidden",
+        marginTop: theme.spacing(8),
+    },
+    topScrollButton: {
+        "&:hover": {
+            cursor: "pointer",
         },
     },
 }));

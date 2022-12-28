@@ -1,14 +1,13 @@
-import { Box, Container, Divider, Grid, Typography } from "@mui/material";
+import { Box, Container, Divider, Grid, Typography, Button } from "@mui/material";
 import { AccountBalance, DateRange, History } from "@mui/icons-material";
 
 import chart from "../Assets/chart.svg";
+import topScrollButton from "../Assets/topScrollButton.svg";
 import StepsIconGroup from "../Components/StepsIconGroup";
 import quickstart from "../Assets/quickstart.svg";
 import FactIconGroup from "../Components/FactIconGroup";
 import RedesignHeroPanel from "../Components/RedesignHeroPanel";
-import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
 import useGetInvolvedStyles from "../Styles/useGetInvolvedStyles";
-import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import FactCard from "../Components/FactCard";
 import EligibilityFormsFactGroup from "../Subpages/GetStarted/EligibilityFormsFactGroup";
 import LegalAidServices from "../Subpages/GetStarted/LegalAidServices";
@@ -17,28 +16,27 @@ import { ExternalLink } from "../ui-kit/ExternalLink";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 import RecordInformation from "../Subpages/GetStarted/RecordInformation";
 
-const factsProps = {
-    style: { fontSize: 54 },
-    color: "secondary",
-};
-
 const eligibilityFacts = [
     {
         id: "fact0",
-        icon: <DateRange {...factsProps} />,
+        icon: <DateRange style={{ fontSize: 54 }} color="secondary" />,
         text: "The date & violation of your misdemeanor conviction",
     },
     {
         id: "fact1",
-        icon: <History {...factsProps} />,
+        icon: <History style={{ fontSize: 54 }} color="secondary" />,
         text: "If and when you completed the terms of your sentence",
     },
     {
         id: "fact2",
-        icon: <AccountBalance {...factsProps} />,
+        icon: <AccountBalance style={{ fontSize: 54 }} color="secondary" />,
         text: "Pending or new criminal charges & any court orders against you",
     },
 ];
+
+const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+};
 
 const GetStartedPage = () => {
     const classes = useGetInvolvedStyles();
@@ -61,20 +59,6 @@ const GetStartedPage = () => {
                     </Grid>
                 </Grid>
             </RedesignHeroPanel>
-            <Container
-                id="read-more"
-                className={`${classes.regularContainerStyle} ${classes.centerText}`}
-                maxwidth="sm"
-            >
-                <ResponsiveJumpButtonGroup
-                    links={[
-                        { url: "documents", linkName: "documents" },
-                        { url: "eligibility", linkName: "eligibility" },
-                        { url: "court-filing", linkName: "court filing" },
-                        { url: "hearing", linkName: "hearing" },
-                    ]}
-                />
-            </Container>
             <Container id="documents" component="section" className={classes.regularContainerStyle} maxWidth="md">
                 <Typography className={classes.headingStyle} variant="h2">
                     Step 1: Documents
@@ -115,7 +99,9 @@ const GetStartedPage = () => {
                 </Box>
             </Container>
             <Box justifyContent="center" display="flex">
-                <RedesignButtonPrimary href="/calculator/landing-0">Access Calculator</RedesignButtonPrimary>
+                <Button variant="contained" color="primary" href="/calculator/landing-0">
+                    Access Calculator
+                </Button>
             </Box>
             <Container maxWidth="md">
                 <Divider className={classes.dividerStyle} />
@@ -189,6 +175,15 @@ const GetStartedPage = () => {
                     Eligibility-Related Forms
                 </Typography>
                 <EligibilityFormsFactGroup />
+                <Box className={classes.topScrollBox}>
+                    <Box
+                        component="img"
+                        alt=""
+                        src={topScrollButton}
+                        onClick={handleScrollToTop}
+                        className={classes.topScrollButton}
+                    />
+                </Box>
             </Container>
         </>
     );
