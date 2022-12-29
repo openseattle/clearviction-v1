@@ -136,7 +136,7 @@ const GetStartedPage = () => {
                     </Grid>
                     <Grid item xs={12} sm={12} md={4}>
                         <FactCard
-                            simpleCardContents="You violated probation, have not paid off your fines or are otherwise not eligible to vacate that conviction"
+                            simpleCardContents="There is a record including violated probation, unpaid fines, or other offenses"
                             isSimpleCard
                         />
                     </Grid>
