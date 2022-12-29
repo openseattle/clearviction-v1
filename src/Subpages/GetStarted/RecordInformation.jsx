@@ -1,6 +1,5 @@
 import { Grid, Typography, Link } from "@mui/material";
 import FactExpandMoreCard from "../../Components/FactExpandMoreCard";
-import { ExternalLink } from "../../ui-kit/ExternalLink";
 
 const chriInfo = [
     {
@@ -27,29 +26,22 @@ const chriInfo = [
     {
         id: "chri1",
         summary: "Official Record Review (Fingerprint Card)",
-        price: "$70",
+        price: "$30 - $70",
         turnaround: "Estimated Turnaround: 2 weeks",
         content: (
-            <Typography variant="body2" component="ul">
-                <li>
-                    Use this{" "}
-                    <ExternalLink href="https://www.washingtonlawhelp.org/files/C9D2EA3F-0350-D9AF-ACAE-BF37E9BC9FFA/attachments/3928A184-D6E5-9324-4FB9-495A060A017B/3204en_filing-motion-for-fee-waiver.pdf">
-                        {" "}
-                        packet from Washington Law Help
-                    </ExternalLink>{" "}
-                    to find out if you are eligible to waive your fees (p. 1-2).
-                </li>
-                <li>
-                    It also includes the instructions to ask for a fee waiver (p. 4-9) and all necessary forms (p.
-                    10-14).
-                </li>
-                <li>
-                    If you have trouble filling out the documents, use this website created by Northwest Justice{" "}
-                    <ExternalLink href="https://lawhelpinteractive.org/Interview/GenerateInterview/7063/engine">
-                        to help fill out the documents for free
-                    </ExternalLink>
-                    .
-                </li>
+            <Typography variant="body2">
+                If the WATCH printout is not good enough, go to your local police or sheriff’s office for an official
+                “record review/challenge” fingerprint card.
+                <br />
+                <br />
+                Next, write WSP a letter asking them to send an officialcopy of your complete CHRI. Include the
+                fingerprint card and a money order. A copy of your CHRI will be returned to the address on the
+                fingerprint card. Send everything to:
+                <br />
+                <br />
+                Washington State Patrol Identification and Background Section <br />
+                PO Box 42633 <br />
+                Olympia WA 98504-2633
             </Typography>
         ),
     },
