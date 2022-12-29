@@ -1,10 +1,10 @@
 import { List, ListItem, Grid, Typography, ListItemText } from "@mui/material";
 import { HomeWorkOutlined, Call } from "@mui/icons-material";
-import { useResourcesStyles } from "../Styles/useResourcesStyles";
+import { useWhyVacateStyles } from "../Styles/useWhyVacateStyles";
 import { ListItemLink } from "../ui-kit/ListItemLink";
 
 const PublicHousingList = ({ publicAssociations }) => {
-    const classes = useResourcesStyles();
+    const classes = useWhyVacateStyles();
     return (
         <List className={classes.publicHousingListStyle}>
             {publicAssociations.map((association, idx) => (
