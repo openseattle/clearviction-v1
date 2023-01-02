@@ -39,7 +39,7 @@ const GetInvolvedPage = () => {
                             <ImageContentCard
                                 content="Your gift makes a difference. Make it possible to continue helping our community."
                                 image={moneyJar}
-                                buttonHref="#donate"
+                                buttonHref="/donate"
                                 buttonText="Donate"
                                 alt=""
                             />
