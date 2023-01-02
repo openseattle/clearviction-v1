@@ -1,5 +1,5 @@
+import PropTypes from "prop-types";
 import { Box, Container, Grid, Typography } from "@mui/material";
-
 import laptop from "../Assets/laptop.svg";
 import startup from "../Assets/startup.svg";
 import note from "../Assets/note_taking.svg";
@@ -8,51 +8,79 @@ import chart from "../Assets/chart.svg";
 import searchEngineer from "../Assets/search_enginer.svg";
 
 import DonateFAQAccordion from "../Subpages/GetInvolved/DonateFAQAccordion";
-import DonateLevelCard from "../Components/DonateLevelCard";
+import DonateLevelCard from "./DonateLevelCard";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
-import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
+import useDonateStyles from "../Styles/useDonationStyles";
 
 const donationLevels = [
     {
         name: "level 1",
-        amount: "$10",
+        amount: "",
         donationImage: startup,
-        desc: "pay for a monthly fee for one of our technological tools",
-        tueDesc: "Fund the technological and project management tools needed to grow our project.",
+        desc: (
+            <>
+                Fund the{" "}
+                <Box component="span" fontWeight="bold">
+                    technological and project management tools
+                </Box>
+                needed to grow our project.
+            </>
+        ),
         tueImage: startup,
     },
     {
         name: "level 2",
-        amount: "$15",
+        amount: "",
         donationImage: discovery,
-        desc: "fund a research participant’s time ",
-        tueDesc: "Provide vouchers for users who participate in our research.",
+        desc: (
+            <>
+                Provide{" "}
+                <Box component="span" fontWeight="bold">
+                    vouchers for users who participate
+                </Box>{" "}
+                in our research.
+            </>
+        ),
         tueImage: discovery,
     },
     {
         name: "level 3",
-        amount: "$30",
+        amount: "",
         donationImage: laptop,
-        desc: "pay the filing fee for a low-income individual ",
-        tueDesc: "Support low-income individuals overcome financial barriers blocking the vacation of their record.",
+        desc: (
+            <>
+                Support low-income individuals{" "}
+                <Box component="span" fontWeight="bold">
+                    in overcoming financial barriers
+                </Box>{" "}
+                blocking the vacation of their record.
+            </>
+        ),
         tueImage: chart,
     },
     {
         name: "level 4",
-        amount: "Any $",
+        amount: "",
         donationImage: note,
-        desc: "help support those with convictions start fresh",
-        tueDesc: "Help people with convictions learn about and access our Vacation Eligibiliity calculator.",
+        desc: (
+            <>
+                Help people with convictions{" "}
+                <Box component="span" fontWeight="bold">
+                    learn about and access
+                </Box>{" "}
+                our Vacation Eligibiliity calculator."
+            </>
+        ),
         tueImage: searchEngineer,
     },
 ];
 
-const DonatePage = ({ title, md }) => {
-    const classes = useGetInvolvedStyles();
+const DonateBody = ({ title, md }) => {
+    const classes = useDonateStyles();
     return (
         <>
-            <Container component="section" id="donate" className={classes.regularContainerStyle} maxWidth="md">
-                <Typography className={classes.headingStyle} variant="h2">
+            <Container component="section" id="donate" className={classes.regularContainerStyle}>
+                <Typography className={classes.headingStyleLong} variant="h2">
                     {title}
                 </Typography>
                 <Typography className={classes.volunteerTextStyle} variant="body1">
@@ -63,18 +91,12 @@ const DonatePage = ({ title, md }) => {
                     {donationLevels.map(level => (
                         <Grid item key={level.name} xs={12} sm={6} md={md} lg={md}>
                             <Box display="flex" justifyContent="center">
-                                {window.location.pathname === "/givingtuesday" && (
-                                    <DonateLevelCard text={level.tueDesc} image={level.tueImage} alt="" />
-                                )}
-
-                                {window.location.pathname !== "/givingtuesday" && (
-                                    <DonateLevelCard
-                                        amount={level.amount}
-                                        text={level.desc}
-                                        image={level.donationImage}
-                                        alt=""
-                                    />
-                                )}
+                                <DonateLevelCard
+                                    amount={level.amount}
+                                    text={level.desc}
+                                    image={level.donationImage}
+                                    alt=""
+                                />
                             </Box>
                         </Grid>
                     ))}
@@ -87,9 +109,9 @@ const DonatePage = ({ title, md }) => {
                 </RedesignButtonPrimary>
             </Container>
 
-            <Container className={classes.regularContainerStyle} maxWidth="md">
+            <Container className={classes.regularContainerStyle}>
                 <Typography className={classes.headingStyle} variant="h3">
-                    Frequently Asked Questions
+                    Donation FAQ
                 </Typography>
                 <DonateFAQAccordion />
             </Container>
@@ -97,4 +119,9 @@ const DonatePage = ({ title, md }) => {
     );
 };
 
-export default DonatePage;
+export default DonateBody;
+
+DonateBody.propTypes = {
+    title: PropTypes.string.isRequired,
+    md: PropTypes.string.isRequired,
+};
