@@ -4,7 +4,7 @@ const DonationForm = () => {
     return (
         <iframe
             title="Clearviction Donation Form"
-            src="https://donorbox.org/embed/clearviction-givingtuesday?hide_donation_meter=true"
+            src="https://donorbox.org/embed/clearviction"
             name="donorbox"
             seamless="seamless"
             frameBorder="0"
@@ -24,7 +24,7 @@ const DonationMeter = () => {
         <Box sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}>
             <iframe
                 title="Clearviction Donation Meter"
-                src="https://donorbox.org/embed/clearviction-givingtuesday?donation_meter_color=%234e6c99&only_donation_meter=true"
+                src="https://donorbox.org/embed/clearviction"
                 name="donorbox-meter"
                 scrolling="no"
                 seamless="seamless"
