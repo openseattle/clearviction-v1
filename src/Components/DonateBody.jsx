@@ -104,9 +104,7 @@ const DonateBody = ({ title, md }) => {
             </Container>
 
             <Container className={classes.CTAButtonContainerStyle}>
-                <RedesignButtonPrimary href="https://donorbox.org/clearviction-givingtuesday">
-                    donate
-                </RedesignButtonPrimary>
+                <RedesignButtonPrimary href="https://donorbox.org/clearviction"> donate </RedesignButtonPrimary>
             </Container>
 
             <Container className={classes.regularContainerStyle}>
