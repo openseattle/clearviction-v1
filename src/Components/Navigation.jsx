@@ -78,8 +78,10 @@ const Navigation = () => {
                         {/* desktop menu */}
                         <Box display={{ xs: "none", sm: "none", md: "none", lg: "none", xl: "flex" }}>
                             <ButtonGroup>
-                                {headerPages.map((page, idx) =>
-                                    page.key !== PageId.AccessCalculator ? <NavButton key={idx} page={page} /> : null
+                                {headerPages.map(page =>
+                                    page.key !== PageId.AccessCalculator ? (
+                                        <NavButton key={`${page.name}-key`} page={page} />
+                                    ) : null
                                 )}
                             </ButtonGroup>
                             <Button variant="contained" color="secondary" href="/calculator/landing-0">
@@ -111,7 +113,7 @@ const Navigation = () => {
                                     <NavButtonMobile key={page.name} page={page} classes={classes} />
                                 ))}
                                 <ListItem>
-                                    <LegalDisclaimer />
+                                    <LegalDisclaimer text="The information on this site is not, nor should it be, considered legal advice." />
                                 </ListItem>
                             </List>
                         </Drawer>
