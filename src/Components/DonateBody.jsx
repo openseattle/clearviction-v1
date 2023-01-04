@@ -1,5 +1,5 @@
-import PropTypes from "prop-types";
 import { Box, Container, Grid, Typography } from "@mui/material";
+
 import laptop from "../Assets/laptop.svg";
 import startup from "../Assets/startup.svg";
 import note from "../Assets/note_taking.svg";
@@ -10,77 +10,49 @@ import searchEngineer from "../Assets/search_enginer.svg";
 import DonateFAQAccordion from "../Subpages/GetInvolved/DonateFAQAccordion";
 import DonateLevelCard from "./DonateLevelCard";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
-import useDonateStyles from "../Styles/useDonationStyles";
+import useGetInvolvedStyles from "../Styles/useGetInvolvedStyles";
 
 const donationLevels = [
     {
         name: "level 1",
-        amount: "",
+        amount: "$10",
         donationImage: startup,
-        desc: (
-            <>
-                Fund the{" "}
-                <Box component="span" fontWeight="bold">
-                    technological and project management tools
-                </Box>
-                needed to grow our project.
-            </>
-        ),
+        desc: "pay for a monthly fee for one of our technological tools",
+        tueDesc: "Fund the technological and project management tools needed to grow our project.",
         tueImage: startup,
     },
     {
         name: "level 2",
-        amount: "",
+        amount: "$15",
         donationImage: discovery,
-        desc: (
-            <>
-                Provide{" "}
-                <Box component="span" fontWeight="bold">
-                    vouchers for users who participate
-                </Box>{" "}
-                in our research.
-            </>
-        ),
+        desc: "fund a research participant’s time ",
+        tueDesc: "Provide vouchers for users who participate in our research.",
         tueImage: discovery,
     },
     {
         name: "level 3",
-        amount: "",
+        amount: "$30",
         donationImage: laptop,
-        desc: (
-            <>
-                Support low-income individuals{" "}
-                <Box component="span" fontWeight="bold">
-                    in overcoming financial barriers
-                </Box>{" "}
-                blocking the vacation of their record.
-            </>
-        ),
+        desc: "pay the filing fee for a low-income individual ",
+        tueDesc: "Support low-income individuals overcome financial barriers blocking the vacation of their record.",
         tueImage: chart,
     },
     {
         name: "level 4",
-        amount: "",
+        amount: "Any $",
         donationImage: note,
-        desc: (
-            <>
-                Help people with convictions{" "}
-                <Box component="span" fontWeight="bold">
-                    learn about and access
-                </Box>{" "}
-                our Vacation Eligibiliity calculator."
-            </>
-        ),
+        desc: "help support those with convictions start fresh",
+        tueDesc: "Help people with convictions learn about and access our Vacation Eligibiliity calculator.",
         tueImage: searchEngineer,
     },
 ];
 
-const DonateBody = ({ title, md }) => {
-    const classes = useDonateStyles();
+const DonatePage = ({ title, md }) => {
+    const classes = useGetInvolvedStyles();
     return (
         <>
-            <Container component="section" id="donate" className={classes.regularContainerStyle}>
-                <Typography className={classes.headingStyleLong} variant="h2">
+            <Container component="section" id="donate" className={classes.regularContainerStyle} maxWidth="md">
+                <Typography className={classes.headingStyle} variant="h2">
                     {title}
                 </Typography>
                 <Typography className={classes.volunteerTextStyle} variant="body1">
@@ -91,12 +63,18 @@ const DonateBody = ({ title, md }) => {
                     {donationLevels.map(level => (
                         <Grid item key={level.name} xs={12} sm={6} md={md} lg={md}>
                             <Box display="flex" justifyContent="center">
-                                <DonateLevelCard
-                                    amount={level.amount}
-                                    text={level.desc}
-                                    image={level.donationImage}
-                                    alt=""
-                                />
+                                {window.location.pathname === "/givingtuesday" && (
+                                    <DonateLevelCard text={level.tueDesc} image={level.tueImage} alt="" />
+                                )}
+
+                                {window.location.pathname !== "/givingtuesday" && (
+                                    <DonateLevelCard
+                                        amount={level.amount}
+                                        text={level.desc}
+                                        image={level.donationImage}
+                                        alt=""
+                                    />
+                                )}
                             </Box>
                         </Grid>
                     ))}
@@ -104,12 +82,14 @@ const DonateBody = ({ title, md }) => {
             </Container>
 
             <Container className={classes.CTAButtonContainerStyle}>
-                <RedesignButtonPrimary href="https://donorbox.org/clearviction"> donate </RedesignButtonPrimary>
+                <RedesignButtonPrimary href="https://donorbox.org/clearviction-givingtuesday">
+                    donate
+                </RedesignButtonPrimary>
             </Container>
 
-            <Container className={classes.regularContainerStyle}>
+            <Container className={classes.regularContainerStyle} maxWidth="md">
                 <Typography className={classes.headingStyle} variant="h3">
-                    Donation FAQ
+                    Frequently Asked Questions
                 </Typography>
                 <DonateFAQAccordion />
             </Container>
@@ -117,9 +97,4 @@ const DonateBody = ({ title, md }) => {
     );
 };
 
-export default DonateBody;
-
-DonateBody.propTypes = {
-    title: PropTypes.string.isRequired,
-    md: PropTypes.string.isRequired,
-};
+export default DonatePage;

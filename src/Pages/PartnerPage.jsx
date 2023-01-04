@@ -4,7 +4,7 @@ import pr from "../Assets/pr.svg";
 
 import ContentSection from "../Components/ContentSection";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
-import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
+import useGetInvolvedStyles from "../Styles/useGetInvolvedStyles";
 
 const PartnerPage = () => {
     const classes = useGetInvolvedStyles();

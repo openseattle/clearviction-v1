@@ -8,7 +8,7 @@ const useStyles = makeStyles(theme => ({
         flexDirection: "column",
         justifyContent: "center",
         padding: theme.spacing(2),
-        marginTop: theme.spacing(2),
+        margin: theme.spacing(1),
     },
     headingStyle: {
         marginBottom: theme.spacing(2),

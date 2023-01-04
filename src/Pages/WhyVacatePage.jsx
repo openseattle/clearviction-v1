@@ -4,7 +4,7 @@ import RedesignHeroPanel from "../Components/RedesignHeroPanel";
 import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
 import FactImageCard from "../Components/FactImageCard";
 
-import { useResourcesStyles } from "../Styles/useResourcesStyles";
+import { useWhyVacateStyles } from "../Styles/useWhyVacateStyles";
 
 import teamBuilding from "../Assets/team_building.svg";
 import cityBuildings from "../Assets/city.svg";
@@ -105,7 +105,7 @@ const educationFacts = [
 ];
 
 const WhyVacatePage = () => {
-    const classes = useResourcesStyles();
+    const classes = useWhyVacateStyles();
 
     return (
         <>

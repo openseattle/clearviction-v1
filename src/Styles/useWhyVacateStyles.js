@@ -1,6 +1,6 @@
 import { makeStyles } from "@mui/styles";
 
-export const useResourcesStyles = makeStyles(theme => ({
+export const useWhyVacateStyles = makeStyles(theme => ({
     dividerStyle: {
         marginTop: theme.spacing(8),
         marginBottom: theme.spacing(8),

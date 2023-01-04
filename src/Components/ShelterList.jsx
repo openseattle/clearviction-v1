@@ -1,10 +1,10 @@
 import { List, ListItem, Grid, Typography, ListItemIcon, ListItemText } from "@mui/material";
 import { HomeWorkOutlined, Call } from "@mui/icons-material";
-import { useResourcesStyles } from "../Styles/useResourcesStyles";
+import { useWhyVacateStyles } from "../Styles/useWhyVacateStyles";
 import { ListItemLink } from "../ui-kit/ListItemLink";
 
 const ShelterList = ({ shelters }) => {
-    const classes = useResourcesStyles();
+    const classes = useWhyVacateStyles();
     return (
         <List>
             {shelters.map((shelter, idx) => (
