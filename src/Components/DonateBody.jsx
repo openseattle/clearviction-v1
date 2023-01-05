@@ -8,9 +8,9 @@ import chart from "../Assets/chart.svg";
 import searchEngineer from "../Assets/search_enginer.svg";
 
 import DonateFAQAccordion from "../Subpages/GetInvolved/DonateFAQAccordion";
-import DonateLevelCard from "../Components/DonateLevelCard";
+import DonateLevelCard from "./DonateLevelCard";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
-import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
+import useGetInvolvedStyles from "../Styles/useGetInvolvedStyles";
 
 const donationLevels = [
     {

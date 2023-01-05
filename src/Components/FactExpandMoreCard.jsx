@@ -1,4 +1,4 @@
-import { Card, CardActionArea, CardActions, CardContent, Collapse, Typography } from "@mui/material";
+import { Card, CardActionArea, CardActions, CardContent, Collapse, Typography, Grid } from "@mui/material";
 import { makeStyles } from "@mui/styles";
 import { ExpandMore } from "@mui/icons-material";
 import { useState } from "react";
@@ -10,9 +10,13 @@ const useStyles = makeStyles(() => ({
     contentStyle: {
         height: "9.5em",
     },
+    summaryDetails: {
+        marginTop: "1.2em",
+        justifyContent: "space-between",
+    },
 }));
 
-const FactExpandMoreCard = ({ summary, content, ariaLabel, contentID, summaryID }) => {
+const FactExpandMoreCard = ({ summary, content, ariaLabel, contentID, summaryID, price, turnaround }) => {
     const [expanded, setExpanded] = useState(false);
 
     const handleExpandClick = () => {
@@ -33,6 +37,16 @@ const FactExpandMoreCard = ({ summary, content, ariaLabel, contentID, summaryID 
                         <Typography variant="subtitle2" align="left">
                             {summary}
                         </Typography>
+                        <Grid className={classes.summaryDetails} container>
+                            <Typography variant="p">
+                                {" "}
+                                <b> {price} </b>{" "}
+                            </Typography>
+                            <Typography variant="p">
+                                {" "}
+                                <b> {turnaround} </b>{" "}
+                            </Typography>
+                        </Grid>
                     </CardContent>
 
                     <ExpandMore style={{ marginLeft: "auto", marginRight: "1em" }} />
