@@ -1,11 +1,11 @@
 import { List, ListItem, Grid, Typography, ListItemText } from "@mui/material";
 import { Email, HomeWorkOutlined, Call } from "@mui/icons-material";
-import { useResourcesStyles } from "../Styles/useResourcesStyles";
+import { useWhyVacateStyles } from "../Styles/useWhyVacateStyles";
 import { ExternalLink } from "../ui-kit/ExternalLink";
 import { ListItemLink } from "../ui-kit/ListItemLink";
 
 const HousingFinderList = ({ resources }) => {
-    const classes = useResourcesStyles();
+    const classes = useWhyVacateStyles();
     return (
         <List style={{ width: "100%" }}>
             {resources.map((contact, idx) => (
