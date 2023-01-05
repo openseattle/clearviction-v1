@@ -147,7 +147,7 @@ const Footer = () => {
                     </Grid>
                     <Box sx={{ marginBottom: 6 }} />
                     <LegalDisclaimer text="The information on this site is not, nor should it be, considered legal advice." />
-                    <LegalDisclaimer text="Clearviction is a registered 501(c)3 nonprofit organization, EIN#00-0000.  All donations are tax deductible in full or in part. " />
+                    <LegalDisclaimer text="Clearviction is a registered 501(c)3 nonprofit organization, EIN#88-3187952.  All donations are tax deductible in full or in part. " />
                     <Box sx={{ marginBottom: 7 }} />
                 </Container>
             </Box>
