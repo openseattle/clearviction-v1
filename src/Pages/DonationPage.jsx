@@ -37,7 +37,7 @@ const DonationPage = () => {
                                     convictions in the state of Washington.
                                 </Typography>
                                 <Typography variant="subtitle1" component="p">
-                                    Clearviction is a registered 501(c)3 nonprofit organization, EIN#00-0000. All
+                                    Clearviction is a registered 501(c)3 nonprofit organization, EIN#88-3187952. All
                                     donations are tax deductible in full or in part.
                                 </Typography>
                             </Box>
