@@ -1,42 +1,42 @@
-import { Box, Container, Divider, Grid, Link, Paper, Typography } from "@mui/material";
+import { Box, Container, Divider, Grid, Typography, Button } from "@mui/material";
 import { AccountBalance, DateRange, History } from "@mui/icons-material";
 
-import teamBuilding from "../Assets/team_building.svg";
-import humanProfile from "../Assets/human.svg";
+import chart from "../Assets/chart.svg";
+import topScrollButton from "../Assets/topScrollButton.svg";
+import StepsIconGroup from "../Components/StepsIconGroup";
+import quickstart from "../Assets/quickstart.svg";
 import FactIconGroup from "../Components/FactIconGroup";
 import RedesignHeroPanel from "../Components/RedesignHeroPanel";
-import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
-import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
-import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
+import useGetInvolvedStyles from "../Styles/useGetInvolvedStyles";
 import FactCard from "../Components/FactCard";
-import CourtFormsFactGroup from "../Subpages/GetStarted/CourtFormsFactGroup";
+import EligibilityFormsFactGroup from "../Subpages/GetStarted/EligibilityFormsFactGroup";
 import LegalAidServices from "../Subpages/GetStarted/LegalAidServices";
 import FinancialAidServices from "../Subpages/GetStarted/FinancialAidServices";
 import { ExternalLink } from "../ui-kit/ExternalLink";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
-
-const factsProps = {
-    style: { fontSize: 54 },
-    color: "secondary",
-};
+import RecordInformation from "../Subpages/GetStarted/RecordInformation";
 
 const eligibilityFacts = [
     {
         id: "fact0",
-        icon: <DateRange {...factsProps} />,
+        icon: <DateRange style={{ fontSize: 54 }} color="secondary" />,
         text: "The date & violation of your misdemeanor conviction",
     },
     {
         id: "fact1",
-        icon: <History {...factsProps} />,
+        icon: <History style={{ fontSize: 54 }} color="secondary" />,
         text: "If and when you completed the terms of your sentence",
     },
     {
         id: "fact2",
-        icon: <AccountBalance {...factsProps} />,
+        icon: <AccountBalance style={{ fontSize: 54 }} color="secondary" />,
         text: "Pending or new criminal charges & any court orders against you",
     },
 ];
+
+const handleScrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+};
 
 const GetStartedPage = () => {
     const classes = useGetInvolvedStyles();
@@ -45,107 +45,47 @@ const GetStartedPage = () => {
     return (
         <>
             <RedesignHeroPanel title="Get Started">
-                <Grid container>
+                <Grid container className={classes.heroPanel}>
                     <Grid item xs={12} sm={12} md={6}>
                         <Typography className={classes.volunteerTextStyle} variant="subtitle1" component="p">
                             Vacate your conviction in the state of Washington by following these 4 steps!
                         </Typography>
-                        <Box marginTop="8em" marginBottom="8em">
-                            <RedesignButtonPrimary href="#read-more" aria-label="to Step 1: Documents">
-                                read more
-                            </RedesignButtonPrimary>
-                        </Box>
                     </Grid>
                     <Grid item xs={12} sm={12} md={6}>
-                        <Box component="img" style={{ width: "100%", padding: 16 }} src={teamBuilding} alt="" />
+                        <Box component="img" style={{ width: "100%", padding: 16 }} src={chart} alt="" />
+                    </Grid>
+                    <Grid container className={classes.steps}>
+                        <StepsIconGroup />
                     </Grid>
                 </Grid>
             </RedesignHeroPanel>
-            <Container
-                id="read-more"
-                className={`${classes.regularContainerStyle} ${classes.centerText}`}
-                maxwidth="sm"
-            >
-                <ResponsiveJumpButtonGroup
-                    links={[
-                        { url: "documents", linkName: "documents" },
-                        { url: "eligibility", linkName: "eligibility" },
-                        { url: "court-filing", linkName: "court filing" },
-                        { url: "hearing", linkName: "hearing" },
-                    ]}
-                />
-            </Container>
             <Container id="documents" component="section" className={classes.regularContainerStyle} maxWidth="md">
                 <Typography className={classes.headingStyle} variant="h2">
                     Step 1: Documents
                 </Typography>
                 <Typography className={classes.volunteerTextStyle} variant="body1">
-                    Gathering documents is the first step in the process. This includes any forms or records that
-                    pertain to your conviction. Please gather all relevant court forms and get a copy of your Criminal
-                    History Record Information (CHRI).{" "}
+                    First let’s gather the documents you will need to determine your eligibility. Before using the
+                    calculator, gather all the documentation you have regarding your conviction.{" "}
                 </Typography>
-                <Typography className={classes.headingStyle} variant="h3">
-                    Court Forms
+                <Typography className={classes.volunteerTextStyle}>
+                    <b>You’ll need to know:</b>
                 </Typography>
-                <CourtFormsFactGroup />
+                <FactIconGroup facts={eligibilityFacts} />
                 <Typography className={classes.headingStyle} variant="h3">
-                    Criminal History Record Information (CHRI)
+                    CHRI (Recommended)
                 </Typography>
                 <Typography className={classes.volunteerTextStyle} variant="body1">
-                    You might need a copy of your Criminal History Record Information (CHRI) to vacate your record.
-                    There are two options:
+                    A copy of your <b>Criminal History Record Information (CHRI)</b> would be very helpful in the
+                    vacation process and might be required in some cases.
                 </Typography>
-                <Paper className={classes.paperStyle}>
-                    <Grid container>
-                        <Grid item xs={12} sm={6}>
-                            <img src={humanProfile} alt="" width="100%" />
-                        </Grid>
-                        <Grid item xs={12} sm={6}>
-                            <Box display="flex">
-                                <Typography className={classes.volunteerTextStyle}>
-                                    Get an{" "}
-                                    <Link
-                                        rel="noopener noreferrer"
-                                        target="_blank"
-                                        href="https://watch.wsp.wa.gov/WATCH/Home/Notice?ReturnPage=%2FHome%2FIndex"
-                                        underline="hover"
-                                    >
-                                        “unofficial” copy through WATCH
-                                    </Link>{" "}
-                                    for a $11.00 fee. This report is not always accurate so you should ask the
-                                    prosecutor.
-                                </Typography>
-                            </Box>
-                        </Grid>
-                    </Grid>
-                </Paper>
-                <Paper className={classes.paperStyle}>
-                    <Grid container>
-                        <Grid item xs={12} sm={8}>
-                            <Typography>
-                                If the WATCH printout is not good enough, go to your local police or sheriff’s office
-                                for an official “record review/challenge” fingerprint card.
-                            </Typography>
-                            <Typography className={classes.volunteerTextStyle}>
-                                Next, write WSP a letter asking them to send an official copy of your complete CHRI.
-                                Include the fingerprint card and a $12 money order. A copy of your CHRI will be returned
-                                to the address on the fingerprint card. Send everything to:
-                            </Typography>
-                        </Grid>
-                        <Grid item xs={12} sm={4}>
-                            <Typography className={classes.volunteerTextStyle} align="right">
-                                Washington State Patrol <br />
-                                Identification and <br />
-                                Background Section <br />
-                                PO Box 42633 <br />
-                                Olympia WA 98504-2633 <br />
-                            </Typography>
-                        </Grid>
-                    </Grid>
-                </Paper>
+                <Typography className={classes.volunteerTextStyle} variant="body1" fontWeight="bold">
+                    To get a copy of your CHRI, you have two options:
+                </Typography>
+                <RecordInformation />
             </Container>
-            <Divider className={classes.dividerStyle} />
-
+            <Container maxWidth="md">
+                <Divider className={classes.dividerStyle} />
+            </Container>
             <Container id="eligibility" component="section" className={classes.regularContainerStyle} maxWidth="md">
                 <Typography className={classes.headingStyle} variant="h2">
                     Step 2: Eligibility
@@ -154,13 +94,14 @@ const GetStartedPage = () => {
                     Once you have your records and forms gathered, use our eligibilty calculator to determine whether
                     you are eligible to vacate your misdemeanor conviction. It is expected to take 10-30 minutes.
                 </Typography>
-                <Typography className={classes.volunteerTextStyle}>
-                    <b>You’ll need to know to answer our questions:</b>
-                </Typography>
-                <FactIconGroup facts={eligibilityFacts} />
+                <Box className={classes.centerImageBox}>
+                    <Box className={classes.centeredImage} component="img" alt="" src={quickstart} />
+                </Box>
             </Container>
             <Box justifyContent="center" display="flex">
-                <RedesignButtonPrimary href="/calculator/landing-0">Check Eligibility</RedesignButtonPrimary>
+                <Button variant="contained" color="primary" href="/calculator/landing-0">
+                    Access Calculator
+                </Button>
             </Box>
             <Container maxWidth="md">
                 <Divider className={classes.dividerStyle} />
@@ -173,11 +114,13 @@ const GetStartedPage = () => {
                     Next, submit a request to have your conviction vacated (refer to{" "}
                     <ExternalLink href="https://www.courts.wa.gov/court_dir/?fa=court_dir.county">
                         court directory
-                    </ExternalLink>{" "}
+                    </ExternalLink>
                     ). Please note that the request to vacate is up to the discretion of the judge and may be denied for
                     a variety of reasons.
                 </Typography>
-                <Typography className={classes.volunteerTextStyle}>Your request to vacate may be denied if:</Typography>
+                <Typography className={classes.volunteerTextStyle}>
+                    <b>Common reasons requests to vacate may be denied:</b>
+                </Typography>
                 <Grid container>
                     <Grid item xs={12} sm={12} md={4}>
                         <FactCard
@@ -193,7 +136,7 @@ const GetStartedPage = () => {
                     </Grid>
                     <Grid item xs={12} sm={12} md={4}>
                         <FactCard
-                            simpleCardContents="You violated probation, have not paid off your fines or are otherwise not eligible to vacate that conviction"
+                            simpleCardContents="There is a record including violated probation, unpaid fines, or other offenses"
                             isSimpleCard
                         />
                     </Grid>
@@ -223,12 +166,24 @@ const GetStartedPage = () => {
                         <ExternalLink href="https://nwjustice.org/apply-online">CLEAR*Online</ExternalLink>{" "}
                     </li>
                 </Typography>
-
                 <LegalAidServices />
                 <Typography className={classes.headingStyle} variant="h3">
                     Financial aid
                 </Typography>
                 <FinancialAidServices />
+                <Typography className={classes.headingStyle} variant="h3">
+                    Eligibility-Related Forms
+                </Typography>
+                <EligibilityFormsFactGroup />
+                <Box className={classes.topScrollBox}>
+                    <Box
+                        component="img"
+                        alt=""
+                        src={topScrollButton}
+                        onClick={handleScrollToTop}
+                        className={classes.topScrollButton}
+                    />
+                </Box>
             </Container>
         </>
     );

@@ -3,7 +3,7 @@ import { Alarm, CloudDone, Sync } from "@mui/icons-material";
 
 import Fact from "../Components/Fact";
 
-import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
+import useGetInvolvedStyles from "../Styles/useGetInvolvedStyles";
 
 const factsProps = {
     style: { fontSize: "3em" },

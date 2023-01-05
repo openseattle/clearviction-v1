@@ -1,4 +1,5 @@
 enum PageId {
+    Donate = "DONATE",
     Home = "HOME",
     GivingTuesday = "GIVINGTUESDAY",
     GetStarted = "GET-STARTED",
@@ -21,6 +22,7 @@ const headerPages: Page[] = [
     { name: "Get Started", url: "/get-started", key: PageId.GetStarted },
     { name: "Get Involved", url: "/get-involved", key: PageId.GetInvolved },
     { name: "Why Vacate", url: "/why-vacate", key: PageId.WhyVacate },
+    { name: "Donate", url: "/donate", key: PageId.Donate },
     { name: "Contact", url: "/contact", key: PageId.Contact },
     { name: "Access Calculator", url: "/calculator/landing-0", key: PageId.AccessCalculator },
 ];

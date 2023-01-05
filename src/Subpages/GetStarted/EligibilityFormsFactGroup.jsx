@@ -132,7 +132,7 @@ const courtFormsFacts = [
         contentID: "JCR-paragraph",
     },
 ];
-const CourtFormsFactGroup = () => {
+const EligibilityFormsFactGroup = () => {
     return (
         <Grid container>
             {courtFormsFacts.map(fact => (
@@ -151,4 +151,4 @@ const CourtFormsFactGroup = () => {
     );
 };
 
-export default CourtFormsFactGroup;
+export default EligibilityFormsFactGroup;

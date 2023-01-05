@@ -1,6 +1,5 @@
 import { Box, Container, Divider, Grid } from "@mui/material";
 
-import DonatePage from "./DonatePage";
 import PartnerPage from "./PartnerPage";
 import VolunteerPage from "./VolunteerPage";
 import RedesignHeroPanel from "../Components/RedesignHeroPanel";
@@ -11,7 +10,7 @@ import diversity from "../Assets/diversity2.svg";
 import moneyJar from "../Assets/money_jar.svg";
 import marketing from "../Assets/marketing.svg";
 
-import { useGetInvolvedStyles } from "../Styles/useGetInvolvedStyles";
+import useGetInvolvedStyles from "../Styles/useGetInvolvedStyles";
 
 const GetInvolvedPage = () => {
     const classes = useGetInvolvedStyles();
@@ -40,7 +39,7 @@ const GetInvolvedPage = () => {
                             <ImageContentCard
                                 content="Your gift makes a difference. Make it possible to continue helping our community."
                                 image={moneyJar}
-                                buttonHref="#donate"
+                                buttonHref="/donate"
                                 buttonText="Donate"
                                 alt=""
                             />
@@ -60,10 +59,6 @@ const GetInvolvedPage = () => {
                 </Grid>
             </RedesignHeroPanel>
             <VolunteerPage id="volunteer" />
-            <Container maxWidth="md">
-                <Divider className={classes.dividerStyle} />
-            </Container>
-            <DonatePage title="Your donations can go a long way to make the project grow." md={3} />
             <Container maxWidth="md">
                 <Divider className={classes.dividerStyle} />
             </Container>

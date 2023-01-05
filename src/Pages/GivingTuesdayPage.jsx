@@ -15,7 +15,7 @@ import RedesignHeroPanel from "../Components/RedesignHeroPanel";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import { DonationMeter, DonationForm } from "../Components/DonationForm";
 import DonationVideo from "../Components/DonationVideo";
-import DonatePage from "./DonatePage";
+import DonateBody from "../Components/DonateBody";
 
 const GivingTuesdayPage = () => {
     const classes = useDonationStyles();
@@ -36,7 +36,19 @@ const GivingTuesdayPage = () => {
             <Box className={classes.contentContainer}>
                 <Container>
                     <Container className={classes.donationBoxInline}>
-                        <DonationForm />
+                        <Box
+                            sx={{
+                                display: "flex",
+                                alignItems: "center",
+                                justifyContent: "center",
+                                position: { xs: "relative", md: "sticky" },
+                                marginBottom: { xs: "155px", md: "-110px" },
+                                marginTop: { xs: "0px", md: "-422px" },
+                                top: { xs: "0px", md: "100px" },
+                            }}
+                        >
+                            <DonationForm />
+                        </Box>
                     </Container>
                     <DonationMeter />
 
@@ -98,7 +110,7 @@ const GivingTuesdayPage = () => {
                     <Divider className={classes.divider} />
 
                     <Container>
-                        <DonatePage title="How will your donations help Clearviction's goals?" md={6} />
+                        <DonateBody title="How will your donations help Clearviction's goals?" md={6} />
                     </Container>
 
                     <Divider className={classes.divider} />
@@ -138,7 +150,19 @@ const GivingTuesdayPage = () => {
                     </Container>
                 </Container>
                 <Container className={classes.donationBoxSticky}>
-                    <DonationForm />
+                    <Box
+                        sx={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            position: { xs: "relative", md: "sticky" },
+                            marginBottom: { xs: "155px", md: "-110px" },
+                            marginTop: { xs: "0px", md: "-422px" },
+                            top: { xs: "0px", md: "100px" },
+                        }}
+                    >
+                        <DonationForm positionMedium="sticky" marginMedium="-110px" marginTop="-422px" top="100px" />
+                    </Box>
                 </Container>
             </Box>
         </>
