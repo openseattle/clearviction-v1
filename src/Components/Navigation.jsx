@@ -113,7 +113,7 @@ const Navigation = () => {
                                     <NavButtonMobile key={page.name} page={page} classes={classes} />
                                 ))}
                                 <ListItem>
-                                    <LegalDisclaimer text="The information on this site is not, nor should it be, considered legal advice." />
+                                    <LegalDisclaimer text="The content on this website should not be treated as legal advice." />
                                 </ListItem>
                             </List>
                         </Drawer>
