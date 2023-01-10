@@ -130,13 +130,13 @@ const GetStartedPage = () => {
                     </Grid>
                     <Grid item xs={12} sm={12} md={4}>
                         <FactCard
-                            simpleCardContents="There are inaccuracies in your court records and/or the application"
+                            simpleCardContents="There are inaccuracies in the court records and/or the application"
                             isSimpleCard
                         />
                     </Grid>
                     <Grid item xs={12} sm={12} md={4}>
                         <FactCard
-                            simpleCardContents="There is a record including violated probation, unpaid fines, or other offenses"
+                            simpleCardContents="There is a record of violated probation, unpaid fines, or other offenses"
                             isSimpleCard
                         />
                     </Grid>
