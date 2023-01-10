@@ -32,7 +32,7 @@
     },
     "scripts": {
         "build": "DISABLE_ESLINT_PLUGIN='true' react-scripts build",
-        "postBuild": "node ./scripts/generate-sitemap.mjs",
+        "postbuild": "node ./scripts/generate-sitemap.mjs",
         "deploy": "gh-pages -d build",
         "eject": "react-scripts eject",
         "format": "prettier --write \"src/**/*.{js,jsx,json,ts,tsx}\"",
