@@ -16,6 +16,7 @@
         "@testing-library/user-event": "^14.*.*",
         "@types/jest": "^27.0.2",
         "@types/node": "^16.11.6",
+        "@types/prettier": "^2.7.2",
         "@types/react": "^17.0.14",
         "@types/react-dom": "^17.0.10",
         "dotenv": "^13.0.1",
@@ -31,6 +32,7 @@
     },
     "scripts": {
         "build": "DISABLE_ESLINT_PLUGIN='true' react-scripts build",
+        "postbuild": "node ./scripts/generate-sitemap.mjs",
         "deploy": "gh-pages -d build",
         "eject": "react-scripts eject",
         "format": "prettier --write \"src/**/*.{js,jsx,json,ts,tsx}\"",
