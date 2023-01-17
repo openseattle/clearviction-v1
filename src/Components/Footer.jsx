@@ -145,7 +145,10 @@ const Footer = () => {
                             </List>
                         </Grid>
                     </Grid>
-                    <LegalDisclaimer />
+                    <Box sx={{ marginBottom: 6 }} />
+                    <LegalDisclaimer text="The content on this website should not be treated as legal advice." />
+                    <LegalDisclaimer text="Clearviction is a registered 501(c)3 nonprofit organization, EIN#88-3187952.  All donations are tax deductible in full or in part. " />
+                    <Box sx={{ marginBottom: 7 }} />
                 </Container>
             </Box>
         )

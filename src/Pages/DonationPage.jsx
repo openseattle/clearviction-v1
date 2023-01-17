@@ -18,7 +18,6 @@ const DonationPage = () => {
                     <Grid item xs={12} sm={12} md={6}>
                         <Box
                             sx={{
-                                height: "525px",
                                 display: "flex",
                                 flexDirection: "column",
                                 justifyContent: "space-between",
@@ -27,16 +26,19 @@ const DonationPage = () => {
                             <Typography variant="h1" sx={{ fontSize: "86px" }}>
                                 Donate
                             </Typography>
-                            <Box>
-                                <Typography variant="subtitle1" component="p">
+                            <Box sx={{ marginBottom: 8, marginTop: 8 }}>
+                                <Typography sx={{ marginBottom: 5 }} variant="subtitle1" component="p">
                                     Conviction vacation makes it easier for formerly incarcerated individuals to access
                                     housing and employment, two things that are crucial for reducing the odds of
                                     re-incarceration.
                                 </Typography>
-                                <br />
-                                <Typography variant="subtitle1" component="p">
+                                <Typography sx={{ marginBottom: 5 }} variant="subtitle1" component="p">
                                     With your donations, you will directly help break down barriers for people with
                                     convictions in the state of Washington.
+                                </Typography>
+                                <Typography variant="subtitle1" component="p">
+                                    Clearviction is a registered 501(c)3 nonprofit organization, EIN#88-3187952. All
+                                    donations are tax deductible in full or in part.
                                 </Typography>
                             </Box>
                             <RedesignButtonWide href="http://clearviction.org/about">
@@ -44,7 +46,7 @@ const DonationPage = () => {
                             </RedesignButtonWide>
                         </Box>
                     </Grid>
-                    <Grid item xs={12} sm={12} md={6}>
+                    <Grid sx={{ display: "flex" }} item xs={12} sm={12} md={6}>
                         <Box
                             sx={{
                                 display: "flex",
