@@ -40,16 +40,7 @@ const useStyles = makeStyles(theme => ({
         color: "white",
         margin: theme.spacing(1),
     },
-    skipLink: {
-        marginRight: "1rem",
-        position: "absolute",
-        left: "-100vw",
-        transition: "transform 0.3s",
-        "&:focus": {
-            position: "static",
-            transform: "translateX(0)",
-        },
-    },
+    
 }));
 
 const Navigation = () => {
@@ -69,8 +60,8 @@ const Navigation = () => {
             <AppBar color="primary" elevation={0} role="navigation">
                 <Container maxWidth="xl">
                     <Toolbar>
-                        <SkipLink className={classes.skipLink}>
-                            <Button>Skip Navigation Links</Button>
+                        <SkipLink >
+                            <Button variant='contained' color='secondary'>Skip Navigation Links</Button>
                         </SkipLink>
                         <NavigationLogo />
                         <Box style={{ flexGrow: 1 }} />

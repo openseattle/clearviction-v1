@@ -42,7 +42,7 @@ const SkipLink: React.FC<SkipLinkProperties> = props => {
  */
 
 SkipLink.defaultProps = {
-    className: "skipLink",
+    className: "skipLink skiplink",
     skipTo: "h1:first-of-type",
 };
 

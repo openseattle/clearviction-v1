@@ -6,3 +6,16 @@
     padding: 0;
     line-height: 1;
 }
+
+.skiplink {
+    marginright: 1rem;
+    position: absolute;
+    left: -100vw;
+    transition: transform 0.3s;
+}
+
+.skiplink:focus {
+    z-index: 100;
+    left: 0;
+    transform: translateX(0);
+}
