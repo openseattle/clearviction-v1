@@ -1,11 +1,11 @@
 import { Button, ButtonGroup, useMediaQuery } from "@mui/material";
 
-const ResponsiveJumpButtonGroup = ({ links }) => {
+const ResponsiveLinkButtonGroup = ({ links }) => {
     const matches = useMediaQuery("(min-width:600px)");
     return (
         <ButtonGroup orientation={`${matches ? "horizontal" : "vertical"}`} color="primary" variant="text" fullWidth>
             {links.map((link, idx) => (
-                <Button key={idx} href={`#${link.url}`}>
+                <Button key={idx} href={`${link.url}`}>
                     {link.linkName}
                 </Button>
             ))}
@@ -13,4 +13,4 @@ const ResponsiveJumpButtonGroup = ({ links }) => {
     );
 };
 
-export default ResponsiveJumpButtonGroup;
+export default ResponsiveLinkButtonGroup;

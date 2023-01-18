@@ -10,7 +10,6 @@ import {
     ButtonGroup,
     Button,
 } from "@mui/material";
-import { makeStyles } from "@mui/styles";
 import { MenuSharp as MenuIcon, CloseSharp } from "@mui/icons-material";
 import { useState } from "react";
 import { headerPages, PageId } from "../data/siteMap.ts";
@@ -20,28 +19,6 @@ import LegalDisclaimer from "./LegalDisclaimer";
 import NavigationLogo from "./NavigationLogo";
 import SkipLink from "../ui-kit/SkipLink.tsx";
 
-const useStyles = makeStyles(theme => ({
-    closeIcon: {
-        color: "white",
-    },
-    menuButton: {
-        textTransform: "none",
-        color: "white",
-    },
-    subMenuButton: {
-        textTransform: "none",
-        color: "white",
-        marginLeft: theme.spacing(2),
-    },
-    menuStyle: {
-        padding: theme.spacing(3),
-    },
-    expandIconStyle: {
-        color: "white",
-        margin: theme.spacing(1),
-    },
-    
-}));
 
 const Navigation = () => {
     const [menuState, setMenuState] = useState(null);
@@ -53,7 +30,6 @@ const Navigation = () => {
         setMenuState(null);
     };
 
-    const classes = useStyles();
 
     return (
         <>
@@ -64,7 +40,7 @@ const Navigation = () => {
                             <Button variant='contained' color='secondary'>Skip Navigation Links</Button>
                         </SkipLink>
                         <NavigationLogo />
-                        <Box style={{ flexGrow: 1 }} />
+                        <Box sx={{ flexGrow: 1 }} />
 
                         {/* desktop menu */}
                         <Box display={{ xs: "none", sm: "none", md: "none", lg: "none", xl: "flex" }}>
@@ -94,14 +70,14 @@ const Navigation = () => {
                             </IconButton>
                         </Box>
                         <Drawer anchor="right" open={Boolean(menuState)} onClose={handleCloseMenu}>
-                            <List className={classes.menuStyle}>
-                                <ListItem style={{ justifyContent: "center" }}>
+                            <List>
+                                <ListItem sx={{ justifyContent: "center" }}>
                                     <IconButton onClick={handleCloseMenu} aria-label="close menu" size="large">
-                                        <CloseSharp fontSize="large" className={classes.closeIcon} />
+                                        <CloseSharp fontSize="large" htmlColor='white'  />
                                     </IconButton>
                                 </ListItem>
                                 {headerPages.map(page => (
-                                    <NavButtonMobile key={page.name} page={page} classes={classes} />
+                                    <NavButtonMobile key={page.name} page={page} />
                                 ))}
                                 <ListItem>
                                     <LegalDisclaimer text="The content on this website should not be treated as legal advice." />

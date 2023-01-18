@@ -5,7 +5,7 @@ import map from "../Assets/map.svg";
 import checklist1 from "../Assets/checklist1.svg";
 
 import { useAboutStyles } from "../Styles/useAboutStyles";
-import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
+import ResponsiveLinkButtonGroup from "../Components/ResponsiveLinkButtonGroup";
 
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
@@ -37,10 +37,10 @@ const AboutPage = () => {
             </Box>
 
             <Container className={classes.regularContainer} maxwidth="xs">
-                <ResponsiveJumpButtonGroup
+                <ResponsiveLinkButtonGroup
                     links={[
-                        { url: "our-story", linkName: "Our Story" },
-                        { url: "our-team", linkName: "Our Team" },
+                        { url: "#our-story", linkName: "Our Story" },
+                        { url: "#our-team", linkName: "Our Team" },
                     ]}
                 />
             </Container>

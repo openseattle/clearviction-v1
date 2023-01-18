@@ -1,7 +1,7 @@
 import { Box, Container, Divider, Grid, Typography } from "@mui/material";
 import RedesignHeroPanel from "../Components/RedesignHeroPanel";
 
-import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
+import ResponsiveLinkButtonGroup from "../Components/ResponsiveLinkButtonGroup";
 import FactImageCard from "../Components/FactImageCard";
 
 import { useWhyVacateStyles } from "../Styles/useWhyVacateStyles";
@@ -132,11 +132,11 @@ const WhyVacatePage = () => {
                 className={`${classes.regularContainerStyle} ${classes.centerText}`}
                 maxwidth="sm"
             >
-                <ResponsiveJumpButtonGroup
+                <ResponsiveLinkButtonGroup
                     links={[
-                        { url: "employment", linkName: "employment" },
-                        { url: "housing", linkName: "housing" },
-                        { url: "education", linkName: "education" },
+                        { url: "#employment", linkName: "employment" },
+                        { url: "#housing", linkName: "housing" },
+                        { url: "#education", linkName: "education" },
                     ]}
                 />
             </Container>

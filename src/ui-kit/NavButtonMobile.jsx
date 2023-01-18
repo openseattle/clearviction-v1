@@ -12,8 +12,8 @@ const NavButtonMobile = ({ page, classes }) => {
         <>
             {!page.subpages && (
                 <ListItem>
-                    <Button href={page.url} fullWidth aria-label={page.name}>
-                        <Typography className={classes.menuButton} align="center">
+                    <Button color='inherit' href={page.url} fullWidth aria-label={page.name}>
+                        <Typography align="center">
                             {page.name}
                         </Typography>
                     </Button>
@@ -27,8 +27,8 @@ const NavButtonMobile = ({ page, classes }) => {
                         aria-expanded={expandSubMenu}
                         aria-label="show more"
                     >
-                        <Typography className={classes.menuButton}>{page.name}</Typography>
-                        <ExpandMore className={classes.expandIconStyle} fontSize="medium" />
+                        <Typography>{page.name}</Typography>
+                        <ExpandMore fontSize="medium" />
                     </ListItem>
                     <Collapse in={expandSubMenu} timeout="auto" unmountOnExit>
                         {page.subpages.map((subpage, idx) => (

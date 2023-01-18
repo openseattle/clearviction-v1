@@ -208,25 +208,29 @@ theme.components = {
         },
     },
     MuiAccordion: {
-        styleOverrides: {
-            root: {
-                border: `1px solid ${theme.palette.primary.light}`,
-                "&$expanded": {
-                    margin: 0,
-                },
-            },
-            rounded: {
-                borderRadius: 0,
-                "&:first-child": {
-                    borderTopLeftRadius: 6,
-                    borderTopRightRadius: 6,
-                },
-                "&:last-child": {
-                    borderBottomLeftRadius: 6,
-                    borderBottomRightRadius: 6,
-                },
-            },
+        defaultProps: {
+            disableGutters: true,
         },
+        variants: [
+            {
+                props: { variant: "outlined" },
+                style: {
+                    border: `1px solid ${theme.palette.primary.light}`,
+                    "&$expanded": {
+                        margin: 0,
+                    },
+                    borderRadius: 0,
+                    "&:first-child": {
+                        borderTopLeftRadius: 6,
+                        borderTopRightRadius: 6,
+                    },
+                    "&:last-child": {
+                        borderBottomLeftRadius: 6,
+                        borderBottomRightRadius: 6,
+                    },
+                },
+            },
+        ],
     },
     MuiButton: {
         styleOverrides: {
@@ -256,8 +260,15 @@ theme.components = {
             },
             containedSecondary: {
                 backgroundColor: "white",
+                color: theme.palette.primary.dark,
                 "&:hover": { backgroundColor: theme.palette.primary.main, color: theme.palette.primary.contrastText },
             },
+            // textPrimary: {
+            //     color: theme.palette.primary.contrastText,
+            // },
+            // textSecondary: {
+            //     color: theme.palette.secondary.contrastText,
+            // },
         },
     },
 };

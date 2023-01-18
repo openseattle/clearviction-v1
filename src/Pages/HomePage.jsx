@@ -13,7 +13,7 @@ import ContentSection from "../Components/ContentSection";
 import HomeFAQAccordion from "../Subpages/Home/HomeFAQAccordion";
 import { useHomeStyles } from "../Styles/useHomeStyles";
 import { RedesignButtonPrimary } from "../ui-kit/RedesignButtonPrimary";
-import ResponsiveJumpButtonGroup from "../Components/ResponsiveJumpButtonGroup";
+import ResponsiveLinkButtonGroup from "../Components/ResponsiveLinkButtonGroup";
 import { useDocumentTitle } from "../Components/customHooks/useDocumentTitle";
 
 const HomePage = () => {
@@ -49,11 +49,11 @@ const HomePage = () => {
             </Box>
 
             <Container className={classes.regularContainer} maxwidth="sm">
-                <ResponsiveJumpButtonGroup
+                <ResponsiveLinkButtonGroup
                     links={[
-                        { url: "how-it-works", linkName: "How It Works" },
-                        { url: "why-vacate", linkName: "why vacate" },
-                        { url: "faq", linkName: "FAQ" },
+                        { url: "#how-it-works", linkName: "How It Works" },
+                        { url: "#why-vacate", linkName: "why vacate" },
+                        { url: "#faq", linkName: "FAQ" },
                     ]}
                 />
             </Container>
