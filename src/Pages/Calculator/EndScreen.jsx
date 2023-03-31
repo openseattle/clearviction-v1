@@ -9,6 +9,7 @@ import RestartButton from "../../Components/RestartButton";
 import { BodyType } from "../../data/calculatorPagesTypes.ts";
 import ProgressBar from "../../Components/ProgressBar";
 import { ExternalLink } from "../../ui-kit/ExternalLink";
+import CalcSharebtn from "../../Components/CalcSharebtn";
 
 const EndScreen = ({ showProgressBar, currentSectionName, header, body, buttons, showRestartButton, disclaimer }) => {
     const classes = EndScreenStyles();
