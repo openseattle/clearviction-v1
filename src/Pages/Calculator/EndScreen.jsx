@@ -82,6 +82,7 @@ const EndScreen = ({ showProgressBar, currentSectionName, header, body, buttons,
                         target={b.target}
                     />
                 ))}
+                <CalcSharebtn />
             </Grid>
             <Grid item className={classes.restartButton}>
                 {showRestartButton && <RestartButton className={classes.button} />}
