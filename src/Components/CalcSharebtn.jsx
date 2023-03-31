@@ -65,6 +65,7 @@ const CalcSharebtn = () => {
          
             >
 // Title value controls what appears in users share text
+
              <TwitterShareButton
         title="Got a minute? Check out Clearviction’s mission as they work to decrease consequences from criminal #convictions in #WashingtonState by helping determine eligibility to vacate.
         Email: Check out Clearviction’s mission as they work to decrease consequences from criminal convictions in Washington State by helping determine eligibility to vacate."
@@ -84,6 +85,7 @@ const CalcSharebtn = () => {
     title="Got a minute? Check out Clearviction’s mission as they work to decrease consequences from criminal #convictions in #WashingtonState by helping determine eligibility to vacate.">
         <LinkedinIcon  round bgStyle={{ fill: "#FFD200" }} />
     </LinkedinShareButton>
+    // Subject body values control their respective values inside Email messages
     <EmailShareButton url="http://www.clearviction.org/" subject="Check out the Clearviction Calculator" body="Check out Clearviction’s mission as they work to decrease consequences from criminal convictions in Washington State by helping determine eligibility to vacate.">
             <EmailIcon round bgStyle={{ fill: "#FFD200" }} />
     </EmailShareButton>
