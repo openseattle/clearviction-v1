@@ -1,6 +1,4 @@
 import * as React from 'react';
-import { Link } from "react-router-dom";
-import { useButtonStyles } from "../Styles/Onboarding/useButtonStyles";
 import { makeStyles } from '@mui/styles';
 import ClipboardJS from 'clipboard';
 import {
@@ -14,10 +12,9 @@ import {
     EmailIcon,
     LivejournalIcon
 } from "react-share";
-import { IosShare, AddLink } from '@mui/icons-material';
-import AddLinkIcon from '@mui/icons-material/AddLink';
+import { IosShare} from '@mui/icons-material';
 
-import { Container, Typography, Popover, Box, Button } from "@mui/material";
+import {Popover, Button } from "@mui/material";
 
 new ClipboardJS ('.btn');
 
@@ -67,6 +64,7 @@ const CalcSharebtn = () => {
             }}
          
             >
+// Title value controls what appears in users share text
              <TwitterShareButton
         title="Got a minute? Check out Clearviction’s mission as they work to decrease consequences from criminal #convictions in #WashingtonState by helping determine eligibility to vacate.
         Email: Check out Clearviction’s mission as they work to decrease consequences from criminal convictions in Washington State by helping determine eligibility to vacate."

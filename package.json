@@ -19,6 +19,7 @@
         "@types/prettier": "^2.7.2",
         "@types/react": "^17.0.14",
         "@types/react-dom": "^17.0.10",
+        "clipboard": "^2.0.11",
         "dotenv": "^13.0.1",
         "prop-types": "^15.8.1",
         "react": "^17.*.*",
