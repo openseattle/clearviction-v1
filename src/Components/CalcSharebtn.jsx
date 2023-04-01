@@ -16,6 +16,7 @@ import { IosShare} from '@mui/icons-material';
 
 import {Popover, Button } from "@mui/material";
 
+//added library to help with copying text
 new ClipboardJS ('.btn');
 
 const CalcSharebtn = () => {
