@@ -19,7 +19,7 @@ import { Popover, Button } from "@mui/material";
 {
     /* added library to help with copying text */
 }
-ClipboardJS(".btn");
+new ClipboardJS(".btn");
 
 const CalcSharebtn = () => {
     const useStyles = makeStyles(theme => ({
