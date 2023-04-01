@@ -1,6 +1,6 @@
-import * as React from 'react';
-import { makeStyles } from '@mui/styles';
-import ClipboardJS from 'clipboard';
+import * as React from "react";
+import { makeStyles } from "@mui/styles";
+import ClipboardJS from "clipboard";
 import {
     TwitterShareButton,
     TwitterIcon,
@@ -10,32 +10,32 @@ import {
     FacebookIcon,
     EmailShareButton,
     EmailIcon,
-    LivejournalIcon
+    LivejournalIcon,
 } from "react-share";
-import { IosShare} from '@mui/icons-material';
+import { IosShare } from "@mui/icons-material";
 
-import {Popover, Button } from "@mui/material";
+import { Popover, Button } from "@mui/material";
 
-//added library to help with copying text
-new ClipboardJS ('.btn');
+{
+    /* added library to help with copying text */
+}
+ClipboardJS(".btn");
 
 const CalcSharebtn = () => {
-
     const useStyles = makeStyles(theme => ({
         root: {
             margin: "0 auto",
             textDecoration: "underline",
             color: theme.palette.primary.main,
             fontWeight: theme.typography.h4.fontWeight,
-        }
-    }),
-    )
-    
+        },
+    }));
+
     const classes = useStyles();
 
     const [anchorEl, setAnchorEl] = React.useState(null);
 
-    const handleClick = (event) => {
+    const handleClick = event => {
         setAnchorEl(event.currentTarget);
     };
 
@@ -43,74 +43,64 @@ const CalcSharebtn = () => {
         setAnchorEl(null);
     };
     const open = Boolean(anchorEl);
-    const id = open ? 'simple-popover' : undefined;
-    
+    const id = open ? "simple-popover" : undefined;
+
+    {
+        /* Title value controls social media share text, Body value controls email body text */
+    }
     return (
         <div>
-            <Button className={classes.root} aria-describedby={id}  onClick={handleClick}>
-            
-            <IosShare >
-            
-            </IosShare>
-            Share The Calculator
+            <Button className={classes.root} aria-describedby={id} onClick={handleClick}>
+                <IosShare />
+                Share The Calculator
             </Button>
             <Popover
-            id={id}
-            open={open}
-            anchorEl={anchorEl}
-            onClose={handleClose}
-            anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-            }}
-         
+                id={id}
+                open={open}
+                anchorEl={anchorEl}
+                onClose={handleClose}
+                anchorOrigin={{
+                    vertical: "bottom",
+                    horizontal: "left",
+                }}
             >
-// Title value controls what appears in users share text
-
-             <TwitterShareButton
-        title="Got a minute? Check out Clearviction’s mission as they work to decrease consequences from criminal #convictions in #WashingtonState by helping determine eligibility to vacate.
-        Email: Check out Clearviction’s mission as they work to decrease consequences from criminal convictions in Washington State by helping determine eligibility to vacate."
-        url="http://www.clearviction.org/"
-        source="http://www.clearviction.org/"
-    >
-        <TwitterIcon  round bgStyle={{ fill: "#FFD200" }} />
-    </TwitterShareButton>
-    <FacebookShareButton
-        url="http://www.clearviction.org/"
-        hashtag="#clearviction"
-        title="Got a minute? Check out Clearviction’s mission as they work to decrease consequences from criminal #convictions in #WashingtonState by helping determine eligibility to vacate."
-    >
-        <FacebookIcon  round bgStyle={{ fill: "#FFD200" }} />
-    </FacebookShareButton>
-    <LinkedinShareButton url="http://www.clearviction.org/"
-    title="Got a minute? Check out Clearviction’s mission as they work to decrease consequences from criminal #convictions in #WashingtonState by helping determine eligibility to vacate.">
-        <LinkedinIcon  round bgStyle={{ fill: "#FFD200" }} />
-    </LinkedinShareButton>
-    // Subject body values control their respective values inside Email messages
-    <EmailShareButton url="http://www.clearviction.org/" subject="Check out the Clearviction Calculator" body="Check out Clearviction’s mission as they work to decrease consequences from criminal convictions in Washington State by helping determine eligibility to vacate.">
-            <EmailIcon round bgStyle={{ fill: "#FFD200" }} />
-    </EmailShareButton>
-    
-    <LivejournalIcon
-            
-            class="btn" 
-            data-clipboard-target="#hp" 
-            round bgStyle={{ fill: "#FFD200" }}>
-     </ LivejournalIcon>
-     <input id="hp" value="https://www.clearviction.org"/>
-    
-     
+                <TwitterShareButton
+                    title="Got a minute? Check out Clearviction’s mission as they work to decrease consequences from criminal #convictions in #WashingtonState by helping determine eligibility to vacate."
+                    url="http://www.clearviction.org/"
+                    source="http://www.clearviction.org/"
+                >
+                    <TwitterIcon round bgStyle={{ fill: "#FFD200" }} />
+                </TwitterShareButton>
+                <FacebookShareButton
+                    url="http://www.clearviction.org/"
+                    hashtag="#clearviction"
+                    title="Got a minute? Check out Clearviction’s mission as they work to decrease consequences from criminal #convictions in #WashingtonState by helping determine eligibility to vacate."
+                >
+                    <FacebookIcon round bgStyle={{ fill: "#FFD200" }} />
+                </FacebookShareButton>
+                <LinkedinShareButton
+                    url="http://www.clearviction.org/"
+                    title="Got a minute? Check out Clearviction’s mission as they work to decrease consequences from criminal #convictions in #WashingtonState by helping determine eligibility to vacate."
+                >
+                    <LinkedinIcon round bgStyle={{ fill: "#FFD200" }} />
+                </LinkedinShareButton>
+                <EmailShareButton
+                    url="http://www.clearviction.org/"
+                    subject="Check out the Clearviction Calculator"
+                    body="Check out Clearviction’s mission as they work to decrease consequences from criminal convictions in Washington State by helping determine eligibility to vacate."
+                >
+                    <EmailIcon round bgStyle={{ fill: "#FFD200" }} />
+                </EmailShareButton>
+                <LivejournalIcon
+                    class="btn"
+                    data-clipboard-target="#hp"
+                    round
+                    bgStyle={{ fill: "#FFD200" }}
+                ></LivejournalIcon>
+                <input id="hp" value="https://www.clearviction.org" />
             </Popover>
         </div>
-        
-        
-        
-        
-        
-        
     );
 };
 
 export default CalcSharebtn;
-
-
