@@ -1,5 +1,12 @@
 # Clearviction
 
+> #### NOTICE 🚨 PLEASE READ!
+>
+> - CV is no longer accepting contributions to this repository as it will be archived soon.
+> - Please see the [latest version](https://github.com/openseattle/clearviction-next) to contribute.
+>
+>  *Thank you!*
+
 ## Table of Contents
 
 - [Clearviction](#clearviction)
